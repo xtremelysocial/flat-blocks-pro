@@ -1,0 +1,25 @@
+/*--------------------------------------------------------------
+# PLUGIN STYLES
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Cookies for Comments Plugin
+--------------------------------------------------------------*/
+
+// TO-DO: Consider adding these
+
+/* Get rid of Cookies for Comments spacing added to bottom of site */
+/**img[alt="css.php"] {
+	position: absolute;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	/**clip: rect(1px, 1px, 1px, 1px);
+	height:0;**/  /* Chrome */
+/**}**/
+
+/*--------------------------------------------------------------
+# Akismet Comments Plugin
+--------------------------------------------------------------*/
+.akismet_comment_form_privacy_notice a {
+	text-decoration: none;
+}
+

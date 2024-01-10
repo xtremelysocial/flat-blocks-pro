@@ -1,0 +1,35 @@
+/**
+ * File:	pro-custom-styles.css
+ * Theme:	Flat Blocks PRO
+ * 
+ * The stylesheet for the Flat Blocks PRO theme's CUSTOM block styles
+ *
+ * NOTE: This file is AUTO-GENERATED from the SASS source files 
+ * in /src/sass/pro-custom-styles.scss. Do not make updates here.
+ * 
+ * @package flat-blocks-pro
+ * @since 	1.0
+ */
+
+/*--------------------------------------------------------------
+# CRITICAL BASE STYLES
+--------------------------------------------------------------*/
+@use "base/base";
+@use "base/angled-curves";
+@use "base/lists-latest-posts-latest-comments";
+@use "base/plugins";
+
+/*--------------------------------------------------------------
+# CRITICAL BLOCK STYLES
+--------------------------------------------------------------*/
+@use "blocks/group";
+@use "blocks/heading";
+@use "blocks/navigation";
+@use "blocks/paragraph";
+
+/*--------------------------------------------------------------
+# ADDITIONAL BLOCK STYLES
+--------------------------------------------------------------*/
+@use "blocks/buttons";
+@use "blocks/post-template";
+@use "blocks/table";

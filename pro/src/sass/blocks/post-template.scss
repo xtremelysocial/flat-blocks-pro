@@ -1,0 +1,43 @@
+/*--------------------------------------------------------------
+# Colored Post Grid
+--------------------------------------------------------------*/
+
+/* Colored Post Grid - Covers */
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+1) .wp-block-cover__background {
+	background-color: var(--wp--preset--color--red) !important;
+}
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+2) .wp-block-cover__background {
+	background-color: var(--wp--preset--color--orange) !important;
+}
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+3) .wp-block-cover__background {
+	background-color: var(--wp--preset--color--yellow) !important;
+}
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+4) .wp-block-cover__background {
+	background-color: var(--wp--preset--color--green) !important;
+}
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+5) .wp-block-cover__background {
+	background-color: var(--wp--preset--color--blue) !important;
+}
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+6) .wp-block-cover__background {
+	background-color: var(--wp--preset--color--purple) !important;
+}
+
+/* Colored Post Grid - Featured Images */
+// .wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+1) .wp-block-post-featured-image img {
+// 	border: 3px solid var(--wp--preset--color--red) !important;
+// }
+// .wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+2) .wp-block-post-featured-image img {
+// 	border: 3px solid var(--wp--preset--color--orange) !important;
+// }
+// .wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+3) .wp-block-post-featured-image img {
+// 	border: 3px solid var(--wp--preset--color--yellow) !important;
+// }
+// .wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+4) .wp-block-post-featured-image img {
+// 	border: 3px solid var(--wp--preset--color--green) !important;
+// }
+// .wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+5) .wp-block-post-featured-image img {
+// 	border: 3px solid var(--wp--preset--color--blue) !important;
+// }
+// .wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+6) .wp-block-post-featured-image img {
+// 	border: 3px solid var(--wp--preset--color--purple) !important;
+// }
