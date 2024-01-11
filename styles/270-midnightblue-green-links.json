@@ -3,7 +3,7 @@
 	"version": 2,
 	"title": "Midnight Blue with Green Links",
 	"styles": {
-		"css": ".has-background.has-tertiary-background-color { color: var(--wp--preset--color--foreground); }",
+		"css": ".has-background.has-tertiary-background-color { color: var(--wp--preset--color--foreground); }"
 	},	
 	"settings": {
 		"custom": {

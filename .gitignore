@@ -12,5 +12,8 @@ zz_unused
 # Ignore individual block styles since not implemented yet
 assets/css/blocks/
 
+# Ignore PRO theme files
+pro
+
 # Ignore our xtremelysocial.com files
 styles/*xtremelysocial*.json

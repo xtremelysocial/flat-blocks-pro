@@ -3,7 +3,7 @@
 	"version": 2,
 	"title": "Orange, Yellow, Midnight Blue",
 	"styles": {
-		"css": ".has-background.has-secondary-background-color, .has-background.has-secondary-alt-background-color { color: var(--wp--preset--color--foreground) }",
+		"css": ".has-background.has-secondary-background-color, .has-background.has-secondary-alt-background-color { color: var(--wp--preset--color--foreground) }"
 	},
 	"settings": {
 		"custom": {

@@ -154,9 +154,9 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 == Changelog ==
 
 = 1.4.3 = 
-Jan 9, 2024
+Jan 5, 2024
 
-* Default Detail Block Header (summary line) to Primary color and set to primary-alt color when open. However, you can choose a font on an individual detail block to override it.
+* Breaking change: Default Detail Block Header (summary line) to Primary color and set to primary-alt color when open. However, you can choose a font on an individual detail block to override it.
 
 * Font and link colors now default to light color on dark colored backgrounds.
 	* For groups, columns, buttons, and paragraphs, foreground-alt is used (off-white by default).
