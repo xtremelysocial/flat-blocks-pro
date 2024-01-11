@@ -13,7 +13,7 @@ zz_unused
 assets/css/blocks/
 
 # Ignore PRO theme files
-pro
+#pro
 
 # Ignore our xtremelysocial.com files
 styles/*xtremelysocial*.json
