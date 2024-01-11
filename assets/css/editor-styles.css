@@ -60,7 +60,7 @@
 # Padding (Horizontal and vertical spacing)
 --------------------------------------------------------------*/
 /* In the Editor, blocks don't get alignfull CSS class for some 
- * some reason, but so assume header and footer are full width
+ * some reason, so assume header and footer are full width
  */
 header.has-global-padding.wp-block-group.has-background,
 footer.has-global-padding.wp-block-group.has-background {

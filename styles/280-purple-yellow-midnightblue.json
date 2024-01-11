@@ -3,7 +3,7 @@
 	"version": 2,
 	"title": "Purple, Yellow, Midnight Blue",
 	"styles": {
-		"css": ".has-background.has-secondary-background-color { color: var(--wp--preset--color--foreground) }",
+		"css": ".has-background.has-secondary-background-color { color: var(--wp--preset--color--foreground) }"
 	},
 	"settings": {
 		"color": {
