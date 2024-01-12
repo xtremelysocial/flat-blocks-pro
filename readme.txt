@@ -1,4 +1,4 @@
-=== Flat Blocks ===
+=== Flat Blocks PRO ===
 Contributors:  XtremelySocial
 Requires at least: 6.2
 Tested up to: 6.4
