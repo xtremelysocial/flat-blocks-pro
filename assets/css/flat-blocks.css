@@ -48,38 +48,13 @@ body {
 # Colors
 --------------------------------------------------------------*/
 /* 
- * On dark colored backgrounds, default light colored font.
- * 
- * On light colored backgrounds, default foreground color.
- * 
- * Note: Don't use :not() with background colors or it will 
- * override the user's font selection. Also don't add 
- * .has-background as it creates too much specificity.
- * 
- * To override in a specific global theme style, use:
- * 
- * .has-background.has-ABC-background-color {
- * 		color: var(--wp--preset--color--XYZ);
- * }
- *
- * .has-background.has-ABC-background-color a:not(
- *		.wp-block-button__link, 
- * 		.wp-element-button
- * 		.wp-block-navigation-item__content
- * 	) { 
- *		color: var(--wp--preset--color--XYZ);
- * }
- *
- * .has-background.has-ABC-background-color a:hover:not(
- *		.wp-block-button__link, 
- * 		.wp-element-button
- * 		.wp-block-navigation-item__content
- * 	) { 
- *		color: var(--wp--preset--color--XYZ);
- * }
- * 
+ * Default font, link, and button text colors based on the color
+ * of the background
  */
-/* Black and near-black colors, default light text, but leave link color alone */
+/* 
+ * Black and near-black colors, default light text, but leave link 
+ * color alone 
+ */
 .has-dark-background-color,
 .has-dark-alt-background-color,
 .has-almost-black-background-color,
@@ -114,7 +89,8 @@ body {
 .has-dark-purple-background-color,
 .has-light-red-background-color,
 .has-red-background-color,
-.has-dark-red-background-color {
+.has-dark-red-background-color,
+[class*=gradient-background] {
   color: var(--wp--preset--color--foreground-alt);
 }
 .has-primary-background-color a,
@@ -142,7 +118,8 @@ body {
 .has-dark-purple-background-color a,
 .has-light-red-background-color a,
 .has-red-background-color a,
-.has-dark-red-background-color a {
+.has-dark-red-background-color a,
+[class*=gradient-background] a {
   color: inherit;
 }
 .has-primary-background-color a:hover,
@@ -170,25 +147,33 @@ body {
 .has-dark-purple-background-color a:hover,
 .has-light-red-background-color a:hover,
 .has-red-background-color a:hover,
-.has-dark-red-background-color a:hover {
+.has-dark-red-background-color a:hover,
+[class*=gradient-background] a:hover {
   opacity: 0.8;
 }
 
-/* Medium Colors (Yellow), default foreground color to text, link, and buttons */
+/* 
+ * Medium Colors (Yellow), default foreground color to text, link,
+ * and buttons 
+ */
 .has-light-yellow-background-color,
-.has-yellow-background-color {
+.has-yellow-background-color,
+.has-yellow-gradient-background {
   color: var(--wp--preset--color--very-dark-gray);
 }
 .has-light-yellow-background-color.wp-block-button__link.wp-element-button,
-.has-yellow-background-color.wp-block-button__link.wp-element-button {
+.has-yellow-background-color.wp-block-button__link.wp-element-button,
+.has-yellow-gradient-background.wp-block-button__link.wp-element-button {
   color: var(--wp--preset--color--very-dark-gray);
 }
 .has-light-yellow-background-color a,
-.has-yellow-background-color a {
+.has-yellow-background-color a,
+.has-yellow-gradient-background a {
   color: inherit;
 }
 .has-light-yellow-background-color a:hover,
-.has-yellow-background-color a:hover {
+.has-yellow-background-color a:hover,
+.has-yellow-gradient-background a:hover {
   opacity: 0.8;
 }
 
@@ -203,7 +188,8 @@ body {
 .has-off-white-background-color,
 .has-very-light-gray-background-color,
 .has-light-gray-background-color,
-.has-gray-background-color {
+.has-gray-background-color,
+.has-gray-gradient-background {
   color: var(--wp--preset--color--very-dark-gray);
 }
 .has-neutral-background-color.wp-block-button__link.wp-element-button,
@@ -213,8 +199,33 @@ body {
 .has-off-white-background-color.wp-block-button__link.wp-element-button,
 .has-very-light-gray-background-color.wp-block-button__link.wp-element-button,
 .has-light-gray-background-color.wp-block-button__link.wp-element-button,
-.has-gray-background-color.wp-block-button__link.wp-element-button {
+.has-gray-background-color.wp-block-button__link.wp-element-button,
+.has-gray-gradient-background.wp-block-button__link.wp-element-button {
   color: var(--wp--preset--color--very-dark-gray);
+}
+
+/* 
+ * Swap foreground and background colors. Note this is needed because we can't
+ * be sure whether they are light or dark for any given theme or user changes.
+ */
+.has-background-background-color {
+  color: var(--wp--preset--color--foreground);
+}
+.has-background-background-color a, .has-background-background-color.wp-block-button__link.wp-element-button {
+  color: var(--wp--preset--color--foreground);
+}
+.has-background-background-color a:hover {
+  opacity: 0.8;
+}
+
+.has-foreground-background-color {
+  color: var(--wp--preset--color--background);
+}
+.has-foreground-background-color a, .has-foreground-background-color.wp-block-button__link.wp-element-button {
+  color: var(--wp--preset--color--background);
+}
+.has-foreground-background-color a:hover {
+  opacity: 0.8;
 }
 
 /* 
