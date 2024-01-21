@@ -153,6 +153,12 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 1.4.4 = 
+Jan 12, 2024
+
+* When a Pages list in a Navigation Block has a drop-down menu, highlight the drop-down title on hover like for other menu items.
+* Remove some headers and a footer that were for testing only.
+
 = 1.4.3 = 
 Jan 11, 2024
 

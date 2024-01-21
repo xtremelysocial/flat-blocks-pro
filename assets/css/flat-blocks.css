@@ -766,8 +766,8 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-/* Bold or highlight active top-level menu items, depending on whether text color or not */
-.wp-block-navigation:not(.has-background) .wp-block-navigation-item.current-menu-item:not(.has-child) > a,
+wp-block-pages-list__item has-child wp-block-navigation-item open-on-click .wp-block-navigation:not(.has-background) .wp-block-navigation-item.current-menu-item:not(.has-child) > a,
+.wp-block-navigation:not(.has-background) .wp-block-navigation-item.current-menu-ancestor,
 .wp-block-navigation:not(.has-background) .wp-block-navigation-item:has(.current-menu-ancestor),
 .wp-block-navigation:not(.has-background) .wp-block-navigation-item:has(.current-menu-ancestor) > a,
 .wp-block-navigation:not(.has-background) .wp-block-pages-list__item.current-menu-item > a,
@@ -776,6 +776,7 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 }
 
 .wp-block-navigation.has-background .wp-block-navigation-item.current-menu-item:not(.has-child) > a,
+.wp-block-navigation.has-background .wp-block-navigation-item.current-menu-ancestor,
 .wp-block-navigation.has-background .wp-block-navigation-item:has(.current-menu-ancestor),
 .wp-block-navigation.has-background .wp-block-navigation-item:has(.current-menu-ancestor) > a,
 .wp-block-navigation.has-background .wp-block-pages-list__item.current-menu-item > a,
@@ -794,31 +795,11 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 
 /* Navigation hover styles */
 /* Submenu link hover color. Note normal nav link hover set in theme.json */
-.wp-block-navigation-submenu.open-on-click:hover {
+.wp-block-navigation-submenu.open-on-click:hover,
+.wp-block-navigation-item.has-child.open-on-click:hover {
   color: var(--wp--custom--link--color);
 }
 
-/* 
-// .wp-block-navigation:not(.has-background) .wp-block-navigation-item__content:hover,
-// .wp-block-navigation:not(.has-background) .wp-block-navigation-item__content:active {
-.wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover, // top-level
-.wp-block-navigation:not(.has-background) .wp-block-navigation-item:active, // top-level
-.wp-block-navigation:not(.has-background) .wp-block-navigation-item > a:hover, // drop-down
-.wp-block-navigation:not(.has-background) .wp-block-navigation-item > a:active { //drop-down
-    color: var(--wp--custom--link--hover);
-}
- */
-/* 
-// .wp-block-navigation.has-background .wp-block-navigation-item__content:hover,
-// .wp-block-navigation.has-background .wp-block-navigation-item__content:active {
-.wp-block-navigation.has-background .wp-block-navigation-item:hover, // top-level
-.wp-block-navigation.has-background .wp-block-navigation-item:active, // top-level
-.wp-block-navigation.has-background .wp-block-navigation-item > a:hover, // drop-down
-.wp-block-navigation.has-background .wp-block-navigation-item > a:active { //drop-down
-    //color: var(--wp--custom--link--hover);
-    opacity: 0.8;
-}
- */
 /* But on mobile nav, don't hover on non-clickable links */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child.open-on-click > .wp-block-navigation-item:hover,
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child.open-on-click > .wp-block-navigation-item__content:hover {
@@ -828,10 +809,6 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
   opacity: 1;
 }
 
-/* Navigation hover styles */
-/* But on mobile nav, don't hover on non-clickable links */
-/* Bold or highlight active top-level menu items, depending on whether text color or not */
-/* Bold or highlight active sub-menu items, depending on whether text color or not */
 /* Style the mobile nav menu open and close buttons */
 .wp-block-navigation .wp-block-navigation__responsive-container-open,
 .wp-block-navigation .wp-block-navigation__responsive-container-close {
