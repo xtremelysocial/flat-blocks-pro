@@ -81,6 +81,10 @@ if ( ! function_exists( 'flatblocks_pro_register_block_styles' ) ) :
 				array( 'group' ),
 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
 			),
+			'drop-shadow' 		=> array( esc_html__('Drop Shadow', 'flat-blocks'), 
+				array( 'post-template', 'group' ),
+				'style_handle'	=> 'flatblocks-pro-custom-styles'
+			),
 			'alternate-colors' 		=> array( esc_html__('Alternate Colors', 'flat-blocks'),
 				array( 'post-template' ),
 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
@@ -96,6 +100,22 @@ if ( ! function_exists( 'flatblocks_pro_register_block_styles' ) ) :
 			'button-outline-alt' => array( esc_html__('Alt Outline Style', 'flat-blocks'), 
 				array( 'button' ),
 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+			),
+			'button-alt-2' 		=> array( esc_html__('Alt 2 Style', 'flat-blocks'), 
+				array( 'button' ),
+				'style_handle'	=> 'flatblocks-pro-custom-styles'
+			),
+			'button-outline-alt-2' => array( esc_html__('Alt 2 Outline Style', 'flat-blocks'), 
+				array( 'button' ),
+				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+			),
+			'nav-dividers' 		=> array( esc_html__('Dividers', 'flat-blocks'), 
+				array('navigation' ),
+				'style_handle' 	=> 'flatblocks-pro-custom-styles'				
+			),
+			'arrow-up-icon' 	=> array( esc_html__('Arrow Up Icon', 'flat-blocks'), 
+				array('navigation-link' ),
+				'style_handle' 	=> 'flatblocks-pro-custom-styles'				
 			),
 			'list-dividers' 		=> array( esc_html__('Dividers', 'flat-blocks'), 
 				array('list', 'page-list', 'categories', 'latest-posts', 'latest-comments' ),

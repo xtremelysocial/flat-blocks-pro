@@ -2,10 +2,21 @@
 # GENERAL STYLES
 --------------------------------------------------------------*/
 
+/* Override hard-coded Dashicons size */
 .dashicons,
 .dashicons-before:before {
 	width: auto !important;
 	height: auto !important;
+}
+
+/* 
+ * Allow drop-shadow on anything except post template since it needs
+ * to be on the post instead 
+ */
+.is-style-drop-shadow {
+//.is-style-drop-shadow:not(.wp-block-post-template) {
+	border: 1px solid var(--wp--custom--outline--color); //var(--wp--custom--border--color);
+	box-shadow: var(--wp--preset--shadow--natural);
 }
 
 /*--------------------------------------------------------------

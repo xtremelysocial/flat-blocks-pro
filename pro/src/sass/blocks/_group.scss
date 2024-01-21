@@ -1,4 +1,25 @@
 /*--------------------------------------------------------------
+# Group Drop Shadow
+--------------------------------------------------------------*/
+
+/* Add a border and drop shadow */
+// .is-style-drop-shadow.wp-block-group {
+// 	border: 1px solid var(--wp--custom--border--color);
+// 	box-shadow: var(--wp--preset--shadow--natural);
+// }
+
+/* If no background already, add one and some padding */
+.is-style-drop-shadow.wp-block-group:not(.has-background) {
+	background-color: var(--wp--preset--color--white);
+	padding: var(--wp--style--block-gap);
+}
+
+/* If not full width, use our standard border radius */
+.is-style-drop-shadow.wp-block-group:not(.alignfull) {
+	border-radius: var(--wp--custom--border--radius);
+}
+
+/*--------------------------------------------------------------
 # Group Stacks equal widths
 --------------------------------------------------------------*/
 
