@@ -14,6 +14,7 @@ assets/css/blocks/
 
 # Ignore PRO theme files
 pro
+parts/pro-*
 
 # Ignore our xtremelysocial.com files
 styles/*xtremelysocial*.json
