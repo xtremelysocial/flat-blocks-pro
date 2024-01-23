@@ -1846,7 +1846,7 @@
 		},
 		{
 			"name": "footer-compact-nav-site-social",
-			"title": "Footer compact w/Nav Menu, Site Info, and Social Icons",
+			"title": "Footer Compact w/Nav Menu, Site Info, and Social Icons",
 			"description": "Compact footer w/nav menu, site info, and social icons",
 			"area": "footer"
 		},
@@ -1885,7 +1885,37 @@
 			"title": "Footer w/Colored Social Icons and Jetpack Map and Contact Info",
 			"description": "Footer w/colored social icons and Jetpack map and contact info",
 			"area": "footer"
-		}
+		},
+		{
+			"name": "pro-header-gradient-fixed",
+			"title": "PRO Header Gradient Fixed",
+			"description": "Header fixed with gradient background",
+			"area": "header"
+		},		
+		{
+			"name": "pro-header-scroll-fixed",
+			"title": "PRO Header Scroll to Fixed",
+			"description": "Header fixed after scrolling down",
+			"area": "header"
+		},		
+		{
+			"name": "pro-footer-3-blocks-image-curved",
+			"title": "PRO Footer Curved w/Image and 3 Blocks",
+			"description": "Footer curved with image and 3 blocks",
+			"area": "footer"
+		},		
+		{
+			"name": "pro-footer-3-blocks-image-curved-nav-site-info",
+			"title": "PRO Footer Curved w/Image 3 Blocks, Menu, and Site Info",
+			"description": "Footer curved with image and 3 blocks, menu, and site info",
+			"area": "footer"
+		},		
+		{
+			"name": "pro-footer-3-blocks-gradient",
+			"title": "PRO Footer 3 Blocks with Gradient",
+			"description": "Footer 3 blocks with gradient background",
+			"area": "footer"
+		}	
 	],
 	"customTemplates": [
 		{
@@ -2019,6 +2049,12 @@
 			"title": "Post Right Sidebar",
 			"description": "Post w/right sidebar",
 			"postTypes": ["post"]
+		},
+		{
+			"name": "pro-page-home-scroll-header",
+			"title": "PRO Page Home (cover image w/scroll to fixed header, no comments)",
+			"description": "PRO Home page (cover image with scroll to fixed header, no comments)",
+			"postTypes": ["page"]
 		}
 	]
 }

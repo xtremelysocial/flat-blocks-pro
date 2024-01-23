@@ -542,69 +542,57 @@ h6 a:focus,
 # Dividers
 --------------------------------------------------------------*/
 /* Dividers on top-level horizontal menu items */
-.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container,
-.wp-block-navigation.is-style-nav-dividers > .wp-block-navigation__container {
+.wp-block-navigation.is-style-nav-dividers > .wp-block-navigation__container, .wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container {
   column-gap: var(--wp--preset--spacing--30);
 }
-
-.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container li:not(:last-child),
-.wp-block-navigation.is-style-nav-dividers > .wp-block-navigation__container li:not(:last-child) {
+.wp-block-navigation.is-style-nav-dividers > .wp-block-navigation__container li:not(:last-child), .wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container li:not(:last-child) {
   border-right: solid 1px rgba(128, 128, 128, 0.2);
   padding-right: var(--wp--preset--spacing--30);
 }
 
-/* On mobile menu, bold face top level menu items */
+/* On mobile menu with dividers, bold face top level menu items */
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.is-style-nav-dividers.wp-block-navigation > li {
   font-weight: var(--wp--custom--typography--font-weight--medium);
 }
-
 .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.is-style-nav-dividers.wp-block-navigation > li ul {
   font-weight: var(--wp--custom--typography--font-weight--normal);
 }
 
 /* Dividers on mobile menu items */
-/* On mobile menu, replace gap with spacing */
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open {
+  /* Replace gap with padding */
+  /* Add a bottom border */
+  /* FIX for aligned drop-down menu items */
+}
 .wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
   width: 100%;
   row-gap: 0;
 }
-
 .wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container li {
   padding-top: var(--wp--preset--spacing--30);
   padding-bottom: var(--wp--preset--spacing--30);
   width: 100%;
 }
-
-.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container li:not(:last-child),
-.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-dialog li:not(:last-child) {
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container li:not(:last-child), .wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-dialog li:not(:last-child) {
   border-bottom: solid 1px rgba(128, 128, 128, 0.2);
 }
-
 .wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu .wp-block-navigation__submenu-container {
   width: 100%;
 }
-
 .wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu__toggle {
+  width: 100%;
   border-bottom: solid 1px rgba(128, 128, 128, 0.2);
   padding-bottom: var(--wp--preset--spacing--30);
-  width: 100%;
 }
-
-/* FIX for aligned drop-down menu items */
-.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-right .wp-block-navigation__submenu-container,
-.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-right .wp-block-navigation-submenu__toggle {
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-right .wp-block-navigation__submenu-container, .wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-right .wp-block-navigation-submenu__toggle {
   padding-left: 0;
   text-align: right;
 }
-
-.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-left .wp-block-navigation__submenu-container,
-.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-left .wp-block-navigation-submenu__toggle {
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-left .wp-block-navigation__submenu-container, .wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-left .wp-block-navigation-submenu__toggle {
   padding-right: 0;
   text-align: left;
 }
-
-.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-center .wp-block-navigation__submenu-container,
-.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-center .wp-block-navigation-submenu__toggle {
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-center .wp-block-navigation__submenu-container, .wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-center .wp-block-navigation-submenu__toggle {
   text-align: center;
 }
 
@@ -613,11 +601,6 @@ h6 a:focus,
 --------------------------------------------------------------*/
 /* Group Scroll header */
 .wp-block-group.is-style-scroll-header {
-  border: 1px solid var(--wp--custom--border--color);
-  border-width: 0 0 1px;
-  background-color: var(--wp--preset--color--foreground-alt);
-  color: var(--wp--preset--color--very-dark-gray);
-  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -625,8 +608,16 @@ h6 a:focus,
   transition: all var(--wp--custom--animation--duration--normal, 1s) ease;
 }
 
+.wp-block-group.is-style-scroll-header.header-active {
+  border: 1px solid var(--wp--custom--border--color);
+  border-width: 0 0 1px;
+  background-color: var(--wp--preset--color--foreground-alt);
+  color: var(--wp--preset--color--very-dark-gray);
+  position: fixed;
+}
+
 /* Adjust scroll header position for WordPress Admin Bar */
-.admin-bar .wp-block-group.is-style-scroll-header {
+.admin-bar .wp-block-group.is-style-scroll-header.header-active {
   top: var(--wp-admin--admin-bar--height, 32px);
 }
 
@@ -640,6 +631,7 @@ h6 a:focus,
   background-color: transparent;
   color: var(--wp--preset--color--foreground-alt);
   border: none;
+  position: absolute;
 }
 
 /* If not yet scrolled, use light font color on Site Title */
@@ -647,58 +639,28 @@ h6 a:focus,
   color: var(--wp--preset--color--foreground-alt);
 }
 
-/* Bold or highlight active top-level menu items, depending on whether text color or not */
-.is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item.current-menu-item:not(.has-child) > a,
-.is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item:has(.current-menu-ancestor),
-.is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item:has(.current-menu-ancestor) > a,
-.is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-pages-list__item.current-menu-item > a,
-.is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item.wp-block-home-link > a[aria-current=page] {
+/* OVERRIDE bold or highlight active top-level menu items, depending on whether text color or not */
+.is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item.current-menu-item:not(.has-child) > a, .is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item:has(.current-menu-ancestor), .is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item:has(.current-menu-ancestor) > a, .is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-pages-list__item.current-menu-item > a, .is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item.wp-block-home-link > a[aria-current=page] {
   color: var(--wp--preset--color--foreground-alt);
   font-weight: inherit;
 }
 
-.is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item.current-menu-item:not(.has-child) > a,
-.is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item:has(.current-menu-ancestor),
-.is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item:has(.current-menu-ancestor) > a,
-.is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-pages-list__item.current-menu-item > a,
-.is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item.wp-block-home-link > a[aria-current=page] {
+.is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item.current-menu-item:not(.has-child) > a, .is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item:has(.current-menu-ancestor), .is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item:has(.current-menu-ancestor) > a, .is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-pages-list__item.current-menu-item > a, .is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item.wp-block-home-link > a[aria-current=page] {
   font-weight: var(--wp--custom--typography--font-weight--medium);
 }
 
-/* Bold or highlight active sub-menu items, depending on whether text color or not */
+/* Navigation hover style for site title */
+.is-style-scroll-header:not(.header-active) .wp-block-site-title > a:hover {
+  opacity: 0.85;
+}
+
 /* Navigation hover styles for top-level menu items */
-.is-style-scroll-header:not(.header-active) .wp-block-navigation .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item:hover,
-.is-style-scroll-header:not(.header-active) .wp-block-navigation .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item:active {
+.is-style-scroll-header:not(.header-active) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation.wp-block-navigation__container > .wp-block-navigation-item:hover > .wp-block-navigation-item__content, .is-style-scroll-header:not(.header-active) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation.wp-block-navigation__container > .wp-block-navigation-item:hover > .wp-block-navigation__submenu-icon, .is-style-scroll-header:not(.header-active) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation.wp-block-navigation__container > .wp-block-navigation-item:not(.has-child) > .wp-block-navigation-item__content:hover {
   color: var(--wp--preset--color--foreground-alt) !important;
   font-weight: inherit;
+  opacity: 0.85;
 }
 
-/* 
-.is-style-scroll-header:not(.header-active) .wp-block-navigation .wp-block-navigation__container > .wp-block-navigation-item > a:hover, // top-level
-.is-style-scroll-header:not(.header-active) .wp-block-navigation .wp-block-navigation__container > .wp-block-navigation-item > a:active { // top-level
-    //color: var(--wp--preset--color--primary-alt);
-    color: var(--wp--preset--color--foreground-alt) !important;
-    opacity: 0.8;
-}
- */
-/* Until scrolled, header shouldn't have colored links */
-/*
-.is-style-scroll-header:not(.header-active) .wp-block-navigation a:where(:not(.wp-element-button)):hover {
-	color: inherit !important;
-	opacity: 0.8;
-}
-
-.is-style-scroll-header:not(.header-active) .wp-block-navigation a:where(:not(.wp-element-button)):active {
-	color: inherit !important;
-	opacity: 0.8;
-}
-
-// .is-style-scroll-header:not(.header-active) .wp-block-navigation-submenu.open-on-click:hover {
-.is-style-scroll-header:not(.header-active) .wp-block-navigation-submenu:hover {
-	color: inherit;
-	opacity: 0.8;
-}
- */
 /*--------------------------------------------------------------
 # Navigation Item: Custom
 --------------------------------------------------------------*/
@@ -714,10 +676,6 @@ h6 a:focus,
   content: "\f343";
 }
 
-/* Admin Home icon */
-/* Admin Users icon */
-/* Admin Tools icon */
-/* Admin Generic icon */
 /*--------------------------------------------------------------
 # Dashicon icons for telephone and email links
 --------------------------------------------------------------*/
