@@ -6,61 +6,106 @@
 # Dividers
 --------------------------------------------------------------*/
 
-/* Dividers on top-level horizontal menu items */
+/* When specified, put dividers on top-level horizontal menu items */
+/* TO-DO: Get this working in the block editor too */
+/* 
 .wp-block-navigation.is-style-nav-dividers {
 
 	& > .wp-block-navigation__container,
 	& .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container {
 		column-gap: var(--wp--preset--spacing--30);
-		//font-weight: var(--wp--custom--typography--font-weight--medium);
 		
-		& li:not(:last-child) {
-			border-right: solid 1px rgba(128, 128, 128, 0.2);
+		& > li:not(:last-child) {
+			border-right: 1px solid rgba(128, 128, 128, 0.2);
 			padding-right: var(--wp--preset--spacing--30);
 		}
 	}
 }
+ */
 
-/* On mobile menu with dividers, bold face top level menu items */
-.wp-block-navigation__responsive-container.is-menu-open {
+/* Always put dividers on drop-down menus from top-level horizontal menu items */
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container:not(.is-menu-open) {
+//.wp-block-navigation__responsive-container:not(.is-menu-open) {
 
-	& .wp-block-navigation__container.is-style-nav-dividers.wp-block-navigation > li {
+	/* Put the padding on the container and round it out */
+	& .wp-block-navigation__submenu-container.wp-block-navigation-submenu {
+		border-radius: var(--wp--custom--border--radius);
+		padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
+	}
+	
+	/* And remove the padding and border from the links */
+	& .wp-block-navigation__submenu-container.wp-block-navigation-submenu > .wp-block-navigation-item > .wp-block-navigation-item__content {
+		border: none;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	/* Add bottom border to all but the last link */
+	& .wp-block-navigation__submenu-container.wp-block-navigation-submenu > .wp-block-navigation-item:not(:last-child) {
+		border-bottom: 1px solid rgba(128, 128, 128, 0.2);		
+	}	
+}
+
+/* Always on mobile menu, bold face top level menu items */
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open {
+//.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
+
+	//& .wp-block-navigation__container.is-style-nav-dividers.wp-block-navigation > li {
+	& .wp-block-navigation__container.wp-block-navigation > li {
 		font-weight: var(--wp--custom--typography--font-weight--medium);
 	}
 
-	& .wp-block-navigation__container.is-style-nav-dividers.wp-block-navigation > li ul {
+	//& .wp-block-navigation__container.is-style-nav-dividers.wp-block-navigation > li ul {
+	& .wp-block-navigation__container.wp-block-navigation > li ul {
 		font-weight: var(--wp--custom--typography--font-weight--normal);
 	}
-	
 }
 
-/* Dividers on mobile menu items */
+/* Always on mobile menu, put dividers on menu items */
 .wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open {
+//.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
 
 	/* Replace gap with padding */
-	& .wp-block-navigation__container {
+	& .wp-block-navigation__container,
+	& .wp-block-navigation__responsive-dialog .wp-block-page-list {
+	//& > .wp-block-navigation__container {
 		width: 100%;
-		row-gap: 0; 
+		//row-gap: 0; 
+		gap: 0;
 	}
-	& .wp-block-navigation__container li {
+
+	& .wp-block-navigation__container li,
+	& .wp-block-navigation__responsive-dialog .wp-block-page-list li {
 		padding-top: var(--wp--preset--spacing--30);
 		padding-bottom: var(--wp--preset--spacing--30);
 		width: 100%;
+		border: none;
 	}
 
-	/* Add a bottom border */	
+// 	& .wp-block-navigation__responsive-dialog .wp-block-page-list,
+// 	& .wp-block-navigation__responsive-dialog .wp-block-page-list li {
+// 		width: 100%;
+// 	}
+
+	/* Add a bottom border to all but the last one */	
 	& .wp-block-navigation__container li:not(:last-child),
 	& .wp-block-navigation__responsive-dialog li:not(:last-child) {
-		border-bottom: solid 1px rgba(128, 128, 128, 0.2);
+		border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+	}
+	
+	& .wp-block-navigation__container li:last-child,
+	& .wp-block-navigation__responsive-dialog li:last-child {
+		padding-bottom: 0;
 	}
 
+	/* Style submenus */
 	& .wp-block-navigation-submenu .wp-block-navigation__submenu-container {
 		width: 100%;
 	}
 
 	& .wp-block-navigation-submenu__toggle {
 		width: 100%;
-		border-bottom: solid 1px rgba(128, 128, 128, 0.2);
+		border-bottom: 1px solid rgba(128, 128, 128, 0.2);
 		padding-bottom: var(--wp--preset--spacing--30);
 	}
 	
@@ -81,61 +126,14 @@
 	& .wp-block-navigation__container.items-justified-center .wp-block-navigation-submenu__toggle {
 		text-align: center; 
 	}
-	
 }
 
 /*--------------------------------------------------------------
-# Scroll Header
+# Scroll Header Navigation
 --------------------------------------------------------------*/
-/* Group Scroll header */
-.wp-block-group.is-style-scroll-header {
-// 	border: 1px solid var(--wp--custom--border--color);
-// 	border-width: 0 0 1px;
-// 	background-color: var(--wp--preset--color--foreground-alt);
-// 	color: var(--wp--preset--color--very-dark-gray);
-// 	position: fixed;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 9999;
-	transition: all var(--wp--custom--animation--duration--normal, 1s) ease;
-}
-
-.wp-block-group.is-style-scroll-header.header-active {
-	border: 1px solid var(--wp--custom--border--color);
-	border-width: 0 0 1px;
-	background-color: var(--wp--preset--color--foreground-alt);
-	color: var(--wp--preset--color--very-dark-gray);
-	position: fixed;
-// 	top: 0;
-// 	left: 0;
-// 	right: 0;
-// 	z-index: 9999;
-// 	transition: all var(--wp--custom--animation--duration--normal, 1s) ease;
-}
-
-/* Adjust scroll header position for WordPress Admin Bar */
-.admin-bar .wp-block-group.is-style-scroll-header.header-active {
-	top: var(--wp-admin--admin-bar--height, 32px);
-}
-
 /* Line up menu close button with menu open button */
 .wp-block-group.is-style-scroll-header .wp-block-navigation__responsive-container.is-menu-open {
   padding-top: var(--wp--preset--spacing--50);
-}
-
-/* If not yet scrolled, use transparent background and light font color */
-.wp-block-group.is-style-scroll-header:not(.header-active) {
-	background-color: transparent;
-	color: var(--wp--preset--color--foreground-alt);
-	border: none;
-// 	border-top: var(--wp--preset--spacing--30) solid var(--wp--preset--color--primary);
-	position: absolute;
-}
-
-/* If not yet scrolled, use light font color on Site Title */
-.is-style-scroll-header:not(.header-active):not(.has-link-color) .wp-block-site-title > a {
-	color: var(--wp--preset--color--foreground-alt);
 }
 
 /* OVERRIDE bold or highlight active top-level menu items, depending on whether text color or not */
@@ -164,7 +162,7 @@
 
 /* Navigation hover style for site title */
 .is-style-scroll-header:not(.header-active) .wp-block-site-title > a:hover {
-    opacity: 0.85;
+    opacity: 0.8;
 }
 
 /* Navigation hover styles for top-level menu items */
@@ -174,12 +172,12 @@
 	& > .wp-block-navigation-item:not(.has-child) > .wp-block-navigation-item__content:hover {
 		color: var(--wp--preset--color--foreground-alt) !important;
 		font-weight: inherit;
-		opacity: 0.85;
+		opacity: 0.8;
 	}
 }
- 
+
 /*--------------------------------------------------------------
-# Navigation Item: Custom
+# Navigation Item Icons
 --------------------------------------------------------------*/
 
 /* Arrow Up Alt 2 icon */

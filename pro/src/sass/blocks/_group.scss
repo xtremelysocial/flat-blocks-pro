@@ -2,11 +2,7 @@
 # Group Drop Shadow
 --------------------------------------------------------------*/
 
-/* Add a border and drop shadow */
-// .is-style-drop-shadow.wp-block-group {
-// 	border: 1px solid var(--wp--custom--border--color);
-// 	box-shadow: var(--wp--preset--shadow--natural);
-// }
+/* On groups, add background and border radius */
 
 /* If no background already, add one and some padding */
 .is-style-drop-shadow.wp-block-group:not(.has-background) {
@@ -19,6 +15,56 @@
 	border-radius: var(--wp--custom--border--radius);
 }
 
+/*--------------------------------------------------------------
+# Group Scroll Header
+--------------------------------------------------------------*/
+/* Group Scroll header */
+.wp-block-group.is-style-scroll-header {
+// 	border: 1px solid var(--wp--custom--border--color);
+// 	border-width: 0 0 1px;
+// 	background-color: var(--wp--preset--color--foreground-alt);
+// 	color: var(--wp--preset--color--very-dark-gray);
+// 	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+	transition: all var(--wp--custom--animation--duration--normal, 1s) ease;
+}
+
+.wp-block-group.is-style-scroll-header.header-active {
+	border: 1px solid var(--wp--custom--border--color);
+	border-width: 0 0 1px;
+	background-color: var(--wp--preset--color--foreground-alt);
+	color: var(--wp--preset--color--very-dark-gray);
+	position: fixed;
+// 	top: 0;
+// 	left: 0;
+// 	right: 0;
+// 	z-index: 9999;
+// 	transition: all var(--wp--custom--animation--duration--normal, 1s) ease;
+	box-shadow: var(--wp--custom--shadow--default);
+}
+
+/* Adjust scroll header position for WordPress Admin Bar */
+.admin-bar .wp-block-group.is-style-scroll-header.header-active {
+	top: var(--wp-admin--admin-bar--height, 32px);
+}
+
+/* If not yet scrolled, use transparent background and light font color */
+.wp-block-group.is-style-scroll-header:not(.header-active) {
+	background-color: transparent !important;
+	color: var(--wp--preset--color--foreground-alt);
+	border: none;
+// 	border-top: var(--wp--preset--spacing--30) solid var(--wp--preset--color--primary);
+	position: absolute;
+}
+
+/* If not yet scrolled, use light font color on Site Title */
+.is-style-scroll-header:not(.header-active):not(.has-link-color) .wp-block-site-title > a {
+	color: var(--wp--preset--color--foreground-alt);
+}
+ 
 /*--------------------------------------------------------------
 # Group Stacks equal widths
 --------------------------------------------------------------*/
