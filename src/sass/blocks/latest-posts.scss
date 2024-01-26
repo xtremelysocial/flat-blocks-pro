@@ -12,6 +12,7 @@
 	border-radius: var(--wp--custom--border--radius);
 	border: 1px solid var(--wp--custom--border--color);
 	padding: var(--wp--custom--border--radius);
+	box-shadow: var(--wp--custom--shadow--default);
 }
 .wp-block-latest-posts__featured-image.aligncenter {
 	margin-bottom: var(--wp--preset--spacing--30);

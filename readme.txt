@@ -153,6 +153,16 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 1.4.5 = 
+Jan 25, 2024
+
+* For fixed headers, line up mobile menu open and close buttons.
+* Changed custom variable in theme.json --wp--custom--button--shadow to --wp--custom--shadow--default. This specifies a drop-shadow to use or "none" for buttons (and the fixed header). To specify one, use var(--wp--preset--shadow--natural).
+* If a default shadow is specified, add it to the fixed header, latest post featured images, and blog featured images in addition to buttons.
+* Enhanced CSS for navigation menu hover color to work with colored header backgrounds.
+* For Groups with flex (Rows) and "No Wrap" specified, go ahead and wrap on mobile screens. Otherwise, the layout is broken. 
+* Added a little more space to the top of the Cover Scroll Home Header cover image text. 
+
 = 1.4.4 = 
 Jan 12, 2024
 

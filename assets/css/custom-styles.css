@@ -80,6 +80,7 @@
 --------------------------------------------------------------*/
 .wp-block-post-featured-image img {
   padding: var(--wp--custom--border--radius);
+  box-shadow: var(--wp--custom--shadow--default);
 }
 
 /*--------------------------------------------------------------
@@ -177,6 +178,7 @@
   border-radius: var(--wp--custom--border--radius);
   border: 1px solid var(--wp--custom--border--color);
   padding: var(--wp--custom--border--radius);
+  box-shadow: var(--wp--custom--shadow--default);
 }
 
 .wp-block-latest-posts__featured-image.aligncenter {
@@ -487,6 +489,14 @@ li.is-style-link-underline-hover a:hover {
 --------------------------------------------------------------*/
 .wp-block-post-comments-count.is-style-no-icon:before {
   display: none;
+}
+
+/*--------------------------------------------------------------
+# Post Comments Form
+--------------------------------------------------------------*/
+/* Override no-shadow if our custom shadow default is set */
+.wp-block-post-comments-form input[type=submit].wp-element-button {
+  box-shadow: var(--wp--custom--shadow--default);
 }
 
 /*--------------------------------------------------------------

@@ -25,7 +25,11 @@
 		padding-left: var(--wp--style--root--padding-left) !important;
 		padding-right: var(--wp--style--root--padding-right) !important;
 	}
-		
+	
+	.is-nowrap.is-layout-flex.wp-block-group {
+		flex-wrap: wrap;
+		//overflow: hidden;
+	}		
 }
 
 /*--------------------------------------------------------------
@@ -37,6 +41,7 @@
 	border: 1px solid var(--wp--custom--border--color);
 	border-radius: var(--wp--custom--border--radius);
 	padding: var(--wp--preset--spacing--40);
+    //box-shadow: var(--wp--custom--shadow--default);
 }
 
 .wp-block-group.is-style-rounded-border.is-layout-flex {
@@ -46,6 +51,7 @@
 .wp-block-group.is-style-thick-rounded-border {
 	border: 3px solid var(--wp--custom--border--color);
 	border-radius: var(--wp--custom--border--radius);
+    //box-shadow: var(--wp--custom--shadow--default);
 }
 
 .wp-block-group.is-style-thick-rounded-border.is-layout-flex {
@@ -72,6 +78,12 @@
     padding-bottom: var(--wp--preset--spacing--40);
     //padding-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
     //padding-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
+    box-shadow: var(--wp--custom--shadow--default);
+}
+
+/* Line up menu close button with menu open button */
+.wp-block-group.is-style-fixed-header .wp-block-navigation__responsive-container.is-menu-open {
+	padding-top: var(--wp--preset--spacing--50);
 }
 
 /* Position the fixed header using sticky so we don't have to have top site margin */
