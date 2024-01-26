@@ -15,8 +15,8 @@
 				"color": "var(--wp--preset--color--neutral-alt)",
 				"radius": "5px"
 			},
-			"button": {
-				"shadow": "none"
+			"shadow": {
+				"default": "none"
 			},
 			"link": {
 				"color": "var(--wp--preset--color--primary)",
@@ -1005,7 +1005,7 @@
 					"color": "var(--wp--custom--border--color)",
 					"radius": "var(--wp--custom--border--radius)"
 				},
-				"shadow": "var(--wp--custom--button--shadow)",
+				"shadow": "var(--wp--custom--shadow--default)",
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--normal)",
 					"fontStyle": "normal",
@@ -1098,12 +1098,12 @@
 					"link": {
 						":hover": {
 							"color": {
-								"text": "var(--wp--custom--link--hover) !important"
+								"text": "var(--wp--custom--link--hover)"
 							}
 						},
 						":active": {
 							"color": {
-								"text": "var(--wp--custom--link--hover) !important"
+								"text": "var(--wp--custom--link--hover)"
 							}
 						}
 					}
@@ -1131,7 +1131,7 @@
 				},
 				"elements": {
 					"button": {
-						"shadow": "var(--wp--custom--button--shadow)",
+						"shadow": "var(--wp--custom--shadow--default)",
 						"border": {
 							"width": "0px",
 							"radius": "var(--wp--custom--border--radius)"
@@ -1142,7 +1142,7 @@
 			"core/post-comments-form": {
 				"elements": {
 					"button": {
-						"shadow": "var(--wp--custom--button--shadow) !important"
+						"shadow": "var(--wp--custom--shadow--default) !important"
 					}
 				}
 			},
@@ -1635,12 +1635,6 @@
 			"area": "header"
 		},
 		{
-			"name": "pro-header-scroll-fixed",
-			"title": "Header with Scroll to Fixed Header",
-			"description": "Header that becomes fixed when user scrolls",
-			"area": "header"
-		},
-		{
 			"name": "menu-header",
 			"title": "Menu Header",
 			"description": "Default header nav menu (right)",
@@ -1722,12 +1716,6 @@
 			"name": "content-article",
 			"title": "Content Article",
 			"description": "Blog list article (featured image, title, date, and excerpt)",
-			"area": "content"
-		},
-		{
-			"name": "pro-content-article-image",
-			"title": "Content Article w/Image",
-			"description": "Blog list article with featured image and title only",
 			"area": "content"
 		},
 		{
@@ -1846,7 +1834,7 @@
 		},
 		{
 			"name": "footer-compact-nav-site-social",
-			"title": "Footer compact w/Nav Menu, Site Info, and Social Icons",
+			"title": "Footer Compact w/Nav Menu, Site Info, and Social Icons",
 			"description": "Compact footer w/nav menu, site info, and social icons",
 			"area": "footer"
 		},

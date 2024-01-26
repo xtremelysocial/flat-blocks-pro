@@ -27,16 +27,13 @@
 .has-tertiary-background-color,
 .has-tertiary-alt-background-color,
 .has-dark-gray-background-color,
-//.has-dark-gray-gradient-background,
 .has-very-dark-gray-background-color,
 .has-light-green-background-color,
 .has-green-background-color,
-//.has-green-gradient-background,
 .has-bright-green-background-color,
 .has-dark-bright-green-background-color,
 .has-light-orange-background-color,
 .has-orange-background-color,
-//.has-orange-gradient-background,
 .has-dark-orange-background-color,
 .has-light-blue-background-color,
 .has-blue-background-color,
@@ -45,17 +42,15 @@
 .has-dark-midnight-blue-background-color,
 .has-light-purple-background-color,
 .has-purple-background-color,
-//.has-purple-gradient-background,
 .has-dark-purple-background-color,
 .has-light-red-background-color,
 .has-red-background-color,
-//.has-red-gradient-background,
 .has-dark-red-background-color,
 [class*="gradient-background"] {
  	color: var(--wp--preset--color--foreground-alt);
  	
  	& a {
-	 	color: inherit; //var(--wp--preset--color--foreground-alt);
+	 	color: inherit;
  	}
 
 	& a:hover {
@@ -77,7 +72,7 @@
 	}
 
 	& a {
-	 	color: inherit; //var(--wp--preset--color--foreground);
+	 	color: inherit;
 	}
 	
 	& a:hover {
@@ -100,7 +95,7 @@
 .has-gray-gradient-background {
  	color: var(--wp--preset--color--very-dark-gray);
 
- 	&.wp-block-button__link.wp-element-button { //,
+ 	&.wp-block-button__link.wp-element-button {
 	 	color: var(--wp--preset--color--very-dark-gray);
 	}
 }
@@ -159,5 +154,5 @@
 :where(.wp-block-cover:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-90)),
 :where(.wp-block-cover-image:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-100)),
 :where(.wp-block-cover:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-100)) { 
-  color: var(--wp--preset--color--white);
+	color: var(--wp--preset--color--white);
 }
