@@ -1,4 +1,4 @@
-=== Flat Blocks PRO ===
+=== XtremelySocial ===
 Contributors:  XtremelySocial
 Requires at least: 6.2
 Tested up to: 6.4
@@ -9,7 +9,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
-Flat Blocks is a modern “flat” style theme with a nice color palette, full and wide width support, and support for the new “Full Site Editing” in WordPress. It includes dozens of block patterns and alternate layouts and color schemes.
+XtremelySocial is a modern “flat” style theme with a nice color palette, full and wide width support, and support for the new “Full Site Editing” in WordPress. It includes dozens of block patterns and alternate layouts and color schemes.
 
 == Quick Start Guide ==
 

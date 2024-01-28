@@ -86,6 +86,11 @@
 	padding-top: var(--wp--preset--spacing--50);
 }
 
+/* Line up menu close button with menu open button */
+.wp-block-group.is-style-fixed-header .wp-block-navigation__responsive-container.is-menu-open {
+	padding-top: var(--wp--preset--spacing--50);
+}
+
 /* Position the fixed header using sticky so we don't have to have top site margin */
 .wp-site-blocks > header:has(.is-style-fixed-header) {
 	position: sticky;

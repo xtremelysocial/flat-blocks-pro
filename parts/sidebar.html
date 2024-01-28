@@ -1,28 +1,147 @@
-<!-- wp:group {"style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"},"margin":{"top":"0","bottom":"var:preset|spacing|40"}}},"backgroundColor":"neutral","textColor":"very-dark-gray","className":"sidebar is-style-rounded-border"} -->
-<div class="wp-block-group sidebar is-style-rounded-border has-very-dark-gray-color has-neutral-background-color has-text-color has-background" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--40);padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
-<!-- wp:search {"label":"Search","showLabel":false,"placeholder":"search","buttonText":"Search","buttonUseIcon":true} /-->
+<!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|40"}}},"backgroundColor":"neutral","textColor":"very-dark-gray","className":"sidebar is-style-rounded-border","layout":{"type":"constrained"}} -->
+<div class="wp-block-group sidebar is-style-rounded-border has-very-dark-gray-color has-neutral-background-color has-text-color has-background" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--40)"><!-- wp:search {"label":"Search","showLabel":false,"placeholder":"search","buttonText":"Search","buttonUseIcon":true} /-->
 
 <!-- wp:heading {"level":3,"placeholder":"Account"} -->
 <h3 class="wp-block-heading" id="account">Account</h3>
 <!-- /wp:heading -->
 
-<!-- wp:loginout /-->
+<!-- wp:shortcode -->
+[xs_member_profile]
+<!-- /wp:shortcode -->
 
-<!-- wp:heading {"level":3,"placeholder":"Categories"} -->
-<h3 class="wp-block-heading" id="categories">Categories</h3>
+<!-- wp:group {"className":"is-style-show-on-desktop","layout":{"type":"constrained"}} -->
+<div id="site-contents" class="wp-block-group is-style-show-on-desktop"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Site Contents</h3>
 <!-- /wp:heading -->
 
-<!-- wp:categories {"showPostCounts":true} /-->
+<!-- wp:list {"className":"is-style-list-dividers"} -->
+<ul class="is-style-list-dividers"><!-- wp:list-item -->
+<li><a href="/">Home</a></li>
+<!-- /wp:list-item -->
 
-<!-- wp:heading {"level":3,"placeholder":"Social Links"} -->
-<h3 class="wp-block-heading" id="social-links">Social Links</h3>
+<!-- wp:list-item -->
+<li><a href="/wordpress/">Our WordPress Themes</a><!-- wp:list -->
+<ul><!-- wp:list-item -->
+<li><a href="/wordpress/flat-blocks/">Flat Blocks WordPress Theme</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="/wordpress/flat/">Flat Bootstrap WordPress Theme</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="/wordpress/link/">Link Bootstrap WordPress Theme</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="/wordpress/pratt/">Pratt Bootstrap WordPress Theme</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="/wordpress/spot/">Spot Bootstrap WordPress Theme</a></li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="/demos/">Our Theme Demos</a><!-- wp:list -->
+<ul><!-- wp:list-item -->
+<li><a href="https://flat-blocks.xtremelysocial.com/">Flat Blocks Theme Demo</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="https://flat-bootstrap.xtremelysocial.com/">Flat Bootstrap Theme Demo</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="https://link.xtremelysocial.com/">Link Theme Demo</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="https://pratt.xtremelysocial.com/">Pratt Theme Demo</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="https://spot.xtremelysocial.com/">Spot Theme Demo</a></li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="/userguide/">How to Use Our Themes</a><!-- wp:list -->
+<ul><!-- wp:list-item -->
+<li><a href="/userguide/block-themes/">How to Use Our Blocks Themes</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="/userguide/block-themes/">Block Theme Styles</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="/userguide/block-themes/">Block Theme Patterns</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="/userguide/bootstrap-themes/">How to Use Bootstrap Themes</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="/userguide/block-themes/">Bootstrap Theme </a>"<a href="/userguide/shortcodes/">Shortcodes"</a></li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="/blog/">Our Blog</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="/about/">About Us</a><!-- wp:list -->
+<ul><!-- wp:list-item -->
+<li><a href="/about/wall/">Community Wall</a></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="/privacy/">Privacy Policy</a></li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></li>
+<!-- /wp:list-item -->
+
+<!-- wp:list-item -->
+<li><a href="/sitemap/">Sitemap</a></li>
+<!-- /wp:list-item --></ul>
+<!-- /wp:list --></div>
+<!-- /wp:group -->
+
+<!-- wp:group {"className":"is-style-hide-on-mobile","layout":{"type":"constrained"}} -->
+<div id="blog-categories" class="wp-block-group is-style-hide-on-mobile"><!-- wp:heading {"level":3,"placeholder":"Categories"} -->
+<h3 class="wp-block-heading" id="categories">Blog Categories</h3>
 <!-- /wp:heading -->
 
-<!-- wp:social-links -->
-<ul class="wp-block-social-links"><!-- wp:social-link {"url":"https://twitter.com/xtremelysocial","service":"twitter"} /-->
+<!-- wp:tag-cloud {"taxonomy":"category"} /--></div>
+<!-- /wp:group -->
 
-<!-- wp:social-link {"url":"https://www.facebook.com/xtremelysocial","service":"facebook"} /-->
+<!-- wp:group {"className":"is-style-default","layout":{"type":"constrained"}} -->
+<div id="support-us" class="wp-block-group is-style-default"><!-- wp:heading {"level":3} -->
+<h3 class="wp-block-heading">Help Support Us</h3>
+<!-- /wp:heading -->
 
-<!-- wp:social-link {"url":"https://www.instagram.com/timnicholson/","service":"instagram"} /--></ul>
-<!-- /wp:social-links --></div>
+<!-- wp:html -->
+<div id="donate-button-container">
+<div id="donate-button"></div>
+<script src="https://www.paypalobjects.com/donate/sdk/donate-sdk.js" charset="UTF-8"></script>
+<script>
+PayPal.Donation.Button({
+env:'production',
+hosted_button_id:'3L8BEBSVMM4H2',
+image: {
+src:'https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif',
+alt:'Donate with PayPal button',
+title:'PayPal - The safer, easier way to pay online!',
+}
+}).render('#donate-button');
+</script>
+</div>
+<!-- /wp:html --></div>
+<!-- /wp:group --></div>
 <!-- /wp:group -->
