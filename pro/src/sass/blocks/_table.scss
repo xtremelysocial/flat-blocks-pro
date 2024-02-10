@@ -1,5 +1,9 @@
 /*--------------------------------------------------------------
-# Colored Tables
+# Custom: Table
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Custom: Colored Table
 --------------------------------------------------------------*/
 
 /* Colored tables and Colored Alternate tables */
@@ -76,7 +80,9 @@
 	opacity: 0.8;
 }
 
-/* Colored Alternate tables */
+/*--------------------------------------------------------------
+## Custom: Alternate Colored Table
+--------------------------------------------------------------*/
 
 /*.wp-block-table.is-style-table-alternate tr:first-child td:nth-child(3n-2) {
 	background-color: var(--wp--preset--color--primary);

@@ -24,6 +24,16 @@
 }
 
 /*--------------------------------------------------------------
+# Contact Form
+--------------------------------------------------------------*/
+.wp-block-jetpack-contact-form label,
+.contact-form .grunion-checkbox-multiple-options legend, 
+.contact-form .grunion-radio-options legend, 
+.contact-form-submission .field-value {
+	font-weight: var(--wp--custom--typography--font-weight--normal);
+}
+
+/*--------------------------------------------------------------
 # Contact Info
 --------------------------------------------------------------*/
 

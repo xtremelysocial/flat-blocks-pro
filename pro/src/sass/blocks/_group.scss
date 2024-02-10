@@ -1,5 +1,9 @@
 /*--------------------------------------------------------------
-# Group Drop Shadow
+## Custom: Group
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Group Drop Shadow
 --------------------------------------------------------------*/
 
 /* On groups, add background and border radius */
@@ -16,7 +20,7 @@
 }
 
 /*--------------------------------------------------------------
-# Group Scroll Header
+## Group Scroll Header
 --------------------------------------------------------------*/
 /* Group Scroll header */
 .wp-block-group.is-style-scroll-header {
@@ -66,7 +70,7 @@
 }
  
 /*--------------------------------------------------------------
-# Group Stacks equal widths
+## Group Stacks equal widths
 --------------------------------------------------------------*/
 
 /* For flexbox groups within flexbox groups, make the child equal width */
@@ -91,7 +95,7 @@
 }
 
 /*--------------------------------------------------------------
-# Equal Cells (Using Grid)
+## Equal Cells (Using Grid)
 --------------------------------------------------------------*/
 /* Display the group as a grid */
 .is-style-equal-grid {
@@ -121,7 +125,7 @@
 }
 
 /*--------------------------------------------------------------
-# Equal Cells (Using Flexbox)
+## Equal Cells (Using Flexbox)
 --------------------------------------------------------------*/
 /* Set the group contents to equal width */
 .is-style-equal-flex > * {
@@ -135,7 +139,7 @@
 }
 
 /*--------------------------------------------------------------
-# Equal Cells (Using Display: Table)
+## Equal Cells (Using Display: Table)
 --------------------------------------------------------------*/
 /*.is-style-equal-cells {
     display: table !important;

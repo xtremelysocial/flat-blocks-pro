@@ -1,5 +1,9 @@
 /*--------------------------------------------------------------
-# Dashicon icons for telephone and email links
+# Custom: Paragraph
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Dashicon icons for telephone and email links
 --------------------------------------------------------------*/
 
 /*[itemprop="address"] [itemprop="streetAddress"]:before,*/
@@ -39,6 +43,10 @@ p:has(a[href^="mailto:"]:not(.wp-block-social-link-anchor)):before {
 /*[itemprop="address"] [itemprop-"addressLocality"] {
 	margin-left: var(--wp--preset--spacing--20);
 }*/
+
+/*--------------------------------------------------------------
+## No Dashicon icons for telephone and email links
+--------------------------------------------------------------*/
 
 p.is-style-no-auto-icon a[href^="tel:"]:not(.wp-block-social-link-anchor):before,
 p.is-style-no-auto-icon a[href^="mailto:"]:not(.wp-block-social-link-anchor):before {

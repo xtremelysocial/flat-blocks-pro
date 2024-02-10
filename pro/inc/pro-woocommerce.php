@@ -5,10 +5,7 @@
  * 
  * Handles the Woo Commerce plugin styling for the PRO version of Flat Blocks
  * 
- * Loads CSS for Woo Commerce Plugin
- * 
  * @package flat-blocks-pro
- * @since	1.0
  */
 
 /**
@@ -35,7 +32,7 @@ if ( ! function_exists( 'flatblocks_pro_woocommerce_styles' ) ) :
 			);
 		}
 		
-	} //end function
+	}
 endif;
 
 /**
@@ -55,5 +52,5 @@ if ( ! function_exists( 'flatblocks_pro_woocommerce_editor_styles' ) ) :
 			);
 		}
 
-	} //end function
+	}
 endif;

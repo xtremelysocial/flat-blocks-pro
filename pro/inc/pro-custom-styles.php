@@ -1,12 +1,11 @@
 <?php
 /**
- * File:	pro-custom-styles.php
- * Theme:	Flat Blocks PRO
- * 
+ * File:		pro-custom-styles.php
+ * Theme:		Flat Blocks PRO
+ *
  * Loads the PRO custom styles and CSS. 
  * 
- * @package flat-blocks-pro
- * @since	1.0
+ * @package 	flat-blocks-pro
  */
 
 /**
@@ -42,7 +41,7 @@ if ( ! function_exists( 'flatblocks_pro_styles' ) ) :
 			);
 		//}
 		
-	} //end function
+	}
 endif;		
 
 /**
@@ -59,7 +58,7 @@ if ( ! function_exists( 'flatblocks_pro_editor_styles' ) ) :
 			'/pro/css/pro-custom-styles.css'
 		);
 
-	} //end function
+	}
 endif;
 
 /**
@@ -196,6 +195,6 @@ if ( ! function_exists( 'flatblocks_pro_register_block_styles' ) ) :
 		//return $theme_styles + $pro_styles;
 		return $theme_styles ? $theme_styles + $pro_styles : $pro_styles;
 		
-	} //end function
+	}
 endif;
 

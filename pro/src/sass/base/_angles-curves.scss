@@ -1,5 +1,5 @@
 /*--------------------------------------------------------------
-## Angled Sections
+# Custom: Angled Sections
 --------------------------------------------------------------*/
 /*
 angled-top-up
@@ -12,7 +12,9 @@ angled-top-down-bottom-up
 angled-top-down-bottom-down
 */
 
-/* Angled GROUPS use :before and :after */
+/*--------------------------------------------------------------
+## Angled GROUPS use :before and :after
+--------------------------------------------------------------*/
 
 /* All angled sections need these set */
 [class*='is-style-angled-'].wp-block-group {
@@ -96,7 +98,9 @@ angled-top-down-bottom-down
   }
 }
 
-/* Angled COVER and IMAGE use clip paths */
+/*--------------------------------------------------------------
+## Angled COVER and IMAGE use clip paths
+--------------------------------------------------------------*/
 
 /* Angled sections using clip paths need relative positioning and hidden overflow */
 [class*='is-style-angled-'].wp-block-cover,
@@ -168,7 +172,7 @@ angled-top-down-bottom-down
 }*/
 
 /*--------------------------------------------------------------
-## Curved Sections
+# Custom: Curved Sections
 --------------------------------------------------------------*/
 
 [class*='is-style-curved-'] {
@@ -233,23 +237,3 @@ angled-top-down-bottom-down
 	top: 0;
 	width: 100%;
 }
-
-/* ChatGPT */
-// .rounded-bottom {
-//   border-radius: 10px 10px 0 0;
-//   overflow: hidden;
-// }
-// 
-// .elliptical-bottom {
-//   border-radius: 50% 50% 0 0 / 25% 25% 0 0;
-//   overflow: hidden;
-// }
-// 
-// .angled-bottom {
-//   clip-path: polygon(0% 0%, 100% 0%, 100% 85%, 0% 100%);
-// }
-// 
-// .concave-top {
-//   border-radius: 0 0 50% 50% / 15% 15% 0 0;
-//   overflow: hidden;
-// }

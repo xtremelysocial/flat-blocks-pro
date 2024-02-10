@@ -26,19 +26,17 @@
 				"color": "rgba(0, 0, 0, 0.25)"
 			},
 			"animation": {
+				"default": {
+					"entrance": "fadeInUp",
+					"hover": "scale3d(1.1, 1.1, 1.1)"
+				},
 				"duration": {
 					"normal": "800ms",
-					"veryShort": "calc(0.1 * var(--wp--custom--animation--duration--normal))",
-					"short": "calc(0.25 * var(--wp--custom--animation--duration--normal))",
-					"medium": "calc(0.5 * var(--wp--custom--animation--duration--normal))",
-					"long": "calc(1.25 * var(--wp--custom--animation--duration--normal))"
+					"medium": "500ms",
+					"short": "250ms"
 				},
 				"fillMode": "both",
-				"timingFunction": "ease",
-				"max": {
-					"height": "30vh",
-					"width": "30vw"
-				}
+				"timingFunction": "ease-in"
 			},
  			"spacing": {
 				"gap": "18px"
@@ -184,6 +182,41 @@
 					"slug": "foreground",
 					"color": "#555555",
 					"name": "Foreground (Very Dark Gray)"
+				},
+				{
+					"slug": "opacity-10",
+					"color": "rgba(0, 0, 0, 0.1)",
+					"name": "Opacity 10%"
+				},
+				{
+					"slug": "opacity-15",
+					"color": "rgba(0, 0, 0, 0.15)",
+					"name": "Opacity 15%"
+				},
+				{
+					"slug": "opacity-20",
+					"color": "rgba(0, 0, 0, 0.2)",
+					"name": "Opacity 20%"
+				},
+				{
+					"slug": "opacity-25",
+					"color": "rgba(0, 0, 0, 0.25)",
+					"name": "Opacity 25%"
+				},
+				{
+					"slug": "opacity-30",
+					"color": "rgba(0, 0, 0, 0.3)",
+					"name": "Opacity 30%"
+				},
+				{
+					"slug": "opacity-40",
+					"color": "rgba(0, 0, 0, 0.4)",
+					"name": "Opacity 40%"
+				},
+				{
+					"slug": "opacity-50",
+					"color": "rgba(0, 0, 0, 0.5)",
+					"name": "Opacity 50%"
 				},
 				{
 					"slug": "white",
@@ -508,6 +541,36 @@
 					"colors": ["#000000", "#ffffff"],
 					"slug": "grayscale",
 					"name": "Grayscale"
+				}
+			]
+		},
+		"shadow": {
+			"defaultPresets": false,
+			"presets": [
+				{
+					"name": "Natural",
+					"slug": "natural",
+					"shadow": "0px 8px 24px rgba(149, 157, 165, 0.2)"
+				},
+				{
+					"name": "Deep",
+					"slug": "deep",
+					"shadow": "0px 7px 29px 0px rgba(100, 100, 111, 0.2)"
+				},
+				{
+					"name": "Sharp",
+					"slug": "sharp",
+					"shadow": "6px 6px 9px rgba(0, 0, 0, 0.2)"
+				},
+				{
+					"name": "Outline",
+					"slug": "outline",
+					"shadow": "6px 6px 0px -3px rgba(255, 255, 255, 1), 6px 6px rgba(0, 0, 0, 1)"
+				},
+				{
+					"name": "Crisp",
+					"slug": "crisp",
+					"shadow": "6px 6px 0px rgba(0, 0, 0, 1)"
 				}
 			]
 		},

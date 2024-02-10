@@ -1,14 +1,11 @@
 <?php
 /**
- * File:	pro-jetpack.php
- * Theme:	Flat Blocks PRO
+ * File:		pro-jetpack.php
+ * Theme:		Flat Blocks PRO
  * 
  * Handles the Jetpack plugin styling for the PRO version of Flat Blocks
  * 
- * Loads CSS for Jetpack Plugin
- * 
- * @package flat-blocks-pro
- * @since	1.0
+ * @package 	flat-blocks-pro
  */
 
 /**
@@ -35,7 +32,7 @@ if ( ! function_exists( 'flatblocks_pro_jetpack_styles' ) ) :
 			);
 		}
 		
-	} //end function
+	}
 endif;		
 
 /**
@@ -55,7 +52,7 @@ if ( ! function_exists( 'flatblocks_pro_jetpack_editor_styles' ) ) :
 			);
 		}
 
-	} //end function
+	}
 endif;
 
 /**
@@ -78,9 +75,7 @@ if ( ! function_exists( 'flatblocks_pro_register_jetpack_block_styles' ) ) :
 			)
 		);
 
-		//return array_merge( $theme_styles, $jetpack_styles );
-		//return $theme_styles + $jetpack_styles;
 		return $theme_styles ? $theme_styles + $jetpack_styles : $jetpack_styles;
 		
-	} //end function
+	}
 endif;
