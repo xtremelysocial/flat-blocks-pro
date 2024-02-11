@@ -41,6 +41,9 @@ webpack.config.js
 package.json
 package-lock.json
 
+# Shell scripts
+*.sh
+
 # Ignore Mac files
 .DS_Store
 **/.DS_Store
