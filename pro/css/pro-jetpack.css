@@ -1,6 +1,3 @@
-/*!******************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./pro/src/scss/pro-jetpack.scss ***!
-  \******************************************************************************************************************************************************************************************************************************************************/
 /**
  * File:	pro-jetpack.css
  * Theme:	Flat Blocks PRO
@@ -206,5 +203,3 @@
 .wp-block-jetpack-phone.is-style-no-icon a:before {
   display: none;
 }
-
-/*# sourceMappingURL=pro-jetpack.css.map*/
