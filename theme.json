@@ -184,41 +184,6 @@
 					"name": "Foreground (Very Dark Gray)"
 				},
 				{
-					"slug": "opacity-10",
-					"color": "rgba(0, 0, 0, 0.1)",
-					"name": "Opacity 10%"
-				},
-				{
-					"slug": "opacity-15",
-					"color": "rgba(0, 0, 0, 0.15)",
-					"name": "Opacity 15%"
-				},
-				{
-					"slug": "opacity-20",
-					"color": "rgba(0, 0, 0, 0.2)",
-					"name": "Opacity 20%"
-				},
-				{
-					"slug": "opacity-25",
-					"color": "rgba(0, 0, 0, 0.25)",
-					"name": "Opacity 25%"
-				},
-				{
-					"slug": "opacity-30",
-					"color": "rgba(0, 0, 0, 0.3)",
-					"name": "Opacity 30%"
-				},
-				{
-					"slug": "opacity-40",
-					"color": "rgba(0, 0, 0, 0.4)",
-					"name": "Opacity 40%"
-				},
-				{
-					"slug": "opacity-50",
-					"color": "rgba(0, 0, 0, 0.5)",
-					"name": "Opacity 50%"
-				},
-				{
 					"slug": "white",
 					"color": "#ffffff",
 					"name": "White"
