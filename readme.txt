@@ -148,7 +148,7 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 == Changelog ==
 
 = 1.4.6 = 
-Feb 9, 2024
+Feb 10, 2024
 
 * Changed default box shadows for buttons to "tone them down" from the WordPress defaults. The WordPress defaults from least amount of shadow to the most are: natural, deep, sharp, outline, and crisp. We toned down natura and deep and set the old natural to sharp. Outline and Crips remain the same.
 * Enhanced CSS for latest post block featured images with border and image galleries with image titles.
@@ -156,6 +156,8 @@ Feb 9, 2024
 * Adjust the bottom padding on featured images in the Latest Posts block.
 * Don't put bullets on Latest Posts block if it is the Grid layout. i.e. Only do it for list style.
 * Changed the menu and social link icon hover animations to use "ease-in" instead of "ease" (changed in theme.json).
+* Rename /src/sass folder to /src/scss
+* Add sass-watch.sh for devs to compile the /src/scss files to /assets/css
 
 = 1.4.5 = 
 Jan 25, 2024
