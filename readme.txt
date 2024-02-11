@@ -1,11 +1,5 @@
 === Flat Blocks PRO ===
 Contributors:  XtremelySocial
-Requires at least: 6.2
-Tested up to: 6.4
-Requires PHP: 7.4
-Stable tag: 1.4.5
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 
@@ -124,17 +118,17 @@ Here is a visualization of the structure of a fully built out child theme:
    |--- functions.php
    /assets/
       /css/
-  	     |--- custom-styles.css (auto loads)
+  	     |--- custom-styles.css (auto loads, if found)
    /inc/
-      |--- block-patterns.php (auto loads)
-	  |--- block-styles.php (auto loads)
+      |--- block-patterns.php (auto loads, if found)
+	  |--- block-styles.php (auto loads, if found)
    /parts/
-	  |--- *.html (auto load)
+	  |--- *.html (auto loads)
    /templates/
-	  |--- *.html (auto load)
+	  |--- *.html (auto loads)
    /patterns/
-	  |--- *.php (auto load)
-	  |--- *.html (load with filter)
+	  |--- *.php (auto loads, if found)
+	  |--- *.html (load with add_filter)
 
 = Keeping The Parent Theme Up to Date =
 
@@ -152,6 +146,16 @@ For more information, see these pages on the XtremelySocial.com website:
 You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
+
+= 1.4.6 = 
+Feb 9, 2024
+
+* Changed default box shadows for buttons to "tone them down" from the WordPress defaults. The WordPress defaults from least amount of shadow to the most are: natural, deep, sharp, outline, and crisp. We toned down natura and deep and set the old natural to sharp. Outline and Crips remain the same.
+* Enhanced CSS for latest post block featured images with border and image galleries with image titles.
+* Changed the Compact Footer Template Parts to consistently use "footer-info" as the ID and CSS class. This is to differentiate them from the larger footers that use "site-footer" ID and CSS class.
+* Adjust the bottom padding on featured images in the Latest Posts block.
+* Don't put bullets on Latest Posts block if it is the Grid layout. i.e. Only do it for list style.
+* Changed the menu and social link icon hover animations to use "ease-in" instead of "ease" (changed in theme.json).
 
 = 1.4.5 = 
 Jan 25, 2024
