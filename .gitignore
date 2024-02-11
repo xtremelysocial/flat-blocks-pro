@@ -1,3 +1,21 @@
+# npm node modules
+node_modules/
+
+# Output of `wp-scripts plugin-zip`
+*.zip
+
+# Debugging files 
+**/*.asset.php
+**/*.css.map
+
+# Webpack files
+#webpack.config.js
+#package.json
+#package-lock.json
+
+# Shell scripts
+#*.sh
+
 # Ignore Mac files
 .DS_Store
 **/.DS_Store
@@ -13,8 +31,8 @@ zz_unused
 assets/css/blocks/
 
 # Ignore PRO theme files
-pro
-parts/pro-*
+#pro
+#templates/pro-*
 
 # Ignore our xtremelysocial.com files
 styles/*xtremelysocial*.json

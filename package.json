@@ -1,0 +1,22 @@
+{
+	"name": "flat-blocks",
+	"version": "1.4.6",
+	"description": "Flat Blocks Theme",
+	"author": "XtremelySocial",
+	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"Flat",
+		"Blocks",
+		"theme"
+	],
+	"homepage": "https://xtremelysocial.com/wordpress/flat-blocks/",
+	"scripts": {
+		"start": "wp-scripts start --webpack-src-dir=src/scss --output-path=assets/css",
+		"build": "wp-scripts build --webpack-src-dir=src/scss --output-path=assets/css"
+	},
+	"devDependencies": {
+		"@wordpress/scripts": "^27.2.0",
+		"path": "^0.12.7",
+		"webpack-remove-empty-scripts": "^1.0.4"
+	}
+}
