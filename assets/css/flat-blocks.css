@@ -45,6 +45,221 @@ body {
 }
 
 /*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/* Use bold font-weight from theme.json */
+strong,
+b {
+  font-weight: var(--wp--custom--typography--font-weight--bold);
+}
+
+/* Prevent code from breaking layout */
+code,
+pre {
+  overflow-x: auto;
+}
+
+/* Set lists with background to match other padding */
+ol.has-background,
+ul.has-background {
+  padding: var(--wp--preset--spacing--40);
+  list-style-position: inside;
+}
+
+/* Center captions and don't underline links in them by default */
+figcaption {
+  text-align: center;
+}
+
+figcaption a {
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+# Buttons and Links
+--------------------------------------------------------------*/
+/*
+ * Link styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+a,
+.wp-block-navigation a,
+.wp-block-navigation-submenu__toggle {
+  cursor: pointer;
+}
+
+/* Colored link hover styles */
+.has-text-color a:not(.wp-element-button):not(.wp-block-button):not(.wp-block-social-link-anchor):hover {
+  opacity: 0.8;
+}
+
+/* 
+ * Style basic buttons to match block buttons. 
+ */
+input[type=button],
+input[type=submit][class*=button],
+input[type=reset][class*=button],
+input[type=file]::file-selector-button {
+  color: var(--wp--preset--color--foreground-alt);
+  background-color: var(--wp--preset--color--primary);
+  border: none;
+  border-width: 0;
+  border-radius: var(--wp--custom--border--radius);
+  padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
+  font-size: var(--wp--preset--font-size--normal);
+  font-weight: 400;
+  line-height: 1.5;
+  text-shadow: none;
+}
+
+input[type=file] {
+  font-size: var(--wp--preset--font-size--small);
+  width: 100%;
+}
+
+/* But override basic buttons to look like outlines on primary-colored backgrounds */
+.has-primary-background-color input[type=button],
+.has-primary-background-color input[type=submit][class*=button],
+.has-primary-background-color input[type=reset][class*=button],
+.has-primary-background-color input[type=file]::file-selector-button {
+  border: 3px solid var(--wp--preset--color--foreground-alt);
+}
+
+/* For outline style buttons, inherit border color from the text color */
+.wp-block-button.is-style-outline.is-style-outline .wp-block-button__link {
+  color: inherit;
+}
+
+/*
+ * Button hover styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+button:hover,
+input[type=submit][class*=button]:hover,
+input[type=reset][class*=button]:hover,
+input[type=file]::file-selector-button:hover,
+.wp-block-search__button:hover,
+.wp-block-file .wp-block-file__button:hover,
+.wp-block-button__link:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+/* 
+ * Style form fields
+ * 
+ * Note: Many of these need to be excluded from the Block Editor 
+ * toolbars or it will alter them too.
+ */
+fieldset {
+  font-size: var(--wp--preset--font-size--normal);
+  font-weight: var(--wp--custom--typography--font-weight--normal);
+  line-height: 1.5;
+  padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);
+  border: 1px solid var(--wp--preset--color--foreground);
+  border-radius: var(--wp--custom--border--radius);
+  text-shadow: none;
+  -webkit-appearance: none;
+}
+
+select {
+  font-family: inherit;
+  font-size: var(--wp--preset--font-size--small);
+  font-weight: var(--wp--custom--typography--font-weight--normal);
+  line-height: 1.5;
+  border-radius: var(--wp--custom--border--radius);
+  text-shadow: none;
+  color: var(--wp--preset--color--foreground);
+  border: 1px solid var(--wp--preset--color--foreground);
+}
+
+textarea,
+input {
+  font-size: var(--wp--preset--font-size--normal);
+  font-weight: var(--wp--custom--typography--font-weight--normal);
+  line-height: 1.5;
+  border-radius: var(--wp--custom--border--radius);
+  text-shadow: none;
+}
+
+textarea,
+input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=button]):not([type=image]):not([class*=button]):not(.wp-block-button__link) {
+  -webkit-appearance: none;
+  border: 1px solid var(--wp--preset--color--foreground);
+}
+
+/* Style focus outline */
+input:focus,
+textarea:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px var(--wp--custom--outline--color);
+  transition: box-shadow 0.3s ease;
+}
+
+select:focus,
+select:focus-visible {
+  outline: var(--wp--custom--outline--color) 5px solid;
+  transition: outline 0.3s ease;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+/*
+ * Don't let anything be wider than our max width. This is so 
+ * fullwidth images don't get so wide they lose resolution.
+ */
+.wp-site-blocks {
+  max-width: var(--wp--custom--layout--full-size);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FIX for center alignment */
+body .is-layout-constrained > .aligncenter {
+  text-align: center;
+}
+
+/* 
+ * ADD padding to align left and align right to honor wide width 
+ */
+.wp-site-blocks > .alignleft {
+  margin-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
+}
+
+body .is-layout-constrained > .alignleft {
+  padding-left: calc(0.5 * (100% - var(--wp--style--global--wide-size)));
+  margin-inline-end: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
+}
+
+.wp-site-blocks > .alignright {
+  margin-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
+}
+
+body .is-layout-constrained > .alignright {
+  padding-right: calc(0.5 * (100% - var(--wp--style--global--wide-size)));
+  margin-inline-start: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
+}
+
+/* 
+ * Fix WordPress Admin bar on phones not sticking to the top 
+ *
+ * Note to theme reviewers, this issues a warning but is actually
+ * fixing an issue in core WordPress v6.0. It is not hiding the 
+ * admin bar like the warning indicates. Body is used for more
+ * specificity than the core WordPress CSS.
+ */
+@media screen and (max-width: 600px) {
+  body > #wpadminbar {
+    position: fixed;
+  }
+}
+/*--------------------------------------------------------------
 # Colors
 --------------------------------------------------------------*/
 /* 
@@ -250,221 +465,6 @@ body {
   color: var(--wp--preset--color--white);
 }
 
-/*--------------------------------------------------------------
-# Elements
---------------------------------------------------------------*/
-/* Use bold font-weight from theme.json */
-strong,
-b {
-  font-weight: var(--wp--custom--typography--font-weight--bold);
-}
-
-/* Prevent code from breaking layout */
-code,
-pre {
-  overflow-x: auto;
-}
-
-/* Set lists with background to match other padding */
-ol.has-background,
-ul.has-background {
-  padding: var(--wp--preset--spacing--40);
-  list-style-position: inside;
-}
-
-/* Center captions and don't underline links in them by default */
-figcaption {
-  text-align: center;
-}
-
-figcaption a {
-  text-decoration: none;
-}
-
-/*--------------------------------------------------------------
-# Forms
---------------------------------------------------------------*/
-/* 
- * Style form fields
- * 
- * Note: Many of these need to be excluded from the Block Editor 
- * toolbars or it will alter them too.
- */
-fieldset {
-  font-size: var(--wp--preset--font-size--normal);
-  font-weight: var(--wp--custom--typography--font-weight--normal);
-  line-height: 1.5;
-  padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);
-  border: 1px solid var(--wp--preset--color--foreground);
-  border-radius: var(--wp--custom--border--radius);
-  text-shadow: none;
-  -webkit-appearance: none;
-}
-
-select {
-  font-family: inherit;
-  font-size: var(--wp--preset--font-size--small);
-  font-weight: var(--wp--custom--typography--font-weight--normal);
-  line-height: 1.5;
-  border-radius: var(--wp--custom--border--radius);
-  text-shadow: none;
-  color: var(--wp--preset--color--foreground);
-  border: 1px solid var(--wp--preset--color--foreground);
-}
-
-textarea,
-input {
-  font-size: var(--wp--preset--font-size--normal);
-  font-weight: var(--wp--custom--typography--font-weight--normal);
-  line-height: 1.5;
-  border-radius: var(--wp--custom--border--radius);
-  text-shadow: none;
-}
-
-textarea,
-input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=button]):not([type=image]):not([class*=button]):not(.wp-block-button__link) {
-  -webkit-appearance: none;
-  border: 1px solid var(--wp--preset--color--foreground);
-}
-
-/* Style focus outline */
-input:focus,
-textarea:focus {
-  outline: none !important;
-  box-shadow: 0 0 0 3px var(--wp--custom--outline--color);
-  transition: box-shadow 0.3s ease;
-}
-
-select:focus,
-select:focus-visible {
-  outline: var(--wp--custom--outline--color) 5px solid;
-  transition: outline 0.3s ease;
-}
-
-/*--------------------------------------------------------------
-# Buttons and Links
---------------------------------------------------------------*/
-/*
- * Link styles.
- * Necessary until the following issue is resolved in Gutenberg:
- * https://github.com/WordPress/gutenberg/issues/27075
- */
-a,
-.wp-block-navigation a,
-.wp-block-navigation-submenu__toggle {
-  cursor: pointer;
-}
-
-/* Colored link hover styles */
-.has-text-color a:not(.wp-element-button):not(.wp-block-button):not(.wp-block-social-link-anchor):hover {
-  opacity: 0.8;
-}
-
-/* 
- * Style basic buttons to match block buttons. 
- */
-input[type=button],
-input[type=submit][class*=button],
-input[type=reset][class*=button],
-input[type=file]::file-selector-button {
-  color: var(--wp--preset--color--foreground-alt);
-  background-color: var(--wp--preset--color--primary);
-  border: none;
-  border-width: 0;
-  border-radius: var(--wp--custom--border--radius);
-  padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
-  font-size: var(--wp--preset--font-size--normal);
-  font-weight: 400;
-  line-height: 1.5;
-  text-shadow: none;
-}
-
-input[type=file] {
-  font-size: var(--wp--preset--font-size--small);
-  width: 100%;
-}
-
-/* But override basic buttons to look like outlines on primary-colored backgrounds */
-.has-primary-background-color input[type=button],
-.has-primary-background-color input[type=submit][class*=button],
-.has-primary-background-color input[type=reset][class*=button],
-.has-primary-background-color input[type=file]::file-selector-button {
-  border: 3px solid var(--wp--preset--color--foreground-alt);
-}
-
-/* For outline style buttons, inherit border color from the text color */
-.wp-block-button.is-style-outline.is-style-outline .wp-block-button__link {
-  color: inherit;
-}
-
-/*
- * Button hover styles.
- * Necessary until the following issue is resolved in Gutenberg:
- * https://github.com/WordPress/gutenberg/issues/27075
- */
-button:hover,
-input[type=submit][class*=button]:hover,
-input[type=reset][class*=button]:hover,
-input[type=file]::file-selector-button:hover,
-.wp-block-search__button:hover,
-.wp-block-file .wp-block-file__button:hover,
-.wp-block-button__link:hover {
-  cursor: pointer;
-  opacity: 0.8;
-}
-
-/*--------------------------------------------------------------
-# Alignments
---------------------------------------------------------------*/
-/*
- * Don't let anything be wider than our max width. This is so 
- * fullwidth images don't get so wide they lose resolution.
- */
-.wp-site-blocks {
-  max-width: var(--wp--custom--layout--full-size);
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* FIX for center alignment */
-body .is-layout-constrained > .aligncenter {
-  text-align: center;
-}
-
-/* 
- * ADD padding to align left and align right to honor wide width 
- */
-.wp-site-blocks > .alignleft {
-  margin-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
-}
-
-body .is-layout-constrained > .alignleft {
-  padding-left: calc(0.5 * (100% - var(--wp--style--global--wide-size)));
-  margin-inline-end: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
-}
-
-.wp-site-blocks > .alignright {
-  margin-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
-}
-
-body .is-layout-constrained > .alignright {
-  padding-right: calc(0.5 * (100% - var(--wp--style--global--wide-size)));
-  margin-inline-start: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
-}
-
-/* 
- * Fix WordPress Admin bar on phones not sticking to the top 
- *
- * Note to theme reviewers, this issues a warning but is actually
- * fixing an issue in core WordPress v6.0. It is not hiding the 
- * admin bar like the warning indicates. Body is used for more
- * specificity than the core WordPress CSS.
- */
-@media screen and (max-width: 600px) {
-  body > #wpadminbar {
-    position: fixed;
-  }
-}
 /*--------------------------------------------------------------
 # CRITICAL BLOCKS
 --------------------------------------------------------------*/
