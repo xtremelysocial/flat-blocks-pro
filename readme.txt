@@ -158,6 +158,7 @@ Feb 10, 2024
 * Changed the menu and social link icon hover animations to use "ease-in" instead of "ease" (changed in theme.json).
 * Rename /src/sass folder to /src/scss
 * Add sass-watch.sh for devs to compile the /src/scss files to /assets/css
+* Include webpack configuration files for developers in case they want to use them
 
 = 1.4.5 = 
 Jan 25, 2024
