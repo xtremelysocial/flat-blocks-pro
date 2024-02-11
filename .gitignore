@@ -37,9 +37,9 @@ build
 **/*.css.map
 
 # Webpack files (don't track for now)
-webpack.config.js
-package.json
-package-lock.json
+#webpack.config.js
+#package.json
+#package-lock.json
 
 # Shell scripts
 #*.sh
