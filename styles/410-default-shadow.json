@@ -1,11 +1,11 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 2,
-	"title": "Default - Button Shadow",
+	"title": "Default - Button and Featured Image Shadow",
 	"settings": {
 		"custom": {
-			"button": {
-				"shadow": "var(--wp--preset--shadow--natural)"
+			"shadow": {
+				"default": "var(--wp--preset--shadow--natural)"
 			}
 		}
 	},
