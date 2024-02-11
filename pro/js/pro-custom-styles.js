@@ -21,9 +21,9 @@
 	 * scrollInterval	integer		Number of milliseconds delay
 	 */
 	const scrollHeader 	= $('.is-style-scroll-header');
+	const minScrollPos 	= scrollHeader.outerHeight() ?? 88;
+	const scrollInterval = 250;
 	const activeClass 	= 'header-active';
-	const minScrollPos 	= 88;
-	const scrollIterval = 250;
 
 	if ( scrollHeader.length > 0 ) {
 
