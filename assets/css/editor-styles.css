@@ -1,3 +1,6 @@
+/*!****************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/editor-styles.scss ***!
+  \****************************************************************************************************************************************************************************************************************************************************/
 /**
  * File:	editor-styles.css
  * Theme:	Flat Blocks
@@ -114,3 +117,5 @@ nav.wp-block-navigation.is-style-fixed-menu {
 .editor-styles-wrapper .wp-block-site-title a {
   color: var(--wp--custom--link--color);
 }
+
+/*# sourceMappingURL=editor-styles.css.map*/
