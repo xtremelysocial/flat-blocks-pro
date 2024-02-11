@@ -35,8 +35,7 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 --------------------------------------------------------------*/
 
 /* Image no border */
-.is-style-image-no-border,
-.wp-block-post-featured-image.is-style-image-no-border img {	
+.is-style-image-no-border {
 	border: none;
 	border-radius: 0;
 	padding: 0;
@@ -47,6 +46,10 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 	border: 1px solid var(--wp--custom--border--color);
 	border-radius: var(--wp--custom--border--radius);
 	padding: var(--wp--custom--border--radius);
+}
+
+.wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-border figcaption {
+    background: none;
 }
 
 .wp-block-image.is-style-image-round-border img {
@@ -75,4 +78,3 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 .wp-block-image.is-style-image-tablet-phone-screen figcaption {
 	display: none;
 }
-
