@@ -150,14 +150,14 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 = 1.4.6 = 
 Feb 13, 2024
 
-* Added a new cover image that is an antique typewriter and a pattern to insert it in the Block Editor. The image itself is in the /assets/images/ folder if you want to upload it to your Media Library. 
+* Added a new cover image that is an antique typewriter and a Block Pattern to insert it in the Block Editor. The image itself is in the /assets/images/ folder if you want to upload it to your Media Library. 
 * Changed default box shadows for buttons to "tone them down" from the WordPress defaults. The WordPress defaults from least amount of shadow to the most are: natural, deep, sharp, outline, and crisp. We toned down natura and deep and set the old natural to sharp. Outline and Crips remain the same.
 * Enhanced CSS for latest post block featured images with border and image galleries with image titles.
 * Changed the Compact Footer Template Parts to consistently use "footer-info" as the ID and CSS class. This is to differentiate them from the larger footers that use "site-footer" ID and CSS class.
 * Adjust the bottom padding on featured images in the Latest Posts block.
 * Don't put bullets on Latest Posts block if it is the Grid layout. i.e. Only do it for list style.
 * Changed the menu and social link icon hover animations to use "ease-in" instead of "ease" (changed in theme.json).
-* Rename /src/sass folder to /src/scss and add sass-watch.sh for devs to compile the /src/scss files to /assets/css.
+* Renamed /src/sass folder to /src/scss.
 
 = 1.4.5 = 
 Jan 25, 2024

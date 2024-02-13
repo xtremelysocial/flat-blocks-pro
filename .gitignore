@@ -14,7 +14,7 @@ node_modules/
 #package-lock.json
 
 # Shell scripts
-#*.sh
+*.sh
 
 # Ignore Mac files
 .DS_Store
