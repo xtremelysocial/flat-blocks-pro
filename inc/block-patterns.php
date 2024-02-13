@@ -166,6 +166,10 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 				'title' => __( 'Cover Man on Rocks', 'flat-blocks' ),
 				'categories' => array ('flatblocks', 'cover', 'banner' )
 			),
+			'cover-typewriter' => array( 
+				'title' => __( 'Cover Typewriter', 'flat-blocks' ),
+				'categories' => array ('flatblocks', 'cover', 'banner' )
+			),
 			'image-gallery' => array( 
 				'title' => __( 'Image Gallery', 'flat-blocks' ),
 				'categories' => array ('flatblocks', 'columns', 'gallery', 'image' )
