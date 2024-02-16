@@ -41,7 +41,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   text-decoration-thickness: 1px;
-  text-underline-offset: 0.3ch;
+  text-underline-position: under;
+  /*text-underline-offset: 0.3ch;*/
 }
 
 /*--------------------------------------------------------------
@@ -1232,8 +1233,7 @@ main.wp-block-group:not(.has-global-padding),
 header.site-header:not(.has-global-padding),
 footer.site-footer:not(.has-global-padding),
 header.entry-header:not(.has-global-padding),
-.wp-block-query:not(.has-global-padding),
-#post-comments:not(.has-global-padding) {
+.wp-block-query:not(.has-global-padding) {
   padding-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50)) !important;
   padding-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50)) !important;
 }

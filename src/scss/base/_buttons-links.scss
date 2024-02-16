@@ -15,7 +15,6 @@ a,
 /* Colored link hover styles */
 .has-text-color a:not(.wp-element-button):not(.wp-block-button):not(.wp-block-social-link-anchor):hover {
 	opacity: 0.8;
-	//filter: brightness(80%);
 }
 
 /* 
@@ -68,5 +67,4 @@ input[type=file]::file-selector-button:hover,
 .wp-block-button__link:hover {
 	cursor: pointer;
 	opacity: 0.8;
-	//background-image: linear-gradient(var(--wp--custom--outline--color) 0 0) !important;
 }
