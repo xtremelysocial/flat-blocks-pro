@@ -147,6 +147,15 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 1.4.7 = 
+Feb 16, 2024
+
+* Added more cover images and Block Patterns for them: Book, Building, City Night, guitars, notebooks.
+* Changed link underline to sit completely below the bottom of letters (text-underline-position: under).
+* Changed to use medium font-weight on comment form label (font-weight: 400).
+* Adjust CSS for padding on post comments. 
+* Enhanced block pattern functions to allow child themes to reference local images in block patterns. Add property 'imageRoot' => get_stylesheet_directory_uri() when filtering 'flatblocks_block_patterns'.
+
 = 1.4.6 = 
 Feb 13, 2024
 
