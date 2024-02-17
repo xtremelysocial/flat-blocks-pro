@@ -152,8 +152,8 @@ Feb 16, 2024
 
 * Added more cover images and Block Patterns for them: Book, Building, City Night, guitars, notebooks.
 * Changed link underline to sit completely below the bottom of letters (text-underline-position: under).
-* Changed to use medium font-weight on comment form label (font-weight: 400).
-* Changed to use normal font size on author bio.
+* Changed comment form label to use medium font weight (font-weight: 400).
+* Changed author bio to use normal font size (was .7em).
 * Adjust CSS for padding on Post Comments.
 * Enhanced block pattern functions to allow child themes to reference local images in block patterns. Add property 'imageRoot' => get_stylesheet_directory_uri() when filtering 'flatblocks_block_patterns'.
 
