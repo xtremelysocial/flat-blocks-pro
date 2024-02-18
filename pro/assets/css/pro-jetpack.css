@@ -8,6 +8,23 @@
  * @since	1.0
  */
 /*--------------------------------------------------------------
+# Portfolio Type and Tags
+--------------------------------------------------------------*/
+/* dashicons-tag */
+.wp-block-post-terms.taxonomy-jetpack-portfolio-type:before {
+  font-family: dashicons;
+  content: "\f318";
+  margin-right: var(--wp--preset--spacing--20);
+}
+
+/* dashicons-category */
+.wp-block-post-terms.taxonomy-jetpack-portfolio-tag:before {
+  font-family: dashicons;
+  content: "\f323";
+  margin-right: var(--wp--preset--spacing--20);
+}
+
+/*--------------------------------------------------------------
 # Form Fields
 --------------------------------------------------------------*/
 .jetpack-field .jetpack-field__input,
@@ -25,11 +42,11 @@
 /*--------------------------------------------------------------
 # Contact Form
 --------------------------------------------------------------*/
-.wp-block-jetpack-contact-form label,
+.contact-form .grunion-field-label,
 .contact-form .grunion-checkbox-multiple-options legend,
 .contact-form .grunion-radio-options legend,
 .contact-form-submission .field-value {
-  font-weight: var(--wp--custom--typography--font-weight--normal);
+  font-weight: var(--wp--custom--typography--font-weight--medium);
 }
 
 /*--------------------------------------------------------------

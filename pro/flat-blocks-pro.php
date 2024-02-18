@@ -26,6 +26,8 @@ if ( ! function_exists('fbp_load_includes') ) :
 		$includes = array (
 			'/pro/inc/pro-admin-edit.php',
 			'/pro/inc/pro-custom-styles.php',
+			'/pro/inc/pro-default-image.php',
+			'/pro/inc/pro-login-page.php',
 			'/pro/inc/pro-patterns.php',
 			'/pro/inc/pro-animation.php', // only for XtremelySocial.com
 			);

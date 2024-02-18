@@ -14,11 +14,11 @@
 
 	/* 
 	 * scrollHeader		element		Class selector for our scroll header
-	 * activeClass		string		CSS class for when the target is scrolled to
 	 * minScrollPos		integer		Minimum scroll position to trigger active class. This
 	 * 								should be at least the min height of the header which
 	 *								is 88. 
 	 * scrollInterval	integer		Number of milliseconds delay
+	 * activeClass		string		CSS class for when the target is scrolled to
 	 */
 	const scrollHeader 	= $('.is-style-scroll-header');
 	const minScrollPos 	= scrollHeader.outerHeight() ?? 88;
