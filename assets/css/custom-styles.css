@@ -38,11 +38,10 @@
 }
 
 /* Hide empty comments so no extra vertical margin */
-#post-comments:empty {
-  display: none;
-  margin-top: 0;
-}
-
+/*#post-comments:empty {
+	display: none;
+	margin-top: 0;
+}*/
 /* Add padding to comment page numbers */
 .wp-block-comments-pagination .page-numbers:nth-last-child(n+2) {
   padding-right: var(--wp--preset--spacing--30);
@@ -460,6 +459,7 @@ li.is-style-link-underline-hover a:hover {
 }
 
 .wp-block-post-author__bio {
+  font-size: var(--wp--preset--font-size--normal);
   margin-top: var(--wp--style--block-gap);
   margin-bottom: var(--wp--style--block-gap);
 }
@@ -505,6 +505,11 @@ li.is-style-link-underline-hover a:hover {
 /*--------------------------------------------------------------
 # Post Comments Form
 --------------------------------------------------------------*/
+/* Set medium font weight on comment form labels */
+.wp-block-post-comments-form label {
+  font-weight: var(--wp--custom--typography--font-weight--medium);
+}
+
 /* Override no-shadow if our custom shadow default is set */
 .wp-block-post-comments-form input[type=submit].wp-element-button {
   box-shadow: var(--wp--custom--shadow--default);
