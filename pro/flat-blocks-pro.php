@@ -35,7 +35,7 @@ if ( ! function_exists('fbp_load_includes') ) :
 
 		/* Add Flatblocks PRO Plugin if that plugin is NOT active */
 		if ( ! defined('FBP_PLUGIN_ACTIVE') || FBP_PLUGIN_ACTIVE !== true ) {
-			$includes[] = '/pro/flatblocks-pro-plugin/flatblocks-pro.php';
+			$includes[] = '/pro/pro-plugin/flatblocks-pro.php';
 		}
 
 		/* Add Jetpack support if that plugin is active */
