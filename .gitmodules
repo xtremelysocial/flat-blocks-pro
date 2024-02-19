@@ -1,3 +1,3 @@
 [submodule "pro/plugins"]
-	path = pro/plugins/flatblocks-pro
+	path = pro/plugins/flat-blocks-plugin
 	url = https://github.com/xtremelysocial/flat-blocks-plugin.git
