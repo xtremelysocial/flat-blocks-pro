@@ -32,6 +32,12 @@ if ( ! function_exists('fbp_load_includes') ) :
 			'/pro/inc/pro-animation.php', // only for XtremelySocial.com
 			);
 
+
+		/* Add Flatblocks PRO Plugin if that plugin is NOT active */
+		if ( ! defined('FBP_PLUGIN_ACTIVE') || FBP_PLUGIN_ACTIVE !== true ) {
+			$includes[] = '/pro/plugin/flatblocks-pro.php';
+		}
+
 		/* Add Jetpack support if that plugin is active */
 		if ( class_exists( 'Jetpack' ) ) {
 			$includes[] = '/pro/inc/pro-jetpack.php';
