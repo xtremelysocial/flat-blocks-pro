@@ -31,11 +31,12 @@ node_modules/
 
 # build files
 build
-!pro/plugin/build
+!pro/pro-plugin/build
 
 # Debugging files 
-**/*.asset.php
+#**/*.asset.php
 **/*.css.map
+**/*.js.map
 
 # Webpack files (don't track for now)
 #webpack.config.js
