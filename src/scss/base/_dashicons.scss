@@ -1,0 +1,32 @@
+/*--------------------------------------------------------------
+# Dashicons
+--------------------------------------------------------------*/
+
+/* Don't let dashicons force width and height. Let it come from the font size. */
+.wp-site-blocks .dashicons,
+.dashicons {
+	display: block;
+	width: auto;
+	height: auto;
+	font-family: inherit;
+	font-size: 1em;
+	font-weight: var(--wp--custom--typography--font-weight--normal);
+}
+
+.wp-site-blocks .dashicons:before,
+.wp-site-blocks .dashicons-before:before,
+.dashicons:before,
+.dashicons-before:before {
+	display: inline-block;
+	vertical-align: top;
+	width: auto;
+	height: auto;
+	font-family: dashicons;
+	font-size: 1em;
+	font-weight: var(--wp--custom--typography--font-weight--normal);
+}
+
+.wp-site-blocks .dashicons a,
+.dashicons a {
+	text-decoration: none;
+}

@@ -1,0 +1,92 @@
+/*--------------------------------------------------------------
+# Columns and Column
+--------------------------------------------------------------*/
+/* 
+ * Note: Padding for colored backgrounds on columns is now in
+ * theme.json as custom block CSS.
+ */
+
+/* ADD BACK gap on flex columns by default */
+/*.wp-block-columns-is-layout-flex {
+	gap: var(--wp--style--block-gap);
+}*/
+
+/* 
+ * Note: Breakpoint of 781 is what is hard-coded in WordPress 
+ * v6.0+ to collapse columns
+ */
+@media only screen and (max-width: 781px) {
+
+	/* 
+	 * If no global padding, then set colored columns like colored
+	 * groups 
+	 */
+	.wp-block-columns.has-background,
+	.wp-block-column.has-background {
+		padding-left: calc(2 * var(--wp--style--block-gap)); //var(--wp--preset--spacing--60);
+		padding-right: calc(2 * var(--wp--style--block-gap)); //var(--wp--preset--spacing--60);
+	}
+
+	/* If global padding, then OVERRIDE horizontal padding on mobile */
+	.has-global-padding .wp-block-columns.has-background,
+	.has-global-padding .wp-block-column.has-background {
+		padding-left: var(--wp--style--root--padding-left) !important;
+		padding-right: var(--wp--style--root--padding-right) !important;
+	}
+
+}
+
+/*--------------------------------------------------------------
+# Columns and Column: Custom
+--------------------------------------------------------------*/
+
+/* Columns no Gap */
+.wp-block-columns.is-style-no-gap,
+.wp-block-columns.is-style-no-gap .wp-block-column:not(.has-background),
+.wp-block-columns.is-style-no-gap.has-background:not(.has-global-padding) {
+	gap: 0 !important;
+	padding: 0 !important;
+}
+
+/* Columns thick gap */
+.wp-block-columns.is-style-thick-gap,
+.wp-block-columns.is-style-thick-gap.has-background {
+	gap: calc(2 * var(--wp--style--block-gap)); //var(--wp--preset--spacing--60);
+}
+
+/* Column rounded borders */
+.wp-block-column.is-style-rounded-border {
+	border: 1px solid var(--wp--custom--border--color);
+	border-radius: var(--wp--custom--border--radius);
+	padding: var(--wp--preset--spacing--40);
+}
+
+/* Column no padding */
+.wp-block-column.is-style-no-padding {
+	padding: 0;
+}
+
+/* Handle when columns collapse on mobile */
+/* Breakpoint of 781 is what is hard-coded in WordPress v6.0+ to collapse columns */
+@media only screen and (max-width: 781px) {
+
+	/* Reduce row (vertical gap) when collapsing centered columns */
+	.wp-block-columns.is-style-center-on-mobile {
+		row-gap: var(--wp--preset--spacing--30);
+	}
+
+	/* Center left and right aligned text */
+	.wp-block-columns.is-style-center-on-mobile .wp-block-column:not(.wp-block-navigation__responsive-container-content) > * {
+		display: flex;
+		justify-content: center;
+		--navigation-layout-justify: center;		
+	}
+
+	/* OVERRIDE columns thick gap so vertical spacing matches up */	
+	.wp-block-columns.is-style-thick-gap,
+	.wp-block-columns.is-style-thick-gap.has-background {
+		gap: var(--wp--style--block-gap);
+	}
+	
+}
+

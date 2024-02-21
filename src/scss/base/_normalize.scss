@@ -1,0 +1,31 @@
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* 
+ * Default to contain borders and padding within blocks and prevent iOS from adjusting
+ * text sizes after orientation change. 
+ */
+html {
+	box-sizing: border-box;
+	-webkit-text-size-adjust: 100%;
+	scroll-behavior: auto !important;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Font smoothing.
+ * This is a niche setting that will not be available via Global Styles.
+ * https://github.com/WordPress/gutenberg/issues/35934
+ * 
+ * Also text decoration styles.
+ */
+body {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	
+	text-decoration-thickness: 1px;
+	text-underline-position: under;
+	/*text-underline-offset: 0.3ch;*/
+}

@@ -1,0 +1,45 @@
+/*--------------------------------------------------------------
+# Media & Text
+--------------------------------------------------------------*/
+
+/* Match our padding */
+.wp-block-media-text .wp-block-media-text__content {
+	padding-left: var(--wp--preset--spacing--40);
+	padding-right: var(--wp--preset--spacing--40);
+}
+
+/* Override horizontal padding on mobile 
+ *
+ * Note: Breakpoint of 601 is what is hard-coded in WordPress v6.0+
+ * to collapse media & text and latest posts grid
+ */
+@media only screen and (max-width: 601px) {
+	.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
+		padding-left: 0;
+		padding-right: 0;
+	}	
+}
+
+/*--------------------------------------------------------------
+# Media & Text: Custom
+--------------------------------------------------------------*/
+
+/* Media & Text Border */
+.wp-block-media-text.is-style-media-text-border {
+	padding: var(--wp--custom--border--radius);
+	border: 3px solid var(--wp--custom--border--color);
+	border-radius: var(--wp--custom--border--radius);
+}
+
+/* 
+ * Override horizontal padding on mobile 
+ *
+ * Note: Breakpoint of 601 is what is hard-coded in WordPress v6.0+
+ * to collapse media & text and latest posts grid 
+ */
+@media only screen and (max-width: 601px) {
+	.wp-block-media-text.is-style-media-text-border.is-stacked-on-mobile .wp-block-media-text__content {
+		padding-left: var(--wp--preset--spacing--40);
+		padding-right: var(--wp--preset--spacing--40);
+	}
+}

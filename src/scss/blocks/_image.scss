@@ -1,0 +1,80 @@
+/*--------------------------------------------------------------
+# Image
+--------------------------------------------------------------*/
+
+/* FIX caption color when on colored background */
+.wp-block-image figcaption {
+	color: inherit;
+}
+
+/* Prevent figures (images, tables) with hard-coded dimensions from breaking the 
+ * layout. Note the figure line is for older block editor markup. 
+ */
+figure.wp-caption:not(.alignfull):not(.alignwide),
+figure.wp-caption:not(.alignfull):not(.alignwide) img {
+	max-width: min( 100%, var(--wp--style--global--content-size) ) !important;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* FIX rounded images when global image style has a border radius */
+.wp-block-image .is-style-rounded img, 
+.wp-block-image.is-style-circle-mask img, 
+.wp-block-image.is-style-rounded img {
+    border-radius: 9999px !important;
+}
+
+/* Hide the caption in new WordPress v6.4 "lightbox" image feature when enlarged */
+.lightbox-image-container .wp-block-image img {
+	color: rgba(0,0,0,0) !important;
+}
+
+/*--------------------------------------------------------------
+# Image: Custom
+--------------------------------------------------------------*/
+
+/* Image no border */
+.is-style-image-no-border {
+	border: none;
+	border-radius: 0;
+	padding: 0;
+}
+
+/* Image borders */
+.wp-block-image.is-style-image-border img {
+	border: 1px solid var(--wp--custom--border--color);
+	border-radius: var(--wp--custom--border--radius);
+	padding: var(--wp--custom--border--radius);
+}
+
+.wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-border figcaption {
+    background: none;
+}
+
+.wp-block-image.is-style-image-round-border img {
+	border: 1px solid var(--wp--custom--border--color);
+	border-radius: 9999px; /*50%;*/
+	padding: var(--wp--custom--border--radius);
+}
+
+/*.wp-block-image.is-style-image-computer-screen img {*/
+.wp-block-image.is-style-image-computer-screen {
+	border: var(--wp--preset--spacing--60) solid var(--wp--preset--color--dark);
+	border-radius: var(--wp--preset--spacing--40);
+	border-bottom: 3px solid var(--wp--preset--color--not-quite-black);
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+}
+.wp-block-image.is-style-image-computer-screen figcaption {
+	display: none;
+}
+
+.wp-block-image.is-style-image-tablet-phone-screen {
+	border: calc(0.66 * var(--wp--preset--spacing--60)) solid var(--wp--preset--color--dark);
+	border-radius: var(--wp--preset--spacing--40);
+}
+
+.wp-block-image.is-style-image-tablet-phone-screen figcaption {
+	display: none;
+}

@@ -1,0 +1,32 @@
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+
+/* Use bold font-weight from theme.json */
+strong, 
+b {
+	font-weight: var(--wp--custom--typography--font-weight--bold);
+}
+
+/* Prevent code from breaking layout */
+code,
+pre {
+	overflow-x: auto;
+}
+
+/* Set lists with background to match other padding */
+ol.has-background,
+ul.has-background {
+    padding: var(--wp--preset--spacing--40);
+    list-style-position: inside;
+}
+
+/* Center captions and don't underline links in them by default */
+// TO-DO: Move these to theme.json when that is supported
+figcaption {
+	text-align: center;
+}
+
+figcaption a {
+	text-decoration: none;
+}

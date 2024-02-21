@@ -1,0 +1,29 @@
+/*--------------------------------------------------------------
+# Table
+--------------------------------------------------------------*/
+
+/* Allow tables to scroll on mobile */
+.wp-block-table {
+	overflow-x: scroll;
+}
+
+/* On striped tables, move the bottom line above the fig caption */
+.wp-block-table.is-style-stripes {
+    border-bottom: none;
+}
+.wp-block-table.is-style-stripes .wp-element-caption {
+	border-top: 1px solid;
+}
+
+/* On striped tables, use our neutral color for odd rows */
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+    background-color: var(--wp--preset--color--neutral);
+}
+.wp-block-table.is-style-stripes table:not(.has-text-color) tbody tr:nth-child(odd) {
+	color: var(--wp--preset--color--very-dark-gray);
+}
+
+/*.wp-block-table.is-style-stripes tbody tr:nth-child(even) {
+    background-color: var(--wp--preset--color--neutral-alt);
+}*/
+

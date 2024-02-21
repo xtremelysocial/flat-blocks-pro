@@ -1,0 +1,100 @@
+/*--------------------------------------------------------------
+# Group
+--------------------------------------------------------------*/
+
+/* 
+ * Note: Padding for colored backgrounds on groups is now in
+ * theme.json as custom block CSS.
+ */
+
+/* For convenience, remove padding on nested groups */
+.wp-block-group > .wp-block-group:not(.has-background) {
+	padding: 0;
+}
+
+/* If global padding, then OVERRIDE horizontal padding on mobile
+ *
+ * Note: Breakpoint of 781 is what is hard-coded in WordPress 
+ * v6.0+ to collapse columns
+ */
+@media only screen and (max-width: 781px) {
+
+	.site-header.has-global-padding.wp-block-group,
+	.site-footer.has-global-padding.wp-block-group,
+	.post-comments.has-global-padding.wp-block-group {
+		padding-left: var(--wp--style--root--padding-left) !important;
+		padding-right: var(--wp--style--root--padding-right) !important;
+	}
+	
+	.is-nowrap.is-layout-flex.wp-block-group {
+		flex-wrap: wrap;
+		//overflow: hidden;
+	}		
+}
+
+/*--------------------------------------------------------------
+# Group: Custom
+--------------------------------------------------------------*/
+
+/* Group borders */
+.wp-block-group.is-style-rounded-border {
+	border: 1px solid var(--wp--custom--border--color);
+	border-radius: var(--wp--custom--border--radius);
+	padding: var(--wp--preset--spacing--40);
+    //box-shadow: var(--wp--custom--shadow--default);
+}
+
+.wp-block-group.is-style-rounded-border.is-layout-flex {
+	overflow: hidden;
+}
+
+.wp-block-group.is-style-thick-rounded-border {
+	border: 3px solid var(--wp--custom--border--color);
+	border-radius: var(--wp--custom--border--radius);
+    //box-shadow: var(--wp--custom--shadow--default);
+}
+
+.wp-block-group.is-style-thick-rounded-border.is-layout-flex {
+	overflow: hidden;
+}
+
+/* Group no padding */
+.wp-block-group.is-style-no-padding {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.wp-block-group.is-style-no-padding:not(.has-global-padding) {
+	padding-left: 0;
+	padding-right: 0;
+}
+
+/* Group fixed header */
+.wp-block-group.is-style-fixed-header,
+.wp-block-group.has-background.is-style-fixed-header {
+    border: 1px solid var(--wp--custom--border--color);
+    border-width: 0 0 1px;
+    //padding: var(--wp--preset--spacing--40);
+    padding-top: var(--wp--preset--spacing--40);
+    padding-bottom: var(--wp--preset--spacing--40);
+    //padding-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
+    //padding-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
+    box-shadow: var(--wp--custom--shadow--default);
+}
+
+/* Line up menu close button with menu open button */
+.wp-block-group.is-style-fixed-header .wp-block-navigation__responsive-container.is-menu-open {
+	padding-top: var(--wp--preset--spacing--50);
+}
+
+/* Position the fixed header using sticky so we don't have to have top site margin */
+.wp-site-blocks > header:has(.is-style-fixed-header) {
+	position: sticky;
+	top: 0;
+	background-color: var(--wp--preset--color--background);
+	z-index: 9999;
+}
+
+/* If WordPress Admin Bar, then adjust fixed header position so its underneath it */
+.admin-bar .wp-site-blocks > header:has(.is-style-fixed-header) {
+  top: var(--wp-admin--admin-bar--height, 32px);
+}

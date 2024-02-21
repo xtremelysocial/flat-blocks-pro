@@ -127,7 +127,7 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 				'categories' => array ('flatblocks', 'columns', 'team', 'featured' )
 			),
 			'cover-scroll-home-header' => array( 
-				'title' => __( 'Cover Colored Blocks with Site Title, Tagline, and Scroll Arrow', 'flat-blocks' ),
+				'title' => __( 'Cover Home Page with Site Title, Tagline, and Scroll Arrow', 'flat-blocks' ),
 				'categories' => array ('flatblocks', 'cover', 'banner' )
 			),
 			'cover-scroll-page-header' => array( 
@@ -140,6 +140,18 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 			),
 			'cover-bokeh' => array( 
 				'title' => __( 'Cover Bokeh', 'flat-blocks' ),
+				'categories' => array ('flatblocks', 'cover', 'banner' )
+			),
+			'cover-book' => array( 
+				'title' => __( 'Cover Book', 'flat-blocks' ),
+				'categories' => array ('flatblocks', 'cover', 'banner' )
+			),
+			'cover-building' => array( 
+				'title' => __( 'Cover Building', 'flat-blocks' ),
+				'categories' => array ('flatblocks', 'cover', 'banner' )
+			),
+			'cover-city-night' => array( 
+				'title' => __( 'Cover City at Night', 'flat-blocks' ),
 				'categories' => array ('flatblocks', 'cover', 'banner' )
 			),
 			'cover-colored-chalk' => array( 
@@ -162,8 +174,20 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 				'title' => __( 'Cover Geodesic Lights', 'flat-blocks' ),
 				'categories' => array ('flatblocks', 'cover', 'banner' )
 			),
+			'cover-guitars' => array( 
+				'title' => __( 'Cover Guitars', 'flat-blocks' ),
+				'categories' => array ('flatblocks', 'cover', 'banner' )
+			),
 			'cover-man-on-rocks' => array( 
 				'title' => __( 'Cover Man on Rocks', 'flat-blocks' ),
+				'categories' => array ('flatblocks', 'cover', 'banner' )
+			),
+			'cover-notebooks' => array( 
+				'title' => __( 'Cover Notebooks', 'flat-blocks' ),
+				'categories' => array ('flatblocks', 'cover', 'banner' )
+			),
+			'cover-typewriter' => array( 
+				'title' => __( 'Cover Typewriter', 'flat-blocks' ),
 				'categories' => array ('flatblocks', 'cover', 'banner' )
 			),
 			'image-gallery' => array( 
@@ -261,21 +285,25 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 							in_array( 'core/template-part/footer', $pattern['blockTypes'] )
 						) {
 							unregister_block_pattern( $pattern['name'] );
-						}// endif
+						}
 				
-					}// endif
+					}
 					
-				} // endforeach 
+				}
 				
-			} // endif is_array
+			}
 
-		} //endif apply_filters
+		}
 
 		// Then loop through all our patterns and register them
 		foreach ( $block_patterns as $name => $properties ) {
 		
 			// Get the HTML contents and replace partial URL's
-			$content = flatblocks_get_block_pattern( $name );
+			$image_root = isset($properties['imageRoot']) ? $properties['imageRoot'] : get_template_directory_uri();
+			$content = flatblocks_get_block_pattern( 
+				$name, 
+				$image_root
+			);
 			if ( $content ) {
 											
 					// Register the block pattern
@@ -294,9 +322,9 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 						)
 					);
 
-			} // $content
+			}
 			
-		} // $block_patterns
+		}
 		
 	} 
 endif;

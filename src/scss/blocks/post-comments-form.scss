@@ -1,0 +1,14 @@
+/*--------------------------------------------------------------
+# Post Comments Form
+--------------------------------------------------------------*/
+
+/* Set medium font weight on comment form labels */
+.wp-block-post-comments-form label {
+	font-weight: var(--wp--custom--typography--font-weight--medium);
+}
+
+/* Override no-shadow if our custom shadow default is set */
+.wp-block-post-comments-form input[type=submit].wp-element-button {
+	box-shadow: var(--wp--custom--shadow--default);
+}
+

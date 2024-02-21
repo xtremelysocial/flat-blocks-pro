@@ -1,0 +1,50 @@
+/*--------------------------------------------------------------
+# Margins (Vertical spacing)
+--------------------------------------------------------------*/
+
+/* 
+ * Core Wordpress controls vertical spacing by adding the gap 
+ * setting as top margin between all blocks on the site. However, 
+ * certain things like template parts get this too and we want the 
+ * theme and users to be able to control it, so push this down to 
+ * the block level. Also don't default to having padding. 
+ */
+ 
+ /* Remove top margin and padding from the containers */
+header,
+main,
+footer,
+.wp-block-template-part,
+.wp-block-post-content {
+	margin-block-start: 0 !important;
+}
+ 
+/* 
+ * Add top margin to the container's first block and then between 
+ * subsequent blocks 
+ */
+main > *:first-child:not(.wp-block-template-part, .wp-block-post-content, .wp-block-cover,  .wp-block-query, header, footer, nav),
+body .is-layout-constrained > * + .wp-block-template-part > *:first-child:not(.wp-block-template-part, .wp-block-post-content, .wp-block-cover, .wp-block-query, main, header, footer, nav),
+body .is-layout-constrained .wp-block-template-part > * + *:not(.wp-block-template-part, .wp-block-post-content, .wp-block-cover, .wp-block-query, main, header, footer, nav),
+.wp-block-query > *:first-child:not(.wp-block-cover),
+.wp-block-post-content > *:first-child:not(.wp-block-cover) { /*,
+.is-root-container > *:first-child:not(.wp-block-template-part, .wp-block-cover, .wp-block-query) {*/
+ 	margin-block-start: var(--wp--style--block-gap);
+}
+
+/* But don't add top or bottom margin to template part within a column. e.g. Footers. */
+.wp-block-column > .wp-block-template-part > *:first-child {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+/* Also add bottom margin on the last block for convenience */
+.wp-block-query > *:last-child,
+.wp-block-post-content > *:last-child {
+	margin-block-end: var(--wp--style--block-gap);
+}
+
+/* But don't add bottom margin to a template part within a column. e.g. Footers. */
+.wp-block-column > .wp-block-template-part > *:last-child {
+	margin-block-end: 0;
+}

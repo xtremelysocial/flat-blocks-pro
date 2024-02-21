@@ -1,0 +1,35 @@
+/*--------------------------------------------------------------
+# Post Terms:
+--------------------------------------------------------------*/
+/* dashicons-tag */
+.wp-block-post-terms.taxonomy-category:before {
+	font-family: dashicons;
+	content: "\f318";
+	margin-right: var(--wp--preset--spacing--20);
+}
+
+/* dashicons-category */
+.wp-block-post-terms.taxonomy-post_tag:before {
+	font-family: dashicons;
+	content: "\f323";
+	margin-right: var(--wp--preset--spacing--20);
+}
+
+.rtl .wp-block-post-terms:before {
+	padding-right: 0;
+	margin-right: 0;
+	margin-left: var(--wp--preset--spacing--20);
+}
+
+/* Remove bottom margin on Category and Tag descriptions */
+.wp-block-term-description p {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
+
+/*--------------------------------------------------------------
+# Post Terms: Custom
+--------------------------------------------------------------*/
+.wp-block-post-terms.is-style-no-icon:before {	
+	display: none;
+}

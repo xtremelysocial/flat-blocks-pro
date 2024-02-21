@@ -1,0 +1,16 @@
+$vendor-prefixes: ('-webkit-', '');
+
+@mixin vendor-prefix($name, $value) {
+	@each $vendor in $vendor-prefixes {
+		#{$vendor}#{$name}: #{$value};
+	}
+}
+
+@mixin keyframes($animationName) {
+	@each $vendor in $vendor-prefixes {
+		@#{$vendor}keyframes #{$animationName} {
+			$browser: #{$vendor} !global;
+			@content;
+		}
+	}
+} $browser: null;

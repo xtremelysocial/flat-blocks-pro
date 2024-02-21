@@ -1,0 +1,70 @@
+/*--------------------------------------------------------------
+# Buttons and Links
+--------------------------------------------------------------*/
+/*
+ * Link styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+a,
+.wp-block-navigation a,
+.wp-block-navigation-submenu__toggle {
+	cursor: pointer;
+}
+
+/* Colored link hover styles */
+.has-text-color a:not(.wp-element-button):not(.wp-block-button):not(.wp-block-social-link-anchor):hover {
+	opacity: 0.8;
+}
+
+/* 
+ * Style basic buttons to match block buttons. 
+ */
+input[type=button],
+input[type=submit][class*="button"],
+input[type=reset][class*="button"],
+input[type=file]::file-selector-button {
+	color: var(--wp--preset--color--foreground-alt);
+	background-color: var(--wp--preset--color--primary);
+	border: none;
+	border-width: 0;
+	border-radius: var(--wp--custom--border--radius);
+	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
+	font-size: var(--wp--preset--font-size--normal);
+	font-weight: 400;
+	line-height: 1.5;
+	text-shadow: none;
+}
+input[type=file] {
+	font-size: var(--wp--preset--font-size--small);
+	width: 100%;
+}
+
+/* But override basic buttons to look like outlines on primary-colored backgrounds */
+.has-primary-background-color input[type=button],
+.has-primary-background-color input[type=submit][class*="button"],
+.has-primary-background-color input[type=reset][class*="button"],
+.has-primary-background-color input[type=file]::file-selector-button {
+	border: 3px solid var(--wp--preset--color--foreground-alt);
+}
+
+/* For outline style buttons, inherit border color from the text color */
+.wp-block-button.is-style-outline.is-style-outline .wp-block-button__link {
+	color: inherit;
+}
+
+/*
+ * Button hover styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+button:hover,
+input[type=submit][class*="button"]:hover,
+input[type=reset][class*="button"]:hover,
+input[type=file]::file-selector-button:hover,
+.wp-block-search__button:hover,
+.wp-block-file .wp-block-file__button:hover,
+.wp-block-button__link:hover {
+	cursor: pointer;
+	opacity: 0.8;
+}

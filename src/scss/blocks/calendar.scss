@@ -1,0 +1,10 @@
+/*--------------------------------------------------------------
+# Calendar
+--------------------------------------------------------------*/
+.wp-block-calendar table:where(:not(.has-text-color)) {
+    color: var(--wp--preset--color--foreground);
+}
+
+.wp-block-calendar table th:not(.has-text-color) {
+    color: var(--wp--preset--color--dark);
+}

@@ -1,0 +1,23 @@
+/*--------------------------------------------------------------
+# Post Date
+--------------------------------------------------------------*/
+
+/* dashicons-calendar-alt */
+.wp-block-post-date:before {
+	font-family: dashicons;
+	content: "\f508";
+	margin-right: var(--wp--preset--spacing--20);
+}
+
+.rtl .wp-block-post-date:before {
+	padding-right: 0;
+	margin-right: 0;
+	margin-left: var(--wp--preset--spacing--20);
+}
+
+/*--------------------------------------------------------------
+# Post Date: Custom
+--------------------------------------------------------------*/
+.wp-block-post-date.is-style-no-icon:before {	
+	display: none;
+}

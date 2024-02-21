@@ -1,0 +1,22 @@
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/* In the Editor, REMOVE extra margin on nav menu drop-down icons */
+nav.wp-block-navigation .wp-block-navigation__submenu-icon {
+	margin-left: 0;
+}
+
+/* 
+ * In Editor, position fixed mobile nav menu CONTAINER, add some margin.
+ */
+.is-root-container > header:has(.is-style-fixed-menu) {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 9999;
+}
+
+nav.wp-block-navigation.is-style-fixed-menu {
+	margin: var(--wp--preset--spacing--60) var(--wp--preset--spacing--50);
+}
