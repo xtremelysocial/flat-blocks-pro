@@ -6,7 +6,6 @@
  * Loads the PRO HTML block patterns. 
  * 
  * @package flat-blocks-pro
- * @since	1.0
  */
 
 

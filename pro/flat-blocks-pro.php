@@ -11,47 +11,57 @@
  * Loads CSS for Woo Commerce Plugin, if active
  * 
  * @package flat-blocks-pro
- * @since	1.0
  */
 
-// Load Admin Edit Link
-if ( apply_filters( 'flatblocks_pro_load_admin_edit', $default = true ) ) {
-	if ( file_exists( get_template_directory() . '/pro/inc/pro-admin-edit.php' ) ) {
-		require_once get_template_directory() . '/pro/inc/pro-admin-edit.php';
-	}
-}
+/*
+ * This entire function can be overridden by a child theme. Just declare the function 
+ * and set the array to the files to include. You don't need to use the if not function
+ * exists wrapper in your child theme.
+ */
+if ( ! function_exists('fbp_load_includes') ) :
 
-// Load custom block styles
-if ( apply_filters( 'flatblocks_pro_load_custom_styles', $default = true ) ) {
-	if ( file_exists( get_template_directory() . '/pro/inc/pro-custom-styles.php' ) ) {
-		require_once get_template_directory() . '/pro/inc/pro-custom-styles.php';
-	}
-}
+	function fbp_load_includes() {
 
-// Load block patterns
-if ( apply_filters( 'flatblocks_pro_load_patterns', $default = true ) ) {
-	if ( file_exists( get_template_directory() . '/pro/inc/pro-patterns.php' ) ) {
-		require_once get_template_directory() . '/pro/inc/pro-patterns.php';
-	}
-}
+		/* Build array of include files */
+		$includes = array (
+			'/pro/inc/pro-admin-edit.php',
+			'/pro/inc/pro-custom-styles.php',
+			'/pro/inc/pro-default-image.php',
+			'/pro/inc/pro-login-page.php',
+			'/pro/inc/pro-patterns.php',
+			'/pro/inc/pro-animation.php', // only for XtremelySocial.com
+			);
 
-// Load animation and visibility styles and scripts (this is for XtremelySocial.com ONLY)
-if ( apply_filters( 'flatblocks_pro_load_animation', $default = true ) ) {
-	if ( file_exists( get_template_directory() . '/pro/inc/pro-animation.php' ) ) {
-		require_once get_template_directory() . '/pro/inc/pro-animation.php';
-	}
-}
 
-// Load Jetpack Plugin styles and scripts only if that plugin is active
-if ( apply_filters( 'flatblocks_pro_load_jetpack', $default = true ) ) {
-	if ( class_exists('Jetpack') && file_exists( get_template_directory() . '/pro/inc/pro-jetpack.php' ) ) {
-		require_once get_template_directory() . '/pro/inc/pro-jetpack.php';
-	}
-}
+		/* Add Flatblocks PRO Plugin if that plugin is NOT active */
+		if ( ! defined('FBP_PLUGIN_ACTIVE') || FBP_PLUGIN_ACTIVE !== true ) {
+			$includes[] = '/pro/pro-plugin/pro-plugin.php';
+		}
 
-// Load Woo Commerce Plugin styles and scripts only if that plugin is active
-if ( apply_filters( 'flatblocks_pro_load_woocommerce', $default = true ) ) {
-	if ( class_exists('woocommerce') && file_exists( get_template_directory() . '/pro/inc/pro-woocommerce.php' ) ) {
-		require_once get_template_directory() . '/pro/inc/pro-woocommerce.php';
+		/* Add Jetpack support if that plugin is active */
+		if ( class_exists( 'Jetpack' ) ) {
+			$includes[] = '/pro/inc/pro-jetpack.php';
+		}
+
+		/* Add Woocommerce support if that plugin is active */
+		if ( class_exists( 'woocommerce' ) ) {
+			$includes[] = '/pro/inc/pro-woocommerce.php';
+		}
+
+		$includes = apply_filters( 'flatblocks_pro_load_includes', $includes );
+
+		/* Load each of the includes */
+		foreach ( $includes as $include ) {
+			if ( file_exists( get_template_directory() . $include ) ) {
+				include_once get_template_directory() . $include;
+			}
+		}
+
 	}
-}
+
+endif;
+
+/*
+ * Load the include files for PRO features
+ */
+fbp_load_includes();

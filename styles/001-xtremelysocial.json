@@ -1,0 +1,354 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 2,
+	"title": "XtremelySocial",
+	"settings": {
+		"custom": {
+			"shadow": {
+				"default": "var(--wp--preset--shadow--natural)"
+			}
+		},
+		"color": {
+			"palette": [
+				{
+					"slug": "primary",
+					"color": "#1abc9c",
+					"name": "Primary (Light Green)"
+				},
+				{
+					"slug": "secondary",
+					"color": "#34495e",
+					"name": "Secondary (Midnight Blue)"
+				},
+				{
+					"slug": "tertiary",
+					"color": "#f1c40f",
+					"name": "Tertiary (Yellow)"
+				},
+				{
+					"slug": "dark",
+					"color": "#34495e",
+					"name": "Dark (Midnight Blue)"
+				},
+				{
+					"slug": "neutral",
+					"color": "#ebebeb",
+					"name": "Neutral (Very Light Gray)"
+				},
+				{
+					"slug": "primary-alt",
+					"color": "#16a085",
+					"name": "Primary Alt (Green)"
+				},
+				{
+					"slug": "secondary-alt",
+					"color": "#2c3e50",
+					"name": "Secondary Alt (Dark Midnight Blue)"
+				},
+				{
+					"slug": "tertiary-alt",
+					"color": "#f39c12",
+					"name": "Tertiary Alt (Light Orange)"
+				},
+				{
+					"slug": "dark-alt",
+					"color": "#2c3e50",
+					"name": "Dark Alt (Dark Midnight Blue)"
+				},
+				{
+					"slug": "neutral-alt",
+					"color": "#e0e0e0",
+					"name": "Neutral Alt (Gray)"
+				},
+				{
+					"slug": "foreground-alt",
+					"color": "#ffffff",
+					"name": "Foreground Alt (White)"
+				},
+				{
+					"slug": "background",
+					"color": "#f2f2f2",
+					"name": "Background (Off White)"
+				},
+				{
+					"slug": "foreground",
+					"color": "#555555",
+					"name": "Foreground (Very Dark Gray)"
+				},
+				{
+					"slug": "white",
+					"color": "#ffffff",
+					"name": "White"
+				},
+				{
+					"slug": "off-white",
+					"color": "#f2f2f2",
+					"name": "Off White"
+				},
+				{
+					"slug": "very-light-gray",
+					"color": "#ebebeb",
+					"name": "Very Light Gray"
+				},
+				{
+					"slug": "light-gray",
+					"color": "#e7e7e7",
+					"name": "Light Gray"
+				},
+				{
+					"slug": "gray",
+					"color": "#e0e0e0",
+					"name": "Gray"
+				},
+				{
+					"slug": "dark-gray",
+					"color": "#95a5a6",
+					"name": "Dark Gray"
+				},
+				{
+					"slug": "very-dark-gray",
+					"color": "#555555",
+					"name": "Very Dark Gray"
+				},
+				{
+					"slug": "light-green",
+					"color": "#1abc9c",
+					"name": "Light Green"
+				},
+				{
+					"slug": "green",
+					"color": "#16a085",
+					"name": "Green"
+				},
+				{
+					"slug": "bright-green",
+					"color": "#2ecc71",
+					"name": "Bright Green"
+				},
+				{
+					"slug": "dark-bright-green",
+					"color": "#27ae60",
+					"name": "Dark Bright Green"
+				},
+				{
+					"slug": "light-yellow",
+					"color": "#fdcb6e",
+					"name": "Light Yellow"
+				},
+				{
+					"slug": "yellow",
+					"color": "#f1c40f",
+					"name": "Yellow"
+				},
+				{
+					"slug": "light-orange",
+					"color": "#f39c12",
+					"name": "Light Orange"
+				},
+				{
+					"slug": "orange",
+					"color": "#e67e22",
+					"name": "Orange"
+				},
+				{
+					"slug": "dark-orange",
+					"color": "#d35400",
+					"name": "Dark Orange"
+				},
+				{
+					"slug": "light-blue",
+					"color": "#74b9ff",
+					"name": "Light Blue"
+				},
+				{
+					"slug": "blue",
+					"color": "#3498db",
+					"name": "Blue"
+				},
+				{
+					"slug": "dark-blue",
+					"color": "#2980b9",
+					"name": "Dark Blue"
+				},
+				{
+					"slug": "midnight-blue",
+					"color": "#34495e",
+					"name": "Midnight Blue"
+				},
+				{
+					"slug": "dark-midnight-blue",
+					"color": "#2c3e50",
+					"name": "Dark Midnight Blue"
+				},
+				{
+					"slug": "light-purple",
+					"color": "#a29bfe",
+					"name": "Light Purple"
+				},
+				{
+					"slug": "purple",
+					"color": "#9b59b6",
+					"name": "Purple"
+				},
+				{
+					"slug": "dark-purple",
+					"color": "#8e44ad",
+					"name": "Dark Purple"
+				},
+				{
+					"slug": "light-red",
+					"color": "#ff7878",
+					"name": "Light Red"
+				},
+				{
+					"slug": "red",
+					"color": "#e74c3c",
+					"name": "Red"
+				},
+				{
+					"slug": "dark-red",
+					"color": "#c0392b",
+					"name": "Dark Red"
+				},
+				{
+					"slug": "almost-black",
+					"color": "#2f2f2f",
+					"name": "Almost Black"
+				},
+				{
+					"slug": "not-quite-black",
+					"color": "#222222",
+					"name": "Not Quite Black"
+				},
+				{
+					"slug": "black",
+					"color": "#000000",
+					"name": "Black"
+				}
+			]
+		}
+	},
+	"customTemplates": [
+		{
+			"name": "page-home",
+			"title": "Page Home (cover image, no comments)",
+			"description": "Page Home (cover image, no comments)",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-featured-cover",
+			"title": "Page with Featured Cover Image",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-featured-image",
+			"title": "Page with Featured Image",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-notitle",
+			"title": "Page No Title",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-nocomments",
+			"title": "Page No Comments",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-notitle-nocomments",
+			"title": "Page No Title or Comments",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-content-only",
+			"title": "Page Content Only (No header, title, comments, or footer)",
+			"description": "Page Content Only (No header, title, comments, or footer)",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-sitemap",
+			"title": "Page Site Map",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-sidebar-left",
+			"title": "Page Left Sidebar",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-sidebar-right",
+			"title": "Page Right Sidebar",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "single-featured-cover",
+			"title": "Post with Featured Cover Image",
+			"postTypes": ["post"]
+		},
+		{
+			"name": "single-featured-image",
+			"title": "Post with Featured Image",
+			"postTypes": ["post"]
+		},
+		{
+			"name": "single-notitle",
+			"title": "Post No Title",
+			"postTypes": ["post"]
+		},
+		{
+			"name": "single-nocomments",
+			"title": "Post No Comments",
+			"description": "Post w/out comments",
+			"postTypes": ["post"]
+		},
+		{
+			"name": "single-notitle-nocomments",
+			"title": "Post No Title or Comments",
+			"postTypes": ["post"]
+		},
+		{
+			"name": "single-content-only",
+			"title": "Post Content Only (No title, date, categories, tags, author, or comments)",
+			"postTypes": ["post"]
+		},
+		{
+			"name": "single-sidebar-left",
+			"title": "Post Left Sidebar",
+			"postTypes": ["post"]
+		},
+		{
+			"name": "single-sidebar-right",
+			"title": "Post Right Sidebar",
+			"postTypes": ["post"]
+		},
+		{
+			"name": "page-nosidebar",
+			"title": "Page No Sidebar",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-nocomments-nosidebar",
+			"title": "Page No Comments No Sidebar",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-featured-image-nosidebar",
+			"title": "Page Featured Image No Sidebar",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "single-nosidebar",
+			"title": "Post No Sidebar",
+			"postTypes": ["post"]
+		},
+		{
+			"name": "single-featured-image-nosidebar",
+			"title": "Post Featured Image No Sidebar",
+			"postTypes": ["post"]
+		}
+	],
+	"styles": {
+		"css": "@media (prefers-color-scheme: dark) { canvas { background-color: var(--wp--preset--color--very-dark-gray); } body { /*color-scheme: dark light;*/ --wp--preset--color--background: var(--wp--preset--color--dark-midnight-blue); --wp--preset--color--foreground: var(--wp--preset--color--off-white); --wp--preset--color--dark: var(--wp--preset--color--almost-black); --wp--preset--color--dark-alt: var(--wp--preset--color--not-quite-black); --wp--preset--color--neutral: var(--wp--preset--color--gray); --wp--preset--color--neutral-alt: var(--wp--preset--color--dark-gray); } .wp-block-group.site-header .wp-block-image  { background-image: url(https://xtremelysocial.com/wp-content/themes/xtremelysocial/assets/images/xs_logo_text_light.png); background-size: cover; } .wp-block-group.site-header img { visibility: hidden; } .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open, .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container { background-color: var(--wp--preset--color--midnight-blue); color: var(--wp--preset--color--foreground-alt); } }"
+	}	
+}

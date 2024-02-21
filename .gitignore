@@ -65,4 +65,4 @@ assets/css/blocks/
 #templates/pro-*
 
 # Ignore our xtremelysocial.com files
-styles/*xtremelysocial*.json
+#styles/*xtremelysocial*.json

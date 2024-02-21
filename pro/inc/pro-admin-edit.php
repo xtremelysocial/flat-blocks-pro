@@ -1,9 +1,11 @@
 <?php
 /**
- * File:			  admin-edit/index-admin-edit.php
- * Description:       Adds an Edit link to pages and posts for Admins
+ * File:		pro-admin-edit.php
+ * Theme:		Flat Blocks PRO
+ * 
+ * Adds an Edit link to pages and posts for Admins
  *
- * @package           flatblocks-pro
+ * @package        flat-blocks-pro
  */
 
 /**

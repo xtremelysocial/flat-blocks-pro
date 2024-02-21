@@ -1,12 +1,11 @@
 <?php
 /**
- * File:	pro-custom-styles.php
- * Theme:	Flat Blocks PRO
- * 
+ * File:		pro-custom-styles.php
+ * Theme:		Flat Blocks PRO
+ *
  * Loads the PRO custom styles and CSS. 
  * 
- * @package flat-blocks-pro
- * @since	1.0
+ * @package 	flat-blocks-pro
  */
 
 /**
@@ -26,7 +25,7 @@ if ( ! function_exists( 'flatblocks_pro_styles' ) ) :
 		// Load custom block styles
 		wp_enqueue_style( 
 			'flatblocks-pro-custom-styles', 
-			get_template_directory_uri() . '/pro/css/pro-custom-styles.css', 
+			get_template_directory_uri() . '/pro/assets/css/pro-custom-styles.css', 
 			array('flatblocks-base'),
 			$version_string
 		);
@@ -35,14 +34,14 @@ if ( ! function_exists( 'flatblocks_pro_styles' ) ) :
 		//if ( !is_admin() ) {
 			wp_enqueue_script( 
 				'flatblocks-pro-custom-styles', 
-				get_template_directory_uri() . '/pro/js/pro-custom-styles.js', 
+				get_template_directory_uri() . '/pro/assets/js/pro-custom-styles.js', 
 				array('jquery'), 
 				$version_string, 
 				true 
 			);
 		//}
 		
-	} //end function
+	}
 endif;		
 
 /**
@@ -56,10 +55,10 @@ if ( ! function_exists( 'flatblocks_pro_editor_styles' ) ) :
 
 		// Load Flat Blocks PRO CSS styles
 		add_editor_style(
-			'/pro/css/pro-custom-styles.css'
+			'/pro/assets/css/pro-custom-styles.css'
 		);
 
-	} //end function
+	}
 endif;
 
 /**
@@ -196,6 +195,6 @@ if ( ! function_exists( 'flatblocks_pro_register_block_styles' ) ) :
 		//return $theme_styles + $pro_styles;
 		return $theme_styles ? $theme_styles + $pro_styles : $pro_styles;
 		
-	} //end function
+	}
 endif;
 

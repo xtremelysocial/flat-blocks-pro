@@ -1,0 +1,224 @@
+/**
+ * File:	animation/style.scss
+ * Plugin:	Flatblocks PRO Theme Plugin
+ *
+ * Stylesheet for adding animation control to supported blocks.
+ * Note: Compiles into style-index.css.
+ *
+ * @package flatblocks-pro
+ * @since	1.0
+ */
+
+/*--------------------------------------------------------------
+# Animations - Load the custom animation.css from the package
+--------------------------------------------------------------*/
+@use 'animate.css';
+//@use './_animate.css';
+
+/*--------------------------------------------------------------
+# Animation Defaults
+--------------------------------------------------------------*/
+
+/*
+ * Overide and extend from animate.css
+ *
+ * Note: animate.css uses :root. We use body here because that's
+ * both more specific and where WordPress custom variables get
+ * placed.
+ */
+body {
+	--animate-repeat: 1;
+	--animate-delay: var(--wp--custom--animation--duration--normal, 1s);
+	--animate-duration: var(--wp--custom--animation--duration--normal, 1s);
+
+	--animate-default-entrance: var(--wp--custom--animation--default--entrance, fadeInUp);
+	--animate-duration-entrance: var(--wp--custom--animation--duration--normal, 800ms);
+	--animate-timing-function: var(--wp--custom--animation--timing-function, ease-out);
+
+	--animate-default-hover: var(--wp--custom--animation--default--hover, scale3d(1.1, 1.1, 1.1));
+	--animate-duration-hover: var(--wp--custom--animation--duration--medium, 500ms);
+}
+
+/* 
+ * Drop the animation name until it is active (scrolled to) 
+ */
+[class*="animate__"]:not(.animate__animated) {
+	animation-name: none;
+}
+
+/*--------------------------------------------------------------
+# Core WordPress Animations
+--------------------------------------------------------------*/
+
+/* TO-DO: Consider moving this to the theme */
+
+/* Change the animation to simple fadeIn when opening the mobile nav menu */
+.wp-block-navigation__responsive-container.is-menu-open {
+	animation: fadeIn var(--animate-duration-hover) ease-out;
+}
+
+/* Change the animation direction on mobile nav menu depending on the menu's positioning */
+/*
+// .site-header > .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open,
+// .site-header > .wp-block-template-part > .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
+//.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open { //,
+//.wp-block-template-part > .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
+.is-content-justification-right > .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open,
+.is-content-justification-right > .wp-block-template-part > .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
+	//animation-name: fadeInRight;
+	//animation-name: slideInRight;
+	animation: fadeInRight var(--animate-duration-hover) ease-out;
+}
+
+// .site-header.is-content-justification-left .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open,
+// .site-header.is-content-justification-left > .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open,
+// .site-header.is-content-justification-left > .wp-block-template-part > .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open,
+// .site-header.is-content-justification-space-between > .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open,
+// .site-header.is-content-justification-space-between > .wp-block-template-part > .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
+.is-content-justification-left > .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open,
+.is-content-justification-left > .wp-block-template-part > .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open,
+.is-content-justification-space-between > .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open,
+.is-content-justification-space-between > .wp-block-template-part > .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
+	//animation-name: fadeInLeft;
+// 	animation-name: slideInLeft;
+	animation: slideInLeft var(--animate-duration-hover) ease-out;
+}
+
+// .site-header.is-content-justification-center > .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open,
+// .site-header.is-content-justification-center > .wp-block-template-part > .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
+.is-content-justification-center > .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open,
+.is-content-justification-center > .wp-block-template-part > .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
+	//animation-name: fadeInUp;
+// 	animation-name: slideInUp;
+	animation: slideInUp var(--animate-duration-hover) ease-out;
+}
+ */
+
+/*--------------------------------------------------------------
+# Entrance (Scroll) Animations
+--------------------------------------------------------------*/
+/*
+ * When the user scrolls to the animated element, trigger the animation. The
+ * 'animate__animated' class is added by javascript in view-animation.js.
+ *
+ * The scroll animation CSS classes all start with "animate__" followed
+ * by the specific animation name (fadeInUp, etc.)
+ */
+
+/*--------------------------------------------------------------
+# Animation: Auto Entrance
+--------------------------------------------------------------*/
+/*
+ * Usage - Add one the following CSS classes to a parent element (group,
+ *  columns, etc.):
+ *	animate__auto__enter
+ *	animate__auto__all
+ */
+.animate__auto__all,
+.animate__auto__enter {
+
+	animation-duration: var(--animate-duration-entrance);
+	animation-timing-function: var(--animate-timing-function);
+	animation-iteration-count: var(--animate-repeat);
+
+// 	&.wp-block-group > .animate__animated,
+	&.wp-block-group > .animate__animated:not(.wp-block-latest-posts.is-grid, .wp-block-columns, .wp-block-buttons),
+	&.wp-block-columns > .wp-block-column.animate__animated,
+	&.wp-block-cover > .wp-block-cover__inner-container.animate__animated,
+	&.wp-block-buttons > .wp-block-button.animate__animated,
+	&.wp-block-button.animate__animated,
+	&.wp-block-group .wp-block-latest-posts.is-grid > li.animate__animated { //,
+// 	&.wp-block-latest-posts.is-grid > li.animate__animated {
+// 		animation: var(--animate-default-entrance) var(--animate-duration) ease-in;
+// 		animation: var(--animate-default-entrance) var(--animate-duration) var(--animate-timing-function);
+		animation-name: var(--animate-default-entrance);
+		animation-duration: inherit;
+		animation-delay: inherit;
+		animation-iteration-count: inherit;
+// 		animation-timing-function: inherit; //var(--animate-timing-function);
+	}
+}
+
+/* For parallax cover images, delay the inner content animation a bit */
+.wp-block-cover.has-parallax > .wp-block-cover__inner-container.animate__animated,
+.wp-block-cover.has-parallax > .wp-block-cover__inner-container > .animate__animated {
+	animation-delay: calc(0.5 * var(--animate-delay));
+}
+
+/*--------------------------------------------------------------
+# Hover Animations
+--------------------------------------------------------------*/
+/*
+ * When the user hovers over the animated element, trigger the animation.
+ *
+ * The hover animation CSS classes all start with "animate__hover__" followed
+ * by the specific animation name (grow, slideUp, etc.)
+ */
+
+/*--------------------------------------------------------------
+# Animation: Auto Hover
+--------------------------------------------------------------*/
+/*
+ * Usage - Add one the following CSS classes to a parent element (group,
+ *  columns, etc.):
+ *	animate__hover__auto
+ *	animate__auto__all
+ */
+.animate__hover__auto,
+.animate__auto__all {
+	& .wp-block-button,
+	& .is-style-arrow-icon > a,
+	& .is-style-arrow-icon-no-text > a {
+	  	transform: translate3d(0, 0, 0);
+		transform: scale3d(1, 1, 1);
+		//transition: transform var(--animate-duration-hover) ease-out;
+		transition: transform var(--animate-duration-hover) var(--animate-timing-function);
+
+		&:hover, &:focus, &:active {
+			//transform: scale3d(1.1, 1.1, 1.1);
+			transform: var(--animate-default-hover);
+		}
+	}
+}
+
+/*--------------------------------------------------------------
+# Animation: Grow on Hover
+--------------------------------------------------------------*/
+.animate__hover__grow:not(.wp-block-buttons),
+.animate__hover__grow .wp-block-button,
+.animate__pulse.wp-block-button,
+.animate__shakeY.wp-block-button,
+.animate__swing.wp-block-button,
+.animate__ruberBand.wp-block-button,
+.animate__heartBeat.wp-block-button {
+  	transform: translate3d(0, 0, 0);
+	transform: scale3d(1, 1, 1);
+	//transition: transform var(--animate-duration-hover) ease-out;
+	transition: transform var(--animate-duration-hover) var(--animate-timing-function);
+
+	&:hover, &:focus, &:active {
+		transform: scale3d(1.1, 1.1, 1.1);
+	}
+}
+
+/*--------------------------------------------------------------
+# Animation: Slide Up on Hover
+--------------------------------------------------------------*/
+.animate__hover__slideUp:not(.wp-block-buttons),
+.animate__hover__slideUp .wp-block-button,
+.animate__shakeX.wp-block-button,
+.animate__headShake.wp-block-button,
+.animate__swing.wp-block-button,
+.animate__tada.wp-block-button,
+.animate__wobble.wp-block-button,
+.animate__jello.wp-block-button,
+.animate__bounce.wp-block-button {
+  	transform: translate3d(0, 0, 0);
+	transform: scale3d(1, 1, 1);
+	//transition: transform var(--animate-duration-hover) ease-out;
+	transition: transform var(--animate-duration-hover) var(--animate-timing-function);
+
+	&:hover, &:focus, &:active {
+		transform: translate3d(0, -9px, 0 );
+	}
+}

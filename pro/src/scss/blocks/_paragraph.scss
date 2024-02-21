@@ -1,0 +1,54 @@
+/*--------------------------------------------------------------
+# Custom: Paragraph
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Dashicon icons for telephone and email links
+--------------------------------------------------------------*/
+
+/*[itemprop="address"] [itemprop="streetAddress"]:before,*/
+/*.wp-block-jetpack-address:before,*/
+/*.wp-block-jetpack-email:before,
+.wp-block-jetpack-phone:before,*/
+p:has(a[href^="tel:"]:not(.wp-block-social-link-anchor)):before,
+p:has(a[href^="mailto:"]:not(.wp-block-social-link-anchor)):before {
+	display: inline-block;
+	font-family: dashicons;
+	/*color: currentcolor;*/
+	/*color: inherit;*/
+	font-weight: var(--wp--custom--typography--font-weight--normal);
+	margin-right: var(--wp--preset--spacing--20);
+	vertical-align: middle;
+}
+
+/*[itemprop="telephone"]:not(a[href^="tel:"]):before,
+:not([itemprop="telephone"]) > a[href^="tel:"]:before {*/
+/*.wp-block-jetpack-phone:before,*/
+p:has(a[href^="tel:"]:not(.wp-block-social-link-anchor)):before {
+	content: "\f525";
+}
+
+/*[itemprop="email"]:not(a[href^="mailto:"]):before,
+:not([itemprop="email"] > a[href^="mailto:"]:before {*/
+/*.wp-block-jetpack-email:before,*/
+p:has(a[href^="mailto:"]:not(.wp-block-social-link-anchor)):before {
+	content: "\f466";
+}
+
+/*[itemprop="address"] [itemprop="streetAddress"]:before {*/
+/*.wp-block-jetpack-address:before {
+	content: "\f323";
+}*/
+
+/*[itemprop="address"] [itemprop-"addressLocality"] {
+	margin-left: var(--wp--preset--spacing--20);
+}*/
+
+/*--------------------------------------------------------------
+## No Dashicon icons for telephone and email links
+--------------------------------------------------------------*/
+
+p.is-style-no-auto-icon a[href^="tel:"]:not(.wp-block-social-link-anchor):before,
+p.is-style-no-auto-icon a[href^="mailto:"]:not(.wp-block-social-link-anchor):before {
+	display: none;
+}

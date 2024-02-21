@@ -1,14 +1,42 @@
 <?php
 /**
- * File:	pro-jetpack.php
- * Theme:	Flat Blocks PRO
+ * File:		pro-jetpack.php
+ * Theme:		Flat Blocks PRO
  * 
  * Handles the Jetpack plugin styling for the PRO version of Flat Blocks
  * 
- * Loads CSS for Jetpack Plugin
- * 
- * @package flat-blocks-pro
- * @since	1.0
+ * @package 	flat-blocks-pro
+ */
+
+/* 
+add_filter( "taxonomy_template", 'load_our_custom_tax_template');
+function load_our_custom_tax_template ($tax_template) {
+	echo 'tax_template=' . $tax_template; //TEST
+//   if (is_tax('jetpack-portfolio')) {
+//     $tax_template = dirname(  __FILE__  ) . '/templates/archive-jetpack-portfolio.html';
+//   }
+  return $tax_template;
+}
+ */
+
+/* 
+add_filter( 'archive_template', 'get_custom_post_type_template' );
+
+function get_custom_post_type_template( $archive_template ) {
+
+	//echo 'archive_template=' . $archive_template; //TEST
+
+    //global $post;
+
+	global $_wp_current_template_id; //, $_wp_current_template_content, $wp_embed, $wp_query;
+
+	echo 'template_id=' . $_wp_current_template_id; //TEST
+
+//      if ( is_post_type_archive ( 'jetpack-portfolio' ) ) {
+//           $archive_template = dirname( __FILE__ ) . '/archive-jetpack-portfolio.html';
+//      }
+     return $archive_template;
+}
  */
 
 /**
@@ -26,16 +54,16 @@ if ( ! function_exists( 'flatblocks_pro_jetpack_styles' ) ) :
 		$version_string = is_string( $theme_version ) ? $theme_version : false;
 		
 		// Load Jetpack styles if that plugin is active
-		if ( class_exists('Jetpack') && file_exists( get_template_directory() . '/pro/css/pro-jetpack.css' ) ) {
+		if ( class_exists('Jetpack') && file_exists( get_template_directory() . '/pro/assets/css/pro-jetpack.css' ) ) {
 			wp_enqueue_style( 
 				'flatblocks-pro-jetpack-styles', 
-				get_template_directory_uri() . '/pro/css/pro-jetpack.css', 
+				get_template_directory_uri() . '/pro/assets/css/pro-jetpack.css', 
 				array( 'flatblocks-base' ), 
 				$version_string 
 			);
 		}
 		
-	} //end function
+	}
 endif;		
 
 /**
@@ -49,13 +77,13 @@ if ( ! function_exists( 'flatblocks_pro_jetpack_editor_styles' ) ) :
 	function flatblocks_pro_jetpack_editor_styles() {
 
 		// Load Jetpack styles if that plugin is active
-		if ( class_exists('Jetpack') && file_exists( get_template_directory() . '/pro/css/pro-jetpack.css' ) ) {
+		if ( class_exists('Jetpack') && file_exists( get_template_directory() . '/pro/assets/css/pro-jetpack.css' ) ) {
 			add_editor_style(
-				'/pro/css/pro-jetpack.css'
+				'/pro/assets/css/pro-jetpack.css'
 			);
 		}
 
-	} //end function
+	}
 endif;
 
 /**
@@ -78,9 +106,7 @@ if ( ! function_exists( 'flatblocks_pro_register_jetpack_block_styles' ) ) :
 			)
 		);
 
-		//return array_merge( $theme_styles, $jetpack_styles );
-		//return $theme_styles + $jetpack_styles;
 		return $theme_styles ? $theme_styles + $jetpack_styles : $jetpack_styles;
 		
-	} //end function
+	}
 endif;
