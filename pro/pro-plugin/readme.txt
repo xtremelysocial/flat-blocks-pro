@@ -20,7 +20,7 @@ This plugin contains some of the functionality for the PRO Version of the Flat B
 
 To install this plugin:
 
-1. Upload the plugin files to the `/wp-content/plugins/flatblocks-pro` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/pro-plugin` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress
 
 == Screenshots ==
@@ -33,7 +33,7 @@ directory take precedence. For example, `/assets/screenshot-1.png` would win ove
 
 == Changelog ==
 
-= 1.0 =
+= 0.1.0 =
 
 * Initial plugin version
 

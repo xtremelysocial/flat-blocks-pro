@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       	Flat Blocks PRO
+ * Plugin Name:       	Flat Blocks PRO Plugin
  * Plugin URI:  		https://xtremelysocial.com/wordpress/
  * Description:       	Flat Blocks PRO Theme Plugin
  * Requires at least: 	6.2

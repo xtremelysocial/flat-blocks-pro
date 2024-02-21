@@ -6,11 +6,14 @@
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"keywords": [
-		"Flat Blocks",
+		"Flat",
+		"Blocks",
+		"PRO",
+		"Plugin",
 		"Visibility",
 		"Animation"
 	],
-	"homepage": "https://xtremelysocial.com/wordpress/",
+	"homepage": "https://xtremelysocial.com/wordpress/flat-blocks/",
 	"scripts": {
 		"start": "wp-scripts start --webpack-copy-php",
 		"build": "wp-scripts build --webpack-copy-php",
