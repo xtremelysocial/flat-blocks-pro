@@ -1,1 +1,1 @@
-<?php return array('dependencies' => array('react', 'wp-token-list'), 'version' => '2f05b061c24bc0a7c473');
+<?php return array('dependencies' => array('react', 'wp-token-list'), 'version' => '0c42d87cf3659a005ff6');
