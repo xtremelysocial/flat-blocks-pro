@@ -48,6 +48,8 @@ if ( ! function_exists('fbp_load_includes') ) :
 			$includes[] = '/pro/inc/pro-woocommerce.php';
 		}
 
+		$includes = apply_filters( 'flatblocks_pro_load_includes', $includes );
+
 		/* Load each of the includes */
 		foreach ( $includes as $include ) {
 			if ( file_exists( get_template_directory() . $include ) ) {

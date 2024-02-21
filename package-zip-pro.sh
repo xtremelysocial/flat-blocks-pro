@@ -12,4 +12,4 @@ cd ../../
 
 # Then zip everything up
 #zip -r flat-blocks-pro.zip assets inc languages parts patterns styles templates *.php *.txt *.png *.css *.json pro/assets pro/inc pro/patterns pro/pro-plugin/build pro/pro-plugin/*.php pro/pro-plugin/*.txt
-zip -r flat-blocks-pro.zip assets inc languages parts patterns styles templates *.* pro/assets pro/inc pro/patterns pro/pro-plugin/build pro/pro-plugin/*.php pro/pro-plugin/*.txt -x "*/\.DS_Store" "*/\.*" *.sh assets/css/blocks assets/css/blocks/*
+zip -r flat-blocks-pro.zip assets inc languages parts patterns styles templates *.* pro/assets pro/inc pro/patterns pro/pro-plugin/build pro/pro-plugin/*.php pro/pro-plugin/*.txt -x "*/\.DS_Store" "*/\.*" *.sh *.map assets/css/blocks assets/css/blocks/*

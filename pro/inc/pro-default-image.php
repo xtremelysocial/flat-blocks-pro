@@ -43,3 +43,18 @@ if ( ! function_exists('fbp_filter_post_thumbnail_html') ) :
 	}
 
 endif;
+
+/**
+  * Also make sure that has_post_thumbnail always returns true so the above actually
+  * gets called.
+  */
+add_filter( 'has_post_thumbnail', 'fbp_has_post_thumbnail', 10, 3 );
+if ( ! function_exists('fbp_has_post_thumbnail') ) :
+
+	function fbp_has_post_thumbnail( $has_thumbnail, $post, $thumbnail_id ) {
+	
+		$has_thumbnail = true; 
+		return $has_thumbnail; 
+	}
+
+endif;
