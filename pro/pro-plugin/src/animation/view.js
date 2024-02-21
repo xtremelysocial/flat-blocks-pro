@@ -33,9 +33,9 @@
 	 * Adding class to parent lets it's settings default to the children
 	 * Removing class after animation helps prevent it from re-triggering
 	 *
-	 * Note: Don't change these unless you change the CSS too
+	 * Note: Don't change these unless you change the CSS too!
 	 */
-	const addClassToParent = true;
+	const addClassToParent = false; 
 	const removeClassAfterAnimation = true;
 
 	/*
@@ -46,7 +46,7 @@
 		entries.forEach( ( entry ) => {
 			if ( entry.isIntersecting ) {
 				entry.target.classList.add( animationClass );
-				console.log('entry.target.classList:', entry.target.classList); //TEST
+// 				console.log('entry.target.classList:', entry.target.classList); //TEST
 			}
 		} );
 	} );
@@ -63,11 +63,12 @@
 	document
 		.querySelectorAll( "[class*='" + parentSelector + "']" )
 		.forEach( ( parent ) => {
-			if ( addClassToParent ) parent.classList.add( animationClass ); //ADD
+			if ( addClassToParent ) parent.classList.add( animationClass );
+// 			console.log('parent.classList:', parent.classList); //TEST
 
 			const children = Array.from( parent.children );
 			children.forEach( ( child ) => {
-				if ( addClassToParent ) child.classList.add( animationClass ); //ADD
+				if ( addClassToParent ) child.classList.add( animationClass );
 
 				if (
 					child.classList.contains( '.wp-block-columns' ) ||
@@ -76,6 +77,7 @@
 				) {
 					const grandChildren = Array.from( child.children );
 					grandChildren.forEach( ( grandChild ) => {
+// 						console.log('grandChild.classList:', grandChild.classList); //TEST
 						animationObserver.observe( grandChild );
 						grandChild.addEventListener(
 							'animationend',
@@ -86,6 +88,7 @@
 						);
 					} );
 				} else {
+// 					console.log('child.classList:', child.classList); //TEST
 					animationObserver.observe( child );
 					child.addEventListener( 'animationend', function () {
 						animationObserver.unobserve( child );
@@ -111,6 +114,8 @@
 				"']"
 		)
 		.forEach( ( animation ) => {
+// 			console.log('direct.classList:', animation.classList); //TEST		
+			
 			animationObserver.observe( animation );
 			animation.addEventListener( 'animationend', function () {
 				animationObserver.unobserve( animation );

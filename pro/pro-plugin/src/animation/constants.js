@@ -236,6 +236,7 @@ export const animationElementBlocks = [
 // 	'core/image',
 // 	'core/paragraph',
 // 	'xtremelysocial/dashicons',
+	'core/column',
 	'core/gallery',
 	'jetpack/tiled-gallery',
 	'core/heading',
@@ -247,6 +248,7 @@ export const animationElementBlocks = [
 	'core/post-title',
 	'core/post-excerpt',
 	'core/latest-posts',
+	'core/table',
 ];
 
 // Element block options

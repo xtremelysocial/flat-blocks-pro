@@ -39,7 +39,9 @@ body {
 	--animate-duration-hover: var(--wp--custom--animation--duration--medium, 500ms);
 }
 
-/* Drop the animation until it is active (scrolled to) */
+/* 
+ * Drop the animation name until it is active (scrolled to) 
+ */
 [class*="animate__"]:not(.animate__animated) {
 	animation-name: none;
 }
@@ -115,20 +117,9 @@ body {
 .animate__auto__all,
 .animate__auto__enter {
 
-	//animation-name: var(--animate-default-entrance);
-
-	// If not set at parent level, set the defaults so they inherit to children
-// 	&:not(.animate__slower, .animate__slow, .animate__faster, .animate__fast) {
-// 		animation-duration: var(--animate-duration);
-// 	}
-//
-// 	&:not([class*="animate__delay-"]) {
-// 		animation-delay: 0s;
-// 	}
-//
-// 	&:not([class*="animate__repeat-"]) {
-// 		animation-iteration-count: var(--animate-repeat);
-// 	}
+	animation-duration: var(--animate-duration-entrance);
+	animation-timing-function: var(--animate-timing-function);
+	animation-iteration-count: var(--animate-repeat);
 
 // 	&.wp-block-group > .animate__animated,
 	&.wp-block-group > .animate__animated:not(.wp-block-latest-posts.is-grid, .wp-block-columns, .wp-block-buttons),
@@ -141,9 +132,9 @@ body {
 // 		animation: var(--animate-default-entrance) var(--animate-duration) ease-in;
 // 		animation: var(--animate-default-entrance) var(--animate-duration) var(--animate-timing-function);
 		animation-name: var(--animate-default-entrance);
-		animation-duration: inherit; //var(--animate-duration)
-		animation-delay: inherit; //var(--animate-delay)
-		animation-iteration-count: inherit; //var(--animate-repeat)
+		animation-duration: inherit;
+		animation-delay: inherit;
+		animation-iteration-count: inherit;
 // 		animation-timing-function: inherit; //var(--animate-timing-function);
 	}
 }

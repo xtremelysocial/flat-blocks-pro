@@ -1,7 +1,8 @@
 # Flat Blocks PRO: Package up the theme files, including PRO and plugin(s)
 
 # First build all SCSS into CSS
-sass --no-source-map src/scss:assets/css pro/src/scss:pro/assets/css
+#sass --no-source-map src/scss:assets/css pro/src/scss:pro/assets/css
+sass --no-source-map --style=compressed src/scss:assets/css pro/src/scss:pro/assets/css
 
 # Then build the plugin
 cd pro/pro-plugin
