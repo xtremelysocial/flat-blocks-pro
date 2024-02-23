@@ -315,6 +315,36 @@ img[alt="css.php"] {
 }
 
 /*--------------------------------------------------------------
+## WordPress Multisite
+--------------------------------------------------------------*/
+/* Format the new site signup page */
+body.home > #page > #header {
+  width: 90%;
+  margin: 0 auto;
+}
+body.home > #page > #header > #headerimg > h1 {
+  margin-top: var(--wp--style--block-gap);
+  margin-bottom: var(--wp--style--block-gap);
+}
+body.home > #page > #header > #headerimg > h1 > a {
+  text-decoration: none;
+}
+body.home > #page > #signup-content > .mu_register .mu_alert {
+  color: inherit;
+  background-color: var(--wp--preset--color--tertiary);
+  border-color: var(--wp--custom--border--color);
+  border-radius: var(--wp--custom--border--radius);
+  font-weight: var(--wp--custom--typography--font-weight--medium);
+  padding: var(--wp--preset--spacing--40);
+  margin-top: var(--wp--style--block-gap);
+  margin-bottom: var(--wp--style--block-gap);
+}
+body.home > #page > #footer {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
 # CRITICAL BLOCK STYLES
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
