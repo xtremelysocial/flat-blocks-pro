@@ -117,18 +117,31 @@ body {
 .animate__auto__all,
 .animate__auto__enter {
 
+	/* Set the defaults, so we can inherit below */
 	animation-duration: var(--animate-duration-entrance);
 	animation-timing-function: var(--animate-timing-function);
 	animation-iteration-count: var(--animate-repeat);
 
+// 	&.wp-block-group,
+// 	&.wp-block-columns,
+// 	&.wp-block-cover,
+// 	&.wp-block-buttons,	
+	&.wp-block-latest-posts.is-grid,
+	&.wp-block-group .wp-block-latest-posts.is-grid {
+		animation-duration: var(--animate-duration-entrance);
+		animation-timing-function: var(--animate-timing-function);
+		animation-iteration-count: var(--animate-repeat);
+	}
+
+	/* Add the animation name to trigger it while inheriting the above defaults */
 // 	&.wp-block-group > .animate__animated,
 	&.wp-block-group > .animate__animated:not(.wp-block-latest-posts.is-grid, .wp-block-columns, .wp-block-buttons),
+	&.wp-block-group .wp-block-latest-posts.is-grid > li.animate__animated,
+// 	&.wp-block-latest-posts.is-grid > li.animate__animated,
 	&.wp-block-columns > .wp-block-column.animate__animated,
 	&.wp-block-cover > .wp-block-cover__inner-container.animate__animated,
 	&.wp-block-buttons > .wp-block-button.animate__animated,
-	&.wp-block-button.animate__animated,
-	&.wp-block-group .wp-block-latest-posts.is-grid > li.animate__animated { //,
-// 	&.wp-block-latest-posts.is-grid > li.animate__animated {
+	&.wp-block-button.animate__animated {
 // 		animation: var(--animate-default-entrance) var(--animate-duration) ease-in;
 // 		animation: var(--animate-default-entrance) var(--animate-duration) var(--animate-timing-function);
 		animation-name: var(--animate-default-entrance);
