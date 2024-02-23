@@ -1,1 +1,222 @@
-﻿.wp-block-post-terms.taxonomy-jetpack-portfolio-type:before{font-family:dashicons;content:"";margin-right:var(--wp--preset--spacing--20)}.wp-block-post-terms.taxonomy-jetpack-portfolio-tag:before{font-family:dashicons;content:"";margin-right:var(--wp--preset--spacing--20)}.jetpack-field .jetpack-field__input,.jetpack-field .jetpack-field__textarea{border-radius:var(--wp--custom--border--radius)}.is-root-container .wp-block-jetpack-whatsapp-button:after{box-shadow:none}.contact-form .grunion-field-label,.contact-form .grunion-checkbox-multiple-options legend,.contact-form .grunion-radio-options legend,.contact-form-submission .field-value{font-weight:var(--wp--custom--typography--font-weight--medium)}.wp-block-jetpack-contact-info a,.wp-block-jetpack-email a,.wp-block-jetpack-phone a{text-decoration:none}.wp-block-jetpack-email:before,.wp-block-jetpack-phone:before{display:inline-block;font-family:dashicons;font-weight:var(--wp--custom--typography--font-weight--normal);margin-right:var(--wp--preset--spacing--20);vertical-align:middle}.wp-block-jetpack-phone:before{content:""}.wp-block-jetpack-email:before{content:""}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_image{max-height:none}.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-bullets,.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-custom{justify-content:center}.wp-block-jetpack-tiled-gallery.has-rounded-corners-1 .tiled-gallery__item{border-radius:1px}.wp-block-jetpack-tiled-gallery.has-rounded-corners-2 .tiled-gallery__item{border-radius:2px}.wp-block-jetpack-tiled-gallery.has-rounded-corners-3 .tiled-gallery__item{border-radius:3px}.wp-block-jetpack-tiled-gallery.has-rounded-corners-4 .tiled-gallery__item{border-radius:4px}.wp-block-jetpack-tiled-gallery.has-rounded-corners-5 .tiled-gallery__item{border-radius:5px}.wp-block-jetpack-tiled-gallery.has-rounded-corners-6 .tiled-gallery__item{border-radius:6px}.wp-block-jetpack-tiled-gallery.has-rounded-corners-7 .tiled-gallery__item{border-radius:7px}.wp-block-jetpack-tiled-gallery.has-rounded-corners-8 .tiled-gallery__item{border-radius:8px}.wp-block-jetpack-tiled-gallery.has-rounded-corners-9 .tiled-gallery__item{border-radius:9px}.wp-block-jetpack-tiled-gallery.has-rounded-corners-10 .tiled-gallery__item{border-radius:10px}.wp-block-jetpack-tiled-gallery.has-rounded-corners-11 .tiled-gallery__item{border-radius:11px}.wp-block-jetpack-tiled-gallery.has-rounded-corners-12 .tiled-gallery__item{border-radius:12px}.wp-block-jetpack-tiled-gallery.has-rounded-corners-13 .tiled-gallery__item{border-radius:13px}.wp-block-jetpack-tiled-gallery.has-rounded-corners-14 .tiled-gallery__item{border-radius:14px}.wp-block-jetpack-tiled-gallery.has-rounded-corners-15 .tiled-gallery__item{border-radius:15px}.wp-block-jetpack-tiled-gallery.has-rounded-corners-16 .tiled-gallery__item{border-radius:16px}.wp-block-jetpack-tiled-gallery.has-rounded-corners-17 .tiled-gallery__item{border-radius:17px}.wp-block-jetpack-tiled-gallery.has-rounded-corners-18 .tiled-gallery__item{border-radius:18px}.wp-block-jetpack-tiled-gallery.has-rounded-corners-19 .tiled-gallery__item{border-radius:19px}.wp-block-jetpack-tiled-gallery.has-rounded-corners-20 .tiled-gallery__item{border-radius:20px}.wp-block-jetpack-contact-info.is-style-no-icon a:before,.wp-block-jetpack-email.is-style-no-icon a:before,.wp-block-jetpack-phone.is-style-no-icon a:before{display:none}
+/**
+ * File:	pro-jetpack.css
+ * Theme:	Flat Blocks PRO
+ * 
+ * The stylesheet for the Jetpack Plugin
+ *
+ * @package flat-blocks-pro
+ * @since	1.0
+ */
+/*--------------------------------------------------------------
+# Portfolio Type and Tags
+--------------------------------------------------------------*/
+/* dashicons-tag */
+.wp-block-post-terms.taxonomy-jetpack-portfolio-type:before {
+  font-family: dashicons;
+  content: "\f318";
+  margin-right: var(--wp--preset--spacing--20);
+}
+
+/* dashicons-category */
+.wp-block-post-terms.taxonomy-jetpack-portfolio-tag:before {
+  font-family: dashicons;
+  content: "\f323";
+  margin-right: var(--wp--preset--spacing--20);
+}
+
+/*--------------------------------------------------------------
+# Form Fields
+--------------------------------------------------------------*/
+.jetpack-field .jetpack-field__input,
+.jetpack-field .jetpack-field__textarea {
+  border-radius: var(--wp--custom--border--radius);
+}
+
+/* Remove Block Editor box shadow on Jetpack What's App Button */
+/* TO-DO: Get this working */
+/*.is-outline-mode .block-editor-block-list__block.wp-block-jetpack-whatsapp-button.is-selected:after {*/
+.is-root-container .wp-block-jetpack-whatsapp-button:after {
+  box-shadow: none;
+}
+
+/*--------------------------------------------------------------
+# Contact Form
+--------------------------------------------------------------*/
+.contact-form .grunion-field-label,
+.contact-form .grunion-checkbox-multiple-options legend,
+.contact-form .grunion-radio-options legend,
+.contact-form-submission .field-value {
+  font-weight: var(--wp--custom--typography--font-weight--medium);
+}
+
+/*--------------------------------------------------------------
+# Contact Info
+--------------------------------------------------------------*/
+/* Don't underline links on Jetpack Contact Info */
+.wp-block-jetpack-contact-info a,
+.wp-block-jetpack-email a,
+.wp-block-jetpack-phone a {
+  text-decoration: none;
+}
+
+/* Automatically add icons to Jetpack Email and Phone# links */
+/*[itemprop="address"] [itemprop="streetAddress"]:before,*/
+/*.wp-block-jetpack-address:before,*/
+.wp-block-jetpack-email:before,
+.wp-block-jetpack-phone:before {
+  display: inline-block;
+  font-family: dashicons;
+  /*color: currentcolor;*/
+  /*color: inherit;*/
+  font-weight: var(--wp--custom--typography--font-weight--normal);
+  margin-right: var(--wp--preset--spacing--20);
+  vertical-align: middle;
+}
+
+/*[itemprop="telephone"]:not(a[href^="tel:"]):before,
+:not([itemprop="telephone"]) > a[href^="tel:"]:before {*/
+.wp-block-jetpack-phone:before {
+  content: "\f525";
+}
+
+/*[itemprop="email"]:not(a[href^="mailto:"]):before,
+:not([itemprop="email"] > a[href^="mailto:"]:before {*/
+.wp-block-jetpack-email:before {
+  content: "\f466";
+}
+
+/*[itemprop="address"] [itemprop="streetAddress"]:before {*/
+/*.wp-block-jetpack-address:before {
+	content: "\f323";
+}*/
+/*[itemprop="address"] [itemprop-"addressLocality"] {
+	margin-left: var(--wp--preset--spacing--20);
+}*/
+/*--------------------------------------------------------------
+# Slideshow
+--------------------------------------------------------------*/
+/*.wp-block-jetpack-slideshow_image {
+	margin: 1px;
+	border: 1px solid var(--wp--custom--border--color);
+	border-radius: var(--wp--custom--border--radius);
+	padding: var(--wp-custom--border--radius);
+}*/
+/* FIX Jetpack slideshow not retaining full-width of the images */
+.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_image {
+  max-height: none;
+}
+
+/**.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_image {
+    width: 100%;
+    max-width: unset;
+    object-fit: cover;
+    object-position: 0% 0%;
+}**/
+/* Center the dots that display how many images there are in the slideshow */
+.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-bullets,
+.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-custom {
+  justify-content: center;
+}
+
+/* Fix slider nav positioning in Style Preview */
+/*@media (min-width: 600px) {
+    .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-next, .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-prev {
+        display: inline-block;
+    }
+}*/
+/*--------------------------------------------------------------
+# Tiled Gallery
+--------------------------------------------------------------*/
+/* 
+ * These are needed for when gallery images are animated with zoom on hover.
+ * They are here instead of in pro-animation.css because they are only needed
+ * if the Jetpack plugin is active.
+ */
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-1 .tiled-gallery__item {
+  border-radius: 1px;
+}
+
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-2 .tiled-gallery__item {
+  border-radius: 2px;
+}
+
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-3 .tiled-gallery__item {
+  border-radius: 3px;
+}
+
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-4 .tiled-gallery__item {
+  border-radius: 4px;
+}
+
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-5 .tiled-gallery__item {
+  border-radius: 5px;
+}
+
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-6 .tiled-gallery__item {
+  border-radius: 6px;
+}
+
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-7 .tiled-gallery__item {
+  border-radius: 7px;
+}
+
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-8 .tiled-gallery__item {
+  border-radius: 8px;
+}
+
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-9 .tiled-gallery__item {
+  border-radius: 9px;
+}
+
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-10 .tiled-gallery__item {
+  border-radius: 10px;
+}
+
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-11 .tiled-gallery__item {
+  border-radius: 11px;
+}
+
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-12 .tiled-gallery__item {
+  border-radius: 12px;
+}
+
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-13 .tiled-gallery__item {
+  border-radius: 13px;
+}
+
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-14 .tiled-gallery__item {
+  border-radius: 14px;
+}
+
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-15 .tiled-gallery__item {
+  border-radius: 15px;
+}
+
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-16 .tiled-gallery__item {
+  border-radius: 16px;
+}
+
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-17 .tiled-gallery__item {
+  border-radius: 17px;
+}
+
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-18 .tiled-gallery__item {
+  border-radius: 18px;
+}
+
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-19 .tiled-gallery__item {
+  border-radius: 19px;
+}
+
+.wp-block-jetpack-tiled-gallery.has-rounded-corners-20 .tiled-gallery__item {
+  border-radius: 20px;
+}
+
+/*--------------------------------------------------------------
+# Our Jetpack Custom Styles
+--------------------------------------------------------------*/
+.wp-block-jetpack-contact-info.is-style-no-icon a:before,
+.wp-block-jetpack-email.is-style-no-icon a:before,
+.wp-block-jetpack-phone.is-style-no-icon a:before {
+  display: none;
+}

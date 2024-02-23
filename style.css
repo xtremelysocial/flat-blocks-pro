@@ -79,6 +79,40 @@ GNU General Public License for more details.
 }
 
 /*--------------------------------------------------------------
+# Auto-grow buttons on hover
+--------------------------------------------------------------*/
+.wp-block-buttons .wp-block-button, 
+.is-style-arrow-icon > a, 
+.is-style-arrow-icon-no-text > a {
+/* 	transform: translate3d(0, 0, 0); */
+	transform: scale3d(1, 1, 1);
+	transition: transform var(--animate-duration-hover) var(--animate-timing-function);
+}
+
+.wp-block-buttons .wp-block-button:hover, 
+.wp-block-buttons .wp-block-button:focus, 
+.wp-block-buttons .wp-block-button:active, 
+/* 
+.wp-element-button.wp-block-button__link:hover,
+.wp-element-button.wp-block-button__link:focus,
+.wp-element-button.wp-block-button__link:active,
+ */
+.is-style-arrow-icon > a:hover, 
+.is-style-arrow-icon > a:focus, 
+.is-style-arrow-icon > a:active, 
+.is-style-arrow-icon-no-text > a:hover, 
+.is-style-arrow-icon-no-text > a:focus, 
+.is-style-arrow-icon-no-text > a:active {
+	transform: var(--animate-default-hover);
+}
+
+.wp-block-buttons .wp-block-button > a:hover, 
+.wp-block-buttons .wp-block-button > a:focus, 
+.wp-block-buttons .wp-block-button > a:active {
+	opacity: 1; /*!important;*/
+}
+
+/*--------------------------------------------------------------
 # Site Footer
 --------------------------------------------------------------*/
 

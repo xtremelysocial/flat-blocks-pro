@@ -1,1 +1,1071 @@
-﻿.dashicons,.dashicons-before:before{width:auto !important;height:auto !important}.is-style-drop-shadow{box-shadow:var(--wp--preset--shadow--natural)}#wpadminbar{overflow:hidden}#wpadminbar .quicklinks{display:flex}#wpadminbar #wp-admin-bar-top-secondary{flex-grow:2;flex-basis:auto}#wpadminbar .ab-top-secondary{float:none}[class*=is-style-angled-].wp-block-group{position:relative;overflow:visible;z-index:1}[class*=is-style-angled-top-].wp-block-group{margin-top:calc(2.61859vw + var(--wp--style--block-gap))}[class*=is-style-angled-top-].wp-block-group:before{background:inherit;content:"";display:block;height:50%;left:0;position:absolute;right:0;z-index:-1;-webkit-backface-visibility:hidden}[class*=is-style-angled-top-up].wp-block-group:before{top:0;transform:skewY(-1.5deg);transform-origin:0}[class*=is-style-angled-top-down].wp-block-group:before{top:0;transform:skewY(1.5deg);transform-origin:100% 0}[class*=is-style-angled-bottom-].wp-block-group,[class*=is-style-angled-top-up-bottom-].wp-block-group,[class*=is-style-angled-top-down-bottom-].wp-block-group{margin-bottom:calc(2.61859vw + var(--wp--style--block-gap))}[class*=is-style-angled-bottom-].wp-block-group:after,[class*=is-style-angled-top-up-bottom-].wp-block-group:after,[class*=is-style-angled-top-down-bottom-].wp-block-group:after{background:inherit;content:"";display:block;height:50%;left:0;position:absolute;right:0;z-index:-1;-webkit-backface-visibility:hidden}[class*=is-style-angled-top-up-bottom-up].wp-block-group:after,[class*=is-style-angled-top-down-bottom-up].wp-block-group:after{bottom:0;transform:skewY(-1.5deg);transform-origin:100%}[class*=is-style-angled-top-up-bottom-down].wp-block-group:after,[class*=is-style-angled-top-down-bottom-down].wp-block-group:after{bottom:0;transform:skewY(1.5deg);transform-origin:0}[class*=is-style-angled-].wp-block-cover,[class*=is-style-angled-].wp-block-image img{position:relative}.is-style-angled-top-up.wp-block-cover,.is-style-angled-top-up.wp-block-image img{-webkit-clip-path:polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% 100%, 0 100%);clip-path:polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% 100%, 0 100%)}.is-style-angled-top-down.wp-block-cover,.is-style-angled-top-down.wp-block-image img{-webkit-clip-path:polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% 100%, 0 100%);clip-path:polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% 100%, 0 100%)}.is-style-angled-bottom-up.wp-block-cover,.is-style-angled-bottom-up img{-webkit-clip-path:polygon(0 0, 100% 0, 100% calc(100% - 36px), 0% 100%);clip-path:polygon(0 0, 100% 0, 100% calc(100% - 36px), 0% 100%)}.is-style-angled-bottom-down.wp-block-cover,.is-style-angled-bottom-down img{-webkit-clip-path:polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 36px));clip-path:polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 36px))}.is-style-angled-top-up-bottom-up.wp-block-cover,.is-style-angled-top-up-bottom-up.wp-block-image img{-webkit-clip-path:polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% calc(100% - 2 * var(--wp--style--block-gap)), 0 100%);clip-path:polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% calc(100% - 2 * var(--wp--style--block-gap)), 0 100%)}.is-style-angled-top-up-bottom-down.wp-block-cover,.is-style-angled-top-up-bottom-down.wp-block-image img{-webkit-clip-path:polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% 100%, 0 calc(100% - 2 * var(--wp--style--block-gap)));clip-path:polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% 100%, 0 calc(100% - 2 * var(--wp--style--block-gap)))}.is-style-angled-top-down-bottom-up.wp-block-cover,.is-style-angled-top-down-bottom-up.wp-block-image img{-webkit-clip-path:polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% calc(100% - 2 * var(--wp--style--block-gap)), 0 100%);clip-path:polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% calc(100% - 2 * var(--wp--style--block-gap)), 0 100%)}.is-style-angled-top-down-bottom-down.wp-block-cover,.is-style-angled-top-down-bottom-down.wp-block-image img{-webkit-clip-path:polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% 100%, 0 calc(100% - 2 * var(--wp--style--block-gap)));clip-path:polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% 100%, 0 calc(100% - 2 * var(--wp--style--block-gap)))}[class*=is-style-curved-]{position:relative;overflow:hidden}.is-style-curved-bottom-up{-webkit-clip-path:ellipse(max(900px, 100vw) 100% at 50% 0);clip-path:ellipse(max(900px, 100vw) 100% at 50% 0);padding-bottom:calc(3*var(--wp--style--block-gap)) !important}.is-style-curved-top-down{-webkit-clip-path:ellipse(max(900px, 100vw) 100% at 50% 100%);clip-path:ellipse(max(900px, 100vw) 100% at 50% 100%);padding-top:calc(4*var(--wp--style--block-gap)) !important}.is-style-curved-top-down.is-style-curved-bottom-up,.is-style-curved-top-down-bottom-up{-webkit-clip-path:ellipse(min(900px, 100vw) 100% at 50% 100%);clip-path:ellipse(min(900px, 100vw) 100% at 50% 100%);padding-top:calc(4*var(--wp--style--block-gap)) !important;-webkit-clip-path:ellipse(max(900px, 100vw) 100% at 50% 0);clip-path:ellipse(max(900px, 100vw) 100% at 50% 0);padding-bottom:calc(3*var(--wp--style--block-gap)) !important}.is-style-curved-top-up{position:relative;padding-top:calc(6*var(--wp--style--block-gap))}.is-style-curved-top-up:before{background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxOTAwJyBoZWlnaHQ9JzE1MCcgdmlld0JveD0nMCAwIDE5MDAgMTUwJyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSdub25lJz48cGF0aCBkPSdNMCwwaDE5MDBjLTI0My4zLDU4LjItNTk2LjMsMTIzLjktOTQ5LjQsMTI0aC0xLjJDNTk2LjMsMTIzLjksMjQzLjMsNTguMiwwLDB6JyBmaWxsPScjZmZmZmZmJy8+PC9zdmc+");background-size:100% 100%;background-position:center;content:"";height:calc(4*var(--wp--style--block-gap));left:0;position:absolute;top:0;width:100%}.is-style-list-dividers{list-style:none;padding-left:0}.is-style-list-dividers:not(.wp-block-latest-posts__list.is-grid) li:not(:first-child),.is-style-list-dividers:not(.wp-block-latest-posts__list.is-grid) li>ul{list-style:none;border-top:solid 1px rgba(128,128,128,.2);padding-top:var(--wp--preset--spacing--30);margin-top:var(--wp--preset--spacing--30)}.akismet_comment_form_privacy_notice a{text-decoration:none}img[alt="css.php"]{position:absolute;clip:rect(1px 1px 1px 1px);clip:rect(1px, 1px, 1px, 1px);height:0}.is-style-drop-shadow.wp-block-group:not(.has-background){background-color:var(--wp--preset--color--white);padding:var(--wp--style--block-gap)}.is-style-drop-shadow.wp-block-group:not(.alignfull){border-radius:var(--wp--custom--border--radius)}.wp-block-group.is-style-scroll-header{top:0;left:0;right:0;z-index:9999;transition:all var(--wp--custom--animation--duration--normal, 1s) ease}.wp-block-group.is-style-scroll-header.header-active{border:1px solid var(--wp--custom--border--color);border-width:0 0 1px;background-color:var(--wp--preset--color--foreground-alt);color:var(--wp--preset--color--very-dark-gray);position:fixed;box-shadow:var(--wp--custom--shadow--default)}.admin-bar .wp-block-group.is-style-scroll-header.header-active{top:var(--wp-admin--admin-bar--height, 32px)}.wp-block-group.is-style-scroll-header:not(.header-active){background-color:rgba(0,0,0,0) !important;color:var(--wp--preset--color--foreground-alt);border:none;position:absolute}.is-style-scroll-header:not(.header-active):not(.has-link-color) .wp-block-site-title>a{color:var(--wp--preset--color--foreground-alt)}.wp-block-group-is-layout-flex>.wp-block-group-is-layout-flex.is-vertical{flex:1}@media(max-width: 781px){.wp-block-group-is-layout-flex>.wp-block-group-is-layout-flex.is-vertical{flex-basis:auto;flex-wrap:nowrap}}@media(max-width: 601px){.wp-block-group-is-layout-flex>.wp-block-group-is-layout-flex.is-vertical{flex-basis:100%;flex-wrap:nowrap}}.is-style-equal-grid{display:grid !important}@media(min-width: 601px){.is-style-equal-grid{grid-auto-flow:column;grid-auto-columns:1fr}}.is-style-equal-grid .wp-block-group-is-layout-flex{flex-grow:1;align-items:stretch}.is-style-equal-flex>*{flex:1}.is-style-equal-flex .wp-block-group-is-layout-flex{flex-grow:1;align-items:stretch}.wp-block-heading.is-style-separator::after{content:"";position:absolute;top:100%;left:0;right:0;width:calc(3*var(--wp--preset--spacing--60));margin:calc(.5*var(--wp--style--block-gap)) 0;height:3px;background-color:currentcolor}.wp-block-post-content>.wp-block-heading:not(.has-text-color).is-style-separator:after,.wp-block-post-content :not(.has-text-color) .wp-block-heading:not(.has-text-color).is-style-separator:after{background-color:var(--wp--preset--color--primary)}.has-text-align-center.wp-block-heading.is-style-separator:after{margin-left:auto;margin-right:auto}.has-text-align-right.wp-block-heading.is-style-separator:after{margin-right:0;margin-left:auto}.wp-block-heading.is-style-separator{position:relative;margin-bottom:calc(11.5px + var(--wp--style--block-gap))}.is-root-container .wp-block-heading.is-style-separator:after{top:100% !important}.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__submenu-container.wp-block-navigation-submenu{border-radius:var(--wp--custom--border--radius);padding:var(--wp--preset--spacing--30) var(--wp--preset--spacing--40)}.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__submenu-container.wp-block-navigation-submenu>.wp-block-navigation-item>.wp-block-navigation-item__content{border:none;padding-left:0;padding-right:0}.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__submenu-container.wp-block-navigation-submenu>.wp-block-navigation-item:not(:last-child){border-bottom:1px solid rgba(128,128,128,.2)}.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.wp-block-navigation>li{font-weight:var(--wp--custom--typography--font-weight--medium)}.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.wp-block-navigation>li ul{font-weight:var(--wp--custom--typography--font-weight--normal)}.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container,.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-dialog .wp-block-page-list{width:100%;gap:0}.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container li,.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-dialog .wp-block-page-list li{padding-top:var(--wp--preset--spacing--30);padding-bottom:var(--wp--preset--spacing--30);width:100%;border:none}.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container li:not(:last-child),.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-dialog li:not(:last-child){border-bottom:1px solid rgba(128,128,128,.2)}.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container li:last-child,.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-dialog li:last-child{padding-bottom:0}.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu .wp-block-navigation__submenu-container{width:100%}.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu__toggle{width:100%;border-bottom:1px solid rgba(128,128,128,.2);padding-bottom:var(--wp--preset--spacing--30)}.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-right .wp-block-navigation__submenu-container,.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-right .wp-block-navigation-submenu__toggle{padding-left:0;text-align:right}.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-left .wp-block-navigation__submenu-container,.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-left .wp-block-navigation-submenu__toggle{padding-right:0;text-align:left}.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-center .wp-block-navigation__submenu-container,.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-center .wp-block-navigation-submenu__toggle{text-align:center}.wp-block-group.is-style-scroll-header .wp-block-navigation__responsive-container.is-menu-open{padding-top:var(--wp--preset--spacing--50)}.is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item.current-menu-item:not(.has-child)>a,.is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item:has(.current-menu-ancestor),.is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item:has(.current-menu-ancestor)>a,.is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-pages-list__item.current-menu-item>a,.is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item.wp-block-home-link>a[aria-current=page]{color:var(--wp--preset--color--foreground-alt);font-weight:inherit}.is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item.current-menu-item:not(.has-child)>a,.is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item:has(.current-menu-ancestor),.is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item:has(.current-menu-ancestor)>a,.is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-pages-list__item.current-menu-item>a,.is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item.wp-block-home-link>a[aria-current=page]{font-weight:var(--wp--custom--typography--font-weight--medium)}.is-style-scroll-header:not(.header-active) .wp-block-site-title>a:hover{opacity:.8}.is-style-scroll-header:not(.header-active) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation.wp-block-navigation__container>.wp-block-navigation-item:hover>.wp-block-navigation-item__content,.is-style-scroll-header:not(.header-active) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation.wp-block-navigation__container>.wp-block-navigation-item:hover>.wp-block-navigation__submenu-icon,.is-style-scroll-header:not(.header-active) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation.wp-block-navigation__container>.wp-block-navigation-item:not(.has-child)>.wp-block-navigation-item__content:hover{color:var(--wp--preset--color--foreground-alt) !important;font-weight:inherit;opacity:.8}.wp-block-navigation-item.is-style-arrow-up-icon>a:before{font-family:dashicons;line-height:1;margin-right:2px}.wp-block-navigation-item.is-style-arrow-up-icon>a:before{content:""}p:has(a[href^="tel:"]:not(.wp-block-social-link-anchor)):before,p:has(a[href^="mailto:"]:not(.wp-block-social-link-anchor)):before{display:inline-block;font-family:dashicons;font-weight:var(--wp--custom--typography--font-weight--normal);margin-right:var(--wp--preset--spacing--20);vertical-align:middle}p:has(a[href^="tel:"]:not(.wp-block-social-link-anchor)):before{content:""}p:has(a[href^="mailto:"]:not(.wp-block-social-link-anchor)):before{content:""}p.is-style-no-auto-icon a[href^="tel:"]:not(.wp-block-social-link-anchor):before,p.is-style-no-auto-icon a[href^="mailto:"]:not(.wp-block-social-link-anchor):before{display:none}.is-style-button-alt.wp-block-button .wp-block-button__link,.is-style-button-outline-alt.wp-block-button .wp-block-button__link{border-radius:0}.is-style-button-alt-2.wp-block-button .wp-block-button__link,.is-style-button-outline-alt-2.wp-block-button .wp-block-button__link{border-radius:9999px}.is-style-button-outline-alt.wp-block-button .wp-block-button__link,.is-style-button-outline-alt-2.wp-block-button .wp-block-button__link{color:currentColor;background-color:rgba(0,0,0,0);border-width:3px;border-style:solid;border-color:inherit;padding:calc(var(--wp--preset--spacing--30) - 3px) calc(var(--wp--preset--spacing--40) - 3px)}.is-style-button-alt.wp-block-button .wp-block-button__link:after,.is-style-button-outline-alt.wp-block-button .wp-block-button__link:after,.is-style-button-alt-2.wp-block-button .wp-block-button__link:after,.is-style-button-outline-alt-2.wp-block-button .wp-block-button__link:after{font-family:dashicons;content:"";margin-left:var(--wp--preset--spacing--30);vertical-align:middle}.is-root-container .is-style-button-alt .wp-block-button__link,.is-root-container .is-style-button-outline-alt .wp-block-button__link{border-radius:0 !important}.is-root-container .is-style-button-alt-2 .wp-block-button__link,.is-root-container .is-style-button-outline-alt-2 .wp-block-button__link{border-radius:9999 !important}.is-root-container .is-style-button-outline-alt .wp-block-button__link,.is-root-container .is-style-button-outline-alt-2 .wp-block-button__link{border-width:3px !important}@media only screen and (min-width: 601px){.wp-block-latest-posts.is-grid.is-style-list-dividers{margin-bottom:var(--wp--style--block-gap)}.wp-block-latest-posts.is-grid.is-style-list-dividers li:not(:last-child){border-right:solid 1px rgba(128,128,128,.2);padding-right:1.25em}}.wp-block-post-template.is-style-drop-shadow{box-shadow:none;border:none}.wp-block-post-template.is-style-drop-shadow .wp-block-post{background-color:var(--wp--preset--color--white);padding:var(--wp--style--block-gap);border:1px solid var(--wp--custom--outline--color);border-radius:var(--wp--custom--border--radius);box-shadow:var(--wp--preset--shadow--natural)}.wp-block-post-template.is-style-alternate-colors .wp-block-post .wp-block-post-featured-image:before{content:"";display:block;position:absolute;top:0;left:0;width:100%;height:100%;opacity:.5;border-radius:var(--wp--custom--border--radius)}.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+1) .wp-block-cover__background,.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+1) .wp-block-post-featured-image:before{background-color:var(--wp--preset--color--red) !important}.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+2) .wp-block-cover__background,.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+2) .wp-block-post-featured-image:before{background-color:var(--wp--preset--color--orange) !important}.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+3) .wp-block-cover__background,.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+3) .wp-block-post-featured-image:before{background-color:var(--wp--preset--color--yellow) !important}.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+4) .wp-block-cover__background,.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+4) .wp-block-post-featured-image:before{background-color:var(--wp--preset--color--green) !important}.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+5) .wp-block-cover__background,.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+5) .wp-block-post-featured-image:before{background-color:var(--wp--preset--color--blue) !important}.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+6) .wp-block-cover__background,.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+6) .wp-block-post-featured-image:before{background-color:var(--wp--preset--color--purple) !important}.wp-block-table.is-style-table-colored thead,.wp-block-table.is-style-table-colored tfoot,.wp-block-table.is-style-table-alternate thead,.wp-block-table.is-style-table-alternate tfoot{border:none}.wp-block-table.is-style-table-colored tr:nth-child(even),.wp-block-table.is-style-table-alternate tr:nth-child(even){color:var(--wp--preset--color--very-dark-gray);background-color:var(--wp--preset--color--off-white)}.wp-block-table.is-style-table-colored tr:nth-child(odd),.wp-block-table.is-style-table-alternate tr:nth-child(odd){color:var(--wp--preset--color--very-dark-gray);background-color:var(--wp--preset--color--white)}.wp-block-table.is-style-table-colored th,.wp-block-table.is-style-table-colored td,.wp-block-table.is-style-table-alternate th,.wp-block-table.is-style-table-alternate td{border:1px solid #ddd;padding:8px}.wp-block-table.is-style-table-colored th,.wp-block-table.is-style-table-colored tfoot td,.wp-block-table.is-style-table-alternate th,.wp-block-table.is-style-table-alternate tfoot td{color:var(--wp--preset--color--foreground-alt);background-color:var(--wp--preset--color--primary-alt)}.wp-block-table.is-style-table-colored th a,.wp-block-table.is-style-table-colored tfoot td a,.wp-block-table.is-style-table-alternate th a,.wp-block-table.is-style-table-alternate tfoot td a{color:var(--wp--preset--color--foreground-alt)}.wp-block-table.is-style-table-colored th a:hover,.wp-block-table.is-style-table-colored th a:focus,.wp-block-table.is-style-table-colored tfoot td a:hover,.wp-block-table.is-style-table-colored tfoot td a:focus,.wp-block-table.is-style-table-alternate th a:hover,.wp-block-table.is-style-table-alternate th a:focus,.wp-block-table.is-style-table-alternate tfoot td a:hover,.wp-block-table.is-style-table-alternate tfoot td a:focus{opacity:.8}.wp-block-table.is-style-table-alternate th:nth-child(6n+1),.wp-block-table.is-style-table-alternate tfoot td:nth-child(6n+1){background-color:var(--wp--preset--color--primary)}.wp-block-table.is-style-table-alternate th:nth-child(6n+2),.wp-block-table.is-style-table-alternate tfoot td:nth-child(6n+2){background-color:var(--wp--preset--color--secondary)}.wp-block-table.is-style-table-alternate th:nth-child(6n+3),.wp-block-table.is-style-table-alternate tfoot td:nth-child(6n+3){background-color:var(--wp--preset--color--tertiary)}.wp-block-table.is-style-table-alternate th:nth-child(6n+4),.wp-block-table.is-style-table-alternate tfoot td:nth-child(6n+4){background-color:var(--wp--preset--color--primary-alt)}.wp-block-table.is-style-table-alternate th:nth-child(6n+5),.wp-block-table.is-style-table-alternate tfoot td:nth-child(6n+5){background-color:var(--wp--preset--color--secondary-alt)}.wp-block-table.is-style-table-alternate th:nth-child(6n+6),.wp-block-table.is-style-table-alternate tfoot td:nth-child(6n+6){background-color:var(--wp--preset--color--tertiary-alt)}
+/**
+ * File:	pro-custom-styles.css
+ * Theme:	Flat Blocks PRO
+ * 
+ * The stylesheet for the Flat Blocks PRO theme's CUSTOM block styles
+ *
+ * NOTE: This file is AUTO-GENERATED from the SASS source files 
+ * in /src/sass/pro-custom-styles.scss. Do not make updates here.
+ * 
+ * @package flat-blocks-pro
+ * @since 	1.0
+ */
+/*--------------------------------------------------------------
+# CRITICAL BASE STYLES
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Base Styles
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## General Styles
+--------------------------------------------------------------*/
+/* Override hard-coded Dashicons size */
+.dashicons,
+.dashicons-before:before {
+  width: auto !important;
+  height: auto !important;
+}
+
+/* 
+ * Allow drop-shadow on anything except post template since it needs
+ * to be on the post instead 
+ */
+.is-style-drop-shadow {
+  box-shadow: var(--wp--preset--shadow--natural);
+}
+
+/*--------------------------------------------------------------
+## WordPress Admin Bar
+--------------------------------------------------------------*/
+/* Prevent admin bar from spilling over site header */
+#wpadminbar {
+  overflow: hidden;
+}
+
+#wpadminbar .quicklinks {
+  display: flex;
+}
+
+#wpadminbar #wp-admin-bar-top-secondary {
+  flex-grow: 2;
+  flex-basis: auto;
+}
+
+#wpadminbar .ab-top-secondary {
+  float: none;
+}
+
+/*--------------------------------------------------------------
+# Custom: Angled Sections
+--------------------------------------------------------------*/
+/*
+angled-top-up
+angled-top-down
+angled-bottom-up
+angled-bottom-down
+angled-top-up-bottom-up
+angled-top-up-bottom-down
+angled-top-down-bottom-up
+angled-top-down-bottom-down
+*/
+/*--------------------------------------------------------------
+## Angled GROUPS use :before and :after
+--------------------------------------------------------------*/
+/* All angled sections need these set */
+[class*=is-style-angled-].wp-block-group {
+  position: relative;
+  overflow: visible;
+  z-index: 1;
+}
+
+/* All angled tops */
+[class*=is-style-angled-top-].wp-block-group {
+  margin-top: calc(2.61859vw + var(--wp--style--block-gap));
+}
+[class*=is-style-angled-top-].wp-block-group:before {
+  background: inherit;
+  content: "";
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Angled top Up */
+[class*=is-style-angled-top-up].wp-block-group:before {
+  top: 0;
+  transform: skewY(-1.5deg);
+  transform-origin: 0;
+}
+
+/* Angled top Down */
+[class*=is-style-angled-top-down].wp-block-group:before {
+  top: 0;
+  transform: skewY(1.5deg);
+  transform-origin: 100% 0;
+}
+
+/* All angled bottoms */
+[class*=is-style-angled-bottom-].wp-block-group,
+[class*=is-style-angled-top-up-bottom-].wp-block-group,
+[class*=is-style-angled-top-down-bottom-].wp-block-group {
+  margin-bottom: calc(2.61859vw + var(--wp--style--block-gap));
+}
+[class*=is-style-angled-bottom-].wp-block-group:after,
+[class*=is-style-angled-top-up-bottom-].wp-block-group:after,
+[class*=is-style-angled-top-down-bottom-].wp-block-group:after {
+  background: inherit;
+  content: "";
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Angled bottom up */
+[class*=is-style-angled-top-up-bottom-up].wp-block-group:after,
+[class*=is-style-angled-top-down-bottom-up].wp-block-group:after {
+  bottom: 0;
+  transform: skewY(-1.5deg);
+  transform-origin: 100%;
+}
+
+/* Angled bottom down */
+[class*=is-style-angled-top-up-bottom-down].wp-block-group:after,
+[class*=is-style-angled-top-down-bottom-down].wp-block-group:after {
+  bottom: 0;
+  transform: skewY(1.5deg);
+  transform-origin: 0;
+}
+
+/*--------------------------------------------------------------
+## Angled COVER and IMAGE use clip paths
+--------------------------------------------------------------*/
+/* Angled sections using clip paths need relative positioning and hidden overflow */
+[class*=is-style-angled-].wp-block-cover,
+[class*=is-style-angled-].wp-block-image img {
+  position: relative;
+}
+
+/* Clip section with a triangle */
+.is-style-angled-top-up.wp-block-cover,
+.is-style-angled-top-up.wp-block-image img {
+  -webkit-clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% 100%, 0 100%);
+}
+
+.is-style-angled-top-down.wp-block-cover,
+.is-style-angled-top-down.wp-block-image img {
+  -webkit-clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% 100%, 0 100%);
+  clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% 100%, 0 100%);
+}
+
+.is-style-angled-bottom-up.wp-block-cover,
+.is-style-angled-bottom-up img {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 36px), 0% 100%);
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 36px), 0% 100%);
+}
+
+.is-style-angled-bottom-down.wp-block-cover,
+.is-style-angled-bottom-down img {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 36px));
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 36px));
+}
+
+/* Clip top and bottom with triangles */
+.is-style-angled-top-up-bottom-up.wp-block-cover,
+.is-style-angled-top-up-bottom-up.wp-block-image img {
+  -webkit-clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% calc(100% - 2 * var(--wp--style--block-gap)), 0 100%);
+  clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% calc(100% - 2 * var(--wp--style--block-gap)), 0 100%);
+}
+
+.is-style-angled-top-up-bottom-down.wp-block-cover,
+.is-style-angled-top-up-bottom-down.wp-block-image img {
+  -webkit-clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% 100%, 0 calc(100% - 2 * var(--wp--style--block-gap)));
+  clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% 100%, 0 calc(100% - 2 * var(--wp--style--block-gap)));
+}
+
+.is-style-angled-top-down-bottom-up.wp-block-cover,
+.is-style-angled-top-down-bottom-up.wp-block-image img {
+  -webkit-clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% calc(100% - 2 * var(--wp--style--block-gap)), 0 100%);
+  clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% calc(100% - 2 * var(--wp--style--block-gap)), 0 100%);
+}
+
+.is-style-angled-top-down-bottom-down.wp-block-cover,
+.is-style-angled-top-down-bottom-down.wp-block-image img {
+  -webkit-clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% 100%, 0 calc(100% - 2 * var(--wp--style--block-gap)));
+  clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% 100%, 0 calc(100% - 2 * var(--wp--style--block-gap)));
+}
+
+/* Add top padding when top is clipped */
+/*[class*='is-style-angled-top-'].wp-block-cover {
+	padding-top: calc( 4 * var(--wp--style--block-gap) );
+}*/
+/* Add bottom padding when bottom is clipped */
+/*[class*='is-style-angled-bottom-'].wp-block-cover,
+[class*='is-style-angled-top-up-bottom-'].wp-block-cover,
+[class*='is-style-angled-top-down-bottom-'].wp-block-cover {
+	padding-bottom: calc( 4 * var(--wp--style--block-gap) );
+}*/
+/*--------------------------------------------------------------
+# Custom: Curved Sections
+--------------------------------------------------------------*/
+[class*=is-style-curved-] {
+  position: relative;
+  overflow: hidden;
+}
+
+/* Curved Bottom Up */
+.is-style-curved-bottom-up {
+  -webkit-clip-path: ellipse(max(900px, 100vw) 100% at 50% 0);
+  clip-path: ellipse(max(900px, 100vw) 100% at 50% 0);
+  padding-bottom: calc(3 * var(--wp--style--block-gap)) !important;
+}
+
+/* Curved Top Down */
+.is-style-curved-top-down {
+  -webkit-clip-path: ellipse(max(900px, 100vw) 100% at 50% 100%);
+  clip-path: ellipse(max(900px, 100vw) 100% at 50% 100%);
+  /*-webkit-clip-path: ellipse(min(900px, 100vw) 100% at 50% 100%);
+  clip-path: ellipse(min(900px, 100vw) 100% at 50% 100%);*/
+  padding-top: calc(4 * var(--wp--style--block-gap)) !important;
+}
+
+/* Curved Top Down & Bottom Up */
+.is-style-curved-top-down.is-style-curved-bottom-up,
+.is-style-curved-top-down-bottom-up {
+  -webkit-clip-path: ellipse(min(900px, 100vw) 100% at 50% 100%);
+  clip-path: ellipse(min(900px, 100vw) 100% at 50% 100%);
+  padding-top: calc(4 * var(--wp--style--block-gap)) !important;
+  -webkit-clip-path: ellipse(max(900px, 100vw) 100% at 50% 0);
+  clip-path: ellipse(max(900px, 100vw) 100% at 50% 0);
+  padding-bottom: calc(3 * var(--wp--style--block-gap)) !important;
+}
+
+/* Curved Up Top */
+/* TO-DO: Get this working. Using mask? */
+/*.is-style-curved-top-up {
+
+	/*-webkit-mask: radial-gradient(50px, #0000 98%, #000);
+	mask: radial-gradient(50px, #0000 98%, #000);*/
+/*clip-path: ellipse(50% 50% at 50% 0);
+    padding-top: calc( 4 * var(--wp--style--block-gap) ) !important;
+
+}*/
+.is-style-curved-top-up {
+  position: relative;
+  padding-top: calc(6 * var(--wp--style--block-gap));
+}
+
+.is-style-curved-top-up:before {
+  background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxOTAwJyBoZWlnaHQ9JzE1MCcgdmlld0JveD0nMCAwIDE5MDAgMTUwJyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSdub25lJz48cGF0aCBkPSdNMCwwaDE5MDBjLTI0My4zLDU4LjItNTk2LjMsMTIzLjktOTQ5LjQsMTI0aC0xLjJDNTk2LjMsMTIzLjksMjQzLjMsNTguMiwwLDB6JyBmaWxsPScjZmZmZmZmJy8+PC9zdmc+");
+  background-size: 100% 100%;
+  background-position: center;
+  content: "";
+  height: calc(4 * var(--wp--style--block-gap));
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Custom: List Dividers (Lists, Latest Posts, Latest Comments)
+--------------------------------------------------------------*/
+/* Apply to ALL Dividers */
+.is-style-list-dividers {
+  list-style: none;
+  padding-left: 0;
+}
+
+.is-style-list-dividers:not(.wp-block-latest-posts__list.is-grid) li:not(:first-child),
+.is-style-list-dividers:not(.wp-block-latest-posts__list.is-grid) li > ul {
+  list-style: none;
+  border-top: solid 1px rgba(128, 128, 128, 0.2);
+  padding-top: var(--wp--preset--spacing--30);
+  margin-top: var(--wp--preset--spacing--30);
+}
+
+/*--------------------------------------------------------------
+# Plugin Styles
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Akismet Comments Plugin
+--------------------------------------------------------------*/
+/* Don't underline comment privacy notice link */
+.akismet_comment_form_privacy_notice a {
+  text-decoration: none;
+}
+
+/*--------------------------------------------------------------
+## Cookies for Comments Plugin
+--------------------------------------------------------------*/
+/* Get rid of Cookies for Comments spacing added to bottom of site */
+img[alt="css.php"] {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 0; /* Chrome */
+}
+
+/*--------------------------------------------------------------
+# CRITICAL BLOCK STYLES
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Custom: Group
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Group Drop Shadow
+--------------------------------------------------------------*/
+/* On groups, add background and border radius */
+/* If no background already, add one and some padding */
+.is-style-drop-shadow.wp-block-group:not(.has-background) {
+  background-color: var(--wp--preset--color--white);
+  padding: var(--wp--style--block-gap);
+}
+
+/* If not full width, use our standard border radius */
+.is-style-drop-shadow.wp-block-group:not(.alignfull) {
+  border-radius: var(--wp--custom--border--radius);
+}
+
+/*--------------------------------------------------------------
+## Group Scroll Header
+--------------------------------------------------------------*/
+/* Group Scroll header */
+.wp-block-group.is-style-scroll-header {
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  transition: all var(--wp--custom--animation--duration--normal, 1s) ease;
+}
+
+.wp-block-group.is-style-scroll-header.header-active {
+  border: 1px solid var(--wp--custom--border--color);
+  border-width: 0 0 1px;
+  background-color: var(--wp--preset--color--foreground-alt);
+  color: var(--wp--preset--color--very-dark-gray);
+  position: fixed;
+  box-shadow: var(--wp--custom--shadow--default);
+}
+
+/* Adjust scroll header position for WordPress Admin Bar */
+.admin-bar .wp-block-group.is-style-scroll-header.header-active {
+  top: var(--wp-admin--admin-bar--height, 32px);
+}
+
+/* If not yet scrolled, use transparent background and light font color */
+.wp-block-group.is-style-scroll-header:not(.header-active) {
+  background-color: transparent !important;
+  color: var(--wp--preset--color--foreground-alt);
+  border: none;
+  position: absolute;
+}
+
+/* If not yet scrolled, use light font color on Site Title */
+.is-style-scroll-header:not(.header-active):not(.has-link-color) .wp-block-site-title > a {
+  color: var(--wp--preset--color--foreground-alt);
+}
+
+/*--------------------------------------------------------------
+## Group Stacks equal widths
+--------------------------------------------------------------*/
+/* For flexbox groups within flexbox groups, make the child equal width */
+.wp-block-group-is-layout-flex > .wp-block-group-is-layout-flex.is-vertical {
+  flex: 1;
+}
+
+/* For flexblox groups on desktop, auto-size the columns */
+@media (max-width: 781px) {
+  .wp-block-group-is-layout-flex > .wp-block-group-is-layout-flex.is-vertical {
+    flex-basis: auto;
+    flex-wrap: nowrap;
+  }
+}
+/* For flexblox groups on mobile, collapse down the columns */
+@media (max-width: 601px) {
+  .wp-block-group-is-layout-flex > .wp-block-group-is-layout-flex.is-vertical {
+    flex-basis: 100%;
+    flex-wrap: nowrap;
+  }
+}
+/*--------------------------------------------------------------
+## Equal Cells (Using Grid)
+--------------------------------------------------------------*/
+/* Display the group as a grid */
+.is-style-equal-grid {
+  display: grid !important;
+}
+
+/* If bigger than mobile, set the grid to equal columns across 2 rows */
+@media (min-width: 601px) {
+  .is-style-equal-grid {
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+  }
+}
+/* If bigger than tablet, set the grid to equal columns */
+/*@media (min-width: 781px) {
+	.is-style-equal-grid {
+		grid-auto-flow: column;
+		grid-auto-columns: 1fr;
+	}
+}*/
+/* Within the columns, make the content equal height and width */
+.is-style-equal-grid .wp-block-group-is-layout-flex {
+  flex-grow: 1;
+  align-items: stretch;
+}
+
+/*--------------------------------------------------------------
+## Equal Cells (Using Flexbox)
+--------------------------------------------------------------*/
+/* Set the group contents to equal width */
+.is-style-equal-flex > * {
+  flex: 1;
+}
+
+/* Within the columns, make the content equal height and width */
+.is-style-equal-flex .wp-block-group-is-layout-flex {
+  flex-grow: 1;
+  align-items: stretch;
+}
+
+/*--------------------------------------------------------------
+## Equal Cells (Using Display: Table)
+--------------------------------------------------------------*/
+/*.is-style-equal-cells {
+    display: table !important;
+    table-layout: fixed;
+    width: 100%;
+	border-collapse: separate;
+	border-spacing: 20px 0;
+}
+.is-style-equal-cells > div {
+    display: table-row;
+}
+.is-style-equal-cells > div > div {
+	display: table-cell;
+}
+@media (max-width: 600px) {
+	.is-style-equal-cells > div {
+		display: block;
+		width: 100% !important;
+		margin-bottom: 18px;
+	}
+}*/
+/*--------------------------------------------------------------
+# Custom: Heading
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Heading w/Separator
+--------------------------------------------------------------*/
+/* Add a colored separator after the heading */
+.wp-block-heading.is-style-separator::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: calc(3 * var(--wp--preset--spacing--60));
+  margin: calc(0.5 * var(--wp--style--block-gap)) 0;
+  height: 3px;
+  /*background: var(--wp--preset--color--primary);*/
+  /*background-color: var(--wp--preset--color--foreground);*/
+  background-color: currentcolor;
+  /*border-radius: var(--wp--custom--border--radius);*/
+  /*margin: auto;
+  padding-bottom: 3px;
+  border-bottom: 3px solid var(--wp--preset--color--primary);*/
+}
+
+/* Set the separator color based on whether there is a font-color or not */
+.wp-block-post-content > .wp-block-heading:not(.has-text-color).is-style-separator:after,
+.wp-block-post-content :not(.has-text-color) .wp-block-heading:not(.has-text-color).is-style-separator:after {
+  background-color: var(--wp--preset--color--primary);
+}
+
+/* Align the separator based on the alignment of its heading */
+.has-text-align-center.wp-block-heading.is-style-separator:after {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.has-text-align-right.wp-block-heading.is-style-separator:after {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+.wp-block-heading.is-style-separator {
+  position: relative;
+  margin-bottom: calc(11.5px + var(--wp--style--block-gap));
+}
+
+/* In the Block Editor, don't let the active block position move up our separator */
+.is-root-container .wp-block-heading.is-style-separator:after {
+  top: 100% !important;
+}
+
+/*.is-outline-mode .wp-block-heading.is-style-separator .block-editor-block-list__block:not(.remove-outline).is-hovered:after {
+    top: 100%;
+}
+
+.is-outline-mode .wp-block-heading.is-style-separator .block-editor-block-list__block:not(.remove-outline).is-selected:after {
+    top: 100%;
+}*/
+/*--------------------------------------------------------------
+## Animate Heading Underline on Hover
+--------------------------------------------------------------*/
+/* Link hover animation for headings and post titles */
+/*h1 a,
+h1 a:visited,
+h2 a,
+h2 a:visited,
+h3 a,
+h3 a:visited,
+h4 a,
+h4 a:visited,
+h5 a,
+h5 a:visited,
+h6 a,
+h6 a:visited,
+.wp-block-heading a,
+.wp-block-heading a:visited,
+.wp-block-post-title a,
+.wp-block-post-title a:visited,
+.wp-block-latest-posts.is-grid .wp-block-latest-posts__post-title,
+.wp-block-latest-posts.is-grid .wp-block-latest-posts__post-title:visited {
+	position: relative;
+	display: inline;
+	background: -webkit-gradient(linear, left top, right top, from(currentColor), to(currentColor));
+	background: -webkit-linear-gradient(left, currentColor 0%, currentColor 100%);
+	background: -o-linear-gradient(left, currentColor 0%, currentColor 100%);
+	background: linear-gradient(to right, currentColor 0%, currentColor 100%);
+	background-size: 0 2px;
+	background-position: 0 95%;
+	-webkit-transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+	-o-transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+	transition: background-size 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86) 0s;
+	padding: 0 0 5px 0;
+	background-repeat: no-repeat;
+	display: initial;
+}
+
+h1 a:active,
+h1 a:hover,
+h1 a:focus,
+h2 a:active,
+h2 a:hover,
+h2 a:focus,
+h3 a:active,
+h3 a:hover,
+h3 a:focus,
+h4 a:active,
+h4 a:hover,
+h4 a:focus,
+h5 a:active,
+h5 a:hover,
+h5 a:focus,
+h6 a:active,
+h6 a:hover,
+h6 a:focus,
+.wp-block-heading a:active,
+.wp-block-heading a:hover,
+.wp-block-heading a:focus,
+.wp-block-post-title a:active,
+.wp-block-post-title a:hover,
+.wp-block-post-title a:focus,
+.wp-block-latest-posts.is-grid .wp-block-latest-posts__post-title:active,
+.wp-block-latest-posts.is-grid .wp-block-latest-posts__post-title:hover,
+.wp-block-latest-posts.is-grid .wp-block-latest-posts__post-title:focus {
+	background-size: 100% 2px;
+}*/
+/*--------------------------------------------------------------
+# Custom: Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Nav Dividers
+--------------------------------------------------------------*/
+/* When specified, put dividers on top-level horizontal menu items */
+/* TO-DO: Get this working in the block editor too */
+/* 
+.wp-block-navigation.is-style-nav-dividers {
+
+	& > .wp-block-navigation__container,
+	& .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container {
+		column-gap: var(--wp--preset--spacing--30);
+
+		& > li:not(:last-child) {
+			border-right: 1px solid rgba(128, 128, 128, 0.2);
+			padding-right: var(--wp--preset--spacing--30);
+		}
+	}
+}
+ */
+/* Always put dividers on drop-down menus from top-level horizontal menu items */
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container:not(.is-menu-open) {
+  /* Put the padding on the container and round it out */
+  /* And remove the padding and border from the links */
+  /* Add bottom border to all but the last link */
+}
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__submenu-container.wp-block-navigation-submenu {
+  border-radius: var(--wp--custom--border--radius);
+  padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
+}
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__submenu-container.wp-block-navigation-submenu > .wp-block-navigation-item > .wp-block-navigation-item__content {
+  border: none;
+  padding-left: 0;
+  padding-right: 0;
+}
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__submenu-container.wp-block-navigation-submenu > .wp-block-navigation-item:not(:last-child) {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+
+/* Always on mobile menu, bold face top level menu items */
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.wp-block-navigation > li {
+  font-weight: var(--wp--custom--typography--font-weight--medium);
+}
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.wp-block-navigation > li ul {
+  font-weight: var(--wp--custom--typography--font-weight--normal);
+}
+
+/* Always on mobile menu, put dividers on menu items */
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open {
+  /* Replace gap with padding */
+  /* Add a bottom border to all but the last one */
+  /* Style submenus */
+  /* FIX for aligned drop-down menu items */
+}
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container, .wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-dialog .wp-block-page-list {
+  width: 100%;
+  gap: 0;
+}
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container li, .wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-dialog .wp-block-page-list li {
+  padding-top: var(--wp--preset--spacing--30);
+  padding-bottom: var(--wp--preset--spacing--30);
+  width: 100%;
+  border: none;
+}
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container li:not(:last-child), .wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-dialog li:not(:last-child) {
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+}
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container li:last-child, .wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-dialog li:last-child {
+  padding-bottom: 0;
+}
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu .wp-block-navigation__submenu-container {
+  width: 100%;
+}
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-submenu__toggle {
+  width: 100%;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.2);
+  padding-bottom: var(--wp--preset--spacing--30);
+}
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-right .wp-block-navigation__submenu-container, .wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-right .wp-block-navigation-submenu__toggle {
+  padding-left: 0;
+  text-align: right;
+}
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-left .wp-block-navigation__submenu-container, .wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-left .wp-block-navigation-submenu__toggle {
+  padding-right: 0;
+  text-align: left;
+}
+.wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-center .wp-block-navigation__submenu-container, .wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container.items-justified-center .wp-block-navigation-submenu__toggle {
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Scroll Header Navigation
+--------------------------------------------------------------*/
+/* Line up menu close button with menu open button */
+.wp-block-group.is-style-scroll-header .wp-block-navigation__responsive-container.is-menu-open {
+  padding-top: var(--wp--preset--spacing--50);
+}
+
+/* OVERRIDE bold or highlight active top-level menu items, depending on whether text color or not */
+.is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item.current-menu-item:not(.has-child) > a, .is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item:has(.current-menu-ancestor), .is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item:has(.current-menu-ancestor) > a, .is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-pages-list__item.current-menu-item > a, .is-style-scroll-header:not(.header-active) .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item.wp-block-home-link > a[aria-current=page] {
+  color: var(--wp--preset--color--foreground-alt);
+  font-weight: inherit;
+}
+
+.is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item.current-menu-item:not(.has-child) > a, .is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item:has(.current-menu-ancestor), .is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item:has(.current-menu-ancestor) > a, .is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-pages-list__item.current-menu-item > a, .is-style-scroll-header:not(.header-active) .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation-item.wp-block-home-link > a[aria-current=page] {
+  font-weight: var(--wp--custom--typography--font-weight--medium);
+}
+
+/* Navigation hover style for site title */
+.is-style-scroll-header:not(.header-active) .wp-block-site-title > a:hover {
+  opacity: 0.8;
+}
+
+/* Navigation hover styles for top-level menu items */
+.is-style-scroll-header:not(.header-active) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation.wp-block-navigation__container > .wp-block-navigation-item:hover > .wp-block-navigation-item__content, .is-style-scroll-header:not(.header-active) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation.wp-block-navigation__container > .wp-block-navigation-item:hover > .wp-block-navigation__submenu-icon, .is-style-scroll-header:not(.header-active) .wp-block-navigation__responsive-container:not(.has-modal-open) .wp-block-navigation.wp-block-navigation__container > .wp-block-navigation-item:not(.has-child) > .wp-block-navigation-item__content:hover {
+  color: var(--wp--preset--color--foreground-alt) !important;
+  font-weight: inherit;
+  opacity: 0.8;
+}
+
+/*--------------------------------------------------------------
+## Navigation Item Icons
+--------------------------------------------------------------*/
+/* Arrow Up Alt 2 icon */
+.wp-block-navigation-item.is-style-arrow-up-icon > a:before {
+  font-family: dashicons;
+  line-height: 1;
+  margin-right: 2px;
+}
+
+/* Arrow Up Alt 2 icon */
+.wp-block-navigation-item.is-style-arrow-up-icon > a:before {
+  content: "\f343";
+}
+
+/*--------------------------------------------------------------
+# Custom: Paragraph
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Dashicon icons for telephone and email links
+--------------------------------------------------------------*/
+/*[itemprop="address"] [itemprop="streetAddress"]:before,*/
+/*.wp-block-jetpack-address:before,*/
+/*.wp-block-jetpack-email:before,
+.wp-block-jetpack-phone:before,*/
+p:has(a[href^="tel:"]:not(.wp-block-social-link-anchor)):before,
+p:has(a[href^="mailto:"]:not(.wp-block-social-link-anchor)):before {
+  display: inline-block;
+  font-family: dashicons;
+  /*color: currentcolor;*/
+  /*color: inherit;*/
+  font-weight: var(--wp--custom--typography--font-weight--normal);
+  margin-right: var(--wp--preset--spacing--20);
+  vertical-align: middle;
+}
+
+/*[itemprop="telephone"]:not(a[href^="tel:"]):before,
+:not([itemprop="telephone"]) > a[href^="tel:"]:before {*/
+/*.wp-block-jetpack-phone:before,*/
+p:has(a[href^="tel:"]:not(.wp-block-social-link-anchor)):before {
+  content: "\f525";
+}
+
+/*[itemprop="email"]:not(a[href^="mailto:"]):before,
+:not([itemprop="email"] > a[href^="mailto:"]:before {*/
+/*.wp-block-jetpack-email:before,*/
+p:has(a[href^="mailto:"]:not(.wp-block-social-link-anchor)):before {
+  content: "\f466";
+}
+
+/*[itemprop="address"] [itemprop="streetAddress"]:before {*/
+/*.wp-block-jetpack-address:before {
+	content: "\f323";
+}*/
+/*[itemprop="address"] [itemprop-"addressLocality"] {
+	margin-left: var(--wp--preset--spacing--20);
+}*/
+/*--------------------------------------------------------------
+## No Dashicon icons for telephone and email links
+--------------------------------------------------------------*/
+p.is-style-no-auto-icon a[href^="tel:"]:not(.wp-block-social-link-anchor):before,
+p.is-style-no-auto-icon a[href^="mailto:"]:not(.wp-block-social-link-anchor):before {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+# ADDITIONAL BLOCK STYLES
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Custom: BUttons
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Alternate Button Styles (Alt and Alt-2)
+--------------------------------------------------------------*/
+/* Alternate Button and Outline Style */
+.is-style-button-alt.wp-block-button .wp-block-button__link,
+.is-style-button-outline-alt.wp-block-button .wp-block-button__link {
+  border-radius: 0;
+}
+
+/* Alternate 2 Button and Outline Style */
+.is-style-button-alt-2.wp-block-button .wp-block-button__link,
+.is-style-button-outline-alt-2.wp-block-button .wp-block-button__link {
+  border-radius: 9999px;
+}
+
+/* Alternate Outline and Outline 2 Button Style */
+.is-style-button-outline-alt.wp-block-button .wp-block-button__link,
+.is-style-button-outline-alt-2.wp-block-button .wp-block-button__link {
+  color: currentColor;
+  background-color: transparent;
+  border-width: 3px;
+  border-style: solid;
+  border-color: inherit;
+  padding: calc(var(--wp--preset--spacing--30) - 3px) calc(var(--wp--preset--spacing--40) - 3px);
+}
+
+.is-style-button-alt.wp-block-button .wp-block-button__link:after,
+.is-style-button-outline-alt.wp-block-button .wp-block-button__link:after,
+.is-style-button-alt-2.wp-block-button .wp-block-button__link:after,
+.is-style-button-outline-alt-2.wp-block-button .wp-block-button__link:after {
+  font-family: dashicons;
+  content: "\f344"; /* arrow-right-alt */
+  /*content: "\f346";*/ /* arrow-down-alt */
+  margin-left: var(--wp--preset--spacing--30);
+  vertical-align: middle;
+}
+
+/* In the editor, we need to make this important to override the default */
+.is-root-container .is-style-button-alt .wp-block-button__link,
+.is-root-container .is-style-button-outline-alt .wp-block-button__link {
+  border-radius: 0 !important;
+}
+
+.is-root-container .is-style-button-alt-2 .wp-block-button__link,
+.is-root-container .is-style-button-outline-alt-2 .wp-block-button__link {
+  border-radius: 9999 !important;
+}
+
+.is-root-container .is-style-button-outline-alt .wp-block-button__link,
+.is-root-container .is-style-button-outline-alt-2 .wp-block-button__link {
+  border-width: 3px !important;
+}
+
+/*--------------------------------------------------------------
+# Custom: Latest Posts
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Latest Post Dividers
+--------------------------------------------------------------*/
+/* 
+ * Post grid with dividers get border on the right
+ * 
+ * Note: Breakpoint of 601 is what is hard-coded in WordPress v6.0+
+ * to collapse media & text and latest posts grid 
+ */
+@media only screen and (min-width: 601px) {
+  .wp-block-latest-posts.is-grid.is-style-list-dividers {
+    margin-bottom: var(--wp--style--block-gap);
+  }
+  .wp-block-latest-posts.is-grid.is-style-list-dividers li:not(:last-child) {
+    border-right: solid 1px rgba(128, 128, 128, 0.2);
+    padding-right: 1.25em;
+  }
+}
+/*--------------------------------------------------------------
+# Custom: Post Template
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Drop Shadow Post Template
+--------------------------------------------------------------*/
+/* Add background, padding, border and drop shadow */
+.wp-block-post-template.is-style-drop-shadow {
+  box-shadow: none;
+  border: none;
+}
+
+.wp-block-post-template.is-style-drop-shadow .wp-block-post {
+  background-color: var(--wp--preset--color--white);
+  padding: var(--wp--style--block-gap);
+  border: 1px solid var(--wp--custom--outline--color);
+  border-radius: var(--wp--custom--border--radius);
+  box-shadow: var(--wp--preset--shadow--natural);
+}
+
+/*--------------------------------------------------------------
+## Alternate Colors Post Template
+--------------------------------------------------------------*/
+/* For featured image, apply color to an overlay */
+.wp-block-post-template.is-style-alternate-colors .wp-block-post .wp-block-post-featured-image:before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.5;
+  border-radius: var(--wp--custom--border--radius);
+}
+
+/* For featured images or cover images, set the color */
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+1) .wp-block-cover__background,
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+1) .wp-block-post-featured-image:before {
+  background-color: var(--wp--preset--color--red) !important;
+}
+
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+2) .wp-block-cover__background,
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+2) .wp-block-post-featured-image:before {
+  background-color: var(--wp--preset--color--orange) !important;
+}
+
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+3) .wp-block-cover__background,
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+3) .wp-block-post-featured-image:before {
+  background-color: var(--wp--preset--color--yellow) !important;
+}
+
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+4) .wp-block-cover__background,
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+4) .wp-block-post-featured-image:before {
+  background-color: var(--wp--preset--color--green) !important;
+}
+
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+5) .wp-block-cover__background,
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+5) .wp-block-post-featured-image:before {
+  background-color: var(--wp--preset--color--blue) !important;
+}
+
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+6) .wp-block-cover__background,
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+6) .wp-block-post-featured-image:before {
+  background-color: var(--wp--preset--color--purple) !important;
+}
+
+/* If no post image, then add a colored top border */
+/* 
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail) {
+	padding-top: var(--wp--preset--spacing--30);
+	border-top-width: var(--wp--preset--spacing--30);
+	border-top-style: solid;
+}
+
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail):nth-child(6n+1) {
+	border-top-color: var(--wp--preset--color--red) !important;
+}
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail):nth-child(6n+2) {
+	border-top-color: var(--wp--preset--color--orange) !important;
+}
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail):nth-child(6n+3) {
+	border-top-color: var(--wp--preset--color--yellow) !important;
+}
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail):nth-child(6n+4) {
+	border-top-color: var(--wp--preset--color--green) !important;
+}
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail):nth-child(6n+5) {
+	border-top-color: var(--wp--preset--color--blue) !important;
+}
+.wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail):nth-child(6n+6) {
+	border-top-color: var(--wp--preset--color--purple) !important;
+}
+ */
+/*--------------------------------------------------------------
+# Custom: Table
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Custom: Colored Table
+--------------------------------------------------------------*/
+/* Colored tables and Colored Alternate tables */
+/*.wp-block-table.is-style-table-colored,
+.wp-block-table.is-style-table-alternate {
+	border-radius: calc(2 * var(--wp--custom--border--radius));
+}*/
+/*.wp-block-table.is-style-table-colored table,
+.wp-block-table.is-style-table-alternate table {
+	border-collapse: separate;*/ /*collapse;*/
+/*border-spacing: 20px 0;
+	background-color: transparent !important;
+}*/
+.wp-block-table.is-style-table-colored thead,
+.wp-block-table.is-style-table-colored tfoot,
+.wp-block-table.is-style-table-alternate thead,
+.wp-block-table.is-style-table-alternate tfoot {
+  border: none;
+}
+
+.wp-block-table.is-style-table-colored tr:nth-child(even),
+.wp-block-table.is-style-table-alternate tr:nth-child(even) {
+  color: var(--wp--preset--color--very-dark-gray);
+  background-color: var(--wp--preset--color--off-white);
+}
+
+.wp-block-table.is-style-table-colored tr:nth-child(odd),
+.wp-block-table.is-style-table-alternate tr:nth-child(odd) {
+  color: var(--wp--preset--color--very-dark-gray);
+  background-color: var(--wp--preset--color--white);
+}
+
+/*.wp-block-table.is-style-table-colored td:hover,
+.wp-block-table.is-style-table-alternate td:hover {*/
+/*.wp-block-table.is-style-table-colored tr:hover,
+.wp-block-table.is-style-table-alternate tr:hover {
+	background-color: #ddd;
+	cursor: pointer;
+}*/
+.wp-block-table.is-style-table-colored th,
+.wp-block-table.is-style-table-colored td,
+.wp-block-table.is-style-table-alternate th,
+.wp-block-table.is-style-table-alternate td {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.wp-block-table.is-style-table-colored th,
+.wp-block-table.is-style-table-colored tfoot td,
+.wp-block-table.is-style-table-alternate th,
+.wp-block-table.is-style-table-alternate tfoot td {
+  color: var(--wp--preset--color--foreground-alt);
+  background-color: var(--wp--preset--color--primary-alt);
+}
+
+.wp-block-table.is-style-table-colored th a,
+.wp-block-table.is-style-table-colored tfoot td a,
+.wp-block-table.is-style-table-alternate th a,
+.wp-block-table.is-style-table-alternate tfoot td a {
+  color: var(--wp--preset--color--foreground-alt);
+}
+
+.wp-block-table.is-style-table-colored th a:hover,
+.wp-block-table.is-style-table-colored th a:focus,
+.wp-block-table.is-style-table-colored tfoot td a:hover,
+.wp-block-table.is-style-table-colored tfoot td a:focus,
+.wp-block-table.is-style-table-alternate th a:hover,
+.wp-block-table.is-style-table-alternate th a:focus,
+.wp-block-table.is-style-table-alternate tfoot td a:hover,
+.wp-block-table.is-style-table-alternate tfoot td a:focus {
+  /*color: var(--wp--preset--color--foreground-alt);*/
+  opacity: 0.8;
+}
+
+/*--------------------------------------------------------------
+## Custom: Alternate Colored Table
+--------------------------------------------------------------*/
+/*.wp-block-table.is-style-table-alternate tr:first-child td:nth-child(3n-2) {
+	background-color: var(--wp--preset--color--primary);
+}
+
+.wp-block-table.is-style-table-alternate tr:first-child td:nth-child(3n-1) {
+	background-color: var(--wp--preset--color--secondary);
+}
+
+.wp-block-table.is-style-table-alternate tr:first-child td:nth-child(3n-3) {
+	background-color: var(--wp--preset--color--tertiary);
+}*/
+.wp-block-table.is-style-table-alternate th:nth-child(6n+1),
+.wp-block-table.is-style-table-alternate tfoot td:nth-child(6n+1) {
+  background-color: var(--wp--preset--color--primary);
+}
+
+.wp-block-table.is-style-table-alternate th:nth-child(6n+2),
+.wp-block-table.is-style-table-alternate tfoot td:nth-child(6n+2) {
+  background-color: var(--wp--preset--color--secondary);
+}
+
+.wp-block-table.is-style-table-alternate th:nth-child(6n+3),
+.wp-block-table.is-style-table-alternate tfoot td:nth-child(6n+3) {
+  background-color: var(--wp--preset--color--tertiary);
+}
+
+.wp-block-table.is-style-table-alternate th:nth-child(6n+4),
+.wp-block-table.is-style-table-alternate tfoot td:nth-child(6n+4) {
+  background-color: var(--wp--preset--color--primary-alt);
+}
+
+.wp-block-table.is-style-table-alternate th:nth-child(6n+5),
+.wp-block-table.is-style-table-alternate tfoot td:nth-child(6n+5) {
+  background-color: var(--wp--preset--color--secondary-alt);
+}
+
+.wp-block-table.is-style-table-alternate th:nth-child(6n+6),
+.wp-block-table.is-style-table-alternate tfoot td:nth-child(6n+6) {
+  background-color: var(--wp--preset--color--tertiary-alt);
+}
