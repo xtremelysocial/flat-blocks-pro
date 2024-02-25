@@ -4,7 +4,7 @@
  *
  * Adds the Visibility control to supported blocks
  *
- * @package flatblocks-pro
+ * @package xs-animation
  * @since	1.0
  */
 
@@ -143,6 +143,6 @@ const withAdditionalControls = createHigherOrderComponent( ( BlockEdit ) => {
 }, 'withAdditionalControls' );
 addFilter(
 	'editor.BlockEdit',
-	'flatblocks-pro/visibility-control/with-additional-controls',
+	'xs-animation/visibility-control/with-additional-controls',
 	withAdditionalControls
 );

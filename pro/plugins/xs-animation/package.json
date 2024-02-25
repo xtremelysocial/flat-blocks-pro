@@ -1,19 +1,22 @@
 {
-	"name": "flatblocks-pro",
+	"name": "xs-animation",
 	"version": "0.1.0",
-	"description": "Flat Blocks PRO Theme Plugin",
+	"description": "Animation & Visibility Plugin by XtremelySocial",
 	"author": "XtremelySocial",
 	"license": "GPL-2.0-or-later",
 	"main": "build/index.js",
 	"keywords": [
+		"Animation",
+		"Visibility",
 		"Flat",
 		"Blocks",
 		"PRO",
-		"Plugin",
-		"Visibility",
-		"Animation"
+		"XtremelySocial",
+		"Xtremely",
+		"Extremely",
+		"Social"
 	],
-	"homepage": "https://xtremelysocial.com/wordpress/flat-blocks/",
+	"homepage": "https://xtremelysocial.com/wordpress/xs-animation/",
 	"scripts": {
 		"start": "wp-scripts start --webpack-copy-php",
 		"build": "wp-scripts build --webpack-copy-php",

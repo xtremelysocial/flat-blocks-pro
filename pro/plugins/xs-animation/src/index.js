@@ -1,10 +1,10 @@
 /**
  * File:	index.js
- * Plugin:	Flatblocks PRO Theme Plugin
+ * Plugin:	Animation & Visibility Plugin
  *
  * Loads the various modules for our plugin in the Editor
  *
- * @package flatblocks-pro
+ * @package xs-animation
  * @since	1.0
  */
 

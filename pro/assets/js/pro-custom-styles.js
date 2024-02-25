@@ -21,11 +21,12 @@
 	 * activeClass		string		CSS class for when the target is scrolled to
 	 */
 	const scrollHeader 	= $('.is-style-scroll-header');
-	const minScrollPos 	= scrollHeader.outerHeight() ?? 88;
-	const scrollInterval = 250;
-	const activeClass 	= 'header-active';
 
 	if ( scrollHeader.length > 0 ) {
+
+		const minScrollPos 	= scrollHeader.outerHeight() ?? 88;
+		const scrollInterval = 250;
+		const activeClass 	= 'header-active';
 
 		// Trigger when the user scrolls
 		var didScroll = false;

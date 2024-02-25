@@ -1,10 +1,10 @@
 /**
- * File:	animation/view.js
- * Plugin:	Flatblocks PRO Theme Plugin
+ * File:	xs-animation/view.js
+ * Plugin:	Animation & Visibility Plugin
  *
  * Javascript for animation on the FRONT-END
  *
- * @package flatblocks-pro
+ * @package xs-animation
  * @since	1.0
  */
 

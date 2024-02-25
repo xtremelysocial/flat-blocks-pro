@@ -53,7 +53,7 @@
 		 * content.
 		 */ 
 		const links = $('a[href*="#"]')
-			.not('[href="#"]')
+			//.not('[href="#"]')
 			.not('[href="#0"]')
 			.not('[data-toggle="tab"]')
 			.not('[data-toggle="collapse"]');
