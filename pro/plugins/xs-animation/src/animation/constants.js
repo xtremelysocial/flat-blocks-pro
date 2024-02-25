@@ -1,10 +1,10 @@
 /**
- * File:	animation/constants.js
- * Plugin:	Flatblocks PRO Theme Plugin
+ * File:	xs-animation/constants.js
+ * Plugin:	Animation & Visibility Plugin
  *
  * Constants for the animation features of our plugin
  *
- * @package flatblocks-pro
+ * @package xs-animation
  * @since	1.0
  */
 

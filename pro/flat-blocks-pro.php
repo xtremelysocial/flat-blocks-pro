@@ -29,13 +29,13 @@ if ( ! function_exists('fbp_load_includes') ) :
 			'/pro/inc/pro-default-image.php',
 			'/pro/inc/pro-login-page.php',
 			'/pro/inc/pro-patterns.php',
-			'/pro/inc/pro-animation.php', // only for XtremelySocial.com
+// 			'/pro/inc/pro-animation.php', // only for XtremelySocial.com
 			);
 
 
-		/* Add Flatblocks PRO Plugin if that plugin is NOT active */
-		if ( ! defined('FBP_PLUGIN_ACTIVE') || FBP_PLUGIN_ACTIVE !== true ) {
-			$includes[] = '/pro/pro-plugin/pro-plugin.php';
+		/* Add XS Animation Plugin if that plugin is NOT active */
+		if ( ! defined('XS_ANIMATION_PLUGIN_ACTIVE') || XS_ANIMATION_PLUGIN_ACTIVE !== true ) {
+			$includes[] = '/pro/plugins/xs-animation/xs-animation.php';
 		}
 
 		/* Add Jetpack support if that plugin is active */

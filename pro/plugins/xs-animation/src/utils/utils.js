@@ -1,10 +1,10 @@
 /**
  * File:	utils/utils.js
- * Plugin:	Flatblocks PRO Theme Plugin
+ * Plugin:	Animation & Visibility Plugin
  *
  * Utility functions for the our plugin
  *
- * @package flatblocks-pro
+ * @package xs-animation
  * @since	1.0
  */
 

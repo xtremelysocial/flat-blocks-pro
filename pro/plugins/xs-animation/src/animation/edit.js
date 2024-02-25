@@ -1,10 +1,10 @@
 /**
- * File:	animation/index.js
- * Plugin:	Flatblocks PRO Theme Plugin
+ * File:	xs-animation/index.js
+ * Plugin:	Animation & Visibility Plugin
  *
  * Sets up and renders our animation control on supported blocks
  *
- * @package flatblocks-pro
+ * @package xs-animation
  * @since	1.0
  */
 
@@ -223,6 +223,6 @@ const withAdditionalControls = createHigherOrderComponent( ( BlockEdit ) => {
 }, 'withAdditionalControls' );
 addFilter(
 	'editor.BlockEdit',
-	'flatblocks-pro/animation-control/with-additional-controls',
+	'xs-animation/animation-control/with-additional-controls',
 	withAdditionalControls
 );
