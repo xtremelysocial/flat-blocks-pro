@@ -101,20 +101,21 @@
 	/*
 	 * Select the DIRECT animation elements and observe them.
 	 */
+	const querySelector = "[class*=" +
+		animationSelector +
+		"]:not([class*=" +
+		parentSelector +
+		"]):not([class*=" +
+		animationExcludeSelector +
+		"]):not(" +
+		animationClass +
+		")";
+	console.log('querySelector' + querySelector); //TEST
+	
 	document
-		.querySelectorAll(
-			"[class*='" +
-				animationSelector +
-				"']:not([class*='" +
-				parentSelector +
-				"']:not([class*='" +
-				animationExcludeSelector +
-				"']:not([class*='" +
-				animationClass +
-				"']"
-		)
+		.querySelectorAll(querySelector)
 		.forEach( ( animation ) => {
-// 			console.log('direct.classList:', animation.classList); //TEST		
+			console.log('direct.classList:', animation.classList); //TEST		
 			
 			animationObserver.observe( animation );
 			animation.addEventListener( 'animationend', function () {

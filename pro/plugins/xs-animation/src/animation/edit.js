@@ -13,7 +13,6 @@
  */
 import classnames from 'classnames';
 
-//import { getOptionFromClassName, updateOptionClass } from './utils';
 import {
 	inArray,
 	getOptionFromClass,
@@ -22,7 +21,6 @@ import {
 
 // Internal dependencies.
 import {
-	//animationLabel,
 	animationPrefix,
 	allAnimationOptions,
 	animationParentBlocks,
@@ -136,11 +134,9 @@ const withAdditionalControls = createHigherOrderComponent( ( BlockEdit ) => {
 		let showOptions = false;
 		let showRepeat = false;
 		if ( showAnimationOptions ) {
-			//showOptions = currentAnimation != 'auto__all' && currentAnimation != 'auto__enter' && currentAnimation != 'hover__auto' && currentAnimation != 'hover__grow' && currentAnimation != 'hover__slideUp' && currentAnimation != '';
 			showOptions = currentAnimation != '' && currentAnimation != 'hover__auto' && currentAnimation != 'hover__grow' && currentAnimation != 'hover__slideUp';
 
 // 			console.log(showOptions, attentionOptions, animationPrefix, currentAnimation, inArray( attentionOptions, animationPrefix, currentAnimation )); //TEST
-// 			if ( showOptions && inArray( attentionOptions, animationPrefix, currentAnimation ) ) {
 			console.log(showOptions, attentionOptions, currentAnimation, inArray( attentionOptions, currentAnimation )); //TEST
 			if ( showOptions && inArray( attentionOptions, currentAnimation ) ) {
 				showRepeat = true;
