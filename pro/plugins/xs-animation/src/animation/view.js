@@ -61,7 +61,7 @@
 	 * another page and returns.
 	 */
 	document
-		.querySelectorAll( "[class*='" + parentSelector + "']" )
+		.querySelectorAll( "[class*=" + parentSelector + "]" )
 		.forEach( ( parent ) => {
 			if ( addClassToParent ) parent.classList.add( animationClass );
 // 			console.log('parent.classList:', parent.classList); //TEST
@@ -110,12 +110,12 @@
 		"]):not(" +
 		animationClass +
 		")";
-	console.log('querySelector' + querySelector); //TEST
+	//console.log('querySelector' + querySelector); //TEST
 	
 	document
 		.querySelectorAll(querySelector)
 		.forEach( ( animation ) => {
-			console.log('direct.classList:', animation.classList); //TEST		
+			//console.log('direct.classList:', animation.classList); //TEST		
 			
 			animationObserver.observe( animation );
 			animation.addEventListener( 'animationend', function () {
