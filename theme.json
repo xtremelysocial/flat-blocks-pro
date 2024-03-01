@@ -2019,6 +2019,12 @@
 			"postTypes": ["post"]
 		},
 		{
+			"name": "single-featured-image-nosidebar",
+			"title": "Post with Featured Image without Sidebar",
+			"description": "Post w/large featured image without sidebar",
+			"postTypes": ["post"]
+		},
+		{
 			"name": "single-featured-image-sidebar-left",
 			"title": "Post with Featured Image and Left Sidebar",
 			"description": "Post w/large featured image and left sidebar",
@@ -2052,6 +2058,12 @@
 			"name": "single-content-only",
 			"title": "Post Content Only (No title, date, categories, tags, author, or comments)",
 			"description": "Post Content Only (No title, date, categories, tags, author, or comments)",
+			"postTypes": ["post"]
+		},
+		{
+			"name": "single-nosidebar",
+			"title": "Post No Sidebar",
+			"description": "Post w/out sidebar",
 			"postTypes": ["post"]
 		},
 		{

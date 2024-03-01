@@ -1,31 +1,19 @@
 <!-- wp:group {"tagName":"footer","align":"full","style":{"elements":{"link":{"color":{"text":"var:preset|color|foreground-alt"}}}},"backgroundColor":"dark","textColor":"dark-gray","className":"site-footer","layout":{"inherit":true,"type":"constrained"}} -->
 <footer class="wp-block-group alignfull site-footer has-dark-gray-color has-dark-background-color has-text-color has-background has-link-color" id="site-footer"><!-- wp:columns {"align":"wide","className":"footer-widgets  is-style-thick-gap"} -->
-<div class="wp-block-columns alignwide footer-widgets is-style-thick-gap"><!-- wp:column {"className":"footer-column"} -->
+<div class="wp-block-columns alignwide footer-widgets  is-style-thick-gap"><!-- wp:column {"className":"footer-column"} -->
 <div class="wp-block-column footer-column"><!-- wp:heading {"level":3,"className":"widget-title has-foreground-alt-color"} -->
 <h3 class="wp-block-heading widget-title has-foreground-alt-color" id="our-themes">Our Themes</h3>
 <!-- /wp:heading -->
 
-<!-- wp:list {"className":"is-style-list-dividers"} -->
-<ul class="is-style-list-dividers"><!-- wp:list-item -->
-<li><a href="/wordpress/flat-blocks/" data-type="page">Flat Blocks WordPress Theme</a></li>
-<!-- /wp:list-item -->
+<!-- wp:query {"queryId":0,"query":{"perPage":3,"pages":0,"offset":0,"postType":"page","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":false,"taxQuery":{"post_tag":[568]},"parents":[]},"namespace":"core/posts-list","enhancedPagination":true,"className":"is-style-no-padding"} -->
+<div class="wp-block-query is-style-no-padding"><!-- wp:post-template {"className":"is-style-default"} -->
+<!-- wp:group {"className":"is-style-no-padding","layout":{"type":"flex","flexWrap":"nowrap"}} -->
+<div class="wp-block-group is-style-no-padding"><!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9","width":"89px","height":"50px","scale":"fill","style":{"layout":{"selfStretch":"fit","flexSize":null}},"className":"is-style-image-no-border"} /-->
 
-<!-- wp:list-item -->
-<li><a href="/wordpress/flat-bootstrap/">Flat Bootstrap WordPress Theme</a></li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li><a href="/wordpress/link/">Link WordPress Theme</a></li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li><a href="/wordpress/spot/">Spot WordPress Theme</a></li>
-<!-- /wp:list-item -->
-
-<!-- wp:list-item -->
-<li><a href="/wordpress/pratt/">Pratt WordPress Theme</a></li>
-<!-- /wp:list-item --></ul>
-<!-- /wp:list --></div>
+<!-- wp:post-title {"isLink":true,"fontSize":"normal"} /--></div>
+<!-- /wp:group -->
+<!-- /wp:post-template --></div>
+<!-- /wp:query --></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"className":"footer-column"} -->
@@ -33,7 +21,7 @@
 <h3 class="wp-block-heading widget-title has-foreground-alt-color" id="recent-comments">Recent Comments</h3>
 <!-- /wp:heading -->
 
-<!-- wp:latest-comments {"commentsToShow":3,"displayAvatar":false,"displayDate":false,"displayExcerpt":false,"className":"is-style-list-dividers"} /--></div>
+<!-- wp:latest-comments {"commentsToShow":3,"displayDate":false,"displayExcerpt":false,"className":"is-style-default"} /--></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"className":"footer-column"} -->
@@ -61,12 +49,12 @@
 <!-- wp:group {"tagName":"footer","align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|40","right":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40"}}},"backgroundColor":"dark-alt","textColor":"foreground-alt","className":"footer-info alignfull","layout":{"inherit":true,"type":"constrained"},"fontSize":"small"} -->
 <footer class="wp-block-group alignfull footer-info has-foreground-alt-color has-dark-alt-background-color has-text-color has-background has-small-font-size" id="site-info" style="padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)"><!-- wp:columns {"verticalAlignment":"center","align":"wide","className":"is-style-center-on-mobile"} -->
 <div class="wp-block-columns alignwide are-vertically-aligned-center is-style-center-on-mobile"><!-- wp:column {"verticalAlignment":"center"} -->
-<div class="wp-block-column is-vertically-aligned-center"><!-- wp:template-part {"slug":"menu-footer"} /--></div>
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:template-part {"slug":"menu-footer","theme":"xtremelysocial"} /--></div>
 <!-- /wp:column -->
 
 <!-- wp:column {"verticalAlignment":"center","layout":{"inherit":true}} -->
-<div class="wp-block-column is-vertically-aligned-center"><!-- wp:paragraph {"align":"right","fontSize":"small","className":"is-style-link-no-underline"} -->
-<p class="has-text-align-right has-small-font-size is-style-link-no-underline"><a href="https://xtremelysocial.com/wordpress/flat-blocks/">Flat Blocks</a>&nbsp;theme by&nbsp;<a rel="noopener" href="https://xtremelysocial.com/" target="_blank">XtremelySocial</a></p>
+<div class="wp-block-column is-vertically-aligned-center"><!-- wp:paragraph {"align":"right","className":"is-style-link-no-underline","fontSize":"small"} -->
+<p class="has-text-align-right is-style-link-no-underline has-small-font-size"><a href="https://xtremelysocial.com/wordpress/flat-blocks/">Flat Blocks</a>&nbsp;theme by&nbsp;<a rel="noopener" href="https://xtremelysocial.com/" target="_blank">XtremelySocial</a></p>
 <!-- /wp:paragraph --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></footer>
