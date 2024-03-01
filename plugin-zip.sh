@@ -8,7 +8,7 @@ sass --no-source-map --style=compressed src/scss:assets/css pro/src/scss:pro/ass
 # Then refresh and build the PRO plugin
 echo "Updating submodule xs-animation..."
 git submodule update --remote pro/plugins/xs-animation
-git merge origin/main
+#git merge origin/main
 #cd pro/plugins/xs-animation
 #npm run build
 #cd ../../..
