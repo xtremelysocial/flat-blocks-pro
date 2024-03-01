@@ -2079,13 +2079,13 @@
 			"postTypes": ["jetpack/portfolio"]
 		},
 		{
-			"name": "archive-jetpack-portfolio-type",
+			"name": "taxonomy-jetpack-portfolio-type",
 			"title": "Jetpack Portfolio Type Archive",
 			"description": "Jetpack Portfolio Type Archive",
 			"postTypes": ["jetpack/portfolio"]
 		},
 		{
-			"name": "archive-jetpack-portfolio-tag",
+			"name": "taxonomy-jetpack-portfolio-tag",
 			"title": "Jetpack Portfolio Tag Archive",
 			"description": "Jetpack Portfolio Tag Archive",
 			"postTypes": ["jetpack/portfolio"]
