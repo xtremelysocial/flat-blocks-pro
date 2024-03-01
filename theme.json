@@ -26,6 +26,10 @@
 				"color": "rgba(0, 0, 0, 0.25)"
 			},
 			"animation": {
+				"default": {
+					"entrance": "fadeInUp",
+					"hover": "scale3d(1.1, 1.1, 1.1)"
+				},
 				"duration": {
 					"normal": "800ms",
 					"medium": "500ms",
@@ -2067,6 +2071,42 @@
 			"title": "PRO Page Home (cover image w/scroll to fixed header, no comments)",
 			"description": "PRO Home page (cover image with scroll to fixed header, no comments)",
 			"postTypes": ["page"]
-		}
+		},
+		{
+			"name": "archive-jetpack-portfolio",
+			"title": "Jetpack Portfolio Archive",
+			"description": "Jetpack Portfolio Archive",
+			"postTypes": ["jetpack/portfolio"]
+		},
+		{
+			"name": "taxonomy-jetpack-portfolio-type",
+			"title": "Jetpack Portfolio Type Archive",
+			"description": "Jetpack Portfolio Type Archive",
+			"postTypes": ["jetpack/portfolio"]
+		},
+		{
+			"name": "taxonomy-jetpack-portfolio-tag",
+			"title": "Jetpack Portfolio Tag Archive",
+			"description": "Jetpack Portfolio Tag Archive",
+			"postTypes": ["jetpack/portfolio"]
+		},
+		{
+			"name": "archive-jetpack-testimonial",
+			"title": "Jetpack Testimonial Archive",
+			"description": "Jetpack Testimonial Archive",
+			"postTypes": ["jetpack/testimonial"]
+		},
+		{
+			"name": "single-jetpack-portfolio",
+			"title": "Jetpack Portfolio Item",
+			"description": "Jetpack Portfolio Item",
+			"postTypes": ["jetpack/portfolio"]
+		},
+		{
+			"name": "single-jetpack-testimonial",
+			"title": "Jetpack Testimonial Item",
+			"description": "Jetpack Testimonial ITem",
+			"postTypes": ["jetpack/testimonial"]
+		}		
 	]
 }

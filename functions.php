@@ -62,7 +62,9 @@ if ( ! function_exists( 'flatblocks_support' ) ) :
 		}
 
 		// Allow excerpts on pages so users can control what shows in searches, etc.
-		add_post_type_support( 'page', 'excerpt' );		
+		if ( apply_filters( 'flatblocks_allow_page_excerpts', $allow_page_excerpts ?? true ) ) {
+			add_post_type_support( 'page', 'excerpt' );		
+		}
 				
 	}
 endif;

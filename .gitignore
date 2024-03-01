@@ -37,12 +37,12 @@ build
 **/*.css.map
 **/*.js.map
 
-# Webpack files
+# Don't ignore Webpack files
 #webpack.config.js
 #package.json
 #package-lock.json
 
-# Shell scripts
+# Don't ignore Shell scripts
 #*.sh
 
 # Ignore Mac files
@@ -59,9 +59,9 @@ zz_unused
 # Ignore individual block styles since not implemented yet
 assets/css/blocks/
 
-# Ignore PRO theme files
+# Don't ignore PRO theme files
 #pro
 #templates/pro-*
 
-# Ignore our xtremelysocial.com files
+# Don't Ignore our xtremelysocial.com files
 #styles/*xtremelysocial*.json

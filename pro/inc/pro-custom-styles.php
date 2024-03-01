@@ -190,11 +190,7 @@ if ( ! function_exists( 'flatblocks_pro_register_block_styles' ) ) :
 			)
 		);
 
-		//return array_merge( $theme_styles, $pro_styles );
-		//var_dump( $theme_styles + $pro_styles ); //TEST
-		//return $theme_styles + $pro_styles;
 		return $theme_styles ? $theme_styles + $pro_styles : $pro_styles;
-		
 	}
 endif;
 
