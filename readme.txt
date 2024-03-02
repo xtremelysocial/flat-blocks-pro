@@ -147,6 +147,14 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 1.4.8 = 
+Mar 1, 2024
+
+* Added "Nothing to see here, folks!" block to all the Query Block Patterns in case nothing was found. Note this is mostly for the search results, but will apply to categories and tags, etc. that might not have posts.
+* Added right padding to dashicons-before CSS class. Note this has to be added manually in Advanced block settings.
+* Added CSS for is-style-no-padding on Query Block. Note this has to be added manually in Advanced block settings.
+* Added a filter that child themes can use called 'flatblocks_allow_page_excerpts' which can be passed true or false to indicate whether pages should allow excerpts or not. This has always been turned on so that is still the default.
+
 = 1.4.7 = 
 Feb 16, 2024
 
