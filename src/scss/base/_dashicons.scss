@@ -26,6 +26,10 @@
 	font-weight: var(--wp--custom--typography--font-weight--normal);
 }
 
+.wp-site-blocks .dashicons-before:before {
+	margin-right: var(--wp--preset--spacing--20);
+}
+
 .wp-site-blocks .dashicons a,
 .dashicons a {
 	text-decoration: none;

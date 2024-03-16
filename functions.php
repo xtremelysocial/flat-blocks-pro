@@ -65,7 +65,6 @@ if ( ! function_exists( 'flatblocks_support' ) ) :
 		if ( apply_filters( 'flatblocks_allow_page_excerpts', $allow_page_excerpts ?? true ) ) {
 			add_post_type_support( 'page', 'excerpt' );		
 		}
-				
 	}
 endif;
 
@@ -359,6 +358,7 @@ endif;
  * Consider: Add Medium Large since it is standard WordPress and seems to be missing.
  */
 add_filter( 'image_size_names_choose', 'flatblocks_image_sizes' );
+
 if ( ! function_exists( 'flatblocks_image_sizes' ) ) :
 	function flatblocks_image_sizes( $sizes ) {
 		return array_merge( $sizes, array(
@@ -373,6 +373,7 @@ endif;
  * Always replace [...] with ... from the excerpt
  */
 add_filter( 'excerpt_more', 'flatblocks_excerpt_more' );
+
 if ( ! function_exists( 'flatblocks_excerpt_more' ) ) :
 	function flatblocks_excerpt_more( $more ) {
 		return '&hellip;';
@@ -388,6 +389,7 @@ endif;
  * 
 */
 add_filter('excerpt_length', 'flatblocks_excerpt_length');
+
 if ( ! function_exists( 'flatblocks_excerpt_length' ) ) :
 	function flatblocks_excerpt_length ( $words ) {
 		return is_singular() ? apply_filters( 'flatblocks_short_excerpt_link', $short_words = 25 ) : $words;
