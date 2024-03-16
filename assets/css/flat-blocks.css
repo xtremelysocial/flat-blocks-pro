@@ -1157,6 +1157,10 @@ p.is-style-link-underline-hover a:hover {
   font-weight: var(--wp--custom--typography--font-weight--normal);
 }
 
+.wp-site-blocks .dashicons-before:before {
+  margin-right: var(--wp--preset--spacing--20);
+}
+
 .wp-site-blocks .dashicons a,
 .dashicons a {
   text-decoration: none;
@@ -1232,7 +1236,7 @@ main.wp-block-group:not(.has-global-padding),
 /* Override horizontal padding when no global padding */
 header.site-header:not(.has-global-padding),
 footer.site-footer:not(.has-global-padding),
-header.entry-header:not(.has-global-padding),
+header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
 .wp-block-query:not(.has-global-padding) {
   padding-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50)) !important;
   padding-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50)) !important;

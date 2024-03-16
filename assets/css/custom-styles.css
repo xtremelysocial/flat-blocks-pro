@@ -176,7 +176,7 @@
 .wp-block-latest-posts__featured-image {
   border-radius: var(--wp--custom--border--radius);
   border: 1px solid var(--wp--custom--border--color);
-  padding: var(--wp--custom--border--radius) var(--wp--custom--border--radius) 0 var(--wp--custom--border--radius);
+  padding: var(--wp--custom--border--radius);
   box-shadow: var(--wp--custom--shadow--default);
 }
 
@@ -630,6 +630,19 @@ li.is-style-link-underline-hover a:hover {
 /* REMOVE top margin because we use padding instead */
 .wp-block-pullquote p {
   margin-top: 0;
+}
+
+/*--------------------------------------------------------------
+# Custom: Query
+--------------------------------------------------------------*/
+.wp-block-query.is-style-no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.wp-block-query.is-style-no-padding:not(.has-global-padding) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
 }
 
 /*--------------------------------------------------------------
