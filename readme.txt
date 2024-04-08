@@ -147,6 +147,13 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 1.5 = 
+Apr 7, 2024
+
+* Tested up through WordPress v6.5. Updated CSS for Outline style buttons in the editor so it doesn't have a background color. 
+* Enabled "lightbox" (click image to display full-width in popup window) by default (in theme.json). This can be turned off, if desired, in the Global Styles settings.
+* Enhance Dashicons CSS to behave better when manually added to paragraphs, headings, or list items.
+
 = 1.4.8 = 
 Mar 16, 2024
 

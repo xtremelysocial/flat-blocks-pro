@@ -8,9 +8,6 @@
  *
  */
 .dashicons {
-//[class*=dashicons-] {
-//.dashicons-before: before {
-//.wp-site-blocks .dashicons {
 	display: block;
 	width: auto;
 	height: auto;
@@ -32,31 +29,24 @@
 	}
 }
 
-//.dashicons,
 .dashicons:before,
 .dashicons-before:before {
-//[class*=dashicons-]:before {
-//.wp-site-blocks .dashicons:before,
-//.wp-site-blocks .dashicons-before:before {
 	display: inline-block;
 	width: auto;
 	height: auto;
 	font-family: dashicons;
 	font-size: 1em;
 	line-height: inherit;
-	font-weight: inherit; //var(--wp--custom--typography--font-weight--normal);
-	//vertical-align: middle; //top;
+	font-weight: inherit;
 }
 
 /* Add some right margin on inline dashicons before the text */
 //.dashicons:before,
 .dashicons-before:before {
-//.wp-site-blocks .dashicons-before:before {
 	margin-right: var(--wp--preset--spacing--20);
 }
 
 /* Don't underline dashicons links */
 .dashicons a {
-//.wp-site-blocks .dashicons a {
 	text-decoration: none;
 }
