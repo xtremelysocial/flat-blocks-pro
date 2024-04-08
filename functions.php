@@ -109,7 +109,7 @@ if ( ! function_exists( 'flatblocks_front_end_styles' ) ) :
 			);
 		}
 				
-		// If not loading separate block styles, then load custom block styles
+		// If not loading separate block styles, then load combined block styles
 		if ( ! apply_filters( 'flatblocks_should_load_separate_block_assets', $separate_theme_block_assets ?? false ) 
 			and file_exists( get_template_directory() . '/assets/css/custom-styles.css' ) ) {
 

@@ -2,35 +2,51 @@
 # Dashicons
 --------------------------------------------------------------*/
 
-/* Don't let dashicons force width and height. Let it come from the font size. */
-.wp-site-blocks .dashicons,
+/**
+ * Override core WordPress base Dashicon styles. Don't let it
+ * alter height, width, font-size or line-height. 
+ *
+ */
 .dashicons {
 	display: block;
 	width: auto;
 	height: auto;
 	font-family: inherit;
-	font-size: 1em;
-	font-weight: var(--wp--custom--typography--font-weight--normal);
+	font-size: inherit; //1em;
+	font-weight: inherit; //var(--wp--custom--typography--font-weight--normal);
+	line-height: inherit;
+	
+	text-align: unset;
+	
+	&.has-text-align-center {
+		text-align: center;
+	}
+	&.has-text-align-left {
+		text-align: left;
+	}
+	&.has-text-align-right {
+		text-align: right;
+	}
 }
 
-.wp-site-blocks .dashicons:before,
-.wp-site-blocks .dashicons-before:before,
 .dashicons:before,
 .dashicons-before:before {
 	display: inline-block;
-	vertical-align: top;
 	width: auto;
 	height: auto;
 	font-family: dashicons;
 	font-size: 1em;
-	font-weight: var(--wp--custom--typography--font-weight--normal);
+	line-height: inherit;
+	font-weight: inherit;
 }
 
-.wp-site-blocks .dashicons-before:before {
+/* Add some right margin on inline dashicons before the text */
+//.dashicons:before,
+.dashicons-before:before {
 	margin-right: var(--wp--preset--spacing--20);
 }
 
-.wp-site-blocks .dashicons a,
+/* Don't underline dashicons links */
 .dashicons a {
 	text-decoration: none;
 }
