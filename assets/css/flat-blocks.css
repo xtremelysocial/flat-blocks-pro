@@ -130,6 +130,8 @@ input[type=file] {
 /* For outline style buttons, inherit border color from the text color */
 .wp-block-button.is-style-outline.is-style-outline .wp-block-button__link {
   color: inherit;
+  background-color: initial;
+  background-image: none;
 }
 
 /*
@@ -779,8 +781,11 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/
-/* Bold or highlight active top-level menu items, depending on whether background color or not */
-.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.current-menu-item:not(.has-child) > a, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.current-menu-ancestor, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:has(.current-menu-ancestor) > .wp-block-navigation-item__content, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.wp-block-pages-list__item.current-menu-item > a, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.wp-block-home-link > a[aria-current=page] {
+/** 
+ * Bold or highlight active top-level menu items, depending on whether 
+ * background color or not 
+ */
+.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.current-menu-item, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:has(.current-menu-ancestor), .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.current-menu-ancestor, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:has(.current-menu-ancestor) > .wp-block-navigation-item__content, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.wp-block-pages-list__item.current-menu-item > a, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.wp-block-home-link > a[aria-current=page] {
   color: var(--wp--custom--link--color);
 }
 
@@ -803,7 +808,7 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 }
 
 /* On hover, bold or highlight top-level menu items, depending on whether background color or not */
-.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover > .wp-block-navigation-item__content, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover > .wp-block-navigation__submenu-icon, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item > a:hover, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item > a:active {
+.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover > .wp-block-navigation-item__content, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover > .wp-block-navigation__submenu-icon, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:active {
   color: var(--wp--custom--link--hover);
 }
 
@@ -1133,35 +1138,48 @@ p.is-style-link-underline-hover a:hover {
 /*--------------------------------------------------------------
 # Dashicons
 --------------------------------------------------------------*/
-/* Don't let dashicons force width and height. Let it come from the font size. */
-.wp-site-blocks .dashicons,
+/**
+ * Override core WordPress base Dashicon styles. Don't let it
+ * alter height, width, font-size or line-height. 
+ *
+ */
 .dashicons {
   display: block;
   width: auto;
   height: auto;
   font-family: inherit;
-  font-size: 1em;
-  font-weight: var(--wp--custom--typography--font-weight--normal);
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-align: unset;
+}
+.dashicons.has-text-align-center {
+  text-align: center;
+}
+.dashicons.has-text-align-left {
+  text-align: left;
+}
+.dashicons.has-text-align-right {
+  text-align: right;
 }
 
-.wp-site-blocks .dashicons:before,
-.wp-site-blocks .dashicons-before:before,
 .dashicons:before,
 .dashicons-before:before {
   display: inline-block;
-  vertical-align: top;
   width: auto;
   height: auto;
   font-family: dashicons;
   font-size: 1em;
-  font-weight: var(--wp--custom--typography--font-weight--normal);
+  line-height: inherit;
+  font-weight: inherit;
 }
 
-.wp-site-blocks .dashicons-before:before {
+/* Add some right margin on inline dashicons before the text */
+.dashicons-before:before {
   margin-right: var(--wp--preset--spacing--20);
 }
 
-.wp-site-blocks .dashicons a,
+/* Don't underline dashicons links */
 .dashicons a {
   text-decoration: none;
 }

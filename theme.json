@@ -54,7 +54,10 @@
 		"position": {
 			"sticky": false
 		},
-		"lightbox": true,
+		"lightbox": {
+			"allowEditing": true,
+			"enabled": true
+		},
 		"spacing": {
 			"blockGap": true,
 			"padding": true,

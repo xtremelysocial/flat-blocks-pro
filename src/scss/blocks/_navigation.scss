@@ -4,10 +4,15 @@
 
 @use "../utils/mixins";
 
-/* Bold or highlight active top-level menu items, depending on whether background color or not */
+/** 
+ * Bold or highlight active top-level menu items, depending on whether 
+ * background color or not 
+ */
 //.wp-block-navigation:not(.has-background) .wp-block-navigation-item {
 .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item {
-	&.current-menu-item:not(.has-child) > a,
+	//&.current-menu-item:not(.has-child) > a,
+	&.current-menu-item,
+	&:has(.current-menu-ancestor),
 	&.current-menu-ancestor,
 	/////&:has(.current-menu-ancestor),
 	//&:has(.current-menu-ancestor) > a,
@@ -51,8 +56,10 @@
 	//&:active, // top-level
 	&:hover > .wp-block-navigation-item__content, // top-level
 	&:hover > .wp-block-navigation__submenu-icon, // top-level
-	& > a:hover, // drop-down
-	& > a:active { //drop-down
+// 	& > a:hover, // drop-down
+// 	& > a:active { //drop-down
+	&:hover, // drop-down
+	&:active { //drop-down
     	color: var(--wp--custom--link--hover);
     }
 }

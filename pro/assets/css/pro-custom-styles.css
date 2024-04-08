@@ -20,12 +20,6 @@
 ## General Styles
 --------------------------------------------------------------*/
 /* Override hard-coded Dashicons size */
-.dashicons,
-.dashicons-before:before {
-  width: auto !important;
-  height: auto !important;
-}
-
 /* 
  * Allow drop-shadow on anything except post template since it needs
  * to be on the post instead 
@@ -342,6 +336,100 @@ body.home > #page > #signup-content > .mu_register .mu_alert {
 body.home > #page > #footer {
   width: 90%;
   margin: 0 auto;
+}
+
+/*--------------------------------------------------------------
+# PRO Dashicon Styles
+--------------------------------------------------------------*/
+/* Override dashicons default centering to match the text */
+.dashicons.has-text-align-center,
+[class*=dashicons-].has-text-align-center {
+  text-align: center;
+  justify-content: center;
+}
+.dashicons.has-text-align-left,
+[class*=dashicons-].has-text-align-left {
+  text-align: left;
+  justify-content: left;
+}
+.dashicons.has-text-align-right,
+[class*=dashicons-].has-text-align-right {
+  text-align: right;
+  justify-content: right;
+}
+
+[class*=dashicons-]:before {
+  font-family: dashicons;
+}
+
+/* Add a new Dashicons After class */
+.dashicons-after {
+  display: flex;
+}
+.dashicons-after:before {
+  order: 2;
+  margin-left: var(--wp--preset--spacing--20);
+}
+
+/* Add a new Dashicons Above class */
+.dashicons-above {
+  display: flex;
+  flex-direction: column;
+  gap: var(--wp--preset--spacing--30);
+}
+.dashicons-above:before {
+  text-align: center;
+}
+
+/* Add a new Dashicons Below class */
+.dashicons-below {
+  display: flex;
+  flex-direction: column;
+  gap: var(--wp--preset--spacing--30);
+}
+.dashicons-below:before {
+  order: 2;
+  text-align: center;
+}
+
+/* Nav menus already have transitions so don't add another one on
+ * dashicons
+ */
+.wp-block-navigation .dashicons {
+  transition: none;
+}
+
+/* Don't display the top-level icon on the drop-down menu */
+.wp-block-navigation__submenu-container.dashicons:before {
+  content: none;
+}
+
+/*:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item a:not(.wp-element-button)), 
+:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu a:not(.wp-element-button)), 
+:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu button.wp-block-navigation-item__content), 
+:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-pages-list__item button.wp-block-navigation-item__content) {
+    padding:.5em 1em
+}*/
+/* Move the submenu icon padding to account for the icon */
+.wp-block-navigation__submenu-container .wp-block-navigation-item.dashicons {
+  margin-right: 0.5em;
+}
+
+.wp-block-navigation__submenu-container .wp-block-navigation-item.dashicons:before {
+  padding-left: 1em;
+}
+
+.wp-block-navigation__submenu-container .wp-block-navigation-item.dashicons > .wp-block-navigation-item__content {
+  padding-left: 0;
+}
+
+.wp-block-navigation__container > .wp-block-navigation-item.dashicons-before {
+  position: relative;
+  margin-left: 1em;
+}
+.wp-block-navigation__container > .wp-block-navigation-item.dashicons-before:before {
+  position: absolute;
+  left: calc(-1em - var(--wp--preset--spacing--20));
 }
 
 /*--------------------------------------------------------------
