@@ -51,6 +51,8 @@ input[type=file] {
 /* For outline style buttons, inherit border color from the text color */
 .wp-block-button.is-style-outline.is-style-outline .wp-block-button__link {
 	color: inherit;
+	background-color: initial;
+	background-image: none;	
 }
 
 /*
