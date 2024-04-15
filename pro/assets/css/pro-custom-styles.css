@@ -66,13 +66,16 @@ angled-top-down-bottom-down
 ## Angled GROUPS use :before and :after
 --------------------------------------------------------------*/
 /* All angled sections need these set */
+/* 
 [class*=is-style-angled-].wp-block-group {
   position: relative;
   overflow: visible;
   z-index: 1;
 }
+ */
 
 /* All angled tops */
+/* 
 [class*=is-style-angled-top-].wp-block-group {
   margin-top: calc(2.61859vw + var(--wp--style--block-gap));
 }
@@ -88,21 +91,27 @@ angled-top-down-bottom-down
   -webkit-backface-visibility: hidden;
 }
 
+ */
 /* Angled top Up */
+/* 
 [class*=is-style-angled-top-up].wp-block-group:before {
   top: 0;
   transform: skewY(-1.5deg);
   transform-origin: 0;
 }
+ */
 
 /* Angled top Down */
+/* 
 [class*=is-style-angled-top-down].wp-block-group:before {
   top: 0;
   transform: skewY(1.5deg);
   transform-origin: 100% 0;
 }
+ */
 
 /* All angled bottoms */
+/* 
 [class*=is-style-angled-bottom-].wp-block-group,
 [class*=is-style-angled-top-up-bottom-].wp-block-group,
 [class*=is-style-angled-top-down-bottom-].wp-block-group {
@@ -121,33 +130,41 @@ angled-top-down-bottom-down
   z-index: -1;
   -webkit-backface-visibility: hidden;
 }
+ */
 
 /* Angled bottom up */
+/* 
 [class*=is-style-angled-top-up-bottom-up].wp-block-group:after,
 [class*=is-style-angled-top-down-bottom-up].wp-block-group:after {
   bottom: 0;
   transform: skewY(-1.5deg);
   transform-origin: 100%;
 }
+ */
 
 /* Angled bottom down */
+/* 
 [class*=is-style-angled-top-up-bottom-down].wp-block-group:after,
 [class*=is-style-angled-top-down-bottom-down].wp-block-group:after {
   bottom: 0;
   transform: skewY(1.5deg);
   transform-origin: 0;
 }
+ */
 
 /*--------------------------------------------------------------
 ## Angled COVER and IMAGE use clip paths
 --------------------------------------------------------------*/
 /* Angled sections using clip paths need relative positioning and hidden overflow */
+/* 
 [class*=is-style-angled-].wp-block-cover,
 [class*=is-style-angled-].wp-block-image img {
   position: relative;
 }
+ */
 
 /* Clip section with a triangle */
+/* 
 .is-style-angled-top-up.wp-block-cover,
 .is-style-angled-top-up.wp-block-image img {
   -webkit-clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% 100%, 0 100%);
@@ -171,8 +188,10 @@ angled-top-down-bottom-down
   -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 36px));
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 36px));
 }
+ */
 
 /* Clip top and bottom with triangles */
+/* 
 .is-style-angled-top-up-bottom-up.wp-block-cover,
 .is-style-angled-top-up-bottom-up.wp-block-image img {
   -webkit-clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% calc(100% - 2 * var(--wp--style--block-gap)), 0 100%);
@@ -196,6 +215,7 @@ angled-top-down-bottom-down
   -webkit-clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% 100%, 0 calc(100% - 2 * var(--wp--style--block-gap)));
   clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% 100%, 0 calc(100% - 2 * var(--wp--style--block-gap)));
 }
+ */
 
 /* Add top padding when top is clipped */
 /*[class*='is-style-angled-top-'].wp-block-cover {
@@ -207,31 +227,41 @@ angled-top-down-bottom-down
 [class*='is-style-angled-top-down-bottom-'].wp-block-cover {
 	padding-bottom: calc( 4 * var(--wp--style--block-gap) );
 }*/
+
 /*--------------------------------------------------------------
 # Custom: Curved Sections
 --------------------------------------------------------------*/
+/* 
 [class*=is-style-curved-] {
   position: relative;
   overflow: hidden;
 }
+ */
 
 /* Curved Bottom Up */
+/* 
 .is-style-curved-bottom-up {
   -webkit-clip-path: ellipse(max(900px, 100vw) 100% at 50% 0);
   clip-path: ellipse(max(900px, 100vw) 100% at 50% 0);
   padding-bottom: calc(3 * var(--wp--style--block-gap)) !important;
 }
+ */
 
 /* Curved Top Down */
+/* 
 .is-style-curved-top-down {
   -webkit-clip-path: ellipse(max(900px, 100vw) 100% at 50% 100%);
   clip-path: ellipse(max(900px, 100vw) 100% at 50% 100%);
+ */
   /*-webkit-clip-path: ellipse(min(900px, 100vw) 100% at 50% 100%);
   clip-path: ellipse(min(900px, 100vw) 100% at 50% 100%);*/
+/* 
   padding-top: calc(4 * var(--wp--style--block-gap)) !important;
 }
+ */
 
 /* Curved Top Down & Bottom Up */
+/* 
 .is-style-curved-top-down.is-style-curved-bottom-up,
 .is-style-curved-top-down-bottom-up {
   -webkit-clip-path: ellipse(min(900px, 100vw) 100% at 50% 100%);
@@ -241,6 +271,7 @@ angled-top-down-bottom-down
   clip-path: ellipse(max(900px, 100vw) 100% at 50% 0);
   padding-bottom: calc(3 * var(--wp--style--block-gap)) !important;
 }
+ */
 
 /* Curved Up Top */
 /* TO-DO: Get this working. Using mask? */
@@ -252,6 +283,7 @@ angled-top-down-bottom-down
     padding-top: calc( 4 * var(--wp--style--block-gap) ) !important;
 
 }*/
+/* 
 .is-style-curved-top-up {
   position: relative;
   padding-top: calc(6 * var(--wp--style--block-gap));
@@ -268,6 +300,7 @@ angled-top-down-bottom-down
   top: 0;
   width: 100%;
 }
+ */
 
 /*--------------------------------------------------------------
 # Custom: List Dividers (Lists, Latest Posts, Latest Comments)
