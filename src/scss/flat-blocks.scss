@@ -12,7 +12,7 @@
  */
 
 /*--------------------------------------------------------------
-# CRITICAL BASE STYLES
+# BASE STYLES
 --------------------------------------------------------------*/
 @use "base/normalize";
 @use "base/elements";
@@ -20,6 +20,7 @@
 @use "base/forms";
 @use "base/alignments";
 @use "base/colors";
+//@use "base/compat";
 
 /*--------------------------------------------------------------
 # CRITICAL BLOCKS
@@ -54,7 +55,7 @@
 //@use "blocks/tag-cloud";
 
 /*--------------------------------------------------------------
-# ADDITIONAL CRITICAL BASE STYLES
+# ADDITIONAL BASE STYLES
 --------------------------------------------------------------*/
 @use "base/utilities";
 @use "base/dashicons";
