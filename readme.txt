@@ -161,6 +161,7 @@ July 20, 2024
 	* Remove underline on Calendar navigation links since we were required to default links to underline per WordPress theme guidelines.
 Other:
 	* Fix font color on Title and Text pattern to use Foreground Alt since the background color is dark. 
+	* Softened the shadow on the Outline and Crisp box shadow styles. 
 
 = 1.5 = 
 Apr 7, 2024
