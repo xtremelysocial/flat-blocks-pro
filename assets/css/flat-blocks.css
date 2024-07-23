@@ -103,7 +103,7 @@ input[type=submit][class*=button],
 input[type=reset][class*=button],
 input[type=file]::file-selector-button {
   color: var(--wp--preset--color--foreground-alt);
-  background-color: var(--wp--preset--color--primary);
+  background-color: var(--wp--custom--link--color);
   border: none;
   border-width: 0;
   border-radius: var(--wp--custom--border--radius);
@@ -1267,7 +1267,7 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
 }
 
 /* But REMOVE duplicate padding */
-.has-global-padding :where(.has-global-padding),
+.has-global-padding :where(.has-global-padding):not(.has-background),
 .has-global-padding > .alignfull:where(:not(.has-global-padding)) > :where(.wp-block-image) {
   padding-left: 0;
   padding-right: 0;
