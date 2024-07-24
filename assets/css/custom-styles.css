@@ -1,1 +1,737 @@
-﻿.wp-block-calendar table:where(:not(.has-text-color)){color:var(--wp--preset--color--foreground)}.wp-block-calendar table th:not(.has-text-color){color:var(--wp--preset--color--dark)}.comment-reply-title{margin-top:0}#post-comments{margin-bottom:var(--wp--style--block-gap)}.wp-block-comments-pagination .page-numbers:nth-last-child(n+2){padding-right:var(--wp--preset--spacing--30)}.wp-block-comments.is-style-rounded-border,.wp-block-comments-query-loop.is-style-rounded-border{border:1px solid var(--wp--custom--border--color);border-radius:var(--wp--custom--border--radius);padding:var(--wp--preset--spacing--40)}.wp-block-details:not(.has-text-color)>summary{color:var(--wp--custom--link--color);font-weight:var(--wp--custom--typography--font-weight--medium);transition:color var(--wp--custom--animation--duration--medium) var(--wp--custom--animation--timing-function)}.wp-block-details:not(.has-text-color)>summary:hover,.wp-block-details:not(.has-text-color)[open]>summary{color:var(--wp--custom--link--hover)}.wp-block-post-featured-image img{padding:var(--wp--custom--border--radius);box-shadow:var(--wp--custom--shadow--default)}.wp-block-post-featured-image.is-style-image-no-border img{border:none;border-radius:0;padding:0}.wp-block-latest-comments{list-style:none}.wp-block-latest-comments__comment{margin-bottom:0}.wp-block-latest-comments li{margin-bottom:var(--wp--preset--spacing--30)}.wp-block-latest-comments:not(.is-style-bullets){padding-left:0}.wp-block-latest-comments.is-style-bullets:not(.has-avatars){padding-left:2em}.wp-block-latest-comments.is-style-bullets{list-style:disc}.wp-block-latest-comments.is-style-bullets li{list-style:disc;margin-bottom:0}.wp-block-latest-comments.is-style-bullets.has-avatars .wp-block-latest-comments__comment{list-style-position:inside}.wp-block-latest-comments.is-style-link-underline a,.wp-block-latest-comments.is-style-link-underline a:active{text-decoration:underline !important}.wp-block-latest-comments.is-style-link-underline a:hover{opacity:.8}.wp-block-latest-comments.is-style-link-no-underline a,.wp-block-latest-comments.is-style-link-no-underline a:active{text-decoration:none !important}.wp-block-latest-comments.is-style-link-no-underline a:hover{opacity:.8}.wp-block-latest-comments.is-style-link-underline-hover a:hover{opacity:1;text-decoration:underline}.wp-block-latest-posts.is-grid .wp-block-latest-posts__post-title{font-size:var(--wp--preset--font-size--medium)}.wp-block-latest-posts__featured-image{border-radius:var(--wp--custom--border--radius);border:1px solid var(--wp--custom--border--color);padding:var(--wp--custom--border--radius) var(--wp--custom--border--radius) 0 var(--wp--custom--border--radius);box-shadow:var(--wp--custom--shadow--default)}.wp-block-latest-posts__featured-image img{border-radius:var(--wp--custom--border--radius)}.wp-block-latest-posts__featured-image.aligncenter{margin-bottom:var(--wp--preset--spacing--30)}.wp-block-latest-posts:not(.is-grid) li{margin-bottom:var(--wp--preset--spacing--30)}.wp-block-latest-posts.is-grid li{margin-bottom:0}@media only screen and (max-width: 601px){.wp-block-latest-posts.is-grid li{margin-right:0}}.wp-block-post-featured-image.is-style-image-no-border img{border:none;border-radius:0;padding:0}.wp-block-latest-posts.is-style-bullets.wp-block-latest-posts__list:not(.is-grid){list-style:disc;padding-left:2em}.wp-block-latest-posts.is-style-bullets:not(.is-grid) li{list-style:disc;overflow:visible;margin-bottom:0}.wp-block-latest-posts.is-style-link-underline a,.wp-block-latest-posts.is-style-link-underline a:active{text-decoration:underline !important}.wp-block-latest-posts.is-style-link-underline a:hover{opacity:.8}.wp-block-latest-posts.is-style-link-no-underline a,.wp-block-latest-posts.is-style-link-no-underline a:active{text-decoration:none !important}.wp-block-latest-posts.is-style-link-no-underline a:hover{opacity:.8}.wp-block-latest-posts.is-style-link-underline-hover a:hover{opacity:1;text-decoration:underline}ul.is-style-list-checkmarks,ol.is-style-list-checkmarks{list-style:none}ul.is-style-list-checkmarks>li,ol.is-style-list-checkmarks>li{position:relative}ul.is-style-list-checkmarks>li:before,ol.is-style-list-checkmarks>li:before{font-family:dashicons;content:"";position:absolute;left:calc(-8px - 1em);top:.14285714em;text-align:center;transition:color .1s ease-in}.rtl ul.is-style-list-checkmarks>li:before,.rtl ol.is-style-list-checkmarks>li:before{left:0;right:calc(-8px - 1em)}ul.is-style-list-plain,ul.is-style-list-plain ul,ol.is-style-list-plain ol,ol.is-style-list-plain{list-style:none;padding-left:0}ul.is-style-list-plain li,ol.is-style-list-plain li{margin-bottom:var(--wp--preset--spacing--30)}ul.is-style-list-plain:not(.has-background),ol.is-style-list-plain:not(.has-background){margin-left:0}ul.is-style-list-plain:not(.has-background) li,ol.is-style-list-plain:not(.has-background) li{margin-left:0}ul.is-style-list-plain:not(.has-background) li ul li,ol.is-style-list-plain:not(.has-background) li ul li{padding-left:var(--wp--preset--spacing--40)}ul.is-style-list-plain-centered,ul.is-style-list-plain-centered ul,ol.is-style-list-plain-centered,ol.is-style-list-plain-centered ol{list-style:none;padding-left:0;margin-left:0;text-align:center}ul.is-style-list-plain-centered li,ol.is-style-list-plain-centered li{margin-left:0}li.is-style-link-underline a,li.is-style-link-underline a:active{text-decoration:underline}li.is-style-link-underline a:hover{opacity:.8}li.is-style-link-no-underline a,li.is-style-link-no-underline a:active{text-decoration:none}li.is-style-link-no-underline a:hover{opacity:.8}li.is-style-link-underline-hover a:hover{opacity:1;text-decoration:underline}.wp-block-media-text .wp-block-media-text__content{padding-left:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40)}@media only screen and (max-width: 601px){.wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content{padding-left:0;padding-right:0}}.wp-block-media-text.is-style-media-text-border{padding:var(--wp--custom--border--radius);border:3px solid var(--wp--custom--border--color);border-radius:var(--wp--custom--border--radius)}@media only screen and (max-width: 601px){.wp-block-media-text.is-style-media-text-border.is-stacked-on-mobile .wp-block-media-text__content{padding-left:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40)}}.wp-block-page-list.is-style-link-underline a,.wp-block-page-list.is-style-link-underline a:active{text-decoration:underline !important}.wp-block-page-list.is-style-link-underline a:hover{opacity:.8}.wp-block-page-list.is-style-link-no-underline a,.wp-block-page-list.is-style-link-no-underline a:active{text-decoration:none !important}.wp-block-page-list.is-style-link-no-underline a:hover{opacity:.8}.wp-block-page-list.is-style-link-underline-hover a:hover{opacity:1;text-decoration:underline}.wp-block-post-author:before{font-family:dashicons;content:"";margin-right:var(--wp--preset--spacing--20)}.rtl .wp-block-post-author:before{padding-right:0;margin-right:0;margin-left:var(--wp--preset--spacing--20)}.wp-block-post-author__avatar{margin-right:var(--wp--style--block-gap)}.wp-block-post-author__avatar img{border-radius:50%;margin:0}.wp-block-post-author__bio{font-size:var(--wp--preset--font-size--normal);margin-top:var(--wp--style--block-gap);margin-bottom:var(--wp--style--block-gap)}.wp-block-post-author.is-style-no-icon:before{display:none}.wp-block-post-comments-count:before{font-family:dashicons;content:"";margin-right:var(--wp--preset--spacing--20)}.rtl .wp-block-post-comments-count:before{padding-right:0;margin-right:0;margin-left:var(--wp--preset--spacing--20)}.wp-block-post-comments-count:after{content:" comment(s)"}.wp-block-post-comments-count.is-style-no-icon:before{display:none}.wp-block-post-comments-form label{font-weight:var(--wp--custom--typography--font-weight--medium)}.wp-block-post-comments-form input[type=submit].wp-element-button{box-shadow:var(--wp--custom--shadow--default)}.wp-block-post-date:before{font-family:dashicons;content:"";margin-right:var(--wp--preset--spacing--20)}.rtl .wp-block-post-date:before{padding-right:0;margin-right:0;margin-left:var(--wp--preset--spacing--20)}.wp-block-post-date.is-style-no-icon:before{display:none}.wp-block-post-excerpt.is-style-no-readmore>.wp-block-post-excerpt__more-text{display:none}.wp-block-post-terms.taxonomy-category:before{font-family:dashicons;content:"";margin-right:var(--wp--preset--spacing--20)}.wp-block-post-terms.taxonomy-post_tag:before{font-family:dashicons;content:"";margin-right:var(--wp--preset--spacing--20)}.rtl .wp-block-post-terms:before{padding-right:0;margin-right:0;margin-left:var(--wp--preset--spacing--20)}.wp-block-term-description p{margin-block-start:0;margin-block-end:0}.wp-block-post-terms.is-style-no-icon:before{display:none}.wp-block-post-title.is-style-link-underline a,.wp-block-page-list.is-style-link-underline a:active{text-decoration:underline !important}.wp-block-post-title.is-style-link-underline a:hover{opacity:.8}.wp-block-post-title.is-style-link-no-underline a,.wp-block-post-title.is-style-link-no-underline a:active{text-decoration:none !important}.wp-block-post-title.is-style-link-no-underline a:hover{opacity:.8}.wp-block-post-title.is-style-link-underline-hover a:hover{opacity:1;text-decoration:underline}.wp-block-query-pagination-numbers .page-numbers:nth-last-child(n+2){padding-right:var(--wp--preset--spacing--30)}.wp-block-quote cite,.wp-block-pullquote cite{display:inline-block}.wp-block-pullquote p{margin-top:0}.wp-block-query.is-style-no-padding{padding-top:0;padding-bottom:0}.wp-block-query.is-style-no-padding:not(.has-global-padding){padding-left:0 !important;padding-right:0 !important}.wp-block-separator.alignfull{margin-left:auto !important;margin-right:auto !important}.wp-block-separator.is-style-wide,.wp-block-separator.is-style-dots{width:100% !important}.wp-block-separator.is-style-thick{border-width:0 0 3px}.wp-block-separator.is-style-thick-wide{border-width:0 0 3px;width:100%}.wp-block-social-links{display:flex;gap:var(--wp--style--block-gap)}.wp-block-social-links.has-small-icon-size{font-size:22px}.wp-block-social-links.has-normal-icon-size{font-size:26px}.wp-block-social-link{transition:transform var(--wp--custom--animation--duration--medium) ease-in-out}.wp-block-table{overflow-x:scroll}.wp-block-table.is-style-stripes{border-bottom:none}.wp-block-table.is-style-stripes .wp-element-caption{border-top:1px solid}.wp-block-table.is-style-stripes tbody tr:nth-child(odd){background-color:var(--wp--preset--color--neutral)}.wp-block-table.is-style-stripes table:not(.has-text-color) tbody tr:nth-child(odd){color:var(--wp--preset--color--very-dark-gray)}.wp-block-tag-cloud.is-style-outline .tag-cloud-link{border-radius:var(--wp--custom--border--radius);padding:var(--wp--preset--spacing--20) var(--wp--preset--spacing--30)}
+/**
+ * File:	custom-styles.css
+ * Theme:	Flat Blocks
+ * 
+ * The stylesheet for the Flat Block theme's CUSTOM block styles
+ *
+ * NOTE: This file is AUTO-GENERATED from the SASS source files 
+ * in /src/sass/custom-styles.scss. Do not make updates here.
+ * 
+ * @package flat-blocks
+ * @since 	1.0
+ */
+/*--------------------------------------------------------------
+# ADDITIONAL BLOCK STYLES
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Calendar
+--------------------------------------------------------------*/
+.wp-block-calendar table:where(:not(.has-text-color)) {
+  color: var(--wp--preset--color--foreground);
+}
+
+.wp-block-calendar table th:not(.has-text-color) {
+  color: var(--wp--preset--color--dark);
+}
+
+/*--------------------------------------------------------------
+# Comments
+--------------------------------------------------------------*/
+/* Reduce top margin on "Leave a Reply" */
+.comment-reply-title {
+  margin-top: 0;
+}
+
+/* Match our bottom margin */
+#post-comments {
+  margin-bottom: var(--wp--style--block-gap);
+}
+
+/* Hide empty comments so no extra vertical margin */
+/*#post-comments:empty {
+	display: none;
+	margin-top: 0;
+}*/
+/* Add padding to comment page numbers */
+.wp-block-comments-pagination .page-numbers:nth-last-child(n+2) {
+  padding-right: var(--wp--preset--spacing--30);
+}
+
+/*--------------------------------------------------------------
+# Comments: Custom
+--------------------------------------------------------------*/
+/* Rounded borders */
+.wp-block-comments.is-style-rounded-border,
+.wp-block-comments-query-loop.is-style-rounded-border {
+  border: 1px solid var(--wp--custom--border--color);
+  border-radius: var(--wp--custom--border--radius);
+  padding: var(--wp--preset--spacing--40);
+}
+
+/*--------------------------------------------------------------
+# Details
+--------------------------------------------------------------*/
+/* Closed Summary will have primary font color */
+.wp-block-details:not(.has-text-color) > summary {
+  color: var(--wp--custom--link--color);
+  font-weight: var(--wp--custom--typography--font-weight--medium);
+  transition: color var(--wp--custom--animation--duration--medium) var(--wp--custom--animation--timing-function);
+}
+
+/* Highlight Summary on hover and when open */
+.wp-block-details:not(.has-text-color) > summary:hover,
+.wp-block-details:not(.has-text-color)[open] > summary {
+  color: var(--wp--custom--link--hover);
+}
+
+/*--------------------------------------------------------------
+# Post Featured Image
+--------------------------------------------------------------*/
+.wp-block-post-featured-image img {
+  padding: var(--wp--custom--border--radius);
+  box-shadow: var(--wp--custom--shadow--default);
+}
+
+/*--------------------------------------------------------------
+# Post Featured Image: Custom
+--------------------------------------------------------------*/
+/* Featured Image no border */
+.wp-block-post-featured-image.is-style-image-no-border img {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Latest Comments
+--------------------------------------------------------------*/
+/* 
+ * Set default latest comments to match latest posts, which has 
+ * no bullets or indent 
+ */
+.wp-block-latest-comments {
+  list-style: none;
+}
+
+.wp-block-latest-comments__comment {
+  margin-bottom: 0;
+}
+
+/* Add some padding to plain posts list */
+.wp-block-latest-comments li {
+  margin-bottom: var(--wp--preset--spacing--30);
+}
+
+/*--------------------------------------------------------------
+# Latest Comments: Custom
+--------------------------------------------------------------*/
+/* Default latest comments style to no bullets */
+.wp-block-latest-comments:not(.is-style-bullets) {
+  padding-left: 0;
+}
+
+/* Front-end Add bullets and padding */
+.wp-block-latest-comments.is-style-bullets:not(.has-avatars) {
+  padding-left: 2em; /*var(--wp--preset--spacing--60);*/
+}
+
+.wp-block-latest-comments.is-style-bullets {
+  list-style: disc;
+}
+
+.wp-block-latest-comments.is-style-bullets li {
+  list-style: disc;
+  margin-bottom: 0;
+}
+
+.wp-block-latest-comments.is-style-bullets.has-avatars .wp-block-latest-comments__comment {
+  list-style-position: inside;
+}
+
+/* Underline links */
+.wp-block-latest-comments.is-style-link-underline a,
+.wp-block-latest-comments.is-style-link-underline a:active {
+  text-decoration: underline !important;
+}
+
+.wp-block-latest-comments.is-style-link-underline a:hover {
+  opacity: 0.8;
+}
+
+/* No Underline links */
+.wp-block-latest-comments.is-style-link-no-underline a,
+.wp-block-latest-comments.is-style-link-no-underline a:active {
+  text-decoration: none !important;
+}
+
+.wp-block-latest-comments.is-style-link-no-underline a:hover {
+  opacity: 0.8;
+}
+
+/* Underline links on hover */
+.wp-block-latest-comments.is-style-link-underline-hover a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+# Latest Posts
+--------------------------------------------------------------*/
+/* Increase post title size */
+.wp-block-latest-posts.is-grid .wp-block-latest-posts__post-title {
+  font-size: var(--wp--preset--font-size--medium);
+}
+
+/* Set post thumbnails to match blog */
+.wp-block-latest-posts__featured-image {
+  border-radius: var(--wp--custom--border--radius);
+  border: 1px solid var(--wp--custom--border--color);
+  padding: var(--wp--custom--border--radius);
+  box-shadow: var(--wp--custom--shadow--default);
+}
+
+.wp-block-latest-posts__featured-image img {
+  border-radius: var(--wp--custom--border--radius);
+}
+
+.wp-block-latest-posts__featured-image.aligncenter {
+  margin-bottom: var(--wp--preset--spacing--30);
+}
+
+/* Add some padding to plain posts list */
+.wp-block-latest-posts:not(.is-grid) li {
+  margin-bottom: var(--wp--preset--spacing--30);
+}
+
+/* Remove extra bottom padding on posts grid */
+.wp-block-latest-posts.is-grid li {
+  margin-bottom: 0;
+}
+
+/* Override horizontal padding on mobile 
+ *
+ * Note: Breakpoint of 601 is what is hard-coded in WordPress v6.0+
+ * to collapse media & text and latest posts grid 
+ */
+@media only screen and (max-width: 601px) {
+  .wp-block-latest-posts.is-grid li {
+    margin-right: 0;
+  }
+}
+/*--------------------------------------------------------------
+# Latest Posts: Custom
+--------------------------------------------------------------*/
+/* Image no border */
+.wp-block-post-featured-image.is-style-image-no-border img {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+/* Bullets */
+.wp-block-latest-posts.is-style-bullets.wp-block-latest-posts__list:not(.is-grid) {
+  list-style: disc;
+  padding-left: 2em;
+}
+
+.wp-block-latest-posts.is-style-bullets:not(.is-grid) li {
+  list-style: disc;
+  overflow: visible;
+  margin-bottom: 0;
+}
+
+/* Underline links */
+.wp-block-latest-posts.is-style-link-underline a,
+.wp-block-latest-posts.is-style-link-underline a:active {
+  text-decoration: underline !important;
+}
+
+.wp-block-latest-posts.is-style-link-underline a:hover {
+  opacity: 0.8;
+}
+
+/* No Underline links */
+.wp-block-latest-posts.is-style-link-no-underline a,
+.wp-block-latest-posts.is-style-link-no-underline a:active {
+  text-decoration: none !important;
+}
+
+.wp-block-latest-posts.is-style-link-no-underline a:hover {
+  opacity: 0.8;
+}
+
+/* Underline links on hover */
+.wp-block-latest-posts.is-style-link-underline-hover a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+# List: Custom
+--------------------------------------------------------------*/
+/* Checkmarks */
+ul.is-style-list-checkmarks,
+ol.is-style-list-checkmarks {
+  list-style: none;
+}
+
+ul.is-style-list-checkmarks > li,
+ol.is-style-list-checkmarks > li {
+  position: relative;
+}
+
+/* dashicons-saved */
+ul.is-style-list-checkmarks > li:before,
+ol.is-style-list-checkmarks > li:before {
+  font-family: dashicons;
+  content: "\f15e";
+  position: absolute;
+  left: calc(-8px - 1em);
+  top: 0.14285714em;
+  text-align: center;
+  transition: color 0.1s ease-in;
+}
+
+.rtl ul.is-style-list-checkmarks > li:before,
+.rtl ol.is-style-list-checkmarks > li:before {
+  left: 0;
+  right: calc(-8px - 1em);
+}
+
+/* Plain */
+ul.is-style-list-plain,
+ul.is-style-list-plain ul,
+ol.is-style-list-plain ol,
+ol.is-style-list-plain {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul.is-style-list-plain li,
+ol.is-style-list-plain li {
+  margin-bottom: var(--wp--preset--spacing--30);
+}
+
+ul.is-style-list-plain:not(.has-background),
+ol.is-style-list-plain:not(.has-background) {
+  margin-left: 0;
+}
+
+ul.is-style-list-plain:not(.has-background) li,
+ol.is-style-list-plain:not(.has-background) li {
+  margin-left: 0;
+}
+
+ul.is-style-list-plain:not(.has-background) li ul li,
+ol.is-style-list-plain:not(.has-background) li ul li {
+  padding-left: var(--wp--preset--spacing--40);
+}
+
+/* Plain Centered */
+ul.is-style-list-plain-centered,
+ul.is-style-list-plain-centered ul,
+ol.is-style-list-plain-centered,
+ol.is-style-list-plain-centered ol {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+  text-align: center;
+}
+
+ul.is-style-list-plain-centered li,
+ol.is-style-list-plain-centered li {
+  margin-left: 0;
+}
+
+/*--------------------------------------------------------------
+# List Items: Custom
+--------------------------------------------------------------*/
+/* Underline links */
+li.is-style-link-underline a,
+li.is-style-link-underline a:active {
+  text-decoration: underline;
+}
+
+li.is-style-link-underline a:hover {
+  opacity: 0.8;
+}
+
+/* No Underline links */
+li.is-style-link-no-underline a,
+li.is-style-link-no-underline a:active {
+  text-decoration: none;
+}
+
+li.is-style-link-no-underline a:hover {
+  opacity: 0.8;
+}
+
+/* Underline links on hover */
+li.is-style-link-underline-hover a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+# Media & Text
+--------------------------------------------------------------*/
+/* Match our padding */
+.wp-block-media-text .wp-block-media-text__content {
+  padding-left: var(--wp--preset--spacing--40);
+  padding-right: var(--wp--preset--spacing--40);
+}
+
+/* Override horizontal padding on mobile 
+ *
+ * Note: Breakpoint of 601 is what is hard-coded in WordPress v6.0+
+ * to collapse media & text and latest posts grid
+ */
+@media only screen and (max-width: 601px) {
+  .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+/*--------------------------------------------------------------
+# Media & Text: Custom
+--------------------------------------------------------------*/
+/* Media & Text Border */
+.wp-block-media-text.is-style-media-text-border {
+  padding: var(--wp--custom--border--radius);
+  border: 3px solid var(--wp--custom--border--color);
+  border-radius: var(--wp--custom--border--radius);
+}
+
+/* 
+ * Override horizontal padding on mobile 
+ *
+ * Note: Breakpoint of 601 is what is hard-coded in WordPress v6.0+
+ * to collapse media & text and latest posts grid 
+ */
+@media only screen and (max-width: 601px) {
+  .wp-block-media-text.is-style-media-text-border.is-stacked-on-mobile .wp-block-media-text__content {
+    padding-left: var(--wp--preset--spacing--40);
+    padding-right: var(--wp--preset--spacing--40);
+  }
+}
+/*--------------------------------------------------------------
+# Page List: Custom
+--------------------------------------------------------------*/
+/* Underline links */
+.wp-block-page-list.is-style-link-underline a,
+.wp-block-page-list.is-style-link-underline a:active {
+  text-decoration: underline !important;
+}
+
+.wp-block-page-list.is-style-link-underline a:hover {
+  opacity: 0.8;
+}
+
+/* No Underline links */
+.wp-block-page-list.is-style-link-no-underline a,
+.wp-block-page-list.is-style-link-no-underline a:active {
+  text-decoration: none !important;
+}
+
+.wp-block-page-list.is-style-link-no-underline a:hover {
+  opacity: 0.8;
+}
+
+/* Underline links on hover */
+.wp-block-page-list.is-style-link-underline-hover a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+# Post Author
+--------------------------------------------------------------*/
+/* dashicons-admin-users */
+.wp-block-post-author:before {
+  font-family: dashicons;
+  content: "\f110";
+  margin-right: var(--wp--preset--spacing--20);
+}
+
+.rtl .wp-block-post-author:before {
+  padding-right: 0;
+  margin-right: 0;
+  margin-left: var(--wp--preset--spacing--20);
+}
+
+.wp-block-post-author__avatar {
+  margin-right: var(--wp--style--block-gap);
+}
+
+.wp-block-post-author__avatar img {
+  border-radius: 50%;
+  margin: 0;
+}
+
+.wp-block-post-author__bio {
+  font-size: var(--wp--preset--font-size--normal);
+  margin-top: var(--wp--style--block-gap);
+  margin-bottom: var(--wp--style--block-gap);
+}
+
+/*--------------------------------------------------------------
+# Post Author: Custom
+--------------------------------------------------------------*/
+.wp-block-post-author.is-style-no-icon:before {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+# Post Comments Count
+--------------------------------------------------------------*/
+/* dashicons-admin-comments for comments count */
+.wp-block-post-comments-count:before {
+  font-family: dashicons;
+  content: "\f101";
+  margin-right: var(--wp--preset--spacing--20);
+}
+
+.rtl .wp-block-post-comments-count:before {
+  padding-right: 0;
+  margin-right: 0;
+  margin-left: var(--wp--preset--spacing--20);
+}
+
+/* 
+ * Add word "comment(s)" after post comment count. Note this is 
+ * only available with the Gutenberg plugin. 
+ */
+.wp-block-post-comments-count:after {
+  content: " comment(s)";
+}
+
+/*--------------------------------------------------------------
+# Post Comments Count: Custom
+--------------------------------------------------------------*/
+.wp-block-post-comments-count.is-style-no-icon:before {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+# Post Comments Form
+--------------------------------------------------------------*/
+/* Set medium font weight on comment form labels */
+.wp-block-post-comments-form label {
+  font-weight: var(--wp--custom--typography--font-weight--medium);
+}
+
+/* Override no-shadow if our custom shadow default is set */
+.wp-block-post-comments-form input[type=submit].wp-element-button {
+  box-shadow: var(--wp--custom--shadow--default);
+}
+
+/*--------------------------------------------------------------
+# Post Date
+--------------------------------------------------------------*/
+/* dashicons-calendar-alt */
+.wp-block-post-date:before {
+  font-family: dashicons;
+  content: "\f508";
+  margin-right: var(--wp--preset--spacing--20);
+}
+
+.rtl .wp-block-post-date:before {
+  padding-right: 0;
+  margin-right: 0;
+  margin-left: var(--wp--preset--spacing--20);
+}
+
+/*--------------------------------------------------------------
+# Post Date: Custom
+--------------------------------------------------------------*/
+.wp-block-post-date.is-style-no-icon:before {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+# Post Excerpt: Custom
+--------------------------------------------------------------*/
+/* HIDE read more text and link */
+.wp-block-post-excerpt.is-style-no-readmore > .wp-block-post-excerpt__more-text {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+# Post Terms:
+--------------------------------------------------------------*/
+/* dashicons-tag */
+.wp-block-post-terms.taxonomy-category:before {
+  font-family: dashicons;
+  content: "\f318";
+  margin-right: var(--wp--preset--spacing--20);
+}
+
+/* dashicons-category */
+.wp-block-post-terms.taxonomy-post_tag:before {
+  font-family: dashicons;
+  content: "\f323";
+  margin-right: var(--wp--preset--spacing--20);
+}
+
+.rtl .wp-block-post-terms:before {
+  padding-right: 0;
+  margin-right: 0;
+  margin-left: var(--wp--preset--spacing--20);
+}
+
+/* Remove bottom margin on Category and Tag descriptions */
+.wp-block-term-description p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/*--------------------------------------------------------------
+# Post Terms: Custom
+--------------------------------------------------------------*/
+.wp-block-post-terms.is-style-no-icon:before {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+# Post Title: Custom
+--------------------------------------------------------------*/
+/* Underline links */
+.wp-block-post-title.is-style-link-underline a,
+.wp-block-page-list.is-style-link-underline a:active {
+  text-decoration: underline !important;
+}
+
+.wp-block-post-title.is-style-link-underline a:hover {
+  opacity: 0.8;
+}
+
+/* No Underline links */
+.wp-block-post-title.is-style-link-no-underline a,
+.wp-block-post-title.is-style-link-no-underline a:active {
+  text-decoration: none !important;
+}
+
+.wp-block-post-title.is-style-link-no-underline a:hover {
+  opacity: 0.8;
+}
+
+/* Underline links on hover */
+.wp-block-post-title.is-style-link-underline-hover a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+# Query Pagination
+--------------------------------------------------------------*/
+.wp-block-query-pagination-numbers .page-numbers:nth-last-child(n+2) {
+  padding-right: var(--wp--preset--spacing--30);
+}
+
+/*--------------------------------------------------------------
+# Quote
+--------------------------------------------------------------*/
+/* OVERRIDE quote citation to be on new line */
+.wp-block-quote cite,
+.wp-block-pullquote cite {
+  display: inline-block;
+}
+
+/* REMOVE top margin because we use padding instead */
+.wp-block-pullquote p {
+  margin-top: 0;
+}
+
+/*--------------------------------------------------------------
+# Custom: Query
+--------------------------------------------------------------*/
+.wp-block-query.is-style-no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.wp-block-query.is-style-no-padding:not(.has-global-padding) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/*--------------------------------------------------------------
+# Separator
+--------------------------------------------------------------*/
+/* FIX to center default (narrow) separator when user selects alignfull */
+.wp-block-separator.alignfull {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Override our short width for wide and dotted separators */
+.wp-block-separator.is-style-wide,
+.wp-block-separator.is-style-dots {
+  width: 100% !important;
+}
+
+/*--------------------------------------------------------------
+# Separator: Custom
+--------------------------------------------------------------*/
+.wp-block-separator.is-style-thick {
+  border-width: 0 0 3px;
+}
+
+.wp-block-separator.is-style-thick-wide {
+  border-width: 0 0 3px;
+  width: 100%;
+}
+
+/*.wp-block-separator.is-style-clearfix {
+	border-width: 0;
+	margin: 0;
+}*/
+/*--------------------------------------------------------------
+# Social Links (Icons)
+--------------------------------------------------------------*/
+/* Set some defaults. These are needed for WordPres.org theme preview */
+.wp-block-social-links {
+  display: flex;
+  gap: var(--wp--style--block-gap);
+}
+
+/* Adjust icon sizes */
+.wp-block-social-links.has-small-icon-size {
+  font-size: 22px;
+}
+
+.wp-block-social-links.has-normal-icon-size {
+  font-size: 26px;
+}
+
+/* Adjust animation on social icons to better match our other animation */
+.wp-block-social-link {
+  transition: transform var(--wp--custom--animation--duration--medium) ease-in-out;
+}
+
+/*--------------------------------------------------------------
+# Table
+--------------------------------------------------------------*/
+/* Allow tables to scroll on mobile */
+.wp-block-table {
+  overflow-x: scroll;
+}
+
+/* On striped tables, move the bottom line above the fig caption */
+.wp-block-table.is-style-stripes {
+  border-bottom: none;
+}
+
+.wp-block-table.is-style-stripes .wp-element-caption {
+  border-top: 1px solid;
+}
+
+/* On striped tables, use our neutral color for odd rows */
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+  background-color: var(--wp--preset--color--neutral);
+}
+
+.wp-block-table.is-style-stripes table:not(.has-text-color) tbody tr:nth-child(odd) {
+  color: var(--wp--preset--color--very-dark-gray);
+}
+
+/*.wp-block-table.is-style-stripes tbody tr:nth-child(even) {
+    background-color: var(--wp--preset--color--neutral-alt);
+}*/
+/*--------------------------------------------------------------
+# Tag or Category Cloud
+--------------------------------------------------------------*/
+.wp-block-tag-cloud.is-style-outline .tag-cloud-link {
+  border-radius: var(--wp--custom--border--radius);
+  padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30);
+}
