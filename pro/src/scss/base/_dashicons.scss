@@ -83,7 +83,8 @@
 :where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-pages-list__item button.wp-block-navigation-item__content) {
     padding:.5em 1em
 }*/
-/* Move the submenu icon padding */
+
+/* Move the submenu icon padding to account for the icon */
 .wp-block-navigation__submenu-container .wp-block-navigation-item.dashicons {
 	margin-right: .5em;
 }
@@ -96,3 +97,12 @@
 	padding-left: 0;
 }
 
+.wp-block-navigation__container > .wp-block-navigation-item.dashicons-before {
+	position: relative;
+	margin-left: 1em;
+	
+	&:before {
+		position: absolute;
+		left: calc(-1em - var(--wp--preset--spacing--20)); 
+	}
+}

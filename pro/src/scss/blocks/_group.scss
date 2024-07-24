@@ -6,11 +6,8 @@
 ## Group Drop Shadow
 --------------------------------------------------------------*/
 
-/* On groups, add background and border radius */
-
-/* If no background already, add one and some padding */
 .is-style-drop-shadow.wp-block-group:not(.has-background) {
-	background-color: var(--wp--preset--color--white);
+// 	background-color: var(--wp--preset--color--white);
 	padding: var(--wp--style--block-gap);
 }
 
@@ -22,13 +19,8 @@
 /*--------------------------------------------------------------
 ## Group Scroll Header
 --------------------------------------------------------------*/
-/* Group Scroll header */
+
 .wp-block-group.is-style-scroll-header {
-// 	border: 1px solid var(--wp--custom--border--color);
-// 	border-width: 0 0 1px;
-// 	background-color: var(--wp--preset--color--foreground-alt);
-// 	color: var(--wp--preset--color--very-dark-gray);
-// 	position: fixed;
 	top: 0;
 	left: 0;
 	right: 0;
@@ -42,11 +34,6 @@
 	background-color: var(--wp--preset--color--foreground-alt);
 	color: var(--wp--preset--color--very-dark-gray);
 	position: fixed;
-// 	top: 0;
-// 	left: 0;
-// 	right: 0;
-// 	z-index: 9999;
-// 	transition: all var(--wp--custom--animation--duration--normal, 1s) ease;
 	box-shadow: var(--wp--custom--shadow--default);
 }
 
@@ -98,17 +85,17 @@
 ## Equal Cells (Using Grid)
 --------------------------------------------------------------*/
 /* Display the group as a grid */
-.is-style-equal-grid {
-	display: grid !important;
-}
+// .is-style-equal-grid {
+// 	display: grid !important;
+// }
 
 /* If bigger than mobile, set the grid to equal columns across 2 rows */
-@media (min-width: 601px) {
-	.is-style-equal-grid {
-		grid-auto-flow: column;
-		grid-auto-columns: 1fr;
-	}
-}
+// @media (min-width: 601px) {
+// 	.is-style-equal-grid {
+// 		grid-auto-flow: column;
+// 		grid-auto-columns: 1fr;
+// 	}
+// }
 
 /* If bigger than tablet, set the grid to equal columns */
 /*@media (min-width: 781px) {
@@ -119,24 +106,24 @@
 }*/
 
 /* Within the columns, make the content equal height and width */
-.is-style-equal-grid .wp-block-group-is-layout-flex {
-	flex-grow: 1;
-	align-items: stretch;
-}
+// .is-style-equal-grid .wp-block-group-is-layout-flex {
+// 	flex-grow: 1;
+// 	align-items: stretch;
+// }
 
 /*--------------------------------------------------------------
 ## Equal Cells (Using Flexbox)
 --------------------------------------------------------------*/
 /* Set the group contents to equal width */
-.is-style-equal-flex > * {
-	flex: 1;
-}
+// .is-style-equal-flex > * {
+// 	flex: 1;
+// }
 
 /* Within the columns, make the content equal height and width */
-.is-style-equal-flex .wp-block-group-is-layout-flex {
-	flex-grow: 1;
-	align-items: stretch;
-}
+// .is-style-equal-flex .wp-block-group-is-layout-flex {
+// 	flex-grow: 1;
+// 	align-items: stretch;
+// }
 
 /*--------------------------------------------------------------
 ## Equal Cells (Using Display: Table)
