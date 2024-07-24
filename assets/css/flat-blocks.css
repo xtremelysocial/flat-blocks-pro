@@ -11,7 +11,7 @@
  * @since	1.0
  */
 /*--------------------------------------------------------------
-# BASE STYLES
+# CRITICAL BASE STYLES
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -468,7 +468,7 @@ body .is-layout-constrained > .alignright {
 }
 
 /*--------------------------------------------------------------
-# CRITICAL BLOCK STYLES
+# CRITICAL BLOCKS
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Columns and Column
@@ -1092,7 +1092,7 @@ p.is-style-link-underline-hover a:hover {
 }
 
 /*--------------------------------------------------------------
-# ADDITIONAL BASE STYLES
+# ADDITIONAL CRITICAL BASE STYLES
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Utilities
@@ -1267,7 +1267,7 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
 }
 
 /* But REMOVE duplicate padding */
-.has-global-padding :where(.has-global-padding):not(.has-background),
+.has-global-padding :where(.has-global-padding),
 .has-global-padding > .alignfull:where(:not(.has-global-padding)) > :where(.wp-block-image) {
   padding-left: 0;
   padding-right: 0;
@@ -1282,77 +1282,51 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
 }
 
 /*--------------------------------------------------------------
-# Color compatibility with other themes
+# Compatibility with other themes
 --------------------------------------------------------------*/
 /* 
- * Flat Blocks theme prior to v1.6 used foreground and background
- * colors, so map those to the new contrast and base colors.
+ * TwentyTwentyThree theme uses the same primary, secondary, and 
+ * tertiary as us, but uses base and contrast instead of 
+ * background and foreground.
  * 
- * TwentyTwentyFour theme uses base and contrast in numbered 
- * shades. It also uses accent colors in numbered shades instead 
- * of primary, secondary, and tertiary.
- *
- * Note: TwentyTwentyThree theme uses the same base, contrast, 
- * primary, secondary, and tertiary colors as Flat Blocks.
+ * TwentyTwentyFour theme uses base and contrast in numbered shades
+ * instead of background and foreground. It also uses accent colors 
+ * in numbered shades instead of primary, secondary, and tertiary.
  */
-/*--------------------------------------------------------------
-# Flat Blocks theme prior to v1.6
---------------------------------------------------------------*/
-.has-foreground-color {
-  color: var(--wp--preset--color--contrast);
-}
-
-.has-foreground-background-color {
-  background-color: var(--wp--preset--color--contrast);
-}
-
-.has-foreground-border-color {
-  border-color: var(--wp--preset--color--contrast);
-}
-
-.has-background-color {
-  color: var(--wp--preset--color--base);
-}
-
-.has-background-background-color {
-  background-color: var(--wp--preset--color--base);
-}
-
-.has-background-border-color {
-  border-color: var(--wp--preset--color--base);
-}
-
-/*--------------------------------------------------------------
-# TwentyTwentyFour theme
---------------------------------------------------------------*/
+.has-base-color,
 .has-base-2-color,
 .has-base-3-color {
   color: var(--wp--preset--color--foreground-alt);
 }
 
+.has-base-background-color,
 .has-base-2-background-color,
 .has-base-3-background-color {
   background-color: var(--wp--preset--color--light-gray);
 }
 
+.has-base-border-color,
 .has-base-2-border-color,
 .has-base-3-border-color {
   border-color: var(--wp--preset--color--gray);
 }
 
+.has-contrast-color,
 .has-contrast-2-color,
 .has-contrast-3-color {
-  color: var(--wp--preset--color--contrast);
+  color: var(--wp--preset--color--foreground);
 }
 
+.has-contrast-background-color,
 .has-contrast-2-background-color,
 .has-contrast-3-background-color {
-  background-color: var(--wp--preset--color--contrast);
+  background-color: var(--wp--preset--color--foreground);
 }
 
+.has-contrast-border-color,
 .has-contrast-2-border-color,
 .has-contrast-3-border-color {
-  border-color: var(--wp--preset--color--contrast);
+  border-color: var(--wp--preset--color--foreground);
 }
 
 .has-accent-color,
