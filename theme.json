@@ -177,14 +177,14 @@
 					"name": "Foreground Alt (White)"
 				},
 				{
-					"slug": "background",
+					"slug": "base",
 					"color": "#f2f2f2",
-					"name": "Background (Off White)"
+					"name": "Base / Background (Off White)"
 				},
 				{
-					"slug": "foreground",
+					"slug": "contrast",
 					"color": "#555555",
-					"name": "Foreground (Very Dark Gray)"
+					"name": "Contast / Foreground (Very Dark Gray)"
 				},
 				{
 					"slug": "white",
@@ -897,8 +897,8 @@
 			}
 		},
 		"color": {
-			"background": "var(--wp--preset--color--background)",
-			"text": "var(--wp--preset--color--foreground)"
+			"background": "var(--wp--preset--color--base)",
+			"text": "#555555 /*var(--wp--preset--color--contrast)*/"
 		},
 		"border": {
             "radius": "var(--wp--custom--border--radius)",
@@ -991,7 +991,7 @@
 					"text": "var(--wp--custom--link--color)"
 				},
 				"typography": {
-					"textDecoration": "underline"
+					"textDecoration": "none"
 				},
 				":hover": {
 					"color": {
@@ -1006,18 +1006,27 @@
 			}
 		},
 		"blocks": {
+			"core/post-content": {
+				"elements": {
+					"link": {
+						"typography": {
+							"textDecoration": "underline"
+						}
+					}
+				}
+			},
 			"core/group": {
 				"spacing": {
 					"padding": {
-						"top": {"ref": "styles.spacing.blockGap"},
-						"bottom": {"ref": "styles.spacing.blockGap"}
+						"top": "var:preset|spacing|40",
+						"bottom": "var:preset|spacing|40"
 					}
 				},
 				"css": ".has-background { padding: calc(2 * var(--wp--style--block-gap)) }"
 			},
 			"core/columns": {
 				"spacing": {
-				"blockGap": {"ref": "styles.spacing.blockGap"},
+					"blockGap": "var:preset|spacing|40",
 					"margin": {
 						"bottom": "0"
 					}
@@ -1030,8 +1039,6 @@
 			"core/button": {
 				"border": {
 					"width": "0",
-					"style": "solid",
-					"color": "var(--wp--custom--border--color)",
 					"radius": "var(--wp--custom--border--radius)"
 				},
 				"shadow": "var(--wp--custom--shadow--default)",
@@ -1054,8 +1061,7 @@
 					"outline": {
 						"border": {
 							"width": "3px",
-							"style": "solid",
-							"color": "inherit"
+							"style": "solid"
 						},
 						"spacing": {
 							"padding": {
@@ -1123,7 +1129,7 @@
 				"elements": {
 					"button": {
 						"border": {
-							"radius": {"ref": "styles.elements.button.border.radius"}
+							"radius": "var(--wp--custom--border--radius)"
 						}
 					}
 				}

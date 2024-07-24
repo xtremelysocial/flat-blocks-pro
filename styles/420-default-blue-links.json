@@ -2,7 +2,40 @@
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
 	"title": "Default w/Blue Links",
+	"settings": {
+		"custom": {
+			"link": {
+				"color": "var(--wp--preset--color--blue)",
+				"hover": "var(--wp--preset--color--light-blue)"
+			}
+		}
+	},
 	"styles": {
+		"color": {
+			"text": "#555555 /*var(--wp--preset--color--contrast)*/"
+		},
+		"elements": {
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--primary)",
+					"text": "var(--wp--preset--color--foreground-alt)"
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--normal)",
+					"fontStyle": "normal",
+					"fontWeight": "500",
+					"lineHeight": "1.25"
+				},
+				"border": {
+					"radius": "var(--wp--custom--border--radius)"
+				}
+			},
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--blue)"
+				}
+			}
+		},
 		"blocks": {
 			"core/site-title": {
 				"elements": {
@@ -12,14 +45,6 @@
 						}
 					}
 				}
-			}
-		}
-	},
-	"settings": {
-		"custom": {
-			"link": {
-				"color": "var(--wp--preset--color--blue)",
-				"hover": "var(--wp--preset--color--light-blue)"
 			}
 		}
 	}

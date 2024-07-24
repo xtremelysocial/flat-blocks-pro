@@ -163,7 +163,7 @@ fieldset {
   font-weight: var(--wp--custom--typography--font-weight--normal);
   line-height: 1.5;
   padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);
-  border: 1px solid var(--wp--preset--color--foreground);
+  border: 1px solid var(--wp--preset--color--contrast);
   border-radius: var(--wp--custom--border--radius);
   text-shadow: none;
   -webkit-appearance: none;
@@ -176,8 +176,8 @@ select {
   line-height: 1.5;
   border-radius: var(--wp--custom--border--radius);
   text-shadow: none;
-  color: var(--wp--preset--color--foreground);
-  border: 1px solid var(--wp--preset--color--foreground);
+  color: var(--wp--preset--color--contrast);
+  border: 1px solid var(--wp--preset--color--contrast);
 }
 
 textarea,
@@ -192,7 +192,7 @@ input {
 textarea,
 input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=button]):not([type=image]):not([class*=button]):not(.wp-block-button__link) {
   -webkit-appearance: none;
-  border: 1px solid var(--wp--preset--color--foreground);
+  border: 1px solid var(--wp--preset--color--contrast);
 }
 
 /* Style focus outline */
@@ -425,23 +425,23 @@ body .is-layout-constrained > .alignright {
  * Swap foreground and background colors. Note this is needed because we can't
  * be sure whether they are light or dark for any given theme or user changes.
  */
-.has-background.has-background-background-color {
-  color: var(--wp--preset--color--foreground);
+.has-background.has-base-background-color {
+  color: var(--wp--preset--color--contrast);
 }
-.has-background.has-background-background-color a, .has-background.has-background-background-color.wp-block-button__link.wp-element-button {
-  color: var(--wp--preset--color--foreground);
+.has-background.has-base-background-color a, .has-background.has-base-background-color.wp-block-button__link.wp-element-button {
+  color: var(--wp--preset--color--contrast);
 }
-.has-background.has-background-background-color a:hover {
+.has-background.has-base-background-color a:hover {
   opacity: 0.8;
 }
 
-.has-background.has-foreground-background-color {
-  color: var(--wp--preset--color--background);
+.has-background.has-contrast-background-color {
+  color: var(--wp--preset--color--base);
 }
-.has-background.has-foreground-background-color a, .has-background.has-foreground-background-color.wp-block-button__link.wp-element-button {
-  color: var(--wp--preset--color--background);
+.has-background.has-contrast-background-color a, .has-background.has-contrast-background-color.wp-block-button__link.wp-element-button {
+  color: var(--wp--preset--color--base);
 }
-.has-background.has-foreground-background-color a:hover {
+.has-background.has-contrast-background-color a:hover {
   opacity: 0.8;
 }
 
@@ -468,7 +468,7 @@ body .is-layout-constrained > .alignright {
 }
 
 /*--------------------------------------------------------------
-# CRITICAL BLOCKS
+# CRITICAL BLOCK STYLES
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Columns and Column
@@ -664,7 +664,7 @@ body .is-layout-constrained > .alignright {
 .wp-site-blocks > header:has(.is-style-fixed-header) {
   position: sticky;
   top: 0;
-  background-color: var(--wp--preset--color--background);
+  background-color: var(--wp--preset--color--base);
   z-index: 9999;
 }
 
@@ -1282,51 +1282,77 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
 }
 
 /*--------------------------------------------------------------
-# Compatibility with other themes
+# Color compatibility with other themes
 --------------------------------------------------------------*/
 /* 
- * TwentyTwentyThree theme uses the same primary, secondary, and 
- * tertiary as us, but uses base and contrast instead of 
- * background and foreground.
+ * Flat Blocks theme prior to v1.6 used foreground and background
+ * colors, so map those to the new contrast and base colors.
  * 
- * TwentyTwentyFour theme uses base and contrast in numbered shades
- * instead of background and foreground. It also uses accent colors 
- * in numbered shades instead of primary, secondary, and tertiary.
+ * TwentyTwentyFour theme uses base and contrast in numbered 
+ * shades. It also uses accent colors in numbered shades instead 
+ * of primary, secondary, and tertiary.
+ *
+ * Note: TwentyTwentyThree theme uses the same base, contrast, 
+ * primary, secondary, and tertiary colors as Flat Blocks.
  */
-.has-base-color,
+/*--------------------------------------------------------------
+# Flat Blocks theme prior to v1.6
+--------------------------------------------------------------*/
+.has-foreground-color {
+  color: var(--wp--preset--color--contrast);
+}
+
+.has-foreground-background-color {
+  background-color: var(--wp--preset--color--contrast);
+}
+
+.has-foreground-border-color {
+  border-color: var(--wp--preset--color--contrast);
+}
+
+.has-background-color {
+  color: var(--wp--preset--color--base);
+}
+
+.has-background-background-color {
+  background-color: var(--wp--preset--color--base);
+}
+
+.has-background-border-color {
+  border-color: var(--wp--preset--color--base);
+}
+
+/*--------------------------------------------------------------
+# TwentyTwentyFour theme
+--------------------------------------------------------------*/
 .has-base-2-color,
 .has-base-3-color {
   color: var(--wp--preset--color--foreground-alt);
 }
 
-.has-base-background-color,
 .has-base-2-background-color,
 .has-base-3-background-color {
   background-color: var(--wp--preset--color--light-gray);
 }
 
-.has-base-border-color,
 .has-base-2-border-color,
 .has-base-3-border-color {
   border-color: var(--wp--preset--color--gray);
 }
 
-.has-contrast-color,
 .has-contrast-2-color,
 .has-contrast-3-color {
-  color: var(--wp--preset--color--foreground);
+  color: var(--wp--preset--color--contrast);
 }
 
-.has-contrast-background-color,
 .has-contrast-2-background-color,
 .has-contrast-3-background-color {
-  background-color: var(--wp--preset--color--foreground);
+  background-color: var(--wp--preset--color--contrast);
 }
 
-.has-contrast-border-color,
 .has-contrast-2-border-color,
 .has-contrast-3-border-color {
-  border-color: var(--wp--preset--color--foreground);
+  border-color: var(--wp--preset--color--contrast);
 }
 
 .has-accent-color,

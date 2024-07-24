@@ -12,6 +12,16 @@
  */
 
 /*--------------------------------------------------------------
+# BASE STYLES
+--------------------------------------------------------------*/
+//@use "base/normalize";
+//@use "base/elements";
+//@use "base/buttons-links";
+//@use "base/forms";
+//@use "base/alignments";
+//@use "base/colors";
+
+/*--------------------------------------------------------------
 # ADDITIONAL BLOCK STYLES
 --------------------------------------------------------------*/
 @use "blocks/calendar";
@@ -52,4 +62,4 @@
 //@use "base/dashicons";
 //@use "base/margins";
 //@use "base/padding";
-//@use "base/theme-compat";
+//@use "base/color-compat";

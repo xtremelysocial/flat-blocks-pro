@@ -3,6 +3,6 @@
 	"version": 3,
 	"title": "Auto Dark Mode",
 	"styles": {
-		"css": "@media (prefers-color-scheme: dark) { body { /*color-scheme: dark light;*/ --wp--preset--color--background: var(--wp--preset--color--not-quite-black); --wp--preset--color--foreground: var(--wp--preset--color--off-white); --wp--preset--color--neutral: var(--wp--preset--color--gray); --wp--preset--color--neutral-alt: var(--wp--preset--color--dark-gray); }  .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open, .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container { background-color: var(--wp--preset--color--almost-black); color: var(--wp--preset--color--foreground-alt); } #wpadminbar { background-color: var(--wp--preset--color--almost-black); } }"
+		"css": "@media (prefers-color-scheme: dark) { body { /*color-scheme: dark light;*/ --wp--preset--color--base: var(--wp--preset--color--not-quite-black); --wp--preset--color--contrast: var(--wp--preset--color--off-white); --wp--preset--color--neutral: var(--wp--preset--color--gray); --wp--preset--color--neutral-alt: var(--wp--preset--color--dark-gray); }  .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open, .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container { background-color: var(--wp--preset--color--almost-black); color: var(--wp--preset--color--foreground-alt); } #wpadminbar { background-color: var(--wp--preset--color--almost-black); } }"
 	}
 }

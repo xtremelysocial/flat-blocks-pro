@@ -12,7 +12,7 @@ fieldset {
 	font-weight: var(--wp--custom--typography--font-weight--normal);
 	line-height: 1.5;
 	padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);
-	border: 1px solid var(--wp--preset--color--foreground);
+	border: 1px solid var(--wp--preset--color--contrast);
 	border-radius: var(--wp--custom--border--radius);
 	text-shadow: none;
 	-webkit-appearance: none;
@@ -25,8 +25,8 @@ select {
 	line-height: 1.5;
 	border-radius: var(--wp--custom--border--radius);
 	text-shadow: none;
-	color: var(--wp--preset--color--foreground);
-	border: 1px solid var(--wp--preset--color--foreground);	
+	color: var(--wp--preset--color--contrast);
+	border: 1px solid var(--wp--preset--color--contrast);	
 }
   
 textarea,
@@ -41,7 +41,7 @@ input {
 textarea,
 input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="button"]):not([type="image"]):not([class*="button"]):not(.wp-block-button__link) {
 	-webkit-appearance: none;
-	border: 1px solid var(--wp--preset--color--foreground);
+	border: 1px solid var(--wp--preset--color--contrast);
 }
 
 /* Style focus outline */

@@ -20,10 +20,9 @@
 @use "base/forms";
 @use "base/alignments";
 @use "base/colors";
-//@use "base/compat";
 
 /*--------------------------------------------------------------
-# CRITICAL BLOCKS
+# CRITICAL BLOCK STYLES
 --------------------------------------------------------------*/
 //@use "blocks/calendar";
 @use "blocks/columns";
@@ -61,4 +60,4 @@
 @use "base/dashicons";
 @use "base/margins";
 @use "base/padding";
-@use "base/theme-compat";
+@use "base/color-compat";

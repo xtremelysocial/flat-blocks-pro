@@ -2,7 +2,7 @@
 # Calendar
 --------------------------------------------------------------*/
 .wp-block-calendar table:where(:not(.has-text-color)) {
-    color: var(--wp--preset--color--foreground);
+    color: var(--wp--preset--color--contrast);
 }
 
 .wp-block-calendar table th:not(.has-text-color) {

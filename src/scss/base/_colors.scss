@@ -104,24 +104,24 @@
  * Swap foreground and background colors. Note this is needed because we can't
  * be sure whether they are light or dark for any given theme or user changes.
  */
-.has-background.has-background-background-color {
-	color: var(--wp--preset--color--foreground);
+.has-background.has-base-background-color {
+	color: var(--wp--preset--color--contrast);
 	
 	& a,
 	&.wp-block-button__link.wp-element-button {
-		color: var(--wp--preset--color--foreground);
+		color: var(--wp--preset--color--contrast);
 	}
 
 	& a:hover {
 		opacity: 0.8;
 	}
 }
-.has-background.has-foreground-background-color {
-	color: var(--wp--preset--color--background);
+.has-background.has-contrast-background-color {
+	color: var(--wp--preset--color--base);
 
 	& a,
 	&.wp-block-button__link.wp-element-button {
-		color: var(--wp--preset--color--background);
+		color: var(--wp--preset--color--base);
 	}
 
 	& a:hover {

@@ -3,6 +3,9 @@
 	"version": 3,
 	"title": "Dark - Midnight Blue",
 	"styles": {
+		"color": {
+			"text": "#f2f2f2 /*var(--wp--preset--color--contrast)*/"
+		},
 		"css": ".has-background.has-tertiary-background-color { color: var(--wp--preset--color--very-dark-gray); }"
 	},
 	"settings": {
@@ -69,12 +72,12 @@
 					"name": "Foreground Alt (White)"
 				},
 				{
-					"slug": "background",
+					"slug": "base",
 					"color": "#2c3e50",
 					"name": "Background (Dark Midnight Blue)"
 				},
 				{
-					"slug": "foreground",
+					"slug": "contrast",
 					"color": "#f2f2f2",
 					"name": "Foreground (Off White)"
 				},
