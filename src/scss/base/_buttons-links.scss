@@ -25,7 +25,7 @@ input[type=submit][class*="button"],
 input[type=reset][class*="button"],
 input[type=file]::file-selector-button {
 	color: var(--wp--preset--color--foreground-alt);
-	background-color: var(--wp--preset--color--primary);
+	background-color: var(--wp--custom--link--color); //var(--wp--preset--color--primary);
 	border: none;
 	border-width: 0;
 	border-radius: var(--wp--custom--border--radius);
@@ -49,11 +49,11 @@ input[type=file] {
 }
 
 /* For outline style buttons, inherit border color from the text color */
-.wp-block-button.is-style-outline.is-style-outline .wp-block-button__link {
+/**.wp-block-button.is-style-outline.is-style-outline .wp-block-button__link {
 	color: inherit;
 	background-color: initial;
 	background-image: none;	
-}
+}**/
 
 /*
  * Button hover styles.

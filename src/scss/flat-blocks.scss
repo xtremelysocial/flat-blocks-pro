@@ -12,7 +12,7 @@
  */
 
 /*--------------------------------------------------------------
-# CRITICAL BASE STYLES
+# BASE STYLES
 --------------------------------------------------------------*/
 @use "base/normalize";
 @use "base/elements";
@@ -22,7 +22,7 @@
 @use "base/colors";
 
 /*--------------------------------------------------------------
-# CRITICAL BLOCKS
+# CRITICAL BLOCK STYLES
 --------------------------------------------------------------*/
 //@use "blocks/calendar";
 @use "blocks/columns";
@@ -54,10 +54,10 @@
 //@use "blocks/tag-cloud";
 
 /*--------------------------------------------------------------
-# ADDITIONAL CRITICAL BASE STYLES
+# ADDITIONAL BASE STYLES
 --------------------------------------------------------------*/
 @use "base/utilities";
 @use "base/dashicons";
 @use "base/margins";
 @use "base/padding";
-@use "base/theme-compat";
+@use "base/color-compat";

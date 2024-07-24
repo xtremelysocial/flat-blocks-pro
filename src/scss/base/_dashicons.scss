@@ -12,25 +12,13 @@
 	width: auto;
 	height: auto;
 	font-family: inherit;
-	font-size: inherit; //1em;
-	font-weight: inherit; //var(--wp--custom--typography--font-weight--normal);
+	font-size: inherit;
+	font-weight: inherit;
 	line-height: inherit;
-	
 	text-align: unset;
-	
-	&.has-text-align-center {
-		text-align: center;
-	}
-	&.has-text-align-left {
-		text-align: left;
-	}
-	&.has-text-align-right {
-		text-align: right;
-	}
 }
 
-.dashicons:before,
-.dashicons-before:before {
+.dashicons:before {
 	display: inline-block;
 	width: auto;
 	height: auto;
@@ -38,15 +26,36 @@
 	font-size: 1em;
 	line-height: inherit;
 	font-weight: inherit;
+	vertical-align: middle;
 }
 
 /* Add some right margin on inline dashicons before the text */
-//.dashicons:before,
 .dashicons-before:before {
 	margin-right: var(--wp--preset--spacing--20);
+}
+
+.dashicons-after {
+	display: flex;
+	
+	&:before {
+		order: 2;
+		margin-left: var(--wp--preset--spacing--20);
+	}
 }
 
 /* Don't underline dashicons links */
 .dashicons a {
 	text-decoration: none;
+}
+
+/* Nav menus already have transitions so don't add another one on
+ * dashicons
+ */
+.wp-block-navigation .dashicons {
+	transition: none;
+}
+
+/* Don't display the top-level icon on the drop-down menu */
+.wp-block-navigation__submenu-container.dashicons:before {
+	content: none;
 }
