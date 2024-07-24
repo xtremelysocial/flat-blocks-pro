@@ -15,5 +15,5 @@ git submodule update --remote pro/plugins/xs-animation
 
 # Then zip everything up except certain files
 echo "Adding theme and plugin files to flat-blocks-pro.zip..."
-zip -r flat-blocks-pro.zip assets inc languages parts patterns styles templates *.* pro/assets pro/inc pro/patterns pro/plugins/xs-animation/build pro/plugins/xs-animation/*.php -x "*/\.DS_Store" "*/\.*" *.sh *.map assets/css/blocks assets/css/blocks/*
+zip -r flat-blocks-pro.zip assets inc languages parts patterns styles templates *.* pro/assets pro/inc pro/patterns pro/plugins/xs-animation/build pro/plugins/xs-animation/*.php -x "*/\.DS_Store" "*/\.*" *.sh *.map assets/css/blocks assets/css/blocks/* styles/*-TEST-ONLY.json
 echo "All necessary files compressed into flat-blocks-pro.zip"
