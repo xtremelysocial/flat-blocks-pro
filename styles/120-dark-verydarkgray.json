@@ -82,12 +82,12 @@
 				{
 					"slug": "base",
 					"color": "#555555",
-					"name": "Background (Very Dark Gray)"
+					"name": "Base / Background (Very Dark Gray)"
 				},
 				{
 					"slug": "contrast",
 					"color": "#f2f2f2",
-					"name": "Foreground (Off White)"
+					"name": "Contrast / Foreground (Off White)"
 				},
 				{
 					"slug": "white",

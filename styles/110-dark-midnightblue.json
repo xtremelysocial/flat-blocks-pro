@@ -74,12 +74,12 @@
 				{
 					"slug": "base",
 					"color": "#2c3e50",
-					"name": "Background (Dark Midnight Blue)"
+					"name": "Base / Background (Dark Midnight Blue)"
 				},
 				{
 					"slug": "contrast",
 					"color": "#f2f2f2",
-					"name": "Foreground (Off White)"
+					"name": "Contrast / Foreground (Off White)"
 				},
 				{
 					"slug": "white",
