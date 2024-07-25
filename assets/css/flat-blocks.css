@@ -1141,18 +1141,8 @@ p.is-style-link-underline-hover a:hover {
   line-height: inherit;
   text-align: unset;
 }
-.dashicons.has-text-align-center {
-  text-align: center;
-}
-.dashicons.has-text-align-left {
-  text-align: left;
-}
-.dashicons.has-text-align-right {
-  text-align: right;
-}
 
-.dashicons:before,
-.dashicons-before:before {
+.dashicons:before {
   display: inline-block;
   width: auto;
   height: auto;
@@ -1160,6 +1150,7 @@ p.is-style-link-underline-hover a:hover {
   font-size: 1em;
   line-height: inherit;
   font-weight: inherit;
+  vertical-align: middle;
 }
 
 /* Add some right margin on inline dashicons before the text */
@@ -1167,9 +1158,29 @@ p.is-style-link-underline-hover a:hover {
   margin-right: var(--wp--preset--spacing--20);
 }
 
+.dashicons-after {
+  display: flex;
+}
+.dashicons-after:before {
+  order: 2;
+  margin-left: var(--wp--preset--spacing--20);
+}
+
 /* Don't underline dashicons links */
 .dashicons a {
   text-decoration: none;
+}
+
+/* Nav menus already have transitions so don't add another one on
+ * dashicons
+ */
+.wp-block-navigation .dashicons {
+  transition: none;
+}
+
+/* Don't display the top-level icon on the drop-down menu */
+.wp-block-navigation__submenu-container.dashicons:before {
+  content: none;
 }
 
 /*--------------------------------------------------------------
