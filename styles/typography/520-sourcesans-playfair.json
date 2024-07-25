@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
-	"version": 2,
-	"title": "Default - Source Sans & Source Serif",
+	"version": 3,
+	"title": "Source Sans & Playfair",
 	"styles": {
 		"typography": {
 			"fontFamily": "var(--wp--preset--font-family--source-sans-pro)"
@@ -9,19 +9,14 @@
 		"blocks": {
 			"core/heading": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--source-serif-pro)"
-				}
-			},
-			"core/site-title": {
-				"typography": {
-					"fontWeight": "400"
+					"fontFamily": "var(--wp--preset--font-family--playfair-display)"
 				}
 			}
 		},
 		"elements": {
 			"heading": {
 				"typography": {
-					"fontFamily": "var(--wp--preset--font-family--source-serif-pro)"
+					"fontFamily": "var(--wp--preset--font-family--playfair-display)"
 				}
 			}
 		}

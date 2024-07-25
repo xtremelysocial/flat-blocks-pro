@@ -2,31 +2,60 @@
 # Dashicons
 --------------------------------------------------------------*/
 
-/* Don't let dashicons force width and height. Let it come from the font size. */
-.wp-site-blocks .dashicons,
+/**
+ * Override core WordPress base Dashicon styles. Don't let it
+ * alter height, width, font-size or line-height. 
+ *
+ */
 .dashicons {
 	display: block;
 	width: auto;
 	height: auto;
 	font-family: inherit;
-	font-size: 1em;
-	font-weight: var(--wp--custom--typography--font-weight--normal);
+	font-size: inherit;
+	font-weight: inherit;
+	line-height: inherit;
+	text-align: unset;
 }
 
-.wp-site-blocks .dashicons:before,
-.wp-site-blocks .dashicons-before:before,
-.dashicons:before,
-.dashicons-before:before {
+.dashicons:before {
 	display: inline-block;
-	vertical-align: top;
 	width: auto;
 	height: auto;
 	font-family: dashicons;
 	font-size: 1em;
-	font-weight: var(--wp--custom--typography--font-weight--normal);
+	line-height: inherit;
+	font-weight: inherit;
+	vertical-align: middle;
 }
 
-.wp-site-blocks .dashicons a,
+/* Add some right margin on inline dashicons before the text */
+.dashicons-before:before {
+	margin-right: var(--wp--preset--spacing--20);
+}
+
+.dashicons-after {
+	display: flex;
+	
+	&:before {
+		order: 2;
+		margin-left: var(--wp--preset--spacing--20);
+	}
+}
+
+/* Don't underline dashicons links */
 .dashicons a {
 	text-decoration: none;
+}
+
+/* Nav menus already have transitions so don't add another one on
+ * dashicons
+ */
+.wp-block-navigation .dashicons {
+	transition: none;
+}
+
+/* Don't display the top-level icon on the drop-down menu */
+.wp-block-navigation__submenu-container.dashicons:before {
+	content: none;
 }

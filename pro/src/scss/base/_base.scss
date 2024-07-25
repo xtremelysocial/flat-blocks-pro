@@ -6,13 +6,6 @@
 ## General Styles
 --------------------------------------------------------------*/
 
-/* Override hard-coded Dashicons size */
-.dashicons,
-.dashicons-before:before {
-	width: auto !important;
-	height: auto !important;
-}
-
 /* 
  * Allow drop-shadow on anything except post template since it needs
  * to be on the post instead 

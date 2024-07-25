@@ -1,0 +1,92 @@
+/**
+ * File:	pro-woocommerce.css
+ * Theme:	Flat Blocks PRO
+ * 
+ * The stylesheet for the Woo Commerce Plugin
+ *
+ * @package flat-blocks-pro
+ */
+/*--------------------------------------------------------------
+# Buttons
+--------------------------------------------------------------*/
+#add_payment_method .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-cart .wc-proceed-to-checkout a.checkout-button,
+.woocommerce-checkout .wc-proceed-to-checkout a.checkout-button {
+  padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+.woocommerce .quantity .qty {
+  width: 4em;
+}
+
+.woocommerce-page .input-text {
+  padding: 0.5rem;
+}
+
+/*--------------------------------------------------------------
+# Sidebar
+--------------------------------------------------------------*/
+.woocommerce-MyAccount-navigation {
+  border: 1px solid var(--wp--custom--border--color);
+  border-radius: var(--wp--custom--border--radius);
+  padding: var(--wp--preset--spacing--40);
+  background-color: var(--wp--preset--color--neutral);
+  color: var(--wp--preset--color--very-dark-gray);
+  margin-bottom: var(--wp--preset--spacing--40);
+}
+
+/*.woocommerce-account .woocommerce-MyAccount-navigation {
+    width: 340px;
+}*/
+/*.woocommerce-account .woocommerce-MyAccount-content {*/
+/*width: calc( 100% - 340px );*/
+/*border: 1px solid var(--wp--custom--border--color);
+	border-radius: var(--wp--custom--border--radius);
+	padding: var(--wp--preset--spacing--40);
+}*/
+/*--------------------------------------------------------------
+# Payment Methods
+--------------------------------------------------------------*/
+#add_payment_method #payment,
+.woocommerce-cart #payment,
+.woocommerce-checkout #payment {
+  background: var(--wp--preset--color--neutral);
+  border-radius: var(--wp--custom--border--radius);
+}
+
+#add_payment_method #payment ul.payment_methods,
+.woocommerce-cart #payment ul.payment_methods,
+.woocommerce-checkout #payment ul.payment_methods {
+  padding: var(--wp--preset--spacing--40);
+  border-bottom: 1px solid var(--wp--custom--border--color);
+}
+
+/*--------------------------------------------------------------
+# Messages
+--------------------------------------------------------------*/
+.woocommerce-message {
+  border-top-color: var(--wp--preset--color--green);
+}
+
+.woocommerce-message::before {
+  color: var(--wp--preset--color--green);
+}
+
+.woocommerce-info {
+  border-top-color: var(--wp--preset--color--blue);
+}
+
+.woocommerce-info::before {
+  color: var(--wp--preset--color--blue);
+}
+
+.woocommerce-error {
+  border-top-color: var(--wp--preset--color--red);
+}
+
+.woocommerce-error::before {
+  color: var(--wp--preset--color--red);
+}

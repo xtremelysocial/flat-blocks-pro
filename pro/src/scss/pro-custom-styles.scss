@@ -12,25 +12,22 @@
  */
 
 /*--------------------------------------------------------------
-# CRITICAL BASE STYLES
+# BASE PRO BLOCK STYLES
 --------------------------------------------------------------*/
 @use "base/base";
 @use "base/angles-curves";
+@use "base/dashicons";
 @use "base/list-dividers";
 @use "base/plugins";
 
 /*--------------------------------------------------------------
-# CRITICAL BLOCK STYLES
---------------------------------------------------------------*/
-@use "blocks/group";
-@use "blocks/heading";
-@use "blocks/navigation";
-@use "blocks/paragraph";
-
-/*--------------------------------------------------------------
-# ADDITIONAL BLOCK STYLES
+# ADDITIONAL PRO BLOCK STYLES
 --------------------------------------------------------------*/
 @use "blocks/buttons";
+@use "blocks/group";
+@use "blocks/heading";
 @use "blocks/latest-posts";
+@use "blocks/navigation";
+@use "blocks/paragraph";
 @use "blocks/post-template";
 @use "blocks/table";

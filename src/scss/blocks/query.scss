@@ -1,0 +1,11 @@
+/*--------------------------------------------------------------
+# Custom: Query
+--------------------------------------------------------------*/
+.wp-block-query.is-style-no-padding {
+	padding-top: 0;
+	padding-bottom: 0;
+}
+.wp-block-query.is-style-no-padding:not(.has-global-padding) {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}

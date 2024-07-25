@@ -3,9 +3,9 @@
  * File:		pro-login-page.php
  * Theme:		Flat Blocks PRO
  *
- * Changes the WordPress login page to use this site's site icon
+ * Changes the WordPress login page to use the site icon instead of WordPress icon
  *
- * @package          flatblocks-pro
+ * @package     flat-blocks-pro
  */
 
 /*
@@ -18,7 +18,7 @@ function fbp_login_headerurl( $url ) {
 }
 
 /*
- * Override WordPress.org logo to use this site's site icon, if there is one
+ * Override WordPress.org header text to this site's title and description
  */
 add_filter( 'login_headertext', 'fbp_login_headertitle' );
 
@@ -27,7 +27,7 @@ function fbp_login_headertitle( $title ) {
 }
 
 /*
- * Override WordPress.org logo to use this site's site icon, if there is one
+ * Override WordPress.org logo to use this site's icon, if there is one
  */
 add_action( 'login_enqueue_scripts', 'fbp_login_headerlogo' );
 

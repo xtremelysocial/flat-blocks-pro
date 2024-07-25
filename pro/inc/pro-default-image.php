@@ -25,6 +25,8 @@ if ( ! function_exists('fbp_filter_post_thumbnail_html') ) :
 
 		/* If no post featured image, but there is a post, then set the default image */
 		if ( ! $html && $pid ) {
+		
+			//var_dump('size:', $size, 'attr:', $attr); //TEST
 	
 			$default_image = get_template_directory_uri() . '/assets/images/image-lines-blue.jpg';
 			$default_image = apply_filters( 'flatblocks_default_image_url', $default_image, $pid );
@@ -32,10 +34,23 @@ if ( ! function_exists('fbp_filter_post_thumbnail_html') ) :
 			$image_alt = esc_attr( get_the_title( $pid ) );
 			$image_alt = apply_filters( 'flatblocks_default_image_alt', $image_alt, $pid );
 			
+			$image_class = $size ? "attachment-{$size} size-{$size} wp-post-image" : 'wp-post-image';
+			
+			//preg_match( '/max-width\:(.*)px/', $attr['style'], $dimensions );
+			preg_match( "/max-width:(\\d+).*max-height:(\\d+)/", $attr['style'], $dimensions);
+			$image_dimensions = $dimensions ? "width={$dimensions[1]} height={$dimensions[2]}" : '';
+			//var_dump('image_dimensions', $image_dimensions); //TEST
+			
+			$image_style = $attr['style'] ? $attr['style'] : '';
+			$image_style .= $dimensions ? "width:{$dimensions[1]}px;height:{$dimensions[2]}px;" : '';
+			
 			$html = sprintf(
-				'<img src="%s" alt="%s" />',
+				'<img src="%s" alt="%s" class="%s" style="%s" %s />',
 				$default_image,
-				$image_alt
+				$image_alt,
+				$image_class,
+				$image_style,
+				$image_dimensions
 			);
 		}
 

@@ -132,6 +132,7 @@ if ( ! function_exists( 'flatblocks_pro_register_block_styles' ) ) :
 				array( 'table' ),
 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
 			),
+/* 
 			'equal-grid' 		=> array( esc_html__('Equal Grid', 'flat-blocks'), 
 				array( 'group' ),
 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
@@ -140,54 +141,55 @@ if ( ! function_exists( 'flatblocks_pro_register_block_styles' ) ) :
 				array( 'group' ),
 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
 			),
-			/*'equal-cells' 		=> array( esc_html__('Equal Cells', 'flat-blocks'), 
-				array( 'group' ),
-				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-			),*/
-			'angled-top-up' 	=> array( esc_html__('Angled Top Up', 'flat-blocks'),
-				array( 'group', 'cover', 'image' ),
-				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-			),
-			'angled-top-down' 	=> array( esc_html__('Angled Top Down', 'flat-blocks'),
-				array( 'group', 'cover', 'image' ),
-				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-			),
-			'angled-bottom-up' 	=> array( esc_html__('Angled Bottom Up', 'flat-blocks'),
-				array( 'group', 'cover', 'image' ),
-				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-			),
-			'angled-bottom-down' 	=> array( esc_html__('Angled Botto Down', 'flat-blocks'),
-				array( 'group', 'cover', 'image' ),
-				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-			),
-			'angled-top-up-bottom-up' 	=> array( esc_html__('Angled Top Up Bottom Up', 'flat-blocks'),
-				array( 'group', 'cover', 'image' ),
-				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-			),
-			'angled-top-up-bottom-down' 	=> array( esc_html__('Angled Top Up Bottom Down', 'flat-blocks'),
-				array( 'group', 'cover', 'image' ),
-				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-			),
-			'angled-top-down-bottom-up' 	=> array( esc_html__('Angled Top Down Bottom Up', 'flat-blocks'),
-				array( 'group', 'cover', 'image' ),
-				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-			),
-			'angled-top-down-bottom-down' 	=> array( esc_html__('Angled Top Down Bottom Down', 'flat-blocks'),
-				array( 'group', 'cover', 'image' ),
-				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-			),
-			/*'curved-top-up' 	=> array( esc_html__('Curved Top Up', 'flat-blocks'),
-				array( 'group', 'cover', 'image' ),
-				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-			),*/
-			'curved-top-down' 	=> array( esc_html__('Curved Top Down', 'flat-blocks'),
-				array( 'group', 'cover', 'image' ),
-				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-			),
-			'curved-bottom-up' 	=> array( esc_html__('Curved Bottom Up', 'flat-blocks'),
-				array( 'group', 'cover', 'image' ),
-				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-			)
+ */
+// 			'equal-cells' 		=> array( esc_html__('Equal Cells', 'flat-blocks'), 
+// 				array( 'group' ),
+// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// 			),
+// 			'angled-top-up' 	=> array( esc_html__('Angled Top Up', 'flat-blocks'),
+// 				array( 'group', 'cover', 'image' ),
+// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// 			),
+// 			'angled-top-down' 	=> array( esc_html__('Angled Top Down', 'flat-blocks'),
+// 				array( 'group', 'cover', 'image' ),
+// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// 			),
+// 			'angled-bottom-up' 	=> array( esc_html__('Angled Bottom Up', 'flat-blocks'),
+// 				array( 'group', 'cover', 'image' ),
+// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// 			),
+// 			'angled-bottom-down' 	=> array( esc_html__('Angled Botto Down', 'flat-blocks'),
+// 				array( 'group', 'cover', 'image' ),
+// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// 			),
+// 			'angled-top-up-bottom-up' 	=> array( esc_html__('Angled Top Up Bottom Up', 'flat-blocks'),
+// 				array( 'group', 'cover', 'image' ),
+// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// 			),
+// 			'angled-top-up-bottom-down' 	=> array( esc_html__('Angled Top Up Bottom Down', 'flat-blocks'),
+// 				array( 'group', 'cover', 'image' ),
+// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// 			),
+// 			'angled-top-down-bottom-up' 	=> array( esc_html__('Angled Top Down Bottom Up', 'flat-blocks'),
+// 				array( 'group', 'cover', 'image' ),
+// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// 			),
+// 			'angled-top-down-bottom-down' 	=> array( esc_html__('Angled Top Down Bottom Down', 'flat-blocks'),
+// 				array( 'group', 'cover', 'image' ),
+// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// 			),
+// 			/*'curved-top-up' 	=> array( esc_html__('Curved Top Up', 'flat-blocks'),
+// 				array( 'group', 'cover', 'image' ),
+// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// 			),*/
+// 			'curved-top-down' 	=> array( esc_html__('Curved Top Down', 'flat-blocks'),
+// 				array( 'group', 'cover', 'image' ),
+// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// 			),
+// 			'curved-bottom-up' 	=> array( esc_html__('Curved Bottom Up', 'flat-blocks'),
+// 				array( 'group', 'cover', 'image' ),
+// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// 			)
 		);
 
 		return $theme_styles ? $theme_styles + $pro_styles : $pro_styles;
