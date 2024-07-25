@@ -11,6 +11,9 @@
  * @since 	1.0
  */
 /*--------------------------------------------------------------
+# BASE STYLES
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
 # ADDITIONAL BLOCK STYLES
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -180,7 +183,7 @@
 .wp-block-latest-posts__featured-image {
   border-radius: var(--wp--custom--border--radius);
   border: 1px solid var(--wp--custom--border--color);
-  padding: var(--wp--custom--border--radius) var(--wp--custom--border--radius) 0 var(--wp--custom--border--radius);
+  padding: var(--wp--custom--border--radius);
   box-shadow: var(--wp--custom--shadow--default);
 }
 
@@ -668,10 +671,12 @@ li.is-style-link-underline-hover a:hover {
 # Separator: Custom
 --------------------------------------------------------------*/
 .wp-block-separator.is-style-thick {
+  border-style: solid;
   border-width: 0 0 3px;
 }
 
 .wp-block-separator.is-style-thick-wide {
+  border-style: solid;
   border-width: 0 0 3px;
   width: 100%;
 }
