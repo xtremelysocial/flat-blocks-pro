@@ -103,7 +103,7 @@ input[type=submit][class*=button],
 input[type=reset][class*=button],
 input[type=file]::file-selector-button {
   color: var(--wp--preset--color--foreground-alt);
-  background-color: var(--wp--preset--color--primary);
+  background-color: var(--wp--custom--link--color);
   border: none;
   border-width: 0;
   border-radius: var(--wp--custom--border--radius);
@@ -128,12 +128,11 @@ input[type=file] {
 }
 
 /* For outline style buttons, inherit border color from the text color */
-.wp-block-button.is-style-outline.is-style-outline .wp-block-button__link {
-  color: inherit;
-  background-color: initial;
-  background-image: none;
-}
-
+/**.wp-block-button.is-style-outline.is-style-outline .wp-block-button__link {
+	color: inherit;
+	background-color: initial;
+	background-image: none;	
+}**/
 /*
  * Button hover styles.
  * Necessary until the following issue is resolved in Gutenberg:
@@ -164,7 +163,7 @@ fieldset {
   font-weight: var(--wp--custom--typography--font-weight--normal);
   line-height: 1.5;
   padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);
-  border: 1px solid var(--wp--preset--color--foreground);
+  border: 1px solid var(--wp--preset--color--contrast);
   border-radius: var(--wp--custom--border--radius);
   text-shadow: none;
   -webkit-appearance: none;
@@ -177,8 +176,8 @@ select {
   line-height: 1.5;
   border-radius: var(--wp--custom--border--radius);
   text-shadow: none;
-  color: var(--wp--preset--color--foreground);
-  border: 1px solid var(--wp--preset--color--foreground);
+  color: var(--wp--preset--color--contrast);
+  border: 1px solid var(--wp--preset--color--contrast);
 }
 
 textarea,
@@ -193,7 +192,7 @@ input {
 textarea,
 input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=button]):not([type=image]):not([class*=button]):not(.wp-block-button__link) {
   -webkit-appearance: none;
-  border: 1px solid var(--wp--preset--color--foreground);
+  border: 1px solid var(--wp--preset--color--contrast);
 }
 
 /* Style focus outline */
@@ -273,99 +272,99 @@ body .is-layout-constrained > .alignright {
  * Black and near-black colors, default light text, but leave link 
  * color alone 
  */
-.has-dark-background-color,
-.has-dark-alt-background-color,
-.has-almost-black-background-color,
-.has-not-quite-black-background-color,
-.has-black-background-color {
+.has-background.has-dark-background-color,
+.has-background.has-dark-alt-background-color,
+.has-background.has-almost-black-background-color,
+.has-background.has-not-quite-black-background-color,
+.has-background.has-black-background-color {
   color: var(--wp--preset--color--foreground-alt);
 }
 
 /* Dark colors, default light text and links */
-.has-primary-background-color,
-.has-primary-alt-background-color,
-.has-secondary-background-color,
-.has-secondary-alt-background-color,
-.has-tertiary-background-color,
-.has-tertiary-alt-background-color,
-.has-dark-gray-background-color,
-.has-very-dark-gray-background-color,
-.has-light-green-background-color,
-.has-green-background-color,
-.has-bright-green-background-color,
-.has-dark-bright-green-background-color,
-.has-light-orange-background-color,
-.has-orange-background-color,
-.has-dark-orange-background-color,
-.has-light-blue-background-color,
-.has-blue-background-color,
-.has-dark-blue-background-color,
-.has-midnight-blue-background-color,
-.has-dark-midnight-blue-background-color,
-.has-light-purple-background-color,
-.has-purple-background-color,
-.has-dark-purple-background-color,
-.has-light-red-background-color,
-.has-red-background-color,
-.has-dark-red-background-color,
+.has-background.has-primary-background-color,
+.has-background.has-primary-alt-background-color,
+.has-background.has-secondary-background-color,
+.has-background.has-secondary-alt-background-color,
+.has-background.has-tertiary-background-color,
+.has-background.has-tertiary-alt-background-color,
+.has-background.has-dark-gray-background-color,
+.has-background.has-very-dark-gray-background-color,
+.has-background.has-light-green-background-color,
+.has-background.has-green-background-color,
+.has-background.has-bright-green-background-color,
+.has-background.has-dark-bright-green-background-color,
+.has-background.has-light-orange-background-color,
+.has-background.has-orange-background-color,
+.has-background.has-dark-orange-background-color,
+.has-background.has-light-blue-background-color,
+.has-background.has-blue-background-color,
+.has-background.has-dark-blue-background-color,
+.has-background.has-midnight-blue-background-color,
+.has-background.has-dark-midnight-blue-background-color,
+.has-background.has-light-purple-background-color,
+.has-background.has-purple-background-color,
+.has-background.has-dark-purple-background-color,
+.has-background.has-light-red-background-color,
+.has-background.has-red-background-color,
+.has-background.has-dark-red-background-color,
 [class*=gradient-background] {
   color: var(--wp--preset--color--foreground-alt);
 }
-.has-primary-background-color a,
-.has-primary-alt-background-color a,
-.has-secondary-background-color a,
-.has-secondary-alt-background-color a,
-.has-tertiary-background-color a,
-.has-tertiary-alt-background-color a,
-.has-dark-gray-background-color a,
-.has-very-dark-gray-background-color a,
-.has-light-green-background-color a,
-.has-green-background-color a,
-.has-bright-green-background-color a,
-.has-dark-bright-green-background-color a,
-.has-light-orange-background-color a,
-.has-orange-background-color a,
-.has-dark-orange-background-color a,
-.has-light-blue-background-color a,
-.has-blue-background-color a,
-.has-dark-blue-background-color a,
-.has-midnight-blue-background-color a,
-.has-dark-midnight-blue-background-color a,
-.has-light-purple-background-color a,
-.has-purple-background-color a,
-.has-dark-purple-background-color a,
-.has-light-red-background-color a,
-.has-red-background-color a,
-.has-dark-red-background-color a,
+.has-background.has-primary-background-color a,
+.has-background.has-primary-alt-background-color a,
+.has-background.has-secondary-background-color a,
+.has-background.has-secondary-alt-background-color a,
+.has-background.has-tertiary-background-color a,
+.has-background.has-tertiary-alt-background-color a,
+.has-background.has-dark-gray-background-color a,
+.has-background.has-very-dark-gray-background-color a,
+.has-background.has-light-green-background-color a,
+.has-background.has-green-background-color a,
+.has-background.has-bright-green-background-color a,
+.has-background.has-dark-bright-green-background-color a,
+.has-background.has-light-orange-background-color a,
+.has-background.has-orange-background-color a,
+.has-background.has-dark-orange-background-color a,
+.has-background.has-light-blue-background-color a,
+.has-background.has-blue-background-color a,
+.has-background.has-dark-blue-background-color a,
+.has-background.has-midnight-blue-background-color a,
+.has-background.has-dark-midnight-blue-background-color a,
+.has-background.has-light-purple-background-color a,
+.has-background.has-purple-background-color a,
+.has-background.has-dark-purple-background-color a,
+.has-background.has-light-red-background-color a,
+.has-background.has-red-background-color a,
+.has-background.has-dark-red-background-color a,
 [class*=gradient-background] a {
   color: inherit;
 }
-.has-primary-background-color a:hover,
-.has-primary-alt-background-color a:hover,
-.has-secondary-background-color a:hover,
-.has-secondary-alt-background-color a:hover,
-.has-tertiary-background-color a:hover,
-.has-tertiary-alt-background-color a:hover,
-.has-dark-gray-background-color a:hover,
-.has-very-dark-gray-background-color a:hover,
-.has-light-green-background-color a:hover,
-.has-green-background-color a:hover,
-.has-bright-green-background-color a:hover,
-.has-dark-bright-green-background-color a:hover,
-.has-light-orange-background-color a:hover,
-.has-orange-background-color a:hover,
-.has-dark-orange-background-color a:hover,
-.has-light-blue-background-color a:hover,
-.has-blue-background-color a:hover,
-.has-dark-blue-background-color a:hover,
-.has-midnight-blue-background-color a:hover,
-.has-dark-midnight-blue-background-color a:hover,
-.has-light-purple-background-color a:hover,
-.has-purple-background-color a:hover,
-.has-dark-purple-background-color a:hover,
-.has-light-red-background-color a:hover,
-.has-red-background-color a:hover,
-.has-dark-red-background-color a:hover,
+.has-background.has-primary-background-color a:hover,
+.has-background.has-primary-alt-background-color a:hover,
+.has-background.has-secondary-background-color a:hover,
+.has-background.has-secondary-alt-background-color a:hover,
+.has-background.has-tertiary-background-color a:hover,
+.has-background.has-tertiary-alt-background-color a:hover,
+.has-background.has-dark-gray-background-color a:hover,
+.has-background.has-very-dark-gray-background-color a:hover,
+.has-background.has-light-green-background-color a:hover,
+.has-background.has-green-background-color a:hover,
+.has-background.has-bright-green-background-color a:hover,
+.has-background.has-dark-bright-green-background-color a:hover,
+.has-background.has-light-orange-background-color a:hover,
+.has-background.has-orange-background-color a:hover,
+.has-background.has-dark-orange-background-color a:hover,
+.has-background.has-light-blue-background-color a:hover,
+.has-background.has-blue-background-color a:hover,
+.has-background.has-dark-blue-background-color a:hover,
+.has-background.has-midnight-blue-background-color a:hover,
+.has-background.has-dark-midnight-blue-background-color a:hover,
+.has-background.has-light-purple-background-color a:hover,
+.has-background.has-purple-background-color a:hover,
+.has-background.has-dark-purple-background-color a:hover,
+.has-background.has-light-red-background-color a:hover,
+.has-background.has-red-background-color a:hover,
+.has-background.has-dark-red-background-color a:hover,
 [class*=gradient-background] a:hover {
   opacity: 0.8;
 }
@@ -374,24 +373,24 @@ body .is-layout-constrained > .alignright {
  * Medium Colors (e.g. Yellow), default foreground color to text, link,
  * and buttons 
  */
-.has-light-yellow-background-color,
-.has-yellow-background-color,
-.has-yellow-gradient-background {
+.has-background.has-light-yellow-background-color,
+.has-background.has-yellow-background-color,
+.has-background.has-yellow-gradient-background {
   color: var(--wp--preset--color--very-dark-gray);
 }
-.has-light-yellow-background-color.wp-block-button__link.wp-element-button,
-.has-yellow-background-color.wp-block-button__link.wp-element-button,
-.has-yellow-gradient-background.wp-block-button__link.wp-element-button {
+.has-background.has-light-yellow-background-color.wp-block-button__link.wp-element-button,
+.has-background.has-yellow-background-color.wp-block-button__link.wp-element-button,
+.has-background.has-yellow-gradient-background.wp-block-button__link.wp-element-button {
   color: var(--wp--preset--color--very-dark-gray);
 }
-.has-light-yellow-background-color a,
-.has-yellow-background-color a,
-.has-yellow-gradient-background a {
+.has-background.has-light-yellow-background-color a,
+.has-background.has-yellow-background-color a,
+.has-background.has-yellow-gradient-background a {
   color: inherit;
 }
-.has-light-yellow-background-color a:hover,
-.has-yellow-background-color a:hover,
-.has-yellow-gradient-background a:hover {
+.has-background.has-light-yellow-background-color a:hover,
+.has-background.has-yellow-background-color a:hover,
+.has-background.has-yellow-gradient-background a:hover {
   opacity: 0.8;
 }
 
@@ -399,26 +398,26 @@ body .is-layout-constrained > .alignright {
  * Light colors, default foreground color and button color, 
  * but leave the link color alone. 
  */
-.has-neutral-background-color,
-.has-neutral-alt-background-color,
-.has-foreground-alt-background-color,
-.has-white-background-color,
-.has-off-white-background-color,
-.has-very-light-gray-background-color,
-.has-light-gray-background-color,
-.has-gray-background-color,
-.has-gray-gradient-background {
+.has-background.has-neutral-background-color,
+.has-background.has-neutral-alt-background-color,
+.has-background.has-foreground-alt-background-color,
+.has-background.has-white-background-color,
+.has-background.has-off-white-background-color,
+.has-background.has-very-light-gray-background-color,
+.has-background.has-light-gray-background-color,
+.has-background.has-gray-background-color,
+.has-background.has-gray-gradient-background {
   color: var(--wp--preset--color--very-dark-gray);
 }
-.has-neutral-background-color.wp-block-button__link.wp-element-button,
-.has-neutral-alt-background-color.wp-block-button__link.wp-element-button,
-.has-foreground-alt-background-color.wp-block-button__link.wp-element-button,
-.has-white-background-color.wp-block-button__link.wp-element-button,
-.has-off-white-background-color.wp-block-button__link.wp-element-button,
-.has-very-light-gray-background-color.wp-block-button__link.wp-element-button,
-.has-light-gray-background-color.wp-block-button__link.wp-element-button,
-.has-gray-background-color.wp-block-button__link.wp-element-button,
-.has-gray-gradient-background.wp-block-button__link.wp-element-button {
+.has-background.has-neutral-background-color.wp-block-button__link.wp-element-button,
+.has-background.has-neutral-alt-background-color.wp-block-button__link.wp-element-button,
+.has-background.has-foreground-alt-background-color.wp-block-button__link.wp-element-button,
+.has-background.has-white-background-color.wp-block-button__link.wp-element-button,
+.has-background.has-off-white-background-color.wp-block-button__link.wp-element-button,
+.has-background.has-very-light-gray-background-color.wp-block-button__link.wp-element-button,
+.has-background.has-light-gray-background-color.wp-block-button__link.wp-element-button,
+.has-background.has-gray-background-color.wp-block-button__link.wp-element-button,
+.has-background.has-gray-gradient-background.wp-block-button__link.wp-element-button {
   color: var(--wp--preset--color--very-dark-gray);
 }
 
@@ -426,23 +425,23 @@ body .is-layout-constrained > .alignright {
  * Swap foreground and background colors. Note this is needed because we can't
  * be sure whether they are light or dark for any given theme or user changes.
  */
-.has-background-background-color {
-  color: var(--wp--preset--color--foreground);
+.has-background.has-base-background-color {
+  color: var(--wp--preset--color--contrast);
 }
-.has-background-background-color a, .has-background-background-color.wp-block-button__link.wp-element-button {
-  color: var(--wp--preset--color--foreground);
+.has-background.has-base-background-color a, .has-background.has-base-background-color.wp-block-button__link.wp-element-button {
+  color: var(--wp--preset--color--contrast);
 }
-.has-background-background-color a:hover {
+.has-background.has-base-background-color a:hover {
   opacity: 0.8;
 }
 
-.has-foreground-background-color {
-  color: var(--wp--preset--color--background);
+.has-background.has-contrast-background-color {
+  color: var(--wp--preset--color--base);
 }
-.has-foreground-background-color a, .has-foreground-background-color.wp-block-button__link.wp-element-button {
-  color: var(--wp--preset--color--background);
+.has-background.has-contrast-background-color a, .has-background.has-contrast-background-color.wp-block-button__link.wp-element-button {
+  color: var(--wp--preset--color--base);
 }
-.has-foreground-background-color a:hover {
+.has-background.has-contrast-background-color a:hover {
   opacity: 0.8;
 }
 
@@ -665,7 +664,7 @@ body .is-layout-constrained > .alignright {
 .wp-site-blocks > header:has(.is-style-fixed-header) {
   position: sticky;
   top: 0;
-  background-color: var(--wp--preset--color--background);
+  background-color: var(--wp--preset--color--base);
   z-index: 9999;
 }
 

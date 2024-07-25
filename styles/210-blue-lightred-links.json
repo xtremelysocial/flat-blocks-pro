@@ -1,9 +1,19 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
-	"version": 2,
+	"version": 3,
 	"title": "Blue with Red Links",
 	"styles": {
-		"css": ".has-background.has-tertiary-background-color { color: var(--wp--preset--color--foreground); }"
+		"color": {
+			"text": "#555555 /*var(--wp--preset--color--contrast)*/"
+		},
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--light-red)"
+				}
+			}
+		},
+		"css": ".has-background.has-tertiary-background-color { color: var(--wp--preset--color--contrast); }"
 	},
 	"settings": {
 		"custom": {
@@ -70,14 +80,14 @@
 					"name": "Foreground Alt (White)"
 				},
 				{
-					"slug": "background",
+					"slug": "base",
 					"color": "#f2f2f2",
-					"name": "Background (Off White)"
+					"name": "Base / Background (Off White)"
 				},
 				{
-					"slug": "foreground",
+					"slug": "contrast",
 					"color": "#555555",
-					"name": "Foreground (Very Dark Gray)"
+					"name": "Contrast / Foreground (Very Dark Gray)"
 				},
 				{
 					"slug": "white",

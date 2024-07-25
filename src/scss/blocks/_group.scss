@@ -90,7 +90,7 @@
 .wp-site-blocks > header:has(.is-style-fixed-header) {
 	position: sticky;
 	top: 0;
-	background-color: var(--wp--preset--color--background);
+	background-color: var(--wp--preset--color--base);
 	z-index: 9999;
 }
 

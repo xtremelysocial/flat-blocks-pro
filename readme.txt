@@ -147,6 +147,26 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 1.6 =
+July 23, 2024
+
+* Breaking change: Changed Background and Foreground colors to Base and Contrast respectively to match the default WordPress TwentyTwentyFour theme. CSS was added for backward-compatibility though (in /src/scss/base/_color-compat.scss).
+* Breaking change: Default outline buttons to Contrast (foreground) color. Individual outline button color can be easily changed.
+* Updates for WordPress v6.6:
+	* Updated theme.json to version 3 which allows the new WordPress v6.6 features, such as Block Style Variations. See https://make.wordpress.org/core/2024/06/19/theme-json-version-3/
+	* Typography styles are now available to apply to any of the other colored global theme styles. This lets you mix and match colors and typography. Note these styles were moved into a /styles/typography directory to differentiate them from the ones in the main folder. 
+	* Fix font size issue and spacing size issue introduced with v6.6. Now setting the new  defaultFontSizes and defaultSpacingSizes to false in theme.json, so that theme settings aren't overwritten. Also note had to add !important to font sizes normal and huge because WordPress was still outputting them. 
+	* Fix global style preview button color for the way WordPress v6.6 works. i.e. So the little button-colored dots reflect the button color for each style.
+* CSS fixes and enhancements:
+	* Fix CSS which was overriding the ability to set the color of outline style buttons in the Global Styles Editor.
+	* Fix wide and thick wide separators that weren't displaying due to change in WordPress CSS.
+	* Enhance Dashicons CSS to behave better when manually added to paragraphs, headings, or list items.
+	* Remove underline on Calendar navigation links since we were required to default links to underline per WordPress theme guidelines.
+Other:
+	* Fix font color on Title and Text pattern to use Foreground Alt since the background color is dark. 
+	* Softened the shadow on the Outline and Crisp box shadow styles.
+	* Reduced button text line height to 1.25 (was the same as regular text which is 1.5).
+
 = 1.5 = 
 Apr 7, 2024
 
