@@ -151,6 +151,7 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 July 23, 2024
 
 * Breaking change: Changed Background and Foreground colors to Base and Contrast respectively to match the default WordPress TwentyTwentyFour theme. CSS was added for backward-compatibility though (in /src/scss/base/_color-compat.scss).
+* Breaking change: Default outline buttons to Contrast (foreground) color. Individual outline button color can be easily changed.
 * Updates for WordPress v6.6:
 	* Updated theme.json to version 3 which allows the new WordPress v6.6 features, such as Block Style Variations. See https://make.wordpress.org/core/2024/06/19/theme-json-version-3/
 	* Typography styles are now available to apply to any of the other colored global theme styles. This lets you mix and match colors and typography. Note these styles were moved into a /styles/typography directory to differentiate them from the ones in the main folder. 
