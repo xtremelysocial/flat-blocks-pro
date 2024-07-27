@@ -183,7 +183,7 @@
 .wp-block-latest-posts__featured-image {
   border-radius: var(--wp--custom--border--radius);
   border: 1px solid var(--wp--custom--border--color);
-  padding: var(--wp--custom--border--radius);
+  padding: var(--wp--custom--border--radius) var(--wp--custom--border--radius) 0 var(--wp--custom--border--radius);
   box-shadow: var(--wp--custom--shadow--default);
 }
 
@@ -454,6 +454,10 @@ li.is-style-link-underline-hover a:hover {
   padding-right: 0;
   margin-right: 0;
   margin-left: var(--wp--preset--spacing--20);
+}
+
+.wp-block-post-author__name {
+  margin-bottom: 0;
 }
 
 .wp-block-post-author__avatar {
