@@ -15,6 +15,10 @@
 	margin-left: var(--wp--preset--spacing--20);
 }
 
+.wp-block-post-author__name { 
+	margin-bottom: 0; 
+}
+
 .wp-block-post-author__avatar {
     margin-right: var(--wp--style--block-gap);
 }
