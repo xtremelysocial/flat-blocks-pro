@@ -147,6 +147,13 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 1.6.1 =
+July 28, 2024
+
+* Reverted back to defaulting link underlines, but then overriding it to no underlines on on navigation, captions, etc. This allows users to easily change the default in the Global Styles settings. 
+* Added custom CSS variables for link position, offset, and style to theme.json so that child themes can set these.
+* Miscellaneous CSS enhancements, such as reducing specificity of CSS for default font colors on colored backgrounds, specifying some defaults for when custom variables might be missing, removed extra bottom margin on post author name in post meta, etc.
+
 = 1.6 =
 July 23, 2024
 

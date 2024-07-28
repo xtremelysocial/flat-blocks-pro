@@ -7,7 +7,7 @@
  * fullwidth images don't get so wide they lose resolution.
  */
 .wp-site-blocks {
-	max-width: var(--wp--custom--layout--full-size);
+	max-width: var(--wp--custom--layout--full-size, 1600px);
 	margin-left: auto;
     margin-right: auto;
 }

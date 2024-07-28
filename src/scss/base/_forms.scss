@@ -8,8 +8,8 @@
  * toolbars or it will alter them too.
  */ 
 fieldset {
-	font-size: var(--wp--preset--font-size--normal);
-	font-weight: var(--wp--custom--typography--font-weight--normal);
+	font-size: var(--wp--preset--font-size--normal, 18px);
+	font-weight: var(--wp--custom--typography--font-weight--normal, 300);
 	line-height: 1.5;
 	padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);
 	border: 1px solid var(--wp--preset--color--contrast);
@@ -20,8 +20,8 @@ fieldset {
 
 select {
 	font-family: inherit;
-	font-size: var(--wp--preset--font-size--small);
-	font-weight: var(--wp--custom--typography--font-weight--normal);
+	font-size: var(--wp--preset--font-size--small, 16px);
+	font-weight: var(--wp--custom--typography--font-weight--normal, 300);
 	line-height: 1.5;
 	border-radius: var(--wp--custom--border--radius);
 	text-shadow: none;
@@ -32,9 +32,9 @@ select {
 textarea,
 input {
 	font-size: var(--wp--preset--font-size--normal);
-	font-weight: var(--wp--custom--typography--font-weight--normal);
+	font-weight: var(--wp--custom--typography--font-weight--normal, 300);
 	line-height: 1.5;
-	border-radius: var(--wp--custom--border--radius);
+	border-radius: var(--wp--custom--border--radius, 0);
 	text-shadow: none;
 }
 
