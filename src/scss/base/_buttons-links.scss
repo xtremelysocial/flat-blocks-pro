@@ -12,6 +12,11 @@ a,
 	cursor: pointer;
 }
 
+/* Don't underline links in captions */
+figcaption a {
+	text-decoration: none;
+}
+
 /* Colored link hover styles */
 .has-text-color a:not(.wp-element-button):not(.wp-block-button):not(.wp-block-social-link-anchor):hover {
 	opacity: 0.8;
@@ -24,19 +29,19 @@ input[type=button],
 input[type=submit][class*="button"],
 input[type=reset][class*="button"],
 input[type=file]::file-selector-button {
-	color: var(--wp--preset--color--foreground-alt);
+	color: var(--wp--preset--color--foreground-alt, white);
 	background-color: var(--wp--custom--link--color); //var(--wp--preset--color--primary);
 	border: none;
 	border-width: 0;
-	border-radius: var(--wp--custom--border--radius);
-	padding: var(--wp--preset--spacing--30) var(--wp--preset--spacing--40);
-	font-size: var(--wp--preset--font-size--normal);
+	border-radius: var(--wp--custom--border--radius, 0);
+	padding: var(--wp--preset--spacing--30, 9px) var(--wp--preset--spacing--40, 18px);
+	font-size: var(--wp--preset--font-size--normal, 18px);
 	font-weight: 400;
 	line-height: 1.5;
 	text-shadow: none;
 }
 input[type=file] {
-	font-size: var(--wp--preset--font-size--small);
+	font-size: var(--wp--preset--font-size--small, 16px);
 	width: 100%;
 }
 
@@ -45,7 +50,7 @@ input[type=file] {
 .has-primary-background-color input[type=submit][class*="button"],
 .has-primary-background-color input[type=reset][class*="button"],
 .has-primary-background-color input[type=file]::file-selector-button {
-	border: 3px solid var(--wp--preset--color--foreground-alt);
+	border: 3px solid var(--wp--preset--color--foreground-alt, white);
 }
 
 /* For outline style buttons, inherit border color from the text color */
