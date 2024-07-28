@@ -23,8 +23,8 @@
 				"hover": "var(--wp--preset--color--primary-alt)",
 				"thickness": "1px",
 				"postion": "under",
-				"offset": "none /*0.3ch*/",
-				"style": "solid /*dotted*/"
+				"offset": "auto",
+				"style": "solid"
 			},
 			"outline": {
 				"color": "rgba(0, 0, 0, 0.25)"
@@ -992,7 +992,7 @@
 					"text": "var(--wp--custom--link--color)"
 				},
 				"typography": {
-					"textDecoration": "underline dotted"
+					"textDecoration": "underline"
 				},
 				":hover": {
 					"color": {

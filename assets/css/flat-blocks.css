@@ -40,7 +40,6 @@ html {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  text-decoration-style: var(--wp--custom--link--style, solid);
   text-decoration-thickness: var(--wp--custom--link--thickness, 1px);
   text-underline-position: var(--wp--custom--link--position, under);
   text-underline-offset: var(--wp--custom--link--offset, 0);
@@ -85,6 +84,7 @@ a,
 .wp-block-navigation a,
 .wp-block-navigation-submenu__toggle {
   cursor: pointer;
+  text-decoration-style: var(--wp--custom--link--style, solid);
 }
 
 /* Don't underline links in captions */
