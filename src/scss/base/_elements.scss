@@ -5,7 +5,7 @@
 /* Use bold font-weight from theme.json */
 strong, 
 b {
-	font-weight: var(--wp--custom--typography--font-weight--bold);
+	font-weight: var(--wp--custom--typography--font-weight--bold, 500);
 }
 
 /* Prevent code from breaking layout */
@@ -17,16 +17,11 @@ pre {
 /* Set lists with background to match other padding */
 ol.has-background,
 ul.has-background {
-    padding: var(--wp--preset--spacing--40);
+    padding: var(--wp--preset--spacing--40, 18px);
     list-style-position: inside;
 }
 
-/* Center captions and don't underline links in them by default */
-// TO-DO: Move these to theme.json when that is supported
+/* Center captions */
 figcaption {
 	text-align: center;
-}
-
-figcaption a {
-	text-decoration: none;
 }

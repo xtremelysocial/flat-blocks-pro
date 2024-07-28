@@ -11,41 +11,41 @@
  * Black and near-black colors, default light text, but leave link 
  * color alone 
  */ 
-.has-background.has-dark-background-color,
-.has-background.has-dark-alt-background-color,
-.has-background.has-almost-black-background-color,
-.has-background.has-not-quite-black-background-color,
-.has-background.has-black-background-color {
+.has-dark-background-color,
+.has-dark-alt-background-color,
+.has-almost-black-background-color,
+.has-not-quite-black-background-color,
+.has-black-background-color {
 	color: var(--wp--preset--color--foreground-alt);
 } 
 
 /* Dark colors, default light text and links */
-.has-background.has-primary-background-color,
-.has-background.has-primary-alt-background-color,
-.has-background.has-secondary-background-color,
-.has-background.has-secondary-alt-background-color,
-.has-background.has-tertiary-background-color,
-.has-background.has-tertiary-alt-background-color,
-.has-background.has-dark-gray-background-color,
-.has-background.has-very-dark-gray-background-color,
-.has-background.has-light-green-background-color,
-.has-background.has-green-background-color,
-.has-background.has-bright-green-background-color,
-.has-background.has-dark-bright-green-background-color,
-.has-background.has-light-orange-background-color,
-.has-background.has-orange-background-color,
-.has-background.has-dark-orange-background-color,
-.has-background.has-light-blue-background-color,
-.has-background.has-blue-background-color,
-.has-background.has-dark-blue-background-color,
-.has-background.has-midnight-blue-background-color,
-.has-background.has-dark-midnight-blue-background-color,
-.has-background.has-light-purple-background-color,
-.has-background.has-purple-background-color,
-.has-background.has-dark-purple-background-color,
-.has-background.has-light-red-background-color,
-.has-background.has-red-background-color,
-.has-background.has-dark-red-background-color,
+.has-primary-background-color,
+.has-primary-alt-background-color,
+.has-secondary-background-color,
+.has-secondary-alt-background-color,
+.has-tertiary-background-color,
+.has-tertiary-alt-background-color,
+.has-dark-gray-background-color,
+.has-very-dark-gray-background-color,
+.has-light-green-background-color,
+.has-green-background-color,
+.has-bright-green-background-color,
+.has-dark-bright-green-background-color,
+.has-light-orange-background-color,
+.has-orange-background-color,
+.has-dark-orange-background-color,
+.has-light-blue-background-color,
+.has-blue-background-color,
+.has-dark-blue-background-color,
+.has-midnight-blue-background-color,
+.has-dark-midnight-blue-background-color,
+.has-light-purple-background-color,
+.has-purple-background-color,
+.has-dark-purple-background-color,
+.has-light-red-background-color,
+.has-red-background-color,
+.has-dark-red-background-color,
 [class*="gradient-background"] {
  	color: var(--wp--preset--color--foreground-alt);
  	
@@ -62,9 +62,9 @@
  * Medium Colors (e.g. Yellow), default foreground color to text, link,
  * and buttons 
  */ 
-.has-background.has-light-yellow-background-color,
-.has-background.has-yellow-background-color,
-.has-background.has-yellow-gradient-background {
+.has-light-yellow-background-color,
+.has-yellow-background-color,
+.has-yellow-gradient-background {
  	color: var(--wp--preset--color--very-dark-gray);
 
  	&.wp-block-button__link.wp-element-button {
@@ -84,15 +84,15 @@
  * Light colors, default foreground color and button color, 
  * but leave the link color alone. 
  */
-.has-background.has-neutral-background-color,
-.has-background.has-neutral-alt-background-color,
-.has-background.has-foreground-alt-background-color,
-.has-background.has-white-background-color,
-.has-background.has-off-white-background-color,
-.has-background.has-very-light-gray-background-color,
-.has-background.has-light-gray-background-color,
-.has-background.has-gray-background-color,
-.has-background.has-gray-gradient-background {
+.has-neutral-background-color,
+.has-neutral-alt-background-color,
+.has-foreground-alt-background-color,
+.has-white-background-color,
+.has-off-white-background-color,
+.has-very-light-gray-background-color,
+.has-light-gray-background-color,
+.has-gray-background-color,
+.has-gray-gradient-background {
  	color: var(--wp--preset--color--very-dark-gray);
 
  	&.wp-block-button__link.wp-element-button {
@@ -104,7 +104,7 @@
  * Swap foreground and background colors. Note this is needed because we can't
  * be sure whether they are light or dark for any given theme or user changes.
  */
-.has-background.has-base-background-color {
+.has-base-background-color {
 	color: var(--wp--preset--color--contrast);
 	
 	& a,
@@ -116,7 +116,7 @@
 		opacity: 0.8;
 	}
 }
-.has-background.has-contrast-background-color {
+.has-contrast-background-color {
 	color: var(--wp--preset--color--base);
 
 	& a,
