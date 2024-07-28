@@ -31,7 +31,7 @@
 
 /* Add some right margin on inline dashicons before the text */
 .dashicons-before:before {
-	margin-right: var(--wp--preset--spacing--20);
+	margin-right: var(--wp--preset--spacing--20, 4.5px);
 }
 
 .dashicons-after {
@@ -39,7 +39,7 @@
 	
 	&:before {
 		order: 2;
-		margin-left: var(--wp--preset--spacing--20);
+		margin-left: var(--wp--preset--spacing--20, 4.5px);
 	}
 }
 
