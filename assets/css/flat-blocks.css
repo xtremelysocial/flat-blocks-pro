@@ -152,6 +152,32 @@ input[type=file]::file-selector-button:hover,
 }
 
 /*--------------------------------------------------------------
+# Custom: Link Underlines
+--------------------------------------------------------------*/
+/* Underline links */
+.is-style-link-underline a,
+.is-style-link-underline a:active {
+  text-decoration: underline;
+}
+
+/* No Underline links */
+.is-style-link-no-underline a,
+.is-style-link-no-underline a:active {
+  text-decoration: none;
+}
+
+.is-style-link-underline a:hover,
+.is-style-link-no-underline a:hover {
+  opacity: 0.8;
+}
+
+/* Underline links on hover */
+.is-style-link-underline-hover a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
 /* 
