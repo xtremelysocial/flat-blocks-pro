@@ -1912,6 +1912,12 @@
 			"postTypes": ["page"]
 		},
 		{
+			"name": "page-featured-image-nosidebar",
+			"title": "Page Featured Image without Sidebar",
+			"description": "Page w/large featured image and no sidebar",
+			"postTypes": ["page"]
+		},
+		{
 			"name": "page-featured-image-sidebar-left",
 			"title": "Page Featured Image Sidebar Left",
 			"description": "Page w/large featured image and left sidebar",
@@ -1936,6 +1942,12 @@
 			"postTypes": ["page"]
 		},
 		{
+			"name": "page-nocomments-nosidebar",
+			"title": "Page No Comments without Sidebar",
+			"description": "Page w/out comments or sidebar",
+			"postTypes": ["page"]
+		},
+		{
 			"name": "page-notitle-nocomments",
 			"title": "Page No Title or Comments",
 			"description": "Page w/out title or comments",
@@ -1951,6 +1963,12 @@
 			"name": "page-sitemap",
 			"title": "Page Site Map",
 			"description": "Sitemap (pages list, categories, recent posts)",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-nosidebar",
+			"title": "Page No Sidebar",
+			"description": "Page without sidebar",
 			"postTypes": ["page"]
 		},
 		{
