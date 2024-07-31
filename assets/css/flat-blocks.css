@@ -1093,32 +1093,6 @@ p.is-style-arrow-icon > a:after {
   white-space: pre-wrap; /* adds line break */
 }
 
-/* Underline links */
-p.is-style-link-underline a,
-p.is-style-link-underline a:active {
-  text-decoration: underline !important;
-}
-
-p.is-style-link-underline a:hover {
-  opacity: 0.8;
-}
-
-/* No Underline links */
-p.is-style-link-no-underline a,
-p.is-style-link-no-underline a:active {
-  text-decoration: none !important;
-}
-
-p.is-style-link-no-underline a:hover {
-  opacity: 0.8;
-}
-
-/* Underline links on hover */
-p.is-style-link-underline-hover a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
 /*--------------------------------------------------------------
 # ADDITIONAL BASE STYLES
 --------------------------------------------------------------*/
@@ -1165,7 +1139,6 @@ p.is-style-link-underline-hover a:hover {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
-  text-align: unset;
 }
 
 .dashicons:before {

@@ -24,7 +24,7 @@
 				"thickness": "1px",
 				"postion": "under",
 				"offset": "auto",
-				"style": "solid"
+				"style": "dotted"
 			},
 			"outline": {
 				"color": "rgba(0, 0, 0, 0.25)"
