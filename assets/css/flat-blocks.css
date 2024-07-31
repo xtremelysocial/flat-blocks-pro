@@ -40,7 +40,6 @@ html {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  text-decoration-style: var(--wp--custom--link--style, solid);
   text-decoration-thickness: var(--wp--custom--link--thickness, 1px);
   text-underline-position: var(--wp--custom--link--position, under);
   text-underline-offset: var(--wp--custom--link--offset, 0);
@@ -85,6 +84,7 @@ a,
 .wp-block-navigation a,
 .wp-block-navigation-submenu__toggle {
   cursor: pointer;
+  text-decoration-style: var(--wp--custom--link--style, solid);
 }
 
 /* Don't underline links in captions */
@@ -149,6 +149,32 @@ input[type=file]::file-selector-button:hover,
 .wp-block-button__link:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+/*--------------------------------------------------------------
+# Custom: Link Underlines
+--------------------------------------------------------------*/
+/* Underline links */
+.is-style-link-underline a,
+.is-style-link-underline a:active {
+  text-decoration: underline;
+}
+
+/* No Underline links */
+.is-style-link-no-underline a,
+.is-style-link-no-underline a:active {
+  text-decoration: none;
+}
+
+.is-style-link-underline a:hover,
+.is-style-link-no-underline a:hover {
+  opacity: 0.8;
+}
+
+/* Underline links on hover */
+.is-style-link-underline-hover a:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
@@ -1067,32 +1093,6 @@ p.is-style-arrow-icon > a:after {
   white-space: pre-wrap; /* adds line break */
 }
 
-/* Underline links */
-p.is-style-link-underline a,
-p.is-style-link-underline a:active {
-  text-decoration: underline !important;
-}
-
-p.is-style-link-underline a:hover {
-  opacity: 0.8;
-}
-
-/* No Underline links */
-p.is-style-link-no-underline a,
-p.is-style-link-no-underline a:active {
-  text-decoration: none !important;
-}
-
-p.is-style-link-no-underline a:hover {
-  opacity: 0.8;
-}
-
-/* Underline links on hover */
-p.is-style-link-underline-hover a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
 /*--------------------------------------------------------------
 # ADDITIONAL BASE STYLES
 --------------------------------------------------------------*/
@@ -1139,8 +1139,6 @@ p.is-style-link-underline-hover a:hover {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
-  line-height: inherit;
-  text-align: unset;
 }
 
 .dashicons:before {
@@ -1149,7 +1147,7 @@ p.is-style-link-underline-hover a:hover {
   height: auto;
   font-family: dashicons;
   font-size: 1em;
-  line-height: inherit;
+  line-height: 1;
   font-weight: inherit;
   vertical-align: middle;
 }

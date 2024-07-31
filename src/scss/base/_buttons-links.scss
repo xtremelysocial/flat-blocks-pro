@@ -10,6 +10,7 @@ a,
 .wp-block-navigation a,
 .wp-block-navigation-submenu__toggle {
 	cursor: pointer;
+	text-decoration-style: var(--wp--custom--link--style, solid);
 }
 
 /* Don't underline links in captions */
@@ -75,3 +76,30 @@ input[type=file]::file-selector-button:hover,
 	cursor: pointer;
 	opacity: 0.8;
 }
+
+/*--------------------------------------------------------------
+# Custom: Link Underlines
+--------------------------------------------------------------*/
+/* Underline links */
+.is-style-link-underline a,
+.is-style-link-underline a:active {
+	text-decoration: underline; // !important;
+}
+
+/* No Underline links */
+.is-style-link-no-underline a,
+.is-style-link-no-underline a:active {
+	text-decoration: none; // !important;
+}
+
+.is-style-link-underline a:hover,
+.is-style-link-no-underline a:hover {
+	opacity: 0.8;
+}
+
+/* Underline links on hover */
+.is-style-link-underline-hover a:hover {
+	opacity: 1;
+	text-decoration: underline;
+}
+
