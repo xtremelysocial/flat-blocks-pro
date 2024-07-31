@@ -68,31 +68,3 @@ p.is-style-arrow-icon-no-text > a:after {
 p.is-style-arrow-icon > a:after {
 	white-space: pre-wrap; /* adds line break */
 }
-
-/* Underline links */
-p.is-style-link-underline a,
-p.is-style-link-underline a:active {
-	text-decoration: underline !important;
-}
-p.is-style-link-underline a:hover {
-	opacity: 0.8;
-	//filter: brightness(80%);
-}
-
-/* No Underline links */
-p.is-style-link-no-underline a,
-p.is-style-link-no-underline a:active {
-	//font-weight: var(--wp--custom--typography--font-weight--medium);
-	text-decoration: none !important;
-}
-p.is-style-link-no-underline a:hover {
-	opacity: 0.8;
-	//filter: brightness(80%);
-}
-
-/* Underline links on hover */
-p.is-style-link-underline-hover a:hover {
-	opacity: 1;
-	text-decoration: underline;
-}
-
