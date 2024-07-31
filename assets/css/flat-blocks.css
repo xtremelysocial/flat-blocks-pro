@@ -40,6 +40,7 @@ html {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  text-decoration-style: var(--wp--custom--link--style, solid);
   text-decoration-thickness: var(--wp--custom--link--thickness, 1px);
   text-underline-position: var(--wp--custom--link--position, under);
   text-underline-offset: var(--wp--custom--link--offset, 0);
@@ -1093,6 +1094,32 @@ p.is-style-arrow-icon > a:after {
   white-space: pre-wrap; /* adds line break */
 }
 
+/* Underline links */
+p.is-style-link-underline a,
+p.is-style-link-underline a:active {
+  text-decoration: underline !important;
+}
+
+p.is-style-link-underline a:hover {
+  opacity: 0.8;
+}
+
+/* No Underline links */
+p.is-style-link-no-underline a,
+p.is-style-link-no-underline a:active {
+  text-decoration: none !important;
+}
+
+p.is-style-link-no-underline a:hover {
+  opacity: 0.8;
+}
+
+/* Underline links on hover */
+p.is-style-link-underline-hover a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 /*--------------------------------------------------------------
 # ADDITIONAL BASE STYLES
 --------------------------------------------------------------*/
@@ -1139,6 +1166,8 @@ p.is-style-arrow-icon > a:after {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
+  line-height: inherit;
+  text-align: unset;
 }
 
 .dashicons:before {
@@ -1147,7 +1176,7 @@ p.is-style-arrow-icon > a:after {
   height: auto;
   font-family: dashicons;
   font-size: 1em;
-  line-height: 1;
+  line-height: inherit;
   font-weight: inherit;
   vertical-align: middle;
 }
