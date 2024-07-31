@@ -14,9 +14,13 @@
 	font-family: inherit;
 	font-size: inherit;
 	font-weight: inherit;
-	line-height: inherit;
-	text-align: unset;
+	//line-height: inherit;
+	//text-align: unset;
 }
+
+// .dashicons.has-background {
+// 	padding: var(--wp--preset--spacing--30);
+// }
 
 .dashicons:before {
 	display: inline-block;
@@ -24,7 +28,7 @@
 	height: auto;
 	font-family: dashicons;
 	font-size: 1em;
-	line-height: inherit;
+	line-height: 1; //inherit;
 	font-weight: inherit;
 	vertical-align: middle;
 }

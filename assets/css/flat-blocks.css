@@ -104,7 +104,7 @@ input[type=button],
 input[type=submit][class*=button],
 input[type=reset][class*=button],
 input[type=file]::file-selector-button {
-  color: var(--wp--preset--color--foreground-alt, white);
+  color: var(--wp--preset--color--foreground-alt, white) !important;
   background-color: var(--wp--custom--link--color);
   border: none;
   border-width: 0;
@@ -149,6 +149,32 @@ input[type=file]::file-selector-button:hover,
 .wp-block-button__link:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+/*--------------------------------------------------------------
+# Custom: Link Underlines
+--------------------------------------------------------------*/
+/* Underline links */
+.is-style-link-underline a,
+.is-style-link-underline a:active {
+  text-decoration: underline;
+}
+
+/* No Underline links */
+.is-style-link-no-underline a,
+.is-style-link-no-underline a:active {
+  text-decoration: none;
+}
+
+.is-style-link-underline a:hover,
+.is-style-link-no-underline a:hover {
+  opacity: 0.8;
+}
+
+/* Underline links on hover */
+.is-style-link-underline-hover a:hover {
+  opacity: 1;
+  text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
@@ -1139,8 +1165,6 @@ p.is-style-link-underline-hover a:hover {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
-  line-height: inherit;
-  text-align: unset;
 }
 
 .dashicons:before {
@@ -1149,7 +1173,7 @@ p.is-style-link-underline-hover a:hover {
   height: auto;
   font-family: dashicons;
   font-size: 1em;
-  line-height: inherit;
+  line-height: 1;
   font-weight: inherit;
   vertical-align: middle;
 }
