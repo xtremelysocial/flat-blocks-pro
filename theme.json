@@ -60,7 +60,7 @@
 		},
 		"lightbox": {
 			"allowEditing": true,
-			"enabled": true
+			"enabled": false
 		},
 		"spacing": {
 			"blockGap": true,
@@ -1013,6 +1013,12 @@
 			}
 		},
 		"blocks": {
+			"core/image": {
+				"lightbox": {
+					"allowEditing": true,
+					"enabled": false
+				}
+			},
 			"core/group": {
 				"spacing": {
 					"padding": {

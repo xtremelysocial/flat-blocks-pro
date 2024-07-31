@@ -72,33 +72,3 @@ ul.is-style-list-plain-centered li,
 ol.is-style-list-plain-centered li {
 	margin-left: 0;
 }
-
-/*--------------------------------------------------------------
-# List Items: Custom
---------------------------------------------------------------*/
-/* Underline links */
-li.is-style-link-underline a,
-li.is-style-link-underline a:active {
-	text-decoration: underline; //!important;
-}
-li.is-style-link-underline a:hover {
-	opacity: 0.8;
-	//filter: brightness(80%);
-}
-
-/* No Underline links */
-li.is-style-link-no-underline a,
-li.is-style-link-no-underline a:active {
-	//font-weight: var(--wp--custom--typography--font-weight--medium);
-	text-decoration: none;  //!important;
-}
-li.is-style-link-no-underline a:hover {
-	opacity: 0.8;
-	//filter: brightness(80%);
-}
-
-/* Underline links on hover */
-li.is-style-link-underline-hover a:hover {
-	opacity: 1;
-	text-decoration: underline;
-}
