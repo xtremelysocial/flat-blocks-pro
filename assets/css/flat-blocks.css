@@ -1139,7 +1139,6 @@ p.is-style-link-underline-hover a:hover {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
-  line-height: inherit;
   text-align: unset;
 }
 
@@ -1149,13 +1148,14 @@ p.is-style-link-underline-hover a:hover {
   height: auto;
   font-family: dashicons;
   font-size: 1em;
-  line-height: inherit;
+  line-height: 1;
   font-weight: inherit;
   vertical-align: middle;
 }
 
 /* Add some right margin on inline dashicons before the text */
 .dashicons-before:before {
+  font-family: dashicons;
   margin-right: var(--wp--preset--spacing--20, 4.5px);
 }
 
@@ -1163,6 +1163,7 @@ p.is-style-link-underline-hover a:hover {
   display: flex;
 }
 .dashicons-after:before {
+  font-family: dashicons;
   order: 2;
   margin-left: var(--wp--preset--spacing--20, 4.5px);
 }

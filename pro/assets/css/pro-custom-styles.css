@@ -303,6 +303,7 @@ angled-top-down-bottom-down
 
 /* Add a new Dashicons Above class */
 .dashicons-above {
+  font-family: dashicons;
   display: flex;
   flex-direction: column;
   gap: var(--wp--preset--spacing--30);
@@ -313,6 +314,7 @@ angled-top-down-bottom-down
 
 /* Add a new Dashicons Below class */
 .dashicons-below {
+  font-family: dashicons;
   display: flex;
   flex-direction: column;
   gap: var(--wp--preset--spacing--30);
@@ -624,7 +626,6 @@ body.home > #page > #footer {
   height: 3px;
   /*background: var(--wp--preset--color--primary);*/
   /*background-color: var(--wp--preset--color--foreground);*/
-  background-color: currentcolor;
   /*border-radius: var(--wp--custom--border--radius);*/
   /*margin: auto;
   padding-bottom: 3px;
@@ -632,9 +633,13 @@ body.home > #page > #footer {
 }
 
 /* Set the separator color based on whether there is a font-color or not */
-.wp-block-post-content > .wp-block-heading:not(.has-text-color).is-style-separator:after,
-.wp-block-post-content :not(.has-text-color) .wp-block-heading:not(.has-text-color).is-style-separator:after {
+.wp-block-heading.is-style-separator:after {
   background-color: var(--wp--preset--color--primary);
+}
+
+/* But on sections with backgrounds, use the current color instead */
+.has-background .wp-block-heading.is-style-separator:after {
+  background-color: currentcolor;
 }
 
 /* Align the separator based on the alignment of its heading */

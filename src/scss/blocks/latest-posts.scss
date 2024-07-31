@@ -5,6 +5,7 @@
 /* Increase post title size */
 .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-title {
 	font-size: var(--wp--preset--font-size--medium);
+	line-height: 1.1;
 }
 
 /* Set post thumbnails to match blog */

@@ -931,6 +931,12 @@
 					"lineHeight": "1.1",
 					"textTransform": "none",					
 					"textDecoration": "none"
+				},
+				"spacing": {
+					"margin": {
+						"top": "var(--wp--style--block-gap)",
+						"bottom": "var(--wp--style--block-gap)"
+					}
 				}
 			},
 			"h1": {
