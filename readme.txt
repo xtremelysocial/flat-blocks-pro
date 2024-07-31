@@ -147,6 +147,19 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 1.6.2 =
+July 31, 2024
+
+* Fix Title and Subtitle Pattern which was displaying an issue in the block editor due to it using an H1 tag. Changed it to H2 since only the site title should be H1.
+* Fix Default Auto-Dark Mode Global Theme Style since change to base and contrast colors in v1.6.
+* For Image Gallery Pattern, add lightbox (click to expand) to each image. WordPress still requires this to be set on each image rather than the whole gallery itself, so this is a time-saver.
+* Set headings top and bottom margin in theme.json to be the Block Gap ("spacing") setting for the theme, which is by default 18px.
+* Various CSS enhancements:
+	* Simplify CSS for handling link underline, no underline, or underline on hover. These CSS classes can also now be added to 3rd-party blocks manually in the Advanced->Additional CSS Class(es) block setting in the Editor. Use is-style-link-no-underline, is-style-link-underline, or is-style-link-underline-hover.
+	* Reduced line height on Latest Posts block article titles
+	* Remove extra bottom margin on post excerpts with "no read more" style applied
+	* Enhance native Dashicons CSS to preserve aspect ratio
+
 = 1.6.1 =
 July 28, 2024
 

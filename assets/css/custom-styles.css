@@ -145,38 +145,13 @@
   list-style-position: inside;
 }
 
-/* Underline links */
-.wp-block-latest-comments.is-style-link-underline a,
-.wp-block-latest-comments.is-style-link-underline a:active {
-  text-decoration: underline !important;
-}
-
-.wp-block-latest-comments.is-style-link-underline a:hover {
-  opacity: 0.8;
-}
-
-/* No Underline links */
-.wp-block-latest-comments.is-style-link-no-underline a,
-.wp-block-latest-comments.is-style-link-no-underline a:active {
-  text-decoration: none !important;
-}
-
-.wp-block-latest-comments.is-style-link-no-underline a:hover {
-  opacity: 0.8;
-}
-
-/* Underline links on hover */
-.wp-block-latest-comments.is-style-link-underline-hover a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
 /*--------------------------------------------------------------
 # Latest Posts
 --------------------------------------------------------------*/
 /* Increase post title size */
 .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-title {
   font-size: var(--wp--preset--font-size--medium);
+  line-height: 1.1;
 }
 
 /* Set post thumbnails to match blog */
@@ -235,32 +210,6 @@
   list-style: disc;
   overflow: visible;
   margin-bottom: 0;
-}
-
-/* Underline links */
-.wp-block-latest-posts.is-style-link-underline a,
-.wp-block-latest-posts.is-style-link-underline a:active {
-  text-decoration: underline !important;
-}
-
-.wp-block-latest-posts.is-style-link-underline a:hover {
-  opacity: 0.8;
-}
-
-/* No Underline links */
-.wp-block-latest-posts.is-style-link-no-underline a,
-.wp-block-latest-posts.is-style-link-no-underline a:active {
-  text-decoration: none !important;
-}
-
-.wp-block-latest-posts.is-style-link-no-underline a:hover {
-  opacity: 0.8;
-}
-
-/* Underline links on hover */
-.wp-block-latest-posts.is-style-link-underline-hover a:hover {
-  opacity: 1;
-  text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
@@ -338,35 +287,6 @@ ol.is-style-list-plain-centered ol {
 ul.is-style-list-plain-centered li,
 ol.is-style-list-plain-centered li {
   margin-left: 0;
-}
-
-/*--------------------------------------------------------------
-# List Items: Custom
---------------------------------------------------------------*/
-/* Underline links */
-li.is-style-link-underline a,
-li.is-style-link-underline a:active {
-  text-decoration: underline;
-}
-
-li.is-style-link-underline a:hover {
-  opacity: 0.8;
-}
-
-/* No Underline links */
-li.is-style-link-no-underline a,
-li.is-style-link-no-underline a:active {
-  text-decoration: none;
-}
-
-li.is-style-link-no-underline a:hover {
-  opacity: 0.8;
-}
-
-/* Underline links on hover */
-li.is-style-link-underline-hover a:hover {
-  opacity: 1;
-  text-decoration: underline;
 }
 
 /*--------------------------------------------------------------
@@ -555,6 +475,10 @@ li.is-style-link-underline-hover a:hover {
 /* HIDE read more text and link */
 .wp-block-post-excerpt.is-style-no-readmore > .wp-block-post-excerpt__more-text {
   display: none;
+}
+
+.wp-block-post-excerpt.is-style-no-readmore > p {
+  margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------

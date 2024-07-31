@@ -5,6 +5,7 @@
 /* Increase post title size */
 .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-title {
 	font-size: var(--wp--preset--font-size--medium);
+	line-height: 1.1;
 }
 
 /* Set post thumbnails to match blog */
@@ -66,30 +67,3 @@
 	overflow: visible;
 	margin-bottom: 0;
 }
-
-/* Underline links */
-.wp-block-latest-posts.is-style-link-underline a,
-.wp-block-latest-posts.is-style-link-underline a:active {
-  text-decoration: underline !important;
-}
-
-.wp-block-latest-posts.is-style-link-underline a:hover {
-  opacity: 0.8;
-}
-
-/* No Underline links */
-.wp-block-latest-posts.is-style-link-no-underline a,
-.wp-block-latest-posts.is-style-link-no-underline a:active {
-  text-decoration: none !important;
-}
-
-.wp-block-latest-posts.is-style-link-no-underline a:hover {
-  opacity: 0.8;
-}
-
-/* Underline links on hover */
-.wp-block-latest-posts.is-style-link-underline-hover a:hover {
-	opacity: 1;
-	text-decoration: underline;
-}
-
