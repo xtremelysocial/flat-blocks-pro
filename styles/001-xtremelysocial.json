@@ -235,7 +235,6 @@
 		"color": {
 			"background": "var(--wp--preset--color--base)",
 			"text": "var(--wp--preset--color--contrast)"
-		},
-		"css": "@media (prefers-color-scheme: dark) { canvas { background-color: var(--wp--preset--color--very-dark-gray); } body { /*color-scheme: dark light;*/ --wp--preset--color--base: var(--wp--preset--color--dark-midnight-blue); --wp--preset--color--contrast: var(--wp--preset--color--off-white); --wp--preset--color--dark: var(--wp--preset--color--almost-black); --wp--preset--color--dark-alt: var(--wp--preset--color--not-quite-black); --wp--preset--color--neutral: var(--wp--preset--color--gray); --wp--preset--color--neutral-alt: var(--wp--preset--color--dark-gray); } .wp-block-group.site-header .wp-block-image  { background-image: url(https://xtremelysocial.com/wp-content/themes/xtremelysocial/assets/images/xs_logo_text_light.png); background-size: cover; } .wp-block-group.site-header img { visibility: hidden; } .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open, .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container { background-color: var(--wp--preset--color--midnight-blue); color: var(--wp--preset--color--foreground-alt); } }"
+		}
 	}	
 }
