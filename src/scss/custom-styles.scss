@@ -12,16 +12,6 @@
  */
 
 /*--------------------------------------------------------------
-# BASE STYLES
---------------------------------------------------------------*/
-//@use "base/normalize";
-//@use "base/elements";
-//@use "base/buttons-links";
-//@use "base/forms";
-//@use "base/alignments";
-//@use "base/colors";
-
-/*--------------------------------------------------------------
 # ADDITIONAL BLOCK STYLES
 --------------------------------------------------------------*/
 @use "blocks/calendar";
@@ -53,13 +43,4 @@
 @use "blocks/separator";
 @use "blocks/social-links";
 @use "blocks/table";
-@use "blocks/tag-cloud";
-
-// --------------------------------------------------------------
-// # ADDITIONAL BASE STYLES
-// --------------------------------------------------------------*/
-//@use "base/utilities";
-//@use "base/dashicons";
-//@use "base/margins";
-//@use "base/padding";
-//@use "base/color-compat";
+//@use "blocks/tag-cloud";
