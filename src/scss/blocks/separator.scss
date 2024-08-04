@@ -2,6 +2,12 @@
 # Separator
 --------------------------------------------------------------*/
 
+/* TO-DO: FIX separator color */
+// .wp-block-separator {
+// 	border-color: currentColor;
+// 	background-color: currentColor;
+// }
+
 /* FIX to center default (narrow) separator when user selects alignfull */
 .wp-block-separator.alignfull {
 	margin-left: auto !important;
@@ -17,7 +23,7 @@
 /*--------------------------------------------------------------
 # Separator: Custom
 --------------------------------------------------------------*/
-.wp-block-separator.is-style-thick {
+/*.wp-block-separator.is-style-thick {
   	border-style: solid;
 	border-width: 0 0 3px;
 }
@@ -26,7 +32,7 @@
   	border-style: solid;
 	border-width: 0 0 3px;
 	width: 100%;
-}
+}*/
 
 /*.wp-block-separator.is-style-clearfix {
 	border-width: 0;

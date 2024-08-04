@@ -35,9 +35,9 @@ if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 			'cover-rounded-corners' => array( esc_html__('Rounded Corners', 'flat-blocks'), 
 				array('cover' )
 			),
-			'media-text-border' => array( esc_html__('Border', 'flat-blocks'), 
-				array('media-text' )
-			),
+// 			'media-text-border' => array( esc_html__('Border', 'flat-blocks'), 
+// 				array('media-text' )
+// 			),
 			'image-border' 		=> array( esc_html__('Border', 'flat-blocks'), 
 				array('image' )
 			),
@@ -53,24 +53,24 @@ if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 			'image-no-border'	=> array( esc_html__('No Border', 'flat-blocks'), 
 				array('post-featured-image' )
 			),
-			'thick' 			=> array( esc_html__('Thick', 'flat-blocks'), 
-				array('separator' )
-			),
-			'thick-wide' 		=> array( esc_html__('Thick Wide', 'flat-blocks'), 
-				array('separator' )
-			),
+// 			'thick' 			=> array( esc_html__('Thick', 'flat-blocks'), 
+// 				array('separator' )
+// 			),
+// 			'thick-wide' 		=> array( esc_html__('Thick Wide', 'flat-blocks'), 
+// 				array('separator' )
+// 			),
 			'bullets' 			=> array( esc_html__('Bullets', 'flat-blocks'), 
 				array('latest-posts', 'latest-comments' )
 			),
-			'no-padding' 		=> array( esc_html__('No Padding', 'flat-blocks'), 
-				array('group', 'column' )
-			),
-			'rounded-border' 	=> array( esc_html__('Border', 'flat-blocks'), 
-				array('group', 'column', 'post-comments' )
-			),
-			'thick-rounded-border' => array( esc_html__('Thick Border', 'flat-blocks'), 
-				array('group' )
-			),
+// 			'no-padding' 		=> array( esc_html__('No Padding', 'flat-blocks'), 
+// 				array('group', 'column' )
+// 			),
+// 			'rounded-border' 	=> array( esc_html__('Border', 'flat-blocks'), 
+// 				array('group', 'column', 'post-comments' )
+// 			),
+// 			'thick-rounded-border' => array( esc_html__('Thick Border', 'flat-blocks'), 
+// 				array('group' )
+// 			),
 			'no-gap' 			=> array( esc_html__('No Gap', 'flat-blocks'), 
 				array('columns' )
 			),
@@ -98,15 +98,15 @@ if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 			'alignwide' 		=> array( esc_html__('Align Wide', 'flat-blocks'), 
 				array('paragraph' )
 			),
-			'link-underline' 	=> array( esc_html__('Underline Link', 'flat-blocks'), 
-				array('paragraph', 'list-item', 'categories', 'latest-posts', 'latest-comments', 'page-list', 'post-title', 'post-terms')
-			),
-			'link-no-underline' => array( esc_html__('No Underline Link', 'flat-blocks'), 
-				array('paragraph', 'list-item', 'categories', 'latest-posts', 'latest-comments', 'page-list', 'post-title', 'post-terms')
-			),
-			'link-underline-hover' => array( esc_html__('Underline Hover', 'flat-blocks'), 
-				array('paragraph', 'list-item', 'categories', 'latest-posts', 'latest-comments', 'page-list', 'post-title', 'post-terms')
-			),
+// 			'link-underline' 	=> array( esc_html__('Underline Link', 'flat-blocks'), 
+// 				array('paragraph', 'list-item', 'categories', 'latest-posts', 'latest-comments', 'page-list', 'post-title', 'post-terms')
+// 			),
+// 			'link-no-underline' => array( esc_html__('No Underline Link', 'flat-blocks'), 
+// 				array('paragraph', 'list-item', 'categories', 'latest-posts', 'latest-comments', 'page-list', 'post-title', 'post-terms')
+// 			),
+// 			'link-underline-hover' => array( esc_html__('Underline Hover', 'flat-blocks'), 
+// 				array('paragraph', 'list-item', 'categories', 'latest-posts', 'latest-comments', 'page-list', 'post-title', 'post-terms')
+// 			),
 			'arrow-icon' 		=> array( esc_html__('Arrow Icon', 'flat-blocks'), 
 				array('paragraph' )
 			),

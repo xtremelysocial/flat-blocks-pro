@@ -2,7 +2,7 @@
  * File:	custom-styles.css
  * Theme:	Flat Blocks
  * 
- * The stylesheet for the Flat Block theme's CUSTOM block styles
+ * The stylesheet for the Flat Block theme's block styles
  *
  * NOTE: This file is AUTO-GENERATED from the SASS source files 
  * in /src/sass/custom-styles.scss. Do not make updates here.
@@ -12,24 +12,13 @@
  */
 
 /*--------------------------------------------------------------
-# BASE STYLES
---------------------------------------------------------------*/
-//@use "base/normalize";
-//@use "base/elements";
-//@use "base/buttons-links";
-//@use "base/forms";
-//@use "base/alignments";
-//@use "base/colors";
-
-/*--------------------------------------------------------------
-# ADDITIONAL BLOCK STYLES
+# CUSTOM BLOCK STYLES
 --------------------------------------------------------------*/
 @use "blocks/calendar";
 //@use "blocks/columns";
 @use "blocks/comments";
 //@use "blocks/cover";
 @use "blocks/details";
-@use "blocks/post-featured-image";
 //@use "blocks/group";
 //@use "blocks/heading";
 //@use "blocks/image";
@@ -45,21 +34,13 @@
 @use "blocks/post-comments-form";
 @use "blocks/post-date";
 @use "blocks/post-excerpt";
+@use "blocks/post-featured-image";
 @use "blocks/post-terms";
 //@use "blocks/post-title";
 @use "blocks/query-pagination";
-@use "blocks/quote";
 @use "blocks/query";
+@use "blocks/quote";
 @use "blocks/separator";
 @use "blocks/social-links";
 @use "blocks/table";
 @use "blocks/tag-cloud";
-
-// --------------------------------------------------------------
-// # ADDITIONAL BASE STYLES
-// --------------------------------------------------------------*/
-//@use "base/utilities";
-//@use "base/dashicons";
-//@use "base/margins";
-//@use "base/padding";
-//@use "base/color-compat";

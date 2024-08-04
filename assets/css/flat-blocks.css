@@ -155,28 +155,24 @@ input[type=file]::file-selector-button:hover,
 # Custom: Link Underlines
 --------------------------------------------------------------*/
 /* Underline links */
-.is-style-link-underline a,
+/*.is-style-link-underline a,
 .is-style-link-underline a:active {
-  text-decoration: underline;
-}
-
+	text-decoration: underline; // !important;
+}*/
 /* No Underline links */
-.is-style-link-no-underline a,
+/*.is-style-link-no-underline a,
 .is-style-link-no-underline a:active {
-  text-decoration: none;
-}
-
-.is-style-link-underline a:hover,
+	text-decoration: none; // !important;
+}*/
+/*.is-style-link-underline a:hover,
 .is-style-link-no-underline a:hover {
-  opacity: 0.8;
-}
-
+	opacity: 0.8;
+}*/
 /* Underline links on hover */
-.is-style-link-underline-hover a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
+/*.is-style-link-underline-hover a:hover {
+	opacity: 1;
+	text-decoration: underline;
+}*/
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -643,36 +639,35 @@ body .is-layout-constrained > .alignright {
 # Group: Custom
 --------------------------------------------------------------*/
 /* Group borders */
+/*
 .wp-block-group.is-style-rounded-border {
-  border: 1px solid var(--wp--custom--border--color);
-  border-radius: var(--wp--custom--border--radius);
-  padding: var(--wp--preset--spacing--40);
+	border: 1px solid var(--wp--custom--border--color);
+	border-radius: var(--wp--custom--border--radius);
+	padding: var(--wp--preset--spacing--40);
+    //box-shadow: var(--wp--custom--shadow--default);
 }
 
 .wp-block-group.is-style-rounded-border.is-layout-flex {
-  overflow: hidden;
+	overflow: hidden;
 }
 
 .wp-block-group.is-style-thick-rounded-border {
-  border: 3px solid var(--wp--custom--border--color);
-  border-radius: var(--wp--custom--border--radius);
+	border: 3px solid var(--wp--custom--border--color);
+	border-radius: var(--wp--custom--border--radius);
+    //box-shadow: var(--wp--custom--shadow--default);
 }
-
 .wp-block-group.is-style-thick-rounded-border.is-layout-flex {
-  overflow: hidden;
-}
-
+	overflow: hidden;
+}*/
 /* Group no padding */
-.wp-block-group.is-style-no-padding {
-  padding-top: 0;
-  padding-bottom: 0;
+/*.wp-block-group.is-style-no-padding {
+	padding-top: 0;
+	padding-bottom: 0;
 }
-
 .wp-block-group.is-style-no-padding:not(.has-global-padding) {
-  padding-left: 0;
-  padding-right: 0;
-}
-
+	padding-left: 0;
+	padding-right: 0;
+}*/
 /* Group fixed header */
 .wp-block-group.is-style-fixed-header,
 .wp-block-group.has-background.is-style-fixed-header {
