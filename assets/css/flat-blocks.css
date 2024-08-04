@@ -1139,6 +1139,8 @@ p.is-style-arrow-icon > a:after {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
+  line-height: inherit;
+  text-align: center;
 }
 
 .dashicons:before {
@@ -1149,11 +1151,13 @@ p.is-style-arrow-icon > a:after {
   font-size: 1em;
   line-height: 1;
   font-weight: inherit;
-  vertical-align: middle;
+  vertical-align: text-top;
 }
 
 /* Add some right margin on inline dashicons before the text */
-.dashicons-before:before {
+.dashicons-before:before,
+.dashicons-above:before,
+.dashicons-below:before {
   font-family: dashicons;
   margin-right: var(--wp--preset--spacing--20, 4.5px);
 }
@@ -1177,6 +1181,7 @@ p.is-style-arrow-icon > a:after {
  */
 .wp-block-navigation .dashicons {
   transition: none;
+  text-align: inherit;
 }
 
 /* Don't display the top-level icon on the drop-down menu */

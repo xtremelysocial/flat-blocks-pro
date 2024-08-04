@@ -11,9 +11,6 @@
  * @since 	1.0
  */
 /*--------------------------------------------------------------
-# BASE STYLES
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
 # ADDITIONAL BLOCK STYLES
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
@@ -332,35 +329,6 @@ ol.is-style-list-plain-centered li {
   }
 }
 /*--------------------------------------------------------------
-# Page List: Custom
---------------------------------------------------------------*/
-/* Underline links */
-.wp-block-page-list.is-style-link-underline a,
-.wp-block-page-list.is-style-link-underline a:active {
-  text-decoration: underline !important;
-}
-
-.wp-block-page-list.is-style-link-underline a:hover {
-  opacity: 0.8;
-}
-
-/* No Underline links */
-.wp-block-page-list.is-style-link-no-underline a,
-.wp-block-page-list.is-style-link-no-underline a:active {
-  text-decoration: none !important;
-}
-
-.wp-block-page-list.is-style-link-no-underline a:hover {
-  opacity: 0.8;
-}
-
-/* Underline links on hover */
-.wp-block-page-list.is-style-link-underline-hover a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
-/*--------------------------------------------------------------
 # Post Author
 --------------------------------------------------------------*/
 /* dashicons-admin-users */
@@ -518,35 +486,6 @@ ol.is-style-list-plain-centered li {
 }
 
 /*--------------------------------------------------------------
-# Post Title: Custom
---------------------------------------------------------------*/
-/* Underline links */
-.wp-block-post-title.is-style-link-underline a,
-.wp-block-page-list.is-style-link-underline a:active {
-  text-decoration: underline !important;
-}
-
-.wp-block-post-title.is-style-link-underline a:hover {
-  opacity: 0.8;
-}
-
-/* No Underline links */
-.wp-block-post-title.is-style-link-no-underline a,
-.wp-block-post-title.is-style-link-no-underline a:active {
-  text-decoration: none !important;
-}
-
-.wp-block-post-title.is-style-link-no-underline a:hover {
-  opacity: 0.8;
-}
-
-/* Underline links on hover */
-.wp-block-post-title.is-style-link-underline-hover a:hover {
-  opacity: 1;
-  text-decoration: underline;
-}
-
-/*--------------------------------------------------------------
 # Query Pagination
 --------------------------------------------------------------*/
 .wp-block-query-pagination-numbers .page-numbers:nth-last-child(n+2) {
@@ -665,10 +604,3 @@ ol.is-style-list-plain-centered li {
 /*.wp-block-table.is-style-stripes tbody tr:nth-child(even) {
     background-color: var(--wp--preset--color--neutral-alt);
 }*/
-/*--------------------------------------------------------------
-# Tag or Category Cloud
---------------------------------------------------------------*/
-.wp-block-tag-cloud.is-style-outline .tag-cloud-link {
-  border-radius: var(--wp--custom--border--radius);
-  padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30);
-}

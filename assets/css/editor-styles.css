@@ -106,8 +106,3 @@ nav.wp-block-navigation .wp-block-navigation__submenu-icon {
 nav.wp-block-navigation.is-style-fixed-menu {
   margin: var(--wp--preset--spacing--60) var(--wp--preset--spacing--50);
 }
-
-/*--------------------------------------------------------------
-# Site Title
---------------------------------------------------------------*/
-/* Override WordPress v6.4 defaulting this to inherit */
