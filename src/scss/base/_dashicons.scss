@@ -64,3 +64,10 @@
 .wp-block-navigation__submenu-container.dashicons:before {
 	content: none;
 }
+
+/*--------------------------------------------------------------
+# Dashicons: Custom
+--------------------------------------------------------------*/
+.is-style-no-icon:before {	
+ 	display: none;
+}

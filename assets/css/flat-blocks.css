@@ -104,7 +104,7 @@ input[type=button],
 input[type=submit][class*=button],
 input[type=reset][class*=button],
 input[type=file]::file-selector-button {
-  color: var(--wp--preset--color--foreground-alt, white);
+  color: var(--wp--preset--color--foreground-alt, white) !important;
   background-color: var(--wp--custom--link--color);
   border: none;
   border-width: 0;
@@ -1187,6 +1187,13 @@ p.is-style-arrow-icon > a:after {
 /* Don't display the top-level icon on the drop-down menu */
 .wp-block-navigation__submenu-container.dashicons:before {
   content: none;
+}
+
+/*--------------------------------------------------------------
+# Dashicons: Custom
+--------------------------------------------------------------*/
+.is-style-no-icon:before {
+  display: none;
 }
 
 /*--------------------------------------------------------------

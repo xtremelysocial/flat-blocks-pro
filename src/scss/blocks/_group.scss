@@ -37,7 +37,6 @@
 --------------------------------------------------------------*/
 
 /* Group borders */
-/*
 .wp-block-group.is-style-rounded-border {
 	border: 1px solid var(--wp--custom--border--color);
 	border-radius: var(--wp--custom--border--radius);
@@ -56,17 +55,17 @@
 }
 .wp-block-group.is-style-thick-rounded-border.is-layout-flex {
 	overflow: hidden;
-}*/
+}
 
 /* Group no padding */
-/*.wp-block-group.is-style-no-padding {
+.wp-block-group.is-style-no-padding {
 	padding-top: 0;
 	padding-bottom: 0;
 }
 .wp-block-group.is-style-no-padding:not(.has-global-padding) {
 	padding-left: 0;
 	padding-right: 0;
-}*/
+}
 
 /* Group fixed header */
 .wp-block-group.is-style-fixed-header,
