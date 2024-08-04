@@ -104,7 +104,7 @@ input[type=button],
 input[type=submit][class*=button],
 input[type=reset][class*=button],
 input[type=file]::file-selector-button {
-  color: var(--wp--preset--color--foreground-alt, white) !important;
+  color: var(--wp--preset--color--foreground-alt, white);
   background-color: var(--wp--custom--link--color);
   border: none;
   border-width: 0;
@@ -155,24 +155,28 @@ input[type=file]::file-selector-button:hover,
 # Custom: Link Underlines
 --------------------------------------------------------------*/
 /* Underline links */
-/*.is-style-link-underline a,
+.is-style-link-underline a,
 .is-style-link-underline a:active {
-	text-decoration: underline; // !important;
-}*/
+  text-decoration: underline;
+}
+
 /* No Underline links */
-/*.is-style-link-no-underline a,
+.is-style-link-no-underline a,
 .is-style-link-no-underline a:active {
-	text-decoration: none; // !important;
-}*/
-/*.is-style-link-underline a:hover,
+  text-decoration: none;
+}
+
+.is-style-link-underline a:hover,
 .is-style-link-no-underline a:hover {
-	opacity: 0.8;
-}*/
+  opacity: 0.8;
+}
+
 /* Underline links on hover */
-/*.is-style-link-underline-hover a:hover {
-	opacity: 1;
-	text-decoration: underline;
-}*/
+.is-style-link-underline-hover a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
 /*--------------------------------------------------------------
 # Forms
 --------------------------------------------------------------*/
@@ -639,35 +643,36 @@ body .is-layout-constrained > .alignright {
 # Group: Custom
 --------------------------------------------------------------*/
 /* Group borders */
-/*
 .wp-block-group.is-style-rounded-border {
-	border: 1px solid var(--wp--custom--border--color);
-	border-radius: var(--wp--custom--border--radius);
-	padding: var(--wp--preset--spacing--40);
-    //box-shadow: var(--wp--custom--shadow--default);
+  border: 1px solid var(--wp--custom--border--color);
+  border-radius: var(--wp--custom--border--radius);
+  padding: var(--wp--preset--spacing--40);
 }
 
 .wp-block-group.is-style-rounded-border.is-layout-flex {
-	overflow: hidden;
+  overflow: hidden;
 }
 
 .wp-block-group.is-style-thick-rounded-border {
-	border: 3px solid var(--wp--custom--border--color);
-	border-radius: var(--wp--custom--border--radius);
-    //box-shadow: var(--wp--custom--shadow--default);
+  border: 3px solid var(--wp--custom--border--color);
+  border-radius: var(--wp--custom--border--radius);
 }
+
 .wp-block-group.is-style-thick-rounded-border.is-layout-flex {
-	overflow: hidden;
-}*/
-/* Group no padding */
-/*.wp-block-group.is-style-no-padding {
-	padding-top: 0;
-	padding-bottom: 0;
+  overflow: hidden;
 }
+
+/* Group no padding */
+.wp-block-group.is-style-no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .wp-block-group.is-style-no-padding:not(.has-global-padding) {
-	padding-left: 0;
-	padding-right: 0;
-}*/
+  padding-left: 0;
+  padding-right: 0;
+}
+
 /* Group fixed header */
 .wp-block-group.is-style-fixed-header,
 .wp-block-group.has-background.is-style-fixed-header {
@@ -1134,6 +1139,8 @@ p.is-style-arrow-icon > a:after {
   font-family: inherit;
   font-size: inherit;
   font-weight: inherit;
+  line-height: inherit;
+  text-align: center;
 }
 
 .dashicons:before {
@@ -1144,11 +1151,14 @@ p.is-style-arrow-icon > a:after {
   font-size: 1em;
   line-height: 1;
   font-weight: inherit;
-  vertical-align: middle;
+  vertical-align: text-top;
 }
 
 /* Add some right margin on inline dashicons before the text */
-.dashicons-before:before {
+.dashicons-before:before,
+.dashicons-above:before,
+.dashicons-below:before {
+  font-family: dashicons;
   margin-right: var(--wp--preset--spacing--20, 4.5px);
 }
 
@@ -1156,6 +1166,7 @@ p.is-style-arrow-icon > a:after {
   display: flex;
 }
 .dashicons-after:before {
+  font-family: dashicons;
   order: 2;
   margin-left: var(--wp--preset--spacing--20, 4.5px);
 }
@@ -1170,6 +1181,7 @@ p.is-style-arrow-icon > a:after {
  */
 .wp-block-navigation .dashicons {
   transition: none;
+  text-align: inherit;
 }
 
 /* Don't display the top-level icon on the drop-down menu */

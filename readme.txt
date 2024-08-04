@@ -148,7 +148,7 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 == Changelog ==
 
 = 1.6.2 =
-July 31, 2024
+August 3, 2024
 
 * Fix Title and Subtitle Pattern which was displaying an issue in the block editor due to it using an H1 tag. Changed it to H2 since only the site title should be H1.
 * Fix Default Auto-Dark Mode Global Theme Style since change to base and contrast colors in v1.6.
@@ -159,6 +159,7 @@ July 31, 2024
 	* Reduced line height on Latest Posts block article titles
 	* Remove extra bottom margin on post excerpts with "no read more" style applied
 	* Enhance native Dashicons CSS to preserve aspect ratio
+* Moved Global Theme Styles to a new /styles/global directory now that the typography ones are moved into /styles/typography.
 
 = 1.6.1 =
 July 28, 2024
