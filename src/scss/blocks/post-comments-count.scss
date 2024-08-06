@@ -22,10 +22,3 @@
 .wp-block-post-comments-count:after {
 	content: " comment(s)";
 }
-
-/*--------------------------------------------------------------
-# Post Comments Count: Custom
---------------------------------------------------------------*/
-.wp-block-post-comments-count.is-style-no-icon:before {	
-	display: none;
-}

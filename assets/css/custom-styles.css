@@ -69,7 +69,7 @@
 .wp-block-details:not(.has-text-color) > summary {
   color: var(--wp--custom--link--color);
   font-weight: var(--wp--custom--typography--font-weight--medium);
-  transition: color var(--wp--custom--animation--duration--medium) var(--wp--custom--animation--timing-function);
+  transition: color var(--wp--custom--animation--duration--medium, 500ms) var(--wp--custom--animation--timing-function, ease-in);
 }
 
 /* Highlight Summary on hover and when open */
@@ -364,13 +364,6 @@ ol.is-style-list-plain-centered li {
 }
 
 /*--------------------------------------------------------------
-# Post Author: Custom
---------------------------------------------------------------*/
-.wp-block-post-author.is-style-no-icon:before {
-  display: none;
-}
-
-/*--------------------------------------------------------------
 # Post Comments Count
 --------------------------------------------------------------*/
 /* dashicons-admin-comments for comments count */
@@ -392,13 +385,6 @@ ol.is-style-list-plain-centered li {
  */
 .wp-block-post-comments-count:after {
   content: " comment(s)";
-}
-
-/*--------------------------------------------------------------
-# Post Comments Count: Custom
---------------------------------------------------------------*/
-.wp-block-post-comments-count.is-style-no-icon:before {
-  display: none;
 }
 
 /*--------------------------------------------------------------
@@ -428,13 +414,6 @@ ol.is-style-list-plain-centered li {
   padding-right: 0;
   margin-right: 0;
   margin-left: var(--wp--preset--spacing--20);
-}
-
-/*--------------------------------------------------------------
-# Post Date: Custom
---------------------------------------------------------------*/
-.wp-block-post-date.is-style-no-icon:before {
-  display: none;
 }
 
 /*--------------------------------------------------------------
@@ -479,13 +458,6 @@ ol.is-style-list-plain-centered li {
 }
 
 /*--------------------------------------------------------------
-# Post Terms: Custom
---------------------------------------------------------------*/
-.wp-block-post-terms.is-style-no-icon:before {
-  display: none;
-}
-
-/*--------------------------------------------------------------
 # Query Pagination
 --------------------------------------------------------------*/
 .wp-block-query-pagination-numbers .page-numbers:nth-last-child(n+2) {
@@ -507,7 +479,7 @@ ol.is-style-list-plain-centered li {
 }
 
 /*--------------------------------------------------------------
-# Custom: Query
+# Query: Custom
 --------------------------------------------------------------*/
 .wp-block-query.is-style-no-padding {
   padding-top: 0;
@@ -563,16 +535,16 @@ ol.is-style-list-plain-centered li {
 
 /* Adjust icon sizes */
 .wp-block-social-links.has-small-icon-size {
-  font-size: 22px;
+  font-size: var(--wp--preset--font-size--medium);
 }
 
 .wp-block-social-links.has-normal-icon-size {
-  font-size: 26px;
+  font-size: var(--wp--preset--font-size--large);
 }
 
 /* Adjust animation on social icons to better match our other animation */
 .wp-block-social-link {
-  transition: transform var(--wp--custom--animation--duration--medium) ease-in-out;
+  transition: transform var(--wp--custom--animation--duration--medium, 500ms) ease-in-out;
 }
 
 /*--------------------------------------------------------------
