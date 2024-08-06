@@ -522,17 +522,17 @@
 				{
 					"name": "Natural",
 					"slug": "natural",
-					"shadow": "0px 8px 24px rgba(149, 157, 165, 0.2)"
+					"shadow": "0px 7px 29px 0px rgba(100, 100, 111, 0.2)"
 				},
 				{
 					"name": "Deep",
 					"slug": "deep",
-					"shadow": "0px 7px 29px 0px rgba(100, 100, 111, 0.2)"
+					"shadow": "6px 6px 9px rgba(0, 0, 0, 0.2)"
 				},
 				{
 					"name": "Sharp",
 					"slug": "sharp",
-					"shadow": "6px 6px 9px rgba(0, 0, 0, 0.2)"
+					"shadow": "0px 5px 15px rgba(0, 0, 0, 0.35)"
 				},
 				{
 					"name": "Outline",
@@ -860,7 +860,7 @@
 				{
 					"slug": "medium",
 					"size": "22px",
-					"name": "Medium (h4)"
+			 		"name": "Medium (h4)"
 				},
 				{
 					"slug": "large",
@@ -1724,6 +1724,12 @@
 			"name": "page-title",
 			"title": "Page Title",
 			"description": "Title for pages",
+			"area": "title"
+		},
+		{
+			"name": "page-title-excerpt",
+			"title": "Page Title w/Excerpt",
+			"description": "Page title with excerpt",
 			"area": "title"
 		},
 		{

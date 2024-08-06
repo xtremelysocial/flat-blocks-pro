@@ -1,56 +1,71 @@
 <?php
 /**
- * File:	block-styles.php
+ * File:	block-variations.php
  * Theme:	Flat Blocks
  * 
  * Adds all of our custom styles for selection in the Block Editor
  * 
- * Note the corresponding CSS is in /assets/css/custom-styles.css and 
+ * Note the corresponding CSS is in /assets/css/custom-variations.css and 
  * /assets/styles/custom-fixedheader.css
  * 
  * @link https://developer.wordpress.org/reference/functions/register_block_style/
  * 
  * @package flat-blocks
- * @since	1.0
+ * @since	1.6.2
  */
 
-if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
+/* 
+ * First setup our block variations array and allow child themes or plugins to
+ * override them. This is run one time at WordPress init.
+ */
+// if ( ! function_exists( 'flatblocks_register_block_variations' ) ) :
+// endif;
+// add_action( 'init', 'flatblocks_register_block_variations' );
 
-	function flatblocks_register_block_styles() {
+/* 
+ * Then as each core block is registered, add our block variations from the array.
+ */
+if ( ! function_exists( 'flatblocks_add_block_variations' ) ) :
+
+	function flatblocks_add_block_variations( $metadata ) {
+	
+	    if ( ! isset( $metadata['name'] ) ) {
+        	return $metadata;
+	    }
 
 		/* 
 		 * Define custom styles and what blocks they apply to. Note that the prefix 
 		 * 'is-style-' will automatically be added to the names.
 		 */
-		$custom_styles = array(
-			'fixed-menu' 		=> array( esc_html__('Fixed Menu', 'flat-blocks'), 
-				array('navigation' )
+		$custom_variations = array(
+			'core/navigation' => array(
+				array('fixed-menu', esc_html__('Fixed Menu', 'flat-blocks' ) )
 			),
-			'fixed-header' 		=> array( esc_html__('Fixed Header', 'flat-blocks'), 
-				array('group' )
+			'core/group' => array(
+				array('fixed-header', esc_html__('Fixed Header', 'flat-blocks') ),
+				array('no-padding', esc_html__('No Padding', 'flat-blocks') ),
+				array('rounded-border', esc_html__('Border', 'flat-blocks') ), 
+				array('thick-rounded-border', esc_html__('Thick Border', 'flat-blocks') )
 			),
-			'cover-border' 		=> array( esc_html__('Border', 'flat-blocks'), 
-				array('cover' )
+			'core/cover' => array(
+				array('cover-border', esc_html__('Borders', 'flat-blocks') ), 
+				array('cover-rounded-corners', esc_html__('Rounded Corners', 'flat-blocks') )
 			),
-			'cover-rounded-corners' => array( esc_html__('Rounded Corners', 'flat-blocks'), 
-				array('cover' )
+			'core/media-text' => array(
+				array('media-text-border', esc_html__('Border', 'flat-blocks') ), 
 			),
-			'media-text-border' => array( esc_html__('Border', 'flat-blocks'), 
-				array('media-text' )
-			),
+/* 
+			
 			'image-border' 		=> array( esc_html__('Border', 'flat-blocks'), 
 				array('image' )
 			),
-			'image-round-border' => array( esc_html__('Rounded w/Border', 'flat-blocks'), 
+			'image-round-border' => array( esc_html__('Round Border', 'flat-blocks'), 
 				array('image' )
-			),
-			'image-border' 		=> array( esc_html__('Image Border', 'flat-blocks'), 
-				array( 'gallery' )
 			),
 			'image-computer-screen' => array( esc_html__('Computer Screen', 'flat-blocks'), 
 				array('image' )
 			),
-			'image-tablet-phone-screen' => array( esc_html__('Tablet/Phone Screen', 'flat-blocks'), 
+			'image-tablet-phone-screen' => array( esc_html__('Phone/Tablet Screen', 'flat-blocks'), 
 				array('image' )
 			),
 			'image-no-border'	=> array( esc_html__('No Border', 'flat-blocks'), 
@@ -116,40 +131,45 @@ if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 			'arrow-icon-no-text' => array( esc_html__('Arrow No Text', 'flat-blocks'), 
 				array('paragraph' )
 			)
+ */
 		);
 		
 		/* Apply filter to the custom styles list so child themes can override */
-		$custom_styles = apply_filters( 'flatblocks_custom_block_styles', $custom_styles );
+		$custom_variations = apply_filters( 'flatblocks_custom_block_variations', $custom_variations );
 		
 		/* 
 		 * Loop through each style and create the custom style for each of its blocks.
 		 * 
-		 * TO-DO: Once minimum WordPress version is 6.6, the array of blocks can be sent
-		 * to register_block_style instead of looping through each block.
+		 * TO-DO: THIS SHOULD FIND THE BLOCK INSTEAD OF LOOPING THROUGH THE WHOLE ARRAY
 		 */
-		//foreach ( $custom_styles as $custom_style => [$label, $blocks, $style_handle_or_inline] ) {
-		foreach ( $custom_styles as $custom_style => $properties ) {
-			$label = $properties[0] ?? ucwords( str_ireplace( '-', ' ', $custom_style ) );
-			$blocks = ( isset($properties[1]) and is_array($properties[1]) ) ? $properties[1] : array();
+		//foreach ( $custom_variations as $custom_style => [$label, $blocks, $style_handle_or_inline] ) {
+		foreach ( $custom_variations as $block => $variations ) {
+
+			// If no slug, then use core/
+			if ( stripos( $block, '/' ) === false ) $block = 'core/' . $block;
+			
+			// Skip if current block doesn't have any block variations
+			if ( $block != $metadata['name']  ) {
+				continue;
+			}
 
 			// Loop through each block and register the custom style
-			foreach ( $blocks as $block ) {
-							
-				// If no slug, then use core/
-				if ( stripos( $block, '/' ) === false ) $block = 'core/' . $block;
+			foreach ( $variations as $variation ) {
+
+				// Parse out variation slug and label	
+				//$slug = ( isset($variation[0]) and is_array($variation[0]) ) ? $variation[1] : array();
+				//$label = $variation[0] ?? ucwords( str_ireplace( '-', ' ', $custom_style ) );
+				list($slug, $label) = $variation;
 				
-				register_block_style(
-					$block,
-					array(
-						'name'  => $custom_style,
-						'label' => $label,
-						'inline_style' => $properties['inline_style'] ?? '',
-						'style_handle' => $properties['style_handle'] ?? ''
-					)
+				$metadata['styles'][] = array( 
+					'name' => $slug, 
+					'label' => $label
 				);
-			} //end foreach $custom_styles
-		} //end foreach $blocks
+			} // $variations
+		} // $custom_variations
 		
+		return $metadata;
 	}
 endif;
-add_action( 'init', 'flatblocks_register_block_styles' );
+add_filter( 'block_type_metadata', 'flatblocks_add_block_variations' ); 
+
