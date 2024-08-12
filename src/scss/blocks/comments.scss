@@ -16,14 +16,26 @@
 }
 
 /* Hide empty comments so no extra vertical margin */
-/*#post-comments:empty {
-	display: none;
-	margin-top: 0;
-}*/
+// #post-comments:empty {
+// 	display: none;
+// 	margin-top: 0;
+// }
 
 /* Add padding to comment page numbers */
 .wp-block-comments-pagination .page-numbers:nth-last-child(n+2) {
 	padding-right: var(--wp--preset--spacing--30);
+}
+
+/* If not global padding on comments, then add some on mobile
+ *
+ * Note: Breakpoint of 781 is what is hard-coded in WordPress 
+ * v6.0+ to collapse columns
+ */
+@media only screen and (max-width: 781px) {
+	.post-comments:not(.has-global-padding) {
+		padding-left: var(--wp--style--root--padding-left) !important;
+		padding-right: var(--wp--style--root--padding-right) !important;
+	}
 }
 
 /*--------------------------------------------------------------

@@ -56,9 +56,6 @@
 /*--------------------------------------------------------------
 # Group
 --------------------------------------------------------------*/
-/*--------------------------------------------------------------
-# Padding (Horizontal and vertical spacing)
---------------------------------------------------------------*/
 /* In the Editor, blocks don't get alignfull CSS class for some 
  * some reason, so assume header and footer are full width
  */

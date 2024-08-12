@@ -1,27 +1,29 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Green, Blue, Yellow",
+	"title": "Blue w/Red Links",
 	"styles": {
-		"css": ".has-background.has-tertiary-background-color { color: var(--wp--preset--color--contrast); }"
+		"color": {
+			"text": "#555555 /*var(--wp--preset--color--contrast)*/"
+		}
 	},
 	"settings": {
-		"color": {		
+		"color": {
 			"palette": [
 				{
 					"slug": "primary",
-					"color": "#1abc9c",
-					"name": "Primary (Light Green)"
+					"color": "#3498db",
+					"name": "Primary (Blue)"
 				},
 				{
 					"slug": "secondary",
-					"color": "#3498db",
-					"name": "Secondary (Blue)"
+					"color": "#ff7878",
+					"name": "Secondary (Light Red)"
 				},
 				{
 					"slug": "tertiary",
-					"color": "#f1c40f",
-					"name": "Tertiary (Yellow)"
+					"color": "#f39c12",
+					"name": "Tertiary (Light Orange)"
 				},
 				{
 					"slug": "dark",
@@ -35,18 +37,18 @@
 				},
 				{
 					"slug": "primary-alt",
-					"color": "#16a085",
-					"name": "Primary Alt (Green)"
+					"color": "#2980b9",
+					"name": "Primary Alt (Dark Blue)"
 				},
 				{
 					"slug": "secondary-alt",
-					"color": "#2980b9",
-					"name": "Secondary Alt (Dark Blue)"
+					"color": "#e74c3c",
+					"name": "Secondary Alt (Red)"
 				},
 				{
 					"slug": "tertiary-alt",
-					"color": "#f39c12",
-					"name": "Tertiary Alt (Light Orange)"
+					"color": "#e67e22",
+					"name": "Tertiary Alt (Orange)"
 				},
 				{
 					"slug": "dark-alt",
@@ -72,6 +74,16 @@
 					"slug": "contrast",
 					"color": "#555555",
 					"name": "Contrast / Foreground (Very Dark Gray)"
+				},
+				{
+					"slug": "highlight",
+					"color": "#ff7878",
+					"name": "Highlight (Light Red)"
+				},
+				{
+					"slug": "highlight-alt",
+					"color": "#e74c3c",
+					"name": "Highlight Alt (Red)"
 				},
 				{
 					"slug": "white",
@@ -222,7 +234,7 @@
 					"slug": "black",
 					"color": "#000000",
 					"name": "Black"
-				}
+				}				
 			],
 			"duotone": [
 				{
@@ -236,42 +248,42 @@
 					"name": "Background and Foreground"
 				},
 				{
-					"colors": ["#1abc9c", "#f2f2f2"],
+					"colors": ["#3498db", "#f2f2f2"],
 					"slug": "primary-and-background",
 					"name": "Primary and Background"
 				},
 				{
-					"colors": ["#f2f2f2", "#1abc9c"],
+					"colors": ["#f2f2f2", "#3498db"],
 					"slug": "background-and-primary",
 					"name": "Background and Primary"
 				},
 				{
-					"colors": ["#1abc9c", "#555555"],
+					"colors": ["#3498db", "#555555"],
 					"slug": "primary-and-foreground",
 					"name": "Primary and Foreground"
 				},
 				{
-					"colors": ["#555555", "#1abc9c"],
+					"colors": ["#555555", "#3498db"],
 					"slug": "foreground-and-primary",
 					"name": "Foreground and Primary"
 				},
 				{
-					"colors": ["#3498db", "#f2f2f2"],
+					"colors": ["#ff7878", "#f2f2f2"],
 					"slug": "secondary-and-background",
 					"name": "Secondary and Background"
 				},
 				{
-					"colors": ["#f2f2f2", "#3498db"],
+					"colors": ["#f2f2f2", "#ff7878"],
 					"slug": "background-and-secondary",
 					"name": "Background and Secondary"
 				},
 				{
-					"colors": ["#3498db", "#555555"],
+					"colors": ["#ff7878", "#555555"],
 					"slug": "secondary-and-foreground",
 					"name": "Secondary and Foreground"
 				},
 				{
-					"colors": ["#555555", "#3498db"],
+					"colors": ["#555555", "#ff7878"],
 					"slug": "foreground-and-secondary",
 					"name": "Foreground and Secondary"
 				},
@@ -296,22 +308,22 @@
 					"name": "Foreground and Tertiary"
 				},
 				{
-					"colors": ["#1abc9c", "#3498db"],
+					"colors": ["#3498db", "#ff7878"],
 					"slug": "primary-and-secondary",
 					"name": "Primary and Secondary"
 				},
 				{
-					"colors": ["#3498db", "#1abc9c"],
+					"colors": ["#ff7878", "#3498db"],
 					"slug": "secondary-and-primary",
 					"name": "Secondary and Primary"
 				},
 				{
-					"colors": ["#1abc9c", "#f1c40f"],
+					"colors": ["#3498db", "#f1c40f"],
 					"slug": "primary-and-tertiary",
 					"name": "Primary and Tertiary"
 				},
 				{
-					"colors": ["#f1c40f", "#1abc9c"],
+					"colors": ["#f1c40f", "#3498db"],
 					"slug": "tertiary-and-primary",
 					"name": "Tertiary and Primary"
 				},
@@ -325,7 +337,7 @@
 					"slug": "grayscale",
 					"name": "Grayscale"
 				}
-			]
+			]			
 		}
 	}
 }

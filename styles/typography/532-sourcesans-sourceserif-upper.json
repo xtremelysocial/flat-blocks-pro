@@ -1,0 +1,60 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Roboto & Lora - Uppercase Headings",
+	"styles": {
+		"typography": {
+			"fontFamily": "var(--wp--preset--font-family--source-sans-pro)"
+		},
+		"blocks": {
+			"core/heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--source-serif-pro)"
+				}
+			},
+			"core/site-title": {
+				"typography": {
+					"textTransform": "uppercase"
+				}
+			},
+			"core/navigation": {
+				"typography": {
+					"textTransform": "uppercase"
+				}
+			},
+			"core/home-link": {
+				"typography": {
+					"textTransform": "uppercase"
+				}
+			},
+			"core/navigation-link": {
+				"typography": {
+					"textTransform": "uppercase"
+				}
+			}
+		},
+		"elements": {
+			"heading": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--source-serif-pro)",
+					"textTransform": "uppercase"
+				}
+			},
+			"h1": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--larger)"
+				}
+			},
+			"h2": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--large)"
+				}
+			},
+			"h3": {
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--medium)"
+				}
+			}
+		}
+	}
+}

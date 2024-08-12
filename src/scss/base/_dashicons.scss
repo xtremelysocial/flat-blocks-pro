@@ -1,7 +1,6 @@
 /*--------------------------------------------------------------
 # Dashicons
 --------------------------------------------------------------*/
-
 /**
  * Override core WordPress base Dashicon styles. Don't let it
  * alter height, width, font-size or line-height. 
@@ -16,6 +15,7 @@
 	font-weight: inherit;
 	line-height: inherit;
 	text-align: center; //inherit; //unset
+	text-transform: inherit;
 }
 
 .dashicons:before {

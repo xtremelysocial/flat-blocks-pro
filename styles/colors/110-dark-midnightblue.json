@@ -1,23 +1,33 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Midnight Blue with Green Links",
+	"title": "Dark - Midnight Blue",
 	"styles": {
-		"css": ".has-background.has-tertiary-background-color { color: var(--wp--preset--color--contrast); }"
-	},	
+		"color": {
+			"text": "var(--wp--preset--color--off-white) /**/"
+		}
+	},
 	"settings": {
 		"custom": {
-			"link": {
-				"color": "var(--wp--preset--color--light-green)",
-				"hover": "var(--wp--preset--color--green)"
+			"color": {
+				"contrast": {
+					"neutral": "var(--wp--preset--color--foreground-alt)",
+					"neutralAlt": "var(--wp--preset--color--foreground-alt)"
+				},
+				"field": {
+					"background": "var(--wp--preset--color--gray)"
+				}
+			},		
+			"border": {
+				"color": "var(--wp--preset--color--midnight-blue)"
 			}
 		},
 		"color": {
 			"palette": [
 				{
 					"slug": "primary",
-					"color": "#34495e",
-					"name": "Primary (Midnight Blue)"
+					"color": "#1abc9c",
+					"name": "Primary (Light Green)"
 				},
 				{
 					"slug": "secondary",
@@ -26,8 +36,8 @@
 				},
 				{
 					"slug": "tertiary",
-					"color": "#f1c40f",
-					"name": "Tertiary (Yellow)"
+					"color": "#f39c12",
+					"name": "Tertiary (Light Orange)"
 				},
 				{
 					"slug": "dark",
@@ -36,13 +46,13 @@
 				},
 				{
 					"slug": "neutral",
-					"color": "#ebebeb",
-					"name": "Neutral (Very Light Gray)"
+					"color": "#34495e",
+					"name": "Neutral (Midnight Blue)"
 				},
 				{
 					"slug": "primary-alt",
-					"color": "#2c3e50",
-					"name": "Primary Alt (Dark Midnight Blue)"
+					"color": "#16a085",
+					"name": "Primary Alt (Green)"
 				},
 				{
 					"slug": "secondary-alt",
@@ -51,8 +61,8 @@
 				},
 				{
 					"slug": "tertiary-alt",
-					"color": "#f39c12",
-					"name": "Tertiary Alt (Light Orange)"
+					"color": "#e67e22",
+					"name": "Tertiary Alt (Orange)"
 				},
 				{
 					"slug": "dark-alt",
@@ -61,8 +71,8 @@
 				},
 				{
 					"slug": "neutral-alt",
-					"color": "#e0e0e0",
-					"name": "Neutral Alt (Gray)"
+					"color": "#2c3e50",
+					"name": "Neutral Alt (Dark Midnight Blue)"
 				},
 				{
 					"slug": "foreground-alt",
@@ -71,13 +81,23 @@
 				},
 				{
 					"slug": "base",
-					"color": "#f2f2f2",
-					"name": "Base / Background (Off White)"
+					"color": "#2c3e50",
+					"name": "Background (Dark Midnight Blue)"
 				},
 				{
 					"slug": "contrast",
-					"color": "#555555",
-					"name": "Contrast / Foreground (Very Dark Gray)"
+					"color": "#f2f2f2",
+					"name": "Foreground (Off White)"
+				},
+				{
+					"slug": "highlight",
+					"color": "#1abc9c",
+					"name": "Highlight (Light Green)"
+				},
+				{
+					"slug": "highlight-alt",
+					"color": "#16a085",
+					"name": "Highlight Alt (Green)"
 				},
 				{
 					"slug": "white",
@@ -242,22 +262,22 @@
 					"name": "Background and Foreground"
 				},
 				{
-					"colors": ["#34495e", "#f2f2f2"],
+					"colors": ["#1abc9c", "#f2f2f2"],
 					"slug": "primary-and-background",
 					"name": "Primary and Background"
 				},
 				{
-					"colors": ["#f2f2f2", "#34495e"],
+					"colors": ["#f2f2f2", "#1abc9c"],
 					"slug": "background-and-primary",
 					"name": "Background and Primary"
 				},
 				{
-					"colors": ["#34495e", "#555555"],
+					"colors": ["#1abc9c", "#555555"],
 					"slug": "primary-and-foreground",
 					"name": "Primary and Foreground"
 				},
 				{
-					"colors": ["#555555", "#34495e"],
+					"colors": ["#555555", "#1abc9c"],
 					"slug": "foreground-and-primary",
 					"name": "Foreground and Primary"
 				},
@@ -302,22 +322,22 @@
 					"name": "Foreground and Tertiary"
 				},
 				{
-					"colors": ["#34495e", "#3498db"],
+					"colors": ["#1abc9c", "#3498db"],
 					"slug": "primary-and-secondary",
 					"name": "Primary and Secondary"
 				},
 				{
-					"colors": ["#3498db", "#34495e"],
+					"colors": ["#3498db", "#1abc9c"],
 					"slug": "secondary-and-primary",
 					"name": "Secondary and Primary"
 				},
 				{
-					"colors": ["#34495e", "#f1c40f"],
+					"colors": ["#1abc9c", "#f1c40f"],
 					"slug": "primary-and-tertiary",
 					"name": "Primary and Tertiary"
 				},
 				{
-					"colors": ["#f1c40f", "#34495e"],
+					"colors": ["#f1c40f", "#1abc9c"],
 					"slug": "tertiary-and-primary",
 					"name": "Tertiary and Primary"
 				},

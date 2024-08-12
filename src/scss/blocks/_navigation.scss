@@ -16,7 +16,7 @@
 	&:has(.current-menu-ancestor) > .wp-block-navigation-item__content,
 	&.wp-block-pages-list__item.current-menu-item > a,
 	&.wp-block-home-link > a[aria-current='page'] {
-		color: var(--wp--custom--link--color);
+		color: var(--wp--preset--color--highlight);
 	}
 }
 
@@ -33,7 +33,7 @@
 
 /* Bold or highlight active sub-menu items, depending on whether text color or not */
 .wp-block-navigation__submenu-container:not(.has-text-color) .wp-block-navigation-item.current-menu-item .wp-block-navigation-item__content.wp-block-navigation-item__content {
-	color: var(--wp--custom--link--color);
+	color: var(--wp--preset--color--highlight);
 }
 .wp-block-navigation__submenu-container.has-text-color .wp-block-navigation-item.current-menu-item .wp-block-navigation-item__content.wp-block-navigation-item__content {
 	font-weight: var(--wp--custom--typography--font-weight--medium);
@@ -43,27 +43,25 @@
 .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item { //, 
 	&:hover > .wp-block-navigation-item__content, // top-level
 	&:hover > .wp-block-navigation__submenu-icon, // top-level
-// 	& > a:hover, // drop-down
-// 	& > a:active { //drop-down
 	&:hover, // drop-down
 	&:active { //drop-down
-    	color: var(--wp--custom--link--hover);
+    	color: var(--wp--preset--color--highlight-alt);
     }
 }
 
 /* Drop-down link hover color. */
 .site-header:not(.has-background) .wp-block-navigation-submenu.open-on-click:hover,
 .site-header:not(.has-background) .wp-block-navigation-item.has-child.open-on-click:hover {
-    color: var(--wp--custom--link--color);
+    color: var(--wp--preset--color--highlight);
 }
 
 .wp-block-navigation__submenu-container:not(.has-background) > .wp-block-navigation-item > .wp-block-navigation-item__content:hover {
-    color: var(--wp--custom--link--color);
+    color: var(--wp--preset--color--highlight);
 }
 
 .wp-block-navigation.has-background .wp-block-navigation-item {
 	&:hover > .wp-block-navigation-item__content, // top-level
-	&:hover > .wp-block-navigation__submenu-icon { ///, // top-level
+	&:hover > .wp-block-navigation__submenu-icon { // top-level
     	opacity: 0.8;
     }
 }

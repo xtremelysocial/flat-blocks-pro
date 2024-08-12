@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Drop Shadows - Deep",
+	"settings": {
+		"custom": {
+			"shadow": {
+				"default": "var(--wp--preset--shadow--deep)"
+			}
+		}
+	}	
+}

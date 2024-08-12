@@ -1,22 +1,44 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Red, Blue, Midnight Blue",
+	"title": "Yellow, Orange, Midnight Blue",
 	"styles": {
-		"css": ""
+		"blocks": {
+			"core/site-title": {
+				"elements": {
+					"link": {
+						"color": {
+							"text": "var(--wp--preset--color--primary)"
+						}
+					}
+				}
+			}
+		}
 	},
 	"settings": {
+		"custom": {
+			"color": {
+				"contrast": {
+					"primary": "var(--wp--preset--color--almost-black)",
+					"secondary": "var(--wp--preset--color--foreground-alt)",
+					"secondary-alt": "var(--wp--preset--color--foreground-alt)"
+				},
+				"field": {
+					"color": "var(--wp--preset--color--almost-black)"
+				}
+			}
+		},
 		"color": {
 			"palette": [
 				{
 					"slug": "primary",
-					"color": "#ff7878",
-					"name": "Primary (Light Red)"
+					"color": "#f1c40f",
+					"name": "Primary (Yellow)"
 				},
 				{
 					"slug": "secondary",
-					"color": "#3498db",
-					"name": "Secondary (Blue)"
+					"color": "#e67e22",
+					"name": "Secondary (Orange)"
 				},
 				{
 					"slug": "tertiary",
@@ -35,13 +57,13 @@
 				},
 				{
 					"slug": "primary-alt",
-					"color": "#e74c3c",
-					"name": "Primary Alt (Red)"
+					"color": "#f39c12",
+					"name": "Primary Alt (Light Orange)"
 				},
 				{
 					"slug": "secondary-alt",
-					"color": "#2980b9",
-					"name": "Secondary Alt (Dark Blue)"
+					"color": "#d35400",
+					"name": "Secondary Alt (Dark Orange)"
 				},
 				{
 					"slug": "tertiary-alt",
@@ -72,6 +94,16 @@
 					"slug": "contrast",
 					"color": "#555555",
 					"name": "Contrast / Foreground (Very Dark Gray)"
+				},
+				{
+					"slug": "highlight",
+					"color": "#e67e22",
+					"name": "Highlight (Orange)"
+				},
+				{
+					"slug": "highlight-alt",
+					"color": "#d35400",
+					"name": "Highlight Alt (Dark Orange)"
 				},
 				{
 					"slug": "white",
@@ -236,42 +268,42 @@
 					"name": "Background and Foreground"
 				},
 				{
-					"colors": ["#ff7878", "#f2f2f2"],
+					"colors": ["#f1c40f", "#f2f2f2"],
 					"slug": "primary-and-background",
 					"name": "Primary and Background"
 				},
 				{
-					"colors": ["#f2f2f2", "#ff7878"],
+					"colors": ["#f2f2f2", "#f1c40f"],
 					"slug": "background-and-primary",
 					"name": "Background and Primary"
 				},
 				{
-					"colors": ["#ff7878", "#555555"],
+					"colors": ["#f1c40f", "#555555"],
 					"slug": "primary-and-foreground",
 					"name": "Primary and Foreground"
 				},
 				{
-					"colors": ["#555555", "#ff7878"],
+					"colors": ["#555555", "#f1c40f"],
 					"slug": "foreground-and-primary",
 					"name": "Foreground and Primary"
 				},
 				{
-					"colors": ["#3498db", "#f2f2f2"],
+					"colors": ["#e67e22", "#f2f2f2"],
 					"slug": "secondary-and-background",
 					"name": "Secondary and Background"
 				},
 				{
-					"colors": ["#f2f2f2", "#3498db"],
+					"colors": ["#f2f2f2", "#e67e22"],
 					"slug": "background-and-secondary",
 					"name": "Background and Secondary"
 				},
 				{
-					"colors": ["#3498db", "#555555"],
+					"colors": ["#e67e22", "#555555"],
 					"slug": "secondary-and-foreground",
 					"name": "Secondary and Foreground"
 				},
 				{
-					"colors": ["#555555", "#3498db"],
+					"colors": ["#555555", "#e67e22"],
 					"slug": "foreground-and-secondary",
 					"name": "Foreground and Secondary"
 				},
@@ -296,22 +328,22 @@
 					"name": "Foreground and Tertiary"
 				},
 				{
-					"colors": ["#ff7878", "#3498db"],
+					"colors": ["#f1c40f", "#e67e22"],
 					"slug": "primary-and-secondary",
 					"name": "Primary and Secondary"
 				},
 				{
-					"colors": ["#3498db", "#ff7878"],
+					"colors": ["#e67e22", "#f1c40f"],
 					"slug": "secondary-and-primary",
 					"name": "Secondary and Primary"
 				},
 				{
-					"colors": ["#ff7878", "#34495e"],
+					"colors": ["#f1c40f", "#34495e"],
 					"slug": "primary-and-tertiary",
 					"name": "Primary and Tertiary"
 				},
 				{
-					"colors": ["#34495e", "#ff7878"],
+					"colors": ["#34495e", "#f1c40f"],
 					"slug": "tertiary-and-primary",
 					"name": "Tertiary and Primary"
 				},
