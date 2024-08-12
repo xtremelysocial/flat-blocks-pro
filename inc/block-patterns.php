@@ -198,7 +198,7 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 				'title' => __( 'Image with Left and Right Text', 'flat-blocks' ),
 				'categories' => array ('flatblocks', 'columns', 'image', 'banner', 'featured' )
 			),
-			'image-computer-screen-title-and-text' => array( 
+			'image-computer-screen' => array( 
 				'title' => __( 'Computer Screen Image with Title and Text Above', 'flat-blocks' ),
 				'categories' => array ('flatblocks', 'image', 'text' )
 			),

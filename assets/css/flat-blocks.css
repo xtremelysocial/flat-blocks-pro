@@ -105,7 +105,7 @@ input[type=submit][class*=button],
 input[type=reset][class*=button],
 input[type=file]::file-selector-button {
   color: var(--wp--preset--color--foreground-alt, white);
-  background-color: var(--wp--custom--link--color);
+  background-color: var(--wp--preset--color--highlight);
   border: none;
   border-width: 0;
   border-radius: var(--wp--custom--border--radius, 0);
@@ -129,12 +129,6 @@ input[type=file] {
   border: 3px solid var(--wp--preset--color--foreground-alt, white);
 }
 
-/* For outline style buttons, inherit border color from the text color */
-/**.wp-block-button.is-style-outline.is-style-outline .wp-block-button__link {
-	color: inherit;
-	background-color: initial;
-	background-image: none;	
-}**/
 /*
  * Button hover styles.
  * Necessary until the following issue is resolved in Gutenberg:
@@ -197,6 +191,13 @@ fieldset {
   -webkit-appearance: none;
 }
 
+select,
+textarea,
+input:not(.file) {
+  background-color: var(--wp--custom--color--field--background, revert);
+  color: var(--wp--custom--color--field--text, inherit);
+}
+
 select {
   font-family: inherit;
   font-size: var(--wp--preset--font-size--small, 16px);
@@ -204,7 +205,6 @@ select {
   line-height: 1.5;
   border-radius: var(--wp--custom--border--radius);
   text-shadow: none;
-  color: var(--wp--preset--color--contrast);
   border: 1px solid var(--wp--preset--color--contrast);
 }
 
@@ -227,13 +227,13 @@ input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=button])
 input:focus,
 textarea:focus {
   outline: none !important;
-  box-shadow: 0 0 0 3px var(--wp--custom--outline--color);
+  box-shadow: 0 0 0 3px var(--wp--custom--color--field--outline, var(--wp--custom--outline--color));
   transition: box-shadow 0.3s ease;
 }
 
 select:focus,
 select:focus-visible {
-  outline: var(--wp--custom--outline--color) 5px solid;
+  outline: var(--wp--custom--color--field--outline, var(--wp--custom--outline--color)) 5px solid;
   transition: outline 0.3s ease;
 }
 
@@ -276,14 +276,7 @@ body .is-layout-constrained > .alignright {
   margin-inline-start: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
 }
 
-/* 
- * Fix WordPress Admin bar on phones not sticking to the top 
- *
- * Note to theme reviewers, this issues a warning but is actually
- * fixing an issue in core WordPress v6.0. It is not hiding the 
- * admin bar like the warning indicates. Body is used for more
- * specificity than the core WordPress CSS.
- */
+/* Fix WordPress Admin bar on phones not sticking to the top */
 @media screen and (max-width: 600px) {
   body > #wpadminbar {
     position: fixed;
@@ -300,12 +293,18 @@ body .is-layout-constrained > .alignright {
  * Black and near-black colors, default light text, but leave link 
  * color alone 
  */
-.has-dark-background-color,
-.has-dark-alt-background-color,
 .has-almost-black-background-color,
 .has-not-quite-black-background-color,
 .has-black-background-color {
   color: var(--wp--preset--color--foreground-alt);
+}
+
+.has-dark-background-color {
+  color: var(--wp--custom--color--contrast--dark, var(--wp--preset--color--foreground-alt));
+}
+
+.has-dark-alt-background-color {
+  color: var(--wp--custom--color--contrast--dark-alt, var(--wp--preset--color--foreground-alt));
 }
 
 /* Dark colors, default light text and links */
@@ -338,33 +337,33 @@ body .is-layout-constrained > .alignright {
 [class*=gradient-background] {
   color: var(--wp--preset--color--foreground-alt);
 }
-.has-primary-background-color a,
-.has-primary-alt-background-color a,
-.has-secondary-background-color a,
-.has-secondary-alt-background-color a,
-.has-tertiary-background-color a,
-.has-tertiary-alt-background-color a,
-.has-dark-gray-background-color a,
-.has-very-dark-gray-background-color a,
-.has-light-green-background-color a,
-.has-green-background-color a,
-.has-bright-green-background-color a,
-.has-dark-bright-green-background-color a,
-.has-light-orange-background-color a,
-.has-orange-background-color a,
-.has-dark-orange-background-color a,
-.has-light-blue-background-color a,
-.has-blue-background-color a,
-.has-dark-blue-background-color a,
-.has-midnight-blue-background-color a,
-.has-dark-midnight-blue-background-color a,
-.has-light-purple-background-color a,
-.has-purple-background-color a,
-.has-dark-purple-background-color a,
-.has-light-red-background-color a,
-.has-red-background-color a,
-.has-dark-red-background-color a,
-[class*=gradient-background] a {
+.has-primary-background-color a:not(.wp-element-button),
+.has-primary-alt-background-color a:not(.wp-element-button),
+.has-secondary-background-color a:not(.wp-element-button),
+.has-secondary-alt-background-color a:not(.wp-element-button),
+.has-tertiary-background-color a:not(.wp-element-button),
+.has-tertiary-alt-background-color a:not(.wp-element-button),
+.has-dark-gray-background-color a:not(.wp-element-button),
+.has-very-dark-gray-background-color a:not(.wp-element-button),
+.has-light-green-background-color a:not(.wp-element-button),
+.has-green-background-color a:not(.wp-element-button),
+.has-bright-green-background-color a:not(.wp-element-button),
+.has-dark-bright-green-background-color a:not(.wp-element-button),
+.has-light-orange-background-color a:not(.wp-element-button),
+.has-orange-background-color a:not(.wp-element-button),
+.has-dark-orange-background-color a:not(.wp-element-button),
+.has-light-blue-background-color a:not(.wp-element-button),
+.has-blue-background-color a:not(.wp-element-button),
+.has-dark-blue-background-color a:not(.wp-element-button),
+.has-midnight-blue-background-color a:not(.wp-element-button),
+.has-dark-midnight-blue-background-color a:not(.wp-element-button),
+.has-light-purple-background-color a:not(.wp-element-button),
+.has-purple-background-color a:not(.wp-element-button),
+.has-dark-purple-background-color a:not(.wp-element-button),
+.has-light-red-background-color a:not(.wp-element-button),
+.has-red-background-color a:not(.wp-element-button),
+.has-dark-red-background-color a:not(.wp-element-button),
+[class*=gradient-background] a:not(.wp-element-button) {
   color: inherit;
 }
 .has-primary-background-color a:hover,
@@ -397,6 +396,38 @@ body .is-layout-constrained > .alignright {
   opacity: 0.8;
 }
 
+.has-primary-background-color {
+  color: var(--wp--custom--color--contrast--primary, var(--wp--preset--color--foreground-alt));
+}
+
+.has-primary-alt-background-color {
+  color: var(--wp--custom--color--contrast--primary-alt, var(--wp--preset--color--foreground-alt));
+}
+
+.has-secondary-background-color {
+  color: var(--wp--custom--color--contrast--secondary, var(--wp--preset--color--foreground-alt));
+}
+
+.has-secondary-alt-background-color {
+  color: var(--wp--custom--color--contrast--secondary-alt, var(--wp--preset--color--foreground-alt));
+}
+
+.has-tertiary-background-color {
+  color: var(--wp--custom--color--contrast--tertiary, var(--wp--preset--color--foreground-alt));
+}
+
+.has-tertiary-alt-background-color {
+  color: var(--wp--custom--color--contrast--tertiary-alt, var(--wp--preset--color--foreground-alt));
+}
+
+.has-link-color-background-color {
+  color: var(--wp--custom--color--contrast--highlight, var(--wp--preset--color--foreground-alt));
+}
+
+.has-link-hover-background-color {
+  color: var(--wp--custom--color--contrast--highlight-alt, var(--wp--preset--color--foreground-alt));
+}
+
 /* 
  * Medium Colors (e.g. Yellow), default foreground color to text, link,
  * and buttons 
@@ -411,9 +442,9 @@ body .is-layout-constrained > .alignright {
 .has-yellow-gradient-background.wp-block-button__link.wp-element-button {
   color: var(--wp--preset--color--very-dark-gray);
 }
-.has-light-yellow-background-color a,
-.has-yellow-background-color a,
-.has-yellow-gradient-background a {
+.has-light-yellow-background-color a:not(.wp-element-button),
+.has-yellow-background-color a:not(.wp-element-button),
+.has-yellow-gradient-background a:not(.wp-element-button) {
   color: inherit;
 }
 .has-light-yellow-background-color a:hover,
@@ -426,9 +457,6 @@ body .is-layout-constrained > .alignright {
  * Light colors, default foreground color and button color, 
  * but leave the link color alone. 
  */
-.has-neutral-background-color,
-.has-neutral-alt-background-color,
-.has-foreground-alt-background-color,
 .has-white-background-color,
 .has-off-white-background-color,
 .has-very-light-gray-background-color,
@@ -437,9 +465,6 @@ body .is-layout-constrained > .alignright {
 .has-gray-gradient-background {
   color: var(--wp--preset--color--very-dark-gray);
 }
-.has-neutral-background-color.wp-block-button__link.wp-element-button,
-.has-neutral-alt-background-color.wp-block-button__link.wp-element-button,
-.has-foreground-alt-background-color.wp-block-button__link.wp-element-button,
 .has-white-background-color.wp-block-button__link.wp-element-button,
 .has-off-white-background-color.wp-block-button__link.wp-element-button,
 .has-very-light-gray-background-color.wp-block-button__link.wp-element-button,
@@ -447,6 +472,27 @@ body .is-layout-constrained > .alignright {
 .has-gray-background-color.wp-block-button__link.wp-element-button,
 .has-gray-gradient-background.wp-block-button__link.wp-element-button {
   color: var(--wp--preset--color--very-dark-gray);
+}
+
+.has-neutral-background-color {
+  color: var(--wp--custom--color--contrast--neutral, var(--wp--preset--color--very-dark-gray));
+}
+.has-neutral-background-color.wp-block-button__link.wp-element-button {
+  color: var(--wp--custom--color--contrast--neutral, var(--wp--preset--color--very-dark-gray));
+}
+
+.has-neutral-alt-background-color {
+  color: var(--wp--custom--color--contrast--neutral-alt, var(--wp--preset--color--very-dark-gray));
+}
+.has-neutral-alt-background-color.wp-block-button__link.wp-element-button {
+  color: var(--wp--custom--color--contrast--neutral-alt, var(--wp--preset--color--very-dark-gray));
+}
+
+.has-foreground-alt-background-color {
+  color: var(--wp--custom--color--contrast--foreground-alt, var(--wp--preset--color--very-dark-gray));
+}
+.has-foreground-alt-background-color.wp-block-button__link.wp-element-button {
+  color: var(--wp--custom--color--contrast--foreground-alt, var(--wp--preset--color--very-dark-gray));
 }
 
 /* 
@@ -506,9 +552,6 @@ body .is-layout-constrained > .alignright {
  * theme.json as custom block CSS.
  */
 /* ADD BACK gap on flex columns by default */
-/*.wp-block-columns-is-layout-flex {
-	gap: var(--wp--style--block-gap);
-}*/
 /* 
  * Note: Breakpoint of 781 is what is hard-coded in WordPress 
  * v6.0+ to collapse columns
@@ -630,8 +673,7 @@ body .is-layout-constrained > .alignright {
  */
 @media only screen and (max-width: 781px) {
   .site-header.has-global-padding.wp-block-group,
-  .site-footer.has-global-padding.wp-block-group,
-  .post-comments.has-global-padding.wp-block-group {
+  .site-footer.has-global-padding.wp-block-group {
     padding-left: var(--wp--style--root--padding-left) !important;
     padding-right: var(--wp--style--root--padding-right) !important;
   }
@@ -673,13 +715,11 @@ body .is-layout-constrained > .alignright {
   padding-right: 0;
 }
 
-/* Group fixed header */
+/* Group fixed header (position: sticky) */
 .wp-block-group.is-style-fixed-header,
 .wp-block-group.has-background.is-style-fixed-header {
   border: 1px solid var(--wp--custom--border--color);
   border-width: 0 0 1px;
-  padding-top: var(--wp--preset--spacing--40);
-  padding-bottom: var(--wp--preset--spacing--40);
   box-shadow: var(--wp--custom--shadow--default);
 }
 
@@ -809,7 +849,7 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
  * background color or not 
  */
 .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.current-menu-item, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:has(.current-menu-ancestor), .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.current-menu-ancestor, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:has(.current-menu-ancestor) > .wp-block-navigation-item__content, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.wp-block-pages-list__item.current-menu-item > a, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.wp-block-home-link > a[aria-current=page] {
-  color: var(--wp--custom--link--color);
+  color: var(--wp--preset--color--highlight);
 }
 
 .site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item.current-menu-item:not(.has-child) > a, .site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item.current-menu-ancestor, .site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item:has(.current-menu-ancestor) > .wp-block-navigation-item__content, .site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item.wp-block-pages-list__item.current-menu-item > a, .site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item.wp-block-home-link > a[aria-current=page],
@@ -823,7 +863,7 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 
 /* Bold or highlight active sub-menu items, depending on whether text color or not */
 .wp-block-navigation__submenu-container:not(.has-text-color) .wp-block-navigation-item.current-menu-item .wp-block-navigation-item__content.wp-block-navigation-item__content {
-  color: var(--wp--custom--link--color);
+  color: var(--wp--preset--color--highlight);
 }
 
 .wp-block-navigation__submenu-container.has-text-color .wp-block-navigation-item.current-menu-item .wp-block-navigation-item__content.wp-block-navigation-item__content {
@@ -832,17 +872,17 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 
 /* On hover, bold or highlight top-level menu items, depending on whether background color or not */
 .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover > .wp-block-navigation-item__content, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover > .wp-block-navigation__submenu-icon, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:active {
-  color: var(--wp--custom--link--hover);
+  color: var(--wp--preset--color--highlight-alt);
 }
 
 /* Drop-down link hover color. */
 .site-header:not(.has-background) .wp-block-navigation-submenu.open-on-click:hover,
 .site-header:not(.has-background) .wp-block-navigation-item.has-child.open-on-click:hover {
-  color: var(--wp--custom--link--color);
+  color: var(--wp--preset--color--highlight);
 }
 
 .wp-block-navigation__submenu-container:not(.has-background) > .wp-block-navigation-item > .wp-block-navigation-item__content:hover {
-  color: var(--wp--custom--link--color);
+  color: var(--wp--preset--color--highlight);
 }
 
 .wp-block-navigation.has-background .wp-block-navigation-item:hover > .wp-block-navigation-item__content, .wp-block-navigation.has-background .wp-block-navigation-item:hover > .wp-block-navigation__submenu-icon {
@@ -1137,6 +1177,7 @@ p.is-style-arrow-icon > a:after {
   font-weight: inherit;
   line-height: inherit;
   text-align: center;
+  text-transform: inherit;
 }
 
 .dashicons:before {
@@ -1250,15 +1291,6 @@ main.wp-block-group:not(.has-global-padding),
   padding: 0;
 }
 
-/* 
- * If user turns off "useRootPaddingAwareAlignments" in theme.json,
- * then still add some padding to the site so text isn't scrunched
- * up against the sides of the browser.
- */
-/*.wp-site-blocks:not(:has(.has-global-padding)) {
-    padding-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
-    padding-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
-}*/
 /* Override horizontal padding when no global padding */
 header.site-header:not(.has-global-padding),
 footer.site-footer:not(.has-global-padding),

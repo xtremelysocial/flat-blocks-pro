@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "System & Style Script",
+	"title": "System & Style Script - Uppercase Nav",
 	"settings": {
 		"typography": {
 			"fontSizes": [
@@ -61,6 +61,24 @@
 			"core/heading": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--style-script)"
+				}
+			},
+			"core/navigation": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--system-font)",
+					"textTransform": "uppercase"
+				}
+			},
+			"core/home-link": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--system-font)",
+					"textTransform": "uppercase"
+				}
+			},
+			"core/navigation-link": {
+				"typography": {
+					"fontFamily": "var(--wp--preset--font-family--system-font)",
+					"textTransform": "uppercase"
 				}
 			}
 		},

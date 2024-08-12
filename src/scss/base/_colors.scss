@@ -10,14 +10,18 @@
 /* 
  * Black and near-black colors, default light text, but leave link 
  * color alone 
- */ 
-.has-dark-background-color,
-.has-dark-alt-background-color,
+ */
 .has-almost-black-background-color,
 .has-not-quite-black-background-color,
 .has-black-background-color {
 	color: var(--wp--preset--color--foreground-alt);
 } 
+.has-dark-background-color {
+	color: var(--wp--custom--color--contrast--dark, var(--wp--preset--color--foreground-alt));
+}
+.has-dark-alt-background-color {
+	color: var(--wp--custom--color--contrast--dark-alt, var(--wp--preset--color--foreground-alt));
+}
 
 /* Dark colors, default light text and links */
 .has-primary-background-color,
@@ -49,13 +53,37 @@
 [class*="gradient-background"] {
  	color: var(--wp--preset--color--foreground-alt);
  	
- 	& a {
+ 	& a:not(.wp-element-button) {
 	 	color: inherit;
  	}
 
 	& a:hover {
 		opacity: 0.8;
 	}
+}
+.has-primary-background-color {
+ 	color: var(--wp--custom--color--contrast--primary, var(--wp--preset--color--foreground-alt));
+}
+.has-primary-alt-background-color {
+ 	color: var(--wp--custom--color--contrast--primary-alt, var(--wp--preset--color--foreground-alt));
+}
+.has-secondary-background-color {
+ 	color: var(--wp--custom--color--contrast--secondary, var(--wp--preset--color--foreground-alt));
+}
+.has-secondary-alt-background-color {
+ 	color: var(--wp--custom--color--contrast--secondary-alt, var(--wp--preset--color--foreground-alt));
+}
+.has-tertiary-background-color {
+ 	color: var(--wp--custom--color--contrast--tertiary, var(--wp--preset--color--foreground-alt));
+}
+.has-tertiary-alt-background-color {
+ 	color: var(--wp--custom--color--contrast--tertiary-alt, var(--wp--preset--color--foreground-alt));
+}
+.has-link-color-background-color {
+ 	color: var(--wp--custom--color--contrast--highlight, var(--wp--preset--color--foreground-alt));
+}
+.has-link-hover-background-color {
+ 	color: var(--wp--custom--color--contrast--highlight-alt, var(--wp--preset--color--foreground-alt));
 }
 
 /* 
@@ -71,7 +99,7 @@
 	 	color: var(--wp--preset--color--very-dark-gray);
 	}
 
-	& a {
+	& a:not(.wp-element-button) {
 	 	color: inherit;
 	}
 	
@@ -84,9 +112,6 @@
  * Light colors, default foreground color and button color, 
  * but leave the link color alone. 
  */
-.has-neutral-background-color,
-.has-neutral-alt-background-color,
-.has-foreground-alt-background-color,
 .has-white-background-color,
 .has-off-white-background-color,
 .has-very-light-gray-background-color,
@@ -97,6 +122,28 @@
 
  	&.wp-block-button__link.wp-element-button {
 	 	color: var(--wp--preset--color--very-dark-gray);
+	}
+}
+
+.has-neutral-background-color {
+ 	color: var(--wp--custom--color--contrast--neutral, var(--wp--preset--color--very-dark-gray));
+
+ 	&.wp-block-button__link.wp-element-button {
+	 	color: var(--wp--custom--color--contrast--neutral,var( --wp--preset--color--very-dark-gray));
+	}
+}
+.has-neutral-alt-background-color {
+ 	color: var(--wp--custom--color--contrast--neutral-alt, var(--wp--preset--color--very-dark-gray));
+
+ 	&.wp-block-button__link.wp-element-button {
+	 	color: var(--wp--custom--color--contrast--neutral-alt, var(--wp--preset--color--very-dark-gray));
+	}
+}
+.has-foreground-alt-background-color {
+ 	color: var(--wp--custom--color--contrast--foreground-alt,var( --wp--preset--color--very-dark-gray));
+
+ 	&.wp-block-button__link.wp-element-button {
+	 	color: var(--wp--custom--color--contrast--foreground-alt, var(--wp--preset--color--very-dark-gray));
 	}
 }
 

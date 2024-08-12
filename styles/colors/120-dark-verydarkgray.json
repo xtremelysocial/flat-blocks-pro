@@ -1,17 +1,33 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Dark - Midnight Blue",
+	"title": "Dark - Very Dark Gray",
 	"styles": {
 		"color": {
-			"text": "#f2f2f2 /*var(--wp--preset--color--contrast)*/"
+			"background": "var(--wp--preset--color--base)",
+			"text": "var(--wp--preset--color--off-white) /**/"
 		},
-		"css": ".has-background.has-tertiary-background-color { color: var(--wp--preset--color--very-dark-gray); }"
+		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--highlight)"
+				}
+			}
+		}
 	},
 	"settings": {
 		"custom": {
+			"color": {
+				"contrast": {
+					"neutral": "var(--wp--preset--color--foreground-alt)",
+					"neutralAlt": "var(--wp--preset--color--foreground-alt)"
+				},
+				"field": {
+					"background": "var(--wp--preset--color--gray)"
+				}
+			},		
 			"border": {
-				"color": "var(--wp--preset--color--midnight-blue)"
+				"color": "var(--wp--preset--color--almost-black)"
 			}
 		},
 		"color": {
@@ -23,13 +39,13 @@
 				},
 				{
 					"slug": "secondary",
-					"color": "#3498db",
-					"name": "Secondary (Blue)"
+					"color": "#34495e",
+					"name": "Secondary (Midnight Blue)"
 				},
 				{
 					"slug": "tertiary",
-					"color": "#f1c40f",
-					"name": "Tertiary (Yellow)"
+					"color": "#f39c12",
+					"name": "Tertiary (Light Orange)"
 				},
 				{
 					"slug": "dark",
@@ -38,8 +54,8 @@
 				},
 				{
 					"slug": "neutral",
-					"color": "#e0e0e0",
-					"name": "Neutral (Gray)"
+					"color": "#2f2f2f",
+					"name": "Neutral (Almost Black)"
 				},
 				{
 					"slug": "primary-alt",
@@ -48,13 +64,13 @@
 				},
 				{
 					"slug": "secondary-alt",
-					"color": "#2980b9",
-					"name": "Secondary Alt (Dark Blue)"
+					"color": "#2c3e50",
+					"name": "Secondary Alt (Dark Midnight Blue)"
 				},
 				{
 					"slug": "tertiary-alt",
-					"color": "#f39c12",
-					"name": "Tertiary Alt (Light Orange)"
+					"color": "#e67e22",
+					"name": "Tertiary Alt (Orange)"
 				},
 				{
 					"slug": "dark-alt",
@@ -63,8 +79,8 @@
 				},
 				{
 					"slug": "neutral-alt",
-					"color": "#95a5a6",
-					"name": "Neutral Alt (Dark Gray)"
+					"color": "#222222",
+					"name": "Neutral Alt (Not Quite Black)"
 				},
 				{
 					"slug": "foreground-alt",
@@ -73,13 +89,23 @@
 				},
 				{
 					"slug": "base",
-					"color": "#2c3e50",
-					"name": "Background (Dark Midnight Blue)"
+					"color": "#555555",
+					"name": "Background (Very Dark Gray)"
 				},
 				{
 					"slug": "contrast",
 					"color": "#f2f2f2",
 					"name": "Foreground (Off White)"
+				},
+				{
+					"slug": "highlight",
+					"color": "#1abc9c",
+					"name": "Highlight (Light Green)"
+				},
+				{
+					"slug": "highlight-alt",
+					"color": "#16a085",
+					"name": "Highlight Alt (Green)"
 				},
 				{
 					"slug": "white",
@@ -264,22 +290,22 @@
 					"name": "Foreground and Primary"
 				},
 				{
-					"colors": ["#3498db", "#f2f2f2"],
+					"colors": ["#34495e", "#f2f2f2"],
 					"slug": "secondary-and-background",
 					"name": "Secondary and Background"
 				},
 				{
-					"colors": ["#f2f2f2", "#3498db"],
+					"colors": ["#f2f2f2", "#34495e"],
 					"slug": "background-and-secondary",
 					"name": "Background and Secondary"
 				},
 				{
-					"colors": ["#3498db", "#555555"],
+					"colors": ["#34495e", "#555555"],
 					"slug": "secondary-and-foreground",
 					"name": "Secondary and Foreground"
 				},
 				{
-					"colors": ["#555555", "#3498db"],
+					"colors": ["#555555", "#34495e"],
 					"slug": "foreground-and-secondary",
 					"name": "Foreground and Secondary"
 				},
@@ -304,12 +330,12 @@
 					"name": "Foreground and Tertiary"
 				},
 				{
-					"colors": ["#1abc9c", "#3498db"],
+					"colors": ["#1abc9c", "#34495e"],
 					"slug": "primary-and-secondary",
 					"name": "Primary and Secondary"
 				},
 				{
-					"colors": ["#3498db", "#1abc9c"],
+					"colors": ["#34495e", "#1abc9c"],
 					"slug": "secondary-and-primary",
 					"name": "Secondary and Primary"
 				},

@@ -42,15 +42,22 @@
 }
 
 /* Hide empty comments so no extra vertical margin */
-/*#post-comments:empty {
-	display: none;
-	margin-top: 0;
-}*/
 /* Add padding to comment page numbers */
 .wp-block-comments-pagination .page-numbers:nth-last-child(n+2) {
   padding-right: var(--wp--preset--spacing--30);
 }
 
+/* If not global padding on comments, then add some on mobile
+ *
+ * Note: Breakpoint of 781 is what is hard-coded in WordPress 
+ * v6.0+ to collapse columns
+ */
+@media only screen and (max-width: 781px) {
+  .post-comments:not(.has-global-padding) {
+    padding-left: var(--wp--style--root--padding-left) !important;
+    padding-right: var(--wp--style--root--padding-right) !important;
+  }
+}
 /*--------------------------------------------------------------
 # Comments: Custom
 --------------------------------------------------------------*/
@@ -67,7 +74,7 @@
 --------------------------------------------------------------*/
 /* Closed Summary will have primary font color */
 .wp-block-details:not(.has-text-color) > summary {
-  color: var(--wp--custom--link--color);
+  color: var(--wp--preset--color--highlight);
   font-weight: var(--wp--custom--typography--font-weight--medium);
   transition: color var(--wp--custom--animation--duration--medium, 500ms) var(--wp--custom--animation--timing-function, ease-in);
 }
@@ -75,7 +82,7 @@
 /* Highlight Summary on hover and when open */
 .wp-block-details:not(.has-text-color) > summary:hover,
 .wp-block-details:not(.has-text-color)[open] > summary {
-  color: var(--wp--custom--link--hover);
+  color: var(--wp--preset--color--highlight-alt);
 }
 
 /*--------------------------------------------------------------
@@ -364,7 +371,7 @@ ol.is-style-list-plain-centered li {
 }
 
 /*--------------------------------------------------------------
-# Post Comments Count
+# Post Comments Count (Only w/Gutenberg Plugin)
 --------------------------------------------------------------*/
 /* dashicons-admin-comments for comments count */
 .wp-block-post-comments-count:before {
@@ -520,10 +527,6 @@ ol.is-style-list-plain-centered li {
   width: 100%;
 }
 
-/*.wp-block-separator.is-style-clearfix {
-	border-width: 0;
-	margin: 0;
-}*/
 /*--------------------------------------------------------------
 # Social Links (Icons)
 --------------------------------------------------------------*/
@@ -572,7 +575,3 @@ ol.is-style-list-plain-centered li {
 .wp-block-table.is-style-stripes table:not(.has-text-color) tbody tr:nth-child(odd) {
   color: var(--wp--preset--color--very-dark-gray);
 }
-
-/*.wp-block-table.is-style-stripes tbody tr:nth-child(even) {
-    background-color: var(--wp--preset--color--neutral-alt);
-}*/
