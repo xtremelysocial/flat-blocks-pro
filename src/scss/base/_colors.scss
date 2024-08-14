@@ -1,205 +1,48 @@
-/*--------------------------------------------------------------
+/*----------------------------------------------------------------------------------------
 # Colors
---------------------------------------------------------------*/
-
+----------------------------------------------------------------------------------------*/
 /* 
- * Default font, link, and button text colors based on the color
- * of the background
+ * First set some basic defaults for when a background color is used
  */
+.has-background {
+	color: var(--wp--custom--color--contrast--default, inherit);
+}
+
+.has-background a:hover {
+	color: inherit;
+	opacity: 0.8;
+}
 
 /* 
- * Black and near-black colors, default light text, but leave link 
- * color alone 
+ * Then for each theme color used as a background, set default text
+ * color, link color and hover, and button color.
  */
-.has-almost-black-background-color,
-.has-not-quite-black-background-color,
-.has-black-background-color {
-	color: var(--wp--preset--color--foreground-alt);
-} 
-.has-dark-background-color {
-	color: var(--wp--custom--color--contrast--dark, var(--wp--preset--color--foreground-alt));
-}
-.has-dark-alt-background-color {
-	color: var(--wp--custom--color--contrast--dark-alt, var(--wp--preset--color--foreground-alt));
-}
+$theme-colors: ('primary', 'secondary', 'tertiary', 'primary-alt', 'secondary-alt', 'tertiary-alt', 'highlight', 'highlight-alt', 'dark', 'dark-alt', 'neutral', 'neutral-alt', 'foreground-alt', 'base', 'contrast', 'white', 'off-white', 'very-light-gray', 'light-gray', 'gray', 'dark-gray', 'very-dark-gray', 'light-green', 'green', 'bright-green', 'dark-bright-green', 'light-yellow', 'yellow', 'light-orange', 'orange', 'dark-orange', 'light-blue', 'blue', 'dark-blue', 'midnight-blue', 'dark-midnight-blue', 'light-purple', 'purple', 'dark-purple', 'light-red', 'red', 'dark-red', 'almost-black', 'not-quite-black', 'black');
 
-/* Dark colors, default light text and links */
-.has-primary-background-color,
-.has-primary-alt-background-color,
-.has-secondary-background-color,
-.has-secondary-alt-background-color,
-.has-tertiary-background-color,
-.has-tertiary-alt-background-color,
-.has-dark-gray-background-color,
-.has-very-dark-gray-background-color,
-.has-light-green-background-color,
-.has-green-background-color,
-.has-bright-green-background-color,
-.has-dark-bright-green-background-color,
-.has-light-orange-background-color,
-.has-orange-background-color,
-.has-dark-orange-background-color,
-.has-light-blue-background-color,
-.has-blue-background-color,
-.has-dark-blue-background-color,
-.has-midnight-blue-background-color,
-.has-dark-midnight-blue-background-color,
-.has-light-purple-background-color,
-.has-purple-background-color,
-.has-dark-purple-background-color,
-.has-light-red-background-color,
-.has-red-background-color,
-.has-dark-red-background-color,
-[class*="gradient-background"] {
- 	color: var(--wp--preset--color--foreground-alt);
- 	
- 	& a:not(.wp-element-button) {
-	 	color: inherit;
- 	}
-
-	& a:hover {
-		opacity: 0.8;
+@mixin color-defaults() {
+	@each $color in $theme-colors {
+		.has-#{$color}-background-color {
+			color: var(--wp--custom--color--contrast--#{$color}, var(--wp--custom--color--contrast--default));			
+			
+			& a:not(.wp-element-button) {
+				color: var(--wp--custom--color--highlight--#{$color}, var(--wp--custom--color--highlight--default));
+			}
+		}
 	}
 }
-.has-primary-background-color {
- 	color: var(--wp--custom--color--contrast--primary, var(--wp--preset--color--foreground-alt));
-}
-.has-primary-alt-background-color {
- 	color: var(--wp--custom--color--contrast--primary-alt, var(--wp--preset--color--foreground-alt));
-}
-.has-secondary-background-color {
- 	color: var(--wp--custom--color--contrast--secondary, var(--wp--preset--color--foreground-alt));
-}
-.has-secondary-alt-background-color {
- 	color: var(--wp--custom--color--contrast--secondary-alt, var(--wp--preset--color--foreground-alt));
-}
-.has-tertiary-background-color {
- 	color: var(--wp--custom--color--contrast--tertiary, var(--wp--preset--color--foreground-alt));
-}
-.has-tertiary-alt-background-color {
- 	color: var(--wp--custom--color--contrast--tertiary-alt, var(--wp--preset--color--foreground-alt));
-}
-.has-link-color-background-color {
- 	color: var(--wp--custom--color--contrast--highlight, var(--wp--preset--color--foreground-alt));
-}
-.has-link-hover-background-color {
- 	color: var(--wp--custom--color--contrast--highlight-alt, var(--wp--preset--color--foreground-alt));
-}
+
+@include color-defaults();
 
 /* 
- * Medium Colors (e.g. Yellow), default foreground color to text, link,
- * and buttons 
- */ 
-.has-light-yellow-background-color,
-.has-yellow-background-color,
-.has-yellow-gradient-background {
- 	color: var(--wp--preset--color--very-dark-gray);
-
- 	&.wp-block-button__link.wp-element-button {
-	 	color: var(--wp--preset--color--very-dark-gray);
-	}
-
-	& a:not(.wp-element-button) {
-	 	color: inherit;
-	}
-	
-	& a:hover {
-		opacity: 0.8;
-	}
-}
-
-/* 
- * Light colors, default foreground color and button color, 
- * but leave the link color alone. 
+ * On Cover blocks, default the text color to white, but set it back to black
+ * on light backgrounds with dim less than 30%
  */
-.has-white-background-color,
-.has-off-white-background-color,
-.has-very-light-gray-background-color,
-.has-light-gray-background-color,
-.has-gray-background-color,
-.has-gray-gradient-background {
- 	color: var(--wp--preset--color--very-dark-gray);
+:where(.wp-block-cover-image.is-light:not(.has-text-color)), :where(.wp-block-cover.is-light:not(.has-text-color)) {
+    color: #fff;
 
- 	&.wp-block-button__link.wp-element-button {
-	 	color: var(--wp--preset--color--very-dark-gray);
+	&:has(.has-background-dim-10),
+	&:has(.has-background-dim-20),
+	&:has(.has-background-dim-30) {
+		color: #000;
 	}
-}
-
-.has-neutral-background-color {
- 	color: var(--wp--custom--color--contrast--neutral, var(--wp--preset--color--very-dark-gray));
-
- 	&.wp-block-button__link.wp-element-button {
-	 	color: var(--wp--custom--color--contrast--neutral,var( --wp--preset--color--very-dark-gray));
-	}
-}
-.has-neutral-alt-background-color {
- 	color: var(--wp--custom--color--contrast--neutral-alt, var(--wp--preset--color--very-dark-gray));
-
- 	&.wp-block-button__link.wp-element-button {
-	 	color: var(--wp--custom--color--contrast--neutral-alt, var(--wp--preset--color--very-dark-gray));
-	}
-}
-.has-foreground-alt-background-color {
- 	color: var(--wp--custom--color--contrast--foreground-alt,var( --wp--preset--color--very-dark-gray));
-
- 	&.wp-block-button__link.wp-element-button {
-	 	color: var(--wp--custom--color--contrast--foreground-alt, var(--wp--preset--color--very-dark-gray));
-	}
-}
-
-/* 
- * Swap foreground and background colors. Note this is needed because we can't
- * be sure whether they are light or dark for any given theme or user changes.
- */
-.has-base-background-color {
-	color: var(--wp--preset--color--contrast);
-	
-	& a,
-	&.wp-block-button__link.wp-element-button {
-		color: var(--wp--preset--color--contrast);
-	}
-
-	& a:hover {
-		opacity: 0.8;
-	}
-}
-.has-contrast-background-color {
-	color: var(--wp--preset--color--base);
-
-	& a,
-	&.wp-block-button__link.wp-element-button {
-		color: var(--wp--preset--color--base);
-	}
-
-	& a:hover {
-		opacity: 0.8;
-	}
-}
-
-//
-// Within post content, increase font-weight on links
-// .wp-block-post-content .has-background a:where(:not(.wp-element-button)) { 
-// 	font-weight: var(--wp--custom--typography--font-weight--medium); 
-// }
-
-/* 
- * On Cover blocks, we have to get more specific than core WordPress. 
- * We want to override the black font on light-colored backgrounds (if 
- * an overlay color is applied with at least 40% opacity).
- */
-:where(.wp-block-cover-image:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-40)),
-:where(.wp-block-cover:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-40)),
-:where(.wp-block-cover-image:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-50)),
-:where(.wp-block-cover:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-50)), 
-:where(.wp-block-cover-image:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-60)),
-:where(.wp-block-cover:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-60)), 
-:where(.wp-block-cover-image:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-70)),
-:where(.wp-block-cover:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-70)),
-:where(.wp-block-cover-image:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-80)),
-:where(.wp-block-cover:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-80)), 
-:where(.wp-block-cover-image:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-90)),
-:where(.wp-block-cover:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-90)),
-:where(.wp-block-cover-image:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-100)),
-:where(.wp-block-cover:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-100)) { 
-	color: var(--wp--preset--color--white);
 }
