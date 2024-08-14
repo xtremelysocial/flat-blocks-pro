@@ -20,7 +20,8 @@
 			"color": {
 				"contrast": {
 					"neutral": "var(--wp--preset--color--foreground-alt)",
-					"neutralAlt": "var(--wp--preset--color--foreground-alt)"
+					"neutralAlt": "var(--wp--preset--color--foreground-alt)",
+					"foregroundAlt": "var(--wp--preset--color--dark)"
 				},
 				"field": {
 					"background": "var(--wp--preset--color--gray)"
