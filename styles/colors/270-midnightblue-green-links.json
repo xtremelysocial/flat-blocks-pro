@@ -2,8 +2,6 @@
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
 	"title": "Midnight Blue w/Green Links",
-	"styles": {
-	},	
 	"settings": {
 		"color": {
 			"palette": [

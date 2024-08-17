@@ -1,3 +1,11 @@
+//*--------------------------------------------------------------
+//# Mixins
+//--------------------------------------------------------------*/
+@use "sass:map";
+
+//*--------------------------------------------------------------
+//# Vendor Prefixes
+//--------------------------------------------------------------*/
 $vendor-prefixes: ('-webkit-', '');
 
 @mixin vendor-prefix($name, $value) {
@@ -14,3 +22,54 @@ $vendor-prefixes: ('-webkit-', '');
 		}
 	}
 } $browser: null;
+
+//*--------------------------------------------------------------
+//# Colors
+//
+//  Set default text and link colors depending on how dark or light the background
+//  color is. 
+//--------------------------------------------------------------*/
+
+// When a color is used as a background, default the text to these colors
+$contrast-colors: (
+	"base": var(--wp--preset--color--contrast),
+	"contrast": var(--wp--preset--color--base),
+	"default-black": var(--wp--preset--color--foreground-alt),
+	"default-dark": var(--wp--preset--color--foreground-alt),
+	"default-medium": var(--wp--preset--color--foreground-alt),
+	"default-light": var(--wp--preset--color--contrast),
+	"default-white": var(--wp--preset--color--contrast),
+);
+
+// When a color is used as a background, inherit the links for these lightness only.
+// Otherwise, leave the link color alone.
+$highlight-colors: (
+	"base": inherit,
+	"contrast": inherit,
+	"default-dark": inherit,
+	"default-medium": inherit,
+	"default-light": inherit
+);
+
+// Mixin to default colors
+@mixin color-defaults(
+	$colors,
+	$lightness 
+) {
+	@each $color in $colors {
+		$contrast: map.get($contrast-colors, $lightness);
+		$highlight: map.get($highlight-colors, $lightness);
+		
+		@if $contrast {
+			.has-#{$color}-background-color {
+				color: var(--wp--custom--color--contrast--#{$color}, var(--wp--custom--color--contrast--#{$lightness}, #{$contrast}));
+				
+				@if $highlight {			
+					& a:not(.wp-element-button) {
+						color: var(--wp--custom--color--highlight--#{$color}, var(--wp--custom--color--highlight--#{$lightness}, #{$highlight}));
+					}
+				}
+			}
+		}
+	}
+}

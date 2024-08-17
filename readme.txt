@@ -148,7 +148,7 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 == Changelog ==
 
 = 1.6.3 =
-August 13, 2024
+August 16, 2024
 
 Version Summary: This is a big update for WordPress v6.6, especially for Theme Styles. You can now mix and match various color schemes, font pairings (with and without uppercase headings), and drop-shadows on buttons and post featured images. There are 14 colors schemes, 14 typography options, and 3 different shadows totalling well over 500 possible combinations!
 
@@ -157,8 +157,7 @@ In addition, two new color names were added for "Highlight" and "Highlight Alt" 
 Here are more details on the updates:
 	* Added Highlight Color (--wp--preset--color--highlight) and Highlight Alt (--wp--preset--color--highlight-alt) colors to the color palette to replace --wp--custom--link--color and --wp--custom--link--hover. 
 	* Set the default button color to the highlight color to match the links.
-	* Added custom variables for default text colors on various colored backgrounds. These variables all start with --wp--custom--colors--contrast-- and end with "primary", "secondary", "dark", "dark-alt", etc. 
-	* Added --wp--custom--color--field--background and Added --wp--custom--color--field--text to set form fields background and text color for dark theme styles. Renamed --wp--custom--outline--color to --wp--custom--color--field--outline.
+	* Added --wp--custom--color--field--background and --wp--custom--color--field--text to set form fields background and text color for dark theme styles. Renamed --wp--custom--outline--color to --wp--custom--color--field--outline.
 	* Removed inline CSS in the Dark Midnight Blue and Dark Very Dark Gray global theme styles that is no longer needed when using the new highlight colors. Note that Auto Dark Mode still needs inline CSS to change the colors depending on whether the user's system is in light or dark mode.
 	* Updated Template Parts to no longer specify the text color so that the new default text colors will be used: Comments, Header Colored, Footer Default Light, Post Meta, Sidebar, Page Title with Excerpt.
 	* Updated Block Patterns to no longer specify the text color so that the new default text colors will be used: Title and Text, Pricing Table 3 Columns, Pricing Table 4 Columns, Cover Scroll Home Header, Cover Scroll Page Header.
