@@ -1,0 +1,43 @@
+/*--------------------------------------------------------------
+# Flat Blocks Theme Compatibility with Prior Versions
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Flat Blocks Colors (for theme < v1.6)
+--------------------------------------------------------------*/
+
+.has-foreground-color {
+	color: var(--wp--preset--color--contrast);
+}
+.has-foreground-background-color {
+	background-color: var(--wp--preset--color--contrast);
+}
+.has-foreground-border-color {
+	border-color: var(--wp--preset--color--contrast);
+}
+.has-background-color {
+	color: var(--wp--preset--color--base);
+}
+.has-background-background-color {
+	background-color: var(--wp--preset--color--base);
+}
+.has-background-border-color {
+	border-color: var(--wp--preset--color--base);
+}
+
+/*--------------------------------------------------------------
+# Flat Blocks Custom Styles (for theme < v1.6.4)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Cover and Media & Text: Custom
+--------------------------------------------------------------*/
+.is-style-cover-rounded-corners {
+	border-radius: var(--wp--custom--border--radius);
+	overflow: hidden;
+}
+
+.is-style-cover-border,
+.is-style-media-text-border {
+	border: 1px solid var(--wp--custom--border--color);
+	border-radius: var(--wp--custom--border--radius);
+	padding: var(--wp--preset--spacing--40);
+}

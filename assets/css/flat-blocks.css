@@ -57,7 +57,7 @@ b {
 /* Prevent code from breaking layout */
 code,
 pre {
-  overflow-x: auto;
+  overflow-x: scroll;
 }
 
 /* Set lists with background to match other padding */
@@ -108,7 +108,7 @@ input[type=file]::file-selector-button {
   background-color: var(--wp--preset--color--highlight);
   border: none;
   border-width: 0;
-  border-radius: var(--wp--custom--border--radius, 0);
+  border-radius: var(--wp--custom--button--radius, 0);
   padding: var(--wp--preset--spacing--30, 9px) var(--wp--preset--spacing--40, 18px);
   font-size: var(--wp--preset--font-size--normal, 18px);
   font-weight: 400;
@@ -203,7 +203,7 @@ select {
   font-size: var(--wp--preset--font-size--small, 16px);
   font-weight: var(--wp--custom--typography--font-weight--normal, 300);
   line-height: 1.5;
-  border-radius: var(--wp--custom--border--radius);
+  border-radius: var(--wp--preset--spacing--20);
   text-shadow: none;
   border: 1px solid var(--wp--preset--color--contrast);
 }
@@ -213,7 +213,7 @@ input {
   font-size: var(--wp--preset--font-size--normal);
   font-weight: var(--wp--custom--typography--font-weight--normal, 300);
   line-height: 1.5;
-  border-radius: var(--wp--custom--border--radius, 0);
+  border-radius: var(--wp--preset--spacing--20);
   text-shadow: none;
 }
 
@@ -304,25 +304,43 @@ body .is-layout-constrained > .alignright {
 .has-contrast-background-color {
   color: var(--wp--custom--color--contrast--contrast, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
 }
+.has-contrast-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--contrast, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
+}
 
 .has-dark-background-color {
   color: var(--wp--custom--color--contrast--dark, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
+}
+.has-dark-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--dark, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
 }
 
 .has-dark-alt-background-color {
   color: var(--wp--custom--color--contrast--dark-alt, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
 }
+.has-dark-alt-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--dark-alt, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
+}
 
 .has-almost-black-background-color {
   color: var(--wp--custom--color--contrast--almost-black, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
+}
+.has-almost-black-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--almost-black, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
 }
 
 .has-not-quite-black-background-color {
   color: var(--wp--custom--color--contrast--not-quite-black, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
 }
+.has-not-quite-black-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--not-quite-black, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
+}
 
 .has-black-background-color {
   color: var(--wp--custom--color--contrast--black, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
+}
+.has-black-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--black, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
 }
 
 /* 
@@ -554,37 +572,64 @@ body .is-layout-constrained > .alignright {
 .has-base-background-color {
   color: var(--wp--custom--color--contrast--base, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
 }
+.has-base-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--base, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
+}
 
 .has-neutral-background-color {
   color: var(--wp--custom--color--contrast--neutral, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-neutral-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--neutral, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
 }
 
 .has-neutral-alt-background-color {
   color: var(--wp--custom--color--contrast--neutral-alt, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
 }
+.has-neutral-alt-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--neutral-alt, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
+}
 
 .has-foreground-alt-background-color {
   color: var(--wp--custom--color--contrast--foreground-alt, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-foreground-alt-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--foreground-alt, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
 }
 
 .has-white-background-color {
   color: var(--wp--custom--color--contrast--white, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
 }
+.has-white-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--white, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
+}
 
 .has-off-white-background-color {
   color: var(--wp--custom--color--contrast--off-white, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-off-white-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--off-white, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
 }
 
 .has-very-light-gray-background-color {
   color: var(--wp--custom--color--contrast--very-light-gray, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
 }
+.has-very-light-gray-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--very-light-gray, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
+}
 
 .has-light-gray-background-color {
   color: var(--wp--custom--color--contrast--light-gray, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
 }
+.has-light-gray-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--light-gray, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
+}
 
 .has-gray-background-color {
   color: var(--wp--custom--color--contrast--gray, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-gray-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--gray, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
 }
 
 /* 
@@ -648,12 +693,6 @@ body .is-layout-constrained > .alignright {
 }
 
 /* Column rounded borders */
-.wp-block-column.is-style-rounded-border {
-  border: 1px solid var(--wp--custom--border--color);
-  border-radius: var(--wp--custom--border--radius);
-  padding: var(--wp--preset--spacing--40);
-}
-
 /* Column no padding */
 .wp-block-column.is-style-no-padding {
   padding: 0;
@@ -699,18 +738,7 @@ body .is-layout-constrained > .alignright {
 # Cover: Custom
 --------------------------------------------------------------*/
 /* Border */
-.wp-block-cover.is-style-cover-border {
-  border: 3px solid var(--wp--custom--border--color);
-  border-radius: var(--wp--custom--border--radius);
-  padding: var(--wp--preset--spacing--40);
-}
-
 /* Rounded corners */
-.wp-block-cover.is-style-cover-rounded-corners {
-  border-radius: var(--wp--custom--border--radius);
-  overflow: hidden;
-}
-
 /*--------------------------------------------------------------
 # Group
 --------------------------------------------------------------*/
@@ -742,19 +770,8 @@ body .is-layout-constrained > .alignright {
 # Group: Custom
 --------------------------------------------------------------*/
 /* Group borders */
-.wp-block-group.is-style-rounded-border {
-  border: 1px solid var(--wp--custom--border--color);
-  border-radius: var(--wp--custom--border--radius);
-  padding: var(--wp--preset--spacing--40);
-}
-
 .wp-block-group.is-style-rounded-border.is-layout-flex {
   overflow: hidden;
-}
-
-.wp-block-group.is-style-thick-rounded-border {
-  border: 3px solid var(--wp--custom--border--color);
-  border-radius: var(--wp--custom--border--radius);
 }
 
 .wp-block-group.is-style-thick-rounded-border.is-layout-flex {
@@ -773,27 +790,30 @@ body .is-layout-constrained > .alignright {
 }
 
 /* Group fixed header (position: sticky) */
+.wp-block-group.header.is-position-sticky,
 .wp-block-group.is-style-fixed-header,
 .wp-block-group.has-background.is-style-fixed-header {
-  border: 1px solid var(--wp--custom--border--color);
-  border-width: 0 0 1px;
+  background-color: var(--wp--preset--color--base);
   box-shadow: var(--wp--custom--shadow--default);
 }
 
 /* Line up menu close button with menu open button */
+.wp-block-group.header.is-position-sticky .wp-block-navigation__responsive-container.is-menu-open,
 .wp-block-group.is-style-fixed-header .wp-block-navigation__responsive-container.is-menu-open {
   padding-top: var(--wp--preset--spacing--50);
 }
 
 /* Position the fixed header using sticky so we don't have to have top site margin */
+.wp-site-blocks > header.wp-block-template-part:has(header.is-position-sticky),
 .wp-site-blocks > header:has(.is-style-fixed-header) {
   position: sticky;
   top: 0;
   background-color: var(--wp--preset--color--base);
-  z-index: 9999;
+  z-index: 10;
 }
 
 /* If WordPress Admin Bar, then adjust fixed header position so its underneath it */
+.admin-bar .wp-site-blocks > header.wp-block-template-part:has(header.is-position-sticky),
 .admin-bar .wp-site-blocks > header:has(.is-style-fixed-header) {
   top: var(--wp-admin--admin-bar--height, 32px);
 }
@@ -860,21 +880,23 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 .is-style-image-border img {
   border: 1px solid var(--wp--custom--border--color);
   border-radius: var(--wp--custom--border--radius);
-  padding: var(--wp--custom--border--radius);
+  padding: var(--wp--preset--spacing--20);
 }
 
 .wp-block-gallery.has-nested-images figure.is-style-image-border figcaption,
 .wp-block-gallery.is-style-image-border.has-nested-images figure.wp-block-image figcaption {
-  bottom: calc(1px + var(--wp--custom--border--radius));
-  left: calc(1px + var(--wp--custom--border--radius));
-  padding: 0 calc(1px + var(--wp--custom--border--radius)) calc(1px + var(--wp--custom--border--radius)) 0;
-  width: calc(100% - (2px + 2 * var(--wp--custom--border--radius)));
+  bottom: calc(1px + var(--wp--preset--spacing--20));
+  left: calc(1px + var(--wp--preset--spacing--20));
+  padding: 0 calc(1px + var(--wp--preset--spacing--20)) calc(1px + var(--wp--preset--spacing--20)) 0;
+  width: calc(100% - (2px + 2 * var(--wp--preset--spacing--20)));
+  border-bottom-left-radius: var(--wp--custom--border--radius);
+  border-bottom-right-radius: var(--wp--custom--border--radius);
 }
 
 .is-style-image-round-border img {
   border: 1px solid var(--wp--custom--border--color);
   border-radius: 9999px; /*50%;*/
-  padding: var(--wp--custom--border--radius);
+  padding: var(--wp--preset--spacing--20);
 }
 
 .wp-block-image.is-style-image-computer-screen img {
@@ -963,13 +985,13 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 .wp-block-navigation .wp-block-navigation__responsive-container-close {
   background-color: rgba(0, 0, 0, 0.05);
   border: 1px solid var(--wp--preset--color--neutral-alt);
-  border-radius: var(--wp--custom--border--radius);
+  border-radius: var(--wp--custom--button--radius);
   padding: var(--wp--preset--spacing--20);
 }
 
 /* On colored navs, round out the mobile nav container to match our open/close menu buttons */
 .wp-block-navigation.has-text-color:has(.wp-block-navigation__responsive-container:not(.is-menu-open.is-menu-open)) {
-  border-radius: var(--wp--custom--border--radius);
+  border-radius: var(--wp--custom--button--radius);
 }
 
 /* 
@@ -1369,12 +1391,13 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
 }
 
 /* But REMOVE duplicate padding */
+/* 
 .has-global-padding :where(.has-global-padding):not(.has-background),
 .has-global-padding > .alignfull:where(:not(.has-global-padding)) > :where(.wp-block-image) {
-  padding-left: 0;
-  padding-right: 0;
+	padding-left: 0;
+	padding-right: 0;
 }
-
+ */
 /* FIX alignfull in WordPress.org theme preview */
 .has-global-padding > #wporg-pattern-preview > div > .alignfull {
   margin-right: calc(var(--wp--style--root--padding-right) * -1);
@@ -1384,21 +1407,10 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
 }
 
 /*--------------------------------------------------------------
-# Color compatibility with other themes
+# Flat Blocks Theme Compatibility with Prior Versions
 --------------------------------------------------------------*/
-/* 
- * Flat Blocks theme prior to v1.6 used foreground and background
- * colors, so map those to the new contrast and base colors.
- * 
- * TwentyTwentyFour theme uses base and contrast in numbered 
- * shades. It also uses accent colors in numbered shades instead 
- * of primary, secondary, and tertiary.
- *
- * Note: TwentyTwentyThree theme uses the same base, contrast, 
- * primary, secondary, and tertiary colors as Flat Blocks.
- */
 /*--------------------------------------------------------------
-# Flat Blocks theme prior to v1.6
+# Flat Blocks Colors (for theme < v1.6)
 --------------------------------------------------------------*/
 .has-foreground-color {
   color: var(--wp--preset--color--contrast);
@@ -1425,8 +1437,34 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
 }
 
 /*--------------------------------------------------------------
-# TwentyTwentyFour theme
+# Flat Blocks Custom Styles (for theme < v1.6.4)
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Cover and Media & Text: Custom
+--------------------------------------------------------------*/
+.is-style-cover-rounded-corners {
+  border-radius: var(--wp--custom--border--radius);
+  overflow: hidden;
+}
+
+.is-style-cover-border,
+.is-style-media-text-border {
+  border: 1px solid var(--wp--custom--border--color);
+  border-radius: var(--wp--custom--border--radius);
+  padding: var(--wp--preset--spacing--40);
+}
+
+/*--------------------------------------------------------------
+# Color compatibility with other themes
+--------------------------------------------------------------*/
+/* 
+ * TwentyTwentyFour theme uses base and contrast in numbered 
+ * shades. It also uses accent colors in numbered shades instead 
+ * of primary, secondary, and tertiary.
+ *
+ * Note: TwentyTwentyThree theme uses the same base, contrast, 
+ * primary, secondary, and tertiary colors as Flat Blocks.
+ */
 .has-base-2-color,
 .has-base-3-color {
   color: var(--wp--preset--color--foreground-alt);

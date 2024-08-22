@@ -1,14 +1,14 @@
 /**
- * File:	custom-styles.css
+ * File:	block-styles.css
  * Theme:	Flat Blocks
  * 
- * The stylesheet for the Flat Block theme's CUSTOM block styles
+ * The stylesheet for the Flat Block theme's block styles
  *
  * NOTE: This file is AUTO-GENERATED from the SASS source files 
- * in /src/sass/custom-styles.scss. Do not make updates here.
+ * in /src/sass/block-styles.scss. Do not make updates here.
  * 
  * @package flat-blocks
- * @since 	1.0
+ * @since 	1.6.4
  */
 /*--------------------------------------------------------------
 # ADDITIONAL BLOCK STYLES
@@ -62,13 +62,6 @@
 # Comments: Custom
 --------------------------------------------------------------*/
 /* Rounded borders */
-.wp-block-comments.is-style-rounded-border,
-.wp-block-comments-query-loop.is-style-rounded-border {
-  border: 1px solid var(--wp--custom--border--color);
-  border-radius: var(--wp--custom--border--radius);
-  padding: var(--wp--preset--spacing--40);
-}
-
 /*--------------------------------------------------------------
 # Details
 --------------------------------------------------------------*/
@@ -89,7 +82,7 @@
 # Post Featured Image
 --------------------------------------------------------------*/
 .wp-block-post-featured-image img {
-  padding: var(--wp--custom--border--radius);
+  padding: var(--wp--preset--spacing--20);
   box-shadow: var(--wp--custom--shadow--default);
 }
 
@@ -129,11 +122,12 @@
 /* Default latest comments style to no bullets */
 .wp-block-latest-comments:not(.is-style-bullets) {
   padding-left: 0;
+  padding-inline-start: 0;
 }
 
 /* Front-end Add bullets and padding */
 .wp-block-latest-comments.is-style-bullets:not(.has-avatars) {
-  padding-left: 2em; /*var(--wp--preset--spacing--60);*/
+  padding-left: 2em;
 }
 
 .wp-block-latest-comments.is-style-bullets {
@@ -162,7 +156,7 @@
 .wp-block-latest-posts__featured-image img {
   border-radius: var(--wp--custom--border--radius);
   border: 1px solid var(--wp--custom--border--color);
-  padding: var(--wp--custom--border--radius);
+  padding: var(--wp--preset--spacing--20);
   box-shadow: var(--wp--custom--shadow--default);
 }
 
@@ -197,13 +191,6 @@
 /*--------------------------------------------------------------
 # Latest Posts: Custom
 --------------------------------------------------------------*/
-/* Image no border */
-.wp-block-post-featured-image.is-style-image-no-border img {
-  border: none;
-  border-radius: 0;
-  padding: 0;
-}
-
 /* Bullets */
 .wp-block-latest-posts.is-style-bullets.wp-block-latest-posts__list:not(.is-grid) {
   list-style: disc;
@@ -317,12 +304,6 @@ ol.is-style-list-plain-centered li {
 # Media & Text: Custom
 --------------------------------------------------------------*/
 /* Media & Text Border */
-.wp-block-media-text.is-style-media-text-border {
-  padding: var(--wp--custom--border--radius);
-  border: 3px solid var(--wp--custom--border--color);
-  border-radius: var(--wp--custom--border--radius);
-}
-
 /* 
  * Override horizontal padding on mobile 
  *

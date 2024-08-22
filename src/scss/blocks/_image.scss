@@ -38,21 +38,23 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 .is-style-image-border img {
 	border: 1px solid var(--wp--custom--border--color);
 	border-radius: var(--wp--custom--border--radius);
-	padding: var(--wp--custom--border--radius);
+	padding: var(--wp--preset--spacing--20);
 }
 
 .wp-block-gallery.has-nested-images figure.is-style-image-border figcaption,
 .wp-block-gallery.is-style-image-border.has-nested-images figure.wp-block-image figcaption {
-    bottom: calc(1px + var(--wp--custom--border--radius)); //6px;
-    left: calc(1px + var(--wp--custom--border--radius)); //6px;
-    padding: 0 calc(1px + var(--wp--custom--border--radius)) calc(1px + var(--wp--custom--border--radius)) 0; //0 6px 6px;
-    width: calc(100% - calc(2px + 2 * var(--wp--custom--border--radius)) );
+    bottom: calc(1px + var(--wp--preset--spacing--20)); //6px;
+    left: calc(1px + var(--wp--preset--spacing--20)); //6px;
+    padding: 0 calc(1px + var(--wp--preset--spacing--20)) calc(1px + var(--wp--preset--spacing--20)) 0; //0 6px 6px;
+    width: calc(100% - calc(2px + 2 * var(--wp--preset--spacing--20)));
+    border-bottom-left-radius: var(--wp--custom--border--radius);
+    border-bottom-right-radius: var(--wp--custom--border--radius);
 }
 
 .is-style-image-round-border img {
 	border: 1px solid var(--wp--custom--border--color);
 	border-radius: 9999px; /*50%;*/
-	padding: var(--wp--custom--border--radius);
+	padding: var(--wp--preset--spacing--20);
 }
 
 .wp-block-image.is-style-image-computer-screen img {
