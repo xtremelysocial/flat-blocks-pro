@@ -65,7 +65,6 @@ if ( ! function_exists( 'flatblocks_support' ) ) :
 		if ( apply_filters( 'flatblocks_allow_page_excerpts', $allow_page_excerpts ?? true ) ) {
 			add_post_type_support( 'page', 'excerpt' );		
 		}
-		
 	}
 endif;
 
@@ -111,11 +110,11 @@ if ( ! function_exists( 'flatblocks_front_end_styles' ) ) :
 				
 		// If not loading separate block styles, then load combined block styles
 		if ( ! apply_filters( 'flatblocks_should_load_separate_block_assets', $separate_theme_block_assets ?? false ) 
-			and file_exists( get_template_directory() . '/assets/css/custom-styles.css' ) ) {
+			and file_exists( get_template_directory() . '/assets/css/block-styles.css' ) ) {
 
 			wp_enqueue_style(
-				'flatblocks-custom-styles',
-				get_template_directory_uri() . '/assets/css/custom-styles.css',
+				'flatblocks-block-styles',
+				get_template_directory_uri() . '/assets/css/block-styles.css',
 				array('flatblocks-base'),
 				$version_string
 			);
@@ -131,11 +130,11 @@ if ( ! function_exists( 'flatblocks_front_end_styles' ) ) :
 		);*/
 		
 		// As a courtesy, add the child theme Custom Styles CSS if it exists
-		if ( is_child_theme() && file_exists( get_stylesheet_directory() . '/assets/css/custom-styles.css' ) ) {
+		if ( is_child_theme() && file_exists( get_stylesheet_directory() . '/assets/css/block-styles.css' ) ) {
 			wp_enqueue_style( 
-				'flatblocks-child-custom-styles', 
-				get_stylesheet_directory_uri() . '/assets/css/custom-styles.css', 
-				//array('flatblocks-base', 'flatblocks-custom-styles'),
+				'flatblocks-child-block-styles', 
+				get_stylesheet_directory_uri() . '/assets/css/block-styles.css', 
+				//array('flatblocks-base', 'flatblocks-block-styles'),
 				array('flatblocks-base'),
 				$version_string 
 			);
@@ -146,7 +145,7 @@ if ( ! function_exists( 'flatblocks_front_end_styles' ) ) :
 			wp_enqueue_style( 
 				'flatblocks-child-style', 
 				get_stylesheet_directory_uri() . '/style.css', 
-				//array('flatblocks-base', 'flatblocks-custom-styles'),
+				//array('flatblocks-base', 'flatblocks-block-styles'),
 				array('flatblocks-base'),
 				$version_string 
 			);
@@ -199,16 +198,16 @@ if ( ! function_exists( 'flatblocks_back_end_styles' ) ) :
 		add_editor_style( 
 			array(
 				'/assets/css/flat-blocks.css',
-				'/assets/css/custom-styles.css'
+				'/assets/css/block-styles.css'
 			)
 		);
 
 		// As a courtesy, add the child theme CSS files to the Block Editor too.
 		if ( is_child_theme() ) {
 
-			if ( file_exists( get_stylesheet_directory() . '/assets/css/custom-styles.css' ) ) {
+			if ( file_exists( get_stylesheet_directory() . '/assets/css/block-styles.css' ) ) {
 				add_editor_style(
-					get_stylesheet_directory_uri() . 'assets/css/custom-styles.css'
+					get_stylesheet_directory_uri() . 'assets/css/block-styles.css'
 				);
 			}
 
@@ -275,6 +274,11 @@ if ( file_exists( get_stylesheet_directory() . '/inc/block-styles.php' ) ) {
 	require_once get_stylesheet_directory() . '/inc/block-styles.php';
 }
 
+// Add custom block variations via TEST method
+// if ( file_exists( get_template_directory() . '/inc/block-variations-test.php' ) ) {
+// 	require_once get_template_directory() . '/inc/block-variations-test.php';
+// }
+
 // Add block patterns
 if ( file_exists( get_template_directory() . '/inc/block-patterns.php' ) ) {
 	require_once get_template_directory() . '/inc/block-patterns.php';
@@ -285,6 +289,11 @@ if ( file_exists( get_template_directory() . '/inc/block-patterns.php' ) ) {
 // automatically be loaded by WordPress.
 if ( file_exists( get_stylesheet_directory() . '/inc/block-patterns.php' ) ) {
 	require_once get_stylesheet_directory() . '/inc/block-patterns.php';
+}
+
+// Include WordPress version compatibility features
+if ( file_exists( get_template_directory() . '/inc/wp-compatability.php' ) ) {
+	require_once get_template_directory() . '/inc/wp-compatability.php';
 }
 
 // Include Pro version features

@@ -1,0 +1,10 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"slug": "arrow-icon",
+	"title": "Arrow Icon",
+	"blockTypes": [ "core/paragraph" ],
+	"styles": {
+		"css": "/* See custom-styles.css */"
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"slug": "image-border",
+	"title": "Image Border",
+	"blockTypes": [ "core/gallery" ],
+	"styles": {
+		"css": "/* see flat-blocks.css */",
+		"blocks": {
+			"core/image": {
+				"border": {
+					"style": "solid",
+					"width": "1px",
+					"color": "var(--wp--custom--border--color)",
+					"radius": "var(--wp--custom--border--radius)"
+				},
+				"spacing": {
+					"padding": "var:preset|spacing|20"
+				}
+			}
+		}
+	}
+}

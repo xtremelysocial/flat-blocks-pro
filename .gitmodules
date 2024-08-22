@@ -1,0 +1,3 @@
+[submodule "pro/plugins/xs-animation"]
+	path = pro/plugins/xs-animation
+	url = https://github.com/xtremelysocial/xs-animation

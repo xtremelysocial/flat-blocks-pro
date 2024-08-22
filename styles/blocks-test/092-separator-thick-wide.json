@@ -1,0 +1,14 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"slug": "wide-thick",
+	"title": "Wide Thick",
+	"blockTypes": [ "core/separator" ],
+	"styles": {
+		"css": "width: 100%",
+		"border": {
+			"style": "solid",
+			"width": "3px 0 0 0"
+		}
+	}
+}

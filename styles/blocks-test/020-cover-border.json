@@ -1,0 +1,19 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"slug": "cover-border",
+	"title": "Border",
+	"blockTypes": [ "core/cover" ],
+	"styles": {
+		"css": "",
+		"border": {
+			"style": "solid",
+			"width": "3px",
+			"color": "var(--wp--custom--border--color)",
+			"radius": "var(--wp--custom--border--radius)"
+		},
+		"spacing": {
+			"padding": "var:preset|spacing|40"
+		}
+	}
+}
