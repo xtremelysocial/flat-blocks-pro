@@ -16,7 +16,7 @@ fieldset {
 	border-radius: var(--wp--custom--border--radius);
 	text-shadow: none;
 	-webkit-appearance: none;
- }
+}
 
 select,
 textarea,
@@ -30,7 +30,7 @@ select {
 	font-size: var(--wp--preset--font-size--small, 16px);
 	font-weight: var(--wp--custom--typography--font-weight--normal, 300);
 	line-height: 1.5;
-	border-radius: var(--wp--custom--border--radius);
+	border-radius: var(--wp--preset--spacing--20);
 	text-shadow: none;
 	//color: var(--wp--preset--color--contrast);
 	border: 1px solid var(--wp--preset--color--contrast);	
@@ -41,7 +41,7 @@ input {
 	font-size: var(--wp--preset--font-size--normal);
 	font-weight: var(--wp--custom--typography--font-weight--normal, 300);
 	line-height: 1.5;
-	border-radius: var(--wp--custom--border--radius, 0);
+	border-radius: var(--wp--preset--spacing--20);
 	text-shadow: none;
 }
 

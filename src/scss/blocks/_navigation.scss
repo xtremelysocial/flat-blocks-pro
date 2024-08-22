@@ -80,13 +80,13 @@
 .wp-block-navigation .wp-block-navigation__responsive-container-close {
 	background-color: rgba(0, 0, 0, .05);
 	border: 1px solid var(--wp--preset--color--neutral-alt);
-	border-radius: var(--wp--custom--border--radius);
+	border-radius: var(--wp--custom--button--radius);
 	padding: var(--wp--preset--spacing--20);
 }
 
 /* On colored navs, round out the mobile nav container to match our open/close menu buttons */
 .wp-block-navigation.has-text-color:has(.wp-block-navigation__responsive-container:not(.is-menu-open.is-menu-open)) {
-	border-radius: var(--wp--custom--border--radius);
+	border-radius: var(--wp--custom--button--radius);
 }
 
 /* 

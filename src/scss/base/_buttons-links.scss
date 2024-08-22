@@ -34,7 +34,7 @@ input[type=file]::file-selector-button {
 	background-color: var(--wp--preset--color--highlight); //var(--wp--preset--color--primary);
 	border: none;
 	border-width: 0;
-	border-radius: var(--wp--custom--border--radius, 0);
+	border-radius: var(--wp--custom--button--radius, 0);
 	padding: var(--wp--preset--spacing--30, 9px) var(--wp--preset--spacing--40, 18px);
 	font-size: var(--wp--preset--font-size--normal, 18px);
 	font-weight: 400;

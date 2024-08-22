@@ -22,6 +22,10 @@
 				"color": "var(--wp--preset--color--neutral-alt)",
 				"radius": "5px"
 			},
+			"button": {
+				"color": "var(--wp--preset--color--highlight)",
+				"radius": "5px"
+			},
 			"shadow": {
 				"default": "none"
 			},
@@ -54,7 +58,7 @@
 		"useRootPaddingAwareAlignments": true,
 		"appearanceTools": true,
 		"position": {
-			"sticky": false
+			"sticky": true
 		},
 		"lightbox": {
 			"allowEditing": true,
@@ -988,7 +992,7 @@
 			},
 			"button": {
 				"color": {
-					"background": "var(--wp--preset--color--highlight)",
+					"background": "var(--wp--custom--button--color)",
 					"text": "var(--wp--preset--color--foreground-alt)"
 				},
 				"typography": {
@@ -998,7 +1002,7 @@
 					"lineHeight": "1.25"
 				},
 				"border": {
-					"radius": "var(--wp--custom--border--radius)"
+					"radius": "var(--wp--custom--button--radius)"
 				}
 			},
 			"link": {
@@ -1051,7 +1055,7 @@
 			"core/button": {
 				"border": {
 					"width": "0",
-					"radius": "var(--wp--custom--border--radius)"
+					"radius": "var(--wp--custom--button--radius)"
 				},
 				"shadow": "var(--wp--custom--shadow--default)",
 				"typography": {
@@ -1141,7 +1145,7 @@
 				"elements": {
 					"button": {
 						"border": {
-							"radius": "var(--wp--custom--border--radius)"
+							"radius": "var(--wp--custom--button--radius)"
 						}
 					}
 				}
@@ -1156,7 +1160,7 @@
 						"shadow": "var(--wp--custom--shadow--default)",
 						"border": {
 							"width": "0px",
-							"radius": "var(--wp--custom--border--radius)"
+							"radius": "var(--wp--custom--button--radius)"
 						}
 					}
 				}
@@ -1322,14 +1326,14 @@
 				}
 			},
 			"core/code": {
-				"spacing": {
-					"padding": "var:preset|spacing|40"
-				},
 				"border": {
 					"style": "solid",
 					"color": "var(--wp--custom--border--color)",
 					"radius": "var(--wp--custom--border--radius)",
-					"width": "3px"
+					"width": "1px"
+				},
+				"spacing": {
+					"padding": "var:preset|spacing|40"
 				},
 				"color": {
 					"background": "var(--wp--preset--color--neutral)",
@@ -1511,7 +1515,7 @@
 						"elements": {
 							"link": {
 								"border": {
-									"radius": "var(--wp--custom--border--radius)"
+									"radius": "var(--wp--custom--button--radius)"
 								},
 								"spacing": {
 									"padding": {

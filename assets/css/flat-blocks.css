@@ -1,1 +1,1520 @@
-html{-webkit-text-size-adjust:100%;box-sizing:border-box;scroll-behavior:auto!important}*,:after,:before{box-sizing:inherit}body{-moz-osx-font-smoothing:grayscale;-webkit-font-smoothing:antialiased;text-decoration-thickness:var(--wp--custom--link--thickness,1px);text-underline-offset:var(--wp--custom--link--offset,0);text-underline-position:var(--wp--custom--link--position,under)}b,strong{font-weight:var(--wp--custom--typography--font-weight--bold,500)}code,pre{overflow-x:auto}ol.has-background,ul.has-background{list-style-position:inside;padding:var(--wp--preset--spacing--40,18px)}figcaption{text-align:center}.wp-block-navigation a,.wp-block-navigation-submenu__toggle,a{cursor:pointer;text-decoration-style:var(--wp--custom--link--style,solid)}figcaption a{text-decoration:none}.has-text-color a:not(.wp-element-button):not(.wp-block-button):not(.wp-block-social-link-anchor):hover{opacity:.8}input[type=button],input[type=file]::file-selector-button,input[type=reset][class*=button],input[type=submit][class*=button]{background-color:var(--wp--preset--color--highlight);border:0;border-radius:var(--wp--custom--border--radius,0);color:var(--wp--preset--color--foreground-alt,#fff);font-size:var(--wp--preset--font-size--normal,18px);font-weight:400;line-height:1.5;padding:var(--wp--preset--spacing--30,9px) var(--wp--preset--spacing--40,18px);text-shadow:none}input[type=file]{font-size:var(--wp--preset--font-size--small,16px);width:100%}.has-primary-background-color input[type=button],.has-primary-background-color input[type=file]::file-selector-button,.has-primary-background-color input[type=reset][class*=button],.has-primary-background-color input[type=submit][class*=button]{border:3px solid var(--wp--preset--color--foreground-alt,#fff)}.wp-block-button__link:hover,.wp-block-file .wp-block-file__button:hover,.wp-block-search__button:hover,button:hover,input[type=file]::file-selector-button:hover,input[type=reset][class*=button]:hover,input[type=submit][class*=button]:hover{cursor:pointer;opacity:.8}.is-style-link-underline a,.is-style-link-underline a:active{text-decoration:underline}.is-style-link-no-underline a,.is-style-link-no-underline a:active{text-decoration:none}.is-style-link-no-underline a:hover,.is-style-link-underline a:hover{opacity:.8}.is-style-link-underline-hover a:hover{opacity:1;text-decoration:underline}fieldset{-webkit-appearance:none;border:1px solid var(--wp--preset--color--contrast);border-radius:var(--wp--custom--border--radius);font-size:var(--wp--preset--font-size--normal,18px);font-weight:var(--wp--custom--typography--font-weight--normal,300);line-height:1.5;padding:var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);text-shadow:none}input:not(.file),select,textarea{background-color:var(--wp--custom--color--field--background,revert);color:var(--wp--custom--color--field--text,inherit)}select{border:1px solid var(--wp--preset--color--contrast);border-radius:var(--wp--custom--border--radius);font-family:inherit;font-size:var(--wp--preset--font-size--small,16px)}input,select,textarea{font-weight:var(--wp--custom--typography--font-weight--normal,300);line-height:1.5;text-shadow:none}input,textarea{border-radius:var(--wp--custom--border--radius,0);font-size:var(--wp--preset--font-size--normal)}input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=button]):not([type=image]):not([class*=button]):not(.wp-block-button__link),textarea{-webkit-appearance:none;border:1px solid var(--wp--preset--color--contrast)}input:focus,textarea:focus{box-shadow:0 0 0 3px var(--wp--custom--color--field--outline,var(--wp--custom--outline--color));outline:none!important;transition:box-shadow .3s ease}select:focus,select:focus-visible{outline:var(--wp--custom--color--field--outline,var(--wp--custom--outline--color)) 5px solid;transition:outline .3s ease}.wp-site-blocks{margin-left:auto;margin-right:auto;max-width:var(--wp--custom--layout--full-size,1600px)}body .is-layout-constrained>.aligncenter{text-align:center}.wp-site-blocks>.alignleft{margin-right:var(--wp--style--root--padding-right,var(--wp--preset--spacing--50))}body .is-layout-constrained>.alignleft{margin-inline-end:var(--wp--style--root--padding-right,var(--wp--preset--spacing--50));padding-left:calc((100% - var(--wp--style--global--wide-size))*.5)}.wp-site-blocks>.alignright{margin-left:var(--wp--style--root--padding-left,var(--wp--preset--spacing--50))}body .is-layout-constrained>.alignright{margin-inline-start:var(--wp--style--root--padding-left,var(--wp--preset--spacing--50));padding-right:calc((100% - var(--wp--style--global--wide-size))*.5)}@media screen and (max-width:600px){body>#wpadminbar{position:fixed}}.has-background{color:var(--wp--custom--color--contrast--default,inherit)}.has-background a:hover{color:inherit;opacity:.8}.has-contrast-background-color{color:var(--wp--custom--color--contrast--contrast,var(--wp--custom--color--contrast--default-black,var(--wp--preset--color--foreground-alt)))}.has-dark-background-color{color:var(--wp--custom--color--contrast--dark,var(--wp--custom--color--contrast--default-black,var(--wp--preset--color--foreground-alt)))}.has-dark-alt-background-color{color:var(--wp--custom--color--contrast--dark-alt,var(--wp--custom--color--contrast--default-black,var(--wp--preset--color--foreground-alt)))}.has-almost-black-background-color{color:var(--wp--custom--color--contrast--almost-black,var(--wp--custom--color--contrast--default-black,var(--wp--preset--color--foreground-alt)))}.has-not-quite-black-background-color{color:var(--wp--custom--color--contrast--not-quite-black,var(--wp--custom--color--contrast--default-black,var(--wp--preset--color--foreground-alt)))}.has-black-background-color{color:var(--wp--custom--color--contrast--black,var(--wp--custom--color--contrast--default-black,var(--wp--preset--color--foreground-alt)))}.has-primary-background-color{color:var(--wp--custom--color--contrast--primary,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-primary-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--primary,var(--wp--custom--color--highlight--default-dark,inherit))}.has-secondary-background-color{color:var(--wp--custom--color--contrast--secondary,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-secondary-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--secondary,var(--wp--custom--color--highlight--default-dark,inherit))}.has-tertiary-background-color{color:var(--wp--custom--color--contrast--tertiary,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-tertiary-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--tertiary,var(--wp--custom--color--highlight--default-dark,inherit))}.has-primary-alt-background-color{color:var(--wp--custom--color--contrast--primary-alt,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-primary-alt-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--primary-alt,var(--wp--custom--color--highlight--default-dark,inherit))}.has-secondary-alt-background-color{color:var(--wp--custom--color--contrast--secondary-alt,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-secondary-alt-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--secondary-alt,var(--wp--custom--color--highlight--default-dark,inherit))}.has-tertiary-alt-background-color{color:var(--wp--custom--color--contrast--tertiary-alt,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-tertiary-alt-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--tertiary-alt,var(--wp--custom--color--highlight--default-dark,inherit))}.has-highlight-background-color{color:var(--wp--custom--color--contrast--highlight,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-highlight-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--highlight,var(--wp--custom--color--highlight--default-dark,inherit))}.has-highlight-alt-background-color{color:var(--wp--custom--color--contrast--highlight-alt,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-highlight-alt-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--highlight-alt,var(--wp--custom--color--highlight--default-dark,inherit))}.has-dark-gray-background-color{color:var(--wp--custom--color--contrast--dark-gray,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-dark-gray-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--dark-gray,var(--wp--custom--color--highlight--default-dark,inherit))}.has-very-dark-gray-background-color{color:var(--wp--custom--color--contrast--very-dark-gray,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-very-dark-gray-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--very-dark-gray,var(--wp--custom--color--highlight--default-dark,inherit))}.has-green-background-color{color:var(--wp--custom--color--contrast--green,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-green-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--green,var(--wp--custom--color--highlight--default-dark,inherit))}.has-dark-bright-green-background-color{color:var(--wp--custom--color--contrast--dark-bright-green,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-dark-bright-green-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--dark-bright-green,var(--wp--custom--color--highlight--default-dark,inherit))}.has-orange-background-color{color:var(--wp--custom--color--contrast--orange,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-orange-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--orange,var(--wp--custom--color--highlight--default-dark,inherit))}.has-dark-orange-background-color{color:var(--wp--custom--color--contrast--dark-orange,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-dark-orange-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--dark-orange,var(--wp--custom--color--highlight--default-dark,inherit))}.has-blue-background-color{color:var(--wp--custom--color--contrast--blue,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-blue-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--blue,var(--wp--custom--color--highlight--default-dark,inherit))}.has-dark-blue-background-color{color:var(--wp--custom--color--contrast--dark-blue,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-dark-blue-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--dark-blue,var(--wp--custom--color--highlight--default-dark,inherit))}.has-midnight-blue-background-color{color:var(--wp--custom--color--contrast--midnight-blue,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-midnight-blue-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--midnight-blue,var(--wp--custom--color--highlight--default-dark,inherit))}.has-dark-midnight-blue-background-color{color:var(--wp--custom--color--contrast--dark-midnight-blue,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-dark-midnight-blue-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--dark-midnight-blue,var(--wp--custom--color--highlight--default-dark,inherit))}.has-purple-background-color{color:var(--wp--custom--color--contrast--purple,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-purple-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--purple,var(--wp--custom--color--highlight--default-dark,inherit))}.has-dark-purple-background-color{color:var(--wp--custom--color--contrast--dark-purple,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-dark-purple-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--dark-purple,var(--wp--custom--color--highlight--default-dark,inherit))}.has-light-red-background-color{color:var(--wp--custom--color--contrast--light-red,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-light-red-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--light-red,var(--wp--custom--color--highlight--default-dark,inherit))}.has-red-background-color{color:var(--wp--custom--color--contrast--red,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-red-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--red,var(--wp--custom--color--highlight--default-dark,inherit))}.has-dark-red-background-color{color:var(--wp--custom--color--contrast--dark-red,var(--wp--custom--color--contrast--default-dark,var(--wp--preset--color--foreground-alt)))}.has-dark-red-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--dark-red,var(--wp--custom--color--highlight--default-dark,inherit))}.has-light-green-background-color{color:var(--wp--custom--color--contrast--light-green,var(--wp--custom--color--contrast--default-medium,var(--wp--preset--color--foreground-alt)))}.has-light-green-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--light-green,var(--wp--custom--color--highlight--default-medium,inherit))}.has-bright-green-background-color{color:var(--wp--custom--color--contrast--bright-green,var(--wp--custom--color--contrast--default-medium,var(--wp--preset--color--foreground-alt)))}.has-bright-green-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--bright-green,var(--wp--custom--color--highlight--default-medium,inherit))}.has-light-orange-background-color{color:var(--wp--custom--color--contrast--light-orange,var(--wp--custom--color--contrast--default-medium,var(--wp--preset--color--foreground-alt)))}.has-light-orange-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--light-orange,var(--wp--custom--color--highlight--default-medium,inherit))}.has-light-blue-background-color{color:var(--wp--custom--color--contrast--light-blue,var(--wp--custom--color--contrast--default-medium,var(--wp--preset--color--foreground-alt)))}.has-light-blue-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--light-blue,var(--wp--custom--color--highlight--default-medium,inherit))}.has-light-purple-background-color{color:var(--wp--custom--color--contrast--light-purple,var(--wp--custom--color--contrast--default-medium,var(--wp--preset--color--foreground-alt)))}.has-light-purple-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--light-purple,var(--wp--custom--color--highlight--default-medium,inherit))}.has-light-yellow-background-color{color:var(--wp--custom--color--contrast--light-yellow,var(--wp--custom--color--contrast--default-light,var(--wp--preset--color--contrast)))}.has-light-yellow-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--light-yellow,var(--wp--custom--color--highlight--default-light,inherit))}.has-yellow-background-color{color:var(--wp--custom--color--contrast--yellow,var(--wp--custom--color--contrast--default-light,var(--wp--preset--color--contrast)))}.has-yellow-background-color a:not(.wp-element-button){color:var(--wp--custom--color--highlight--yellow,var(--wp--custom--color--highlight--default-light,inherit))}.has-base-background-color{color:var(--wp--custom--color--contrast--base,var(--wp--custom--color--contrast--default-white,var(--wp--preset--color--contrast)))}.has-neutral-background-color{color:var(--wp--custom--color--contrast--neutral,var(--wp--custom--color--contrast--default-white,var(--wp--preset--color--contrast)))}.has-neutral-alt-background-color{color:var(--wp--custom--color--contrast--neutral-alt,var(--wp--custom--color--contrast--default-white,var(--wp--preset--color--contrast)))}.has-foreground-alt-background-color{color:var(--wp--custom--color--contrast--foreground-alt,var(--wp--custom--color--contrast--default-white,var(--wp--preset--color--contrast)))}.has-white-background-color{color:var(--wp--custom--color--contrast--white,var(--wp--custom--color--contrast--default-white,var(--wp--preset--color--contrast)))}.has-off-white-background-color{color:var(--wp--custom--color--contrast--off-white,var(--wp--custom--color--contrast--default-white,var(--wp--preset--color--contrast)))}.has-very-light-gray-background-color{color:var(--wp--custom--color--contrast--very-light-gray,var(--wp--custom--color--contrast--default-white,var(--wp--preset--color--contrast)))}.has-light-gray-background-color{color:var(--wp--custom--color--contrast--light-gray,var(--wp--custom--color--contrast--default-white,var(--wp--preset--color--contrast)))}.has-gray-background-color{color:var(--wp--custom--color--contrast--gray,var(--wp--custom--color--contrast--default-white,var(--wp--preset--color--contrast)))}:where(.wp-block-cover-image.is-light:not(.has-text-color)),:where(.wp-block-cover.is-light:not(.has-text-color)){color:#fff}:where(.wp-block-cover-image.is-light:not(.has-text-color)):has(.has-background-dim-10),:where(.wp-block-cover-image.is-light:not(.has-text-color)):has(.has-background-dim-20),:where(.wp-block-cover-image.is-light:not(.has-text-color)):has(.has-background-dim-30),:where(.wp-block-cover.is-light:not(.has-text-color)):has(.has-background-dim-10),:where(.wp-block-cover.is-light:not(.has-text-color)):has(.has-background-dim-20),:where(.wp-block-cover.is-light:not(.has-text-color)):has(.has-background-dim-30){color:#000}@media only screen and (max-width:781px){.wp-block-column.has-background,.wp-block-columns.has-background{padding-left:calc(var(--wp--style--block-gap)*2);padding-right:calc(var(--wp--style--block-gap)*2)}.has-global-padding .wp-block-column.has-background,.has-global-padding .wp-block-columns.has-background{padding-left:var(--wp--style--root--padding-left)!important;padding-right:var(--wp--style--root--padding-right)!important}}.wp-block-columns.is-style-no-gap,.wp-block-columns.is-style-no-gap .wp-block-column:not(.has-background),.wp-block-columns.is-style-no-gap.has-background:not(.has-global-padding){gap:0!important;padding:0!important}.wp-block-columns.is-style-thick-gap,.wp-block-columns.is-style-thick-gap.has-background{gap:calc(var(--wp--style--block-gap)*2)}.wp-block-column.is-style-rounded-border{border:1px solid var(--wp--custom--border--color);border-radius:var(--wp--custom--border--radius);padding:var(--wp--preset--spacing--40)}.wp-block-column.is-style-no-padding{padding:0}@media only screen and (max-width:781px){.wp-block-columns.is-style-center-on-mobile{row-gap:var(--wp--preset--spacing--30)}.wp-block-columns.is-style-center-on-mobile .wp-block-column:not(.wp-block-navigation__responsive-container-content)>*{--navigation-layout-justify:center;display:flex;justify-content:center}.wp-block-columns.is-style-thick-gap,.wp-block-columns.is-style-thick-gap.has-background{gap:var(--wp--style--block-gap)}}.wp-block-cover .wp-block-cover__inner-container>:not(.alignfull):not(.alignwide){margin-left:auto;margin-right:auto;max-width:var(--wp--style--global--content-size)}.wp-block-cover .wp-block-cover__inner-container>.alignfull,.wp-block-cover .wp-block-cover__inner-container>.alignwide{margin-left:auto;margin-right:auto;max-width:var(--wp--style--global--wide-size)}.wp-block-cover.is-style-cover-border{border:3px solid var(--wp--custom--border--color);border-radius:var(--wp--custom--border--radius);padding:var(--wp--preset--spacing--40)}.wp-block-cover.is-style-cover-rounded-corners{border-radius:var(--wp--custom--border--radius);overflow:hidden}.wp-block-group>.wp-block-group:not(.has-background){padding:0}[class*=is-style-template-].wp-block-template-part>.wp-block-group,[class*=is-style-template-].wp-block-template-part>.wp-block-template-part>.wp-block-group{padding-bottom:0;padding-top:0}@media only screen and (max-width:781px){.site-footer.has-global-padding.wp-block-group,.site-header.has-global-padding.wp-block-group{padding-left:var(--wp--style--root--padding-left)!important;padding-right:var(--wp--style--root--padding-right)!important}.is-nowrap.is-layout-flex.wp-block-group{flex-wrap:wrap}}.wp-block-group.is-style-rounded-border{border:1px solid var(--wp--custom--border--color);border-radius:var(--wp--custom--border--radius);padding:var(--wp--preset--spacing--40)}.wp-block-group.is-style-rounded-border.is-layout-flex{overflow:hidden}.wp-block-group.is-style-thick-rounded-border{border:3px solid var(--wp--custom--border--color);border-radius:var(--wp--custom--border--radius)}.wp-block-group.is-style-thick-rounded-border.is-layout-flex{overflow:hidden}.wp-block-group.is-style-no-padding{padding-bottom:0;padding-top:0}.wp-block-group.is-style-no-padding:not(.has-global-padding){padding-left:0;padding-right:0}.wp-block-group.has-background.is-style-fixed-header,.wp-block-group.is-style-fixed-header,.wp-site-blocks>header.wp-block-template-part:has(header.is-position-sticky){box-shadow:var(--wp--custom--shadow--default);padding-bottom:0;padding-top:0}.wp-block-group.is-style-fixed-header .wp-block-navigation__responsive-container.is-menu-open,.wp-site-blocks>header.wp-block-template-part:has(header.is-position-sticky) .wp-block-navigation__responsive-container.is-menu-open{padding-top:var(--wp--preset--spacing--50)}.wp-site-blocks>header.wp-block-template-part:has(header.is-position-sticky),.wp-site-blocks>header:has(.is-style-fixed-header){position:sticky;top:0;z-index:9999}.admin-bar .wp-site-blocks>header.wp-block-template-part:has(header.is-position-sticky),.admin-bar .wp-site-blocks>header:has(.is-style-fixed-header){top:var(--wp-admin--admin-bar--height,32px)}.has-background .wp-block-heading:not(.has-text-color),.has-background h1:not(.has-text-color),.has-background h2:not(.has-text-color),.has-background h3:not(.has-text-color),.has-background h4:not(.has-text-color),.has-background h5:not(.has-text-color),.has-background h6:not(.has-text-color){color:inherit}h1.has-background,h2.has-background,h3.has-background,h4.has-background,h5.has-background,h6.has-background{padding:var(--wp--preset--spacing--40)}.wp-block-image figcaption{color:inherit}figure.wp-caption:not(.alignfull):not(.alignwide),figure.wp-caption:not(.alignfull):not(.alignwide) img{height:auto;margin-left:auto;margin-right:auto;max-width:min(100%,var(--wp--style--global--content-size))!important}.wp-block-image .is-style-rounded img,.wp-block-image.is-style-circle-mask img,.wp-block-image.is-style-rounded img{border-radius:9999px!important}.lightbox-image-container .wp-block-image img{color:transparent!important}.is-style-image-border img{border:1px solid var(--wp--custom--border--color);border-radius:var(--wp--custom--border--radius);padding:var(--wp--custom--border--radius)}.wp-block-gallery.has-nested-images figure.is-style-image-border figcaption,.wp-block-gallery.is-style-image-border.has-nested-images figure.wp-block-image figcaption{bottom:calc(1px + var(--wp--custom--border--radius));left:calc(1px + var(--wp--custom--border--radius));padding:0 calc(1px + var(--wp--custom--border--radius)) calc(1px + var(--wp--custom--border--radius)) 0;width:calc(100% - 2px - var(--wp--custom--border--radius)*2)}.is-style-image-round-border img{border:1px solid var(--wp--custom--border--color);border-radius:9999px;padding:var(--wp--custom--border--radius)}.wp-block-image.is-style-image-computer-screen img{border:var(--wp--preset--spacing--60) solid var(--wp--preset--color--almost-black);border-bottom:3px solid var(--wp--preset--color--almost-black);border-radius:var(--wp--preset--spacing--40);border-bottom-left-radius:0;border-bottom-right-radius:0}.is-style-image-tablet-phone-screen img{border:var(--wp--preset--spacing--50) solid var(--wp--preset--color--almost-black);border-radius:var(--wp--preset--spacing--40)}.is-style-image-no-border,.is-style-image-no-border img{border:none;border-radius:0;padding:0}.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.current-menu-ancestor,.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.current-menu-item,.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.wp-block-home-link>a[aria-current=page],.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.wp-block-pages-list__item.current-menu-item>a,.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:has(.current-menu-ancestor),.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:has(.current-menu-ancestor)>.wp-block-navigation-item__content{color:var(--wp--preset--color--highlight)}.site-header.has-background .wp-block-navigation .wp-block-navigation-item.current-menu-ancestor,.site-header.has-background .wp-block-navigation .wp-block-navigation-item.current-menu-item:not(.has-child)>a,.site-header.has-background .wp-block-navigation .wp-block-navigation-item.wp-block-home-link>a[aria-current=page],.site-header.has-background .wp-block-navigation .wp-block-navigation-item.wp-block-pages-list__item.current-menu-item>a,.site-header.has-background .wp-block-navigation .wp-block-navigation-item:has(.current-menu-ancestor)>.wp-block-navigation-item__content,.site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item.current-menu-ancestor,.site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item.current-menu-item:not(.has-child)>a,.site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item.wp-block-home-link>a[aria-current=page],.site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item.wp-block-pages-list__item.current-menu-item>a,.site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item:has(.current-menu-ancestor)>.wp-block-navigation-item__content{font-weight:var(--wp--custom--typography--font-weight--medium)}.wp-block-navigation__submenu-container:not(.has-text-color) .wp-block-navigation-item.current-menu-item .wp-block-navigation-item__content.wp-block-navigation-item__content{color:var(--wp--preset--color--highlight)}.wp-block-navigation__submenu-container.has-text-color .wp-block-navigation-item.current-menu-item .wp-block-navigation-item__content.wp-block-navigation-item__content{font-weight:var(--wp--custom--typography--font-weight--medium)}.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:active,.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover,.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover>.wp-block-navigation-item__content,.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover>.wp-block-navigation__submenu-icon{color:var(--wp--preset--color--highlight-alt)}.site-header:not(.has-background) .wp-block-navigation-item.has-child.open-on-click:hover,.site-header:not(.has-background) .wp-block-navigation-submenu.open-on-click:hover,.wp-block-navigation__submenu-container:not(.has-background)>.wp-block-navigation-item>.wp-block-navigation-item__content:hover{color:var(--wp--preset--color--highlight)}.wp-block-navigation.has-background .wp-block-navigation-item:hover>.wp-block-navigation-item__content,.wp-block-navigation.has-background .wp-block-navigation-item:hover>.wp-block-navigation__submenu-icon{opacity:.8}.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child.open-on-click>.wp-block-navigation-item:hover,.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child.open-on-click>.wp-block-navigation-item__content:hover{color:inherit;cursor:unset;font-weight:inherit;opacity:1}.wp-block-navigation .wp-block-navigation__responsive-container-close,.wp-block-navigation .wp-block-navigation__responsive-container-open{background-color:rgba(0,0,0,.05);border:1px solid var(--wp--preset--color--neutral-alt);border-radius:var(--wp--custom--border--radius);padding:var(--wp--preset--spacing--20)}.wp-block-navigation.has-text-color:has(.wp-block-navigation__responsive-container:not(.is-menu-open.is-menu-open)){border-radius:var(--wp--custom--border--radius)}header>.wp-block-cover{overflow:visible;z-index:3}.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content{padding-top:calc(var(--wp--preset--spacing--40) + 24px)}.wp-block-navigation{row-gap:var(--wp--preset--spacing--20)}.wp-block-navigation__responsive-container.is-menu-open{row-gap:var(--wp--style--block-gap)}.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container{padding-top:var(--wp--preset--spacing--20)}.wp-block-navigation .wp-block-navigation-submenu__toggle{padding-left:0}.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container{padding-left:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40)}.wp-block-navigation .wp-block-navigation__submenu-container.has-background{padding:0}.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open{padding:var(--wp--preset--spacing--60) var(--wp--style--root--padding-right,var(--wp--preset--spacing--50)) var(--wp--preset--spacing--60) var(--wp--style--root--padding-left,var(--wp--preset--spacing--50))}.wp-block-navigation .has-child .wp-block-navigation__submenu-container{transition-duration:var(--wp--custom--animation--duration--short)}.wp-block-navigation .has-child:not(.open-on-click):hover>.wp-block-navigation__submenu-container{transition-delay:var(--wp--custom--animation--duration--short)}nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close,nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-open{background:rgba(0,0,0,.25);border:none;border-radius:0;color:#fff;padding:var(--wp--preset--spacing--20)}.wp-site-blocks:not(.is-root-container) nav.wp-block-navigation.is-style-fixed-menu{left:max(.5*(100% - var(--wp--style--global--wide-size)),var(--wp--style--root--padding-left,calc(var(--wp--preset--spacing--50)*2)));position:fixed;right:auto;top:calc(var(--wp--preset--spacing--60) + 1px*var(--wp--style--root--padding-top, 0));z-index:9999}.admin-bar .wp-site-blocks:not(.is-root-container) nav.wp-block-navigation.is-style-fixed-menu{top:calc(var(--wp--preset--spacing--60) + 1px*var(--wp--style--root--padding-top, 0) + var(--wp-admin--admin-bar--height, 0))}nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container{left:0;right:auto;width:360px}nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close{left:0;right:auto}.site-header.is-content-justification-right>.wp-block-template-part>nav.wp-block-navigation.is-style-fixed-menu,.site-header.is-content-justification-right>nav.wp-block-navigation.is-style-fixed-menu{left:auto;right:max(.5*(100% - var(--wp--style--global--wide-size)),var(--wp--style--root--padding-right,calc(var(--wp--preset--spacing--50)*2)))}.site-header.is-content-justification-right>.wp-block-template-part>nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container,.site-header.is-content-justification-right>.wp-block-template-part>nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close,.site-header.is-content-justification-right>nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container,.site-header.is-content-justification-right>nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close{left:auto;right:0}.site-header.is-content-justification-center>.wp-block-template-part>nav.wp-block-navigation.is-style-fixed-menu,.site-header.is-content-justification-center>nav.wp-block-navigation.is-style-fixed-menu{left:calc(50% - 12px - var(--wp--preset--spacing--20));right:auto}.site-header.is-content-justification-center>.wp-block-template-part>nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container,.site-header.is-content-justification-center>nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container{left:calc(50% - 180px);right:auto}.site-header.is-content-justification-center>.wp-block-template-part>nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close,.site-header.is-content-justification-center>nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close{left:calc(50% - 12px - var(--wp--preset--spacing--20)*.5);right:auto}@media only screen and (max-width:781px){p.has-background:not(.has-global-padding){padding-left:calc(var(--wp--style--block-gap)*2);padding-right:calc(var(--wp--style--block-gap)*2)}.has-global-padding p.has-background{padding-left:var(--wp--style--root--padding-left)!important;padding-right:var(--wp--style--root--padding-right)!important}}p.is-style-alignwide{margin-left:auto!important;margin-right:auto!important;max-width:var(--wp--style--global--wide-size)!important}p.is-style-arrow-icon-no-text{font-size:0}p.is-style-arrow-icon-no-text>a,p.is-style-arrow-icon>a{color:inherit;display:block;margin:var(--wp--style--block-gap) auto;outline:none!important;text-align:center;text-decoration:none!important}p.is-style-arrow-icon-no-text>a:active,p.is-style-arrow-icon-no-text>a:focus,p.is-style-arrow-icon>a:active,p.is-style-arrow-icon>a:focus{opacity:1}p.is-style-arrow-icon-no-text>a:after,p.is-style-arrow-icon>a:after{content:"";display:block;font-family:dashicons;font-size:var(--wp--preset--font-size--larger);line-height:1}p.is-style-arrow-icon>a:after{white-space:pre-wrap}.is-style-clearfix:not(.is-layout-flex):not(.is-style-fixed-header):after{clear:both;content:"";display:table}.is-layout-flex .is-style-no-shrink{flex-shrink:0}.dashicons{display:block;font-family:inherit;font-size:inherit;line-height:inherit;text-align:center;text-transform:inherit}.dashicons,.dashicons:before{font-weight:inherit;height:auto;width:auto}.dashicons:before{display:inline-block;font-family:dashicons;font-size:1em;line-height:1;vertical-align:text-top}.dashicons-above:before,.dashicons-before:before,.dashicons-below:before{font-family:dashicons;margin-right:var(--wp--preset--spacing--20,4.5px)}.dashicons-after{display:flex}.dashicons-after:before{font-family:dashicons;margin-left:var(--wp--preset--spacing--20,4.5px);order:2}.dashicons a{text-decoration:none}.wp-block-navigation .dashicons{text-align:inherit;transition:none}.wp-block-navigation__submenu-container.dashicons:before{content:none}.is-style-no-icon:before{display:none}.wp-block-post-content,.wp-block-template-part:not([class*=is-style-template-]),footer,header,main{margin-block-start:0}.wp-block-post-content>:first-child:not(.wp-block-cover),.wp-block-query>:first-child:not(.wp-block-cover),body .is-layout-constrained .wp-block-template-part>*+:not(.wp-block-template-part,.wp-block-post-content,.wp-block-cover,.wp-block-query,main,header,footer,nav),body .is-layout-constrained>*+.wp-block-template-part>:first-child:not(.wp-block-template-part,.wp-block-post-content,.wp-block-cover,.wp-block-query,main,header,footer,nav),main>:first-child:not(.wp-block-template-part,.wp-block-post-content,.wp-block-cover,.wp-block-query,header,footer,nav){margin-block-start:var(--wp--style--block-gap)}.wp-block-column>.wp-block-template-part:not([class*=is-style-template-])>:first-child:not([class*=is-style-template-]){margin-block-end:0;margin-block-start:0}.wp-block-post-content>:last-child,.wp-block-query>:last-child{margin-block-end:var(--wp--style--block-gap)}.wp-block-column>.wp-block-template-part:not([class*=is-style-template-])>:last-child:not([class*=is-style-template-]){margin-block-end:0}main.wp-block-group:not(.has-global-padding){padding:0}.wp-block-template-part:not([class*=is-style-template-]){padding-bottom:0;padding-top:0}.wp-block-query:not(.has-global-padding),footer.site-footer:not(.has-global-padding),header.entry-header:not(.has-global-padding):not(.is-style-no-padding),header.site-header:not(.has-global-padding){padding-left:var(--wp--style--root--padding-left,var(--wp--preset--spacing--50))!important;padding-right:var(--wp--style--root--padding-right,var(--wp--preset--spacing--50))!important}.has-global-padding,.has-global-padding.alignfull:not(.wp-block-post-content,.wp-block-image,.wp-block-columns,.wp-block-buttons),.has-global-padding>.alignfull:not(.wp-block-post-content,.wp-block-image,.wp-block-columns,.wp-block-buttons){padding-left:var(--wp--style--root--padding-left);padding-right:var(--wp--style--root--padding-right)}.has-global-padding :where(.has-global-padding):not(.has-background),.has-global-padding>.alignfull:where(:not(.has-global-padding))>:where(.wp-block-image){padding-left:0;padding-right:0}.has-global-padding>#wporg-pattern-preview>div>.alignfull{margin-left:calc(var(--wp--style--root--padding-left)*-1);margin-right:calc(var(--wp--style--root--padding-right)*-1);padding-left:var(--wp--style--root--padding-left);padding-right:var(--wp--style--root--padding-right)}.has-foreground-color{color:var(--wp--preset--color--contrast)}.has-foreground-background-color{background-color:var(--wp--preset--color--contrast)}.has-foreground-border-color{border-color:var(--wp--preset--color--contrast)}.has-background-color{color:var(--wp--preset--color--base)}.has-background-background-color{background-color:var(--wp--preset--color--base)}.has-background-border-color{border-color:var(--wp--preset--color--base)}.has-base-2-color,.has-base-3-color{color:var(--wp--preset--color--foreground-alt)}.has-base-2-background-color,.has-base-3-background-color{background-color:var(--wp--preset--color--light-gray)}.has-base-2-border-color,.has-base-3-border-color{border-color:var(--wp--preset--color--gray)}.has-contrast-2-color,.has-contrast-3-color{color:var(--wp--preset--color--contrast)}.has-contrast-2-background-color,.has-contrast-3-background-color{background-color:var(--wp--preset--color--contrast)}.has-contrast-2-border-color,.has-contrast-3-border-color{border-color:var(--wp--preset--color--contrast)}.has-accent-2-color,.has-accent-3-color,.has-accent-4-color,.has-accent-5-color,.has-accent-color{color:var(--wp--preset--color--primary)}.has-accent-2-background-color,.has-accent-3-background-color,.has-accent-4-background-color,.has-accent-5-background-color,.has-accent-background-color{background-color:var(--wp--preset--color--primary)}.has-accent-2-border-color,.has-accent-3-border-color,.has-accent-4-border-color,.has-accent-5-border-color,.has-accent-border-color{border-color:var(--wp--preset--color--primary)}
+/**
+ * File:	flat-blocks.css
+ * Theme:	Flat Blocks
+ * 
+ * The base stylesheet for the Flat Block theme's CORE block styles
+ * 
+ * NOTE: This file is AUTO-GENERATED from the SASS source files 
+ * in /src/sass/flat-blocks.scss. Do not make updates here.
+ *
+ * @package flat-blocks
+ * @since	1.0
+ */
+/*--------------------------------------------------------------
+# BASE STYLES
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+/* 
+ * Default to contain borders and padding within blocks and prevent iOS from adjusting
+ * text sizes after orientation change. 
+ */
+html {
+  box-sizing: border-box;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: auto !important;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+ * Font smoothing.
+ * This is a niche setting that will not be available via Global Styles.
+ * https://github.com/WordPress/gutenberg/issues/35934
+ * 
+ * Also text decoration styles.
+ */
+body {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  text-decoration-thickness: var(--wp--custom--link--thickness, 1px);
+  text-underline-position: var(--wp--custom--link--position, under);
+  text-underline-offset: var(--wp--custom--link--offset, 0);
+}
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+/* Use bold font-weight from theme.json */
+strong,
+b {
+  font-weight: var(--wp--custom--typography--font-weight--bold, 500);
+}
+
+/* Prevent code from breaking layout */
+code,
+pre {
+  overflow-x: scroll;
+}
+
+/* Set lists with background to match other padding */
+ol.has-background,
+ul.has-background {
+  padding: var(--wp--preset--spacing--40, 18px);
+  list-style-position: inside;
+}
+
+/* Center captions */
+figcaption {
+  text-align: center;
+}
+
+/*--------------------------------------------------------------
+# Buttons and Links
+--------------------------------------------------------------*/
+/*
+ * Link styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+a,
+.wp-block-navigation a,
+.wp-block-navigation-submenu__toggle {
+  cursor: pointer;
+  text-decoration-style: var(--wp--custom--link--style, solid);
+}
+
+/* Don't underline links in captions */
+figcaption a {
+  text-decoration: none;
+}
+
+/* Colored link hover styles */
+.has-text-color a:not(.wp-element-button):not(.wp-block-button):not(.wp-block-social-link-anchor):hover {
+  opacity: 0.8;
+}
+
+/* 
+ * Style basic buttons to match block buttons. 
+ */
+input[type=button],
+input[type=submit][class*=button],
+input[type=reset][class*=button],
+input[type=file]::file-selector-button {
+  color: var(--wp--preset--color--foreground-alt, white);
+  background-color: var(--wp--preset--color--highlight);
+  border: none;
+  border-width: 0;
+  border-radius: var(--wp--custom--button--radius, 0);
+  padding: var(--wp--preset--spacing--30, 9px) var(--wp--preset--spacing--40, 18px);
+  font-size: var(--wp--preset--font-size--normal, 18px);
+  font-weight: 400;
+  line-height: 1.5;
+  text-shadow: none;
+}
+
+input[type=file] {
+  font-size: var(--wp--preset--font-size--small, 16px);
+  width: 100%;
+}
+
+/* But override basic buttons to look like outlines on primary-colored backgrounds */
+.has-primary-background-color input[type=button],
+.has-primary-background-color input[type=submit][class*=button],
+.has-primary-background-color input[type=reset][class*=button],
+.has-primary-background-color input[type=file]::file-selector-button {
+  border: 3px solid var(--wp--preset--color--foreground-alt, white);
+}
+
+/*
+ * Button hover styles.
+ * Necessary until the following issue is resolved in Gutenberg:
+ * https://github.com/WordPress/gutenberg/issues/27075
+ */
+button:hover,
+input[type=submit][class*=button]:hover,
+input[type=reset][class*=button]:hover,
+input[type=file]::file-selector-button:hover,
+.wp-block-search__button:hover,
+.wp-block-file .wp-block-file__button:hover,
+.wp-block-button__link:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+/*--------------------------------------------------------------
+# Custom: Link Underlines
+--------------------------------------------------------------*/
+/* Underline links */
+.is-style-link-underline a,
+.is-style-link-underline a:active {
+  text-decoration: underline;
+}
+
+/* No Underline links */
+.is-style-link-no-underline a,
+.is-style-link-no-underline a:active {
+  text-decoration: none;
+}
+
+.is-style-link-underline a:hover,
+.is-style-link-no-underline a:hover {
+  opacity: 0.8;
+}
+
+/* Underline links on hover */
+.is-style-link-underline-hover a:hover {
+  opacity: 1;
+  text-decoration: underline;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+/* 
+ * Style form fields
+ * 
+ * Note: Many of these need to be excluded from the Block Editor 
+ * toolbars or it will alter them too.
+ */
+fieldset {
+  font-size: var(--wp--preset--font-size--normal, 18px);
+  font-weight: var(--wp--custom--typography--font-weight--normal, 300);
+  line-height: 1.5;
+  padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--40);
+  border: 1px solid var(--wp--preset--color--contrast);
+  border-radius: var(--wp--custom--border--radius);
+  text-shadow: none;
+  -webkit-appearance: none;
+}
+
+select,
+textarea,
+input:not(.file) {
+  background-color: var(--wp--custom--color--field--background, revert);
+  color: var(--wp--custom--color--field--text, inherit);
+}
+
+select {
+  font-family: inherit;
+  font-size: var(--wp--preset--font-size--small, 16px);
+  font-weight: var(--wp--custom--typography--font-weight--normal, 300);
+  line-height: 1.5;
+  border-radius: var(--wp--preset--spacing--20);
+  text-shadow: none;
+  border: 1px solid var(--wp--preset--color--contrast);
+}
+
+textarea,
+input {
+  font-size: var(--wp--preset--font-size--normal);
+  font-weight: var(--wp--custom--typography--font-weight--normal, 300);
+  line-height: 1.5;
+  border-radius: var(--wp--preset--spacing--20);
+  text-shadow: none;
+}
+
+textarea,
+input:not([type=radio]):not([type=checkbox]):not([type=file]):not([type=button]):not([type=image]):not([class*=button]):not(.wp-block-button__link) {
+  -webkit-appearance: none;
+  border: 1px solid var(--wp--preset--color--contrast);
+}
+
+/* Style focus outline */
+input:focus,
+textarea:focus {
+  outline: none !important;
+  box-shadow: 0 0 0 3px var(--wp--custom--color--field--outline, var(--wp--custom--outline--color));
+  transition: box-shadow 0.3s ease;
+}
+
+select:focus,
+select:focus-visible {
+  outline: var(--wp--custom--color--field--outline, var(--wp--custom--outline--color)) 5px solid;
+  transition: outline 0.3s ease;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+/*
+ * Don't let anything be wider than our max width. This is so 
+ * fullwidth images don't get so wide they lose resolution.
+ */
+.wp-site-blocks {
+  max-width: var(--wp--custom--layout--full-size, 1600px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FIX for center alignment */
+body .is-layout-constrained > .aligncenter {
+  text-align: center;
+}
+
+/* 
+ * ADD padding to align left and align right to honor wide width 
+ */
+.wp-site-blocks > .alignleft {
+  margin-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
+}
+
+body .is-layout-constrained > .alignleft {
+  padding-left: calc(0.5 * (100% - var(--wp--style--global--wide-size)));
+  margin-inline-end: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
+}
+
+.wp-site-blocks > .alignright {
+  margin-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
+}
+
+body .is-layout-constrained > .alignright {
+  padding-right: calc(0.5 * (100% - var(--wp--style--global--wide-size)));
+  margin-inline-start: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
+}
+
+/* Fix WordPress Admin bar on phones not sticking to the top */
+@media screen and (max-width: 600px) {
+  body > #wpadminbar {
+    position: fixed;
+  }
+}
+/*----------------------------------------------------------------------------------------
+# Colors
+----------------------------------------------------------------------------------------*/
+/* 
+ * First set some basic defaults for when a background color is used
+ */
+.has-background {
+  color: var(--wp--custom--color--contrast--default, inherit);
+}
+
+.has-background a:hover {
+  color: inherit;
+  opacity: 0.8;
+}
+
+/* 
+ * Black and near-black colors, default light text (but leave link color alone).
+ * Override by defining --wp--custom--color--contrast--black in theme.json.
+ */
+.has-contrast-background-color {
+  color: var(--wp--custom--color--contrast--contrast, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
+}
+.has-contrast-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--contrast, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
+}
+
+.has-dark-background-color {
+  color: var(--wp--custom--color--contrast--dark, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
+}
+.has-dark-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--dark, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
+}
+
+.has-dark-alt-background-color {
+  color: var(--wp--custom--color--contrast--dark-alt, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
+}
+.has-dark-alt-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--dark-alt, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
+}
+
+.has-almost-black-background-color {
+  color: var(--wp--custom--color--contrast--almost-black, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
+}
+.has-almost-black-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--almost-black, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
+}
+
+.has-not-quite-black-background-color {
+  color: var(--wp--custom--color--contrast--not-quite-black, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
+}
+.has-not-quite-black-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--not-quite-black, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
+}
+
+.has-black-background-color {
+  color: var(--wp--custom--color--contrast--black, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
+}
+.has-black-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--black, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
+}
+
+/* 
+ * Dark colors, default light text and links 
+ * Override by defining --wp--custom--color--contrast--dark in theme.json.
+ */
+.has-primary-background-color {
+  color: var(--wp--custom--color--contrast--primary, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-primary-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--primary, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-secondary-background-color {
+  color: var(--wp--custom--color--contrast--secondary, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-secondary-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--secondary, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-tertiary-background-color {
+  color: var(--wp--custom--color--contrast--tertiary, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-tertiary-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--tertiary, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-primary-alt-background-color {
+  color: var(--wp--custom--color--contrast--primary-alt, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-primary-alt-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--primary-alt, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-secondary-alt-background-color {
+  color: var(--wp--custom--color--contrast--secondary-alt, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-secondary-alt-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--secondary-alt, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-tertiary-alt-background-color {
+  color: var(--wp--custom--color--contrast--tertiary-alt, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-tertiary-alt-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--tertiary-alt, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-highlight-background-color {
+  color: var(--wp--custom--color--contrast--highlight, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-highlight-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--highlight, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-highlight-alt-background-color {
+  color: var(--wp--custom--color--contrast--highlight-alt, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-highlight-alt-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--highlight-alt, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-dark-gray-background-color {
+  color: var(--wp--custom--color--contrast--dark-gray, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-dark-gray-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--dark-gray, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-very-dark-gray-background-color {
+  color: var(--wp--custom--color--contrast--very-dark-gray, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-very-dark-gray-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--very-dark-gray, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-green-background-color {
+  color: var(--wp--custom--color--contrast--green, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-green-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--green, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-dark-bright-green-background-color {
+  color: var(--wp--custom--color--contrast--dark-bright-green, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-dark-bright-green-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--dark-bright-green, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-orange-background-color {
+  color: var(--wp--custom--color--contrast--orange, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-orange-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--orange, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-dark-orange-background-color {
+  color: var(--wp--custom--color--contrast--dark-orange, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-dark-orange-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--dark-orange, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-blue-background-color {
+  color: var(--wp--custom--color--contrast--blue, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-blue-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--blue, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-dark-blue-background-color {
+  color: var(--wp--custom--color--contrast--dark-blue, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-dark-blue-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--dark-blue, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-midnight-blue-background-color {
+  color: var(--wp--custom--color--contrast--midnight-blue, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-midnight-blue-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--midnight-blue, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-dark-midnight-blue-background-color {
+  color: var(--wp--custom--color--contrast--dark-midnight-blue, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-dark-midnight-blue-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--dark-midnight-blue, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-purple-background-color {
+  color: var(--wp--custom--color--contrast--purple, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-purple-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--purple, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-dark-purple-background-color {
+  color: var(--wp--custom--color--contrast--dark-purple, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-dark-purple-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--dark-purple, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-light-red-background-color {
+  color: var(--wp--custom--color--contrast--light-red, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-light-red-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--light-red, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-red-background-color {
+  color: var(--wp--custom--color--contrast--red, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-red-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--red, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+.has-dark-red-background-color {
+  color: var(--wp--custom--color--contrast--dark-red, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
+}
+.has-dark-red-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--dark-red, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+
+/* 
+ * Medium colors, default light text and links too but make it easy for theme styles to 
+ * Override by defining --wp--custom--color--contrast--medium in theme.json.
+ */
+.has-light-green-background-color {
+  color: var(--wp--custom--color--contrast--light-green, var(--wp--custom--color--contrast--default-medium, var(--wp--preset--color--foreground-alt)));
+}
+.has-light-green-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--light-green, var(--wp--custom--color--highlight--default-medium, inherit));
+}
+
+.has-bright-green-background-color {
+  color: var(--wp--custom--color--contrast--bright-green, var(--wp--custom--color--contrast--default-medium, var(--wp--preset--color--foreground-alt)));
+}
+.has-bright-green-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--bright-green, var(--wp--custom--color--highlight--default-medium, inherit));
+}
+
+.has-light-orange-background-color {
+  color: var(--wp--custom--color--contrast--light-orange, var(--wp--custom--color--contrast--default-medium, var(--wp--preset--color--foreground-alt)));
+}
+.has-light-orange-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--light-orange, var(--wp--custom--color--highlight--default-medium, inherit));
+}
+
+.has-light-blue-background-color {
+  color: var(--wp--custom--color--contrast--light-blue, var(--wp--custom--color--contrast--default-medium, var(--wp--preset--color--foreground-alt)));
+}
+.has-light-blue-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--light-blue, var(--wp--custom--color--highlight--default-medium, inherit));
+}
+
+.has-light-purple-background-color {
+  color: var(--wp--custom--color--contrast--light-purple, var(--wp--custom--color--contrast--default-medium, var(--wp--preset--color--foreground-alt)));
+}
+.has-light-purple-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--light-purple, var(--wp--custom--color--highlight--default-medium, inherit));
+}
+
+/* 
+ * Light Colors (e.g. Yellow), default dark color to text, link, and buttons 
+ * Override by defining --wp--custom--color--contrast--light in theme.json.
+ */
+.has-light-yellow-background-color {
+  color: var(--wp--custom--color--contrast--light-yellow, var(--wp--custom--color--contrast--default-light, var(--wp--preset--color--contrast)));
+}
+.has-light-yellow-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--light-yellow, var(--wp--custom--color--highlight--default-light, inherit));
+}
+
+.has-yellow-background-color {
+  color: var(--wp--custom--color--contrast--yellow, var(--wp--custom--color--contrast--default-light, var(--wp--preset--color--contrast)));
+}
+.has-yellow-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--yellow, var(--wp--custom--color--highlight--default-light, inherit));
+}
+
+/* 
+ * White and near-white colors, default dark text (but leave the link color alone) 
+ * Override by defining --wp--custom--color--contrast--white in theme.json.
+ */
+.has-base-background-color {
+  color: var(--wp--custom--color--contrast--base, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-base-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--base, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
+}
+
+.has-neutral-background-color {
+  color: var(--wp--custom--color--contrast--neutral, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-neutral-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--neutral, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
+}
+
+.has-neutral-alt-background-color {
+  color: var(--wp--custom--color--contrast--neutral-alt, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-neutral-alt-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--neutral-alt, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
+}
+
+.has-foreground-alt-background-color {
+  color: var(--wp--custom--color--contrast--foreground-alt, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-foreground-alt-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--foreground-alt, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
+}
+
+.has-white-background-color {
+  color: var(--wp--custom--color--contrast--white, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-white-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--white, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
+}
+
+.has-off-white-background-color {
+  color: var(--wp--custom--color--contrast--off-white, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-off-white-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--off-white, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
+}
+
+.has-very-light-gray-background-color {
+  color: var(--wp--custom--color--contrast--very-light-gray, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-very-light-gray-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--very-light-gray, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
+}
+
+.has-light-gray-background-color {
+  color: var(--wp--custom--color--contrast--light-gray, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-light-gray-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--light-gray, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
+}
+
+.has-gray-background-color {
+  color: var(--wp--custom--color--contrast--gray, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-gray-background-color a:not(.wp-element-button) {
+  color: var(--wp--custom--color--highlight--gray, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
+}
+
+/* 
+ * On Cover blocks, default the text color to white, but set it back to black
+ * on light backgrounds with dim less than 30%
+ */
+:where(.wp-block-cover-image.is-light:not(.has-text-color)), :where(.wp-block-cover.is-light:not(.has-text-color)) {
+  color: #fff;
+}
+:where(.wp-block-cover-image.is-light:not(.has-text-color)):has(.has-background-dim-10), :where(.wp-block-cover-image.is-light:not(.has-text-color)):has(.has-background-dim-20), :where(.wp-block-cover-image.is-light:not(.has-text-color)):has(.has-background-dim-30), :where(.wp-block-cover.is-light:not(.has-text-color)):has(.has-background-dim-10), :where(.wp-block-cover.is-light:not(.has-text-color)):has(.has-background-dim-20), :where(.wp-block-cover.is-light:not(.has-text-color)):has(.has-background-dim-30) {
+  color: #000;
+}
+
+/*--------------------------------------------------------------
+# CRITICAL BLOCK STYLES
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Columns and Column
+--------------------------------------------------------------*/
+/* 
+ * Note: Padding for colored backgrounds on columns is now in
+ * theme.json as custom block CSS.
+ */
+/* ADD BACK gap on flex columns by default */
+/* 
+ * Note: Breakpoint of 781 is what is hard-coded in WordPress 
+ * v6.0+ to collapse columns
+ */
+@media only screen and (max-width: 781px) {
+  /* 
+   * If no global padding, then set colored columns like colored
+   * groups 
+   */
+  .wp-block-columns.has-background,
+  .wp-block-column.has-background {
+    padding-left: calc(2 * var(--wp--style--block-gap));
+    padding-right: calc(2 * var(--wp--style--block-gap));
+  }
+  /* If global padding, then OVERRIDE horizontal padding on mobile */
+  .has-global-padding .wp-block-columns.has-background,
+  .has-global-padding .wp-block-column.has-background {
+    padding-left: var(--wp--style--root--padding-left) !important;
+    padding-right: var(--wp--style--root--padding-right) !important;
+  }
+}
+/*--------------------------------------------------------------
+# Columns and Column: Custom
+--------------------------------------------------------------*/
+/* Columns no Gap */
+.wp-block-columns.is-style-no-gap,
+.wp-block-columns.is-style-no-gap .wp-block-column:not(.has-background),
+.wp-block-columns.is-style-no-gap.has-background:not(.has-global-padding) {
+  gap: 0 !important;
+  padding: 0 !important;
+}
+
+/* Columns thick gap */
+.wp-block-columns.is-style-thick-gap,
+.wp-block-columns.is-style-thick-gap.has-background {
+  gap: calc(2 * var(--wp--style--block-gap));
+}
+
+/* Column rounded borders */
+/* Column no padding */
+.wp-block-column.is-style-no-padding {
+  padding: 0;
+}
+
+/* Handle when columns collapse on mobile */
+/* Breakpoint of 781 is what is hard-coded in WordPress v6.0+ to collapse columns */
+@media only screen and (max-width: 781px) {
+  /* Reduce row (vertical gap) when collapsing centered columns */
+  .wp-block-columns.is-style-center-on-mobile {
+    row-gap: var(--wp--preset--spacing--30);
+  }
+  /* Center left and right aligned text */
+  .wp-block-columns.is-style-center-on-mobile .wp-block-column:not(.wp-block-navigation__responsive-container-content) > * {
+    display: flex;
+    justify-content: center;
+    --navigation-layout-justify: center;
+  }
+  /* OVERRIDE columns thick gap so vertical spacing matches up */
+  .wp-block-columns.is-style-thick-gap,
+  .wp-block-columns.is-style-thick-gap.has-background {
+    gap: var(--wp--style--block-gap);
+  }
+}
+/*--------------------------------------------------------------
+# Cover
+--------------------------------------------------------------*/
+/* LIMIT cover image inner content to standard unless wide or full */
+.wp-block-cover .wp-block-cover__inner-container > *:not(.alignfull):not(.alignwide) {
+  max-width: var(--wp--style--global--content-size);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wp-block-cover .wp-block-cover__inner-container > *.alignwide,
+.wp-block-cover .wp-block-cover__inner-container > *.alignfull {
+  max-width: var(--wp--style--global--wide-size);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Cover: Custom
+--------------------------------------------------------------*/
+/* Border */
+/* Rounded corners */
+/*--------------------------------------------------------------
+# Group
+--------------------------------------------------------------*/
+/* 
+ * Note: Padding for colored backgrounds on groups is now in
+ * theme.json as custom block CSS.
+ */
+/* For convenience, remove padding on nested groups */
+.wp-block-group > .wp-block-group:not(.has-background) {
+  padding: 0;
+}
+
+/* If global padding, then OVERRIDE horizontal padding on mobile
+ *
+ * Note: Breakpoint of 781 is what is hard-coded in WordPress 
+ * v6.0+ to collapse columns
+ */
+@media only screen and (max-width: 781px) {
+  .site-header.has-global-padding.wp-block-group,
+  .site-footer.has-global-padding.wp-block-group {
+    padding-left: var(--wp--style--root--padding-left) !important;
+    padding-right: var(--wp--style--root--padding-right) !important;
+  }
+  .is-nowrap.is-layout-flex.wp-block-group {
+    flex-wrap: wrap;
+  }
+}
+/*--------------------------------------------------------------
+# Group: Custom
+--------------------------------------------------------------*/
+/* Group borders */
+.wp-block-group.is-style-rounded-border.is-layout-flex {
+  overflow: hidden;
+}
+
+.wp-block-group.is-style-thick-rounded-border.is-layout-flex {
+  overflow: hidden;
+}
+
+/* Group no padding */
+.wp-block-group.is-style-no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.wp-block-group.is-style-no-padding:not(.has-global-padding) {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Group fixed header (position: sticky) */
+.wp-block-group.header.is-position-sticky,
+.wp-block-group.is-style-fixed-header,
+.wp-block-group.has-background.is-style-fixed-header {
+  background-color: var(--wp--preset--color--base);
+  box-shadow: var(--wp--custom--shadow--default);
+}
+
+/* Line up menu close button with menu open button */
+.wp-block-group.header.is-position-sticky .wp-block-navigation__responsive-container.is-menu-open,
+.wp-block-group.is-style-fixed-header .wp-block-navigation__responsive-container.is-menu-open {
+  padding-top: var(--wp--preset--spacing--50);
+}
+
+/* Position the fixed header using sticky so we don't have to have top site margin */
+.wp-site-blocks > header.wp-block-template-part:has(header.is-position-sticky),
+.wp-site-blocks > header:has(.is-style-fixed-header) {
+  position: sticky;
+  top: 0;
+  background-color: var(--wp--preset--color--base);
+  z-index: 10;
+}
+
+/* If WordPress Admin Bar, then adjust fixed header position so its underneath it */
+.admin-bar .wp-site-blocks > header.wp-block-template-part:has(header.is-position-sticky),
+.admin-bar .wp-site-blocks > header:has(.is-style-fixed-header) {
+  top: var(--wp-admin--admin-bar--height, 32px);
+}
+
+/*--------------------------------------------------------------
+# Heading
+--------------------------------------------------------------*/
+/* If user specifies global heading font colors, don't override on colored backgrounds */
+.has-background .wp-block-heading:not(.has-text-color),
+.has-background h1:not(.has-text-color),
+.has-background h2:not(.has-text-color),
+.has-background h3:not(.has-text-color),
+.has-background h4:not(.has-text-color),
+.has-background h5:not(.has-text-color),
+.has-background h6:not(.has-text-color) {
+  color: inherit;
+}
+
+/* Don't add extra padding to headings with backgrounds */
+h1.has-background,
+h2.has-background,
+h3.has-background,
+h4.has-background,
+h5.has-background,
+h6.has-background {
+  padding: var(--wp--preset--spacing--40);
+}
+
+/*--------------------------------------------------------------
+# Image
+--------------------------------------------------------------*/
+/* FIX caption color when on colored background */
+.wp-block-image figcaption {
+  color: inherit;
+}
+
+/* Prevent figures (images, tables) with hard-coded dimensions from breaking the 
+ * layout. Note the figure line is for older block editor markup. 
+ */
+figure.wp-caption:not(.alignfull):not(.alignwide),
+figure.wp-caption:not(.alignfull):not(.alignwide) img {
+  max-width: min(100%, var(--wp--style--global--content-size)) !important;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FIX rounded images when global image style has a border radius */
+.wp-block-image .is-style-rounded img,
+.wp-block-image.is-style-circle-mask img,
+.wp-block-image.is-style-rounded img {
+  border-radius: 9999px !important;
+}
+
+/* Hide the caption in new WordPress v6.4 "lightbox" image feature when enlarged */
+.lightbox-image-container .wp-block-image img {
+  color: rgba(0, 0, 0, 0) !important;
+}
+
+/*--------------------------------------------------------------
+# Image: Custom
+--------------------------------------------------------------*/
+/* Image borders */
+.is-style-image-border img {
+  border: 1px solid var(--wp--custom--border--color);
+  border-radius: var(--wp--custom--border--radius);
+  padding: var(--wp--preset--spacing--20);
+}
+
+.wp-block-gallery.has-nested-images figure.is-style-image-border figcaption,
+.wp-block-gallery.is-style-image-border.has-nested-images figure.wp-block-image figcaption {
+  bottom: calc(1px + var(--wp--preset--spacing--20));
+  left: calc(1px + var(--wp--preset--spacing--20));
+  padding: 0 calc(1px + var(--wp--preset--spacing--20)) calc(1px + var(--wp--preset--spacing--20)) 0;
+  width: calc(100% - (2px + 2 * var(--wp--preset--spacing--20)));
+  border-bottom-left-radius: var(--wp--custom--border--radius);
+  border-bottom-right-radius: var(--wp--custom--border--radius);
+}
+
+.is-style-image-round-border img {
+  border: 1px solid var(--wp--custom--border--color);
+  border-radius: 9999px; /*50%;*/
+  padding: var(--wp--preset--spacing--20);
+}
+
+.wp-block-image.is-style-image-computer-screen img {
+  border: var(--wp--preset--spacing--60) solid var(--wp--preset--color--almost-black);
+  border-radius: var(--wp--preset--spacing--40);
+  border-bottom: 3px solid var(--wp--preset--color--almost-black);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.is-style-image-tablet-phone-screen img {
+  border: var(--wp--preset--spacing--50) solid var(--wp--preset--color--almost-black);
+  border-radius: var(--wp--preset--spacing--40);
+}
+
+/* Featured Image no border */
+.is-style-image-no-border,
+.is-style-image-no-border img {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+/*----------------------------------------------------------------------------------------
+# Colors
+----------------------------------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/** 
+ * Bold or highlight active top-level menu items, depending on whether 
+ * background color or not 
+ */
+.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.current-menu-item, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:has(.current-menu-ancestor), .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.current-menu-ancestor, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:has(.current-menu-ancestor) > .wp-block-navigation-item__content, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.wp-block-pages-list__item.current-menu-item > a, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.wp-block-home-link > a[aria-current=page] {
+  color: var(--wp--preset--color--highlight);
+}
+
+.site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item.current-menu-item:not(.has-child) > a, .site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item.current-menu-ancestor, .site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item:has(.current-menu-ancestor) > .wp-block-navigation-item__content, .site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item.wp-block-pages-list__item.current-menu-item > a, .site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item.wp-block-home-link > a[aria-current=page],
+.site-header.has-background .wp-block-navigation .wp-block-navigation-item.current-menu-item:not(.has-child) > a,
+.site-header.has-background .wp-block-navigation .wp-block-navigation-item.current-menu-ancestor,
+.site-header.has-background .wp-block-navigation .wp-block-navigation-item:has(.current-menu-ancestor) > .wp-block-navigation-item__content,
+.site-header.has-background .wp-block-navigation .wp-block-navigation-item.wp-block-pages-list__item.current-menu-item > a,
+.site-header.has-background .wp-block-navigation .wp-block-navigation-item.wp-block-home-link > a[aria-current=page] {
+  font-weight: var(--wp--custom--typography--font-weight--medium);
+}
+
+/* Bold or highlight active sub-menu items, depending on whether text color or not */
+.wp-block-navigation__submenu-container:not(.has-text-color) .wp-block-navigation-item.current-menu-item .wp-block-navigation-item__content.wp-block-navigation-item__content {
+  color: var(--wp--preset--color--highlight);
+}
+
+.wp-block-navigation__submenu-container.has-text-color .wp-block-navigation-item.current-menu-item .wp-block-navigation-item__content.wp-block-navigation-item__content {
+  font-weight: var(--wp--custom--typography--font-weight--medium);
+}
+
+/* On hover, bold or highlight top-level menu items, depending on whether background color or not */
+.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover > .wp-block-navigation-item__content, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover > .wp-block-navigation__submenu-icon, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:active {
+  color: var(--wp--preset--color--highlight-alt);
+}
+
+/* Drop-down link hover color. */
+.site-header:not(.has-background) .wp-block-navigation-submenu.open-on-click:hover,
+.site-header:not(.has-background) .wp-block-navigation-item.has-child.open-on-click:hover {
+  color: var(--wp--preset--color--highlight);
+}
+
+.wp-block-navigation__submenu-container:not(.has-background) > .wp-block-navigation-item > .wp-block-navigation-item__content:hover {
+  color: var(--wp--preset--color--highlight);
+}
+
+.wp-block-navigation.has-background .wp-block-navigation-item:hover > .wp-block-navigation-item__content, .wp-block-navigation.has-background .wp-block-navigation-item:hover > .wp-block-navigation__submenu-icon {
+  opacity: 0.8;
+}
+
+/* But on mobile nav, don't hover on non-clickable links */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child.open-on-click > .wp-block-navigation-item:hover,
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child.open-on-click > .wp-block-navigation-item__content:hover {
+  color: inherit;
+  cursor: unset;
+  font-weight: inherit;
+  opacity: 1;
+}
+
+/* Style the mobile nav menu open and close buttons */
+.wp-block-navigation .wp-block-navigation__responsive-container-open,
+.wp-block-navigation .wp-block-navigation__responsive-container-close {
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--wp--preset--color--neutral-alt);
+  border-radius: var(--wp--custom--button--radius);
+  padding: var(--wp--preset--spacing--20);
+}
+
+/* On colored navs, round out the mobile nav container to match our open/close menu buttons */
+.wp-block-navigation.has-text-color:has(.wp-block-navigation__responsive-container:not(.is-menu-open.is-menu-open)) {
+  border-radius: var(--wp--custom--button--radius);
+}
+
+/* 
+ * If cover used as site header, make sure it is layered above 
+ * other cover images 
+ */
+header > .wp-block-cover {
+  overflow: visible;
+  z-index: 3;
+}
+
+/* Adjust padding on mobile nav menu */
+.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
+  padding-top: calc(var(--wp--preset--spacing--40) + 24px);
+}
+
+/* Reduce vertical gap on top-level nav menus for when they wrap */
+.wp-block-navigation {
+  row-gap: var(--wp--preset--spacing--20);
+}
+
+/* But add it back on mobile menu*/
+.wp-block-navigation__responsive-container.is-menu-open {
+  row-gap: var(--wp--style--block-gap);
+}
+
+/* REMOVE extra padding between top-level nav and its children */
+.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container {
+  padding-top: var(--wp--preset--spacing--20);
+}
+
+/* REMOVE extra padding on sub-menu drop-downs */
+.wp-block-navigation .wp-block-navigation-submenu__toggle {
+  padding-left: 0;
+}
+
+/* REDUCE padding on sub-menu drop-downs on mobile nav */
+.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container {
+  padding-left: var(--wp--preset--spacing--40);
+  padding-right: var(--wp--preset--spacing--40);
+}
+
+/* REMOVE duplicate padding on sub-menus with backgrounds */
+.wp-block-navigation .wp-block-navigation__submenu-container.has-background {
+  padding: 0;
+}
+
+/*
+ * Responsive menu container padding.
+ * This ensures the responsive container inherits the same
+ * spacing defined above. This behavior may be built into
+ * the Block Editor in the future.
+ */
+.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
+  padding-top: var(--wp--preset--spacing--60);
+  padding-bottom: var(--wp--preset--spacing--60);
+  padding-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
+  padding-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
+}
+
+/* Increase animation TIME on nav menu drop-downs */
+.wp-block-navigation .has-child .wp-block-navigation__submenu-container {
+  -webkit-transition-duration: var(--wp--custom--animation--duration--short);
+  transition-duration: var(--wp--custom--animation--duration--short);
+}
+
+/* Increase animation DELAY on nav drop-downs when NOT requiring a click */
+.wp-block-navigation .has-child:not(.open-on-click):hover > .wp-block-navigation__submenu-container {
+  -webkit-transition-delay: var(--wp--custom--animation--duration--short);
+  transition-delay: var(--wp--custom--animation--duration--short);
+}
+
+/*--------------------------------------------------------------
+# Navigation: Custom
+--------------------------------------------------------------*/
+/* Navigation Fixed menu */
+/* TO-DO: Consider adding .site-header:not(.is-style-fixed-header) */
+nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-open,
+nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close {
+  background: rgba(0, 0, 0, 0.25);
+  padding: var(--wp--preset--spacing--20);
+  color: white;
+  border: none;
+  border-radius: 0;
+}
+
+/* On the front-end, position the fixed nav menu to the top left */
+.wp-site-blocks:not(.is-root-container) nav.wp-block-navigation.is-style-fixed-menu {
+  position: fixed;
+  top: calc(var(--wp--preset--spacing--60) + 1px * var(--wp--style--root--padding-top, 0));
+  left: max(0.5 * (100% - var(--wp--style--global--wide-size)), var(--wp--style--root--padding-left, calc(2 * var(--wp--preset--spacing--50))));
+  right: auto;
+  z-index: 9999;
+}
+
+/* If WordPress Admin Bar, adjust fixed menu top position so its underneath */
+.admin-bar .wp-site-blocks:not(.is-root-container) nav.wp-block-navigation.is-style-fixed-menu {
+  top: calc(var(--wp--preset--spacing--60) + 1px * var(--wp--style--root--padding-top, 0) + var(--wp-admin--admin-bar--height, 0));
+}
+
+/* 
+ * On the front-end and Editor, default the fixed menu's drop-down and close button 
+ * also to the left */
+nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container {
+  width: 360px;
+  left: 0;
+  right: auto;
+}
+
+nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close {
+  left: 0;
+  right: auto;
+}
+
+/* If right justified, position the fixed menu and its drop-down to the right */
+.site-header.is-content-justification-right > nav.wp-block-navigation.is-style-fixed-menu,
+.site-header.is-content-justification-right > .wp-block-template-part > nav.wp-block-navigation.is-style-fixed-menu {
+  right: max(0.5 * (100% - var(--wp--style--global--wide-size)), var(--wp--style--root--padding-right, calc(2 * var(--wp--preset--spacing--50))));
+  left: auto;
+}
+
+.site-header.is-content-justification-right > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container,
+.site-header.is-content-justification-right > .wp-block-template-part > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container {
+  right: 0;
+  left: auto;
+}
+
+.site-header.is-content-justification-right > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close,
+.site-header.is-content-justification-right > .wp-block-template-part > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close {
+  right: 0;
+  left: auto;
+}
+
+/* If center justified, position the fixed menu and its drop-down in the center */
+.site-header.is-content-justification-center > nav.wp-block-navigation.is-style-fixed-menu,
+.site-header.is-content-justification-center > .wp-block-template-part > nav.wp-block-navigation.is-style-fixed-menu {
+  left: calc(50% - 12px - var(--wp--preset--spacing--20));
+  right: auto;
+}
+
+.site-header.is-content-justification-center > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container,
+.site-header.is-content-justification-center > .wp-block-template-part > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container {
+  left: calc(50% - 180px);
+  right: auto;
+}
+
+.site-header.is-content-justification-center > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close,
+.site-header.is-content-justification-center > .wp-block-template-part > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close {
+  left: calc(50% - 12px - 0.5 * var(--wp--preset--spacing--20));
+  right: auto;
+}
+
+/*--------------------------------------------------------------
+# Paragraph
+--------------------------------------------------------------*/
+/* 
+ * Note: Breakpoint of 781 is what is hard-coded in WordPress 
+ * v6.0+ to collapse columns
+ */
+@media only screen and (max-width: 781px) {
+  /* 
+   * If no global padding, then set paragraphs like colored
+   * groups 
+   */
+  p.has-background:not(.has-global-padding) {
+    padding-left: calc(2 * var(--wp--style--block-gap));
+    padding-right: calc(2 * var(--wp--style--block-gap));
+  }
+  /* If global padding, then OVERRIDE horizontal padding on mobile */
+  .has-global-padding p.has-background {
+    padding-left: var(--wp--style--root--padding-left) !important;
+    padding-right: var(--wp--style--root--padding-right) !important;
+  }
+}
+/*--------------------------------------------------------------
+# Paragraph: Custom
+--------------------------------------------------------------*/
+/* Alignwide */
+p.is-style-alignwide {
+  max-width: var(--wp--style--global--wide-size) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+/* Arrow icon */
+p.is-style-arrow-icon-no-text {
+  font-size: 0; /* hide the text */
+}
+
+p.is-style-arrow-icon > a,
+p.is-style-arrow-icon-no-text > a {
+  color: inherit;
+  display: block;
+  text-decoration: none !important;
+  outline: none !important;
+  text-align: center;
+  margin: var(--wp--style--block-gap) auto;
+}
+
+p.is-style-arrow-icon > a:focus,
+p.is-style-arrow-icon > a:active,
+p.is-style-arrow-icon-no-text > a:focus,
+p.is-style-arrow-icon-no-text > a:active {
+  opacity: 1;
+}
+
+p.is-style-arrow-icon > a:after,
+p.is-style-arrow-icon-no-text > a:after {
+  display: block;
+  font-family: dashicons;
+  content: "\f347";
+  font-size: var(--wp--preset--font-size--larger);
+  line-height: 1;
+}
+
+p.is-style-arrow-icon > a:after {
+  white-space: pre-wrap; /* adds line break */
+}
+
+/*--------------------------------------------------------------
+# ADDITIONAL BASE STYLES
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Utilities
+--------------------------------------------------------------*/
+/* 
+ * Note: These utility classes must be added manually in the 
+ * Advanced section of the block settings.
+ */
+/* 
+ * Clearfix (Clear floats)
+ * 
+ * Note: Be carefull as this will mess up fixed headers, Row 
+ * Groups (flex boxes), etc. We've tried to style around those 
+ * though.
+ */
+.is-style-clearfix:not(.is-layout-flex):not(.is-style-fixed-header):after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Flexbox No Shrink
+ * 
+ * Note: This only works on elements within a Flex Box (Group)
+ */
+.is-layout-flex .is-style-no-shrink {
+  flex-shrink: 0;
+}
+
+/*--------------------------------------------------------------
+# Dashicons
+--------------------------------------------------------------*/
+/**
+ * Override core WordPress base Dashicon styles. Don't let it
+ * alter height, width, font-size or line-height. 
+ *
+ */
+.dashicons {
+  display: block;
+  width: auto;
+  height: auto;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  text-align: center;
+  text-transform: inherit;
+}
+
+.dashicons:before {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  font-family: dashicons;
+  font-size: 1em;
+  line-height: 1;
+  font-weight: inherit;
+  vertical-align: text-top;
+}
+
+/* Add some right margin on inline dashicons before the text */
+.dashicons-before:before,
+.dashicons-above:before,
+.dashicons-below:before {
+  font-family: dashicons;
+  margin-right: var(--wp--preset--spacing--20, 4.5px);
+}
+
+.dashicons-after {
+  display: flex;
+}
+.dashicons-after:before {
+  font-family: dashicons;
+  order: 2;
+  margin-left: var(--wp--preset--spacing--20, 4.5px);
+}
+
+/* Don't underline dashicons links */
+.dashicons a {
+  text-decoration: none;
+}
+
+/* Nav menus already have transitions so don't add another one on
+ * dashicons
+ */
+.wp-block-navigation .dashicons {
+  transition: none;
+  text-align: inherit;
+}
+
+/* Don't display the top-level icon on the drop-down menu */
+.wp-block-navigation__submenu-container.dashicons:before {
+  content: none;
+}
+
+/*--------------------------------------------------------------
+# Dashicons: Custom
+--------------------------------------------------------------*/
+.is-style-no-icon:before {
+  display: none;
+}
+
+/*--------------------------------------------------------------
+# Margins (Vertical spacing)
+--------------------------------------------------------------*/
+/* 
+ * Core Wordpress controls vertical spacing by adding the gap 
+ * setting as top margin between all blocks on the site. However, 
+ * certain things like template parts get this too and we want the 
+ * theme and users to be able to control it, so push this down to 
+ * the block level. Also don't default to having padding. 
+ */
+/* Remove top margin and padding from the containers */
+header,
+main,
+footer,
+.wp-block-template-part,
+.wp-block-post-content {
+  margin-block-start: 0 !important;
+}
+
+/* 
+ * Add top margin to the container's first block and then between 
+ * subsequent blocks 
+ */
+main > *:first-child:not(.wp-block-template-part, .wp-block-post-content, .wp-block-cover, .wp-block-query, header, footer, nav),
+body .is-layout-constrained > * + .wp-block-template-part > *:first-child:not(.wp-block-template-part, .wp-block-post-content, .wp-block-cover, .wp-block-query, main, header, footer, nav),
+body .is-layout-constrained .wp-block-template-part > * + *:not(.wp-block-template-part, .wp-block-post-content, .wp-block-cover, .wp-block-query, main, header, footer, nav),
+.wp-block-query > *:first-child:not(.wp-block-cover),
+.wp-block-post-content > *:first-child:not(.wp-block-cover) { /*,
+.is-root-container > *:first-child:not(.wp-block-template-part, .wp-block-cover, .wp-block-query) {*/
+  margin-block-start: var(--wp--style--block-gap);
+}
+
+/* But don't add top or bottom margin to template part within a column. e.g. Footers. */
+.wp-block-column > .wp-block-template-part > *:first-child {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Also add bottom margin on the last block for convenience */
+.wp-block-query > *:last-child,
+.wp-block-post-content > *:last-child {
+  margin-block-end: var(--wp--style--block-gap);
+}
+
+/* But don't add bottom margin to a template part within a column. e.g. Footers. */
+.wp-block-column > .wp-block-template-part > *:last-child {
+  margin-block-end: 0;
+}
+
+/*--------------------------------------------------------------
+# Padding (Horizontal and vertical spacing)
+--------------------------------------------------------------*/
+/* For convenience, remove padding from inner containers */
+main.wp-block-group:not(.has-global-padding),
+.wp-block-template-part {
+  padding: 0;
+}
+
+/* Override horizontal padding when no global padding */
+header.site-header:not(.has-global-padding),
+footer.site-footer:not(.has-global-padding),
+header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
+.wp-block-query:not(.has-global-padding) {
+  padding-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50)) !important;
+  padding-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50)) !important;
+}
+
+/* FIX to add back horizontal padding */
+.has-global-padding,
+.has-global-padding > .alignfull:not(.wp-block-post-content, .wp-block-image, .wp-block-columns, .wp-block-buttons),
+.has-global-padding.alignfull:not(.wp-block-post-content, .wp-block-image, .wp-block-columns, .wp-block-buttons) {
+  padding-left: var(--wp--style--root--padding-left);
+  padding-right: var(--wp--style--root--padding-right);
+}
+
+/* But REMOVE duplicate padding */
+/* 
+.has-global-padding :where(.has-global-padding):not(.has-background),
+.has-global-padding > .alignfull:where(:not(.has-global-padding)) > :where(.wp-block-image) {
+	padding-left: 0;
+	padding-right: 0;
+}
+ */
+/* FIX alignfull in WordPress.org theme preview */
+.has-global-padding > #wporg-pattern-preview > div > .alignfull {
+  margin-right: calc(var(--wp--style--root--padding-right) * -1);
+  padding-right: var(--wp--style--root--padding-right);
+  margin-left: calc(var(--wp--style--root--padding-left) * -1);
+  padding-left: var(--wp--style--root--padding-left);
+}
+
+/*--------------------------------------------------------------
+# Flat Blocks Theme Compatibility with Prior Versions
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Flat Blocks Colors (for theme < v1.6)
+--------------------------------------------------------------*/
+.has-foreground-color {
+  color: var(--wp--preset--color--contrast);
+}
+
+.has-foreground-background-color {
+  background-color: var(--wp--preset--color--contrast);
+}
+
+.has-foreground-border-color {
+  border-color: var(--wp--preset--color--contrast);
+}
+
+.has-background-color {
+  color: var(--wp--preset--color--base);
+}
+
+.has-background-background-color {
+  background-color: var(--wp--preset--color--base);
+}
+
+.has-background-border-color {
+  border-color: var(--wp--preset--color--base);
+}
+
+/*--------------------------------------------------------------
+# Flat Blocks Custom Styles (for theme < v1.6.4)
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Cover and Media & Text: Custom
+--------------------------------------------------------------*/
+.is-style-cover-rounded-corners {
+  border-radius: var(--wp--custom--border--radius);
+  overflow: hidden;
+}
+
+.is-style-cover-border,
+.is-style-media-text-border {
+  border: 1px solid var(--wp--custom--border--color);
+  border-radius: var(--wp--custom--border--radius);
+  padding: var(--wp--preset--spacing--40);
+}
+
+/*--------------------------------------------------------------
+# Color compatibility with other themes
+--------------------------------------------------------------*/
+/* 
+ * TwentyTwentyFour theme uses base and contrast in numbered 
+ * shades. It also uses accent colors in numbered shades instead 
+ * of primary, secondary, and tertiary.
+ *
+ * Note: TwentyTwentyThree theme uses the same base, contrast, 
+ * primary, secondary, and tertiary colors as Flat Blocks.
+ */
+.has-base-2-color,
+.has-base-3-color {
+  color: var(--wp--preset--color--foreground-alt);
+}
+
+.has-base-2-background-color,
+.has-base-3-background-color {
+  background-color: var(--wp--preset--color--light-gray);
+}
+
+.has-base-2-border-color,
+.has-base-3-border-color {
+  border-color: var(--wp--preset--color--gray);
+}
+
+.has-contrast-2-color,
+.has-contrast-3-color {
+  color: var(--wp--preset--color--contrast);
+}
+
+.has-contrast-2-background-color,
+.has-contrast-3-background-color {
+  background-color: var(--wp--preset--color--contrast);
+}
+
+.has-contrast-2-border-color,
+.has-contrast-3-border-color {
+  border-color: var(--wp--preset--color--contrast);
+}
+
+.has-accent-color,
+.has-accent-2-color,
+.has-accent-3-color,
+.has-accent-4-color,
+.has-accent-5-color {
+  color: var(--wp--preset--color--primary);
+}
+
+.has-accent-background-color,
+.has-accent-2-background-color,
+.has-accent-3-background-color,
+.has-accent-4-background-color,
+.has-accent-5-background-color {
+  background-color: var(--wp--preset--color--primary);
+}
+
+.has-accent-border-color,
+.has-accent-2-border-color,
+.has-accent-3-border-color,
+.has-accent-4-border-color,
+.has-accent-5-border-color {
+  border-color: var(--wp--preset--color--primary);
+}

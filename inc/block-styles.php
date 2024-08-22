@@ -29,15 +29,30 @@ if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 // 			'fixed-header' 		=> array( esc_html__('Fixed Header', 'flat-blocks'), 
 // 				array('group' )
 // 			),
-			'cover-border' 		=> array( esc_html__('Border', 'flat-blocks'), 
-				array('cover' )
-			),
-			'cover-rounded-corners' => array( esc_html__('Rounded Corners', 'flat-blocks'), 
-				array('cover' )
-			),
-			'media-text-border' => array( esc_html__('Border', 'flat-blocks'), 
-				array('media-text' )
-			),
+// 			'button-alt' => array( esc_html__('Button Alt', 'flat-blocks'), 
+// 				array('button' )
+// 			),
+// 			'button-outline-alt' => array( esc_html__('Outline Alt', 'flat-blocks'), 
+// 				array('button' )
+// 			),
+// 			'button-alt-2' => array( esc_html__('Button Alt 2', 'flat-blocks'), 
+// 				array('button' )
+// 			),
+// 			'button-outline-alt-2' => array( esc_html__('Outline Alt 2', 'flat-blocks'), 
+// 				array('button' )
+// 			),
+// 			'cover-border' 		=> array( esc_html__('Border', 'flat-blocks'), 
+// 				array('cover' )
+// 			),
+// 			'cover-rounded-corners' => array( esc_html__('Rounded Corners', 'flat-blocks'), 
+// 				array('cover' )
+// 			),
+// 			'media-text-border' => array( esc_html__('Border', 'flat-blocks'), 
+// 				array('media-text' )
+// 			),
+// 			'media-text-thick-border' => array( esc_html__('Thick Border', 'flat-blocks'), 
+// 				array('media-text' )
+// 			),
 			'image-border' 		=> array( esc_html__('Border', 'flat-blocks'), 
 				array('image' )
 			),
@@ -68,12 +83,12 @@ if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 			'no-padding' 		=> array( esc_html__('No Padding', 'flat-blocks'), 
 				array('group', 'column' )
 			),
-			'rounded-border' 	=> array( esc_html__('Border', 'flat-blocks'), 
-				array('group', 'column', 'post-comments' )
-			),
-			'thick-rounded-border' => array( esc_html__('Thick Border', 'flat-blocks'), 
-				array('group' )
-			),
+// 			'rounded-border' 	=> array( esc_html__('Border', 'flat-blocks'), 
+// 				array('group', 'columns', 'column', 'comments', 'post-comments' )
+// 			),
+// 			'thick-rounded-border' => array( esc_html__('Thick Border', 'flat-blocks'), 
+// 				array('group', 'columns', 'column', 'comments', 'post-comments' )
+// 			),
 			'no-gap' 			=> array( esc_html__('No Gap', 'flat-blocks'), 
 				array('columns' )
 			),
@@ -102,13 +117,13 @@ if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 				array('paragraph' )
 			),
 			'link-underline' 	=> array( esc_html__('Underline Link', 'flat-blocks'), 
-				array('paragraph', 'list-item', 'categories', 'latest-posts', 'latest-comments', 'page-list', 'post-title', 'post-terms')
+				array('paragraph', 'list', 'list-item', 'categories', 'latest-posts', 'latest-comments', 'page-list', 'post-title', 'post-terms')
 			),
 			'link-no-underline' => array( esc_html__('No Underline Link', 'flat-blocks'), 
-				array('paragraph', 'list-item', 'categories', 'latest-posts', 'latest-comments', 'page-list', 'post-title', 'post-terms')
+				array('paragraph', 'list', 'list-item', 'categories', 'latest-posts', 'latest-comments', 'page-list', 'post-title', 'post-terms')
 			),
 			'link-underline-hover' => array( esc_html__('Underline Hover', 'flat-blocks'), 
-				array('paragraph', 'list-item', 'categories', 'latest-posts', 'latest-comments', 'page-list', 'post-title', 'post-terms', 'site-title')
+				array('paragraph', 'list', 'list-item', 'categories', 'latest-posts', 'latest-comments', 'page-list', 'post-title', 'post-terms', 'site-title')
 			),
 			'arrow-icon' 		=> array( esc_html__('Arrow Icon', 'flat-blocks'), 
 				array('paragraph' )
@@ -153,50 +168,3 @@ if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 	}
 endif;
 add_action( 'init', 'flatblocks_register_block_styles' );
-
-/* 
- * Add block attributes for color, typography, spacing, etc. back for Template Parts.
- * This allows users to change these in the Settings UI!
- */
-///////if ( version_compare( get_bloginfo( 'version' ), '6.6', '>=' ) ) :
-if ( ! function_exists( 'flatblocks_block_variations' ) ) :
-
-	add_filter( 'block_type_metadata', 'flatblocks_block_variations', 20 ); 
-	 
-	function flatblocks_block_variations( $metadata ) {
-	
-		//if ( ! isset( $metadata['name'] ) || 'core/group' !== $metadata['name'] ) {
-		if ( ! isset( $metadata['name'] ) || 'core/template-part' !== $metadata['name'] ) {
-				return $metadata;
-		}
-
-		// Allow colors		
-		$metadata['supports']['color'] = [
-			'background' => true,
-			'text' => true,
-			'gradients' => true,
-			'heading' => true,
-			'button' => true
-		];
-
-		// Allow Spacing		
-		$metadata['supports']['spacing'] = [
-			'margin' => true,
-			'padding' => true,
-			'blockGap' => true
-		];
-
-		// Allow typography
-		//$metadata['supports']['typography'] = true;
-		$metadata['supports']['typography']['fontSize'] = true;
-		//$metadata['supports']['typography']['lineHeight'] = true;
-		//$metadata['supports']['typography']['textAlign'] = true;
-
-		// Allow other properties
-		$metadata['supports']['align'] = true;
-		$metadata['supports']['postion'] = true;
-		$metadata['supports']['shadow'] = true;
-				
-		return $metadata;
-	}
-endif;
