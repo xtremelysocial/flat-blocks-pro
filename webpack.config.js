@@ -8,15 +8,17 @@ const RemoveEmptyScriptsPlugin = require( 'webpack-remove-empty-scripts' );
 // Utilities.
 const path = require( 'path' );
 
-// Add any a new entry point by extending the webpack config.
+// package.json sets the default source to ./src and output to ./assets/css
+// so entry and output below should be relative to those.
 module.exports = {
 	...defaultConfig,
 	...{
 		entry: {
-// 			'css/flat-blocks': './src/scss/flat-blocks.scss',
-// 			'css/editor-styles': './src/scss/editor-styles.scss',
-// 			'css/block-styles': './src/scss/block-styles.scss',
-// 			'./../pro/assets/css/pro-custom-styles': './pro/src/scss/pro-custom-styles.scss',
+			'flat-blocks': './src/scss/flat-blocks.scss',
+			'editor-styles': './src/scss/editor-styles.scss',
+			'block-styles': './src/scss/block-styles.scss',
+			'wp-compat': './src/scss/wp-compat.scss',
+			'./../../pro/assets/css/pro-custom-styles': './pro/src/scss/pro-custom-styles.scss',
 // 			'./../pro/assets/css/pro-jetpack': './pro/src/scss/pro-jetpack.scss',
 // 			'./../pro/assets/css/pro-woocommerce': './pro/src/scss/pro-woocommerce.scss',
 		},

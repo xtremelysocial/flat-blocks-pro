@@ -47,7 +47,7 @@
 /* Hide empty comments so no extra vertical margin */
 /* Add padding to comment page numbers */
 .wp-block-comments-pagination .page-numbers:nth-last-child(n+2) {
-  padding-right: var(--wp--preset--spacing--30);
+  padding-left: var(--wp--preset--spacing--30);
 }
 
 /* If not global padding on comments, then add some on mobile
@@ -57,8 +57,8 @@
  */
 @media only screen and (max-width: 781px) {
   .post-comments:not(.has-global-padding) {
-    padding-left: var(--wp--style--root--padding-left) !important;
-    padding-right: var(--wp--style--root--padding-right) !important;
+    padding-right: var(--wp--style--root--padding-left) !important;
+    padding-left: var(--wp--style--root--padding-right) !important;
   }
 }
 /*--------------------------------------------------------------
@@ -124,13 +124,13 @@
 --------------------------------------------------------------*/
 /* Default latest comments style to no bullets */
 .wp-block-latest-comments:not(.is-style-bullets) {
-  padding-left: 0;
+  padding-right: 0;
   padding-inline-start: 0;
 }
 
 /* Front-end Add bullets and padding */
 .wp-block-latest-comments.is-style-bullets:not(.has-avatars) {
-  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .wp-block-latest-comments.is-style-bullets {
@@ -188,7 +188,7 @@
  */
 @media only screen and (max-width: 601px) {
   .wp-block-latest-posts.is-grid li {
-    margin-right: 0;
+    margin-left: 0;
   }
 }
 /*--------------------------------------------------------------
@@ -197,7 +197,7 @@
 /* Bullets */
 .wp-block-latest-posts.is-style-bullets.wp-block-latest-posts__list:not(.is-grid) {
   list-style: disc;
-  padding-left: 2em;
+  padding-right: 2em;
 }
 
 .wp-block-latest-posts.is-style-bullets:not(.is-grid) li {
@@ -226,7 +226,7 @@ ol.is-style-list-checkmarks > li:before {
   font-family: dashicons;
   content: "\f15e";
   position: absolute;
-  left: calc(-8px - 1em);
+  right: calc(-8px - 1em);
   top: 0.14285714em;
   text-align: center;
   transition: color 0.1s ease-in;
@@ -234,8 +234,8 @@ ol.is-style-list-checkmarks > li:before {
 
 .rtl ul.is-style-list-checkmarks > li:before,
 .rtl ol.is-style-list-checkmarks > li:before {
-  left: 0;
-  right: calc(-8px - 1em);
+  right: 0;
+  left: calc(-8px - 1em);
 }
 
 /* Plain */
@@ -244,7 +244,7 @@ ul.is-style-list-plain ul,
 ol.is-style-list-plain ol,
 ol.is-style-list-plain {
   list-style: none;
-  padding-left: 0;
+  padding-right: 0;
 }
 
 ul.is-style-list-plain li,
@@ -254,17 +254,17 @@ ol.is-style-list-plain li {
 
 ul.is-style-list-plain:not(.has-background),
 ol.is-style-list-plain:not(.has-background) {
-  margin-left: 0;
+  margin-right: 0;
 }
 
 ul.is-style-list-plain:not(.has-background) li,
 ol.is-style-list-plain:not(.has-background) li {
-  margin-left: 0;
+  margin-right: 0;
 }
 
 ul.is-style-list-plain:not(.has-background) li ul li,
 ol.is-style-list-plain:not(.has-background) li ul li {
-  padding-left: var(--wp--preset--spacing--40);
+  padding-right: var(--wp--preset--spacing--40);
 }
 
 /* Plain Centered */
@@ -273,14 +273,14 @@ ul.is-style-list-plain-centered ul,
 ol.is-style-list-plain-centered,
 ol.is-style-list-plain-centered ol {
   list-style: none;
-  padding-left: 0;
-  margin-left: 0;
+  padding-right: 0;
+  margin-right: 0;
   text-align: center;
 }
 
 ul.is-style-list-plain-centered li,
 ol.is-style-list-plain-centered li {
-  margin-left: 0;
+  margin-right: 0;
 }
 
 /*--------------------------------------------------------------
@@ -288,8 +288,8 @@ ol.is-style-list-plain-centered li {
 --------------------------------------------------------------*/
 /* Match our padding */
 .wp-block-media-text .wp-block-media-text__content {
-  padding-left: var(--wp--preset--spacing--40);
   padding-right: var(--wp--preset--spacing--40);
+  padding-left: var(--wp--preset--spacing--40);
 }
 
 /* Override horizontal padding on mobile 
@@ -299,8 +299,8 @@ ol.is-style-list-plain-centered li {
  */
 @media only screen and (max-width: 601px) {
   .wp-block-media-text.is-stacked-on-mobile .wp-block-media-text__content {
-    padding-left: 0;
     padding-right: 0;
+    padding-left: 0;
   }
 }
 /*--------------------------------------------------------------
@@ -315,8 +315,8 @@ ol.is-style-list-plain-centered li {
  */
 @media only screen and (max-width: 601px) {
   .wp-block-media-text.is-style-media-text-border.is-stacked-on-mobile .wp-block-media-text__content {
-    padding-left: var(--wp--preset--spacing--40);
     padding-right: var(--wp--preset--spacing--40);
+    padding-left: var(--wp--preset--spacing--40);
   }
 }
 /*--------------------------------------------------------------
@@ -326,13 +326,13 @@ ol.is-style-list-plain-centered li {
 .wp-block-post-author:before {
   font-family: dashicons;
   content: "\f110";
-  margin-right: var(--wp--preset--spacing--20);
+  margin-left: var(--wp--preset--spacing--20);
 }
 
 .rtl .wp-block-post-author:before {
-  padding-right: 0;
-  margin-right: 0;
-  margin-left: var(--wp--preset--spacing--20);
+  padding-left: 0;
+  margin-left: 0;
+  margin-right: var(--wp--preset--spacing--20);
 }
 
 .wp-block-post-author__name {
@@ -340,7 +340,7 @@ ol.is-style-list-plain-centered li {
 }
 
 .wp-block-post-author__avatar {
-  margin-right: var(--wp--style--block-gap);
+  margin-left: var(--wp--style--block-gap);
 }
 
 .wp-block-post-author__avatar img {
@@ -361,13 +361,13 @@ ol.is-style-list-plain-centered li {
 .wp-block-post-comments-count:before {
   font-family: dashicons;
   content: "\f101";
-  margin-right: var(--wp--preset--spacing--20);
+  margin-left: var(--wp--preset--spacing--20);
 }
 
 .rtl .wp-block-post-comments-count:before {
-  padding-right: 0;
-  margin-right: 0;
-  margin-left: var(--wp--preset--spacing--20);
+  padding-left: 0;
+  margin-left: 0;
+  margin-right: var(--wp--preset--spacing--20);
 }
 
 /* 
@@ -398,13 +398,13 @@ ol.is-style-list-plain-centered li {
 .wp-block-post-date:before {
   font-family: dashicons;
   content: "\f508";
-  margin-right: var(--wp--preset--spacing--20);
+  margin-left: var(--wp--preset--spacing--20);
 }
 
 .rtl .wp-block-post-date:before {
-  padding-right: 0;
-  margin-right: 0;
-  margin-left: var(--wp--preset--spacing--20);
+  padding-left: 0;
+  margin-left: 0;
+  margin-right: var(--wp--preset--spacing--20);
 }
 
 /*--------------------------------------------------------------
@@ -426,20 +426,20 @@ ol.is-style-list-plain-centered li {
 .wp-block-post-terms.taxonomy-category:before {
   font-family: dashicons;
   content: "\f318";
-  margin-right: var(--wp--preset--spacing--20);
+  margin-left: var(--wp--preset--spacing--20);
 }
 
 /* dashicons-category */
 .wp-block-post-terms.taxonomy-post_tag:before {
   font-family: dashicons;
   content: "\f323";
-  margin-right: var(--wp--preset--spacing--20);
+  margin-left: var(--wp--preset--spacing--20);
 }
 
 .rtl .wp-block-post-terms:before {
-  padding-right: 0;
-  margin-right: 0;
-  margin-left: var(--wp--preset--spacing--20);
+  padding-left: 0;
+  margin-left: 0;
+  margin-right: var(--wp--preset--spacing--20);
 }
 
 /* Remove bottom margin on Category and Tag descriptions */
@@ -452,7 +452,7 @@ ol.is-style-list-plain-centered li {
 # Query Pagination
 --------------------------------------------------------------*/
 .wp-block-query-pagination-numbers .page-numbers:nth-last-child(n+2) {
-  padding-right: var(--wp--preset--spacing--30);
+  padding-left: var(--wp--preset--spacing--30);
 }
 
 /*--------------------------------------------------------------
@@ -478,8 +478,8 @@ ol.is-style-list-plain-centered li {
 }
 
 .wp-block-query.is-style-no-padding:not(.has-global-padding) {
-  padding-left: 0 !important;
   padding-right: 0 !important;
+  padding-left: 0 !important;
 }
 
 /*--------------------------------------------------------------
@@ -487,8 +487,8 @@ ol.is-style-list-plain-centered li {
 --------------------------------------------------------------*/
 /* FIX to center default (narrow) separator when user selects alignfull */
 .wp-block-separator.alignfull {
-  margin-left: auto !important;
   margin-right: auto !important;
+  margin-left: auto !important;
 }
 
 /* Override our short width for wide and dotted separators */
@@ -559,5 +559,3 @@ ol.is-style-list-plain-centered li {
 .wp-block-table.is-style-stripes table:not(.has-text-color) tbody tr:nth-child(odd) {
   color: var(--wp--preset--color--very-dark-gray);
 }
-
-/*# sourceMappingURL=block-styles.css.map*/

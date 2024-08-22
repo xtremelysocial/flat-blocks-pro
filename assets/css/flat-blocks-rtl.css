@@ -249,8 +249,8 @@ select:focus-visible {
  */
 .wp-site-blocks {
   max-width: var(--wp--custom--layout--full-size, 1600px);
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 /* FIX for center alignment */
@@ -262,20 +262,20 @@ body .is-layout-constrained > .aligncenter {
  * ADD padding to align left and align right to honor wide width 
  */
 .wp-site-blocks > .alignleft {
-  margin-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
+  margin-left: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
 }
 
 body .is-layout-constrained > .alignleft {
-  padding-left: calc(0.5 * (100% - var(--wp--style--global--wide-size)));
+  padding-right: calc(0.5 * (100% - var(--wp--style--global--wide-size)));
   margin-inline-end: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
 }
 
 .wp-site-blocks > .alignright {
-  margin-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
+  margin-right: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
 }
 
 body .is-layout-constrained > .alignright {
-  padding-right: calc(0.5 * (100% - var(--wp--style--global--wide-size)));
+  padding-left: calc(0.5 * (100% - var(--wp--style--global--wide-size)));
   margin-inline-start: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
 }
 
@@ -668,14 +668,14 @@ body .is-layout-constrained > .alignright {
    */
   .wp-block-columns.has-background,
   .wp-block-column.has-background {
-    padding-left: calc(2 * var(--wp--style--block-gap));
     padding-right: calc(2 * var(--wp--style--block-gap));
+    padding-left: calc(2 * var(--wp--style--block-gap));
   }
   /* If global padding, then OVERRIDE horizontal padding on mobile */
   .has-global-padding .wp-block-columns.has-background,
   .has-global-padding .wp-block-column.has-background {
-    padding-left: var(--wp--style--root--padding-left) !important;
-    padding-right: var(--wp--style--root--padding-right) !important;
+    padding-right: var(--wp--style--root--padding-left) !important;
+    padding-left: var(--wp--style--root--padding-right) !important;
   }
 }
 /*--------------------------------------------------------------
@@ -726,15 +726,15 @@ body .is-layout-constrained > .alignright {
 /* LIMIT cover image inner content to standard unless wide or full */
 .wp-block-cover .wp-block-cover__inner-container > *:not(.alignfull):not(.alignwide) {
   max-width: var(--wp--style--global--content-size);
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 .wp-block-cover .wp-block-cover__inner-container > *.alignwide,
 .wp-block-cover .wp-block-cover__inner-container > *.alignfull {
   max-width: var(--wp--style--global--wide-size);
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 /*--------------------------------------------------------------
@@ -762,8 +762,8 @@ body .is-layout-constrained > .alignright {
 @media only screen and (max-width: 781px) {
   .site-header.has-global-padding.wp-block-group,
   .site-footer.has-global-padding.wp-block-group {
-    padding-left: var(--wp--style--root--padding-left) !important;
-    padding-right: var(--wp--style--root--padding-right) !important;
+    padding-right: var(--wp--style--root--padding-left) !important;
+    padding-left: var(--wp--style--root--padding-right) !important;
   }
   .is-nowrap.is-layout-flex.wp-block-group {
     flex-wrap: wrap;
@@ -788,8 +788,8 @@ body .is-layout-constrained > .alignright {
 }
 
 .wp-block-group.is-style-no-padding:not(.has-global-padding) {
-  padding-left: 0;
   padding-right: 0;
+  padding-left: 0;
 }
 
 /* Group fixed header (position: sticky) */
@@ -860,8 +860,8 @@ figure.wp-caption:not(.alignfull):not(.alignwide),
 figure.wp-caption:not(.alignfull):not(.alignwide) img {
   max-width: min(100%, var(--wp--style--global--content-size)) !important;
   height: auto;
-  margin-left: auto;
   margin-right: auto;
+  margin-left: auto;
 }
 
 /* FIX rounded images when global image style has a border radius */
@@ -889,11 +889,11 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 .wp-block-gallery.has-nested-images figure.is-style-image-border figcaption,
 .wp-block-gallery.is-style-image-border.has-nested-images figure.wp-block-image figcaption {
   bottom: calc(1px + var(--wp--preset--spacing--20));
-  left: calc(1px + var(--wp--preset--spacing--20));
-  padding: 0 calc(1px + var(--wp--preset--spacing--20)) calc(1px + var(--wp--preset--spacing--20)) 0;
+  right: calc(1px + var(--wp--preset--spacing--20));
+  padding: 0 0 calc(1px + var(--wp--preset--spacing--20)) calc(1px + var(--wp--preset--spacing--20));
   width: calc(100% - (2px + 2 * var(--wp--preset--spacing--20)));
-  border-bottom-left-radius: var(--wp--custom--border--radius);
   border-bottom-right-radius: var(--wp--custom--border--radius);
+  border-bottom-left-radius: var(--wp--custom--border--radius);
 }
 
 .is-style-image-round-border img {
@@ -906,8 +906,8 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
   border: var(--wp--preset--spacing--60) solid var(--wp--preset--color--almost-black);
   border-radius: var(--wp--preset--spacing--40);
   border-bottom: 3px solid var(--wp--preset--color--almost-black);
-  border-bottom-left-radius: 0;
   border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .is-style-image-tablet-phone-screen img {
@@ -1028,13 +1028,13 @@ header > .wp-block-cover {
 
 /* REMOVE extra padding on sub-menu drop-downs */
 .wp-block-navigation .wp-block-navigation-submenu__toggle {
-  padding-left: 0;
+  padding-right: 0;
 }
 
 /* REDUCE padding on sub-menu drop-downs on mobile nav */
 .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container {
-  padding-left: var(--wp--preset--spacing--40);
   padding-right: var(--wp--preset--spacing--40);
+  padding-left: var(--wp--preset--spacing--40);
 }
 
 /* REMOVE duplicate padding on sub-menus with backgrounds */
@@ -1051,8 +1051,8 @@ header > .wp-block-cover {
 .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
   padding-top: var(--wp--preset--spacing--60);
   padding-bottom: var(--wp--preset--spacing--60);
-  padding-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
-  padding-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
+  padding-left: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
+  padding-right: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
 }
 
 /* Increase animation TIME on nav menu drop-downs */
@@ -1083,8 +1083,8 @@ nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-con
 .wp-site-blocks:not(.is-root-container) nav.wp-block-navigation.is-style-fixed-menu {
   position: fixed;
   top: calc(var(--wp--preset--spacing--60) + 1px * var(--wp--style--root--padding-top, 0));
-  left: max(0.5 * (100% - var(--wp--style--global--wide-size)), var(--wp--style--root--padding-left, calc(2 * var(--wp--preset--spacing--50))));
-  right: auto;
+  right: max(0.5 * (100% - var(--wp--style--global--wide-size)), var(--wp--style--root--padding-left, calc(2 * var(--wp--preset--spacing--50))));
+  left: auto;
   z-index: 9999;
 }
 
@@ -1098,51 +1098,51 @@ nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-con
  * also to the left */
 nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container {
   width: 360px;
-  left: 0;
-  right: auto;
+  right: 0;
+  left: auto;
 }
 
 nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close {
-  left: 0;
-  right: auto;
+  right: 0;
+  left: auto;
 }
 
 /* If right justified, position the fixed menu and its drop-down to the right */
 .site-header.is-content-justification-right > nav.wp-block-navigation.is-style-fixed-menu,
 .site-header.is-content-justification-right > .wp-block-template-part > nav.wp-block-navigation.is-style-fixed-menu {
-  right: max(0.5 * (100% - var(--wp--style--global--wide-size)), var(--wp--style--root--padding-right, calc(2 * var(--wp--preset--spacing--50))));
-  left: auto;
+  left: max(0.5 * (100% - var(--wp--style--global--wide-size)), var(--wp--style--root--padding-right, calc(2 * var(--wp--preset--spacing--50))));
+  right: auto;
 }
 
 .site-header.is-content-justification-right > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container,
 .site-header.is-content-justification-right > .wp-block-template-part > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container {
-  right: 0;
-  left: auto;
+  left: 0;
+  right: auto;
 }
 
 .site-header.is-content-justification-right > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close,
 .site-header.is-content-justification-right > .wp-block-template-part > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close {
-  right: 0;
-  left: auto;
+  left: 0;
+  right: auto;
 }
 
 /* If center justified, position the fixed menu and its drop-down in the center */
 .site-header.is-content-justification-center > nav.wp-block-navigation.is-style-fixed-menu,
 .site-header.is-content-justification-center > .wp-block-template-part > nav.wp-block-navigation.is-style-fixed-menu {
-  left: calc(50% - 12px - var(--wp--preset--spacing--20));
-  right: auto;
+  right: calc(50% - 12px - var(--wp--preset--spacing--20));
+  left: auto;
 }
 
 .site-header.is-content-justification-center > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container,
 .site-header.is-content-justification-center > .wp-block-template-part > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container {
-  left: calc(50% - 180px);
-  right: auto;
+  right: calc(50% - 180px);
+  left: auto;
 }
 
 .site-header.is-content-justification-center > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close,
 .site-header.is-content-justification-center > .wp-block-template-part > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close {
-  left: calc(50% - 12px - 0.5 * var(--wp--preset--spacing--20));
-  right: auto;
+  right: calc(50% - 12px - 0.5 * var(--wp--preset--spacing--20));
+  left: auto;
 }
 
 /*--------------------------------------------------------------
@@ -1158,13 +1158,13 @@ nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-con
    * groups 
    */
   p.has-background:not(.has-global-padding) {
-    padding-left: calc(2 * var(--wp--style--block-gap));
     padding-right: calc(2 * var(--wp--style--block-gap));
+    padding-left: calc(2 * var(--wp--style--block-gap));
   }
   /* If global padding, then OVERRIDE horizontal padding on mobile */
   .has-global-padding p.has-background {
-    padding-left: var(--wp--style--root--padding-left) !important;
-    padding-right: var(--wp--style--root--padding-right) !important;
+    padding-right: var(--wp--style--root--padding-left) !important;
+    padding-left: var(--wp--style--root--padding-right) !important;
   }
 }
 /*--------------------------------------------------------------
@@ -1173,8 +1173,8 @@ nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-con
 /* Alignwide */
 p.is-style-alignwide {
   max-width: var(--wp--style--global--wide-size) !important;
-  margin-left: auto !important;
   margin-right: auto !important;
+  margin-left: auto !important;
 }
 
 /* Arrow icon */
@@ -1279,7 +1279,7 @@ p.is-style-arrow-icon > a:after {
 .dashicons-above:before,
 .dashicons-below:before {
   font-family: dashicons;
-  margin-right: var(--wp--preset--spacing--20, 4.5px);
+  margin-left: var(--wp--preset--spacing--20, 4.5px);
 }
 
 .dashicons-after {
@@ -1288,7 +1288,7 @@ p.is-style-arrow-icon > a:after {
 .dashicons-after:before {
   font-family: dashicons;
   order: 2;
-  margin-left: var(--wp--preset--spacing--20, 4.5px);
+  margin-right: var(--wp--preset--spacing--20, 4.5px);
 }
 
 /* Don't underline dashicons links */
@@ -1379,16 +1379,16 @@ header.site-header:not(.has-global-padding),
 footer.site-footer:not(.has-global-padding),
 header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
 .wp-block-query:not(.has-global-padding) {
-  padding-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50)) !important;
-  padding-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50)) !important;
+  padding-right: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50)) !important;
+  padding-left: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50)) !important;
 }
 
 /* FIX to add back horizontal padding */
 .has-global-padding,
 .has-global-padding > .alignfull:not(.wp-block-post-content, .wp-block-image, .wp-block-columns, .wp-block-buttons),
 .has-global-padding.alignfull:not(.wp-block-post-content, .wp-block-image, .wp-block-columns, .wp-block-buttons) {
-  padding-left: var(--wp--style--root--padding-left);
-  padding-right: var(--wp--style--root--padding-right);
+  padding-right: var(--wp--style--root--padding-left);
+  padding-left: var(--wp--style--root--padding-right);
 }
 
 /* But REMOVE duplicate padding */
@@ -1401,10 +1401,10 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
  */
 /* FIX alignfull in WordPress.org theme preview */
 .has-global-padding > #wporg-pattern-preview > div > .alignfull {
-  margin-right: calc(var(--wp--style--root--padding-right) * -1);
-  padding-right: var(--wp--style--root--padding-right);
-  margin-left: calc(var(--wp--style--root--padding-left) * -1);
-  padding-left: var(--wp--style--root--padding-left);
+  margin-left: calc(var(--wp--style--root--padding-right) * -1);
+  padding-left: var(--wp--style--root--padding-right);
+  margin-right: calc(var(--wp--style--root--padding-left) * -1);
+  padding-right: var(--wp--style--root--padding-left);
 }
 
 /*--------------------------------------------------------------
@@ -1519,5 +1519,3 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
 .has-accent-5-border-color {
   border-color: var(--wp--preset--color--primary);
 }
-
-/*# sourceMappingURL=flat-blocks.css.map*/
