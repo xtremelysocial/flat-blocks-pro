@@ -1,7 +1,7 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Flat Blocks",
+	"title": "Flat Blocks PRO",
 	"settings": {
 		"custom": {
 			"typography": {
@@ -33,9 +33,13 @@
 				"thickness": "1px",
 				"postion": "under",
 				"offset": "auto",
-				"style": "solid"
+				"style": "dotted"
 			},
 			"animation": {
+				"default": {
+					"entrance": "fadeInUp",
+					"hover": "scale3d(1.1, 1.1, 1.1)"
+				},
 				"duration": {
 					"normal": "800ms",
 					"medium": "500ms",
@@ -1032,22 +1036,22 @@
 				}
 			},
 			"core/group": {
+				"css": ".has-background { padding: calc(2 * var(--wp--style--block-gap)) }",
 				"spacing": {
 					"padding": {
 						"top": "var:preset|spacing|40",
 						"bottom": "var:preset|spacing|40"
 					}
-				},
-				"css": ".has-background { padding: calc(2 * var(--wp--style--block-gap)) }"
+				}
 			},
 			"core/columns": {
+				"css": ".has-background { padding: calc(2 * var(--wp--style--block-gap)) }",
 				"spacing": {
 					"blockGap": "var:preset|spacing|40",
 					"margin": {
 						"bottom": "0"
 					}
-				},
-				"css": ".has-background { padding: calc(2 * var(--wp--style--block-gap)) }"
+				}
 			},
 			"core/column": {
 				"css": ".has-background { padding: var(--wp--style--block-gap) }"
@@ -1738,14 +1742,20 @@
 		},
 		{
 			"name": "page-title",
-			"title": "Page Title",
-			"description": "Title for pages",
+			"title": "Page Title w/Excerpt",
+			"description": "Title with excerpt for pages",
 			"area": "title"
 		},
 		{
 			"name": "page-title-excerpt",
 			"title": "Page Title w/Excerpt",
 			"description": "Page title with excerpt",
+			"area": "title"
+		},
+		{
+			"name": "page-title-no-excerpt",
+			"title": "Page Title w/out Excerpt",
+			"description": "Page title without excerpt",
 			"area": "title"
 		},
 		{
@@ -1773,9 +1783,27 @@
 			"area": "content"
 		},
 		{
+			"name": "sidebar-default",
+			"title": "Sidebar Default",
+			"description": "Sidebar (search, account, categories, social links)",
+			"area": "content"
+		},
+		{
 			"name": "comments",
 			"title": "Comments",
 			"description": "Comments list and comment form",
+			"area": "content"
+		},
+		{
+			"name": "comments-default",
+			"title": "Comments Default",
+			"description": "Comments list and comment form",
+			"area": "content"
+		},
+		{
+			"name": "comments-hideable",
+			"title": "Comments Hideable",
+			"description": "Comments list and comment form that can be hidden by viewer",
 			"area": "content"
 		},
 		{
@@ -1909,7 +1937,37 @@
 			"title": "Footer w/Colored Social Icons and Jetpack Map and Contact Info",
 			"description": "Footer w/colored social icons and Jetpack map and contact info",
 			"area": "footer"
-		}
+		},
+		{
+			"name": "pro-header-gradient-fixed",
+			"title": "PRO Header Gradient Fixed",
+			"description": "Header fixed with gradient background",
+			"area": "header"
+		},		
+		{
+			"name": "pro-header-scroll-fixed",
+			"title": "PRO Header Scroll to Fixed",
+			"description": "Header fixed after scrolling down",
+			"area": "header"
+		},		
+		{
+			"name": "pro-footer-3-blocks-image-curved",
+			"title": "PRO Footer Curved w/Image and 3 Blocks",
+			"description": "Footer curved with image and 3 blocks",
+			"area": "footer"
+		},		
+		{
+			"name": "pro-footer-3-blocks-image-curved-nav-site-info",
+			"title": "PRO Footer Curved w/Image 3 Blocks, Menu, and Site Info",
+			"description": "Footer curved with image and 3 blocks, menu, and site info",
+			"area": "footer"
+		},		
+		{
+			"name": "pro-footer-3-blocks-gradient",
+			"title": "PRO Footer 3 Blocks with Gradient",
+			"description": "Footer 3 blocks with gradient background",
+			"area": "footer"
+		}	
 	],
 	"customTemplates": [
 		{
@@ -1928,6 +1986,12 @@
 			"name": "page-featured-image",
 			"title": "Page Featured Image",
 			"description": "Page w/large featured image",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-featured-image-nosidebar",
+			"title": "Page Featured Image without Sidebar",
+			"description": "Page w/large featured image and no sidebar",
 			"postTypes": ["page"]
 		},
 		{
@@ -1955,6 +2019,12 @@
 			"postTypes": ["page"]
 		},
 		{
+			"name": "page-nocomments-nosidebar",
+			"title": "Page No Comments without Sidebar",
+			"description": "Page w/out comments or sidebar",
+			"postTypes": ["page"]
+		},
+		{
 			"name": "page-notitle-nocomments",
 			"title": "Page No Title or Comments",
 			"description": "Page w/out title or comments",
@@ -1970,6 +2040,12 @@
 			"name": "page-sitemap",
 			"title": "Page Site Map",
 			"description": "Sitemap (pages list, categories, recent posts)",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "page-nosidebar",
+			"title": "Page No Sidebar",
+			"description": "Page without sidebar",
 			"postTypes": ["page"]
 		},
 		{
@@ -1994,6 +2070,12 @@
 			"name": "single-featured-image",
 			"title": "Post with Featured Image",
 			"description": "Post w/large featured image",
+			"postTypes": ["post"]
+		},
+		{
+			"name": "single-featured-image-nosidebar",
+			"title": "Post with Featured Image without Sidebar",
+			"description": "Post w/large featured image without sidebar",
 			"postTypes": ["post"]
 		},
 		{
@@ -2033,6 +2115,12 @@
 			"postTypes": ["post"]
 		},
 		{
+			"name": "single-nosidebar",
+			"title": "Post No Sidebar",
+			"description": "Post w/out sidebar",
+			"postTypes": ["post"]
+		},
+		{
 			"name": "single-sidebar-left",
 			"title": "Post Left Sidebar",
 			"description": "Post w/left sidebar",
@@ -2043,6 +2131,48 @@
 			"title": "Post Right Sidebar",
 			"description": "Post w/right sidebar",
 			"postTypes": ["post"]
-		}
+		},
+		{
+			"name": "pro-page-home-scroll-header",
+			"title": "PRO Page Home (cover image w/scroll to fixed header, no comments)",
+			"description": "PRO Home page (cover image with scroll to fixed header, no comments)",
+			"postTypes": ["page"]
+		},
+		{
+			"name": "archive-jetpack-portfolio",
+			"title": "Jetpack Portfolio Archive",
+			"description": "Jetpack Portfolio Archive",
+			"postTypes": ["jetpack/portfolio"]
+		},
+		{
+			"name": "taxonomy-jetpack-portfolio-type",
+			"title": "Jetpack Portfolio Type Archive",
+			"description": "Jetpack Portfolio Type Archive",
+			"postTypes": ["jetpack/portfolio"]
+		},
+		{
+			"name": "taxonomy-jetpack-portfolio-tag",
+			"title": "Jetpack Portfolio Tag Archive",
+			"description": "Jetpack Portfolio Tag Archive",
+			"postTypes": ["jetpack/portfolio"]
+		},
+		{
+			"name": "archive-jetpack-testimonial",
+			"title": "Jetpack Testimonial Archive",
+			"description": "Jetpack Testimonial Archive",
+			"postTypes": ["jetpack/testimonial"]
+		},
+		{
+			"name": "single-jetpack-portfolio",
+			"title": "Jetpack Portfolio Item",
+			"description": "Jetpack Portfolio Item",
+			"postTypes": ["jetpack/portfolio"]
+		},
+		{
+			"name": "single-jetpack-testimonial",
+			"title": "Jetpack Testimonial Item",
+			"description": "Jetpack Testimonial ITem",
+			"postTypes": ["jetpack/testimonial"]
+		}		
 	]
 }

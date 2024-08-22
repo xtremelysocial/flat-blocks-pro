@@ -274,11 +274,6 @@ if ( file_exists( get_stylesheet_directory() . '/inc/block-styles.php' ) ) {
 	require_once get_stylesheet_directory() . '/inc/block-styles.php';
 }
 
-// Add custom block variations via TEST method
-// if ( file_exists( get_template_directory() . '/inc/block-variations-test.php' ) ) {
-// 	require_once get_template_directory() . '/inc/block-variations-test.php';
-// }
-
 // Add block patterns
 if ( file_exists( get_template_directory() . '/inc/block-patterns.php' ) ) {
 	require_once get_template_directory() . '/inc/block-patterns.php';
@@ -291,9 +286,9 @@ if ( file_exists( get_stylesheet_directory() . '/inc/block-patterns.php' ) ) {
 	require_once get_stylesheet_directory() . '/inc/block-patterns.php';
 }
 
-// Include WordPress version compatibility features
-if ( file_exists( get_template_directory() . '/inc/wp-compatability.php' ) ) {
-	require_once get_template_directory() . '/inc/wp-compatability.php';
+// Add WordPress version compatibility (for version < 6.6)
+if ( file_exists( get_template_directory() . '/inc/wp-compatibility.php' ) ) {
+	require_once get_template_directory() . '/inc/wp-compatibility.php';
 }
 
 // Include Pro version features

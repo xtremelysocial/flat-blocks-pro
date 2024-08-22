@@ -1,0 +1,36 @@
+/*--------------------------------------------------------------
+# Base Styles
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## General Styles
+--------------------------------------------------------------*/
+
+/* 
+ * Allow drop-shadow on anything except post template since it needs
+ * to be on the post instead 
+ */
+.is-style-drop-shadow {
+//.is-style-drop-shadow:not(.wp-block-post-template) {
+	//border: 1px solid var(--wp--custom--outline--color); //var(--wp--custom--border--color);
+	box-shadow: var(--wp--preset--shadow--natural);
+}
+
+/*--------------------------------------------------------------
+## WordPress Admin Bar
+--------------------------------------------------------------*/
+
+/* Prevent admin bar from spilling over site header */
+#wpadminbar {
+	overflow: hidden;
+}
+#wpadminbar .quicklinks {
+	display: flex;
+}
+#wpadminbar #wp-admin-bar-top-secondary {
+	flex-grow: 2;
+	flex-basis: auto;
+}
+#wpadminbar .ab-top-secondary {
+	float: none;
+}

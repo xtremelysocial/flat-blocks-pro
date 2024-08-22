@@ -1,0 +1,25 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"slug": "section-10",
+	"title": "Tertiary Alt Color",
+	"blockTypes": [ "core/group", "core/columns", "core/column" ],
+	"styles": {
+		"color": {
+			"background": "var:preset|color|tertiary-alt",
+			"text": "var:preset|color|foreground-alt"
+		},
+		"blocks": {
+			"core/column": {
+				"spacing": {
+					"padding": {
+						"top": "var:preset|spacing|40",
+						"right": "var:preset|spacing|40",
+						"bottom": "var:preset|spacing|40",
+						"left": "var:preset|spacing|40"
+					}
+				}			
+			}
+		}
+	}
+}

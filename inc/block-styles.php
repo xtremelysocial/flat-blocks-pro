@@ -168,3 +168,50 @@ if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 	}
 endif;
 add_action( 'init', 'flatblocks_register_block_styles' );
+
+/* 
+ * Add block attributes for color, typography, spacing, etc. back for Template Parts.
+ * This allows users to change these in the Settings UI!
+ */
+///////if ( version_compare( get_bloginfo( 'version' ), '6.6', '>=' ) ) :
+if ( ! function_exists( 'flatblocks_block_variations' ) ) :
+
+	add_filter( 'block_type_metadata', 'flatblocks_block_variations', 20 ); 
+	 
+	function flatblocks_block_variations( $metadata ) {
+	
+		//if ( ! isset( $metadata['name'] ) || 'core/group' !== $metadata['name'] ) {
+		if ( ! isset( $metadata['name'] ) || 'core/template-part' !== $metadata['name'] ) {
+				return $metadata;
+		}
+
+		// Allow colors		
+		$metadata['supports']['color'] = [
+			'background' => true,
+			'text' => true,
+			'gradients' => true,
+			'heading' => true,
+			'button' => true
+		];
+
+		// Allow Spacing		
+		$metadata['supports']['spacing'] = [
+			'margin' => true,
+			'padding' => true,
+			'blockGap' => true
+		];
+
+		// Allow typography
+		//$metadata['supports']['typography'] = true;
+		$metadata['supports']['typography']['fontSize'] = true;
+		//$metadata['supports']['typography']['lineHeight'] = true;
+		//$metadata['supports']['typography']['textAlign'] = true;
+
+		// Allow other properties
+		$metadata['supports']['align'] = true;
+		$metadata['supports']['postion'] = true;
+		$metadata['supports']['shadow'] = true;
+				
+		return $metadata;
+	}
+endif;

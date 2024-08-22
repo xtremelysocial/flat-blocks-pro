@@ -1,0 +1,55 @@
+/*--------------------------------------------------------------
+# Custom: BUttons
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Alternate Button Styles (Alt and Alt-2)
+--------------------------------------------------------------*/
+
+/* Alternate Button and Outline Style */
+.is-style-button-alt.wp-block-button .wp-block-button__link,
+.is-style-button-outline-alt.wp-block-button .wp-block-button__link {
+	border-radius: 0;
+}
+
+/* Alternate 2 Button and Outline Style */
+.is-style-button-alt-2.wp-block-button .wp-block-button__link,
+.is-style-button-outline-alt-2.wp-block-button .wp-block-button__link {
+	border-radius: 9999px;
+}
+
+/* Alternate Outline and Outline 2 Button Style */
+.is-style-button-outline-alt.wp-block-button .wp-block-button__link,
+.is-style-button-outline-alt-2.wp-block-button .wp-block-button__link {
+	color: currentColor;
+	background-color: transparent;
+	border-width: 3px;
+	border-style: solid;
+	border-color: inherit;
+	//border-radius: 0;
+	padding: calc(var(--wp--preset--spacing--30) - 3px) calc(var(--wp--preset--spacing--40) - 3px)
+}
+.is-style-button-alt.wp-block-button .wp-block-button__link:after,
+.is-style-button-outline-alt.wp-block-button .wp-block-button__link:after,
+.is-style-button-alt-2.wp-block-button .wp-block-button__link:after,
+.is-style-button-outline-alt-2.wp-block-button .wp-block-button__link:after  {
+	font-family: dashicons;
+	content: "\f344"; /* arrow-right-alt */
+	/*content: "\f346";*/ /* arrow-down-alt */
+	margin-left: var(--wp--preset--spacing--30);
+    vertical-align: middle;
+}
+
+/* In the editor, we need to make this important to override the default */
+.is-root-container .is-style-button-alt .wp-block-button__link,
+.is-root-container .is-style-button-outline-alt .wp-block-button__link {
+	border-radius: 0 !important;
+}
+.is-root-container .is-style-button-alt-2 .wp-block-button__link,
+.is-root-container .is-style-button-outline-alt-2 .wp-block-button__link {
+	border-radius: 9999 !important;
+}
+.is-root-container .is-style-button-outline-alt .wp-block-button__link,
+.is-root-container .is-style-button-outline-alt-2 .wp-block-button__link {
+	border-width: 3px !important;
+}

@@ -1,0 +1,239 @@
+/*--------------------------------------------------------------
+# Custom: Angled Sections
+--------------------------------------------------------------*/
+/*
+angled-top-up
+angled-top-down
+angled-bottom-up
+angled-bottom-down
+angled-top-up-bottom-up
+angled-top-up-bottom-down
+angled-top-down-bottom-up
+angled-top-down-bottom-down
+*/
+
+/*--------------------------------------------------------------
+## Angled GROUPS use :before and :after
+--------------------------------------------------------------*/
+
+/* All angled sections need these set */
+[class*='is-style-angled-'].wp-block-group {
+	position: relative;
+	overflow: visible;
+	z-index: 1;
+}
+
+/* All angled tops */
+[class*='is-style-angled-top-'].wp-block-group {
+	margin-top: calc(2.61859vw + var(--wp--style--block-gap));
+
+  &:before {
+    background: inherit;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden; // for Chrome Windows
+  }
+}
+
+/* Angled top Up */
+[class*='is-style-angled-top-up'].wp-block-group {
+  &:before {
+    top: 0;
+    transform: skewY(-1.5deg);
+    transform-origin: 0;
+  }
+}
+
+/* Angled top Down */
+[class*='is-style-angled-top-down'].wp-block-group {
+  &:before {
+    top: 0;
+    transform: skewY(1.5deg);
+    transform-origin: 100% 0;
+  }
+}
+
+/* All angled bottoms */
+[class*='is-style-angled-bottom-'].wp-block-group,
+[class*='is-style-angled-top-up-bottom-'].wp-block-group,
+[class*='is-style-angled-top-down-bottom-'].wp-block-group {
+	margin-bottom: calc(2.61859vw + var(--wp--style--block-gap));
+	//margin-bottom: 2.61859vw;
+
+  &:after {
+    background: inherit;
+    content: '';
+    display: block;
+    height: 50%;
+    left: 0;
+    position: absolute;
+    right: 0;
+    z-index: -1;
+    -webkit-backface-visibility: hidden; // for Chrome Windows
+  }
+}
+
+/* Angled bottom up */
+[class*='is-style-angled-top-up-bottom-up'].wp-block-group,
+[class*='is-style-angled-top-down-bottom-up'].wp-block-group {
+  &:after {
+    bottom: 0;
+    transform: skewY(-1.5deg);
+    transform-origin: 100%;
+  }
+}
+
+/* Angled bottom down */
+[class*='is-style-angled-top-up-bottom-down'].wp-block-group,
+[class*='is-style-angled-top-down-bottom-down'].wp-block-group {
+  &:after {
+    bottom: 0;
+    transform: skewY(1.5deg);
+    transform-origin: 0;
+  }
+}
+
+/*--------------------------------------------------------------
+## Angled COVER and IMAGE use clip paths
+--------------------------------------------------------------*/
+
+/* Angled sections using clip paths need relative positioning and hidden overflow */
+[class*='is-style-angled-'].wp-block-cover,
+[class*='is-style-angled-'].wp-block-image img {
+	position: relative;
+	//overflow: hidden;
+}
+
+/* Clip section with a triangle */
+.is-style-angled-top-up.wp-block-cover,
+.is-style-angled-top-up.wp-block-image img {
+	-webkit-clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% 100%, 0 100%);
+	clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% 100%, 0 100%);
+}
+
+.is-style-angled-top-down.wp-block-cover,
+.is-style-angled-top-down.wp-block-image img {
+	-webkit-clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% 100%, 0 100%);
+  	clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% 100%, 0 100%);
+}
+
+.is-style-angled-bottom-up.wp-block-cover,
+.is-style-angled-bottom-up img {
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2 * 18px), 0% 100%);
+	clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2 * 18px), 0% 100%);
+}
+
+.is-style-angled-bottom-down.wp-block-cover,
+.is-style-angled-bottom-down img {
+	-webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 2 * 18px));
+	clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 2 * 18px));
+}
+
+/* Clip top and bottom with triangles */
+.is-style-angled-top-up-bottom-up.wp-block-cover,
+.is-style-angled-top-up-bottom-up.wp-block-image img {
+  -webkit-clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% calc(100% - calc(2 * var(--wp--style--block-gap))), 0 100%);
+  clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% calc(100% - calc(2 * var(--wp--style--block-gap))), 0 100%);
+}
+
+.is-style-angled-top-up-bottom-down.wp-block-cover,
+.is-style-angled-top-up-bottom-down.wp-block-image img {
+  -webkit-clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% 100%, 0 calc(100% - calc(2 * var(--wp--style--block-gap))));
+  clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% 100%, 0 calc(100% - calc(2 * var(--wp--style--block-gap))));
+}
+
+.is-style-angled-top-down-bottom-up.wp-block-cover,
+.is-style-angled-top-down-bottom-up.wp-block-image img {
+  -webkit-clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% calc(100% - calc(2 * var(--wp--style--block-gap))), 0 100%);
+  clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% calc(100% - calc(2 * var(--wp--style--block-gap))), 0 100%);
+}
+
+.is-style-angled-top-down-bottom-down.wp-block-cover,
+.is-style-angled-top-down-bottom-down.wp-block-image img {
+  -webkit-clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% 100%, 0 calc(100% - calc(2 * var(--wp--style--block-gap))));
+  clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% 100%, 0 calc(100% - calc(2 * var(--wp--style--block-gap))));
+}
+
+/* Add top padding when top is clipped */
+/*[class*='is-style-angled-top-'].wp-block-cover {
+	padding-top: calc( 4 * var(--wp--style--block-gap) );
+}*/
+
+/* Add bottom padding when bottom is clipped */
+/*[class*='is-style-angled-bottom-'].wp-block-cover,
+[class*='is-style-angled-top-up-bottom-'].wp-block-cover,
+[class*='is-style-angled-top-down-bottom-'].wp-block-cover {
+	padding-bottom: calc( 4 * var(--wp--style--block-gap) );
+}*/
+
+/*--------------------------------------------------------------
+# Custom: Curved Sections
+--------------------------------------------------------------*/
+
+[class*='is-style-curved-'] {
+	position: relative;
+	overflow: hidden;
+}
+
+/* Curved Bottom Up */
+.is-style-curved-bottom-up {
+    -webkit-clip-path: ellipse(max(900px, 100vw) 100% at 50% 0);
+    clip-path: ellipse(max(900px, 100vw) 100% at 50% 0);
+    padding-bottom: calc(3 * var(--wp--style--block-gap)) !important;
+}
+
+/* Curved Top Down */
+.is-style-curved-top-down {
+    -webkit-clip-path: ellipse(max(900px, 100vw) 100% at 50% 100%);
+    clip-path: ellipse(max(900px, 100vw) 100% at 50% 100%);
+    /*-webkit-clip-path: ellipse(min(900px, 100vw) 100% at 50% 100%);
+    clip-path: ellipse(min(900px, 100vw) 100% at 50% 100%);*/
+    padding-top: calc( 4 * var(--wp--style--block-gap) ) !important;
+}
+
+/* Curved Top Down & Bottom Up */
+.is-style-curved-top-down.is-style-curved-bottom-up,
+.is-style-curved-top-down-bottom-up {
+    -webkit-clip-path: ellipse(min(900px, 100vw) 100% at 50% 100%);
+    clip-path: ellipse(min(900px, 100vw) 100% at 50% 100%);
+    padding-top: calc( 4 * var(--wp--style--block-gap) ) !important;
+
+    -webkit-clip-path: ellipse(max(900px, 100vw) 100% at 50% 0);
+    clip-path: ellipse(max(900px, 100vw) 100% at 50% 0);
+    padding-bottom: calc(3 * var(--wp--style--block-gap)) !important;
+}
+
+/* Curved Up Top */
+/* TO-DO: Get this working. Using mask? */
+/*.is-style-curved-top-up {
+
+	/*-webkit-mask: radial-gradient(50px, #0000 98%, #000);
+	mask: radial-gradient(50px, #0000 98%, #000);*/
+
+    /*clip-path: ellipse(50% 50% at 50% 0);
+    padding-top: calc( 4 * var(--wp--style--block-gap) ) !important;
+
+}*/
+.is-style-curved-top-up {
+	position: relative;
+	padding-top: calc(6 * var(--wp--style--block-gap));
+}
+.is-style-curved-top-up:before {
+	//background-size: 125% 100%;
+	//height: 6rem;
+
+	background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0naHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmcnIHdpZHRoPScxOTAwJyBoZWlnaHQ9JzE1MCcgdmlld0JveD0nMCAwIDE5MDAgMTUwJyBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSdub25lJz48cGF0aCBkPSdNMCwwaDE5MDBjLTI0My4zLDU4LjItNTk2LjMsMTIzLjktOTQ5LjQsMTI0aC0xLjJDNTk2LjMsMTIzLjksMjQzLjMsNTguMiwwLDB6JyBmaWxsPScjZmZmZmZmJy8+PC9zdmc+");
+	background-size: 100% 100%;
+	background-position: center;
+	content: '';
+	height: calc(4 * var(--wp--style--block-gap));
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+}
