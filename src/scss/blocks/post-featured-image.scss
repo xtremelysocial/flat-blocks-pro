@@ -2,7 +2,7 @@
 # Post Featured Image
 --------------------------------------------------------------*/
 .wp-block-post-featured-image img {
-	padding: var(--wp--custom--border--radius);
+	padding: var(--wp--preset--spacing--20);
 	box-shadow: var(--wp--custom--shadow--default);
 }
 

@@ -147,6 +147,19 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 1.6.4 =
+August 22, 2024
+
+Version Summary: Added 4 new button styles. Button Alt and Button Outline Alt have no border-radius so they are rectangular. Button Alt 2 and Outline Alt 2 are pill shaped. Extended Rounded Corners, Rounded Border, and Thick Rounded Border to Cover, Media & Text, Code, Columns, and individual Column blocks. With WordPress v6.6, all of these new styles can be edited in the Styles Editor.
+
+Here are more details on the updates:
+* Added 4 new button styles, Button Alt, Button Alt 2, Outline Alt and Outline Alt 2. By default, the Alt ones are rounded and the Alt 2 are rectangular, but you can change them yourself in the Styles Editor.
+* Extended Rounded Corners, Rounded Border, and Thick Rounded Border to Cover, Media & Text, Code, Columns, and individual Column blocks. These can be edited in the Styles Editor.
+* You can now also edit the Border and Thick Border styles for groups, columns, etc.
+* Changed Fixed Header group style over to the new Position: Sticky. CSS remains for backwards-compatibility for a while, but the ability to select it in the Editor has been removed. Use Position: Sticky on the group instead.
+* Added Link No Underline, Link Underline, and Link Underline Hover styles to the List block so these can be controlled at the list level rather than the individual list item. 
+* Renamed custom-styles.css to block-styles.css to better reflect the fact that it has both standard and custom block styles in it.
+
 = 1.6.3 =
 August 16, 2024
 

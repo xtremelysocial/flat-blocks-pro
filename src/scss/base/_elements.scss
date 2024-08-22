@@ -11,7 +11,7 @@ b {
 /* Prevent code from breaking layout */
 code,
 pre {
-	overflow-x: auto;
+	overflow-x: scroll; //auto;
 }
 
 /* Set lists with background to match other padding */

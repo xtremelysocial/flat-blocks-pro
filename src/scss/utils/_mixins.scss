@@ -38,7 +38,7 @@ $contrast-colors: (
 	"default-dark": var(--wp--preset--color--foreground-alt),
 	"default-medium": var(--wp--preset--color--foreground-alt),
 	"default-light": var(--wp--preset--color--contrast),
-	"default-white": var(--wp--preset--color--contrast),
+	"default-white": var(--wp--preset--color--contrast)
 );
 
 // When a color is used as a background, inherit the links for these lightness only.
@@ -46,9 +46,11 @@ $contrast-colors: (
 $highlight-colors: (
 	"base": inherit,
 	"contrast": inherit,
+	"default-black": var(--wp--preset--color--highlight),
 	"default-dark": inherit,
 	"default-medium": inherit,
-	"default-light": inherit
+	"default-light": inherit,
+	"default-white": var(--wp--preset--color--highlight),
 );
 
 // Mixin to default colors
