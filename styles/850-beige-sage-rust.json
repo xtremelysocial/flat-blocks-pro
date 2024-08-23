@@ -2,26 +2,31 @@
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
 	"title": "Beige, Sage, Rust",
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--base)",
+			"text": "var(--wp--preset--color--contrast)"
+		}
+	},
 	"settings": {
 		"custom": {
 			"color": {
 				"contrast": {
 					"defaultMedium": "var(--wp--preset--color--almost-black)",
 					"primary": "var(--wp--preset--color--almost-black)",
-					"secondary": "var(--wp--preset--color--almost-black)"
+					"secondary": "var(--wp--preset--color--almost-black)",
+					"dark": "var(--wp--preset--color--almost-black)",
+					"darkAlt": "var(--wp--preset--color--black)"
 				},
 				"field": {
 					"color": "var(--wp--preset--color--almost-black)"
 				},
 				"highlight": {
-					"dark": "var(--wp--preset--color--very-dark-gray)",
-					"darkAlt": "var(--wp--preset--color--very-dark-gray)"
-				},
-				"linkUnderline": {
-					"default": "underline"
-				},
-				"linkStyle": {
-					"default": "dotted"
+					"defaultMedium": "var(--wp--preset--color--very-dark-gray)",
+					"primary": "var(--wp--preset--color--very-dark-gray)",
+					"secondary": "var(--wp--preset--color--very-dark-gray)",
+					"dark": "var(--wp--preset--color--tertiary)",
+					"darkAlt": "var(--wp--preset--color--white)"
 				}
 			},
 			"border": {
@@ -47,8 +52,8 @@
 				},
 				{
 					"slug": "dark",
-					"color": "#2f2f2f",
-					"name": "Dark (Almost Black)"
+					"color": "#cfcabe",
+					"name": "Dark (TT4 Beige)"
 				},
 				{
 					"slug": "neutral",
@@ -72,8 +77,8 @@
 				},
 				{
 					"slug": "dark-alt",
-					"color": "#222222 /*#111111*/",
-					"name": "Dark Alt (Not Quite Black)"
+					"color": "#c2a990",
+					"name": "Dark Alt (TT4 Sandstone)"
 				},
 				{
 					"slug": "neutral-alt",
@@ -87,7 +92,7 @@
 				},
 				{
 					"slug": "base",
-					"color": "#f9f9f9",
+					"color": "#f9f9f9 /*#fcf9f0*/",
 					"name": "Base / Background (Offwhite / TT4 White)"
 				},
 				{
@@ -97,13 +102,13 @@
 				},
 				{
 					"slug": "highlight",
-					"color": "#1abc9c /*#b1c5a4*/",
-					"name": "Highlight (Light Green)"
+					"color": "#d8613c /*#1abc9c*/ /*#b1c5a4*/",
+					"name": "Highlight (Light Green from Flat Blocks)"
 				},
 				{
 					"slug": "highlight-alt",
-					"color": "#16a085 /*#7c8f70*/",
-					"name": "Highlight Alt (Green)"
+					"color": "#9B2C0D /*#16a085*/ /*#7c8f70*/",
+					"name": "Highlight Alt (Green from Flat Blocks)"
 				},
 				{
 					"slug": "white",
@@ -117,12 +122,12 @@
 				},
 				{
 					"slug": "beige",
-					"color": "#cfcabe",
+					"color": "#fcf9f0 /*#cfcabe*/",
 					"name": "Beige (TT4 Beige)"
 				},
 				{
 					"slug": "dark-beige",
-					"color": "#c2a990",
+					"color": "#f2efe6 /*#c2a990*/",
 					"name": "Dark Beige (TT4 Sandstone)"
 				},
 				{

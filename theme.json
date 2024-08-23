@@ -1742,13 +1742,7 @@
 		},
 		{
 			"name": "page-title",
-			"title": "Page Title w/Excerpt",
-			"description": "Title with excerpt for pages",
-			"area": "title"
-		},
-		{
-			"name": "page-title-excerpt",
-			"title": "Page Title w/Excerpt",
+			"title": "Page Title (w/Excerpt)",
 			"description": "Page title with excerpt",
 			"area": "title"
 		},
