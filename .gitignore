@@ -31,10 +31,10 @@ node_modules/
 
 # build files
 build
-!pro/pro-plugin/build
+#!pro/pro-plugin/build
 
 # Debugging files 
-#**/*.asset.php
+**/*.asset.php
 **/*.css.map
 **/*.js.map
 
@@ -53,10 +53,8 @@ build
 # Ignore save, test files, and zip files
 **/*-SAVE*
 styles/*TEST-ONLY*.json
-styles/global-test/
-*.css.map
+styles/*-test/
 zz_unused
-*.zip
 
 # Ignore individual block styles since not implemented yet
 assets/css/blocks/
