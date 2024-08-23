@@ -174,6 +174,7 @@ add_action( 'init', 'flatblocks_register_block_styles' );
  * This allows users to change these in the Settings UI!
  */
 ///////if ( version_compare( get_bloginfo( 'version' ), '6.6', '>=' ) ) :
+/* 
 if ( ! function_exists( 'flatblocks_block_variations' ) ) :
 
 	add_filter( 'block_type_metadata', 'flatblocks_block_variations', 20 ); 
@@ -215,3 +216,4 @@ if ( ! function_exists( 'flatblocks_block_variations' ) ) :
 		return $metadata;
 	}
 endif;
+ */
