@@ -1,6 +1,6 @@
-/*!****************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/@wordpress/scripts/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./pro/src/scss/pro-custom-styles.scss ***!
-  \****************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!**********************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./pro/src/scss/pro-custom-styles.scss ***!
+  \**********************************************************************************************************************************************************/
 /**
  * File:	pro-custom-styles.css
  * Theme:	Flat Blocks PRO
@@ -152,42 +152,50 @@ angled-top-down-bottom-down
 /* Clip section with a triangle */
 .is-style-angled-top-up.wp-block-cover,
 .is-style-angled-top-up.wp-block-image img {
+  -webkit-clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% 100%, 0 100%);
   clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% 100%, 0 100%);
 }
 
 .is-style-angled-top-down.wp-block-cover,
 .is-style-angled-top-down.wp-block-image img {
+  -webkit-clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% 100%, 0 100%);
   clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% 100%, 0 100%);
 }
 
 .is-style-angled-bottom-up.wp-block-cover,
 .is-style-angled-bottom-up img {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 36px), 0% 100%);
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 36px), 0% 100%);
 }
 
 .is-style-angled-bottom-down.wp-block-cover,
 .is-style-angled-bottom-down img {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 36px));
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 calc(100% - 36px));
 }
 
 /* Clip top and bottom with triangles */
 .is-style-angled-top-up-bottom-up.wp-block-cover,
 .is-style-angled-top-up-bottom-up.wp-block-image img {
+  -webkit-clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% calc(100% - 2 * var(--wp--style--block-gap)), 0 100%);
   clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% calc(100% - 2 * var(--wp--style--block-gap)), 0 100%);
 }
 
 .is-style-angled-top-up-bottom-down.wp-block-cover,
 .is-style-angled-top-up-bottom-down.wp-block-image img {
+  -webkit-clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% 100%, 0 calc(100% - 2 * var(--wp--style--block-gap)));
   clip-path: polygon(0 calc(2 * var(--wp--style--block-gap)), 100% 0, 100% 100%, 0 calc(100% - 2 * var(--wp--style--block-gap)));
 }
 
 .is-style-angled-top-down-bottom-up.wp-block-cover,
 .is-style-angled-top-down-bottom-up.wp-block-image img {
+  -webkit-clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% calc(100% - 2 * var(--wp--style--block-gap)), 0 100%);
   clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% calc(100% - 2 * var(--wp--style--block-gap)), 0 100%);
 }
 
 .is-style-angled-top-down-bottom-down.wp-block-cover,
 .is-style-angled-top-down-bottom-down.wp-block-image img {
+  -webkit-clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% 100%, 0 calc(100% - 2 * var(--wp--style--block-gap)));
   clip-path: polygon(0 0, 100% calc(2 * var(--wp--style--block-gap)), 100% 100%, 0 calc(100% - 2 * var(--wp--style--block-gap)));
 }
 
@@ -211,12 +219,14 @@ angled-top-down-bottom-down
 
 /* Curved Bottom Up */
 .is-style-curved-bottom-up {
+  -webkit-clip-path: ellipse(max(900px, 100vw) 100% at 50% 0);
   clip-path: ellipse(max(900px, 100vw) 100% at 50% 0);
   padding-bottom: calc(3 * var(--wp--style--block-gap)) !important;
 }
 
 /* Curved Top Down */
 .is-style-curved-top-down {
+  -webkit-clip-path: ellipse(max(900px, 100vw) 100% at 50% 100%);
   clip-path: ellipse(max(900px, 100vw) 100% at 50% 100%);
   /*-webkit-clip-path: ellipse(min(900px, 100vw) 100% at 50% 100%);
   clip-path: ellipse(min(900px, 100vw) 100% at 50% 100%);*/
@@ -226,8 +236,10 @@ angled-top-down-bottom-down
 /* Curved Top Down & Bottom Up */
 .is-style-curved-top-down.is-style-curved-bottom-up,
 .is-style-curved-top-down-bottom-up {
+  -webkit-clip-path: ellipse(min(900px, 100vw) 100% at 50% 100%);
   clip-path: ellipse(min(900px, 100vw) 100% at 50% 100%);
   padding-top: calc(4 * var(--wp--style--block-gap)) !important;
+  -webkit-clip-path: ellipse(max(900px, 100vw) 100% at 50% 0);
   clip-path: ellipse(max(900px, 100vw) 100% at 50% 0);
   padding-bottom: calc(3 * var(--wp--style--block-gap)) !important;
 }
@@ -1148,5 +1160,3 @@ p.is-style-no-auto-icon a[href^="mailto:"]:not(.wp-block-social-link-anchor):bef
 .wp-block-table.is-style-table-alternate tfoot td:nth-child(6n+6) {
   background-color: var(--wp--preset--color--tertiary-alt);
 }
-
-/*# sourceMappingURL=pro-custom-styles.css.map*/

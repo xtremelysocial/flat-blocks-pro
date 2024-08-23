@@ -30,13 +30,14 @@ node_modules/
 .env
 
 # build files
-build
+#build
 #!pro/pro-plugin/build
 
 # Debugging files 
-**/*.asset.php
-**/*.css.map
-**/*.js.map
+*.asset.php
+*.css.map
+*.js.map
+*-rtl.css
 
 # Webpack files (don't track for now)
 #webpack.config.js

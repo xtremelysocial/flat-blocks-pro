@@ -1,6 +1,6 @@
-/*!******************************************************************************************************************************************************************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/@wordpress/scripts/node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/@wordpress/scripts/node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/scss/flat-blocks.scss ***!
-  \******************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/scss/flat-blocks.scss ***!
+  \************************************************************************************************************************************************/
 /**
  * File:	flat-blocks.css
  * Theme:	Flat Blocks
@@ -1057,11 +1057,13 @@ header > .wp-block-cover {
 
 /* Increase animation TIME on nav menu drop-downs */
 .wp-block-navigation .has-child .wp-block-navigation__submenu-container {
+  -webkit-transition-duration: var(--wp--custom--animation--duration--short);
   transition-duration: var(--wp--custom--animation--duration--short);
 }
 
 /* Increase animation DELAY on nav drop-downs when NOT requiring a click */
 .wp-block-navigation .has-child:not(.open-on-click):hover > .wp-block-navigation__submenu-container {
+  -webkit-transition-delay: var(--wp--custom--animation--duration--short);
   transition-delay: var(--wp--custom--animation--duration--short);
 }
 
@@ -1519,5 +1521,3 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
 .has-accent-5-border-color {
   border-color: var(--wp--preset--color--primary);
 }
-
-/*# sourceMappingURL=flat-blocks.css.map*/
