@@ -40,8 +40,8 @@
 }
 
 /* Match our bottom margin */
-#post-comments {
-  margin-bottom: var(--wp--style--block-gap);
+p.form-submit.wp-block-button {
+  margin-bottom: 0;
 }
 
 /* Hide empty comments so no extra vertical margin */
@@ -61,6 +61,11 @@
     padding-left: var(--wp--style--root--padding-right) !important;
   }
 }
+/* Hide empty comments (e.g. when comments turned off for a post)*/
+.is-style-template-comments.wp-block-template-part:empty {
+  display: none;
+}
+
 /*--------------------------------------------------------------
 # Comments: Custom
 --------------------------------------------------------------*/
@@ -79,24 +84,6 @@
 .wp-block-details:not(.has-text-color) > summary:hover,
 .wp-block-details:not(.has-text-color)[open] > summary {
   color: var(--wp--preset--color--highlight-alt);
-}
-
-/*--------------------------------------------------------------
-# Post Featured Image
---------------------------------------------------------------*/
-.wp-block-post-featured-image img {
-  padding: var(--wp--preset--spacing--20);
-  box-shadow: var(--wp--custom--shadow--default);
-}
-
-/*--------------------------------------------------------------
-# Post Featured Image: Custom
---------------------------------------------------------------*/
-/* Featured Image no border */
-.wp-block-post-featured-image.is-style-image-no-border img {
-  border: none;
-  border-radius: 0;
-  padding: 0;
 }
 
 /*--------------------------------------------------------------
@@ -420,6 +407,24 @@ ol.is-style-list-plain-centered li {
 }
 
 /*--------------------------------------------------------------
+# Post Featured Image
+--------------------------------------------------------------*/
+.wp-block-post-featured-image img {
+  padding: var(--wp--preset--spacing--20);
+  box-shadow: var(--wp--custom--shadow--default);
+}
+
+/*--------------------------------------------------------------
+# Post Featured Image: Custom
+--------------------------------------------------------------*/
+/* Featured Image no border */
+.wp-block-post-featured-image.is-style-image-no-border img {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
 # Post Terms:
 --------------------------------------------------------------*/
 /* dashicons-tag */
@@ -456,6 +461,19 @@ ol.is-style-list-plain-centered li {
 }
 
 /*--------------------------------------------------------------
+# Query: Custom
+--------------------------------------------------------------*/
+.wp-block-query.is-style-no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.wp-block-query.is-style-no-padding:not(.has-global-padding) {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+/*--------------------------------------------------------------
 # Quote
 --------------------------------------------------------------*/
 /* OVERRIDE quote citation to be on new line */
@@ -470,21 +488,9 @@ ol.is-style-list-plain-centered li {
 }
 
 /*--------------------------------------------------------------
-# Query: Custom
---------------------------------------------------------------*/
-.wp-block-query.is-style-no-padding {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.wp-block-query.is-style-no-padding:not(.has-global-padding) {
-  padding-right: 0 !important;
-  padding-left: 0 !important;
-}
-
-/*--------------------------------------------------------------
 # Separator
 --------------------------------------------------------------*/
+/* TO-DO: FIX separator color */
 /* FIX to center default (narrow) separator when user selects alignfull */
 .wp-block-separator.alignfull {
   margin-right: auto !important;
