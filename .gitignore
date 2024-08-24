@@ -55,6 +55,10 @@ node_modules/
 **/*-SAVE*
 styles/*TEST-ONLY*.json
 styles/*-test/
+styles/global-test/
+*.css.map
+
+# Unused source
 zz_unused
 
 # Ignore individual block styles since not implemented yet
