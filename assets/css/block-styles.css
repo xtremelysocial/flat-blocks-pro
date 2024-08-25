@@ -79,24 +79,6 @@
 }
 
 /*--------------------------------------------------------------
-# Post Featured Image
---------------------------------------------------------------*/
-.wp-block-post-featured-image img {
-  padding: var(--wp--preset--spacing--20);
-  box-shadow: var(--wp--custom--shadow--default);
-}
-
-/*--------------------------------------------------------------
-# Post Featured Image: Custom
---------------------------------------------------------------*/
-/* Featured Image no border */
-.wp-block-post-featured-image.is-style-image-no-border img {
-  border: none;
-  border-radius: 0;
-  padding: 0;
-}
-
-/*--------------------------------------------------------------
 # Latest Comments
 --------------------------------------------------------------*/
 /* 
@@ -417,6 +399,24 @@ ol.is-style-list-plain-centered li {
 }
 
 /*--------------------------------------------------------------
+# Post Featured Image
+--------------------------------------------------------------*/
+.wp-block-post-featured-image img {
+  padding: var(--wp--preset--spacing--20);
+  box-shadow: var(--wp--custom--shadow--default);
+}
+
+/*--------------------------------------------------------------
+# Post Featured Image: Custom
+--------------------------------------------------------------*/
+/* Featured Image no border */
+.wp-block-post-featured-image.is-style-image-no-border img {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+/*--------------------------------------------------------------
 # Post Terms:
 --------------------------------------------------------------*/
 /* dashicons-tag */
@@ -453,6 +453,19 @@ ol.is-style-list-plain-centered li {
 }
 
 /*--------------------------------------------------------------
+# Query: Custom
+--------------------------------------------------------------*/
+.wp-block-query.is-style-no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.wp-block-query.is-style-no-padding:not(.has-global-padding) {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+
+/*--------------------------------------------------------------
 # Quote
 --------------------------------------------------------------*/
 /* OVERRIDE quote citation to be on new line */
@@ -467,21 +480,9 @@ ol.is-style-list-plain-centered li {
 }
 
 /*--------------------------------------------------------------
-# Query: Custom
---------------------------------------------------------------*/
-.wp-block-query.is-style-no-padding {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.wp-block-query.is-style-no-padding:not(.has-global-padding) {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-/*--------------------------------------------------------------
 # Separator
 --------------------------------------------------------------*/
+/* TO-DO: FIX separator color */
 /* FIX to center default (narrow) separator when user selects alignfull */
 .wp-block-separator.alignfull {
   margin-left: auto !important;
