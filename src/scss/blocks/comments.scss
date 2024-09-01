@@ -1,6 +1,6 @@
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Comments
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 
 /* Reduce top margin on "Leave a Reply" */
 // TO-DO: See if can move to theme.json
@@ -16,10 +16,10 @@
 }
 
 /* Hide empty comments so no extra vertical margin */
-// #post-comments:empty {
-// 	display: none;
-// 	margin-top: 0;
-// }
+#post-comments:empty {
+	display: none;
+	margin-top: 0;
+}
 
 /* Add padding to comment page numbers */
 .wp-block-comments-pagination .page-numbers:nth-last-child(n+2) {
@@ -38,14 +38,14 @@
 	}
 }
 
-/*--------------------------------------------------------------
-# Comments: Custom
---------------------------------------------------------------*/
+///*---------------------------------------------------------------------------------------
+//# Comments: Custom
+//---------------------------------------------------------------------------------------*/
 
-/* Rounded borders */
+//* Rounded borders */
 // .wp-block-comments.is-style-rounded-border,
 // .wp-block-comments-query-loop.is-style-rounded-border {
-// 	border: 1px solid var(--wp--custom--border--color);
+// 	border: 1px solid var(--wp--custom--color--border);
 // 	border-radius: var(--wp--custom--border--radius);
 // 	padding: var(--wp--preset--spacing--40);
 //     //box-shadow: var(--wp--custom--shadow--default);

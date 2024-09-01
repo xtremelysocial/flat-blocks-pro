@@ -23,12 +23,10 @@
 					"neutralAlt": "var(--wp--preset--color--foreground-alt)",
 					"foregroundAlt": "var(--wp--preset--color--dark)"
 				},
+				"border": "var(--wp--preset--color--almost-black)",
 				"field": {
 					"background": "var(--wp--preset--color--gray)"
 				}
-			},		
-			"border": {
-				"color": "var(--wp--preset--color--almost-black)"
 			}
 		},
 		"color": {

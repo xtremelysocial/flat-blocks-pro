@@ -1,6 +1,6 @@
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Forms
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* 
  * Style form fields
  * 
@@ -20,7 +20,7 @@ fieldset {
 
 select,
 textarea,
-input:not(.file) {
+input:not(.file):not(.wp-element-button) {
 	background-color: var(--wp--custom--color--field--background, revert);
 	color: var(--wp--custom--color--field--text, inherit);
 }
@@ -33,7 +33,7 @@ select {
 	border-radius: var(--wp--preset--spacing--20);
 	text-shadow: none;
 	//color: var(--wp--preset--color--contrast);
-	border: 1px solid var(--wp--preset--color--contrast);	
+	border: 1px solid var(--wp--custom--color--field--border, var(--wp--preset--color--dark-gray));
 }
   
 textarea,
