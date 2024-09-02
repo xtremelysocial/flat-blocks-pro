@@ -32,7 +32,7 @@
 				"thickness": "1px",
 				"postion": "under",
 				"offset": "auto",
-				"style": "dotted"
+				"style": "dotted",
 				"hoverOpacity": "0.8"
 			},
 			"typography": {
