@@ -274,9 +274,9 @@ if ( file_exists( get_stylesheet_directory() . '/inc/block-styles.php' ) ) {
 	require_once get_stylesheet_directory() . '/inc/block-styles.php';
 }
 
-// Add custom block variations via TEST method
-// if ( file_exists( get_template_directory() . '/inc/block-variations-test.php' ) ) {
-// 	require_once get_template_directory() . '/inc/block-variations-test.php';
+// Add custom block variations
+// if ( file_exists( get_template_directory() . '/inc/block-variations.php' ) ) {
+// 	require_once get_template_directory() . '/inc/block-variations.php';
 // }
 
 // Add block patterns
