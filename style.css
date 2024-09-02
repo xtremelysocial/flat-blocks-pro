@@ -118,7 +118,7 @@ GNU General Public License for more details.
 
 /* We want our hover color in our footer nav */
 .footer-widgets a:hover {
-	color: var(--wp--preset--color--primary-alt);
+	color: var(--wp--preset--color--highlight-alt);
 }
 
 /*--------------------------------------------------------------

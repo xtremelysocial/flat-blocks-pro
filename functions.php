@@ -197,7 +197,7 @@ if ( ! function_exists( 'flatblocks_back_end_styles' ) ) :
 		add_editor_style( 
 			array(
 				'/assets/css/flat-blocks.css',
-				'/assets/css/block-styles.css'
+				'/assets/css/block-styles.css',
 				'style.css'
 			)
 		);

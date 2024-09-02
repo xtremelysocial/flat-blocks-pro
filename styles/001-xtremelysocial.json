@@ -4,6 +4,11 @@
 	"title": "XtremelySocial",
 	"settings": {
 		"custom": {
+			"color": {
+				"highlight": {
+					"dark": "var(--wp--preset--color--white)"
+				}
+			},
 			"shadow": {
 				"default": "var(--wp--preset--shadow--natural)"
 			},
@@ -77,6 +82,16 @@
 					"slug": "contrast",
 					"color": "#555555",
 					"name": "Contrast / Foreground (Very Dark Gray)"
+				},
+				{
+					"slug": "highlight",
+					"color": "#1abc9c",
+					"name": "Highlight (Light Green)"
+				},
+				{
+					"slug": "highlight-alt",
+					"color": "#16a085",
+					"name": "Highlight Alt (Green)"
 				},
 				{
 					"slug": "white",
