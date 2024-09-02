@@ -1,0 +1,12 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"title": "Auto Dark Mode",
+	"styles": {
+		"color": {
+			"background": "var(--wp--preset--color--base)",
+			"text": "var(--wp--preset--color--contrast) /** **/"
+		},	
+		"css": "\n/* Auto Dark Mode */ \n@media (prefers-color-scheme: dark) {\n body {\n /*color-scheme: dark light;*/\n --wp--preset--color--base: var(--wp--preset--color--not-quite-black);\n --wp--preset--color--contrast: var(--wp--preset--color--off-white);\n --wp--preset--color--neutral: var(--wp--preset--color--almost-black);\n --wp--preset--color--neutral-alt: var(--wp--preset--color--not-quite-black);\n --wp--custom--color--border: var(--wp--preset--color--not-quite-black);\n --wp--custom--color--contrast--neutral: var(--wp--preset--color--off-white);\n --wp--custom--color--contrast--neutral-alt: var(--wp--preset--color--off-white); \n} \n\n .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open, .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container { \n background-color: var(--wp--preset--color--almost-black);\n color: var(--wp--preset--color--foreground-alt); \n} \n\n #wpadminbar { \nbackground-color: var(--wp--preset--color--almost-black); } \n} \n/* End Auto Dark Mode */\n"
+	}
+}

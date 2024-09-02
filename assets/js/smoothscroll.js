@@ -20,16 +20,17 @@
 		 * Figure out top offset from fixed headers height and/or admin bar
 		 */
 		const fixedHeader = $('.wp-site-blocks > header:has(.is-style-fixed-header)');
-		const scrollHeader = $('header.site-header.is-style-scroll-header');
+		//const scrollHeader = $('header.site-header.is-style-scroll-header');
+		const stickyHeader = $('.wp-site-blocks > header:has(.is-position-sticky)');
 		const adminBar = $('#wpadminbar');
 
 		var topOffset = 0;
 		if (fixedHeader.length > 0) { 
 			//console.log('fixedHeader.outerHeight: ' + fixedHeader.outerHeight()); //TEST
 			topOffset = topOffset + fixedHeader.outerHeight();
-		} else if (scrollHeader.length > 0) {
-			//console.log('scroll.outerHeight: ' + scrollHeader.outerHeight()); //TEST
-			topOffset = topOffset + scrollHeader.outerHeight();
+		} else if (stickyHeader.length > 0) {
+			//console.log('stickyHeader.outerHeight: ' + stickyHeader.outerHeight()); //TEST
+			topOffset = topOffset + stickyHeader.outerHeight();
 		}
 		if (adminBar.length > 0) topOffset = topOffset + adminBar.outerHeight();
 		//console.log('topOffset: ' + topOffset); //TEST

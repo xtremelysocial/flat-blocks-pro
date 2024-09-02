@@ -1,0 +1,21 @@
+/**
+ * File:	wp-compat.css
+ * Theme:	Flat Blocks
+ * 
+ * The stylesheet for the Flat Block theme's CUSTOM block styles.
+ * 
+ * NOTE: These are ONLY needed for WordPress versions < 6.6
+ *
+ * NOTE: This file is AUTO-GENERATED from the SASS source files 
+ * in /src/sass/custom-styles.scss. Do not make updates here.
+ * 
+ * @package flat-blocks
+ * @since 	1.6.4
+ */
+
+/*---------------------------------------------------------------------------------------
+# CUSTOM BLOCK STYLES (for WordPress version < 6.6)
+---------------------------------------------------------------------------------------*/
+@use "base/wp-compat-borders";
+@use "base/wp-compat-buttons";
+@use "blocks/wp-compat-heading";

@@ -1,6 +1,6 @@
-/*--------------------------------------------------------------
-# Post Comments Count
---------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------
+# Post Comments Count (Only w/Gutenberg Plugin)
+---------------------------------------------------------------------------------------*/
 
 /* dashicons-admin-comments for comments count */
 .wp-block-post-comments-count:before {
@@ -21,11 +21,4 @@
  */
 .wp-block-post-comments-count:after {
 	content: " comment(s)";
-}
-
-/*--------------------------------------------------------------
-# Post Comments Count: Custom
---------------------------------------------------------------*/
-.wp-block-post-comments-count.is-style-no-icon:before {	
-	display: none;
 }

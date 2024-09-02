@@ -147,18 +147,65 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
-= 1.6.2 =
-July 31, 2024
+= 1.6.5 =
+September 1, 2024
 
+* Adjust CSS for horizontal padding to better deal with full-width and non-full-width blocks.
+* Added names to all Header, Footer, Sidebar, Post Meta, and Main content groups to differentiate them from other groups in the Templates while viewing in the Editor.
+* Added new custom variables for button colors: --wp--custom--color--button-background and --wp--custom--color--button--text. Replaced --wp--custom--border--color with --wp--custom--color--border to be consistent with the new color variables.
+* Centered the "No results" on queries and locked the block so it can't accidentally be removed. 
+* Added Next and Previous Post links so user can easily page through articles on your site.
+
+= 1.6.4 =
+August 22, 2024
+
+Version Summary: Added 4 new button styles. Button Alt and Button Outline Alt have no border-radius so they are rectangular. Button Alt 2 and Outline Alt 2 are pill shaped. Extended Rounded Corners, Rounded Border, and Thick Rounded Border to Cover, Media & Text, Code, Columns, and individual Column blocks. With WordPress v6.6, all of these new styles can be edited in the Styles Editor.
+
+Here are more details on the updates:
+* Added 4 new button styles, Button Alt, Button Alt 2, Outline Alt and Outline Alt 2. By default, the Alt ones are rounded and the Alt 2 are rectangular, but you can change them yourself in the Styles Editor.
+* Extended Rounded Corners, Rounded Border, and Thick Rounded Border to Cover, Media & Text, Code, Columns, and individual Column blocks. These can be edited in the Styles Editor.
+* You can now also edit the Border and Thick Border styles for groups, columns, etc.
+* Changed Fixed Header group style over to the new Position: Sticky. CSS remains for backwards-compatibility for a while, but the ability to select it in the Editor has been removed. Use Position: Sticky on the group instead.
+* Added Link No Underline, Link Underline, and Link Underline Hover styles to the List block so these can be controlled at the list level rather than the individual list item. 
+* Renamed custom-styles.css to block-styles.css to better reflect the fact that it has both standard and custom block styles in it.
+
+= 1.6.3 =
+August 16, 2024
+
+Version Summary: This is a big update for WordPress v6.6, especially for Theme Styles. You can now mix and match various color schemes, font pairings (with and without uppercase headings), and drop-shadows on buttons and post featured images. There are 14 colors schemes, 14 typography options, and 3 different shadows totalling well over 500 possible combinations!
+
+In addition, two new color names were added for "Highlight" and "Highlight Alt" which are now used to set the button background, link color, and link hover color. Various Template Parts and Block Patterns were updated to support all this.
+
+Here are more details on the updates:
+	* Added Highlight Color (--wp--preset--color--highlight) and Highlight Alt (--wp--preset--color--highlight-alt) colors to the color palette to replace --wp--custom--link--color and --wp--custom--link--hover. 
+	* Set the default button color to the highlight color to match the links.
+	* Added --wp--custom--color--field--background and --wp--custom--color--field--text to set form fields background and text color for dark theme styles. Renamed --wp--custom--outline--color to --wp--custom--color--field--outline.
+	* Removed inline CSS in the Dark Midnight Blue and Dark Very Dark Gray global theme styles that is no longer needed when using the new highlight colors. Note that Auto Dark Mode still needs inline CSS to change the colors depending on whether the user's system is in light or dark mode.
+	* Updated Template Parts to no longer specify the text color so that the new default text colors will be used: Comments, Header Colored, Footer Default Light, Post Meta, Sidebar, Page Title with Excerpt.
+	* Updated Block Patterns to no longer specify the text color so that the new default text colors will be used: Title and Text, Pricing Table 3 Columns, Pricing Table 4 Columns, Cover Scroll Home Header, Cover Scroll Page Header.
+	* Changed the various Theme Styles that had yellow as the secondary or tertiary color to use orange instead as it is more readable with the default off-white text color. Note that existing Orange and Yellow theme styles can still be used for those that want those colors as a default.
+	* Increased the headings font sizes for the Style Script font.
+	* Fixed formatting issues in Templates: Page Site Map, Post Sidebar Left, and Post Sidebar Right. 
+	* Bumped minimum WordPress version to 6.4, so that support goes back two major release levels.
+
+= 1.6.2 =
+August 7, 2024
+
+* New Template Part for Page Title with Excerpt. This will display a subtitle below the page title that displays the page excerpt. By default the excerpt is the first 25 words from the page itself, but it is best to write a custom page excerpt. This was added from our Flat Blocks Classic theme to be used now by all. 
+* Added new Image Border style to the Image Gallery block. This makes it easy to add a border to all the individual images at once.
+* For Image Gallery Pattern, add lightbox (click to expand) to each image. WordPress still requires this to be set on each image rather than the whole gallery itself, so this is a time-saver.
+* Added Link Underline on Hover style to the Site Title. 
 * Fix Title and Subtitle Pattern which was displaying an issue in the block editor due to it using an H1 tag. Changed it to H2 since only the site title should be H1.
 * Fix Default Auto-Dark Mode Global Theme Style since change to base and contrast colors in v1.6.
-* For Image Gallery Pattern, add lightbox (click to expand) to each image. WordPress still requires this to be set on each image rather than the whole gallery itself, so this is a time-saver.
-* Set headings top and bottom margin in theme.json to be the Block Gap ("spacing") setting for the theme, which is by default 18px.
+* Set headings top and bottom margin in theme.json to be the Block Gap ("spacing") setting for the theme, which is by default 18px. This is done for consistency as core WordPress uses em values so much larger margins on larger fonts. 
 * Various CSS enhancements:
+	* Enhanced CSS for images with borders and captions.
+	* Tweaked the preset box shadows to make them a bit more prominent.
 	* Simplify CSS for handling link underline, no underline, or underline on hover. These CSS classes can also now be added to 3rd-party blocks manually in the Advanced->Additional CSS Class(es) block setting in the Editor. Use is-style-link-no-underline, is-style-link-underline, or is-style-link-underline-hover.
 	* Reduced line height on Latest Posts block article titles
 	* Remove extra bottom margin on post excerpts with "no read more" style applied
 	* Enhance native Dashicons CSS to preserve aspect ratio
+* Moved Global Theme Styles to a new /styles/global directory now that the typography ones are moved into /styles/typography.
 
 = 1.6.1 =
 July 28, 2024
@@ -640,61 +687,56 @@ GNU General Public License for more details.
 
 This theme bundles the following third-party resources:
 
-Lato font
-Copyright (c) 2010-2014 by tyPoland Lukasz Dziedzic (team@latofonts.com) with Reserved Font Name "Lato"
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
-This license is copied below, and is also available with a FAQ at:
-http://scripts.sil.org/OFL
-
-Lora font
-Copyright 2011 The Lora Project Authors (https://github.com/cyrealtype/Lora-Cyrillic), with Reserved Font Name "Lora".
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
-This license is copied below, and is also available with a FAQ at:
-http://scripts.sil.org/OFL
-
-Nunito font
-Copyright 2014 The Nunito Project Authors (https://github.com/googlefonts/nunito)
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
-This license is copied below, and is also available with a FAQ at:
-http://scripts.sil.org/OFL
-
-Playfair Display font
-Copyright 2017 The Playfair Display Project Authors (https://github.com/clauseggers/Playfair-Display), with Reserved Font Name "Playfair Display"
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
-This license is copied below, and is also available with a FAQ at:
-http://scripts.sil.org/OFL
-
-Raleway font
-Copyright 2010 The Raleway Project Authors (impallari@gmail.com), with Reserved Font Name "Raleway".
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
-This license is copied below, and is also available with a FAQ at:
-http://scripts.sil.org/OFL
-
-Roboto font
-Copyright Christian Robertson
-This font is licensed under the Apache License, Version 2.0.
-You can use them in your products & projects – print or digital, commercial or otherwise.
-
-Roboto Mono font
-Copyright Christian Robertson
-This font is licensed under the Apache License, Version 2.0.
-You can use them in your products & projects – print or digital, commercial or otherwise.
-
-Source Sans Pro font
-Copyright 2010, 2012, 2014 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name ‘Source’.
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
-This license is copied below, and is also available with a FAQ at:
-http://scripts.sil.org/OFL
-
-Source Serif Pro font
-Copyright 2014 - 2021 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name 'Source'. All Rights Reserved. Source is a trademark of Adobe Systems Incorporated in the United States and/or other countries.
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
-This license is available with a FAQ at: http://scripts.sil.org/OFL
-
-Style Script font
-Copyright 2013 The Style Script Project Authors (https://github.com/googlefonts/style-script)
-This Font Software is licensed under the SIL Open Font License, Version 1.1.
-This license is copied below, and is also available with a FAQ at: http://scripts.sil.org/OFL
-
-Block Pattern Images:
+=== Images ===
 All images from https://pexels.com licensed under the GPL, including modifications made for Flat Blocks to adjust image sizes.
+
+=== Fonts === 
+Lato
+Copyright (c) 2010-2011 by tyPoland Lukasz Dziedzic with Reserved Font Name "Lato". Licensed under the SIL Open Font License, Version 1.1. 
+Source: http://www.typoland.com/
+License: Copyright (c) 2011-2011 by tyPoland Lukasz Dziedzic (http://www.typoland.com/) with Reserved Font Name "Lato". Licensed under the SIL Open Font License, Version 1.1 (http://scripts.sil.org/OFL). 
+
+Raleway
+Copyright 2010 The Raleway Project Authors (impallari@gmail.com), with Reserved Font Name "Raleway".
+Source: http://theleagueofmoveabletype.com
+License: This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL
+
+Roboto
+Copyright 2011 Google Inc. All Rights Reserved.
+Source: Google.com
+License: Licensed under the Apache License, Version 2.0
+
+Lora
+Copyright 2011 The Lora Project Authors (https://github.com/cyrealtype/Lora-Cyrillic), with Reserved Font Name "Lora".
+Source: http://cyreal.org
+License: This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL
+
+Source Sans Pro
+© 2010 - 2018 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name ‘Source’.
+Source: http://www.adobe.com/type
+License: This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL. This Font Software is distributed on an ‘AS IS’ BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+Playfair Display
+Copyright 2017 The Playfair Display Project Authors (https://github.com/clauseggers/Playfair-Display), with Reserved Font Name "Playfair Display".
+Source: http://www.forthehearts.net
+License: This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL
+
+Source Serif 4 Variable
+© 2014 - 2021 Adobe Systems Incorporated (http://www.adobe.com/), with Reserved Font Name ‘Source’.
+Source: http://www.adobe.com/type
+License: This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: http://scripts.sil.org/OFL. This Font Software is distributed on an ‘AS IS’ BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the SIL Open Font License for the specific language, permissions and limitations governing your use of this Font Software.
+
+Nunito
+Copyright 2014 The Nunito Project Authors (https://github.com/googlefonts/nunito)
+Source: http://www.sansoxygen.com
+License: This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL
+
+Style Script
+Copyright 2013 The Style Script Project Authors (https://github.com/googlefonts/style-script)
+Source: http://www.typesetit.com
+License: This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://scripts.sil.org/OFL
+
+Roboto Mono
+Copyright 2015 The Roboto Mono Project Authors (https://github.com/googlefonts/robotomono)
+Source: Google.com
+License: Licensed under the Apache License, Version 2.0

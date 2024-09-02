@@ -1,6 +1,6 @@
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Buttons and Links
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /*
  * Link styles.
  * Necessary until the following issue is resolved in Gutenberg:
@@ -20,21 +20,21 @@ figcaption a {
 
 /* Colored link hover styles */
 .has-text-color a:not(.wp-element-button):not(.wp-block-button):not(.wp-block-social-link-anchor):hover {
-	opacity: 0.8;
+	opacity: var(--wp--custom--link--hover-opacity, 0.85);
 }
 
 /* 
  * Style basic buttons to match block buttons. 
  */
-input[type=button],
-input[type=submit][class*="button"],
-input[type=reset][class*="button"],
+input[type=button]:not(.wp-element-button),
+input[type=submit][class*="button"]:not(.wp-element-button),
+input[type=reset][class*="button"]:not(.wp-element-button),
 input[type=file]::file-selector-button {
-	color: var(--wp--preset--color--foreground-alt, white);
-	background-color: var(--wp--custom--link--color); //var(--wp--preset--color--primary);
+	color: var(--wp--custom--color--button--text, var(--wp--preset--color--foreground-alt, white));
+	background-color: var(--wp--custom--color--button--background, var(--wp--preset--color--highlight)); //var(--wp--preset--color--primary);
 	border: none;
 	border-width: 0;
-	border-radius: var(--wp--custom--border--radius, 0);
+	border-radius: var(--wp--custom--button--radius, 0);
 	padding: var(--wp--preset--spacing--30, 9px) var(--wp--preset--spacing--40, 18px);
 	font-size: var(--wp--preset--font-size--normal, 18px);
 	font-weight: 400;
@@ -51,15 +51,15 @@ input[type=file] {
 .has-primary-background-color input[type=submit][class*="button"],
 .has-primary-background-color input[type=reset][class*="button"],
 .has-primary-background-color input[type=file]::file-selector-button {
-	border: 3px solid var(--wp--preset--color--foreground-alt, white);
+	border: 3px solid var(--wp--custom--color--button--text, var(--wp--preset--color--foreground-alt, white));
 }
 
-/* For outline style buttons, inherit border color from the text color */
-/**.wp-block-button.is-style-outline.is-style-outline .wp-block-button__link {
-	color: inherit;
-	background-color: initial;
-	background-image: none;	
-}**/
+// /* For outline style buttons, inherit border color from the text color */
+// .wp-block-button.is-style-outline.is-style-outline .wp-block-button__link {
+// 	color: inherit;
+// 	background-color: initial;
+// 	background-image: none;	
+// }
 
 /*
  * Button hover styles.
@@ -74,12 +74,12 @@ input[type=file]::file-selector-button:hover,
 .wp-block-file .wp-block-file__button:hover,
 .wp-block-button__link:hover {
 	cursor: pointer;
-	opacity: 0.8;
+	opacity: var(--wp--custom--button--hover-opacity, 0.85);
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Custom: Link Underlines
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* Underline links */
 .is-style-link-underline a,
 .is-style-link-underline a:active {
@@ -94,7 +94,7 @@ input[type=file]::file-selector-button:hover,
 
 .is-style-link-underline a:hover,
 .is-style-link-no-underline a:hover {
-	opacity: 0.8;
+	opacity: var(--wp--custom--link--hover-opacity, 0.85);
 }
 
 /* Underline links on hover */

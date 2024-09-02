@@ -1,6 +1,6 @@
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Social Links (Icons)
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 
 /* Set some defaults. These are needed for WordPres.org theme preview */
 .wp-block-social-links {
@@ -10,14 +10,14 @@
 
 /* Adjust icon sizes */
 .wp-block-social-links.has-small-icon-size {
-  font-size: 22px;
+  font-size: var(--wp--preset--font-size--medium);
 }
 
 .wp-block-social-links.has-normal-icon-size {
-	font-size: 26px;
+	font-size: var(--wp--preset--font-size--large);
 }
 
 /* Adjust animation on social icons to better match our other animation */
 .wp-block-social-link {
-    transition: transform var(--wp--custom--animation--duration--medium) ease-in-out;
+    transition: transform var(--wp--custom--animation--duration--medium, 500ms) ease-in-out;
 }

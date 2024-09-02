@@ -1,158 +1,66 @@
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Colors
---------------------------------------------------------------*/
+----------------------------------------------------------------------------------------*/
+// Load our mixins to set default text and link colors
+@use "../utils/mixins";
 
 /* 
- * Default font, link, and button text colors based on the color
- * of the background
+ * First set some basic defaults for when a background color is used
  */
+.has-background { //,
+	color: var(--wp--custom--color--contrast--default, inherit);
+}
+
+.has-background a:hover { //,
+	//color: inherit;
+	opacity: var(--wp--custom--link--hover-opacity, 0.85);
+}
 
 /* 
- * Black and near-black colors, default light text, but leave link 
- * color alone 
+ * Black and near-black colors, default light text (but leave link color alone).
+ * Override by defining --wp--custom--color--contrast--black in theme.json.
+ */
+$black-colors: ('contrast', 'dark', 'dark-alt', 'almost-black', 'not-quite-black', 'black');
+@include mixins.color-defaults($black-colors, 'default-black');
+
+/* 
+ * Dark colors, default light text and links 
+ * Override by defining --wp--custom--color--contrast--dark in theme.json.
+ */
+$dark-colors: ('primary', 'secondary', 'tertiary', 'primary-alt', 'secondary-alt', 'tertiary-alt', 'highlight', 'highlight-alt', 'dark-gray', 'very-dark-gray', 'green', 'dark-bright-green', 'orange', 'dark-orange', 'blue', 'dark-blue', 'midnight-blue', 'dark-midnight-blue', 'purple', 'dark-purple', 'light-red', 'red', 'dark-red');
+@include mixins.color-defaults($dark-colors, 'default-dark');
+
+/* 
+ * Medium colors, default light text and links too but make it easy for theme styles to 
+ * Override by defining --wp--custom--color--contrast--medium in theme.json.
+ */
+$medium-colors: ('light-green', 'bright-green', 'light-orange', 'light-blue','light-purple');
+@include mixins.color-defaults($medium-colors, 'default-medium');
+
+/* 
+ * Light Colors (e.g. Yellow), default dark color to text, link, and buttons 
+ * Override by defining --wp--custom--color--contrast--light in theme.json.
  */ 
-.has-dark-background-color,
-.has-dark-alt-background-color,
-.has-almost-black-background-color,
-.has-not-quite-black-background-color,
-.has-black-background-color {
-	color: var(--wp--preset--color--foreground-alt);
-} 
-
-/* Dark colors, default light text and links */
-.has-primary-background-color,
-.has-primary-alt-background-color,
-.has-secondary-background-color,
-.has-secondary-alt-background-color,
-.has-tertiary-background-color,
-.has-tertiary-alt-background-color,
-.has-dark-gray-background-color,
-.has-very-dark-gray-background-color,
-.has-light-green-background-color,
-.has-green-background-color,
-.has-bright-green-background-color,
-.has-dark-bright-green-background-color,
-.has-light-orange-background-color,
-.has-orange-background-color,
-.has-dark-orange-background-color,
-.has-light-blue-background-color,
-.has-blue-background-color,
-.has-dark-blue-background-color,
-.has-midnight-blue-background-color,
-.has-dark-midnight-blue-background-color,
-.has-light-purple-background-color,
-.has-purple-background-color,
-.has-dark-purple-background-color,
-.has-light-red-background-color,
-.has-red-background-color,
-.has-dark-red-background-color,
-[class*="gradient-background"] {
- 	color: var(--wp--preset--color--foreground-alt);
- 	
- 	& a {
-	 	color: inherit;
- 	}
-
-	& a:hover {
-		opacity: 0.8;
-	}
-}
+$light-colors: ('light-yellow', 'yellow');
+@include mixins.color-defaults($light-colors,'default-light');
 
 /* 
- * Medium Colors (e.g. Yellow), default foreground color to text, link,
- * and buttons 
- */ 
-.has-light-yellow-background-color,
-.has-yellow-background-color,
-.has-yellow-gradient-background {
- 	color: var(--wp--preset--color--very-dark-gray);
-
- 	&.wp-block-button__link.wp-element-button {
-	 	color: var(--wp--preset--color--very-dark-gray);
-	}
-
-	& a {
-	 	color: inherit;
-	}
-	
-	& a:hover {
-		opacity: 0.8;
-	}
-}
-
-/* 
- * Light colors, default foreground color and button color, 
- * but leave the link color alone. 
+ * White and near-white colors, default dark text (but leave the link color alone) 
+ * Override by defining --wp--custom--color--contrast--white in theme.json.
  */
-.has-neutral-background-color,
-.has-neutral-alt-background-color,
-.has-foreground-alt-background-color,
-.has-white-background-color,
-.has-off-white-background-color,
-.has-very-light-gray-background-color,
-.has-light-gray-background-color,
-.has-gray-background-color,
-.has-gray-gradient-background {
- 	color: var(--wp--preset--color--very-dark-gray);
-
- 	&.wp-block-button__link.wp-element-button {
-	 	color: var(--wp--preset--color--very-dark-gray);
-	}
-}
+$white-colors: ('base', 'neutral', 'neutral-alt', 'foreground-alt', 'white', 'off-white', 'very-light-gray', 'light-gray', 'gray' );
+@include mixins.color-defaults($white-colors,'default-white');
 
 /* 
- * Swap foreground and background colors. Note this is needed because we can't
- * be sure whether they are light or dark for any given theme or user changes.
+ * On Cover blocks, default the text color to white, but set it back to black
+ * on light backgrounds with dim less than 30%
  */
-.has-base-background-color {
-	color: var(--wp--preset--color--contrast);
-	
-	& a,
-	&.wp-block-button__link.wp-element-button {
-		color: var(--wp--preset--color--contrast);
+:where(.wp-block-cover-image.is-light:not(.has-text-color)), :where(.wp-block-cover.is-light:not(.has-text-color)) {
+    color: #fff;
+
+	&:has(.has-background-dim-10),
+	&:has(.has-background-dim-20),
+	&:has(.has-background-dim-30) {
+		color: #000;
 	}
-
-	& a:hover {
-		opacity: 0.8;
-	}
-}
-.has-contrast-background-color {
-	color: var(--wp--preset--color--base);
-
-	& a,
-	&.wp-block-button__link.wp-element-button {
-		color: var(--wp--preset--color--base);
-	}
-
-	& a:hover {
-		opacity: 0.8;
-	}
-}
-
-//
-// Within post content, increase font-weight on links
-// .wp-block-post-content .has-background a:where(:not(.wp-element-button)) { 
-// 	font-weight: var(--wp--custom--typography--font-weight--medium); 
-// }
-
-/* 
- * On Cover blocks, we have to get more specific than core WordPress. 
- * We want to override the black font on light-colored backgrounds (if 
- * an overlay color is applied with at least 40% opacity).
- */
-:where(.wp-block-cover-image:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-40)),
-:where(.wp-block-cover:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-40)),
-:where(.wp-block-cover-image:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-50)),
-:where(.wp-block-cover:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-50)), 
-:where(.wp-block-cover-image:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-60)),
-:where(.wp-block-cover:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-60)), 
-:where(.wp-block-cover-image:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-70)),
-:where(.wp-block-cover:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-70)),
-:where(.wp-block-cover-image:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-80)),
-:where(.wp-block-cover:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-80)), 
-:where(.wp-block-cover-image:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-90)),
-:where(.wp-block-cover:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-90)),
-:where(.wp-block-cover-image:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-100)),
-:where(.wp-block-cover:not(.has-text-color):has(.wp-block-cover__background.has-background-dim-100)) { 
-	color: var(--wp--preset--color--white);
 }

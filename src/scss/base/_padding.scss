@@ -1,6 +1,6 @@
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Padding (Horizontal and vertical spacing)
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 
 /* For convenience, remove padding from inner containers */
 main.wp-block-group:not(.has-global-padding),
@@ -8,15 +8,15 @@ main.wp-block-group:not(.has-global-padding),
 	padding: 0;
 }
 
-/* 
- * If user turns off "useRootPaddingAwareAlignments" in theme.json,
- * then still add some padding to the site so text isn't scrunched
- * up against the sides of the browser.
- */
-/*.wp-site-blocks:not(:has(.has-global-padding)) {
-    padding-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
-    padding-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
-}*/
+// /* 
+//  * If user turns off "useRootPaddingAwareAlignments" in theme.json,
+//  * then still add some padding to the site so text isn't scrunched
+//  * up against the sides of the browser.
+//  */
+// .wp-site-blocks:not(:has(.has-global-padding)) {
+//     padding-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
+//     padding-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
+// }
 
 /* Override horizontal padding when no global padding */
 header.site-header:not(.has-global-padding),
@@ -29,7 +29,7 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
 }
 
 /* FIX to add back horizontal padding */
-.has-global-padding,
+//.has-global-padding,
 .has-global-padding > .alignfull:not(.wp-block-post-content, .wp-block-image, .wp-block-columns, .wp-block-buttons),
 .has-global-padding.alignfull:not(.wp-block-post-content, .wp-block-image, .wp-block-columns, .wp-block-buttons) {
     padding-left: var(--wp--style--root--padding-left); 
@@ -37,7 +37,7 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
 }
 
 /* But REMOVE duplicate padding */
-.has-global-padding :where(.has-global-padding):not(.has-background),
+//.has-global-padding :where(.has-global-padding):not(.has-background),
 .has-global-padding > .alignfull:where(:not(.has-global-padding)) > :where(.wp-block-image) {
 	padding-left: 0;
 	padding-right: 0;

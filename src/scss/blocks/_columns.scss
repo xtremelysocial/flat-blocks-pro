@@ -1,15 +1,15 @@
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Columns and Column
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* 
  * Note: Padding for colored backgrounds on columns is now in
  * theme.json as custom block CSS.
  */
 
-/* ADD BACK gap on flex columns by default */
-/*.wp-block-columns-is-layout-flex {
-	gap: var(--wp--style--block-gap);
-}*/
+//* ADD BACK gap on flex columns by default */
+// .wp-block-columns-is-layout-flex {
+// 	gap: var(--wp--style--block-gap);
+// }
 
 /* 
  * Note: Breakpoint of 781 is what is hard-coded in WordPress 
@@ -36,9 +36,9 @@
 
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Columns and Column: Custom
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 
 /* Columns no Gap */
 .wp-block-columns.is-style-no-gap,
@@ -54,12 +54,12 @@
 	gap: calc(2 * var(--wp--style--block-gap)); //var(--wp--preset--spacing--60);
 }
 
-/* Column rounded borders */
-.wp-block-column.is-style-rounded-border {
-	border: 1px solid var(--wp--custom--border--color);
-	border-radius: var(--wp--custom--border--radius);
-	padding: var(--wp--preset--spacing--40);
-}
+//* Column rounded borders */
+// .wp-block-column.is-style-rounded-border {
+// 	border: 1px solid var(--wp--custom--color--border);
+// 	border-radius: var(--wp--custom--border--radius);
+// 	padding: var(--wp--preset--spacing--40);
+// }
 
 /* Column no padding */
 .wp-block-column.is-style-no-padding {

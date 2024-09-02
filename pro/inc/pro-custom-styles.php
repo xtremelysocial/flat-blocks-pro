@@ -92,22 +92,22 @@ if ( ! function_exists( 'flatblocks_pro_register_block_styles' ) ) :
 				array( 'heading' ),
 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
 			),
-			'button-alt' 		=> array( esc_html__('Alt Style', 'flat-blocks'), 
-				array( 'button' ),
-				'style_handle'	=> 'flatblocks-pro-custom-styles'
-			),
-			'button-outline-alt' => array( esc_html__('Alt Outline Style', 'flat-blocks'), 
-				array( 'button' ),
-				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-			),
-			'button-alt-2' 		=> array( esc_html__('Alt 2 Style', 'flat-blocks'), 
-				array( 'button' ),
-				'style_handle'	=> 'flatblocks-pro-custom-styles'
-			),
-			'button-outline-alt-2' => array( esc_html__('Alt 2 Outline Style', 'flat-blocks'), 
-				array( 'button' ),
-				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-			),
+// 			'button-alt' 		=> array( esc_html__('Alt Style', 'flat-blocks'), 
+// 				array( 'button' ),
+// 				'style_handle'	=> 'flatblocks-pro-custom-styles'
+// 			),
+// 			'button-outline-alt' => array( esc_html__('Alt Outline Style', 'flat-blocks'), 
+// 				array( 'button' ),
+// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// 			),
+// 			'button-alt-2' 		=> array( esc_html__('Alt 2 Style', 'flat-blocks'), 
+// 				array( 'button' ),
+// 				'style_handle'	=> 'flatblocks-pro-custom-styles'
+// 			),
+// 			'button-outline-alt-2' => array( esc_html__('Alt 2 Outline Style', 'flat-blocks'), 
+// 				array( 'button' ),
+// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// 			),
 			'nav-dividers' 		=> array( esc_html__('Dividers', 'flat-blocks'), 
 				array('navigation' ),
 				'style_handle' 	=> 'flatblocks-pro-custom-styles'				
@@ -192,7 +192,7 @@ if ( ! function_exists( 'flatblocks_pro_register_block_styles' ) ) :
 // 			)
 		);
 
-		return $theme_styles ? $theme_styles + $pro_styles : $pro_styles;
+		return $theme_styles ? $theme_styles + $pro_styles : $pro_styles;	
 	}
 endif;
 
