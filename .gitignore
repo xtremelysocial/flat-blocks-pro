@@ -53,9 +53,10 @@ node_modules/
 
 # Ignore save, test files, and zip files
 **/*-SAVE*
-styles/*TEST-ONLY*.json
-styles/*-test/
-styles/global-test/
+styles/*-TEST*.json
+styles/colors-test/
+styles/sections-test/
+styles/template-parts-test
 *.css.map
 
 # Unused source

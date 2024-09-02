@@ -1,36 +1,15 @@
-//*--------------------------------------------------------------
-//# Mixins
-//--------------------------------------------------------------*/
+//*--------------------------------------------------------------------------------------
+//# Colors
+//------------------------------------------------------------------------------------- */
 @use "sass:map";
 
-//*--------------------------------------------------------------
-//# Vendor Prefixes
-//--------------------------------------------------------------*/
-$vendor-prefixes: ('-webkit-', '');
-
-@mixin vendor-prefix($name, $value) {
-	@each $vendor in $vendor-prefixes {
-		#{$vendor}#{$name}: #{$value};
-	}
-}
-
-@mixin keyframes($animationName) {
-	@each $vendor in $vendor-prefixes {
-		@#{$vendor}keyframes #{$animationName} {
-			$browser: #{$vendor} !global;
-			@content;
-		}
-	}
-} $browser: null;
-
-//*--------------------------------------------------------------
-//# Colors
-//
+//*--------------------------------------------------------------------------------------
 //  Set default text and link colors depending on how dark or light the background
 //  color is. 
-//--------------------------------------------------------------*/
+//--------------------------------------------------------------------------------------*/
 
-// When a color is used as a background, default the text to these colors
+// When a color is used as a background, default the text to these colors based on
+// lightness.
 $contrast-colors: (
 	"base": var(--wp--preset--color--contrast),
 	"contrast": var(--wp--preset--color--base),
@@ -41,8 +20,8 @@ $contrast-colors: (
 	"default-white": var(--wp--preset--color--contrast)
 );
 
-// When a color is used as a background, inherit the links for these lightness only.
-// Otherwise, leave the link color alone.
+// When a color is used as a background, default the link color to these base on 
+// lightness.
 $highlight-colors: (
 	"base": inherit,
 	"contrast": inherit,
@@ -59,6 +38,7 @@ $highlight-colors: (
 	$lightness 
 ) {
 	@each $color in $colors {
+	
 		$contrast: map.get($contrast-colors, $lightness);
 		$highlight: map.get($highlight-colors, $lightness);
 		
@@ -70,8 +50,33 @@ $highlight-colors: (
 					& a:not(.wp-element-button) {
 						color: var(--wp--custom--color--highlight--#{$color}, var(--wp--custom--color--highlight--#{$lightness}, #{$highlight}));
 					}
+					
+					& a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+							text-decoration: var(--wp--custom--color--underline--#{$color}, var(--wp--custom--color--underline--#{$lightness}, var(--wp--custom--color--underline--default, none)));
+					}
 				}
 			}
 		}
 	}
 }
+
+//*--------------------------------------------------------------------------------------
+//# Vendor Prefixes
+//--------------------------------------------------------------------------------------*/
+
+$vendor-prefixes: ('-webkit-', '');
+
+@mixin vendor-prefix($name, $value) {
+	@each $vendor in $vendor-prefixes {
+		#{$vendor}#{$name}: #{$value};
+	}
+}
+
+@mixin keyframes($animationName) {
+	@each $vendor in $vendor-prefixes {
+		@#{$vendor}keyframes #{$animationName} {
+			$browser: #{$vendor} !global;
+			@content;
+		}
+	}
+} $browser: null;

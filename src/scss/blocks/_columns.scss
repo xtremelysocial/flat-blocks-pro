@@ -1,12 +1,12 @@
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Columns and Column
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* 
  * Note: Padding for colored backgrounds on columns is now in
  * theme.json as custom block CSS.
  */
 
-/* ADD BACK gap on flex columns by default */
+//* ADD BACK gap on flex columns by default */
 // .wp-block-columns-is-layout-flex {
 // 	gap: var(--wp--style--block-gap);
 // }
@@ -36,9 +36,9 @@
 
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Columns and Column: Custom
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 
 /* Columns no Gap */
 .wp-block-columns.is-style-no-gap,
@@ -54,9 +54,9 @@
 	gap: calc(2 * var(--wp--style--block-gap)); //var(--wp--preset--spacing--60);
 }
 
-/* Column rounded borders */
+//* Column rounded borders */
 // .wp-block-column.is-style-rounded-border {
-// 	border: 1px solid var(--wp--custom--border--color);
+// 	border: 1px solid var(--wp--custom--color--border);
 // 	border-radius: var(--wp--custom--border--radius);
 // 	padding: var(--wp--preset--spacing--40);
 // }

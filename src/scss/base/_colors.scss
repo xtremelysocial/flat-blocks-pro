@@ -1,4 +1,4 @@
-/*----------------------------------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Colors
 ----------------------------------------------------------------------------------------*/
 // Load our mixins to set default text and link colors
@@ -8,14 +8,12 @@
  * First set some basic defaults for when a background color is used
  */
 .has-background { //,
-//[class*=".is-style-template-"] {
 	color: var(--wp--custom--color--contrast--default, inherit);
 }
 
 .has-background a:hover { //,
-//[class*=".is-style-template-"] a:hover {
-	color: inherit;
-	opacity: 0.8;
+	//color: inherit;
+	opacity: var(--wp--custom--link--hover-opacity, 0.85);
 }
 
 /* 

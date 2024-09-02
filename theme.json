@@ -4,14 +4,12 @@
 	"title": "Flat Blocks PRO",
 	"settings": {
 		"custom": {
-			"typography": {
-				"fontWeight": {
-					"normal": "300",
-					"medium": "400",
-					"bold": "500"
-				}
-			},
 			"color": {
+				"button": {
+					"background": "var(--wp--preset--color--highlight)",
+					"text": "var(--wp--preset--color--foreground-alt)"
+				},
+				"border": "var(--wp--preset--color--neutral-alt)",
 				"field": {
 					"background": "revert",
 					"text": "inherit",
@@ -24,7 +22,8 @@
 			},
 			"button": {
 				"color": "var(--wp--preset--color--highlight)",
-				"radius": "5px"
+				"radius": "5px",
+				"hoverOpacity": "0.85"
 			},
 			"shadow": {
 				"default": "none"
@@ -34,6 +33,14 @@
 				"postion": "under",
 				"offset": "auto",
 				"style": "dotted"
+				"hoverOpacity": "0.8"
+			},
+			"typography": {
+				"fontWeight": {
+					"normal": "300",
+					"medium": "400",
+					"bold": "500"
+				}
 			},
 			"animation": {
 				"default": {
@@ -926,7 +933,7 @@
 		},
 		"border": {
             "radius": "var(--wp--custom--border--radius)",
-            "color": "var(--wp--custom--border--color)",
+            "color": "var(--wp--custom--color--border)",
             "style": "solid",
             "width": "0"
         },
@@ -996,8 +1003,8 @@
 			},
 			"button": {
 				"color": {
-					"background": "var(--wp--custom--button--color)",
-					"text": "var(--wp--preset--color--foreground-alt)"
+					"background": "var(--wp--custom--color--button--background)",
+					"text": "var(--wp--custom--color--button--text)"
 				},
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--normal)",
@@ -1183,7 +1190,7 @@
 			},
 			"core/post-featured-image": {
 				"border": {
-					"color": "var(--wp--custom--border--color)",
+					"color": "var(--wp--custom--color--border)",
 					"style": "solid",
 					"radius": "var(--wp--custom--border--radius)",
 					"width": "1px"
@@ -1288,7 +1295,7 @@
 				"elements": {
 					"link": {
 						"typography": {
-							"textDecoration": "none"
+							"textDecoration": "none !important"
 						}
 					}
 				}
@@ -1332,7 +1339,7 @@
 			"core/code": {
 				"border": {
 					"style": "solid",
-					"color": "var(--wp--custom--border--color)",
+					"color": "var(--wp--custom--color--border)",
 					"radius": "var(--wp--custom--border--radius)",
 					"width": "1px"
 				},
@@ -1341,7 +1348,7 @@
 				},
 				"color": {
 					"background": "var(--wp--preset--color--neutral)",
-					"text": "var(--wp--preset--color--very-dark-gray)"
+					"text": "var(--wp--preset--color--almost-black)"
 				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--roboto-mono)",
@@ -1534,15 +1541,6 @@
 					}
 				}
 			},			
-			"core/post-terms": {
-				"elements": {
-					"link": {
-						"typography": {
-							"textDecoration": "none"
-						}
-					}
-				}
-			},
 			"core/page-list": {
 				"elements": {
 					"link": {
@@ -1858,6 +1856,12 @@
 			"name": "footer-3-blocks-nav-social",
 			"title": "Footer 3 Blocks with Menu and Social Icons",
 			"description": "Footer w/3 blocks with nav menu and social icons",
+			"area": "footer"
+		},
+		{
+			"name": "footer-about-3-navs",
+			"title": "Footer About and 3 Menus",
+			"description": "Footer w/block 3 (About) and 3 nav menus",
 			"area": "footer"
 		},
 		{

@@ -1,6 +1,6 @@
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Cover
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 
 /* LIMIT cover image inner content to standard unless wide or full */
 .wp-block-cover .wp-block-cover__inner-container > *:not(.alignfull):not(.alignwide) {
@@ -15,19 +15,19 @@
 	margin-left: auto;
 	margin-right: auto;
 }
+//
+// /*---------------------------------------------------------------------------------------
+// # Cover: Custom
+// ---------------------------------------------------------------------------------------*/
 
-/*--------------------------------------------------------------
-# Cover: Custom
---------------------------------------------------------------*/
-
-/* Border */
+//* Border */
 // .wp-block-cover.is-style-cover-border {
-// 	border: 3px solid var(--wp--custom--border--color);
+// 	border: 3px solid var(--wp--custom--color--border);
 // 	border-radius: var(--wp--custom--border--radius);
 // 	padding: var(--wp--preset--spacing--40);
 // }
 
-/* Rounded corners */
+//* Rounded corners */
 // .wp-block-cover.is-style-cover-rounded-corners {
 // 	border-radius: var(--wp--custom--border--radius);
 // 	overflow: hidden;

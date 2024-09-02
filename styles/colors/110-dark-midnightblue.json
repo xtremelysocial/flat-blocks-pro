@@ -15,12 +15,10 @@
 					"neutralAlt": "var(--wp--preset--color--foreground-alt)",
 					"foregroundAlt": "var(--wp--preset--color--dark)"
 				},
+				"border": "var(--wp--preset--color--midnight-blue)",
 				"field": {
 					"background": "var(--wp--preset--color--gray)"
 				}
-			},		
-			"border": {
-				"color": "var(--wp--preset--color--midnight-blue)"
 			}
 		},
 		"color": {

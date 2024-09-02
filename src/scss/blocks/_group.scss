@@ -1,6 +1,6 @@
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Group
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 
 /* 
  * Note: Padding for colored backgrounds on groups is now in
@@ -32,13 +32,13 @@
 	}		
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Group: Custom
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 
-/* Group borders */
+//* Group borders */
 // .wp-block-group.is-style-rounded-border {
-// 	border: 1px solid var(--wp--custom--border--color);
+// 	border: 1px solid var(--wp--custom--color--border);
 // 	border-radius: var(--wp--custom--border--radius);
 // 	padding: var(--wp--preset--spacing--40);
 //     //box-shadow: var(--wp--custom--shadow--default);
@@ -49,7 +49,7 @@
 }
 
 // .wp-block-group.is-style-thick-rounded-border {
-// 	border: 3px solid var(--wp--custom--border--color);
+// 	border: 3px solid var(--wp--custom--color--border);
 // 	border-radius: var(--wp--custom--border--radius);
 //     //box-shadow: var(--wp--custom--shadow--default);
 // }
@@ -74,7 +74,7 @@
 .wp-block-group.is-style-fixed-header,
 .wp-block-group.has-background.is-style-fixed-header {
 	background-color: var(--wp--preset--color--base); 
-//     border: 1px solid var(--wp--custom--border--color);
+//     border: 1px solid var(--wp--custom--color--border);
 //     border-width: 0 0 1px;
 //     padding-top: var(--wp--preset--spacing--40);
 //     padding-bottom: var(--wp--preset--spacing--40);
