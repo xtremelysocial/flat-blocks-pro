@@ -11,9 +11,9 @@
  * @since 	1.6.4
  */
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # ADDITIONAL BLOCK STYLES
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 @use "blocks/calendar";
 //@use "blocks/columns";
 @use "blocks/comments";
@@ -36,11 +36,8 @@
 @use "blocks/post-date";
 @use "blocks/post-excerpt";
 @use "blocks/post-terms";
-//@use "blocks/post-title";
 @use "blocks/query-pagination";
-@use "blocks/quote";
 @use "blocks/query";
 @use "blocks/separator";
 @use "blocks/social-links";
 @use "blocks/table";
-//@use "blocks/tag-cloud";

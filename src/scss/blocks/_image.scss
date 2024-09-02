@@ -1,6 +1,6 @@
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Image
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 
 /* FIX caption color when on colored background */
 .wp-block-image figcaption {
@@ -30,13 +30,13 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 	color: rgba(0,0,0,0) !important;
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Image: Custom
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 
 /* Image borders */
 .is-style-image-border img {
-	border: 1px solid var(--wp--custom--border--color);
+	border: 1px solid var(--wp--custom--color--border);
 	border-radius: var(--wp--custom--border--radius);
 	padding: var(--wp--preset--spacing--20);
 }
@@ -52,7 +52,7 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 }
 
 .is-style-image-round-border img {
-	border: 1px solid var(--wp--custom--border--color);
+	border: 1px solid var(--wp--custom--color--border);
 	border-radius: 9999px; /*50%;*/
 	padding: var(--wp--preset--spacing--20);
 }

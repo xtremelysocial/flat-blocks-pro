@@ -10,12 +10,12 @@
  * @package flat-blocks
  * @since	1.0
  */
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # BASE STYLES
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
+---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------
 # Normalize
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* 
  * Default to contain borders and padding within blocks and prevent iOS from adjusting
  * text sizes after orientation change. 
@@ -45,9 +45,9 @@ body {
   text-underline-offset: var(--wp--custom--link--offset, 0);
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Elements
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* Use bold font-weight from theme.json */
 strong,
 b {
@@ -72,9 +72,9 @@ figcaption {
   text-align: center;
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Buttons and Links
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /*
  * Link styles.
  * Necessary until the following issue is resolved in Gutenberg:
@@ -94,18 +94,18 @@ figcaption a {
 
 /* Colored link hover styles */
 .has-text-color a:not(.wp-element-button):not(.wp-block-button):not(.wp-block-social-link-anchor):hover {
-  opacity: 0.8;
+  opacity: var(--wp--custom--link--hover-opacity, 0.85);
 }
 
 /* 
  * Style basic buttons to match block buttons. 
  */
-input[type=button],
-input[type=submit][class*=button],
-input[type=reset][class*=button],
+input[type=button]:not(.wp-element-button),
+input[type=submit][class*=button]:not(.wp-element-button),
+input[type=reset][class*=button]:not(.wp-element-button),
 input[type=file]::file-selector-button {
-  color: var(--wp--preset--color--foreground-alt, white);
-  background-color: var(--wp--preset--color--highlight);
+  color: var(--wp--custom--color--button--text, var(--wp--preset--color--foreground-alt, white));
+  background-color: var(--wp--custom--color--button--background, var(--wp--preset--color--highlight));
   border: none;
   border-width: 0;
   border-radius: var(--wp--custom--button--radius, 0);
@@ -126,7 +126,7 @@ input[type=file] {
 .has-primary-background-color input[type=submit][class*=button],
 .has-primary-background-color input[type=reset][class*=button],
 .has-primary-background-color input[type=file]::file-selector-button {
-  border: 3px solid var(--wp--preset--color--foreground-alt, white);
+  border: 3px solid var(--wp--custom--color--button--text, var(--wp--preset--color--foreground-alt, white));
 }
 
 /*
@@ -142,12 +142,12 @@ input[type=file]::file-selector-button:hover,
 .wp-block-file .wp-block-file__button:hover,
 .wp-block-button__link:hover {
   cursor: pointer;
-  opacity: 0.8;
+  opacity: var(--wp--custom--button--hover-opacity, 0.85);
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Custom: Link Underlines
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* Underline links */
 .is-style-link-underline a,
 .is-style-link-underline a:active {
@@ -162,7 +162,7 @@ input[type=file]::file-selector-button:hover,
 
 .is-style-link-underline a:hover,
 .is-style-link-no-underline a:hover {
-  opacity: 0.8;
+  opacity: var(--wp--custom--link--hover-opacity, 0.85);
 }
 
 /* Underline links on hover */
@@ -171,9 +171,9 @@ input[type=file]::file-selector-button:hover,
   text-decoration: underline;
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Forms
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* 
  * Style form fields
  * 
@@ -193,7 +193,7 @@ fieldset {
 
 select,
 textarea,
-input:not(.file) {
+input:not(.file):not(.wp-element-button) {
   background-color: var(--wp--custom--color--field--background, revert);
   color: var(--wp--custom--color--field--text, inherit);
 }
@@ -205,7 +205,7 @@ select {
   line-height: 1.5;
   border-radius: var(--wp--preset--spacing--20);
   text-shadow: none;
-  border: 1px solid var(--wp--preset--color--contrast);
+  border: 1px solid var(--wp--custom--color--field--border, var(--wp--preset--color--dark-gray));
 }
 
 textarea,
@@ -237,9 +237,9 @@ select:focus-visible {
   transition: outline 0.3s ease;
 }
 
-/*--------------------------------------------------------------
+/*--------------------------------------------------------------------------------------
 # Alignments
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /*
  * Don't let anything be wider than our max width. This is so 
  * fullwidth images don't get so wide they lose resolution.
@@ -282,7 +282,7 @@ body .is-layout-constrained > .alignright {
     position: fixed;
   }
 }
-/*----------------------------------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Colors
 ----------------------------------------------------------------------------------------*/
 /* 
@@ -293,8 +293,7 @@ body .is-layout-constrained > .alignright {
 }
 
 .has-background a:hover {
-  color: inherit;
-  opacity: 0.8;
+  opacity: var(--wp--custom--link--hover-opacity, 0.85);
 }
 
 /* 
@@ -307,12 +306,18 @@ body .is-layout-constrained > .alignright {
 .has-contrast-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--contrast, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
 }
+.has-contrast-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--contrast, var(--wp--custom--color--underline--default-black, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-dark-background-color {
   color: var(--wp--custom--color--contrast--dark, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
 }
 .has-dark-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--dark, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
+}
+.has-dark-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--dark, var(--wp--custom--color--underline--default-black, var(--wp--custom--color--underline--default, none)));
 }
 
 .has-dark-alt-background-color {
@@ -321,12 +326,18 @@ body .is-layout-constrained > .alignright {
 .has-dark-alt-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--dark-alt, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
 }
+.has-dark-alt-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--dark-alt, var(--wp--custom--color--underline--default-black, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-almost-black-background-color {
   color: var(--wp--custom--color--contrast--almost-black, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
 }
 .has-almost-black-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--almost-black, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
+}
+.has-almost-black-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--almost-black, var(--wp--custom--color--underline--default-black, var(--wp--custom--color--underline--default, none)));
 }
 
 .has-not-quite-black-background-color {
@@ -335,12 +346,18 @@ body .is-layout-constrained > .alignright {
 .has-not-quite-black-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--not-quite-black, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
 }
+.has-not-quite-black-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--not-quite-black, var(--wp--custom--color--underline--default-black, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-black-background-color {
   color: var(--wp--custom--color--contrast--black, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
 }
 .has-black-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--black, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
+}
+.has-black-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--black, var(--wp--custom--color--underline--default-black, var(--wp--custom--color--underline--default, none)));
 }
 
 /* 
@@ -353,12 +370,18 @@ body .is-layout-constrained > .alignright {
 .has-primary-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--primary, var(--wp--custom--color--highlight--default-dark, inherit));
 }
+.has-primary-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--primary, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-secondary-background-color {
   color: var(--wp--custom--color--contrast--secondary, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
 }
 .has-secondary-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--secondary, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+.has-secondary-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--secondary, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
 }
 
 .has-tertiary-background-color {
@@ -367,12 +390,18 @@ body .is-layout-constrained > .alignright {
 .has-tertiary-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--tertiary, var(--wp--custom--color--highlight--default-dark, inherit));
 }
+.has-tertiary-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--tertiary, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-primary-alt-background-color {
   color: var(--wp--custom--color--contrast--primary-alt, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
 }
 .has-primary-alt-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--primary-alt, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+.has-primary-alt-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--primary-alt, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
 }
 
 .has-secondary-alt-background-color {
@@ -381,12 +410,18 @@ body .is-layout-constrained > .alignright {
 .has-secondary-alt-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--secondary-alt, var(--wp--custom--color--highlight--default-dark, inherit));
 }
+.has-secondary-alt-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--secondary-alt, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-tertiary-alt-background-color {
   color: var(--wp--custom--color--contrast--tertiary-alt, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
 }
 .has-tertiary-alt-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--tertiary-alt, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+.has-tertiary-alt-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--tertiary-alt, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
 }
 
 .has-highlight-background-color {
@@ -395,12 +430,18 @@ body .is-layout-constrained > .alignright {
 .has-highlight-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--highlight, var(--wp--custom--color--highlight--default-dark, inherit));
 }
+.has-highlight-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--highlight, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-highlight-alt-background-color {
   color: var(--wp--custom--color--contrast--highlight-alt, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
 }
 .has-highlight-alt-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--highlight-alt, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+.has-highlight-alt-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--highlight-alt, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
 }
 
 .has-dark-gray-background-color {
@@ -409,12 +450,18 @@ body .is-layout-constrained > .alignright {
 .has-dark-gray-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--dark-gray, var(--wp--custom--color--highlight--default-dark, inherit));
 }
+.has-dark-gray-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--dark-gray, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-very-dark-gray-background-color {
   color: var(--wp--custom--color--contrast--very-dark-gray, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
 }
 .has-very-dark-gray-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--very-dark-gray, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+.has-very-dark-gray-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--very-dark-gray, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
 }
 
 .has-green-background-color {
@@ -423,12 +470,18 @@ body .is-layout-constrained > .alignright {
 .has-green-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--green, var(--wp--custom--color--highlight--default-dark, inherit));
 }
+.has-green-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--green, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-dark-bright-green-background-color {
   color: var(--wp--custom--color--contrast--dark-bright-green, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
 }
 .has-dark-bright-green-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--dark-bright-green, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+.has-dark-bright-green-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--dark-bright-green, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
 }
 
 .has-orange-background-color {
@@ -437,12 +490,18 @@ body .is-layout-constrained > .alignright {
 .has-orange-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--orange, var(--wp--custom--color--highlight--default-dark, inherit));
 }
+.has-orange-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--orange, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-dark-orange-background-color {
   color: var(--wp--custom--color--contrast--dark-orange, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
 }
 .has-dark-orange-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--dark-orange, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+.has-dark-orange-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--dark-orange, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
 }
 
 .has-blue-background-color {
@@ -451,12 +510,18 @@ body .is-layout-constrained > .alignright {
 .has-blue-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--blue, var(--wp--custom--color--highlight--default-dark, inherit));
 }
+.has-blue-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--blue, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-dark-blue-background-color {
   color: var(--wp--custom--color--contrast--dark-blue, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
 }
 .has-dark-blue-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--dark-blue, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+.has-dark-blue-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--dark-blue, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
 }
 
 .has-midnight-blue-background-color {
@@ -465,12 +530,18 @@ body .is-layout-constrained > .alignright {
 .has-midnight-blue-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--midnight-blue, var(--wp--custom--color--highlight--default-dark, inherit));
 }
+.has-midnight-blue-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--midnight-blue, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-dark-midnight-blue-background-color {
   color: var(--wp--custom--color--contrast--dark-midnight-blue, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
 }
 .has-dark-midnight-blue-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--dark-midnight-blue, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+.has-dark-midnight-blue-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--dark-midnight-blue, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
 }
 
 .has-purple-background-color {
@@ -479,12 +550,18 @@ body .is-layout-constrained > .alignright {
 .has-purple-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--purple, var(--wp--custom--color--highlight--default-dark, inherit));
 }
+.has-purple-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--purple, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-dark-purple-background-color {
   color: var(--wp--custom--color--contrast--dark-purple, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
 }
 .has-dark-purple-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--dark-purple, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+.has-dark-purple-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--dark-purple, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
 }
 
 .has-light-red-background-color {
@@ -493,6 +570,9 @@ body .is-layout-constrained > .alignright {
 .has-light-red-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--light-red, var(--wp--custom--color--highlight--default-dark, inherit));
 }
+.has-light-red-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--light-red, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-red-background-color {
   color: var(--wp--custom--color--contrast--red, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
@@ -500,12 +580,18 @@ body .is-layout-constrained > .alignright {
 .has-red-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--red, var(--wp--custom--color--highlight--default-dark, inherit));
 }
+.has-red-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--red, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-dark-red-background-color {
   color: var(--wp--custom--color--contrast--dark-red, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
 }
 .has-dark-red-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--dark-red, var(--wp--custom--color--highlight--default-dark, inherit));
+}
+.has-dark-red-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--dark-red, var(--wp--custom--color--underline--default-dark, var(--wp--custom--color--underline--default, none)));
 }
 
 /* 
@@ -518,12 +604,18 @@ body .is-layout-constrained > .alignright {
 .has-light-green-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--light-green, var(--wp--custom--color--highlight--default-medium, inherit));
 }
+.has-light-green-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--light-green, var(--wp--custom--color--underline--default-medium, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-bright-green-background-color {
   color: var(--wp--custom--color--contrast--bright-green, var(--wp--custom--color--contrast--default-medium, var(--wp--preset--color--foreground-alt)));
 }
 .has-bright-green-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--bright-green, var(--wp--custom--color--highlight--default-medium, inherit));
+}
+.has-bright-green-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--bright-green, var(--wp--custom--color--underline--default-medium, var(--wp--custom--color--underline--default, none)));
 }
 
 .has-light-orange-background-color {
@@ -532,6 +624,9 @@ body .is-layout-constrained > .alignright {
 .has-light-orange-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--light-orange, var(--wp--custom--color--highlight--default-medium, inherit));
 }
+.has-light-orange-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--light-orange, var(--wp--custom--color--underline--default-medium, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-light-blue-background-color {
   color: var(--wp--custom--color--contrast--light-blue, var(--wp--custom--color--contrast--default-medium, var(--wp--preset--color--foreground-alt)));
@@ -539,12 +634,18 @@ body .is-layout-constrained > .alignright {
 .has-light-blue-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--light-blue, var(--wp--custom--color--highlight--default-medium, inherit));
 }
+.has-light-blue-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--light-blue, var(--wp--custom--color--underline--default-medium, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-light-purple-background-color {
   color: var(--wp--custom--color--contrast--light-purple, var(--wp--custom--color--contrast--default-medium, var(--wp--preset--color--foreground-alt)));
 }
 .has-light-purple-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--light-purple, var(--wp--custom--color--highlight--default-medium, inherit));
+}
+.has-light-purple-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--light-purple, var(--wp--custom--color--underline--default-medium, var(--wp--custom--color--underline--default, none)));
 }
 
 /* 
@@ -557,12 +658,18 @@ body .is-layout-constrained > .alignright {
 .has-light-yellow-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--light-yellow, var(--wp--custom--color--highlight--default-light, inherit));
 }
+.has-light-yellow-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--light-yellow, var(--wp--custom--color--underline--default-light, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-yellow-background-color {
   color: var(--wp--custom--color--contrast--yellow, var(--wp--custom--color--contrast--default-light, var(--wp--preset--color--contrast)));
 }
 .has-yellow-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--yellow, var(--wp--custom--color--highlight--default-light, inherit));
+}
+.has-yellow-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--yellow, var(--wp--custom--color--underline--default-light, var(--wp--custom--color--underline--default, none)));
 }
 
 /* 
@@ -575,12 +682,18 @@ body .is-layout-constrained > .alignright {
 .has-base-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--base, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
 }
+.has-base-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--base, var(--wp--custom--color--underline--default-white, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-neutral-background-color {
   color: var(--wp--custom--color--contrast--neutral, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
 }
 .has-neutral-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--neutral, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
+}
+.has-neutral-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--neutral, var(--wp--custom--color--underline--default-white, var(--wp--custom--color--underline--default, none)));
 }
 
 .has-neutral-alt-background-color {
@@ -589,12 +702,18 @@ body .is-layout-constrained > .alignright {
 .has-neutral-alt-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--neutral-alt, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
 }
+.has-neutral-alt-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--neutral-alt, var(--wp--custom--color--underline--default-white, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-foreground-alt-background-color {
   color: var(--wp--custom--color--contrast--foreground-alt, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
 }
 .has-foreground-alt-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--foreground-alt, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
+}
+.has-foreground-alt-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--foreground-alt, var(--wp--custom--color--underline--default-white, var(--wp--custom--color--underline--default, none)));
 }
 
 .has-white-background-color {
@@ -603,12 +722,18 @@ body .is-layout-constrained > .alignright {
 .has-white-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--white, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
 }
+.has-white-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--white, var(--wp--custom--color--underline--default-white, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-off-white-background-color {
   color: var(--wp--custom--color--contrast--off-white, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
 }
 .has-off-white-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--off-white, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
+}
+.has-off-white-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--off-white, var(--wp--custom--color--underline--default-white, var(--wp--custom--color--underline--default, none)));
 }
 
 .has-very-light-gray-background-color {
@@ -617,6 +742,9 @@ body .is-layout-constrained > .alignright {
 .has-very-light-gray-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--very-light-gray, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
 }
+.has-very-light-gray-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--very-light-gray, var(--wp--custom--color--underline--default-white, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-light-gray-background-color {
   color: var(--wp--custom--color--contrast--light-gray, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
@@ -624,12 +752,18 @@ body .is-layout-constrained > .alignright {
 .has-light-gray-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--light-gray, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
 }
+.has-light-gray-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--light-gray, var(--wp--custom--color--underline--default-white, var(--wp--custom--color--underline--default, none)));
+}
 
 .has-gray-background-color {
   color: var(--wp--custom--color--contrast--gray, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
 }
 .has-gray-background-color a:not(.wp-element-button) {
   color: var(--wp--custom--color--highlight--gray, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
+}
+.has-gray-background-color a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+  text-decoration: var(--wp--custom--color--underline--gray, var(--wp--custom--color--underline--default-white, var(--wp--custom--color--underline--default, none)));
 }
 
 /* 
@@ -643,17 +777,16 @@ body .is-layout-constrained > .alignright {
   color: #000;
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # CRITICAL BLOCK STYLES
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
+---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------
 # Columns and Column
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* 
  * Note: Padding for colored backgrounds on columns is now in
  * theme.json as custom block CSS.
  */
-/* ADD BACK gap on flex columns by default */
 /* 
  * Note: Breakpoint of 781 is what is hard-coded in WordPress 
  * v6.0+ to collapse columns
@@ -675,9 +808,9 @@ body .is-layout-constrained > .alignright {
     padding-right: var(--wp--style--root--padding-right) !important;
   }
 }
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Columns and Column: Custom
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* Columns no Gap */
 .wp-block-columns.is-style-no-gap,
 .wp-block-columns.is-style-no-gap .wp-block-column:not(.has-background),
@@ -692,7 +825,6 @@ body .is-layout-constrained > .alignright {
   gap: calc(2 * var(--wp--style--block-gap));
 }
 
-/* Column rounded borders */
 /* Column no padding */
 .wp-block-column.is-style-no-padding {
   padding: 0;
@@ -717,9 +849,9 @@ body .is-layout-constrained > .alignright {
     gap: var(--wp--style--block-gap);
   }
 }
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Cover
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* LIMIT cover image inner content to standard unless wide or full */
 .wp-block-cover .wp-block-cover__inner-container > *:not(.alignfull):not(.alignwide) {
   max-width: var(--wp--style--global--content-size);
@@ -734,14 +866,9 @@ body .is-layout-constrained > .alignright {
   margin-right: auto;
 }
 
-/*--------------------------------------------------------------
-# Cover: Custom
---------------------------------------------------------------*/
-/* Border */
-/* Rounded corners */
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Group
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* 
  * Note: Padding for colored backgrounds on groups is now in
  * theme.json as custom block CSS.
@@ -766,10 +893,9 @@ body .is-layout-constrained > .alignright {
     flex-wrap: wrap;
   }
 }
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Group: Custom
---------------------------------------------------------------*/
-/* Group borders */
+---------------------------------------------------------------------------------------*/
 .wp-block-group.is-style-rounded-border.is-layout-flex {
   overflow: hidden;
 }
@@ -818,21 +944,10 @@ body .is-layout-constrained > .alignright {
   top: var(--wp-admin--admin-bar--height, 32px);
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Heading
---------------------------------------------------------------*/
-/* If user specifies global heading font colors, don't override on colored backgrounds */
-.has-background .wp-block-heading:not(.has-text-color),
-.has-background h1:not(.has-text-color),
-.has-background h2:not(.has-text-color),
-.has-background h3:not(.has-text-color),
-.has-background h4:not(.has-text-color),
-.has-background h5:not(.has-text-color),
-.has-background h6:not(.has-text-color) {
-  color: inherit;
-}
-
-/* Don't add extra padding to headings with backgrounds */
+---------------------------------------------------------------------------------------*/
+/* Match our padding on headings with backgrounds */
 h1.has-background,
 h2.has-background,
 h3.has-background,
@@ -842,9 +957,9 @@ h6.has-background {
   padding: var(--wp--preset--spacing--40);
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Image
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* FIX caption color when on colored background */
 .wp-block-image figcaption {
   color: inherit;
@@ -873,12 +988,12 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
   color: rgba(0, 0, 0, 0) !important;
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Image: Custom
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* Image borders */
 .is-style-image-border img {
-  border: 1px solid var(--wp--custom--border--color);
+  border: 1px solid var(--wp--custom--color--border);
   border-radius: var(--wp--custom--border--radius);
   padding: var(--wp--preset--spacing--20);
 }
@@ -894,7 +1009,7 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 }
 
 .is-style-image-round-border img {
-  border: 1px solid var(--wp--custom--border--color);
+  border: 1px solid var(--wp--custom--color--border);
   border-radius: 9999px; /*50%;*/
   padding: var(--wp--preset--spacing--20);
 }
@@ -920,12 +1035,12 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
   padding: 0;
 }
 
-/*----------------------------------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Colors
 ----------------------------------------------------------------------------------------*/
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Navigation
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /** 
  * Bold or highlight active top-level menu items, depending on whether 
  * background color or not 
@@ -1064,9 +1179,9 @@ header > .wp-block-cover {
   transition-delay: var(--wp--custom--animation--duration--short);
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Navigation: Custom
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* Navigation Fixed menu */
 /* TO-DO: Consider adding .site-header:not(.is-style-fixed-header) */
 nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-open,
@@ -1144,9 +1259,9 @@ nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-con
   right: auto;
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Paragraph
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* 
  * Note: Breakpoint of 781 is what is hard-coded in WordPress 
  * v6.0+ to collapse columns
@@ -1166,9 +1281,9 @@ nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-con
     padding-right: var(--wp--style--root--padding-right) !important;
   }
 }
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Paragraph: Custom
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* Alignwide */
 p.is-style-alignwide {
   max-width: var(--wp--style--global--wide-size) !important;
@@ -1211,12 +1326,12 @@ p.is-style-arrow-icon > a:after {
   white-space: pre-wrap; /* adds line break */
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # ADDITIONAL BASE STYLES
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
+---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------
 # Utilities
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* 
  * Note: These utility classes must be added manually in the 
  * Advanced section of the block settings.
@@ -1242,9 +1357,9 @@ p.is-style-arrow-icon > a:after {
   flex-shrink: 0;
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Dashicons
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /**
  * Override core WordPress base Dashicon styles. Don't let it
  * alter height, width, font-size or line-height. 
@@ -1308,16 +1423,16 @@ p.is-style-arrow-icon > a:after {
   content: none;
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Dashicons: Custom
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 .is-style-no-icon:before {
   display: none;
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Margins (Vertical spacing)
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* 
  * Core Wordpress controls vertical spacing by adding the gap 
  * setting as top margin between all blocks on the site. However, 
@@ -1364,9 +1479,9 @@ body .is-layout-constrained .wp-block-template-part > * + *:not(.wp-block-templa
   margin-block-end: 0;
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Padding (Horizontal and vertical spacing)
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* For convenience, remove padding from inner containers */
 main.wp-block-group:not(.has-global-padding),
 .wp-block-template-part {
@@ -1383,7 +1498,6 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
 }
 
 /* FIX to add back horizontal padding */
-.has-global-padding,
 .has-global-padding > .alignfull:not(.wp-block-post-content, .wp-block-image, .wp-block-columns, .wp-block-buttons),
 .has-global-padding.alignfull:not(.wp-block-post-content, .wp-block-image, .wp-block-columns, .wp-block-buttons) {
   padding-left: var(--wp--style--root--padding-left);
@@ -1391,13 +1505,11 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
 }
 
 /* But REMOVE duplicate padding */
-/* 
-.has-global-padding :where(.has-global-padding):not(.has-background),
 .has-global-padding > .alignfull:where(:not(.has-global-padding)) > :where(.wp-block-image) {
-	padding-left: 0;
-	padding-right: 0;
+  padding-left: 0;
+  padding-right: 0;
 }
- */
+
 /* FIX alignfull in WordPress.org theme preview */
 .has-global-padding > #wporg-pattern-preview > div > .alignfull {
   margin-right: calc(var(--wp--style--root--padding-right) * -1);
@@ -1406,12 +1518,12 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
   padding-left: var(--wp--style--root--padding-left);
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Flat Blocks Theme Compatibility with Prior Versions
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
+---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------
 # Flat Blocks Colors (for theme < v1.6)
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 .has-foreground-color {
   color: var(--wp--preset--color--contrast);
 }
@@ -1436,12 +1548,12 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
   border-color: var(--wp--preset--color--base);
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Flat Blocks Custom Styles (for theme < v1.6.4)
---------------------------------------------------------------*/
-/*--------------------------------------------------------------
+---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------
 # Cover and Media & Text: Custom
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 .is-style-cover-rounded-corners {
   border-radius: var(--wp--custom--border--radius);
   overflow: hidden;
@@ -1449,14 +1561,14 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
 
 .is-style-cover-border,
 .is-style-media-text-border {
-  border: 1px solid var(--wp--custom--border--color);
+  border: 1px solid var(--wp--custom--color--border);
   border-radius: var(--wp--custom--border--radius);
   padding: var(--wp--preset--spacing--40);
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Color compatibility with other themes
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* 
  * TwentyTwentyFour theme uses base and contrast in numbered 
  * shades. It also uses accent colors in numbered shades instead 

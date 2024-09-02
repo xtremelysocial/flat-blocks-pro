@@ -1,6 +1,6 @@
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Latest Posts
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 
 /* Increase post title size */
 .wp-block-latest-posts.is-grid .wp-block-latest-posts__post-title {
@@ -11,7 +11,7 @@
 /* Set post thumbnails to match blog */
 .wp-block-latest-posts__featured-image img {
 	border-radius: var(--wp--custom--border--radius);
-	border: 1px solid var(--wp--custom--border--color);
+	border: 1px solid var(--wp--custom--color--border);
 	//padding: var(--wp--custom--border--radius) var(--wp--custom--border--radius) 0 var(--wp--custom--border--radius);
 	padding: var(--wp--preset--spacing--20);
 	box-shadow: var(--wp--custom--shadow--default);
@@ -45,9 +45,9 @@
     }
 }
 
-/*--------------------------------------------------------------
+/*---------------------------------------------------------------------------------------
 # Latest Posts: Custom
---------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 
 /* Bullets */
 .wp-block-latest-posts.is-style-bullets.wp-block-latest-posts__list:not(.is-grid) {
