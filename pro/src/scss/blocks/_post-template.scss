@@ -1,9 +1,9 @@
 /*--------------------------------------------------------------
-# Custom: Post Template
+# Post Template: Custom
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-## Drop Shadow Post Template
+## Custom: Drop Shadow Post Template
 --------------------------------------------------------------*/
 
 /* Add background, padding, border and drop shadow */
@@ -21,7 +21,7 @@
 }
 
 /*--------------------------------------------------------------
-## Alternate Colors Post Template
+## Custom: Alternate Colors Post Template
 --------------------------------------------------------------*/
 
 /* For featured image, apply color to an overlay */
@@ -62,31 +62,29 @@
 .wp-block-post-template.is-style-alternate-colors .wp-block-post:nth-child(6n+6) .wp-block-post-featured-image:before {
 	background-color: var(--wp--preset--color--purple) !important;
 }
-
-/* If no post image, then add a colored top border */
-/* 
-.wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail) {
-	padding-top: var(--wp--preset--spacing--30);
-	border-top-width: var(--wp--preset--spacing--30);
-	border-top-style: solid;
-}
-
-.wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail):nth-child(6n+1) {
-	border-top-color: var(--wp--preset--color--red) !important;
-}
-.wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail):nth-child(6n+2) {
-	border-top-color: var(--wp--preset--color--orange) !important;
-}
-.wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail):nth-child(6n+3) {
-	border-top-color: var(--wp--preset--color--yellow) !important;
-}
-.wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail):nth-child(6n+4) {
-	border-top-color: var(--wp--preset--color--green) !important;
-}
-.wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail):nth-child(6n+5) {
-	border-top-color: var(--wp--preset--color--blue) !important;
-}
-.wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail):nth-child(6n+6) {
-	border-top-color: var(--wp--preset--color--purple) !important;
-}
- */
+// 
+//* If no post image, then add a colored top border */
+// .wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail) {
+// 	padding-top: var(--wp--preset--spacing--30);
+// 	border-top-width: var(--wp--preset--spacing--30);
+// 	border-top-style: solid;
+// }
+// 
+// .wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail):nth-child(6n+1) {
+// 	border-top-color: var(--wp--preset--color--red) !important;
+// }
+// .wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail):nth-child(6n+2) {
+// 	border-top-color: var(--wp--preset--color--orange) !important;
+// }
+// .wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail):nth-child(6n+3) {
+// 	border-top-color: var(--wp--preset--color--yellow) !important;
+// }
+// .wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail):nth-child(6n+4) {
+// 	border-top-color: var(--wp--preset--color--green) !important;
+// }
+// .wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail):nth-child(6n+5) {
+// 	border-top-color: var(--wp--preset--color--blue) !important;
+// }
+// .wp-block-post-template.is-style-alternate-colors .wp-block-post:not(.has-post-thumbnail):nth-child(6n+6) {
+// 	border-top-color: var(--wp--preset--color--purple) !important;
+// }

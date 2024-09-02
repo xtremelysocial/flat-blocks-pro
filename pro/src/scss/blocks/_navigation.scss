@@ -1,27 +1,25 @@
 /*--------------------------------------------------------------
-# Custom: Navigation
+# Navigation: Custom
 --------------------------------------------------------------*/
 
 /*--------------------------------------------------------------
-## Nav Dividers
+## Custom: Nav Dividers
 --------------------------------------------------------------*/
 
-/* When specified, put dividers on top-level horizontal menu items */
-/* TO-DO: Get this working in the block editor too */
-/* 
-.wp-block-navigation.is-style-nav-dividers {
-
-	& > .wp-block-navigation__container,
-	& .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container {
-		column-gap: var(--wp--preset--spacing--30);
-		
-		& > li:not(:last-child) {
-			border-right: 1px solid rgba(128, 128, 128, 0.2);
-			padding-right: var(--wp--preset--spacing--30);
-		}
-	}
-}
- */
+//* When specified, put dividers on top-level horizontal menu items */
+//* TO-DO: Get this working in the block editor too */
+// .wp-block-navigation.is-style-nav-dividers {
+// 
+// 	& > .wp-block-navigation__container,
+// 	& .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container {
+// 		column-gap: var(--wp--preset--spacing--30);
+// 		
+// 		& > li:not(:last-child) {
+// 			border-right: 1px solid rgba(128, 128, 128, 0.2);
+// 			padding-right: var(--wp--preset--spacing--30);
+// 		}
+// 	}
+// }
 
 /* Always put dividers on drop-down menus from top-level horizontal menu items */
 .wp-block-navigation.is-style-nav-dividers .wp-block-navigation__responsive-container:not(.is-menu-open) {
@@ -129,7 +127,7 @@
 }
 
 /*--------------------------------------------------------------
-## Scroll Header Navigation
+## Custom: Scroll Header Navigation
 --------------------------------------------------------------*/
 /* Line up menu close button with menu open button */
 .wp-block-group.is-style-scroll-header .wp-block-navigation__responsive-container.is-menu-open {
@@ -177,7 +175,7 @@
 }
 
 /*--------------------------------------------------------------
-## Navigation Item Icons
+## Custom: Navigation Item Icons
 --------------------------------------------------------------*/
 
 /* Arrow Up Alt 2 icon */

@@ -76,33 +76,33 @@
 .wp-block-navigation__submenu-container.dashicons:before {
 	content: none;
 }
+// 
+// :where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item a:not(.wp-element-button)), 
+// :where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu a:not(.wp-element-button)), 
+// :where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu button.wp-block-navigation-item__content), 
+// :where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-pages-list__item button.wp-block-navigation-item__content) {
+//     padding:.5em 1em
+// }
+// 
+//* Move the submenu icon padding to account for the icon */
+// .wp-block-navigation__submenu-container .wp-block-navigation-item.dashicons {
+// 	margin-right: .5em;
+// }
+// 
+// .wp-block-navigation__submenu-container .wp-block-navigation-item.dashicons:before {
+// 	padding-left: 1em;
+// }
+// 
+// .wp-block-navigation__submenu-container .wp-block-navigation-item.dashicons	> .wp-block-navigation-item__content {
+// 	padding-left: 0;
+// }
 
-/*:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item a:not(.wp-element-button)), 
-:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu a:not(.wp-element-button)), 
-:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu button.wp-block-navigation-item__content), 
-:where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-pages-list__item button.wp-block-navigation-item__content) {
-    padding:.5em 1em
-}*/
-
-/* Move the submenu icon padding to account for the icon */
-.wp-block-navigation__submenu-container .wp-block-navigation-item.dashicons {
-	margin-right: .5em;
-}
-
-.wp-block-navigation__submenu-container .wp-block-navigation-item.dashicons:before {
-	padding-left: 1em;
-}
-
-.wp-block-navigation__submenu-container .wp-block-navigation-item.dashicons	> .wp-block-navigation-item__content {
-	padding-left: 0;
-}
-
-.wp-block-navigation__container > .wp-block-navigation-item.dashicons-before {
-	position: relative;
-	margin-left: 1em;
-	
-	&:before {
-		position: absolute;
-		left: calc(-1em - var(--wp--preset--spacing--20)); 
-	}
-}
+// .wp-block-navigation__container > .wp-block-navigation-item.dashicons-before {
+// 	position: relative;
+// 	margin-left: 1em;
+// 	
+// 	&:before {
+// 		position: absolute;
+// 		left: calc(-1em - var(--wp--preset--spacing--20)); 
+// 	}
+// }
