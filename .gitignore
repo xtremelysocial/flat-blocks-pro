@@ -34,7 +34,7 @@ node_modules/
 #!pro/pro-plugin/build
 
 # Debugging files 
-*.asset.php
+#*.asset.php
 *.css.map
 *.js.map
 *-rtl.css
@@ -54,9 +54,11 @@ node_modules/
 # Ignore save, test files, and zip files
 **/*-SAVE*
 styles/*-TEST*.json
+styles/blocks-test/
+styles/global-test/
 styles/colors-test/
 styles/sections-test/
-styles/template-parts-test
+styles/template-parts-test/
 *.css.map
 
 # Unused source
