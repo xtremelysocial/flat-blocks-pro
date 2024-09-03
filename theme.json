@@ -65,7 +65,7 @@
 		"useRootPaddingAwareAlignments": true,
 		"appearanceTools": true,
 		"position": {
-			"sticky": true
+			"sticky": false
 		},
 		"lightbox": {
 			"allowEditing": true,
@@ -995,6 +995,13 @@
 					"fontSize": "var(--wp--preset--font-size--small)",
 					"fontWeight": "400",
 					"textDecoration": "none"
+				},
+				"elements": {
+					"link": {
+						"typography": {
+							"textDecoration": "none"
+						}
+					}
 				}
 			},
 			"button": {
@@ -1741,9 +1748,9 @@
 			"area": "title"
 		},
 		{
-			"name": "page-title-excerpt",
-			"title": "Page Title w/Excerpt",
-			"description": "Page title with excerpt",
+			"name": "page-title-no-excerpt",
+			"title": "Page Title w/outExcerpt",
+			"description": "Page title without excerpt",
 			"area": "title"
 		},
 		{
