@@ -100,7 +100,7 @@ if ( ! function_exists( 'flatblocks_pro_register_jetpack_block_styles' ) ) :
 		 * 'is-style-' will automatically be added to the names.
 		 */
 		$jetpack_styles = array(
-			'no-icon' 			=> array( esc_html__('No Icon', 'flat-blocks'), 
+			'no-icon' 			=> array( esc_html__('No Icon', 'flat-blocks-pro'), 
 				array( 'jetpack/contact-info', 'jetpack/email', 'jetpack/phone' ),
 				'style_handle' 	=> 'flatblocks-pro-jetpack-styles'
 			)

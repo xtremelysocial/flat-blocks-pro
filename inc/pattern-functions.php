@@ -67,7 +67,7 @@ if ( ! function_exists( 'flatblocks_parse_block_pattern' ) ) :
 		// For child themes or new parent theme, override the theme name and update
 		// the image URL's
 		$theme_slug = wp_get_theme()->get_stylesheet();
-		if ( $theme_slug != 'flat-blocks' ) {
+		if ( $theme_slug != 'flat-blocks-pro' ) {
 			$content = str_ireplace('"theme":"flat-blocks"', '"theme":"' . $theme_slug . '"', $content);
 		}
 

@@ -23,112 +23,112 @@ if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 		 * 'is-style-' will automatically be added to the names.
 		 */
 		$custom_styles = array(
-			'fixed-menu' 		=> array( esc_html__('Fixed Menu', 'flat-blocks'), 
+			'fixed-menu' 		=> array( esc_html__('Fixed Menu', 'flat-blocks-pro'), 
 				array('navigation' )
 			),
-			'fixed-header' 		=> array( esc_html__('Fixed Header', 'flat-blocks'), 
+			'fixed-header' 		=> array( esc_html__('Fixed Header', 'flat-blocks-pro'), 
 				array('group' )
 			),
-// 			'button-alt' => array( esc_html__('Button Alt', 'flat-blocks'), 
+// 			'button-alt' => array( esc_html__('Button Alt', 'flat-blocks-pro'), 
 // 				array('button' )
 // 			),
-// 			'button-outline-alt' => array( esc_html__('Outline Alt', 'flat-blocks'), 
+// 			'button-outline-alt' => array( esc_html__('Outline Alt', 'flat-blocks-pro'), 
 // 				array('button' )
 // 			),
-// 			'button-alt-2' => array( esc_html__('Button Alt 2', 'flat-blocks'), 
+// 			'button-alt-2' => array( esc_html__('Button Alt 2', 'flat-blocks-pro'), 
 // 				array('button' )
 // 			),
-// 			'button-outline-alt-2' => array( esc_html__('Outline Alt 2', 'flat-blocks'), 
+// 			'button-outline-alt-2' => array( esc_html__('Outline Alt 2', 'flat-blocks-pro'), 
 // 				array('button' )
 // 			),
-// 			'cover-border' 		=> array( esc_html__('Border', 'flat-blocks'), 
+// 			'cover-border' 		=> array( esc_html__('Border', 'flat-blocks-pro'), 
 // 				array('cover' )
 // 			),
-// 			'cover-rounded-corners' => array( esc_html__('Rounded Corners', 'flat-blocks'), 
+// 			'cover-rounded-corners' => array( esc_html__('Rounded Corners', 'flat-blocks-pro'), 
 // 				array('cover' )
 // 			),
-// 			'media-text-border' => array( esc_html__('Border', 'flat-blocks'), 
+// 			'media-text-border' => array( esc_html__('Border', 'flat-blocks-pro'), 
 // 				array('media-text' )
 // 			),
-// 			'media-text-thick-border' => array( esc_html__('Thick Border', 'flat-blocks'), 
+// 			'media-text-thick-border' => array( esc_html__('Thick Border', 'flat-blocks-pro'), 
 // 				array('media-text' )
 // 			),
-			'image-border' 		=> array( esc_html__('Border', 'flat-blocks'), 
+			'image-border' 		=> array( esc_html__('Border', 'flat-blocks-pro'), 
 				array('image' )
 			),
-			'image-round-border' => array( esc_html__('Rounded w/Border', 'flat-blocks'), 
+			'image-round-border' => array( esc_html__('Rounded w/Border', 'flat-blocks-pro'), 
 				array('image' )
 			),
-			'image-border' 		=> array( esc_html__('Image Border', 'flat-blocks'), 
+			'image-border' 		=> array( esc_html__('Image Border', 'flat-blocks-pro'), 
 				array( 'gallery' )
 			),
-			'image-computer-screen' => array( esc_html__('Computer Screen', 'flat-blocks'), 
+			'image-computer-screen' => array( esc_html__('Computer Screen', 'flat-blocks-pro'), 
 				array('image' )
 			),
-			'image-tablet-phone-screen' => array( esc_html__('Tablet/Phone Screen', 'flat-blocks'), 
+			'image-tablet-phone-screen' => array( esc_html__('Tablet/Phone Screen', 'flat-blocks-pro'), 
 				array('image' )
 			),
-			'image-no-border'	=> array( esc_html__('No Border', 'flat-blocks'), 
+			'image-no-border'	=> array( esc_html__('No Border', 'flat-blocks-pro'), 
 				array('post-featured-image' )
 			),
-			'thick' 			=> array( esc_html__('Thick', 'flat-blocks'), 
+			'thick' 			=> array( esc_html__('Thick', 'flat-blocks-pro'), 
 				array('separator' )
 			),
-			'thick-wide' 		=> array( esc_html__('Thick Wide', 'flat-blocks'), 
+			'thick-wide' 		=> array( esc_html__('Thick Wide', 'flat-blocks-pro'), 
 				array('separator' )
 			),
-			'bullets' 			=> array( esc_html__('Bullets', 'flat-blocks'), 
+			'bullets' 			=> array( esc_html__('Bullets', 'flat-blocks-pro'), 
 				array('latest-posts', 'latest-comments' )
 			),
-			'no-padding' 		=> array( esc_html__('No Padding', 'flat-blocks'), 
+			'no-padding' 		=> array( esc_html__('No Padding', 'flat-blocks-pro'), 
 				array('group', 'column' )
 			),
-// 			'rounded-border' 	=> array( esc_html__('Border', 'flat-blocks'), 
+// 			'rounded-border' 	=> array( esc_html__('Border', 'flat-blocks-pro'), 
 // 				array('group', 'columns', 'column', 'comments', 'post-comments' )
 // 			),
-// 			'thick-rounded-border' => array( esc_html__('Thick Border', 'flat-blocks'), 
+// 			'thick-rounded-border' => array( esc_html__('Thick Border', 'flat-blocks-pro'), 
 // 				array('group', 'columns', 'column', 'comments', 'post-comments' )
 // 			),
-			'no-gap' 			=> array( esc_html__('No Gap', 'flat-blocks'), 
+			'no-gap' 			=> array( esc_html__('No Gap', 'flat-blocks-pro'), 
 				array('columns' )
 			),
-			'thick-gap' 		=> array( esc_html__('Thick Gap', 'flat-blocks'), 
+			'thick-gap' 		=> array( esc_html__('Thick Gap', 'flat-blocks-pro'), 
 				array('columns' )
 			),
-			'center-on-mobile' 	=> array( esc_html__('Center on Mobile', 'flat-blocks'), 
+			'center-on-mobile' 	=> array( esc_html__('Center on Mobile', 'flat-blocks-pro'), 
 				array('columns' )
 			),
-			'no-read-more' 		=> array( esc_html__('No Read More', 'flat-blocks'), 
+			'no-read-more' 		=> array( esc_html__('No Read More', 'flat-blocks-pro'), 
 				array('post-excerpt' )
 			),
-			'list-checkmarks' 	=> array( esc_html__('Checkmarks', 'flat-blocks'), 
+			'list-checkmarks' 	=> array( esc_html__('Checkmarks', 'flat-blocks-pro'), 
 				array('list', 'page-list' )
 			),
-			'list-plain' 		=> array( esc_html__('Plain', 'flat-blocks'), 
+			'list-plain' 		=> array( esc_html__('Plain', 'flat-blocks-pro'), 
 				array('list', 'page-list', 'categories' )
 			),
-			'list-plain-centered' => array( esc_html__('Plain Centered', 'flat-blocks'), 
+			'list-plain-centered' => array( esc_html__('Plain Centered', 'flat-blocks-pro'), 
 				array('list', 'page-list', 'categories' )
 			),
-			'no-icon' 			=> array( esc_html__('No Icon', 'flat-blocks'), 
+			'no-icon' 			=> array( esc_html__('No Icon', 'flat-blocks-pro'), 
 				array('post-author', 'post-date', 'post-terms' )
 			),
-			'alignwide' 		=> array( esc_html__('Align Wide', 'flat-blocks'), 
+			'alignwide' 		=> array( esc_html__('Align Wide', 'flat-blocks-pro'), 
 				array('paragraph' )
 			),
-			'link-underline' 	=> array( esc_html__('Underline Link', 'flat-blocks'), 
+			'link-underline' 	=> array( esc_html__('Underline Link', 'flat-blocks-pro'), 
 				array('paragraph', 'list', 'list-item', 'categories', 'latest-posts', 'latest-comments', 'page-list', 'post-title', 'post-terms')
 			),
-			'link-no-underline' => array( esc_html__('No Underline Link', 'flat-blocks'), 
+			'link-no-underline' => array( esc_html__('No Underline Link', 'flat-blocks-pro'), 
 				array('paragraph', 'list', 'list-item', 'categories', 'latest-posts', 'latest-comments', 'page-list', 'post-title', 'post-terms')
 			),
-			'link-underline-hover' => array( esc_html__('Underline Hover', 'flat-blocks'), 
+			'link-underline-hover' => array( esc_html__('Underline Hover', 'flat-blocks-pro'), 
 				array('paragraph', 'list', 'list-item', 'categories', 'latest-posts', 'latest-comments', 'page-list', 'post-title', 'post-terms', 'site-title')
 			),
-			'arrow-icon' 		=> array( esc_html__('Arrow Icon', 'flat-blocks'), 
+			'arrow-icon' 		=> array( esc_html__('Arrow Icon', 'flat-blocks-pro'), 
 				array('paragraph' )
 			),
-			'arrow-icon-no-text' => array( esc_html__('Arrow No Text', 'flat-blocks'), 
+			'arrow-icon-no-text' => array( esc_html__('Arrow No Text', 'flat-blocks-pro'), 
 				array('paragraph' )
 			)
 		);

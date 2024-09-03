@@ -46,34 +46,34 @@ if ( version_compare( get_bloginfo( 'version' ), '6.6', '<' ) and
 
 		// Define custom styles and what blocks they apply to. 
 		$compat_styles = array(
-			'rounded-corners' => array( esc_html__('Rounded Corners', 'flat-blocks'), 
+			'rounded-corners' => array( esc_html__('Rounded Corners', 'flat-blocks-pro'), 
 				array('group', 'columns', 'column', 'cover', 'media-text', 'comments')
 			),
-			'rounded-border' 	=> array( esc_html__('Border', 'flat-blocks'), 
+			'rounded-border' 	=> array( esc_html__('Border', 'flat-blocks-pro'), 
 				array('group', 'columns', 'column', 'cover', 'media-text', 'comments')
 			),
-			'thick-rounded-border' => array( esc_html__('Thick Border', 'flat-blocks'), 
+			'thick-rounded-border' => array( esc_html__('Thick Border', 'flat-blocks-pro'), 
 				array('group', 'columns', 'column', 'cover', 'media-text', 'comments')
 			),
-// 			'cover-rounded-corners' => array( esc_html__('Rounded Corners', 'flat-blocks'), 
+// 			'cover-rounded-corners' => array( esc_html__('Rounded Corners', 'flat-blocks-pro'), 
 // 				array('cover' )
 // 			),
-// 			'cover-border' 		=> array( esc_html__('Border', 'flat-blocks'), 
+// 			'cover-border' 		=> array( esc_html__('Border', 'flat-blocks-pro'), 
 // 				array('cover' )
 // 			),
-// 			'media-text-border' => array( esc_html__('Border', 'flat-blocks'), 
+// 			'media-text-border' => array( esc_html__('Border', 'flat-blocks-pro'), 
 // 				array('media-text' )
 // 			),
-			'button-alt' => array( esc_html__('Button Alt', 'flat-blocks'), 
+			'button-alt' => array( esc_html__('Button Alt', 'flat-blocks-pro'), 
 				array('button' )
 			),
-			'button-outline-alt' => array( esc_html__('Outline Alt', 'flat-blocks'), 
+			'button-outline-alt' => array( esc_html__('Outline Alt', 'flat-blocks-pro'), 
 				array('button' )
 			),
-			'button-alt-2' => array( esc_html__('Button Alt 2', 'flat-blocks'), 
+			'button-alt-2' => array( esc_html__('Button Alt 2', 'flat-blocks-pro'), 
 				array('button' )
 			),
-			'button-outline-alt-2' => array( esc_html__('Outline Alt 2', 'flat-blocks'), 
+			'button-outline-alt-2' => array( esc_html__('Outline Alt 2', 'flat-blocks-pro'), 
 				array('button' )
 			),
 		);

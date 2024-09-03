@@ -16,7 +16,7 @@ module.exports = {
 	...defaultConfig,
 	...{
 		entry: {
-			'flat-blocks': './src/scss/flat-blocks.scss',
+			'flat-blocks-pro': './src/scss/flat-blocks.scss',
 			'editor-styles': './src/scss/editor-styles.scss',
 			'block-styles': './src/scss/block-styles.scss',
 			'wp-compat': './src/scss/wp-compat.scss',

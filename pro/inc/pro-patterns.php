@@ -16,24 +16,24 @@ function flatblocks_pro_block_patterns( $block_patterns ) {
 
 	$pro_patterns = array(
 		'pro-footer-3-blocks-image-curved' => array( 
-			'title' => __( 'PRO Footer Curved Image w/3 Blocks', 'flat-blocks' ),
+			'title' => __( 'PRO Footer Curved Image w/3 Blocks', 'flat-blocks-pro' ),
 			//'categories' => array ( 'flatblocks', 'footer' ),
 			'categories' => array ( 'flatblocks' ),
 			//'blockTypes' => array ('footer')
 			'inserter' => false
 		),
 		'pro-query-loop-3-columns' => array( 
-			'title' => __( 'PRO Query Loop 3 Column Image Grid', 'flat-blocks' ),
+			'title' => __( 'PRO Query Loop 3 Column Image Grid', 'flat-blocks-pro' ),
 			'categories' => array ( 'flatblocks', 'query' ),
 			'blockTypes' => array ('core/query')
 		),
 		'pro-query-loop-colored-3-columns' => array( 
-			'title' => __( 'PRO Query Loop 3 Column Colored Image Grid', 'flat-blocks' ),
+			'title' => __( 'PRO Query Loop 3 Column Colored Image Grid', 'flat-blocks-pro' ),
 			'categories' => array ( 'flatblocks', 'query', 'featured' ),
 			'blockTypes' => array ('core/query')
 		)/*,
 		'pro-query-loop-4-columns' => array( 
-			'title' => __( 'PRO Query Loop 4 Column Image Grid', 'flat-blocks' ),
+			'title' => __( 'PRO Query Loop 4 Column Image Grid', 'flat-blocks-pro' ),
 			'categories' => array ( 'flatblocks', 'query' ),
 			'blockTypes' => array ('core/query')
 		)*/
