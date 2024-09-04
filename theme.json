@@ -65,7 +65,7 @@
 		"useRootPaddingAwareAlignments": true,
 		"appearanceTools": true,
 		"position": {
-			"sticky": false
+			"sticky": true
 		},
 		"lightbox": {
 			"allowEditing": true,
