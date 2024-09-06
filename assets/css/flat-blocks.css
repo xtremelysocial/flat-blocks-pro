@@ -10,12 +10,12 @@
  * @package flat-blocks
  * @since	1.0
  */
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # BASE STYLES
----------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------
 # Normalize
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /* 
  * Default to contain borders and padding within blocks and prevent iOS from adjusting
  * text sizes after orientation change. 
@@ -45,9 +45,9 @@ body {
   text-underline-offset: var(--wp--custom--link--offset, 0);
 }
 
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Elements
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /* Use bold font-weight from theme.json */
 strong,
 b {
@@ -72,9 +72,9 @@ figcaption {
   text-align: center;
 }
 
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Buttons and Links
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /*
  * Link styles.
  * Necessary until the following issue is resolved in Gutenberg:
@@ -145,9 +145,9 @@ input[type=file]::file-selector-button:hover,
   opacity: var(--wp--custom--button--hover-opacity, 0.85);
 }
 
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Custom: Link Underlines
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /* Underline links */
 .is-style-link-underline a,
 .is-style-link-underline a:active {
@@ -175,9 +175,9 @@ input[type=file]::file-selector-button:hover,
   text-decoration: underline;
 }
 
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Forms
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /* 
  * Style form fields
  * 
@@ -241,9 +241,9 @@ select:focus-visible {
   transition: outline 0.3s ease;
 }
 
-/*--------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Alignments
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /*
  * Don't let anything be wider than our max width. This is so 
  * fullwidth images don't get so wide they lose resolution.
@@ -286,9 +286,9 @@ body .is-layout-constrained > .alignright {
     position: fixed;
   }
 }
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Colors
-----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /* 
  * First set some basic defaults for when a background color is used
  */
@@ -302,7 +302,8 @@ body .is-layout-constrained > .alignright {
 
 /* 
  * Black and near-black colors, default light text (but leave link color alone).
- * Override by defining --wp--custom--color--contrast--black in theme.json.
+ * Override by defining --wp--custom--color--contrast--black and/or 
+ * --wp--custom--color--highlight--black in theme.json.
  */
 .has-contrast-background-color {
   color: var(--wp--custom--color--contrast--contrast, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
@@ -366,7 +367,8 @@ body .is-layout-constrained > .alignright {
 
 /* 
  * Dark colors, default light text and links 
- * Override by defining --wp--custom--color--contrast--dark in theme.json.
+ * Override by defining --wp--custom--color--contrast--dark and/or
+ * --wp--custom--color--highlight--dark in theme.json.
  */
 .has-primary-background-color {
   color: var(--wp--custom--color--contrast--primary, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
@@ -599,8 +601,9 @@ body .is-layout-constrained > .alignright {
 }
 
 /* 
- * Medium colors, default light text and links too but make it easy for theme styles to 
- * Override by defining --wp--custom--color--contrast--medium in theme.json.
+ * Medium colors, default light text and links too but make it easy for theme
+ * styles to Override by defining --wp--custom--color--contrast--medium in
+ * theme.json.
  */
 .has-light-green-background-color {
   color: var(--wp--custom--color--contrast--light-green, var(--wp--custom--color--contrast--default-medium, var(--wp--preset--color--foreground-alt)));
@@ -781,12 +784,12 @@ body .is-layout-constrained > .alignright {
   color: #000;
 }
 
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # CRITICAL BLOCK STYLES
----------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------
 # Columns and Column
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /* 
  * Note: Padding for colored backgrounds on columns is now in
  * theme.json as custom block CSS.
@@ -812,9 +815,9 @@ body .is-layout-constrained > .alignright {
     padding-right: var(--wp--style--root--padding-right) !important;
   }
 }
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Columns and Column: Custom
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /* Columns no Gap */
 .wp-block-columns.is-style-no-gap,
 .wp-block-columns.is-style-no-gap .wp-block-column:not(.has-background),
@@ -853,9 +856,9 @@ body .is-layout-constrained > .alignright {
     gap: var(--wp--style--block-gap);
   }
 }
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Cover
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /* LIMIT cover image inner content to standard unless wide or full */
 .wp-block-cover .wp-block-cover__inner-container > *:not(.alignfull):not(.alignwide) {
   max-width: var(--wp--style--global--content-size);
@@ -870,9 +873,15 @@ body .is-layout-constrained > .alignright {
   margin-right: auto;
 }
 
-/*---------------------------------------------------------------------------------------
+/* If cover used as site header, make sure it is layered above other covers */
+header > .wp-block-cover {
+  overflow: visible;
+  z-index: 3;
+}
+
+/*------------------------------------------------------------------------------
 # Group
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /* 
  * Note: Padding for colored backgrounds on groups is now in
  * theme.json as custom block CSS.
@@ -897,9 +906,9 @@ body .is-layout-constrained > .alignright {
     flex-wrap: wrap;
   }
 }
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Group: Custom
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 .wp-block-group.is-style-rounded-border.is-layout-flex {
   overflow: hidden;
 }
@@ -948,9 +957,9 @@ body .is-layout-constrained > .alignright {
   top: var(--wp-admin--admin-bar--height, 32px);
 }
 
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Heading
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /* Match our padding on headings with backgrounds */
 h1.has-background,
 h2.has-background,
@@ -961,9 +970,9 @@ h6.has-background {
   padding: var(--wp--preset--spacing--40);
 }
 
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Image
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /* FIX caption color when on colored background */
 .wp-block-image figcaption {
   color: inherit;
@@ -992,9 +1001,9 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
   color: rgba(0, 0, 0, 0) !important;
 }
 
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Image: Custom
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /* Image borders */
 .is-style-image-border img {
   border: 1px solid var(--wp--custom--color--border);
@@ -1039,16 +1048,16 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
   padding: 0;
 }
 
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Colors
-----------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------
 # Navigation
----------------------------------------------------------------------------------------*/
-/** 
- * Bold or highlight active top-level menu items, depending on whether 
- * background color or not 
- */
+------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------
+# Bold or highlight ACTIVE menu items 
+------------------------------------------------------------------------------*/
+/* Bold or highlight active top-level menu items */
 .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.current-menu-item, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:has(.current-menu-ancestor), .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.current-menu-ancestor, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:has(.current-menu-ancestor) > .wp-block-navigation-item__content, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.wp-block-pages-list__item.current-menu-item > a, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.wp-block-home-link > a[aria-current=page] {
   color: var(--wp--preset--color--highlight);
 }
@@ -1062,7 +1071,7 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
   font-weight: var(--wp--custom--typography--font-weight--medium);
 }
 
-/* Bold or highlight active sub-menu items, depending on whether text color or not */
+/* Bold or highlight active sub-menu items */
 .wp-block-navigation__submenu-container:not(.has-text-color) .wp-block-navigation-item.current-menu-item .wp-block-navigation-item__content.wp-block-navigation-item__content {
   color: var(--wp--preset--color--highlight);
 }
@@ -1071,12 +1080,15 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
   font-weight: var(--wp--custom--typography--font-weight--medium);
 }
 
-/* On hover, bold or highlight top-level menu items, depending on whether background color or not */
+/*------------------------------------------------------------------------------
+# Bold or highlight menu items on HOVER
+------------------------------------------------------------------------------*/
+/* Bold or highlight top-level menu items */
 .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover > .wp-block-navigation-item__content, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover > .wp-block-navigation__submenu-icon, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:active {
   color: var(--wp--preset--color--highlight-alt);
 }
 
-/* Drop-down link hover color. */
+/* Bold or highlight drop-down links */
 .site-header:not(.has-background) .wp-block-navigation-submenu.open-on-click:hover,
 .site-header:not(.has-background) .wp-block-navigation-item.has-child.open-on-click:hover {
   color: var(--wp--preset--color--highlight);
@@ -1111,15 +1123,6 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 /* On colored navs, round out the mobile nav container to match our open/close menu buttons */
 .wp-block-navigation.has-text-color:has(.wp-block-navigation__responsive-container:not(.is-menu-open.is-menu-open)) {
   border-radius: var(--wp--custom--button--radius);
-}
-
-/* 
- * If cover used as site header, make sure it is layered above 
- * other cover images 
- */
-header > .wp-block-cover {
-  overflow: visible;
-  z-index: 3;
 }
 
 /* Adjust padding on mobile nav menu */
@@ -1183,9 +1186,9 @@ header > .wp-block-cover {
   transition-delay: var(--wp--custom--animation--duration--short);
 }
 
-/*---------------------------------------------------------------------------------------
-# Navigation: Custom
----------------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------
+# Navigation: Custom Fixed Header
+------------------------------------------------------------------------------*/
 /* Navigation Fixed menu */
 /* TO-DO: Consider adding .site-header:not(.is-style-fixed-header) */
 nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-open,
@@ -1263,9 +1266,9 @@ nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-con
   right: auto;
 }
 
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Paragraph
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /* 
  * Note: Breakpoint of 781 is what is hard-coded in WordPress 
  * v6.0+ to collapse columns
@@ -1285,9 +1288,9 @@ nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-con
     padding-right: var(--wp--style--root--padding-right) !important;
   }
 }
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Paragraph: Custom
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /* Alignwide */
 p.is-style-alignwide {
   max-width: var(--wp--style--global--wide-size) !important;
@@ -1330,12 +1333,12 @@ p.is-style-arrow-icon > a:after {
   white-space: pre-wrap; /* adds line break */
 }
 
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # ADDITIONAL BASE STYLES
----------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------
 # Utilities
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /* 
  * Note: These utility classes must be added manually in the 
  * Advanced section of the block settings.
@@ -1361,9 +1364,9 @@ p.is-style-arrow-icon > a:after {
   flex-shrink: 0;
 }
 
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Dashicons
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /**
  * Override core WordPress base Dashicon styles. Don't let it
  * alter height, width, font-size or line-height. 
@@ -1427,16 +1430,16 @@ p.is-style-arrow-icon > a:after {
   content: none;
 }
 
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Dashicons: Custom
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 .is-style-no-icon:before {
   display: none;
 }
 
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Margins (Vertical spacing)
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /* 
  * Core Wordpress controls vertical spacing by adding the gap 
  * setting as top margin between all blocks on the site. However, 
@@ -1483,9 +1486,9 @@ body .is-layout-constrained .wp-block-template-part > * + *:not(.wp-block-templa
   margin-block-end: 0;
 }
 
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Padding (Horizontal and vertical spacing)
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /* For convenience, remove padding from inner containers */
 main.wp-block-group:not(.has-global-padding),
 .wp-block-template-part {
@@ -1522,12 +1525,12 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
   padding-left: var(--wp--style--root--padding-left);
 }
 
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Flat Blocks Theme Compatibility with Prior Versions
----------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------
 # Flat Blocks Colors (for theme < v1.6)
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 .has-foreground-color {
   color: var(--wp--preset--color--contrast);
 }
@@ -1552,12 +1555,12 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
   border-color: var(--wp--preset--color--base);
 }
 
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Flat Blocks Custom Styles (for theme < v1.6.4)
----------------------------------------------------------------------------------------*/
-/*---------------------------------------------------------------------------------------
+------------------------------------------------------------------------------*/
+/*------------------------------------------------------------------------------
 # Cover and Media & Text: Custom
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 .is-style-cover-rounded-corners {
   border-radius: var(--wp--custom--border--radius);
   overflow: hidden;
@@ -1570,9 +1573,9 @@ header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
   padding: var(--wp--preset--spacing--40);
 }
 
-/*---------------------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Color compatibility with other themes
----------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 /* 
  * TwentyTwentyFour theme uses base and contrast in numbered 
  * shades. It also uses accent colors in numbered shades instead 
