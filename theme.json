@@ -1748,12 +1748,6 @@
 			"area": "title"
 		},
 		{
-			"name": "page-title-no-excerpt",
-			"title": "Page Title w/outExcerpt",
-			"description": "Page title without excerpt",
-			"area": "title"
-		},
-		{
 			"name": "content-article",
 			"title": "Content Article",
 			"description": "Blog list article (featured image, title, date, and excerpt)",
