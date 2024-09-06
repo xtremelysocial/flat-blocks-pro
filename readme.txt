@@ -151,7 +151,7 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 September 5, 2024
 
 * Added About 3 Navs Footer Template Part and set the About 3 Navs w/Site Info to use it.
-* Adjust CSS for horizontal padding to better deal with full-width and non-full-width blocks.
+* Adjust CSS for horizontal padding in the Editor to better deal with full-width and non-full-width blocks. Set Header w/Tagline Template Part to use it too.
 * Added names to all Header, Footer, Sidebar, Post Meta, and Main content groups to differentiate them from other groups in the Templates while viewing in the Editor.
 * Added new custom variables for button colors: --wp--custom--color--button-background and --wp--custom--color--button--text. Replaced --wp--custom--border--color with --wp--custom--color--border to be consistent with the new color variables.
 * Centered the "No results" on queries and locked the block so it can't accidentally be removed. 
