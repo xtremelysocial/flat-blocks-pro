@@ -14,10 +14,13 @@
  */
 /*---------------------------------------------------------------------------------------
 # CUSTOM BLOCK STYLES (for WordPress version < 6.6)
+---------------------------------------------------------------------------------------*/
+/*---------------------------------------------------------------------------------------
+# Block Styles for Borders (@since v1.6.4). Now in /styles/blocks/*.json.
 ----------------------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------------
 # Custom: Rounded Corners
-----------------------------------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 .is-style-rounded-corners {
   border-radius: var(--wp--custom--border--radius);
   padding: var(--wp--preset--spacing--40);
@@ -26,34 +29,36 @@
 
 /*---------------------------------------------------------------------------------------
 # Custom: Rounded Border
-----------------------------------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 .is-style-rounded-border {
   border: 1px solid var(--wp--custom--color--border);
   border-radius: var(--wp--custom--border--radius);
   padding: var(--wp--preset--spacing--40);
 }
+
 .is-style-rounded-border.is-layout-flex {
   overflow: hidden;
 }
 
 /*---------------------------------------------------------------------------------------
 # Custom: Thick Rounded Border
-----------------------------------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 .is-style-thick-rounded-border {
   border: 3px solid var(--wp--custom--color--border);
   border-radius: var(--wp--custom--border--radius);
   padding: var(--wp--preset--spacing--60);
 }
-.is-style-thick-rounded-border.is-layout-flex {
+
+is-style-thick-rounded-border.is-layout-flex {
   overflow: hidden;
 }
 
 /*---------------------------------------------------------------------------------------
-# Custom: Buttons
+# Block Styles for Buttons (@since v1.6.5). Now in /styles/blocks/*.json.
 ----------------------------------------------------------------------------------------*/
 /*---------------------------------------------------------------------------------------
 ## Alternate Button Styles (Alt and Alt-2)
-----------------------------------------------------------------------------------------*/
+---------------------------------------------------------------------------------------*/
 /* Alternate Button and Outline Style */
 .is-style-button-alt.wp-block-button .wp-block-button__link,
 .is-style-button-outline-alt.wp-block-button .wp-block-button__link {
@@ -77,7 +82,6 @@
   padding: calc(var(--wp--preset--spacing--30) - 3px) calc(var(--wp--preset--spacing--40) - 3px);
 }
 
-/* In the editor, we need to make this important to override the default */
 /*---------------------------------------------------------------------------------------
 # Heading Colors (Needed for WordPress v6.4)
 ---------------------------------------------------------------------------------------*/
