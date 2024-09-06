@@ -148,14 +148,18 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 == Changelog ==
 
 = 1.6.5 =
-September 5, 2024
+September 6, 2024
 
+Version Summary: Several enhancements made to provide sensible defaults for text, link, and hover colors as well as wether links are underlined or not. This makes it easy to change just the background color on groups or columns, etc. and not have to always specify the other colors.
+
+Also added Next and Previous Post links so user can easily page through articles on your site.
+
+Here are some more updates:
 * Added About 3 Navs Footer Template Part and set the About 3 Navs w/Site Info to use it.
 * Adjust CSS for horizontal padding in the Editor to better deal with full-width and non-full-width blocks. Set Header w/Tagline Template Part to use it too.
 * Added names to all Header, Footer, Sidebar, Post Meta, and Main content groups to differentiate them from other groups in the Templates while viewing in the Editor.
 * Added new custom variables for button colors: --wp--custom--color--button-background and --wp--custom--color--button--text. Replaced --wp--custom--border--color with --wp--custom--color--border to be consistent with the new color variables.
 * Centered the "No results" on queries and locked the block so it can't accidentally be removed. 
-* Added Next and Previous Post links so user can easily page through articles on your site.
 
 = 1.6.4 =
 August 22, 2024
