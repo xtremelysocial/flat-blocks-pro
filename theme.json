@@ -999,6 +999,13 @@
 					"fontSize": "var(--wp--preset--font-size--small)",
 					"fontWeight": "400",
 					"textDecoration": "none"
+				},
+				"elements": {
+					"link": {
+						"typography": {
+							"textDecoration": "none"
+						}
+					}
 				}
 			},
 			"button": {
@@ -1742,12 +1749,6 @@
 			"name": "page-title",
 			"title": "Page Title (w/Excerpt)",
 			"description": "Page title with excerpt",
-			"area": "title"
-		},
-		{
-			"name": "page-title-no-excerpt",
-			"title": "Page Title w/out Excerpt",
-			"description": "Page title without excerpt",
 			"area": "title"
 		},
 		{
