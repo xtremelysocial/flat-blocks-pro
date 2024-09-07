@@ -1,0 +1,8 @@
+/*-----------------------------------------------------------------------------
+# Block Styles for WordPress <v6.6
+------------------------------------------------------------------------------*/
+
+/* ADD BACK gap on flex columns by default */
+.wp-block-columns-is-layout-flex {
+	gap: var(--wp--style--block-gap);
+}
