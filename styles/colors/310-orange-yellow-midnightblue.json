@@ -6,9 +6,19 @@
 		"custom": {
 			"color": {
 				"contrast": {
-					"primary": "var(--wp--preset--color--foreground-alt)",
-					"secondary": "var(--wp--preset--color--almost-black)",
-					"secondary-alt": "var(--wp--preset--color--almost-black)"
+					"secondary": "var(--wp--preset--color--almost-black)"
+				},
+				"highlight": {
+					"secondary": "var(--wp--preset--color--foreground-alt)",
+					"secondaryAlt": "var(--wp--preset--color--foreground-alt)",
+					"tertiary": "var(--wp--preset--color--highlight)",
+					"tertiaryAlt": "var(--wp--preset--color--highlight)"
+				},
+				"underline": {
+					"secondary": "underline",
+					"secondaryAlt": "underline",
+					"tertiary": "none",
+					"tertiaryAlt": "none"
 				}
 			}
 		},

@@ -1,27 +1,31 @@
-//*------------------------------------------------------------------------------
-//# Colors
-//------------------------------------------------------------------------------------- */
+//------------------------------------------------------------------------------
+//# Mixins
+//------------------------------------------------------------------------------
 @use "sass:map";
 
-//*------------------------------------------------------------------------------
-//  Set default text and link colors depending on how dark or light the background
-//  color is. 
-//--------------------------------------------------------------------------------------*/
+//------------------------------------------------------------------------------
+//# Colors
+//------------------------------------------------------------------------------
 
-// When a color is used as a background, default the text to these colors based on
-// lightness.
+//------------------------------------------------------------------------------
+// Set default text and link colors depending on how dark or light the
+// background color is. 
+//------------------------------------------------------------------------------
+
+// When a color is used as a background, default the text to these colors based
+// on lightness.
 $contrast-colors: (
 	"base": var(--wp--preset--color--contrast),
 	"contrast": var(--wp--preset--color--base),
 	"default-black": var(--wp--preset--color--foreground-alt),
 	"default-dark": var(--wp--preset--color--foreground-alt),
 	"default-medium": var(--wp--preset--color--foreground-alt),
-	"default-light": var(--wp--preset--color--contrast),
+	"default-light": var(--wp--preset--color--almost-black),
 	"default-white": var(--wp--preset--color--contrast)
 );
 
-// When a color is used as a background, default the link color to these base on 
-// lightness.
+// When a color is used as a background, default the link color to these based
+// on lightness.
 $highlight-colors: (
 	"base": inherit,
 	"contrast": inherit,
@@ -30,6 +34,18 @@ $highlight-colors: (
 	"default-medium": inherit,
 	"default-light": inherit,
 	"default-white": var(--wp--preset--color--highlight),
+);
+
+// When a color is used as a background, default the link UNDERLINE based on 
+// lightness.
+$underline-colors: (
+	"base": none,
+	"contrast": inherit,
+	"default-black": none,
+	"default-dark": underline,
+	"default-medium": underline,
+	"default-light": underline,
+	"default-white": none,
 );
 
 // Mixin to default colors
@@ -41,30 +57,38 @@ $highlight-colors: (
 	
 		$contrast: map.get($contrast-colors, $lightness);
 		$highlight: map.get($highlight-colors, $lightness);
+		$underline: map.get($underline-colors, $lightness);
 		
 		@if $contrast {
 			.has-#{$color}-background-color {
 				color: var(--wp--custom--color--contrast--#{$color}, var(--wp--custom--color--contrast--#{$lightness}, #{$contrast}));
 				
 				@if $highlight {			
-					& a:not(.wp-element-button) {
+					&:not(.has-link-color) :not(.wp-block-site-title)  a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor),
+					& .wp-block-separator:not(.has-background) {
 						color: var(--wp--custom--color--highlight--#{$color}, var(--wp--custom--color--highlight--#{$lightness}, #{$highlight}));
-					}
-					
-					& a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
-						text-decoration: var(--wp--custom--color--underline--#{$color}, var(--wp--custom--color--underline--#{$lightness}, var(--wp--custom--color--underline--default, none)));
-					}
+
+						@if $underline {
+							text-decoration: var(--wp--custom--color--underline--#{$color}, var(--wp--custom--color--underline--#{$lightness}, #{$underline}));
+						}					
+
+						&:hover,
+						&:active {
+							text-decoration: var(--wp--custom--color--hover-underline--#{$color}, var(--wp--custom--color--hover-underline--#{$lightness}, var(--wp--custom--color--hover-underline--default, underline)));
+							
+						}
+					}					
 				}
 			}
 		}
 	}
 }
 
-//*------------------------------------------------------------------------------
+//------------------------------------------------------------------------------
 //# Vendor Prefixes
-//--------------------------------------------------------------------------------------*/
+//------------------------------------------------------------------------------
 
-$vendor-prefixes: ('-webkit-', '');
+$vendor-prefixes: ('-webkit-', '-moz-', '');
 
 @mixin vendor-prefix($name, $value) {
 	@each $vendor in $vendor-prefixes {

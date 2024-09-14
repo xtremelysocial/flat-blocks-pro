@@ -147,6 +147,21 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 1.6.6 =
+September 13, 2024
+
+Version Summary: Updated logic for default link colors and link underlines on colored backgrounds. Added new Media & Text with 2 Text Blocks pattern and new Colored Footer template part. Removed Auto Dark Mode theme style, since WordPress isn't handling "Additional CSS" on the theme style very well.
+
+* Updated all the color palettes to better handle link colors and whether to underline or not. Set a teal (blue-green) color on Midnight Blue and Dark Midnight Blue backgrounds.
+* Changed separator (hr) color to use the highlight color when used on a colored background (group, columns, etc.)
+* Updated the new default link underline logic to set non-underlined links to underline on hover.
+* Added new Media & Text with 2 Text Blocks pattern for a nice colorful banner. By default it uses primary and primary-alt color, but of course you can change it whatever you want.
+* Added No Padding style to Media & Text block to accomodate the above pattern.
+* Set input fields to inherit the body font (lato by default).
+* Removed font color from Rounded, Rounded Border, and Thick Rounded Border styles so they default to the overall Contrast color (#555555 by default). This is useful in case you want to change the background color to a dark color. Just be sure to set a light font color if you do. 
+* Removed the theme reference in the Header with Tagline template part so it works with child themes.
+* Added padding to colored groups which are aligned wide in the Site Editor to better match the front-end (align full already did this).
+
 = 1.6.5 =
 September 6, 2024
 

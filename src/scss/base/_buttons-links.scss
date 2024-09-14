@@ -13,14 +13,15 @@ a,
 	text-decoration-style: var(--wp--custom--link--style, solid);
 }
 
-/* Don't underline links in captions */
-figcaption a {
-	text-decoration: none;
-}
+// /* Don't underline links in captions */
+// figcaption a {
+// 	text-decoration: none;
+// }
 
-/* Colored link hover styles */
+/* Link hover styles */
+.has-background a:hover,
 .has-text-color a:not(.wp-element-button):not(.wp-block-button):not(.wp-block-social-link-anchor):hover {
-	opacity: var(--wp--custom--link--hover-opacity, 0.85);
+	opacity: var(--wp--custom--link--hover-opacity, 0.8);
 }
 
 /* 
@@ -94,7 +95,7 @@ input[type=file]::file-selector-button:hover,
 
 .is-style-link-underline a:hover,
 .is-style-link-no-underline a:hover {
-	opacity: var(--wp--custom--link--hover-opacity, 0.85);
+	opacity: var(--wp--custom--link--hover-opacity, 0.8);
 }
 
 /* Underline links on hover */

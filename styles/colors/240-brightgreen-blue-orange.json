@@ -3,6 +3,18 @@
 	"version": 3,
 	"title": "Bright Green, Blue, Orange",
 	"settings": {
+		"custom": {
+			"color": {
+				"highlight": {
+					"secondary": "var(--wp--preset--color--foreground-alt)",
+					"secondaryAlt": "var(--wp--preset--color--foreground-alt)"
+				},
+				"underline": {
+					"secondary": "underline",
+					"secondaryAlt": "underline"
+				}
+			}
+		},
 		"color": {
 			"palette": [
 				{
@@ -72,13 +84,13 @@
 				},
 				{
 					"slug": "highlight",
-					"color": "#2ecc71",
-					"name": "Highlight (Bright Green)"
+					"color": "#1abc9c",
+					"name": "Highlight (Light Green)"
 				},
 				{
 					"slug": "highlight-alt",
-					"color": "#27ae60",
-					"name": "Highlight Alt (Dark Bright Green)"
+					"color": "#16a085",
+					"name": "Highlight Alt (Green)"
 				},
 				{
 					"slug": "white",

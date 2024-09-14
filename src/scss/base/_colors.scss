@@ -5,23 +5,11 @@
 @use "../utils/mixins";
 
 /* 
- * First set some basic defaults for when a background color is used
- */
-.has-background { //,
-	color: var(--wp--custom--color--contrast--default, inherit);
-}
-
-.has-background a:hover { //,
-	//color: inherit;
-	opacity: var(--wp--custom--link--hover-opacity, 0.85);
-}
-
-/* 
  * Black and near-black colors, default light text (but leave link color alone).
  * Override by defining --wp--custom--color--contrast--black and/or 
  * --wp--custom--color--highlight--black in theme.json.
  */
-$black-colors: ('contrast', 'dark', 'dark-alt', 'almost-black', 'not-quite-black', 'black');
+$black-colors: ('contrast', 'midnight-blue', 'dark-midnight-blue', 'dark', 'dark-alt', 'almost-black', 'not-quite-black', 'black');
 @include mixins.color-defaults($black-colors, 'default-black');
 
 /* 
@@ -29,7 +17,7 @@ $black-colors: ('contrast', 'dark', 'dark-alt', 'almost-black', 'not-quite-black
  * Override by defining --wp--custom--color--contrast--dark and/or
  * --wp--custom--color--highlight--dark in theme.json.
  */
-$dark-colors: ('primary', 'secondary', 'tertiary', 'primary-alt', 'secondary-alt', 'tertiary-alt', 'highlight', 'highlight-alt', 'dark-gray', 'very-dark-gray', 'green', 'dark-bright-green', 'orange', 'dark-orange', 'blue', 'dark-blue', 'midnight-blue', 'dark-midnight-blue', 'purple', 'dark-purple', 'light-red', 'red', 'dark-red');
+$dark-colors: ('primary', 'secondary', 'tertiary', 'primary-alt', 'secondary-alt', 'tertiary-alt', 'highlight', 'highlight-alt', 'dark-gray', 'very-dark-gray', 'green', 'dark-bright-green', 'orange', 'dark-orange', 'blue', 'dark-blue', 'purple', 'dark-purple', 'light-red', 'red', 'dark-red');
 @include mixins.color-defaults($dark-colors, 'default-dark');
 
 /* 

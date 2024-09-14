@@ -1,40 +1,43 @@
-/*------------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------
 # Group
-------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------*/
+/* 
+ * Note: Padding for colored backgrounds on groups is now in theme.json as 
+ * custom block CSS.
+ */
+
+// .wp-block-group-is-layout-flex > .wp-block-group {
+// 	flex: 1 1 100%;
+// }
 
 /* 
- * Note: Padding for colored backgrounds on groups is now in
- * theme.json as custom block CSS.
- */
-
-/* For convenience, remove padding on nested groups */
-.wp-block-group > .wp-block-group:not(.has-background) {
-	padding: 0;
-}
-
-/* If global padding, then OVERRIDE horizontal padding on mobile
+ * If global padding, then OVERRIDE horizontal padding on mobile
  *
- * Note: Breakpoint of 781 is what is hard-coded in WordPress 
- * v6.0+ to collapse columns
+ * Note: Breakpoint of 781 is what is hard-coded in WordPress for tablet
  */
 @media only screen and (max-width: 781px) {
-
 	.site-header.has-global-padding.wp-block-group,
 	.site-footer.has-global-padding.wp-block-group { //,
 	//.post-comments.has-global-padding.wp-block-group {
 		padding-left: var(--wp--style--root--padding-left) !important;
 		padding-right: var(--wp--style--root--padding-right) !important;
-	}
-	
+	}	
+}
+
+/* Even when nowrap is set, go ahead and collapse on mobile
+ * 
+ * Note: Breakpoint of 601 is what is hard-coded in WordPress for mobile 
+ */
+@media only screen and (max-width: 601px) {
 	.is-nowrap.is-layout-flex.wp-block-group {
 		flex-wrap: wrap;
 		//overflow: hidden;
 	}		
 }
 
-/*------------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------
 # Group: Custom
-------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------*/
 
 //* Group borders */
 // .wp-block-group.is-style-rounded-border {

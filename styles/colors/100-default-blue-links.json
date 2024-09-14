@@ -16,6 +16,16 @@
 		}
 	},
 	"settings": {
+		"custom": {
+			"color": {
+				"highlight": {
+					"secondary": "#47D3E5",
+					"secondaryAlt": "#47D3E5",
+					"midnightBlue": "#47D3E5",
+					"darkMidnightBlue": "#47D3E5"
+				}
+			}
+		},
 		"color": {
 			"palette": [
 				{

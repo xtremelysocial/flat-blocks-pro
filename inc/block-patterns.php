@@ -22,17 +22,19 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 	function flatblocks_register_block_patterns() {
 
 		// WordPress v6.2 already has categories for featured, header, query, text, 
-		// buttons, gallery, columns, banner, footer, call-to-action, team, testimonials,
+		// buttons, gallery, column, banner, footer, call-to-action, team, testimonials,
 		// services, contract, about, portfolio, and media. However, the columns category
 		// doesn't appear to be working.
 
 		// Add our own block pattern categories
 		$block_pattern_categories = array(
 			'flatblocks'	=> array( 'label' => __( 'All Flat Blocks', 'flat-blocks' ) ),
-			'cover'   		=> array( 'label' => __( 'Cover Images', 'flat-blocks' ) ),				
-			'columns'   	=> array( 'label' => __( 'Columns', 'flat-blocks' ) ),				
-			'image'   		=> array( 'label' => __( 'Images', 'flat-blocks' ) ),
+			'column'   		=> array( 'label' => __( 'Columns', 'flat-blocks' ) ),				
 			'page'    		=> array( 'label' => __( 'Pages', 'flat-blocks' ) ),
+			//'cover'   	=> array( 'label' => __( 'Cover Images', 'flat-blocks' ) ),				
+			//'banner'   	=> array( 'label' => __( 'Banners', 'flat-blocks' ) ),				
+			//'image'   	=> array( 'label' => __( 'Images', 'flat-blocks' ) ),
+			//'testimonial'   => array( 'label' => __( 'Testimonials (Flat Blocks)', 'flat-blocks' ) ),				
 		);
 		
 		/**
@@ -64,7 +66,7 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 			),
 			'buttons-call-to-action-2-columns' => array( 
 				'title' => __( 'Call to Action 2 Columns', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'buttons', 'call-to-action', 'columns', 'featured' )
+				'categories' => array ('flatblocks', 'buttons', 'call-to-action', 'column', 'featured' )
 			),
 			'buttons-call-to-action-rounded' => array( 
 				'title' => __( 'Call to Action Rounded', 'flat-blocks' ),
@@ -72,139 +74,143 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 			),
 			'columns-features-2-columns' => array( 
 				'title' => __( 'Features with 2 Columns', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'columns' )
+				'categories' => array ('flatblocks', 'column' )
 			),
 			'columns-features-3-columns' => array( 
 				'title' => __( 'Features with 3 Columns', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'columns', 'featured' )
+				'categories' => array ('flatblocks', 'column', 'featured' )
 			),
 			'columns-features-4-columns' => array( 
 				'title' => __( 'Features with 4 Columns', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'columns', 'featured' )
+				'categories' => array ('flatblocks', 'column', 'featured' )
 			),
 			'columns-map-static' => array( 
 				'title' => __( 'Static Map and Address', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'columns', 'featured' )
+				'categories' => array ('flatblocks', 'column', 'featured' )
 			),
 			'columns-map-jetpack' => array( 
 				'title' => __( 'Jetpack Map and Address', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'columns' )
+				'categories' => array ('flatblocks', 'column' )
 			),
 			'columns-pricing-table-3-columns' => array( 
 				'title' => __( 'Pricing Table 3 Columns', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'columns', 'featured' )
+				'categories' => array ('flatblocks', 'column', 'featured' )
 			),
 			'columns-pricing-table-4-columns' => array( 
 				'title' => __( 'Pricing Table 4 Columns', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'columns', 'featured' )
+				'categories' => array ('flatblocks', 'column', 'featured' )
 			),
 			'columns-recent-posts-3-columns' => array( 
 				'title' => __( 'Recent Posts with 3 Columns', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'columns' )
+				'categories' => array ('flatblocks', 'column' )
 			),
 			'columns-sidebar-left' => array( 
 				'title' => __( 'Content with Left Sidebar', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'columns' )
+				'categories' => array ('flatblocks', 'column' )
 			),
 			'columns-sidebar-right' => array( 
 				'title' => __( 'Content with Right Sidebar', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'columns' )
+				'categories' => array ('flatblocks', 'column' )
 			),
 			'columns-social-media-3-columns' => array( 
 				'title' => __( 'Social Media Icons with 3 Columns', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'columns', 'featured' )
+				'categories' => array ('flatblocks', 'column', 'featured' )
 			),
 			'columns-social-media-4-columns' => array( 
 				'title' => __( 'Social Media Icons with 4 Columns', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'columns', 'featured' )
+				'categories' => array ('flatblocks', 'column', 'featured' )
 			),
 			'columns-team-3-people' => array( 
 				'title' => __( '3 Team Members', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'columns', 'team', 'featured' )
+				'categories' => array ('flatblocks', 'column', 'team', 'featured' )
 			),
 			'columns-team-4-people' => array( 
 				'title' => __( '4 Team Members', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'columns', 'team', 'featured' )
+				'categories' => array ('flatblocks', 'column', 'team', 'featured' )
 			),
 			'cover-scroll-home-header' => array( 
 				'title' => __( 'Cover Home Page with Site Title, Tagline, and Scroll Arrow', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'cover', 'banner' )
+				'categories' => array ('flatblocks', 'banner' )
 			),
 			'cover-scroll-page-header' => array( 
 				'title' => __( 'Cover Featured Image with Page / Post Title, Excerpt, and Scroll Arrow', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'cover', 'featured', 'banner' )
+				'categories' => array ('flatblocks', 'banner', 'featured' )
 			),
 			'cover-scroll-colored-blocks' => array( 
 				'title' => __( 'Cover Colored Blocks w/Scroll Arrow', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'cover', 'featured', 'banner' )
+				'categories' => array ('flatblocks', 'banner', 'featured' )
 			),
 			'cover-bokeh' => array( 
 				'title' => __( 'Cover Bokeh', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'cover', 'banner' )
+				'categories' => array ('flatblocks', 'banner' )
 			),
 			'cover-book' => array( 
 				'title' => __( 'Cover Book', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'cover', 'banner' )
+				'categories' => array ('flatblocks', 'banner' )
 			),
 			'cover-building' => array( 
 				'title' => __( 'Cover Building', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'cover', 'banner' )
+				'categories' => array ('flatblocks', 'banner' )
 			),
 			'cover-city-night' => array( 
 				'title' => __( 'Cover City at Night', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'cover', 'banner' )
+				'categories' => array ('flatblocks', 'banner' )
 			),
 			'cover-colored-chalk' => array( 
 				'title' => __( 'Cover Colored Chalk', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'cover', 'banner' )
+				'categories' => array ('flatblocks', 'banner' )
 			),
 			'cover-desk-light' => array( 
 				'title' => __( 'Cover Desk (light)', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'cover', 'featured', 'banner' )
+				'categories' => array ('flatblocks', 'banner', 'featured' )
 			),
 			'cover-desk-dark' => array( 
 				'title' => __( 'Cover Desk (dark)', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'cover', 'banner' )
+				'categories' => array ('flatblocks', 'banner' )
 			),
 			'cover-desk-meeting' => array( 
 				'title' => __( 'Cover Desk w/Meeting', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'cover', 'banner' )
+				'categories' => array ('flatblocks', 'banner' )
 			),
 			'cover-geodesic-lights' => array( 
 				'title' => __( 'Cover Geodesic Lights', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'cover', 'banner' )
+				'categories' => array ('flatblocks', 'banner' )
 			),
 			'cover-guitars' => array( 
 				'title' => __( 'Cover Guitars', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'cover', 'banner' )
+				'categories' => array ('flatblocks', 'banner' )
 			),
 			'cover-man-on-rocks' => array( 
 				'title' => __( 'Cover Man on Rocks', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'cover', 'banner' )
+				'categories' => array ('flatblocks', 'banner' )
 			),
 			'cover-notebooks' => array( 
 				'title' => __( 'Cover Notebooks', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'cover', 'banner' )
+				'categories' => array ('flatblocks', 'banner' )
 			),
 			'cover-typewriter' => array( 
 				'title' => __( 'Cover Typewriter', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'cover', 'banner' )
+				'categories' => array ('flatblocks', 'banner' )
+			),
+			'media-text-2-blocks' => array( 
+				'title' => __( 'Media w/2 Text Blocks', 'flat-blocks' ),
+				'categories' => array ('flatblocks', 'banner', 'featured' )
 			),
 			'image-gallery' => array( 
 				'title' => __( 'Image Gallery', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'columns', 'gallery', 'image' )
+				'categories' => array ('flatblocks', 'column', 'gallery', 'media' )
 			),
 			'image-left-and-right-text' => array( 
 				'title' => __( 'Image with Left and Right Text', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'columns', 'image', 'banner', 'featured' )
+				'categories' => array ('flatblocks', 'column', 'media', 'banner', 'featured' )
 			),
 			'image-computer-screen' => array( 
 				'title' => __( 'Computer Screen Image with Title and Text Above', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'image', 'text' )
+				'categories' => array ('flatblocks', 'media', 'text' )
 			),
 			'image-static-map' => array( 
 				'title' => __( 'Image of Static Map', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'image' )
+				'categories' => array ('flatblocks', 'media' )
 			),
 			'text-social-icons-huge' => array( 
 				'title' => __( 'Social Icons Huge', 'flat-blocks' ),
@@ -216,7 +222,7 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 			),
 			'text-title-and-subtitle-with-bg-image' => array( 
 				'title' => __( 'Title and Subtitle with Background Image', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'text', 'image', 'banner', 'featured' )
+				'categories' => array ('flatblocks', 'text', 'media', 'banner', 'featured' )
 			),
 			'text-title-and-text' => array( 
 				'title' => __( 'Title and Text', 'flat-blocks' ),
@@ -224,7 +230,7 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 			),
 			'text-testimonial' => array( 
 				'title' => __( 'Testimonial', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'text', 'image' )
+				'categories' => array ('flatblocks', 'text', 'media', 'testimonials' )
 			),
 			'text-faq' => array( 
 				'title' => __( 'Frequently Asked Questions (FAQ)', 'flat-blocks' ),
@@ -237,11 +243,6 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 			),
 			'query-loop-2-columns' => array( 
 				'title' => __( 'Query Loop 2 Columns (Default)', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'query' ),
-				'blockTypes' => array ('core/query')
-			),
-			'pro-query-loop-3-columns' => array( 
-				'title' => __( 'Query Loop 3 Columns', 'flat-blocks' ),
 				'categories' => array ('flatblocks', 'query' ),
 				'blockTypes' => array ('core/query')
 			),
