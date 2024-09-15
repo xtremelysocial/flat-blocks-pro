@@ -1350,9 +1350,9 @@ p.is-style-arrow-icon > a:after {
   display: none;
 }
 
-/*------------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------
 # Margins (Vertical spacing)
-------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------*/
 /* 
  * Core Wordpress controls vertical spacing by adding the gap setting as top
  * margin between all blocks on the site. However, certain things like 

@@ -296,7 +296,7 @@ if ( file_exists( get_template_directory() . '/inc/wp-compatibility.php' ) ) {
 	require_once get_template_directory() . '/inc/wp-compatibility.php';
 }
 
-// Include Pro version features
+// Include PRO version features
 if ( file_exists( get_template_directory() . '/pro/flat-blocks-pro.php' ) ) {
 	require_once get_template_directory() . '/pro/flat-blocks-pro.php';
 }
