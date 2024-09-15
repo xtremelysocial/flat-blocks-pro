@@ -1038,17 +1038,11 @@
 				":hover": {
 					"color": {
 						"text": "var(--wp--preset--color--highlight-alt)"
-					},
-					"typography": {
-						"textDecoration": "underline"
 					}
 				},
 				":active": {
 					"color": {
 						"text": "var(--wp--preset--color--highlight-alt)"
-					},
-					"typography": {
-						"textDecoration": "underline"
 					}
 				}
 			}
