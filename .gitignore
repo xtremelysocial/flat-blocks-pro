@@ -5,13 +5,13 @@ node_modules/
 # Debugging files 
 *.css.map
 *.js.map
+*.asset.php
 
 # Unneeded build files
 assets/css/blocks/
 *-rtl.css
-*.asset.php
 
-# Ignore Mac files
+# Mac files
 .DS_Store
 **/.DS_Store
 
@@ -19,9 +19,15 @@ assets/css/blocks/
 *.tgz
 *.zip
 
-# Ignore save and test files
-styles/*xtremelysocial*.json
+# Test files
 **/*-SAVE*
 styles/*-TEST*.json
 styles/*-test/
 zz_unused
+
+# PRO theme files
+#pro
+#templates/pro-*
+
+# Ignore our xtremelysocial.com files
+styles/*xtremelysocial*.json

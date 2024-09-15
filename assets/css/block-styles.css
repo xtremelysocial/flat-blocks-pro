@@ -470,7 +470,7 @@ ol.is-style-list-plain-centered li {
   margin-right: auto !important;
 }
 
-/* Override our short width for wide and dotted separators */
+/* Override our short separator width for wide and dotted separators */
 .wp-block-separator.is-style-wide,
 .wp-block-separator.is-style-dots {
   width: 100% !important;

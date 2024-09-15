@@ -16,13 +16,54 @@
  * @since 	1.6.4
  */
 /*-----------------------------------------------------------------------------
-# CUSTOM BLOCK STYLES (for WordPress version < 6.6)
+# CUSTOM BLOCK STYLES (for older WordPress versions)
 -----------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------
-# Block Styles for Borders (@since v1.6.4). Now in /styles/blocks/*.json.
+# Block Styles for Padding and Columns
+# Needed for WordPress <v6.6
+# @since v1.6.6
 ------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------
-# Custom: Rounded Corners
+## Padding (Horizontal and vertical spacing)
+-----------------------------------------------------------------------------*/
+/* Override horizontal padding when no global padding */
+header.site-header:not(.has-global-padding),
+footer.site-footer:not(.has-global-padding),
+header.entry-header:not(.has-global-padding):not(.is-style-no-padding),
+.wp-block-query:not(.has-global-padding) {
+  padding-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50)) !important;
+  padding-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50)) !important;
+}
+
+/* FIX to add back horizontal padding */
+.has-global-padding > .alignfull:not(.wp-block-post-content, .wp-block-image, .wp-block-columns, .wp-block-buttons, .wp-block-media-text, .is-style-no-padding),
+.has-global-padding.alignfull:not(.wp-block-post-content, .wp-block-image, .wp-block-columns, .wp-block-buttons, .wp-block-media-text, .is-style-no-padding) {
+  padding-left: var(--wp--style--root--padding-left);
+  padding-right: var(--wp--style--root--padding-right);
+}
+
+/* But REMOVE duplicate padding */
+.has-global-padding > .alignfull:where(:not(.has-global-padding)) > :where(.wp-block-image) {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/*-----------------------------------------------------------------------------
+## Column Gap
+-----------------------------------------------------------------------------*/
+/* ADD BACK gap on flex columns by default */
+.wp-block-columns-is-layout-flex {
+  gap: var(--wp--style--block-gap);
+}
+
+/*-----------------------------------------------------------------------------
+# Block Styles for Borders
+# Needed for WordPress <v6.6
+# Now in /styles/blocks/*.json
+# @since v1.6.4
+------------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+## Custom: Rounded Corners
 -----------------------------------------------------------------------------*/
 .is-style-rounded-corners {
   border-radius: var(--wp--custom--border--radius);
@@ -31,7 +72,7 @@
 }
 
 /*-----------------------------------------------------------------------------
-# Custom: Rounded Border
+## Custom: Rounded Border
 -----------------------------------------------------------------------------*/
 .is-style-rounded-border {
   border: 1px solid var(--wp--custom--color--border);
@@ -44,7 +85,7 @@
 }
 
 /*-----------------------------------------------------------------------------
-# Custom: Thick Rounded Border
+## Custom: Thick Rounded Border
 -----------------------------------------------------------------------------*/
 .is-style-thick-rounded-border {
   border: 3px solid var(--wp--custom--color--border);
@@ -57,11 +98,11 @@ is-style-thick-rounded-border.is-layout-flex {
 }
 
 /*-----------------------------------------------------------------------------
-# Block Styles for Buttons (@since v1.6.5). Now in /styles/blocks/*.json.
+# Block Styles for Buttons
+# Needed for WordPress <v6.6
+# Now in /styles/blocks/*.json
+# @since v1.6.5
 ------------------------------------------------------------------------------*/
-/*-----------------------------------------------------------------------------
-## Alternate Button Styles (Alt and Alt-2)
------------------------------------------------------------------------------*/
 /* Alternate Button and Outline Style */
 .is-style-button-alt.wp-block-button .wp-block-button__link,
 .is-style-button-outline-alt.wp-block-button .wp-block-button__link {
@@ -86,8 +127,10 @@ is-style-thick-rounded-border.is-layout-flex {
 }
 
 /*-----------------------------------------------------------------------------
-# Heading Colors (Needed for WordPress v6.4)
------------------------------------------------------------------------------*/
+# Heading Colors
+# Needed for WordPress v6.4
+# @since v1.6.5
+------------------------------------------------------------------------------*/
 /* If user specifies global heading font colors, don't override on colored backgrounds */
 .has-background .wp-block-heading:not(.has-text-color),
 .has-background h1:not(.has-text-color),

@@ -8,11 +8,16 @@
 	margin-right: auto !important;
 }
 
-/* Override our short width for wide and dotted separators */
+/* Override our short separator width for wide and dotted separators */
 .wp-block-separator.is-style-wide,
 .wp-block-separator.is-style-dots {
 	width: 100% !important;; 
 }
+
+// /* Inherit separator color when in colored group, columns, or column */
+// .has-background .wp-block-separator:not(.has-background) {
+// 	color: inherit;
+// }
 
 /*-----------------------------------------------------------------------------
 # Separator: Custom

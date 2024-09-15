@@ -3,6 +3,22 @@
 	"version": 3,
 	"title": "Purple, Orange, Midnight Blue",
 	"settings": {
+		"custom": {
+			"color": {
+				"highlight": {
+					"secondary": "var(--wp--preset--color--foreground-alt)",
+					"secondaryAlt": "var(--wp--preset--color--foreground-alt)",
+					"tertiary": "var(--wp--preset--color--highlight)",
+					"tertiaryAlt": "var(--wp--preset--color--highlight)"
+				},
+				"underline": {
+					"secondary": "underline",
+					"secondaryAlt": "underline",
+					"tertiary": "none",
+					"tertiaryAlt": "none"
+				}
+			}
+		},
 		"color": {
 			"palette": [
 				{

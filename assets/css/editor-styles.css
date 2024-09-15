@@ -68,6 +68,12 @@ footer.has-global-padding.wp-block-group.has-background {
   padding-right: var(--wp--style--root--padding-right);
 }
 
+/* Also alignwide groups with background need padding added */
+.wp-block-group.alignwide.has-background {
+  padding-left: calc(2 * var(--wp--style--block-gap));
+  padding-right: calc(2 * var(--wp--style--block-gap));
+}
+
 /*-----------------------------------------------------------------------------
 # Latest Comments
 -----------------------------------------------------------------------------*/

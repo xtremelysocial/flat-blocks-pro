@@ -72,12 +72,11 @@ if ( ! function_exists( 'flatblocks_parse_block_pattern' ) ) :
 		}
 
 		// Replace image URL's with the parent or child theme's URL
-// 		$content = preg_replace( '/(\"url\":\")(.*?)(\/assets\/images\/)/', '$1' . get_template_directory_uri() . '$3', $content);
-// 		$content = preg_replace( '/(src=\")(.*?)(\/assets\/images\/)/', '$1' . get_template_directory_uri() . '$3', $content);
-		//if ( ! isset($image_root) ) $image_root = get_template_directory_uri();
 		$image_root = isset($image_root) ? $image_root : get_template_directory_uri();
+		//if ( $_GET['debug'] ) var_dump($image_root); //TEST		
 		$content = preg_replace( '/(\"url\":\")(.*?)(\/assets\/images\/)/', '$1' . $image_root . '$3', $content);
 		$content = preg_replace( '/(src=\")(.*?)(\/assets\/images\/)/', '$1' . $image_root . '$3', $content);
+		$content = preg_replace( '/(\"mediaLink\":\")(.*?)(\/assets\/images\/)/', '$1' . $image_root . '$3', $content);
 		
 		return $content;				
 	}

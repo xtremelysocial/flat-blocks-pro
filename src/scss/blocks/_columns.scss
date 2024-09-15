@@ -6,11 +6,6 @@
  * theme.json as custom block CSS.
  */
 
-//* ADD BACK gap on flex columns by default */
-// .wp-block-columns-is-layout-flex {
-// 	gap: var(--wp--style--block-gap);
-// }
-
 /* 
  * Note: Breakpoint of 781 is what is hard-coded in WordPress 
  * v6.0+ to collapse columns
@@ -76,7 +71,8 @@
 	}
 
 	/* Center left and right aligned text */
-	.wp-block-columns.is-style-center-on-mobile .wp-block-column:not(.wp-block-navigation__responsive-container-content) > * {
+	.wp-block-columns.is-style-center-on-mobile .wp-block-column:not(.wp-block-navigation__responsive-container-content) > *,
+	.wp-block-columns.is-style-center-on-mobile .wp-block-column:not(.wp-block-navigation__responsive-container-content) > .wp-block-template-part > * {
 		display: flex;
 		justify-content: center;
 		--navigation-layout-justify: center;		

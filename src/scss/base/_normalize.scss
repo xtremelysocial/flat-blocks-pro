@@ -14,6 +14,14 @@ html {
   box-sizing: inherit;
 }
 
+/* 
+ * Default color scheme to light, but allow theme styles to use light-dark() 
+ * CSS function. e.g. light-dark(white, black)
+ */
+:root { 
+	color-scheme: light dark 
+}
+
 /*
  * Font smoothing.
  * This is a niche setting that will not be available via Global Styles.
