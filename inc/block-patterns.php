@@ -192,6 +192,10 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 				'title' => __( 'Cover Typewriter', 'flat-blocks' ),
 				'categories' => array ('flatblocks', 'banner' )
 			),
+			'cover-scroll-media-text' => array( 
+				'title' => __( 'Media w/2 Text Blocks and Scroll to Content', 'flat-blocks' ),
+				'categories' => array ('flatblocks', 'banner' )
+			),
 			'media-text-2-blocks' => array( 
 				'title' => __( 'Media w/2 Text Blocks', 'flat-blocks' ),
 				'categories' => array ('flatblocks', 'banner', 'featured' )

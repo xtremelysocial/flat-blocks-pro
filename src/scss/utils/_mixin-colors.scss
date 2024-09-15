@@ -1,16 +1,7 @@
 //------------------------------------------------------------------------------
-//# Mixins
-//------------------------------------------------------------------------------
-@use "sass:map";
-
-//------------------------------------------------------------------------------
 //# Colors
 //------------------------------------------------------------------------------
-
-//------------------------------------------------------------------------------
-// Set default text and link colors depending on how dark or light the
-// background color is. 
-//------------------------------------------------------------------------------
+@use "sass:map";
 
 // When a color is used as a background, default the text to these colors based
 // on lightness.
@@ -71,36 +62,15 @@ $underline-colors: (
 						@if $underline {
 							text-decoration: var(--wp--custom--color--underline--#{$color}, var(--wp--custom--color--underline--#{$lightness}, #{$underline}));
 						}					
-
-						&:hover,
-						&:active {
-							text-decoration: var(--wp--custom--color--hover-underline--#{$color}, var(--wp--custom--color--hover-underline--#{$lightness}, var(--wp--custom--color--hover-underline--default, underline)));
-							
-						}
+// 
+// 						&:hover,
+// 						&:active {
+// 							text-decoration: var(--wp--custom--color--hover-underline--#{$color}, var(--wp--custom--color--hover-underline--#{$lightness}, var(--wp--custom--color--hover-underline--default, underline)));
+// 							
+// 						}
 					}					
 				}
 			}
 		}
 	}
 }
-
-//------------------------------------------------------------------------------
-//# Vendor Prefixes
-//------------------------------------------------------------------------------
-
-$vendor-prefixes: ('-webkit-', '-moz-', '');
-
-@mixin vendor-prefix($name, $value) {
-	@each $vendor in $vendor-prefixes {
-		#{$vendor}#{$name}: #{$value};
-	}
-}
-
-@mixin keyframes($animationName) {
-	@each $vendor in $vendor-prefixes {
-		@#{$vendor}keyframes #{$animationName} {
-			$browser: #{$vendor} !global;
-			@content;
-		}
-	}
-} $browser: null;

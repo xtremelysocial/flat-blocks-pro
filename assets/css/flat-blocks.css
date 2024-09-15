@@ -1,3 +1,6 @@
+/*!************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/scss/flat-blocks.scss ***!
+  \************************************************************************************************************************************************/
 /**
  * File:	flat-blocks.css
  * Theme:	Flat Blocks
@@ -90,9 +93,9 @@ a,
   text-decoration-style: var(--wp--custom--link--style, solid);
 }
 
-/* Link hover styles */
-.has-background a:hover,
-.has-text-color a:not(.wp-element-button):not(.wp-block-button):not(.wp-block-social-link-anchor):hover {
+/* Lighten link colors when text color set */
+.has-text-color:not(.has-link-color) a:not(.wp-element-button):not(.wp-block-button):not(.wp-block-social-link-anchor):hover,
+.has-text-color:not(.has-link-color) a:not(.wp-element-button):not(.wp-block-button):not(.wp-block-social-link-anchor):active {
   opacity: var(--wp--custom--link--hover-opacity, 0.8);
 }
 
@@ -289,6 +292,18 @@ body .is-layout-constrained > .alignright {
 # Colors
 -----------------------------------------------------------------------------*/
 /* 
+ * Default links on colored backgrounds to underline, then override later
+ * for certain colors 
+ */
+.has-background:not(.has-link-color) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor) {
+  text-decoration: underline;
+}
+.has-background:not(.has-link-color) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-background:not(.has-link-color) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active {
+  text-decoration: underline;
+  opacity: var(--wp--custom--link--hover-opacity, 0.8);
+}
+
+/* 
  * Black and near-black colors, default light text (but leave link color alone).
  * Override by defining --wp--custom--color--contrast--black and/or 
  * --wp--custom--color--highlight--black in theme.json.
@@ -300,9 +315,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--contrast, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
   text-decoration: var(--wp--custom--color--underline--contrast, var(--wp--custom--color--underline--default-black, none));
 }
-.has-contrast-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-contrast-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-contrast-background-color .wp-block-separator:not(.has-background):hover, .has-contrast-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--contrast, var(--wp--custom--color--hover-underline--default-black, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-midnight-blue-background-color {
   color: var(--wp--custom--color--contrast--midnight-blue, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
@@ -310,9 +322,6 @@ body .is-layout-constrained > .alignright {
 .has-midnight-blue-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-midnight-blue-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--midnight-blue, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
   text-decoration: var(--wp--custom--color--underline--midnight-blue, var(--wp--custom--color--underline--default-black, none));
-}
-.has-midnight-blue-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-midnight-blue-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-midnight-blue-background-color .wp-block-separator:not(.has-background):hover, .has-midnight-blue-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--midnight-blue, var(--wp--custom--color--hover-underline--default-black, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 .has-dark-midnight-blue-background-color {
@@ -322,9 +331,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--dark-midnight-blue, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
   text-decoration: var(--wp--custom--color--underline--dark-midnight-blue, var(--wp--custom--color--underline--default-black, none));
 }
-.has-dark-midnight-blue-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-dark-midnight-blue-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-dark-midnight-blue-background-color .wp-block-separator:not(.has-background):hover, .has-dark-midnight-blue-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--dark-midnight-blue, var(--wp--custom--color--hover-underline--default-black, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-dark-background-color {
   color: var(--wp--custom--color--contrast--dark, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
@@ -332,9 +338,6 @@ body .is-layout-constrained > .alignright {
 .has-dark-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-dark-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--dark, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
   text-decoration: var(--wp--custom--color--underline--dark, var(--wp--custom--color--underline--default-black, none));
-}
-.has-dark-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-dark-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-dark-background-color .wp-block-separator:not(.has-background):hover, .has-dark-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--dark, var(--wp--custom--color--hover-underline--default-black, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 .has-dark-alt-background-color {
@@ -344,9 +347,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--dark-alt, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
   text-decoration: var(--wp--custom--color--underline--dark-alt, var(--wp--custom--color--underline--default-black, none));
 }
-.has-dark-alt-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-dark-alt-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-dark-alt-background-color .wp-block-separator:not(.has-background):hover, .has-dark-alt-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--dark-alt, var(--wp--custom--color--hover-underline--default-black, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-almost-black-background-color {
   color: var(--wp--custom--color--contrast--almost-black, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
@@ -354,9 +354,6 @@ body .is-layout-constrained > .alignright {
 .has-almost-black-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-almost-black-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--almost-black, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
   text-decoration: var(--wp--custom--color--underline--almost-black, var(--wp--custom--color--underline--default-black, none));
-}
-.has-almost-black-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-almost-black-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-almost-black-background-color .wp-block-separator:not(.has-background):hover, .has-almost-black-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--almost-black, var(--wp--custom--color--hover-underline--default-black, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 .has-not-quite-black-background-color {
@@ -366,9 +363,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--not-quite-black, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
   text-decoration: var(--wp--custom--color--underline--not-quite-black, var(--wp--custom--color--underline--default-black, none));
 }
-.has-not-quite-black-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-not-quite-black-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-not-quite-black-background-color .wp-block-separator:not(.has-background):hover, .has-not-quite-black-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--not-quite-black, var(--wp--custom--color--hover-underline--default-black, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-black-background-color {
   color: var(--wp--custom--color--contrast--black, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
@@ -376,9 +370,6 @@ body .is-layout-constrained > .alignright {
 .has-black-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-black-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--black, var(--wp--custom--color--highlight--default-black, var(--wp--preset--color--highlight)));
   text-decoration: var(--wp--custom--color--underline--black, var(--wp--custom--color--underline--default-black, none));
-}
-.has-black-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-black-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-black-background-color .wp-block-separator:not(.has-background):hover, .has-black-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--black, var(--wp--custom--color--hover-underline--default-black, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 /* 
@@ -393,9 +384,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--primary, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--primary, var(--wp--custom--color--underline--default-dark, underline));
 }
-.has-primary-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-primary-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-primary-background-color .wp-block-separator:not(.has-background):hover, .has-primary-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--primary, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-secondary-background-color {
   color: var(--wp--custom--color--contrast--secondary, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
@@ -403,9 +391,6 @@ body .is-layout-constrained > .alignright {
 .has-secondary-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-secondary-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--secondary, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--secondary, var(--wp--custom--color--underline--default-dark, underline));
-}
-.has-secondary-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-secondary-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-secondary-background-color .wp-block-separator:not(.has-background):hover, .has-secondary-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--secondary, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 .has-tertiary-background-color {
@@ -415,9 +400,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--tertiary, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--tertiary, var(--wp--custom--color--underline--default-dark, underline));
 }
-.has-tertiary-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-tertiary-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-tertiary-background-color .wp-block-separator:not(.has-background):hover, .has-tertiary-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--tertiary, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-primary-alt-background-color {
   color: var(--wp--custom--color--contrast--primary-alt, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
@@ -425,9 +407,6 @@ body .is-layout-constrained > .alignright {
 .has-primary-alt-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-primary-alt-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--primary-alt, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--primary-alt, var(--wp--custom--color--underline--default-dark, underline));
-}
-.has-primary-alt-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-primary-alt-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-primary-alt-background-color .wp-block-separator:not(.has-background):hover, .has-primary-alt-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--primary-alt, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 .has-secondary-alt-background-color {
@@ -437,9 +416,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--secondary-alt, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--secondary-alt, var(--wp--custom--color--underline--default-dark, underline));
 }
-.has-secondary-alt-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-secondary-alt-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-secondary-alt-background-color .wp-block-separator:not(.has-background):hover, .has-secondary-alt-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--secondary-alt, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-tertiary-alt-background-color {
   color: var(--wp--custom--color--contrast--tertiary-alt, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
@@ -447,9 +423,6 @@ body .is-layout-constrained > .alignright {
 .has-tertiary-alt-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-tertiary-alt-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--tertiary-alt, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--tertiary-alt, var(--wp--custom--color--underline--default-dark, underline));
-}
-.has-tertiary-alt-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-tertiary-alt-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-tertiary-alt-background-color .wp-block-separator:not(.has-background):hover, .has-tertiary-alt-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--tertiary-alt, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 .has-highlight-background-color {
@@ -459,9 +432,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--highlight, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--highlight, var(--wp--custom--color--underline--default-dark, underline));
 }
-.has-highlight-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-highlight-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-highlight-background-color .wp-block-separator:not(.has-background):hover, .has-highlight-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--highlight, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-highlight-alt-background-color {
   color: var(--wp--custom--color--contrast--highlight-alt, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
@@ -469,9 +439,6 @@ body .is-layout-constrained > .alignright {
 .has-highlight-alt-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-highlight-alt-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--highlight-alt, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--highlight-alt, var(--wp--custom--color--underline--default-dark, underline));
-}
-.has-highlight-alt-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-highlight-alt-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-highlight-alt-background-color .wp-block-separator:not(.has-background):hover, .has-highlight-alt-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--highlight-alt, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 .has-dark-gray-background-color {
@@ -481,9 +448,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--dark-gray, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--dark-gray, var(--wp--custom--color--underline--default-dark, underline));
 }
-.has-dark-gray-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-dark-gray-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-dark-gray-background-color .wp-block-separator:not(.has-background):hover, .has-dark-gray-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--dark-gray, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-very-dark-gray-background-color {
   color: var(--wp--custom--color--contrast--very-dark-gray, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
@@ -491,9 +455,6 @@ body .is-layout-constrained > .alignright {
 .has-very-dark-gray-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-very-dark-gray-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--very-dark-gray, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--very-dark-gray, var(--wp--custom--color--underline--default-dark, underline));
-}
-.has-very-dark-gray-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-very-dark-gray-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-very-dark-gray-background-color .wp-block-separator:not(.has-background):hover, .has-very-dark-gray-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--very-dark-gray, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 .has-green-background-color {
@@ -503,9 +464,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--green, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--green, var(--wp--custom--color--underline--default-dark, underline));
 }
-.has-green-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-green-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-green-background-color .wp-block-separator:not(.has-background):hover, .has-green-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--green, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-dark-bright-green-background-color {
   color: var(--wp--custom--color--contrast--dark-bright-green, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
@@ -513,9 +471,6 @@ body .is-layout-constrained > .alignright {
 .has-dark-bright-green-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-dark-bright-green-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--dark-bright-green, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--dark-bright-green, var(--wp--custom--color--underline--default-dark, underline));
-}
-.has-dark-bright-green-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-dark-bright-green-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-dark-bright-green-background-color .wp-block-separator:not(.has-background):hover, .has-dark-bright-green-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--dark-bright-green, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 .has-orange-background-color {
@@ -525,9 +480,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--orange, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--orange, var(--wp--custom--color--underline--default-dark, underline));
 }
-.has-orange-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-orange-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-orange-background-color .wp-block-separator:not(.has-background):hover, .has-orange-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--orange, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-dark-orange-background-color {
   color: var(--wp--custom--color--contrast--dark-orange, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
@@ -535,9 +487,6 @@ body .is-layout-constrained > .alignright {
 .has-dark-orange-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-dark-orange-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--dark-orange, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--dark-orange, var(--wp--custom--color--underline--default-dark, underline));
-}
-.has-dark-orange-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-dark-orange-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-dark-orange-background-color .wp-block-separator:not(.has-background):hover, .has-dark-orange-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--dark-orange, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 .has-blue-background-color {
@@ -547,9 +496,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--blue, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--blue, var(--wp--custom--color--underline--default-dark, underline));
 }
-.has-blue-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-blue-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-blue-background-color .wp-block-separator:not(.has-background):hover, .has-blue-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--blue, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-dark-blue-background-color {
   color: var(--wp--custom--color--contrast--dark-blue, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
@@ -557,9 +503,6 @@ body .is-layout-constrained > .alignright {
 .has-dark-blue-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-dark-blue-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--dark-blue, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--dark-blue, var(--wp--custom--color--underline--default-dark, underline));
-}
-.has-dark-blue-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-dark-blue-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-dark-blue-background-color .wp-block-separator:not(.has-background):hover, .has-dark-blue-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--dark-blue, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 .has-purple-background-color {
@@ -569,9 +512,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--purple, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--purple, var(--wp--custom--color--underline--default-dark, underline));
 }
-.has-purple-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-purple-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-purple-background-color .wp-block-separator:not(.has-background):hover, .has-purple-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--purple, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-dark-purple-background-color {
   color: var(--wp--custom--color--contrast--dark-purple, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
@@ -579,9 +519,6 @@ body .is-layout-constrained > .alignright {
 .has-dark-purple-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-dark-purple-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--dark-purple, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--dark-purple, var(--wp--custom--color--underline--default-dark, underline));
-}
-.has-dark-purple-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-dark-purple-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-dark-purple-background-color .wp-block-separator:not(.has-background):hover, .has-dark-purple-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--dark-purple, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 .has-light-red-background-color {
@@ -591,9 +528,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--light-red, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--light-red, var(--wp--custom--color--underline--default-dark, underline));
 }
-.has-light-red-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-light-red-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-light-red-background-color .wp-block-separator:not(.has-background):hover, .has-light-red-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--light-red, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-red-background-color {
   color: var(--wp--custom--color--contrast--red, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
@@ -602,9 +536,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--red, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--red, var(--wp--custom--color--underline--default-dark, underline));
 }
-.has-red-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-red-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-red-background-color .wp-block-separator:not(.has-background):hover, .has-red-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--red, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-dark-red-background-color {
   color: var(--wp--custom--color--contrast--dark-red, var(--wp--custom--color--contrast--default-dark, var(--wp--preset--color--foreground-alt)));
@@ -612,9 +543,6 @@ body .is-layout-constrained > .alignright {
 .has-dark-red-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-dark-red-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--dark-red, var(--wp--custom--color--highlight--default-dark, inherit));
   text-decoration: var(--wp--custom--color--underline--dark-red, var(--wp--custom--color--underline--default-dark, underline));
-}
-.has-dark-red-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-dark-red-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-dark-red-background-color .wp-block-separator:not(.has-background):hover, .has-dark-red-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--dark-red, var(--wp--custom--color--hover-underline--default-dark, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 /* 
@@ -629,9 +557,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--light-green, var(--wp--custom--color--highlight--default-medium, inherit));
   text-decoration: var(--wp--custom--color--underline--light-green, var(--wp--custom--color--underline--default-medium, underline));
 }
-.has-light-green-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-light-green-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-light-green-background-color .wp-block-separator:not(.has-background):hover, .has-light-green-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--light-green, var(--wp--custom--color--hover-underline--default-medium, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-bright-green-background-color {
   color: var(--wp--custom--color--contrast--bright-green, var(--wp--custom--color--contrast--default-medium, var(--wp--preset--color--foreground-alt)));
@@ -639,9 +564,6 @@ body .is-layout-constrained > .alignright {
 .has-bright-green-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-bright-green-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--bright-green, var(--wp--custom--color--highlight--default-medium, inherit));
   text-decoration: var(--wp--custom--color--underline--bright-green, var(--wp--custom--color--underline--default-medium, underline));
-}
-.has-bright-green-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-bright-green-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-bright-green-background-color .wp-block-separator:not(.has-background):hover, .has-bright-green-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--bright-green, var(--wp--custom--color--hover-underline--default-medium, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 .has-light-orange-background-color {
@@ -651,9 +573,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--light-orange, var(--wp--custom--color--highlight--default-medium, inherit));
   text-decoration: var(--wp--custom--color--underline--light-orange, var(--wp--custom--color--underline--default-medium, underline));
 }
-.has-light-orange-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-light-orange-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-light-orange-background-color .wp-block-separator:not(.has-background):hover, .has-light-orange-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--light-orange, var(--wp--custom--color--hover-underline--default-medium, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-light-blue-background-color {
   color: var(--wp--custom--color--contrast--light-blue, var(--wp--custom--color--contrast--default-medium, var(--wp--preset--color--foreground-alt)));
@@ -662,9 +581,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--light-blue, var(--wp--custom--color--highlight--default-medium, inherit));
   text-decoration: var(--wp--custom--color--underline--light-blue, var(--wp--custom--color--underline--default-medium, underline));
 }
-.has-light-blue-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-light-blue-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-light-blue-background-color .wp-block-separator:not(.has-background):hover, .has-light-blue-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--light-blue, var(--wp--custom--color--hover-underline--default-medium, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-light-purple-background-color {
   color: var(--wp--custom--color--contrast--light-purple, var(--wp--custom--color--contrast--default-medium, var(--wp--preset--color--foreground-alt)));
@@ -672,9 +588,6 @@ body .is-layout-constrained > .alignright {
 .has-light-purple-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-light-purple-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--light-purple, var(--wp--custom--color--highlight--default-medium, inherit));
   text-decoration: var(--wp--custom--color--underline--light-purple, var(--wp--custom--color--underline--default-medium, underline));
-}
-.has-light-purple-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-light-purple-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-light-purple-background-color .wp-block-separator:not(.has-background):hover, .has-light-purple-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--light-purple, var(--wp--custom--color--hover-underline--default-medium, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 /* 
@@ -688,9 +601,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--light-yellow, var(--wp--custom--color--highlight--default-light, inherit));
   text-decoration: var(--wp--custom--color--underline--light-yellow, var(--wp--custom--color--underline--default-light, underline));
 }
-.has-light-yellow-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-light-yellow-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-light-yellow-background-color .wp-block-separator:not(.has-background):hover, .has-light-yellow-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--light-yellow, var(--wp--custom--color--hover-underline--default-light, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-yellow-background-color {
   color: var(--wp--custom--color--contrast--yellow, var(--wp--custom--color--contrast--default-light, var(--wp--preset--color--almost-black)));
@@ -698,9 +608,6 @@ body .is-layout-constrained > .alignright {
 .has-yellow-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-yellow-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--yellow, var(--wp--custom--color--highlight--default-light, inherit));
   text-decoration: var(--wp--custom--color--underline--yellow, var(--wp--custom--color--underline--default-light, underline));
-}
-.has-yellow-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-yellow-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-yellow-background-color .wp-block-separator:not(.has-background):hover, .has-yellow-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--yellow, var(--wp--custom--color--hover-underline--default-light, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 /* 
@@ -714,9 +621,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--base, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
   text-decoration: var(--wp--custom--color--underline--base, var(--wp--custom--color--underline--default-white, none));
 }
-.has-base-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-base-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-base-background-color .wp-block-separator:not(.has-background):hover, .has-base-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--base, var(--wp--custom--color--hover-underline--default-white, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-neutral-background-color {
   color: var(--wp--custom--color--contrast--neutral, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
@@ -724,9 +628,6 @@ body .is-layout-constrained > .alignright {
 .has-neutral-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-neutral-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--neutral, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
   text-decoration: var(--wp--custom--color--underline--neutral, var(--wp--custom--color--underline--default-white, none));
-}
-.has-neutral-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-neutral-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-neutral-background-color .wp-block-separator:not(.has-background):hover, .has-neutral-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--neutral, var(--wp--custom--color--hover-underline--default-white, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 .has-neutral-alt-background-color {
@@ -736,9 +637,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--neutral-alt, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
   text-decoration: var(--wp--custom--color--underline--neutral-alt, var(--wp--custom--color--underline--default-white, none));
 }
-.has-neutral-alt-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-neutral-alt-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-neutral-alt-background-color .wp-block-separator:not(.has-background):hover, .has-neutral-alt-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--neutral-alt, var(--wp--custom--color--hover-underline--default-white, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-foreground-alt-background-color {
   color: var(--wp--custom--color--contrast--foreground-alt, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
@@ -746,9 +644,6 @@ body .is-layout-constrained > .alignright {
 .has-foreground-alt-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-foreground-alt-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--foreground-alt, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
   text-decoration: var(--wp--custom--color--underline--foreground-alt, var(--wp--custom--color--underline--default-white, none));
-}
-.has-foreground-alt-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-foreground-alt-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-foreground-alt-background-color .wp-block-separator:not(.has-background):hover, .has-foreground-alt-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--foreground-alt, var(--wp--custom--color--hover-underline--default-white, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 .has-white-background-color {
@@ -758,9 +653,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--white, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
   text-decoration: var(--wp--custom--color--underline--white, var(--wp--custom--color--underline--default-white, none));
 }
-.has-white-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-white-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-white-background-color .wp-block-separator:not(.has-background):hover, .has-white-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--white, var(--wp--custom--color--hover-underline--default-white, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-off-white-background-color {
   color: var(--wp--custom--color--contrast--off-white, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
@@ -768,9 +660,6 @@ body .is-layout-constrained > .alignright {
 .has-off-white-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-off-white-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--off-white, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
   text-decoration: var(--wp--custom--color--underline--off-white, var(--wp--custom--color--underline--default-white, none));
-}
-.has-off-white-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-off-white-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-off-white-background-color .wp-block-separator:not(.has-background):hover, .has-off-white-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--off-white, var(--wp--custom--color--hover-underline--default-white, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 .has-very-light-gray-background-color {
@@ -780,9 +669,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--very-light-gray, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
   text-decoration: var(--wp--custom--color--underline--very-light-gray, var(--wp--custom--color--underline--default-white, none));
 }
-.has-very-light-gray-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-very-light-gray-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-very-light-gray-background-color .wp-block-separator:not(.has-background):hover, .has-very-light-gray-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--very-light-gray, var(--wp--custom--color--hover-underline--default-white, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-light-gray-background-color {
   color: var(--wp--custom--color--contrast--light-gray, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
@@ -791,9 +677,6 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--highlight--light-gray, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
   text-decoration: var(--wp--custom--color--underline--light-gray, var(--wp--custom--color--underline--default-white, none));
 }
-.has-light-gray-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-light-gray-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-light-gray-background-color .wp-block-separator:not(.has-background):hover, .has-light-gray-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--light-gray, var(--wp--custom--color--hover-underline--default-white, var(--wp--custom--color--hover-underline--default, underline)));
-}
 
 .has-gray-background-color {
   color: var(--wp--custom--color--contrast--gray, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
@@ -801,9 +684,6 @@ body .is-layout-constrained > .alignright {
 .has-gray-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor), .has-gray-background-color .wp-block-separator:not(.has-background) {
   color: var(--wp--custom--color--highlight--gray, var(--wp--custom--color--highlight--default-white, var(--wp--preset--color--highlight)));
   text-decoration: var(--wp--custom--color--underline--gray, var(--wp--custom--color--underline--default-white, none));
-}
-.has-gray-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-gray-background-color:not(.has-link-color) :not(.wp-block-site-title) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active, .has-gray-background-color .wp-block-separator:not(.has-background):hover, .has-gray-background-color .wp-block-separator:not(.has-background):active {
-  text-decoration: var(--wp--custom--color--hover-underline--gray, var(--wp--custom--color--hover-underline--default-white, var(--wp--custom--color--hover-underline--default, underline)));
 }
 
 /* 
@@ -1078,9 +958,6 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
   padding: 0;
 }
 
-/*-----------------------------------------------------------------------------
-# Colors
------------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------
 # Navigation
 -----------------------------------------------------------------------------*/
@@ -1489,6 +1366,8 @@ footer,
 .wp-block-template-part,
 .wp-block-post-content {
   margin-block-start: 0 !important;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 /* 
@@ -1524,6 +1403,7 @@ body .is-layout-constrained .wp-block-template-part > * + *:not(.wp-block-templa
 # Padding (Horizontal and vertical spacing)
 -----------------------------------------------------------------------------*/
 /* Remove padding from containers */
+main.wp-block-group:not(.has-global-padding),
 .wp-block-template-part {
   padding: 0;
 }

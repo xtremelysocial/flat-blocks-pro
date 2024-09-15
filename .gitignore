@@ -32,6 +32,7 @@ zz_unused
 
 # Ignore individual block styles since not implemented yet
 assets/css/blocks/
+assets/css/*-rtl.css
 
 # Ignore PRO theme files
 #pro

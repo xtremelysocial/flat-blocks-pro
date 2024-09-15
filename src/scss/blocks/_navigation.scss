@@ -3,7 +3,7 @@
 -----------------------------------------------------------------------------*/
 
 // Load our mixins
-@use "../utils/mixins";
+@use "../utils/mixin-prefixes";
 
 /*-----------------------------------------------------------------------------
 # Bold or highlight ACTIVE menu items 
@@ -151,12 +151,12 @@
 
 /* Increase animation TIME on nav menu drop-downs */
 .wp-block-navigation .has-child .wp-block-navigation__submenu-container {
-	@include mixins.vendor-prefix('transition-duration', var(--wp--custom--animation--duration--short));
+	@include mixin-prefixes.vendor-prefix('transition-duration', var(--wp--custom--animation--duration--short));
 }
 
 /* Increase animation DELAY on nav drop-downs when NOT requiring a click */
 .wp-block-navigation .has-child:not(.open-on-click):hover > .wp-block-navigation__submenu-container {
-	@include mixins.vendor-prefix('transition-delay', var(--wp--custom--animation--duration--short));
+	@include mixin-prefixes.vendor-prefix('transition-delay', var(--wp--custom--animation--duration--short));
 }
 
 /*-----------------------------------------------------------------------------

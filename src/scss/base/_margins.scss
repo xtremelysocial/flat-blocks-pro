@@ -16,8 +16,10 @@ footer,
 .wp-block-template-part,
 .wp-block-post-content {
 	margin-block-start: 0 !important;
+	padding-top: 0;
+	padding-bottom: 0;
 }
- 
+
 /* 
  * Add top margin to the container's first block and then between 
  * subsequent blocks 

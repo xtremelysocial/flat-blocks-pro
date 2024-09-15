@@ -4,7 +4,7 @@
 
 /* Remove padding from containers */
 // .wp-block-template-part,
-// main.wp-block-group:not(.has-global-padding) {
+main.wp-block-group:not(.has-global-padding),
 .wp-block-template-part {
 	padding: 0;
 }

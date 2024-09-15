@@ -18,9 +18,9 @@ a,
 // 	text-decoration: none;
 // }
 
-/* Link hover styles */
-.has-background a:hover,
-.has-text-color a:not(.wp-element-button):not(.wp-block-button):not(.wp-block-social-link-anchor):hover {
+/* Lighten link colors when text color set */
+.has-text-color:not(.has-link-color) a:not(.wp-element-button):not(.wp-block-button):not(.wp-block-social-link-anchor):hover,
+.has-text-color:not(.has-link-color) a:not(.wp-element-button):not(.wp-block-button):not(.wp-block-social-link-anchor):active {
 	opacity: var(--wp--custom--link--hover-opacity, 0.8);
 }
 
