@@ -190,6 +190,10 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 				'title' => __( 'Cover Typewriter', 'flat-blocks-pro' ),
 				'categories' => array ('flatblocks', 'cover', 'banner' )
 			),
+			'media-text-2-blocks' => array( 
+				'title' => __( 'Media w/2 Blocks', 'flat-blocks-pro' ),
+				'categories' => array ('flatblocks', 'cover', 'banner' )
+			),
 			'image-gallery' => array( 
 				'title' => __( 'Image Gallery', 'flat-blocks-pro' ),
 				'categories' => array ('flatblocks', 'columns', 'gallery', 'image' )

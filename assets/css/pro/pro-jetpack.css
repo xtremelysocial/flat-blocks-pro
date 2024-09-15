@@ -1,3 +1,6 @@
+/*!********************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./pro/src/scss/pro/pro-jetpack.scss ***!
+  \********************************************************************************************************************************************************/
 /**
  * File:	pro-jetpack.css
  * Theme:	Flat Blocks PRO
@@ -33,8 +36,6 @@
 }
 
 /* Remove Block Editor box shadow on Jetpack What's App Button */
-/* TO-DO: Get this working */
-/*.is-outline-mode .block-editor-block-list__block.wp-block-jetpack-whatsapp-button.is-selected:after {*/
 .is-root-container .wp-block-jetpack-whatsapp-button:after {
   box-shadow: none;
 }
@@ -60,8 +61,6 @@
 }
 
 /* Automatically add icons to Jetpack Email and Phone# links */
-/*[itemprop="address"] [itemprop="streetAddress"]:before,*/
-/*.wp-block-jetpack-address:before,*/
 .wp-block-jetpack-email:before,
 .wp-block-jetpack-phone:before {
   display: inline-block;
@@ -73,57 +72,28 @@
   vertical-align: middle;
 }
 
-/*[itemprop="telephone"]:not(a[href^="tel:"]):before,
-:not([itemprop="telephone"]) > a[href^="tel:"]:before {*/
 .wp-block-jetpack-phone:before {
   content: "\f525";
 }
 
-/*[itemprop="email"]:not(a[href^="mailto:"]):before,
-:not([itemprop="email"] > a[href^="mailto:"]:before {*/
 .wp-block-jetpack-email:before {
   content: "\f466";
 }
 
-/*[itemprop="address"] [itemprop="streetAddress"]:before {*/
-/*.wp-block-jetpack-address:before {
-	content: "\f323";
-}*/
-/*[itemprop="address"] [itemprop-"addressLocality"] {
-	margin-left: var(--wp--preset--spacing--20);
-}*/
 /*--------------------------------------------------------------
 # Slideshow
 --------------------------------------------------------------*/
-/*.wp-block-jetpack-slideshow_image {
-	margin: 1px;
-	border: 1px solid var(--wp--custom--border--color);
-	border-radius: var(--wp--custom--border--radius);
-	padding: var(--wp-custom--border--radius);
-}*/
 /* FIX Jetpack slideshow not retaining full-width of the images */
 .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_image {
   max-height: none;
 }
 
-/**.wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_image {
-    width: 100%;
-    max-width: unset;
-    object-fit: cover;
-    object-position: 0% 0%;
-}**/
 /* Center the dots that display how many images there are in the slideshow */
 .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-bullets,
 .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_pagination.swiper-pagination-custom {
   justify-content: center;
 }
 
-/* Fix slider nav positioning in Style Preview */
-/*@media (min-width: 600px) {
-    .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-next, .wp-block-jetpack-slideshow .wp-block-jetpack-slideshow_button-prev {
-        display: inline-block;
-    }
-}*/
 /*--------------------------------------------------------------
 # Tiled Gallery
 --------------------------------------------------------------*/

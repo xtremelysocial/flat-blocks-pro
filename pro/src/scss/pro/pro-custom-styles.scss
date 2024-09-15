@@ -14,20 +14,20 @@
 /*--------------------------------------------------------------
 # BASE PRO BLOCK STYLES
 --------------------------------------------------------------*/
-@use "base/base";
-//@use "base/angles-curves"; // Moved to xs-shapes plugin
-@use "base/dashicons";
-@use "base/list-dividers";
-@use "base/plugins";
+@use "../base/base";
+//@use "../base/angles-curves"; // Moved to xs-shapes plugin
+@use "../base/dashicons";
+@use "../base/list-dividers";
+@use "../base/plugins";
 
 /*--------------------------------------------------------------
 # ADDITIONAL PRO BLOCK STYLES
 --------------------------------------------------------------*/
 //@use "blocks/buttons"; // Moved to core Flat Blocks theme
-@use "blocks/group";
-@use "blocks/heading";
-@use "blocks/latest-posts";
-@use "blocks/navigation";
-@use "blocks/paragraph";
-@use "blocks/post-template";
-@use "blocks/table";
+@use "../blocks/group";
+@use "../blocks/heading";
+@use "../blocks/latest-posts";
+@use "../blocks/navigation";
+@use "../blocks/paragraph";
+@use "../blocks/post-template";
+@use "../blocks/table";

@@ -10,5 +10,5 @@
 ?>
 
 <!-- wp:paragraph -->
-<p><?php echo __("Try a search or check out our site pages, blog categories, and recent posts", "flat-blocks"); ?></p>
+<p><?php echo __("Try a search or check out our site pages, blog categories, and recent posts", "flat-blocks-pro"); ?></p>
 <!-- /wp:paragraph -->

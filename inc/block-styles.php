@@ -81,7 +81,7 @@ if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 				array('latest-posts', 'latest-comments' )
 			),
 			'no-padding' 		=> array( esc_html__('No Padding', 'flat-blocks-pro'), 
-				array('group', 'column' )
+				array('group', 'column', 'media-text' )
 			),
 // 			'rounded-border' 	=> array( esc_html__('Border', 'flat-blocks-pro'), 
 // 				array('group', 'columns', 'column', 'comments', 'post-comments' )
