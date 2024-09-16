@@ -55,7 +55,7 @@ $underline-colors: (
 				color: var(--wp--custom--color--contrast--#{$color}, var(--wp--custom--color--contrast--#{$lightness}, #{$contrast}));
 				
 				@if $highlight {			
-					&:not(.has-link-color) :not(.wp-block-site-title)  a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor),
+					&:not(.has-link-color) :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor),
 					& .wp-block-separator:not(.has-background) {
 						color: var(--wp--custom--color--highlight--#{$color}, var(--wp--custom--color--highlight--#{$lightness}, #{$highlight}));
 
