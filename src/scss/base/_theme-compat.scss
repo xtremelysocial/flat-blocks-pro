@@ -52,7 +52,12 @@
 // 	border-color: var(--wp--preset--color--contrast-alt);
 // }
 
-/* Remove padding on nested groups for when all groups had padding */
+/* Default group padding, but remove it on nested groups */
+:where(.wp-block-group:not(.is-style-no-padding)) {
+	padding-top: var(--wp--style--block-gap);
+	padding-bottom: var(--wp--style--block-gap);
+}
+
 .wp-block-group > .wp-block-group:not(.has-background):not(.is-style-rounded-corners):not(.is-style-rounded-border):not(.is-style-thick-rounded-border) {
 	padding: 0;
 }

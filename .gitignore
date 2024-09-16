@@ -22,11 +22,12 @@ node_modules/
 
 # Ignore save, test files, and zip files
 **/*-SAVE*
-styles/*-TEST*.json
-styles/blocks-test/
+styles/*-test*.json
 styles/colors-test/
 styles/global-test/
 styles/sections-test/
+styles/blocks-test/
+styles/global-test/
 styles/template-parts-test
 *.css.map
 zz_unused

@@ -150,7 +150,7 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 = 1.6.6 =
 September 15, 2024
 
-Version Summary: Updated logic for default link colors and link underlines on colored backgrounds. Added new Media & Text with 2 Text Blocks pattern and also a version with a "content start" scroll-to ID. Also added new Colored Footer template part. Removed Auto Dark Mode theme style, since WordPress isn't handling "Additional CSS" on the theme style very well.
+Version Summary: Updated logic for default link colors and link underlines on colored backgrounds. Added new Media & Text with 2 Text Blocks pattern and also a version with a "content start" scroll-to ID. Also added new Colored Footer template part. Removed Auto Dark Mode theme style, since WordPress isn't handling "Additional CSS" on the theme style very well. Removed Fixed Header custom group style and implemented the WordPress position:sticky feature instead. CSS and javascript for backwards-compatibility remains.
 
 * Updated all the color palettes to better handle link colors and whether to underline or not. Set a teal (blue-green) color on Midnight Blue and Dark Midnight Blue backgrounds.
 * Changed separator (hr) color to use the highlight color when used on a colored background (group, columns, etc.)
