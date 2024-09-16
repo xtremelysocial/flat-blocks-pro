@@ -24,7 +24,7 @@ if ( ! function_exists( 'flatblocks_pro_add_edit_link' ) ) :
 				.' style="display: block">'
 				.'<a href="'
 				. get_edit_post_link( $post_id )
-				. '">' . __("Edit", "flat-blocks")
+				. '">' . __("Edit", "flat-blocks-pro")
 				. '</a></p>';
 		}
 		return $content;

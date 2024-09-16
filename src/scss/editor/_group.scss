@@ -1,6 +1,6 @@
-/*---------------------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------
 # Group
----------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------*/
 
 /* In the Editor, blocks don't get alignfull CSS class for some 
  * some reason, so assume header and footer are full width
@@ -9,4 +9,10 @@ header.has-global-padding.wp-block-group.has-background,
 footer.has-global-padding.wp-block-group.has-background {
     padding-left: var(--wp--style--root--padding-left); 
     padding-right: var(--wp--style--root--padding-right);
+}
+
+/* Also alignwide groups with background need padding added */
+.wp-block-group.alignwide.has-background {
+	padding-left: calc(2 * var(--wp--style--block-gap));
+	padding-right: calc(2 * var(--wp--style--block-gap));
 }

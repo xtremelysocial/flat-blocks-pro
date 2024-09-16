@@ -35,10 +35,10 @@ if ( ! function_exists('fbp_load_includes') ) :
 
 
 		/* Add XS Animation Plugin if that plugin is NOT active */
-		if ( ! defined('XS_ANIMATION_PLUGIN') || XS_ANIMATION_PLUGIN !== true ) {
-		//if ( ! class_exists( 'XS_Animation_Plugin' ) ) {
-			$includes[] = '/pro/plugins/xs-animation/xs-animation.php';
-		}
+// 		if ( ! defined('XS_ANIMATION_PLUGIN') || XS_ANIMATION_PLUGIN !== true ) {
+// 		//if ( ! class_exists( 'XS_Animation_Plugin' ) ) {
+// 			$includes[] = '/pro/plugins/xs-animation/xs-animation.php';
+// 		}
 
 		/* Add Jetpack support if that plugin is active */
 		if ( class_exists( 'Jetpack' ) ) {

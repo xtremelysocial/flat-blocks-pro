@@ -54,10 +54,10 @@ if ( ! function_exists( 'flatblocks_pro_jetpack_styles' ) ) :
 		$version_string = is_string( $theme_version ) ? $theme_version : false;
 		
 		// Load Jetpack styles if that plugin is active
-		if ( class_exists('Jetpack') && file_exists( get_template_directory() . '/pro/assets/css/pro-jetpack.css' ) ) {
+		if ( class_exists('Jetpack') && file_exists( get_template_directory() . '/assets/css/pro/pro-jetpack.css' ) ) {
 			wp_enqueue_style( 
 				'flatblocks-pro-jetpack-styles', 
-				get_template_directory_uri() . '/pro/assets/css/pro-jetpack.css', 
+				get_template_directory_uri() . '/assets/css/pro/pro-jetpack.css', 
 				array( 'flatblocks-base' ), 
 				$version_string 
 			);
@@ -77,9 +77,9 @@ if ( ! function_exists( 'flatblocks_pro_jetpack_editor_styles' ) ) :
 	function flatblocks_pro_jetpack_editor_styles() {
 
 		// Load Jetpack styles if that plugin is active
-		if ( class_exists('Jetpack') && file_exists( get_template_directory() . '/pro/assets/css/pro-jetpack.css' ) ) {
+		if ( class_exists('Jetpack') && file_exists( get_template_directory() . '/assets/css/pro/pro-jetpack.css' ) ) {
 			add_editor_style(
-				'/pro/assets/css/pro-jetpack.css'
+				'/assets/css/pro/pro-jetpack.css'
 			);
 		}
 
@@ -100,7 +100,7 @@ if ( ! function_exists( 'flatblocks_pro_register_jetpack_block_styles' ) ) :
 		 * 'is-style-' will automatically be added to the names.
 		 */
 		$jetpack_styles = array(
-			'no-icon' 			=> array( esc_html__('No Icon', 'flat-blocks'), 
+			'no-icon' 			=> array( esc_html__('No Icon', 'flat-blocks-pro'), 
 				array( 'jetpack/contact-info', 'jetpack/email', 'jetpack/phone' ),
 				'style_handle' 	=> 'flatblocks-pro-jetpack-styles'
 			)

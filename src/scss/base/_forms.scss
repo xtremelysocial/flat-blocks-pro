@@ -1,6 +1,6 @@
-/*---------------------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------
 # Forms
----------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------*/
 /* 
  * Style form fields
  * 
@@ -21,12 +21,13 @@ fieldset {
 select,
 textarea,
 input:not(.file):not(.wp-element-button) {
+	font-family: inherit;
 	background-color: var(--wp--custom--color--field--background, revert);
 	color: var(--wp--custom--color--field--text, inherit);
 }
 
 select {
-	font-family: inherit;
+// 	font-family: inherit;
 	font-size: var(--wp--preset--font-size--small, 16px);
 	font-weight: var(--wp--custom--typography--font-weight--normal, 300);
 	line-height: 1.5;

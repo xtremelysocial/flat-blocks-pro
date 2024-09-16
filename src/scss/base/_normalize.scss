@@ -1,6 +1,6 @@
-/*---------------------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------
 # Normalize
----------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------*/
 /* 
  * Default to contain borders and padding within blocks and prevent iOS from adjusting
  * text sizes after orientation change. 
@@ -12,6 +12,14 @@ html {
 }
 *, *:before, *:after {
   box-sizing: inherit;
+}
+
+/* 
+ * Default color scheme to light, but allow theme styles to use light-dark() 
+ * CSS function. e.g. light-dark(white, black)
+ */
+:root { 
+	color-scheme: light dark 
 }
 
 /*

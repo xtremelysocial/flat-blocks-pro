@@ -1,6 +1,6 @@
-/*---------------------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------
 # Separator
----------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------*/
 
 /* FIX to center default (narrow) separator when user selects alignfull */
 .wp-block-separator.alignfull {
@@ -8,15 +8,20 @@
 	margin-right: auto !important;
 }
 
-/* Override our short width for wide and dotted separators */
+/* Override our short separator width for wide and dotted separators */
 .wp-block-separator.is-style-wide,
 .wp-block-separator.is-style-dots {
 	width: 100% !important;; 
 }
 
-/*---------------------------------------------------------------------------------------
+// /* Inherit separator color when in colored group, columns, or column */
+// .has-background .wp-block-separator:not(.has-background) {
+// 	color: inherit;
+// }
+
+/*-----------------------------------------------------------------------------
 # Separator: Custom
----------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------*/
 .wp-block-separator.is-style-thick {
   	border-style: solid;
 	border-width: 0 0 3px;

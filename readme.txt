@@ -147,14 +147,35 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
-= 1.6.5 =
-September 1, 2024
+= 1.6.6 =
+September 15, 2024
 
-* Adjust CSS for horizontal padding to better deal with full-width and non-full-width blocks.
+Version Summary: Updated logic for default link colors and link underlines on colored backgrounds. Added new Media & Text with 2 Text Blocks pattern and also a version with a "content start" scroll-to ID. Also added new Colored Footer template part. Removed Auto Dark Mode theme style, since WordPress isn't handling "Additional CSS" on the theme style very well.
+
+* Updated all the color palettes to better handle link colors and whether to underline or not. Set a teal (blue-green) color on Midnight Blue and Dark Midnight Blue backgrounds.
+* Changed separator (hr) color to use the highlight color when used on a colored background (group, columns, etc.)
+* Updated the new default link underline logic to set non-underlined links to underline on hover.
+* Added new Media & Text with 2 Text Blocks pattern for a nice colorful banner. By default it uses primary and primary-alt color, but of course you can change it whatever you want.
+* Added No Padding style to Media & Text block to accomodate the above pattern.
+* Set input fields to inherit the body font (lato by default).
+* Removed font color from Rounded, Rounded Border, and Thick Rounded Border styles so they default to the overall Contrast color (#555555 by default). This is useful in case you want to change the background color to a dark color. Just be sure to set a light font color if you do. 
+* Removed the theme reference in the Header with Tagline template part so it works with child themes.
+* Added padding to colored groups which are aligned wide in the Site Editor to better match the front-end (align full already did this).
+* Now including WordPress development configuration files: webpack.config.js, package.json, and package-lock.json. If you have node.js and the WordPress development scripts installed, you can run npm start or npm run build in the flat-blocks directory.
+
+= 1.6.5 =
+September 6, 2024
+
+Version Summary: Several enhancements made to provide sensible defaults for text, link, and hover colors as well as wether links are underlined or not. This makes it easy to change just the background color on groups or columns, etc. and not have to always specify the other colors.
+
+Also added Next and Previous Post links so user can easily page through articles on your site.
+
+Here are some more updates:
+* Added About 3 Navs Footer Template Part and set the About 3 Navs w/Site Info to use it.
+* Adjust CSS for horizontal padding in the Editor to better deal with full-width and non-full-width blocks. Set Header w/Tagline Template Part to use it too.
 * Added names to all Header, Footer, Sidebar, Post Meta, and Main content groups to differentiate them from other groups in the Templates while viewing in the Editor.
 * Added new custom variables for button colors: --wp--custom--color--button-background and --wp--custom--color--button--text. Replaced --wp--custom--border--color with --wp--custom--color--border to be consistent with the new color variables.
 * Centered the "No results" on queries and locked the block so it can't accidentally be removed. 
-* Added Next and Previous Post links so user can easily page through articles on your site.
 
 = 1.6.4 =
 August 22, 2024
@@ -398,7 +419,7 @@ September 11, 2023
 * Simplified CSS in editor-styles.css to remove .is-root-container before each CSS style because that was only needed when also loading these styles on the front-end.
 * Enhanced CSS in the Editor for horizontal spacing (padding) on tablet and mobile.
 * Enhance CSS for groups that are header, footer, or main. Top padding will be removed automatically and left and right padding will depend on whether site horizontal spacing is needed (.has-global-padding).
-* Enhanced our function that loads block patterns to alter the theme name not just for child themes but now also for parent themes created from Flat Blocks. i.e. The theme slug is now overridden whenever the theme slug isn't exactly 'flat-blocks'.
+* Enhanced our function that loads block patterns to alter the theme name not just for child themes but now also for parent themes created from Flat Blocks. i.e. The theme slug is now overridden whenever the theme slug isn't exactly 'flat-blocks-pro'.
 
 = 1.3.8 =
 September 9, 2023

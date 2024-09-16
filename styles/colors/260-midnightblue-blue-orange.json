@@ -26,6 +26,24 @@
 		}
 	},
 	"settings": {
+		"custom": {
+			"color": {
+				"highlight": {
+					"primary": "#47D3E5",
+					"primaryAlt": "#47D3E5",
+					"secondary": "var(--wp--preset--color--foreground-alt)",
+					"secondaryAlt": "var(--wp--preset--color--foreground-alt)",
+					"midnightBlue": "#47D3E5",
+					"darkMidnightBlue": "#47D3E5"
+				},
+				"underline": {
+					"primary": "none",
+					"primaryAlt": "none",
+					"secondary": "underline",
+					"secondaryAlt": "underline"
+				}
+			}
+		},
 		"color": {
 			"palette": [
 				{

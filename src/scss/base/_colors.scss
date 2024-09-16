@@ -1,55 +1,61 @@
-/*---------------------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------
 # Colors
-----------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------*/
+
 // Load our mixins to set default text and link colors
-@use "../utils/mixins";
+@use "../utils/mixin-colors";
 
 /* 
- * First set some basic defaults for when a background color is used
+ * Default links on colored backgrounds to underline, then override later
+ * for certain colors 
  */
-.has-background { //,
-	color: var(--wp--custom--color--contrast--default, inherit);
-}
+.has-background:not(.has-link-color) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor) {
+	text-decoration: underline;
 
-.has-background a:hover { //,
-	//color: inherit;
-	opacity: var(--wp--custom--link--hover-opacity, 0.85);
+	&:hover,
+	&:active {
+		text-decoration: underline;
+		opacity: var(--wp--custom--link--hover-opacity, 0.8);
+	}
 }
 
 /* 
  * Black and near-black colors, default light text (but leave link color alone).
- * Override by defining --wp--custom--color--contrast--black in theme.json.
+ * Override by defining --wp--custom--color--contrast--black and/or 
+ * --wp--custom--color--highlight--black in theme.json.
  */
-$black-colors: ('contrast', 'dark', 'dark-alt', 'almost-black', 'not-quite-black', 'black');
-@include mixins.color-defaults($black-colors, 'default-black');
+$black-colors: ('contrast', 'midnight-blue', 'dark-midnight-blue', 'dark', 'dark-alt', 'almost-black', 'not-quite-black', 'black');
+@include mixin-colors.color-defaults($black-colors, 'default-black');
 
 /* 
  * Dark colors, default light text and links 
- * Override by defining --wp--custom--color--contrast--dark in theme.json.
+ * Override by defining --wp--custom--color--contrast--dark and/or
+ * --wp--custom--color--highlight--dark in theme.json.
  */
-$dark-colors: ('primary', 'secondary', 'tertiary', 'primary-alt', 'secondary-alt', 'tertiary-alt', 'highlight', 'highlight-alt', 'dark-gray', 'very-dark-gray', 'green', 'dark-bright-green', 'orange', 'dark-orange', 'blue', 'dark-blue', 'midnight-blue', 'dark-midnight-blue', 'purple', 'dark-purple', 'light-red', 'red', 'dark-red');
-@include mixins.color-defaults($dark-colors, 'default-dark');
+$dark-colors: ('primary', 'secondary', 'tertiary', 'primary-alt', 'secondary-alt', 'tertiary-alt', 'highlight', 'highlight-alt', 'dark-gray', 'very-dark-gray', 'green', 'dark-bright-green', 'orange', 'dark-orange', 'blue', 'dark-blue', 'purple', 'dark-purple', 'light-red', 'red', 'dark-red');
+@include mixin-colors.color-defaults($dark-colors, 'default-dark');
 
 /* 
- * Medium colors, default light text and links too but make it easy for theme styles to 
- * Override by defining --wp--custom--color--contrast--medium in theme.json.
+ * Medium colors, default light text and links too but make it easy for theme
+ * styles to Override by defining --wp--custom--color--contrast--medium in
+ * theme.json.
  */
 $medium-colors: ('light-green', 'bright-green', 'light-orange', 'light-blue','light-purple');
-@include mixins.color-defaults($medium-colors, 'default-medium');
+@include mixin-colors.color-defaults($medium-colors, 'default-medium');
 
 /* 
  * Light Colors (e.g. Yellow), default dark color to text, link, and buttons 
  * Override by defining --wp--custom--color--contrast--light in theme.json.
  */ 
 $light-colors: ('light-yellow', 'yellow');
-@include mixins.color-defaults($light-colors,'default-light');
+@include mixin-colors.color-defaults($light-colors,'default-light');
 
 /* 
  * White and near-white colors, default dark text (but leave the link color alone) 
  * Override by defining --wp--custom--color--contrast--white in theme.json.
  */
 $white-colors: ('base', 'neutral', 'neutral-alt', 'foreground-alt', 'white', 'off-white', 'very-light-gray', 'light-gray', 'gray' );
-@include mixins.color-defaults($white-colors,'default-white');
+@include mixin-colors.color-defaults($white-colors,'default-white');
 
 /* 
  * On Cover blocks, default the text color to white, but set it back to black

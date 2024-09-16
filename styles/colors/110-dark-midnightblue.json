@@ -11,13 +11,22 @@
 		"custom": {
 			"color": {
 				"contrast": {
+					"defaultWhite": "var(--wp--preset--color--almost-black)",
 					"neutral": "var(--wp--preset--color--foreground-alt)",
 					"neutralAlt": "var(--wp--preset--color--foreground-alt)",
 					"foregroundAlt": "var(--wp--preset--color--dark)"
 				},
 				"border": "var(--wp--preset--color--midnight-blue)",
 				"field": {
-					"background": "var(--wp--preset--color--gray)"
+					"background": "var(--wp--preset--color--midnight-blue)"
+				},
+				"highlight": {
+					"secondary": "var(--wp--preset--color--foreground-alt)",
+					"secondaryAlt": "var(--wp--preset--color--foreground-alt)"
+				},
+				"underline": {
+					"secondary": "underline",
+					"secondaryAlt": "underline"
 				}
 			}
 		},

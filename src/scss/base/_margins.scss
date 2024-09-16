@@ -1,13 +1,12 @@
-/*---------------------------------------------------------------------------------------
+/*-----------------------------------------------------------------------------
 # Margins (Vertical spacing)
----------------------------------------------------------------------------------------*/
+-----------------------------------------------------------------------------*/
 
 /* 
- * Core Wordpress controls vertical spacing by adding the gap 
- * setting as top margin between all blocks on the site. However, 
- * certain things like template parts get this too and we want the 
- * theme and users to be able to control it, so push this down to 
- * the block level. Also don't default to having padding. 
+ * Core Wordpress controls vertical spacing by adding the gap setting as top
+ * margin between all blocks on the site. However, certain things like 
+ * template parts get this too and we want the theme and users to be able to 
+ * control it, so push this down to the block level.
  */
  
  /* Remove top margin and padding from the containers */
@@ -17,8 +16,10 @@ footer,
 .wp-block-template-part,
 .wp-block-post-content {
 	margin-block-start: 0 !important;
+	padding-top: 0;
+	padding-bottom: 0;
 }
- 
+
 /* 
  * Add top margin to the container's first block and then between 
  * subsequent blocks 
@@ -27,8 +28,7 @@ main > *:first-child:not(.wp-block-template-part, .wp-block-post-content, .wp-bl
 body .is-layout-constrained > * + .wp-block-template-part > *:first-child:not(.wp-block-template-part, .wp-block-post-content, .wp-block-cover, .wp-block-query, main, header, footer, nav),
 body .is-layout-constrained .wp-block-template-part > * + *:not(.wp-block-template-part, .wp-block-post-content, .wp-block-cover, .wp-block-query, main, header, footer, nav),
 .wp-block-query > *:first-child:not(.wp-block-cover),
-.wp-block-post-content > *:first-child:not(.wp-block-cover) { /*,
-.is-root-container > *:first-child:not(.wp-block-template-part, .wp-block-cover, .wp-block-query) {*/
+.wp-block-post-content > *:first-child:not(.wp-block-cover) {
  	margin-block-start: var(--wp--style--block-gap);
 }
 

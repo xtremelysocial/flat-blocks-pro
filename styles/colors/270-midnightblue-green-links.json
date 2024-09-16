@@ -3,6 +3,22 @@
 	"version": 3,
 	"title": "Midnight Blue w/Green Links",
 	"settings": {
+		"custom": {
+			"color": {
+				"highlight": {
+					"primary": "var(--wp--preset--color--highlight)",
+					"primaryAlt": "var(--wp--preset--color--highlight)",
+					"secondary": "var(--wp--preset--color--foreground-alt)",
+					"secondaryAlt": "var(--wp--preset--color--foreground-alt)"
+				},
+				"underline": {
+					"primary": "none",
+					"primaryAlt": "none",
+					"secondary": "underline",
+					"secondaryAlt": "underline"
+				}
+			}
+		},
 		"color": {
 			"palette": [
 				{

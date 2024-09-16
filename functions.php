@@ -53,11 +53,11 @@ if ( ! function_exists( 'flatblocks_support' ) ) :
 		// __experimentalMenuLocation attribute isn't available)
 		if ( defined( 'IS_GUTENBERG_PLUGIN' ) && IS_GUTENBERG_PLUGIN ) {
 			register_nav_menus( array(
-				'header' 	=> __( 'Header Menu', 'flat-blocks' ),
-				'footer' 	=> __( 'Footer Menu', 'flat-blocks' ),
-				'footer-1' 	=> __( 'Footer Menu Alt 1', 'flat-blocks' ),
-				'footer-2' 	=> __( 'Footer Menu Alt 2', 'flat-blocks' ),
-				'footer-3' 	=> __( 'Footer Menu Alt 3', 'flat-blocks' )
+				'header' 	=> __( 'Header Menu', 'flat-blocks-pro' ),
+				'footer' 	=> __( 'Footer Menu', 'flat-blocks-pro' ),
+				'footer-1' 	=> __( 'Footer Menu Alt 1', 'flat-blocks-pro' ),
+				'footer-2' 	=> __( 'Footer Menu Alt 2', 'flat-blocks-pro' ),
+				'footer-3' 	=> __( 'Footer Menu Alt 3', 'flat-blocks-pro' )
 			) );
 		}
 
@@ -296,7 +296,7 @@ if ( file_exists( get_template_directory() . '/inc/wp-compatibility.php' ) ) {
 	require_once get_template_directory() . '/inc/wp-compatibility.php';
 }
 
-// Include Pro version features
+// Include PRO version features
 if ( file_exists( get_template_directory() . '/pro/flat-blocks-pro.php' ) ) {
 	require_once get_template_directory() . '/pro/flat-blocks-pro.php';
 }
@@ -332,29 +332,29 @@ if ( ! function_exists( 'flatblocks_template_part_areas' ) ) :
 			array(
 				'area'        => 'title',
 				'area_tag'    => 'section',
-				'label'       => __( 'Title', 'flat-blocks' ),
-				'description' => __( 'Page and post titles plus home page content top', 'flat-blocks' ),
+				'label'       => __( 'Title', 'flat-blocks-pro' ),
+				'description' => __( 'Page and post titles plus home page content top', 'flat-blocks-pro' ),
 				'icon'        => ''
 			),
 			array(
 				'area'        => 'query',
 				'area_tag'    => 'section',
-				'label'       => __( 'Query', 'flat-blocks' ),
-				'description' => __( 'Site query template', 'flat-blocks' ),
+				'label'       => __( 'Query', 'flat-blocks-pro' ),
+				'description' => __( 'Site query template', 'flat-blocks-pro' ),
 				'icon'        => ''
 			),
 			array(
 				'area'        => 'content',
 				'area_tag'    => 'section',
-				'label'       => __( 'Content', 'flat-blocks' ),
-				'description' => __( 'Content section such as cover and post meta', 'flat-blocks' ),
+				'label'       => __( 'Content', 'flat-blocks-pro' ),
+				'description' => __( 'Content section such as cover and post meta', 'flat-blocks-pro' ),
 				'icon'        => ''
 			),
 			array(
 				'area'        => 'menu',
 				'area_tag'    => 'section',
-				'label'       => __( 'Menu', 'flat-blocks' ),
-				'description' => __( 'Navigation Menus', 'flat-blocks' ),
+				'label'       => __( 'Menu', 'flat-blocks-pro' ),
+				'description' => __( 'Navigation Menus', 'flat-blocks-pro' ),
 				'icon'        => ''
 			)
 		);
@@ -372,9 +372,9 @@ add_filter( 'image_size_names_choose', 'flatblocks_image_sizes' );
 if ( ! function_exists( 'flatblocks_image_sizes' ) ) :
 	function flatblocks_image_sizes( $sizes ) {
 		return array_merge( $sizes, array(
-			//'medium-large' => __( 'Medium Large', 'flat-blocks' ),
-			'cropped-thumbnail' => __( 'Post Thumbnail Medium (cropped)', 'flat-blocks' ),
-			'cropped-large' => __( 'Post Thumbnail Large (cropped)', 'flat-blocks' )
+			//'medium-large' => __( 'Medium Large', 'flat-blocks-pro' ),
+			'cropped-thumbnail' => __( 'Post Thumbnail Medium (cropped)', 'flat-blocks-pro' ),
+			'cropped-large' => __( 'Post Thumbnail Large (cropped)', 'flat-blocks-pro' )
 		) );
 	}
 endif;

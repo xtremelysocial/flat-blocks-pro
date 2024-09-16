@@ -67,17 +67,16 @@ if ( ! function_exists( 'flatblocks_parse_block_pattern' ) ) :
 		// For child themes or new parent theme, override the theme name and update
 		// the image URL's
 		$theme_slug = wp_get_theme()->get_stylesheet();
-		if ( $theme_slug != 'flat-blocks' ) {
-			$content = str_ireplace('"theme":"flat-blocks"', '"theme":"' . $theme_slug . '"', $content);
+		if ( $theme_slug != 'flat-blocks-pro' ) {
+			$content = str_ireplace('"theme":"flat-blocks-pro"', '"theme":"' . $theme_slug . '"', $content);
 		}
 
 		// Replace image URL's with the parent or child theme's URL
-// 		$content = preg_replace( '/(\"url\":\")(.*?)(\/assets\/images\/)/', '$1' . get_template_directory_uri() . '$3', $content);
-// 		$content = preg_replace( '/(src=\")(.*?)(\/assets\/images\/)/', '$1' . get_template_directory_uri() . '$3', $content);
-		//if ( ! isset($image_root) ) $image_root = get_template_directory_uri();
 		$image_root = isset($image_root) ? $image_root : get_template_directory_uri();
+		//if ( $_GET['debug'] ) var_dump($image_root); //TEST		
 		$content = preg_replace( '/(\"url\":\")(.*?)(\/assets\/images\/)/', '$1' . $image_root . '$3', $content);
 		$content = preg_replace( '/(src=\")(.*?)(\/assets\/images\/)/', '$1' . $image_root . '$3', $content);
+		$content = preg_replace( '/(\"mediaLink\":\")(.*?)(\/assets\/images\/)/', '$1' . $image_root . '$3', $content);
 		
 		return $content;				
 	}
