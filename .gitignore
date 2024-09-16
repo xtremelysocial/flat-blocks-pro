@@ -16,13 +16,17 @@ assets/css/blocks/
 **/.DS_Store
 
 # Zip files
-*.tgz
 *.zip
 
-# Test files
+# Ignore save and test files
 **/*-SAVE*
-styles/*-TEST*.json
-styles/*-test/
+styles/*-test*.json
+styles/colors-test/
+styles/global-test/
+styles/sections-test/
+styles/blocks-test/
+styles/global-test/
+styles/template-parts-test
 zz_unused
 
 # PRO theme files

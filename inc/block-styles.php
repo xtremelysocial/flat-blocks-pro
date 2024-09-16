@@ -26,9 +26,9 @@ if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 			'fixed-menu' 		=> array( esc_html__('Fixed Menu', 'flat-blocks'), 
 				array('navigation' )
 			),
-			'fixed-header' 		=> array( esc_html__('Fixed Header', 'flat-blocks'), 
-				array('group' )
-			),
+// 			'fixed-header' 		=> array( esc_html__('Fixed Header', 'flat-blocks'), 
+// 				array('group' )
+// 			),
 // 			'button-alt' => array( esc_html__('Button Alt', 'flat-blocks'), 
 // 				array('button' )
 // 			),

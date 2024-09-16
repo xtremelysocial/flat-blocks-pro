@@ -1064,13 +1064,7 @@
 				}
 			},
 			"core/group": {
-				"css": ".has-background { padding: calc(2 * var(--wp--style--block-gap)) }",
-				"spacing": {
-					"padding": {
-						"top": "var:preset|spacing|40",
-						"bottom": "var:preset|spacing|40"
-					}
-				}
+				"css": "&.has-background { padding: var(--wp--preset--spacing--60) }"
 			},
 			"core/columns": {
 				"css": ".has-background { padding: calc(2 * var(--wp--style--block-gap)) }",

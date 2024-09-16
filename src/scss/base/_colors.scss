@@ -9,7 +9,7 @@
  * Default links on colored backgrounds to underline, then override later
  * for certain colors 
  */
-.has-background:not(.has-link-color) a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor) {
+.has-background:not(.has-link-color) :not(.wp-block-site-title) >  a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor) {
 	text-decoration: underline;
 
 	&:hover,
