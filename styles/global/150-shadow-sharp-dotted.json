@@ -1,11 +1,14 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Sharp Drop Shadows",
+	"title": "Sharp Drop Shadows & Dotted Underlines",
 	"settings": {
 		"custom": {
 			"shadow": {
 				"default": "var(--wp--preset--shadow--sharp)"
+			},
+			"link": {
+				"style": "dotted"
 			}
 		}
 	}	

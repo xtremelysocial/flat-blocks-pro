@@ -10,6 +10,7 @@
 	"settings": {
 		"custom": {
 			"color": {
+				"scheme": "light dark",
 				"contrast": {
 					"defaultWhite": "var(--wp--preset--color--almost-black)",
 					"neutral": "var(--wp--preset--color--foreground-alt)",

@@ -10,6 +10,12 @@
 					"secondaryAlt": "#47D3E5",
 					"midnightBlue": "#47D3E5",
 					"darkMidnightBlue": "#47D3E5"
+				},
+				"underline": {
+					"secondary": "none",
+					"secondaryAlt": "none",
+					"midnightBlue": "none",
+					"darkMidnightBlue": "none"
 				}
 			}
 		},

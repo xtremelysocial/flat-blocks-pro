@@ -14,10 +14,11 @@
 	width: 100% !important;; 
 }
 
-// /* Inherit separator color when in colored group, columns, or column */
-// .has-background .wp-block-separator:not(.has-background) {
-// 	color: inherit;
-// }
+/* Default separator color when on colored background */
+.has-background .wp-block-separator:not(.has-background) {
+ 	//color: inherit;
+	color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
+}
 
 /*-----------------------------------------------------------------------------
 # Separator: Custom

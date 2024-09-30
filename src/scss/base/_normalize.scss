@@ -15,11 +15,12 @@ html {
 }
 
 /* 
- * Default color scheme to light, but allow theme styles to use light-dark() 
- * CSS function. e.g. light-dark(white, black)
+ * Default color scheme to light, but allow theme styles to set it to "light dark".
+ * That will turn input fields black and also allows the use of the CSS light-dark
+ * function. e.g. light-dark(white, black).
  */
 :root { 
-	color-scheme: light dark 
+	color-scheme: var(--wp--custom--color--scheme, light); 
 }
 
 /*

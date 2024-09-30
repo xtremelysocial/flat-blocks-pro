@@ -40,7 +40,9 @@
 					"primary": "none",
 					"primaryAlt": "none",
 					"secondary": "underline",
-					"secondaryAlt": "underline"
+					"secondaryAlt": "underline",
+					"midnightBlue": "none",
+					"darkMidnightBlue": "none"
 				}
 			}
 		},
