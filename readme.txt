@@ -156,7 +156,6 @@ Version Summary: Updated logic for default link colors and link underlines on co
 * Added new custom variables for hover opacity and hover style for links and hover opacity for buttons. --wp--custom--color--link--hover-opacity, --wp--custom--color--link--hover-style, and --wp--custom--color--button--hover-opacity.
 * Changed separator (hr) color to use the highlight color when used on a colored background (group, columns, etc.)
 * Updated the new default link underline logic to set non-underlined links to underline on hover.
-* Added new custom variable for color scheme (--wp--custom--color--scheme). Defaults to light, but the two dark  theme styles set it to "light dark" so that input fields are dark. The Auto Dark Mode color scheme no longer uses "Additional CSS" on the theme style because WordPress doesn't handle it very well.
 * Set input fields to inherit the body font (lato by default) and in dark themes to use a dark background.
 * Removed font color from Rounded, Rounded Border, and Thick Rounded Border styles so they default to the overall Contrast color (#555555 by default). This is useful in case you want to change the background color to a dark color. Just be sure to set a light font color if you do. 
 * Added No Padding style to the Media & Text block.
