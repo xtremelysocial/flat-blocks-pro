@@ -148,16 +148,15 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 == Changelog ==
 
 = 1.6.6 =
-September 30, 2024
+October 12, 2024
 
-Version Summary: Updated logic for default link colors and link underlines on colored backgrounds and in menus. Added new Colored Footer template part which uses the secondary color. Enhanced dark background theme styles, but removed the Auto Dark Mode one. WordPress isn't handling "Additional CSS" on theme styles very well.
+Version Summary: Updated logic for default link colors and link underlines on colored backgrounds and in menus. Added new "Colored Footer" and "Colored Footer w/Links" template parts. The former uses the Secondary colors and the latter uses the Primary colors with light text and links are underlined. That one is great to use when you want a colored footer but the link color doesn't look good with it. Updated dark background theme styles, but removed the Auto Dark Mode as WordPress isn't handling "Additional CSS" very well in theme styles.
 
 * Updated all the color palettes to better handle link colors and whether to underline or not. Set a teal (blue-green) color on Midnight Blue and Dark Midnight Blue backgrounds when using those color palettes (the main one still uses green links).
 * Added new custom variables for hover opacity and hover style for links and hover opacity for buttons. --wp--custom--color--link--hover-opacity, --wp--custom--color--link--hover-style, and --wp--custom--color--button--hover-opacity.
 * Changed separator (hr) color to use the highlight color when used on a colored background (group, columns, etc.)
 * Updated the new default link underline logic to set non-underlined links to underline on hover.
-* Update various template parts, especially footers to remove is-style-link-no-underline now that the defaults are better. 
-* Added new custom variable for color scheme (--wp--custom--color--scheme). Defaults to light, but the two dark  theme styles set it to "light dark" so that input fields are black. 
+* Added new custom variable for color scheme (--wp--custom--color--scheme). Defaults to light, but the two dark  theme styles set it to "light dark" so that input fields are dark. The Auto Dark Mode color scheme no longer uses "Additional CSS" on the theme style because WordPress doesn't handle it very well.
 * Set input fields to inherit the body font (lato by default) and in dark themes to use a dark background.
 * Removed font color from Rounded, Rounded Border, and Thick Rounded Border styles so they default to the overall Contrast color (#555555 by default). This is useful in case you want to change the background color to a dark color. Just be sure to set a light font color if you do. 
 * Added No Padding style to the Media & Text block.

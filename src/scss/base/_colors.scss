@@ -8,7 +8,6 @@
  * Override in theme.json with:
  *		--wp--custom--color--contrast--{color} and/or 
  *		--wp--custom--color--highlight--{color} and/or 
- *		--wp--custom--color--underline--{color} and/or 
  */
 
 // Color Mixin: Sets --wp--custom--color--contrast, --highlight --hover, and
@@ -17,10 +16,9 @@
 // @colors		array	Array of color slugs. e.g. ('light-green', 'green')
 // @default		string	Optional lightness slug e.g. 'default-black',
 //						'default-dark'. This translates to the
-//						--wp-custom--color--{lightness} variable
+//						--wp-custom--color--{lightness} variable.
 // @contrast	color	Font color slug for text e.g. 'almost-black'
 // @highlight	color	Highlight (link) color slug or 'inherit'
-// @underline	string	Link underline i.e. underline or none
 
 @use "../utils/mixin-colors";
 
@@ -28,36 +26,22 @@
  * Black and near-black colors, default light text but leave link color alone
  */
 $black-colors: ('contrast', 'dark', 'dark-alt', 'almost-black', 'not-quite-black', 'black');
-//$black-colors: ('contrast', 'almost-black', 'not-quite-black', 'black');
-//$black-colors: ('almost-black', 'not-quite-black', 'black');
 @include mixin-colors.color-defaults(
 	$black-colors,
 	'default-black',
 	'var(--wp--preset--color--foreground-alt)',
-	null,
 	null
 );
-
-// $near-black-colors: ('dark', 'dark-alt', 'contrast');
-// @include mixin-colors.color-defaults(
-// 	$near-black-colors,
-// 	null, //'default-near-black',
-// 	'var(--wp--preset--color--foreground-alt)',
-// 	null,
-// 	'none'
-// );
 
 /* 
  * Dark colors, default light text and links with underline
  */
 $dark-colors: ('primary', 'secondary', 'tertiary', 'primary-alt', 'secondary-alt', 'tertiary-alt', 'highlight', 'highlight-alt', 'dark-gray', 'very-dark-gray', 'green', 'dark-bright-green', 'midnight-blue', 'dark-midnight-blue', 'orange', 'dark-orange', 'blue', 'dark-blue', 'purple', 'dark-purple', 'light-red', 'red', 'dark-red');
-//$dark-colors: ('dark', 'dark-alt', 'primary', 'secondary', 'tertiary', 'primary-alt', 'secondary-alt', 'tertiary-alt', 'highlight', 'highlight-alt', 'dark-gray', 'very-dark-gray', 'green', 'dark-bright-green', 'midnight-blue', 'dark-midnight-blue', 'orange', 'dark-orange', 'blue', 'dark-blue', 'purple', 'dark-purple', 'light-red', 'red', 'dark-red');
 @include mixin-colors.color-defaults(
 	$dark-colors,
 	null, //'default-dark',
 	'var(--wp--preset--color--foreground-alt)',
-	'inherit',
-	'underline'
+	'inherit'
 );
 
 /* 
@@ -68,8 +52,7 @@ $medium-colors: ('light-green', 'bright-green', 'light-orange', 'light-blue','li
 	$medium-colors, 
 	null, //'default-medium',
 	'var(--wp--preset--color--foreground-alt)',
-	'inherit',
-	'underline'
+	'inherit'
 );
 
 /* 
@@ -80,8 +63,7 @@ $light-colors: ('light-yellow', 'yellow');
 	$light-colors,
 	null, //'default-light',
 	'var(--wp--preset--color--almost-black)',
-	'inherit',
-	'underline'
+	'inherit'
 );
 
 /* 
@@ -90,9 +72,8 @@ $light-colors: ('light-yellow', 'yellow');
 $white-colors: ('base', 'neutral', 'neutral-alt', 'foreground-alt', 'white', 'off-white', 'very-light-gray', 'light-gray', 'gray' );
 @include mixin-colors.color-defaults(
 	$white-colors,
-	null, //'default-white',
+	'default-white',
 	'var(--wp--preset--color--contrast)',
-	null,
 	null
 );
 

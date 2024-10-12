@@ -10,14 +10,16 @@ a,
 .wp-block-navigation a,
 .wp-block-navigation-submenu__toggle {
 	cursor: pointer;
-	text-decoration-style: var(--wp--custom--link--style, solid);
+	text-decoration-style: var(--wp--custom--color--link--style, solid);
 }
 
 /* Set link hover opacity */
-.has-background :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor) {
+:where(.has-background :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor)) {
+	text-decoration: underline;
+
 	&:hover,
 	&:active {
-		opacity: var(--wp--custom--link--hover-opacity, 0.75);
+		opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
 	}
 }
 
@@ -26,7 +28,7 @@ a,
 // 	&:hover,
 // 	&:active {
 // 		text-decoration: underline !important;
-// 		text-decoration-style: var(--wp--custom--link--hover-style, solid);
+// 		text-decoration-style: var(--wp--custom--color--link--hover-style, solid);
 // 	}
 // }
 
@@ -77,7 +79,15 @@ input[type=file]::file-selector-button:hover,
 .wp-block-file .wp-block-file__button:hover,
 .wp-block-button__link:hover {
 	cursor: pointer;
-	opacity: var(--wp--custom--button--hover-opacity, 0.8);
+	opacity: var(--wp--custom--color--button--hover-opacity, 0.8);
+}
+
+input[type=button]:not(.wp-element-button):hover,
+input[type=submit][class*="button"]:not(.wp-element-button):hover,
+input[type=reset][class*="button"]:not(.wp-element-button):hover,
+input[type=file]::file-selector-button:hover {
+	background-color: var(--wp--custom--color--button--hover-background, var(--wp--custom--color--button--background, var(--wp--custom--color--highlight, var(--wp--preset--color--highlight))));
+	color: var(--wp--custom--color--button--hover-text, var(--wp--custom--color--button--text, var(--wp--preset--color--foreground-alt, white)));
 }
 
 // /* For outline style buttons, set hover color */
@@ -91,13 +101,13 @@ input[type=file]::file-selector-button:hover,
 -----------------------------------------------------------------------------*/
 
 /* Underline links */
-.is-style-link-underline a {
+.is-style-link-underline :not(.is-style-link-no-underline) > a:not(.wp-block-navigation-item__content) {
 	text-decoration: underline !important;
 }
 .is-style-link-underline a:hover, 
 .is-style-link-underline a:active {
 	//text-decoration: underline;
-	opacity: var(--wp--custom--link--hover-opacity, 0.75);
+	opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
 }
 
 /* No Underline links */

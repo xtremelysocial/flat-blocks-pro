@@ -7,8 +7,10 @@
 			"shadow": {
 				"default": "var(--wp--preset--shadow--natural)"
 			},
-			"link": {
-				"style": "dotted"
+			"color": {			
+				"link": {
+					"style": "dotted"
+				}
 			}
 		}
 	}	

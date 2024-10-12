@@ -43,8 +43,8 @@ html {
 }
 
 /*
- * Font smoothing.
- * This is a niche setting that will not be available via Global Styles.
+ * Font smoothing and text decoration styles.
+ * These are niche settings that will not be available via Global Styles.
  * https://github.com/WordPress/gutenberg/issues/35934
  * 
  * Also text decoration styles.
@@ -52,6 +52,7 @@ html {
 body {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
+  text-decoration-style: var(--wp--custom--color--link--style, solid);
   text-decoration-thickness: var(--wp--custom--link--thickness, 1px);
   text-underline-position: var(--wp--custom--link--position, under);
   text-underline-offset: var(--wp--custom--link--offset, 0);
@@ -91,12 +92,15 @@ a,
 .wp-block-navigation a,
 .wp-block-navigation-submenu__toggle {
   cursor: pointer;
-  text-decoration-style: var(--wp--custom--link--style, solid);
+  text-decoration-style: var(--wp--custom--color--link--style, solid);
 }
 
 /* Set link hover opacity */
-.has-background :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):hover, .has-background :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor):active {
-  opacity: var(--wp--custom--link--hover-opacity, 0.75);
+:where(.has-background :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor)) {
+  text-decoration: underline;
+}
+:where(.has-background :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor)):hover, :where(.has-background :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor)):active {
+  opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
 }
 
 /* 
@@ -147,20 +151,28 @@ input[type=file]::file-selector-button:hover,
 .wp-block-file .wp-block-file__button:hover,
 .wp-block-button__link:hover {
   cursor: pointer;
-  opacity: var(--wp--custom--button--hover-opacity, 0.8);
+  opacity: var(--wp--custom--color--button--hover-opacity, 0.8);
+}
+
+input[type=button]:not(.wp-element-button):hover,
+input[type=submit][class*=button]:not(.wp-element-button):hover,
+input[type=reset][class*=button]:not(.wp-element-button):hover,
+input[type=file]::file-selector-button:hover {
+  background-color: var(--wp--custom--color--button--hover-background, var(--wp--custom--color--button--background, var(--wp--custom--color--highlight, var(--wp--preset--color--highlight))));
+  color: var(--wp--custom--color--button--hover-text, var(--wp--custom--color--button--text, var(--wp--preset--color--foreground-alt, white)));
 }
 
 /*-----------------------------------------------------------------------------
 # Custom: Link Underlines
 -----------------------------------------------------------------------------*/
 /* Underline links */
-.is-style-link-underline a {
+.is-style-link-underline :not(.is-style-link-no-underline) > a:not(.wp-block-navigation-item__content) {
   text-decoration: underline !important;
 }
 
 .is-style-link-underline a:hover,
 .is-style-link-underline a:active {
-  opacity: var(--wp--custom--link--hover-opacity, 0.75);
+  opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
 }
 
 /* No Underline links */
@@ -297,7 +309,6 @@ body .is-layout-constrained > .alignright {
  * Override in theme.json with:
  *		--wp--custom--color--contrast--{color} and/or 
  *		--wp--custom--color--highlight--{color} and/or 
- *		--wp--custom--color--underline--{color} and/or 
  */
 /* 
  * Black and near-black colors, default light text but leave link color alone
@@ -305,25 +316,43 @@ body .is-layout-constrained > .alignright {
 .has-contrast-background-color {
   color: var(--wp--custom--color--contrast--contrast, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
 }
+.has-contrast-background-color :where(a:not(.wp-element-button):hover) {
+  opacity: 1;
+}
 
 .has-dark-background-color {
   color: var(--wp--custom--color--contrast--dark, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
+}
+.has-dark-background-color :where(a:not(.wp-element-button):hover) {
+  opacity: 1;
 }
 
 .has-dark-alt-background-color {
   color: var(--wp--custom--color--contrast--dark-alt, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
 }
+.has-dark-alt-background-color :where(a:not(.wp-element-button):hover) {
+  opacity: 1;
+}
 
 .has-almost-black-background-color {
   color: var(--wp--custom--color--contrast--almost-black, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
+}
+.has-almost-black-background-color :where(a:not(.wp-element-button):hover) {
+  opacity: 1;
 }
 
 .has-not-quite-black-background-color {
   color: var(--wp--custom--color--contrast--not-quite-black, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
 }
+.has-not-quite-black-background-color :where(a:not(.wp-element-button):hover) {
+  opacity: 1;
+}
 
 .has-black-background-color {
   color: var(--wp--custom--color--contrast--black, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
+}
+.has-black-background-color :where(a:not(.wp-element-button):hover) {
+  opacity: 1;
 }
 
 /* 
@@ -333,207 +362,184 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--contrast--primary, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--primary, inherit);
 }
-.has-primary-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-primary-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--primary, underline);
 }
 
 .has-secondary-background-color {
   color: var(--wp--custom--color--contrast--secondary, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--secondary, inherit);
 }
-.has-secondary-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-secondary-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--secondary, underline);
 }
 
 .has-tertiary-background-color {
   color: var(--wp--custom--color--contrast--tertiary, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--tertiary, inherit);
 }
-.has-tertiary-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-tertiary-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--tertiary, underline);
 }
 
 .has-primary-alt-background-color {
   color: var(--wp--custom--color--contrast--primary-alt, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--primary-alt, inherit);
 }
-.has-primary-alt-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-primary-alt-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--primary-alt, underline);
 }
 
 .has-secondary-alt-background-color {
   color: var(--wp--custom--color--contrast--secondary-alt, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--secondary-alt, inherit);
 }
-.has-secondary-alt-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-secondary-alt-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--secondary-alt, underline);
 }
 
 .has-tertiary-alt-background-color {
   color: var(--wp--custom--color--contrast--tertiary-alt, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--tertiary-alt, inherit);
 }
-.has-tertiary-alt-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-tertiary-alt-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--tertiary-alt, underline);
 }
 
 .has-highlight-background-color {
   color: var(--wp--custom--color--contrast--highlight, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--highlight, inherit);
 }
-.has-highlight-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-highlight-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--highlight, underline);
 }
 
 .has-highlight-alt-background-color {
   color: var(--wp--custom--color--contrast--highlight-alt, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--highlight-alt, inherit);
 }
-.has-highlight-alt-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-highlight-alt-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--highlight-alt, underline);
 }
 
 .has-dark-gray-background-color {
   color: var(--wp--custom--color--contrast--dark-gray, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-gray, inherit);
 }
-.has-dark-gray-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-dark-gray-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--dark-gray, underline);
 }
 
 .has-very-dark-gray-background-color {
   color: var(--wp--custom--color--contrast--very-dark-gray, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--very-dark-gray, inherit);
 }
-.has-very-dark-gray-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-very-dark-gray-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--very-dark-gray, underline);
 }
 
 .has-green-background-color {
   color: var(--wp--custom--color--contrast--green, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--green, inherit);
 }
-.has-green-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-green-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--green, underline);
 }
 
 .has-dark-bright-green-background-color {
   color: var(--wp--custom--color--contrast--dark-bright-green, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-bright-green, inherit);
 }
-.has-dark-bright-green-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-dark-bright-green-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--dark-bright-green, underline);
 }
 
 .has-midnight-blue-background-color {
   color: var(--wp--custom--color--contrast--midnight-blue, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--midnight-blue, inherit);
 }
-.has-midnight-blue-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-midnight-blue-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--midnight-blue, underline);
 }
 
 .has-dark-midnight-blue-background-color {
   color: var(--wp--custom--color--contrast--dark-midnight-blue, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-midnight-blue, inherit);
 }
-.has-dark-midnight-blue-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-dark-midnight-blue-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--dark-midnight-blue, underline);
 }
 
 .has-orange-background-color {
   color: var(--wp--custom--color--contrast--orange, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--orange, inherit);
 }
-.has-orange-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-orange-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--orange, underline);
 }
 
 .has-dark-orange-background-color {
   color: var(--wp--custom--color--contrast--dark-orange, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-orange, inherit);
 }
-.has-dark-orange-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-dark-orange-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--dark-orange, underline);
 }
 
 .has-blue-background-color {
   color: var(--wp--custom--color--contrast--blue, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--blue, inherit);
 }
-.has-blue-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-blue-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--blue, underline);
 }
 
 .has-dark-blue-background-color {
   color: var(--wp--custom--color--contrast--dark-blue, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-blue, inherit);
 }
-.has-dark-blue-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-dark-blue-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--dark-blue, underline);
 }
 
 .has-purple-background-color {
   color: var(--wp--custom--color--contrast--purple, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--purple, inherit);
 }
-.has-purple-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-purple-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--purple, underline);
 }
 
 .has-dark-purple-background-color {
   color: var(--wp--custom--color--contrast--dark-purple, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-purple, inherit);
 }
-.has-dark-purple-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-dark-purple-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--dark-purple, underline);
 }
 
 .has-light-red-background-color {
   color: var(--wp--custom--color--contrast--light-red, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--light-red, inherit);
 }
-.has-light-red-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-light-red-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--light-red, underline);
 }
 
 .has-red-background-color {
   color: var(--wp--custom--color--contrast--red, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--red, inherit);
 }
-.has-red-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-red-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--red, underline);
 }
 
 .has-dark-red-background-color {
   color: var(--wp--custom--color--contrast--dark-red, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-red, inherit);
 }
-.has-dark-red-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-dark-red-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--dark-red, underline);
 }
 
 /* 
@@ -543,45 +549,40 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--contrast--light-green, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--light-green, inherit);
 }
-.has-light-green-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-light-green-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--light-green, underline);
 }
 
 .has-bright-green-background-color {
   color: var(--wp--custom--color--contrast--bright-green, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--bright-green, inherit);
 }
-.has-bright-green-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-bright-green-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--bright-green, underline);
 }
 
 .has-light-orange-background-color {
   color: var(--wp--custom--color--contrast--light-orange, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--light-orange, inherit);
 }
-.has-light-orange-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-light-orange-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--light-orange, underline);
 }
 
 .has-light-blue-background-color {
   color: var(--wp--custom--color--contrast--light-blue, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--light-blue, inherit);
 }
-.has-light-blue-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-light-blue-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--light-blue, underline);
 }
 
 .has-light-purple-background-color {
   color: var(--wp--custom--color--contrast--light-purple, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--light-purple, inherit);
 }
-.has-light-purple-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-light-purple-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--light-purple, underline);
 }
 
 /* 
@@ -591,57 +592,82 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--contrast--light-yellow, var(--wp--preset--color--almost-black));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--light-yellow, inherit);
 }
-.has-light-yellow-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-light-yellow-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--light-yellow, underline);
 }
 
 .has-yellow-background-color {
   color: var(--wp--custom--color--contrast--yellow, var(--wp--preset--color--almost-black));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--yellow, inherit);
 }
-.has-yellow-background-color :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
+.has-yellow-background-color :where(a:not(.wp-element-button)) {
   color: var(--wp--custom--color--highlight);
-  text-decoration: var(--wp--custom--color--underline--yellow, underline);
 }
 
 /* 
  * White and near-white colors, default dark text but leave the link color alone
  */
 .has-base-background-color {
-  color: var(--wp--custom--color--contrast--base, var(--wp--preset--color--contrast));
+  color: var(--wp--custom--color--contrast--base, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-base-background-color :where(a:not(.wp-element-button):hover) {
+  opacity: 1;
 }
 
 .has-neutral-background-color {
-  color: var(--wp--custom--color--contrast--neutral, var(--wp--preset--color--contrast));
+  color: var(--wp--custom--color--contrast--neutral, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-neutral-background-color :where(a:not(.wp-element-button):hover) {
+  opacity: 1;
 }
 
 .has-neutral-alt-background-color {
-  color: var(--wp--custom--color--contrast--neutral-alt, var(--wp--preset--color--contrast));
+  color: var(--wp--custom--color--contrast--neutral-alt, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-neutral-alt-background-color :where(a:not(.wp-element-button):hover) {
+  opacity: 1;
 }
 
 .has-foreground-alt-background-color {
-  color: var(--wp--custom--color--contrast--foreground-alt, var(--wp--preset--color--contrast));
+  color: var(--wp--custom--color--contrast--foreground-alt, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-foreground-alt-background-color :where(a:not(.wp-element-button):hover) {
+  opacity: 1;
 }
 
 .has-white-background-color {
-  color: var(--wp--custom--color--contrast--white, var(--wp--preset--color--contrast));
+  color: var(--wp--custom--color--contrast--white, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-white-background-color :where(a:not(.wp-element-button):hover) {
+  opacity: 1;
 }
 
 .has-off-white-background-color {
-  color: var(--wp--custom--color--contrast--off-white, var(--wp--preset--color--contrast));
+  color: var(--wp--custom--color--contrast--off-white, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-off-white-background-color :where(a:not(.wp-element-button):hover) {
+  opacity: 1;
 }
 
 .has-very-light-gray-background-color {
-  color: var(--wp--custom--color--contrast--very-light-gray, var(--wp--preset--color--contrast));
+  color: var(--wp--custom--color--contrast--very-light-gray, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-very-light-gray-background-color :where(a:not(.wp-element-button):hover) {
+  opacity: 1;
 }
 
 .has-light-gray-background-color {
-  color: var(--wp--custom--color--contrast--light-gray, var(--wp--preset--color--contrast));
+  color: var(--wp--custom--color--contrast--light-gray, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-light-gray-background-color :where(a:not(.wp-element-button):hover) {
+  opacity: 1;
 }
 
 .has-gray-background-color {
-  color: var(--wp--custom--color--contrast--gray, var(--wp--preset--color--contrast));
+  color: var(--wp--custom--color--contrast--gray, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
+}
+.has-gray-background-color :where(a:not(.wp-element-button):hover) {
+  opacity: 1;
 }
 
 /* 
@@ -943,7 +969,7 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 /* Default nav link opacity on hover */
 .wp-block-navigation .wp-block-navigation-item:hover > .wp-block-navigation-item__content.wp-block-navigation-item__content,
 .wp-block-navigation .wp-block-navigation-item:active > .wp-block-navigation-item__content.wp-block-navigation-item__content {
-  opacity: var(--wp--custom--link--hover-opacity, 0.75);
+  opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
 }
 
 /*-----------------------------------------------------------------------------
@@ -1337,12 +1363,16 @@ footer,
  * Add top margin to the container's first block and then between 
  * subsequent blocks 
  */
-main > *:first-child:not(.wp-block-template-part, .wp-block-post-content, .wp-block-cover, .wp-block-query, header, footer, nav),
+/*main > *:first-child:not(.wp-block-template-part, .wp-block-post-content, .wp-block-cover, .wp-block-query, header, footer, nav),
 body .is-layout-constrained > * + .wp-block-template-part > *:first-child:not(.wp-block-template-part, .wp-block-post-content, .wp-block-cover, .wp-block-query, main, header, footer, nav),
 body .is-layout-constrained .wp-block-template-part > * + *:not(.wp-block-template-part, .wp-block-post-content, .wp-block-cover, .wp-block-query, main, header, footer, nav),
 .wp-block-query > *:first-child:not(.wp-block-cover),
+.wp-block-post-content > *:first-child:not(.wp-block-cover) {*/
+main > *:first-child:not(.wp-block-template-part):not(.wp-block-post-content):not(.wp-block-query),
+.wp-block-query > *:first-child:not(.wp-block-cover),
 .wp-block-post-content > *:first-child:not(.wp-block-cover) {
   margin-block-start: var(--wp--style--block-gap);
+  padding-block-start: 0;
 }
 
 /* But don't add top or bottom margin to template part within a column. e.g. Footers. */
@@ -1428,7 +1458,7 @@ main.wp-block-group:not(.has-global-padding),
 # Flat Blocks Colors and Custom Styles (for theme < v1.6.6)
 -----------------------------------------------------------------------------*/
 /* Default group padding, but remove it on nested groups */
-:where(.wp-block-group:not(.is-style-no-padding)) {
+:where(.wp-block-group:not(main):not(.is-style-no-padding)) {
   padding-top: var(--wp--style--block-gap);
   padding-bottom: var(--wp--style--block-gap);
 }

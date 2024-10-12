@@ -10,12 +10,6 @@
 					"secondaryAlt": "var(--wp--preset--color--foreground-alt)",
 					"tertiary": "var(--wp--preset--color--highlight)",
 					"tertiaryAlt": "var(--wp--preset--color--highlight)"
-				},
-				"underline": {
-					"secondary": "underline",
-					"secondaryAlt": "underline",
-					"tertiary": "none",
-					"tertiaryAlt": "none"
 				}
 			}
 		},

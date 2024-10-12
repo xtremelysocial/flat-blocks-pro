@@ -5,6 +5,10 @@
 	"settings": {
 		"custom": {
 			"color": {
+				"contrast": {
+					"base": "var(--wp--preset--color--contrast)",
+					"contrast": "var(--wp--preset--color--base)"
+				},
 				"highlight": {
 					"secondary": "var(--wp--preset--color--highlight)",
 					"secondary-alt": "var(--wp--preset--color--highlight)",
@@ -17,11 +21,13 @@
 					"midnightBlue": "var(--wp--preset--color--highlight-alt)",
 					"darkMidnightBlue": "var(--wp--preset--color--highlight-alt)"
 				},
-				"underline": {
-					"secondary": "none",
-					"secondary-alt": "none",
-					"midnightBlue": "none",
-					"darkMidnightBlue": "none"
+				"button": {
+					"hoverOpacity": "0.8"
+				},
+				"link": {
+					"style": "solid",
+					"hoverOpacity": "0.8",
+					"hoverStyle": "solid"
 				},
 				"border": "var(--wp--preset--color--neutral-alt)",
 				"field": {
@@ -45,10 +51,7 @@
 			"link": {
 				"thickness": "1px",
 				"postion": "under",
-				"offset": "auto",
-				"style": "solid",
-				"hoverOpacity": "0.75",
-				"hoverStyle": "solid"
+				"offset": "auto"
 			},
 			"typography": {
 				"fontWeight": {
@@ -1349,7 +1352,7 @@
 				},
 				"color": {
 					"background": "var(--wp--preset--color--neutral)",
-					"text": "var(--wp--preset--color--almost-black)"
+					"text": "var(--wp--preset--color--contrast)"
 				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--roboto-mono)",
@@ -1812,6 +1815,12 @@
 			"area": "content"
 		},
 		{
+			"name": "footer-block-4",
+			"title": "Footer Block 3 w/link underlines",
+			"description": "Footer block 3 (e.g. about) with underlined links",
+			"area": "content"
+		},
+		{
 			"name": "footer-3-blocks",
 			"title": "Footer 3 Blocks (recent posts, recent comments, about)",
 			"description": "Footer 3 blocks (e.g. recent posts, recent comments, about)",
@@ -1839,6 +1848,12 @@
 			"name": "footer-colored",
 			"title": "Footer Colored",
 			"description": "Colored footer (Secondary & Secondary Alt color)",
+			"area": "footer"
+		},
+		{
+			"name": "footer-colored-underlines",
+			"title": "Footer Colored w/link underlines",
+			"description": "Colored footer w/link underlines (Primary & Primary Alt color)",
 			"area": "footer"
 		},
 		{

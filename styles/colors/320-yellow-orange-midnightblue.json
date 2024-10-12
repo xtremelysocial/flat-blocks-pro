@@ -36,14 +36,6 @@
 					"darkMidnightBlue": "var(--wp--preset--color--primary)",
 					"tertiary": "var(--wp--preset--color--highlight)",
 					"tertiaryAlt": "var(--wp--preset--color--highlight)"
-				},
-				"underline": {
-					"secondary": "underline",
-					"secondaryAlt": "underline",
-					"midnightBlue": "none",
-					"darkMidnightBlue": "none",
-					"tertiary": "none",
-					"tertiaryAlt": "none"
 				}
 			}
 		},

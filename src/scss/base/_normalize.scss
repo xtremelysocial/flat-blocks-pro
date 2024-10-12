@@ -24,8 +24,8 @@ html {
 }
 
 /*
- * Font smoothing.
- * This is a niche setting that will not be available via Global Styles.
+ * Font smoothing and text decoration styles.
+ * These are niche settings that will not be available via Global Styles.
  * https://github.com/WordPress/gutenberg/issues/35934
  * 
  * Also text decoration styles.
@@ -34,6 +34,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	
+	text-decoration-style: var(--wp--custom--color--link--style, solid);
 	text-decoration-thickness: var(--wp--custom--link--thickness, 1px);
 	text-underline-position: var(--wp--custom--link--position, under);
 	text-underline-offset: var(--wp--custom--link--offset, 0);

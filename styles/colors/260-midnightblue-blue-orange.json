@@ -35,14 +35,6 @@
 					"secondaryAlt": "var(--wp--preset--color--foreground-alt)",
 					"midnightBlue": "#47D3E5",
 					"darkMidnightBlue": "#47D3E5"
-				},
-				"underline": {
-					"primary": "none",
-					"primaryAlt": "none",
-					"secondary": "underline",
-					"secondaryAlt": "underline",
-					"midnightBlue": "none",
-					"darkMidnightBlue": "none"
 				}
 			}
 		},

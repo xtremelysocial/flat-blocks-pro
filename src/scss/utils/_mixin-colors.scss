@@ -8,52 +8,40 @@
 	$colors,
 	$default,
 	$contrast,
-	$highlight,
-	$underline
+	$highlight
 ) {
 
 	// For each color, default contrast and link attributes
 	@each $color in $colors {
 		.has-#{$color}-background-color {
 		
-			// If default lightness, use it if color not set
-			@if $default {
-				@if $contrast {
+			@if $contrast {
+
+				// Set the contrast color, depending on whether there is a default
+				@if $default {
 					color: var(--wp--custom--color--contrast--#{$color}, var(--wp--custom--color--contrast--#{$default}, #{$contrast}));
-				}
-
-				@if $highlight {
-					--wp--custom--color--highlight: var(--wp--custom--color--highlight--#{$color}, var(--wp--custom--color--highlight--#{$default}, #{$highlight}));		
-					//&:not(.has-link-color) :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor) {
-
-					& :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
-						color: var(--wp--custom--color--highlight);
-	
-						@if $underline {
-							text-decoration: var(--wp--custom--color--underline--#{$color}, var(--wp--custom--color--underline--#{$default}, #{$underline}));
-						}
-					}					
-				}
-			
-			// If no lightness default, set it based on color
-			} @else {
-			
-				@if $contrast {
+				} @else {
 					color: var(--wp--custom--color--contrast--#{$color}, #{$contrast});
 				}
 
+				// If link color, set it depending on whether there is a default				
 				@if $highlight {
-					--wp--custom--color--highlight: var(--wp--custom--color--highlight--#{$color}, #{$highlight});
+					@if $default {
+						--wp--custom--color--highlight: var(--wp--custom--color--highlight--#{$color}, var(--wp--custom--color--highlight--#{$default}, #{$highlight}));		
+					} @else {
+						--wp--custom--color--highlight: var(--wp--custom--color--highlight--#{$color}, #{$highlight});
+					}
 
-					//&:not(.has-link-color) :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor) {
-					& :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content) {
-						color: var(--wp--custom--color--highlight);
-	
-						@if $underline {
-							text-decoration: var(--wp--custom--color--underline--#{$color}, #{$underline});
-						}
+					& :where(a:not(.wp-element-button)) {
+						color: var(--wp--custom--color--highlight);	
 					}					
-				}			
+
+				// If no link color here then leave opacity alone on hover 
+				} @else {
+					& :where(a:not(.wp-element-button):hover) {
+						opacity: 1;
+					}	
+				}
 			}
 		}
 	}

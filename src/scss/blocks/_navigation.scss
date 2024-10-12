@@ -35,7 +35,7 @@
 /* Default nav link opacity on hover */
 .wp-block-navigation .wp-block-navigation-item:hover >  .wp-block-navigation-item__content.wp-block-navigation-item__content, 
 .wp-block-navigation .wp-block-navigation-item:active > .wp-block-navigation-item__content.wp-block-navigation-item__content {
-	opacity: var(--wp--custom--link--hover-opacity, 0.75);
+	opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
 }
 
 /*-----------------------------------------------------------------------------

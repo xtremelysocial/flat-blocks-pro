@@ -51,6 +51,16 @@
 }
 
 /*-----------------------------------------------------------------------------
+# Separators
+-----------------------------------------------------------------------------*/
+.is-root-container.is-outline-mode.block-editor-block-list__layout {
+  width: 100%;
+}
+.is-root-container.is-outline-mode.block-editor-block-list__layout .wp-block-separator.is-style-wide {
+  width: 80% !important;
+}
+
+/*-----------------------------------------------------------------------------
 # Margins (vertical spacing)
 -----------------------------------------------------------------------------*/
 /* 
