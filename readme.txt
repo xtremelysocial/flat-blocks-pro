@@ -1,9 +1,9 @@
-=== Flat Blocks ===
+=== Flat Blocks PRO ===
 Contributors:  XtremelySocial
 
 == Description ==
 
-Flat Blocks is a modern “flat” style theme with a nice color palette, full and wide width support, and support for the new “Full Site Editing” in WordPress. It includes dozens of block patterns and alternate layouts and color schemes.
+Flat Blocks PRO is a modern “flat” style theme with a nice color palette, full and wide width support, and support for the new “Full Site Editing” in WordPress. It includes dozens of block patterns and alternate layouts and color schemes.
 
 == Quick Start Guide ==
 
