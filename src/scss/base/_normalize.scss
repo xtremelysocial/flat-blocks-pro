@@ -15,16 +15,17 @@ html {
 }
 
 /* 
- * Default color scheme to light, but allow theme styles to use light-dark() 
- * CSS function. e.g. light-dark(white, black)
+ * Default color scheme to light, but allow theme styles to set it to "light dark".
+ * That will turn input fields black and also allows the use of the CSS light-dark
+ * function. e.g. light-dark(white, black).
  */
 :root { 
-	color-scheme: light dark 
+	color-scheme: var(--wp--custom--color--scheme, light); 
 }
 
 /*
- * Font smoothing.
- * This is a niche setting that will not be available via Global Styles.
+ * Font smoothing and text decoration styles.
+ * These are niche settings that will not be available via Global Styles.
  * https://github.com/WordPress/gutenberg/issues/35934
  * 
  * Also text decoration styles.
@@ -33,6 +34,7 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 	-webkit-font-smoothing: antialiased;
 	
+	text-decoration-style: var(--wp--custom--color--link--style, solid);
 	text-decoration-thickness: var(--wp--custom--link--thickness, 1px);
 	text-underline-position: var(--wp--custom--link--position, under);
 	text-underline-offset: var(--wp--custom--link--offset, 0);

@@ -10,19 +10,27 @@ a,
 .wp-block-navigation a,
 .wp-block-navigation-submenu__toggle {
 	cursor: pointer;
-	text-decoration-style: var(--wp--custom--link--style, solid);
+	text-decoration-style: var(--wp--custom--color--link--style, solid);
 }
 
-// /* Don't underline links in captions */
-// figcaption a {
-// 	text-decoration: none;
+/* Set link hover opacity */
+:where(.has-background :not(.wp-block-site-title) > a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor)) {
+	text-decoration: underline;
+
+	&:hover,
+	&:active {
+		opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
+	}
+}
+
+// /* For only links in content, also underline on hover */
+// .has-background :not(.wp-block-site-title) > a:not([class*="wp-"]) {
+// 	&:hover,
+// 	&:active {
+// 		text-decoration: underline !important;
+// 		text-decoration-style: var(--wp--custom--color--link--hover-style, solid);
+// 	}
 // }
-
-/* Lighten link colors when text color set */
-.has-text-color:not(.has-link-color) a:not(.wp-element-button):not(.wp-block-button):not(.wp-block-social-link-anchor):hover,
-.has-text-color:not(.has-link-color) a:not(.wp-element-button):not(.wp-block-button):not(.wp-block-social-link-anchor):active {
-	opacity: var(--wp--custom--link--hover-opacity, 0.8);
-}
 
 /* 
  * Style basic buttons to match block buttons. 
@@ -31,8 +39,8 @@ input[type=button]:not(.wp-element-button),
 input[type=submit][class*="button"]:not(.wp-element-button),
 input[type=reset][class*="button"]:not(.wp-element-button),
 input[type=file]::file-selector-button {
+	background-color: var(--wp--custom--color--button--background, var(--wp--custom--color--highlight, var(--wp--preset--color--highlight)));
 	color: var(--wp--custom--color--button--text, var(--wp--preset--color--foreground-alt, white));
-	background-color: var(--wp--custom--color--button--background, var(--wp--preset--color--highlight)); //var(--wp--preset--color--primary);
 	border: none;
 	border-width: 0;
 	border-radius: var(--wp--custom--button--radius, 0);
@@ -47,7 +55,10 @@ input[type=file] {
 	width: 100%;
 }
 
-/* But override basic buttons to look like outlines on primary-colored backgrounds */
+/* 
+ * But override basic buttons to look like outlines on primary-colored
+ * backgrounds 
+ */
 .has-primary-background-color input[type=button],
 .has-primary-background-color input[type=submit][class*="button"],
 .has-primary-background-color input[type=reset][class*="button"],
@@ -55,19 +66,12 @@ input[type=file] {
 	border: 3px solid var(--wp--custom--color--button--text, var(--wp--preset--color--foreground-alt, white));
 }
 
-// /* For outline style buttons, inherit border color from the text color */
-// .wp-block-button.is-style-outline.is-style-outline .wp-block-button__link {
-// 	color: inherit;
-// 	background-color: initial;
-// 	background-image: none;	
-// }
-
 /*
  * Button hover styles.
  * Necessary until the following issue is resolved in Gutenberg:
  * https://github.com/WordPress/gutenberg/issues/27075
  */
-button:hover,
+button:not(.wp-block-navigation-submenu__toggle):hover,
 input[type=submit][class*="button"]:hover,
 input[type=reset][class*="button"]:hover,
 input[type=file]::file-selector-button:hover,
@@ -75,34 +79,54 @@ input[type=file]::file-selector-button:hover,
 .wp-block-file .wp-block-file__button:hover,
 .wp-block-button__link:hover {
 	cursor: pointer;
-	opacity: var(--wp--custom--button--hover-opacity, 0.85);
+	opacity: var(--wp--custom--color--button--hover-opacity, 0.8);
 }
+
+input[type=button]:not(.wp-element-button):hover,
+input[type=submit][class*="button"]:not(.wp-element-button):hover,
+input[type=reset][class*="button"]:not(.wp-element-button):hover,
+input[type=file]::file-selector-button:hover {
+	background-color: var(--wp--custom--color--button--hover-background, var(--wp--custom--color--button--background, var(--wp--custom--color--highlight, var(--wp--preset--color--highlight))));
+	color: var(--wp--custom--color--button--hover-text, var(--wp--custom--color--button--text, var(--wp--preset--color--foreground-alt, white)));
+}
+
+// /* For outline style buttons, set hover color */
+// .wp-block-button.is-style-outline.is-style-outline .wp-block-button__link:hover,
+// .wp-block-button.is-style-outline.is-style-outline .wp-block-button__link:active {
+// 	color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
+// }
 
 /*-----------------------------------------------------------------------------
 # Custom: Link Underlines
 -----------------------------------------------------------------------------*/
+
 /* Underline links */
-.is-style-link-underline a,
+.is-style-link-underline :not(.is-style-link-no-underline) > a:not(.wp-block-navigation-item__content) {
+	text-decoration: underline !important;
+}
+.is-style-link-underline a:hover, 
 .is-style-link-underline a:active {
-	text-decoration: underline; // !important;
+	//text-decoration: underline;
+	opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
 }
 
 /* No Underline links */
-.is-style-link-no-underline a,
-.is-style-link-no-underline a:active {
-	text-decoration: none; // !important;
-}
-
-.is-style-link-underline a:hover,
-.is-style-link-no-underline a:hover {
-	opacity: var(--wp--custom--link--hover-opacity, 0.8);
+.is-style-link-no-underline a {
+	text-decoration: none !important;
+// 	
+// 	&:not([class*="wp-"]):hover,
+// 	&:not([class*="wp-"]):active {
+// 		text-decoration: underline !important;
+// 	}
 }
 
 /* Underline links on hover */
 .is-style-link-underline-hover a {
-	text-decoration: none;
-}
-.is-style-link-underline-hover a:hover {
-	opacity: 1;
-	text-decoration: underline;
+	text-decoration: none !important;
+	
+	&:hover,
+	&:active {
+		text-decoration: underline !important;
+		opacity: 1;
+	}
 }

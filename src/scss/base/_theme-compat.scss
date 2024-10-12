@@ -42,18 +42,9 @@
 /*-----------------------------------------------------------------------------
 # Flat Blocks Colors and Custom Styles (for theme < v1.6.6)
 -----------------------------------------------------------------------------*/
-// .has-foreground-alt-color {
-// 	color: var(--wp--preset--color--contrast-alt);
-// }
-// .has-foreground-alt-background-color {
-// 	background-color: var(--wp--preset--color--contrast-alt);
-// }
-// .has-foreground-alt-border-color {
-// 	border-color: var(--wp--preset--color--contrast-alt);
-// }
 
 /* Default group padding, but remove it on nested groups */
-:where(.wp-block-group:not(.is-style-no-padding)) {
+:where(.wp-block-group:not(main):not(.is-style-no-padding)) {
 	padding-top: var(--wp--style--block-gap);
 	padding-bottom: var(--wp--style--block-gap);
 }

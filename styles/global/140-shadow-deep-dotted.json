@@ -1,11 +1,16 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/theme.json",
 	"version": 3,
-	"title": "Deep Drop Shadows",
+	"title": "Deep Drop Shadows & Dotted Underlines",
 	"settings": {
 		"custom": {
 			"shadow": {
 				"default": "var(--wp--preset--shadow--deep)"
+			},
+			"color": {			
+				"link": {
+					"style": "dotted"
+				}
 			}
 		}
 	}	

@@ -10,12 +10,6 @@
 					"primaryAlt": "var(--wp--preset--color--highlight)",
 					"secondary": "var(--wp--preset--color--foreground-alt)",
 					"secondaryAlt": "var(--wp--preset--color--foreground-alt)"
-				},
-				"underline": {
-					"primary": "none",
-					"primaryAlt": "none",
-					"secondary": "underline",
-					"secondaryAlt": "underline"
 				}
 			}
 		},

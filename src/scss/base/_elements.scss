@@ -15,13 +15,8 @@ pre {
 }
 
 /* Set lists with background to match other padding */
-ol.has-background,
-ul.has-background {
+ol.has-background:not(.wp-block-navigation-submenu):not(.wp-block-navigation__container),
+ul.has-background:not(.wp-block-navigation-submenu):not(.wp-block-navigation__container) {
     padding: var(--wp--preset--spacing--40, 18px);
     list-style-position: inside;
 }
-
-// /* Center captions */
-// figcaption {
-// 	text-align: center;
-// }

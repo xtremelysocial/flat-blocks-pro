@@ -19,12 +19,9 @@
 /*-----------------------------------------------------------------------------
 # Calendar
 -----------------------------------------------------------------------------*/
-.wp-block-calendar table:where(:not(.has-text-color)) {
-  color: var(--wp--preset--color--contrast);
-}
-
+.wp-block-calendar table:where(:not(.has-text-color)),
 .wp-block-calendar table th:not(.has-text-color) {
-  color: var(--wp--preset--color--dark);
+  color: var(--wp--preset--color--contrast);
 }
 
 .wp-calendar-nav a {
@@ -71,7 +68,7 @@
 -----------------------------------------------------------------------------*/
 /* Closed Summary will have primary font color */
 .wp-block-details:not(.has-text-color) > summary {
-  color: var(--wp--preset--color--highlight);
+  color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
   font-weight: var(--wp--custom--typography--font-weight--medium);
   transition: color var(--wp--custom--animation--duration--medium, 500ms) var(--wp--custom--animation--timing-function, ease-in);
 }
@@ -79,7 +76,7 @@
 /* Highlight Summary on hover and when open */
 .wp-block-details:not(.has-text-color) > summary:hover,
 .wp-block-details:not(.has-text-color)[open] > summary {
-  color: var(--wp--preset--color--highlight-alt);
+  color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight-alt));
 }
 
 /*-----------------------------------------------------------------------------
@@ -476,6 +473,11 @@ ol.is-style-list-plain-centered li {
   width: 100% !important;
 }
 
+/* Default separator color when on colored background */
+.has-background .wp-block-separator:not(.has-background) {
+  color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
+}
+
 /*-----------------------------------------------------------------------------
 # Separator: Custom
 -----------------------------------------------------------------------------*/
@@ -527,5 +529,5 @@ ol.is-style-list-plain-centered li {
 }
 
 .wp-block-table.is-style-stripes table:not(.has-text-color) tbody tr:nth-child(odd) {
-  color: var(--wp--preset--color--very-dark-gray);
+  color: var(--wp--preset--color--almost-black);
 }

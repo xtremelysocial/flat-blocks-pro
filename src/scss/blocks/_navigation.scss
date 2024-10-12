@@ -6,87 +6,152 @@
 @use "../utils/mixin-prefixes";
 
 /*-----------------------------------------------------------------------------
-# Bold or highlight ACTIVE menu items 
+# Default settings for nav menus
 -----------------------------------------------------------------------------*/
 
-/* For active top-level menu items, bold or highlight */
-//.wp-block-navigation:not(.has-background) .wp-block-navigation-item {
-.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item {
-	&.current-menu-item,
-	&:has(.current-menu-ancestor),
-	&.current-menu-ancestor,
-	&:has(.current-menu-ancestor) > .wp-block-navigation-item__content,
-	&.wp-block-pages-list__item.current-menu-item > a,
-	&.wp-block-home-link > a[aria-current='page'] {
-		color: var(--wp--preset--color--highlight);
+/* When the nav itself has a colored background, set link color and padding */
+.wp-block-navigation.has-background {
+
+	// Inherit link color
+	&:not(.has-text-color) .wp-block-navigation__responsive-container,
+	&:not(.has-text-color) .wp-block-navigation__submenu-container {
+		color: inherit;
+	}
+
+	// Only on TOP-LEVEL, adjust link padding 
+	& .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container {
+		& > .wp-block-navigation-item:not(:first-child) > a:not(.wp-element-button),
+		& > .wp-block-navigation-submenu:not(:first-child) {
+			padding-left: 0;
+		}
+
+		& > .wp-block-navigation-item:not(:last-child) > a:not(.wp-element-button),
+		& > .wp-block-navigation-submenu:not(:last-child) {
+			padding-right: 0; 
+		}
 	}
 }
 
-.site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item,
-.site-header.has-background .wp-block-navigation .wp-block-navigation-item {
-	&.current-menu-item:not(.has-child) > a,
-	&.current-menu-ancestor,
-	&:has(.current-menu-ancestor) > .wp-block-navigation-item__content,
-	&.wp-block-pages-list__item.current-menu-item > a,
-	&.wp-block-home-link > a[aria-current='page'] {
-		font-weight: var(--wp--custom--typography--font-weight--medium);
-	}
-}
-
-/* For active sub-menu items, bold or highlight */
-.wp-block-navigation__submenu-container:not(.has-text-color) .wp-block-navigation-item.current-menu-item .wp-block-navigation-item__content.wp-block-navigation-item__content {
-	color: var(--wp--preset--color--highlight);
-}
-.wp-block-navigation__submenu-container.has-text-color .wp-block-navigation-item.current-menu-item .wp-block-navigation-item__content.wp-block-navigation-item__content {
-	font-weight: var(--wp--custom--typography--font-weight--medium);
+/* Default nav link opacity on hover */
+.wp-block-navigation .wp-block-navigation-item:hover >  .wp-block-navigation-item__content.wp-block-navigation-item__content, 
+.wp-block-navigation .wp-block-navigation-item:active > .wp-block-navigation-item__content.wp-block-navigation-item__content {
+	opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
 }
 
 /*-----------------------------------------------------------------------------
-# Bold or highlight menu items on HOVER
+# On HEADER MENU, highlight on HOVER and on CURRENT active menu item
 -----------------------------------------------------------------------------*/
 
-/* On hover, bold or highlight top-level menu items */
-.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item { //, 
-	&:hover > .wp-block-navigation-item__content, // top-level
-	&:hover > .wp-block-navigation__submenu-icon, // top-level
-	&:hover, // drop-down
-	&:active { //drop-down
-    	color: var(--wp--preset--color--highlight);
-    }
+/*-----------------------------------------------------------------------------
+# On DESKTOP, highlight TOP-LEVEL links
+-----------------------------------------------------------------------------*/
+header .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container {
+
+	// Highlight with custom hover color on HOVER
+	& > .wp-block-navigation-item:hover > .wp-block-navigation-item__content,
+	& > .wp-block-navigation-item:hover > .wp-block-navigation__submenu-icon,
+	& > .wp-block-navigation-item:active > .wp-block-navigation-item__content,
+	& > .wp-block-navigation-item:active > .wp-block-navigation__submenu-icon,
+	& .wp-block-page-list > .wp-block-pages-list__item:hover > a {
+		color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
+		//opacity: 1;
+		opacity: var(--wp--custom--color--opacity, 1);
+	}
+
+	// Highlight with custom link color and bold on CURRENT
+	& > .wp-block-navigation-item:has(.current-menu-ancestor) > .wp-block-navigation-item__content,
+	& > .wp-block-navigation-item:has(.current-menu-ancestor) > .wp-block-navigation__submenu-icon,
+	& > .wp-block-navigation-item.current-menu-item > a[aria-current='page'],
+	& .wp-block-page-list > .wp-block-pages-list__item.current-menu-item > a {
+		color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
+		font-weight: var(--wp--custom--color--font-weight, bolder);
+	}
 }
 
-/* On hover, bold or highlight drop-down links */
-.site-header:not(.has-background) .wp-block-navigation-submenu.open-on-click:hover,
-.site-header:not(.has-background) .wp-block-navigation-item.has-child.open-on-click:hover {
-    color: var(--wp--preset--color--highlight);
+/*-----------------------------------------------------------------------------
+# On MOBILE, highlight TOP-LEVEL links
+-----------------------------------------------------------------------------*/
+
+header .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
+
+	// Highlight with default hover color on HOVER
+	& > .wp-block-navigation-item:not(.open-on-click):hover > .wp-block-navigation-item__content,
+	& > .wp-block-navigation-item:not(.open-on-click):hover > .wp-block-navigation__submenu-icon,
+	& > .wp-block-navigation-item:not(.open-on-click):active > .wp-block-navigation-item__content,
+	& > .wp-block-navigation-item:not(.open-on-click):active > .wp-block-navigation__submenu-icon,
+	& .wp-block-page-list > .wp-block-pages-list__item:hover > a {
+		color: var(--wp--preset--color--highlight-alt);
+	}
+
+	// Highlight with default link color on CURRENT
+	& > .wp-block-navigation-item > .current-menu-ancestor,
+	& > .wp-block-navigation-item.current-menu-item > .wp-block-navigation-item__content,
+	& .wp-block-page-list > .wp-block-pages-list__item.current-menu-item > a {
+		color: var(--wp--preset--color--highlight);
+		font-weight: var(--wp--custom--color--font-weight, bolder);
+	}
 }
 
-.wp-block-navigation__submenu-container:not(.has-background) > .wp-block-navigation-item > .wp-block-navigation-item__content:hover {
-    color: var(--wp--preset--color--highlight);
+/*-----------------------------------------------------------------------------
+# Handle highlight on SUB MENU items WITHOUT it's own background
+-----------------------------------------------------------------------------*/
+header .wp-block-navigation:not(.has-background) .wp-block-navigation-submenu:not(.has-background) .wp-block-navigation-item {
+	//font-weight: var(--wp--custom--typography--font-weight--normal);
+
+	// Highlight with default hover color on HOVER
+	&:hover > .wp-block-navigation-item__content,
+	&:hover > .wp-block-navigation__submenu-icon,
+	&:active > .wp-block-navigation-item__content,
+	&:active > .wp-block-navigation__submenu-icon {
+		color: var(--wp--preset--color--highlight-alt);
+	}
+
+	// Highlight with default link color on CURRENT
+	&:has(.current-menu-ancestor),
+	&.current-menu-item > .wp-block-navigation-item__content {
+		color: var(--wp--preset--color--highlight);
+		font-weight: var(--wp--custom--color--font-weight, bolder);
+	}
 }
 
-.wp-block-navigation.has-background .wp-block-navigation-item {
-	&:hover > .wp-block-navigation-item__content, // top-level
-	&:hover > .wp-block-navigation__submenu-icon { // top-level
-    	opacity: var(--wp--custom--link--hover-opacity, 0.8);
-		//font-weight: var(--wp--custom--typography--font-weight--medium);	
-    }
+/*-----------------------------------------------------------------------------
+# Handle highlight on SUB MENU items WITH it's own background
+-----------------------------------------------------------------------------*/
+header .wp-block-navigation.has-background .wp-block-navigation-submenu:not(.has-background) .wp-block-navigation-item,
+header .wp-block-navigation-submenu.has-background .wp-block-navigation-item {
+
+	// Highlight with custom hover color on HOVER
+	&:hover > .wp-block-navigation-item__content,
+	&:hover > .wp-block-navigation__submenu-icon,
+	&:active > .wp-block-navigation-item__content,
+	&:active > .wp-block-navigation__submenu-icon {
+		color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight-alt));
+	}
+
+	// Highlight with default link color on CURRENT
+	&.current-menu-item > .wp-block-navigation-item__content {
+		color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
+		font-weight: var(--wp--custom--color--font-weight, bolder);
+	}
 }
 
-/* But on mobile nav, don't hover on non-clickable links */
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child.open-on-click > .wp-block-navigation-item:hover,
-.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child.open-on-click > .wp-block-navigation-item__content:hover {
-	color: inherit;
+/*-----------------------------------------------------------------------------
+# On MOBILE nav, don't hover on non-clickable links
+-----------------------------------------------------------------------------*/
+header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.open-on-click:hover > .wp-block-navigation-item__content {
 	cursor: unset;
-	font-weight: inherit;
 	opacity: 1;
 }
 
-/* Style the mobile nav menu open and close buttons */
+/*-----------------------------------------------------------------------------
+# Style the Mobile Nav Menu
+-----------------------------------------------------------------------------*/
+
+/* Style the mobile nav open and close buttons */
 .wp-block-navigation .wp-block-navigation__responsive-container-open,
 .wp-block-navigation .wp-block-navigation__responsive-container-close {
 	background-color: rgba(0, 0, 0, .05);
-	border: 1px solid var(--wp--preset--color--neutral-alt);
+	border: 1px solid var(--wp--custom--color--border, var(--wp--preset--color--neutral-alt));
 	border-radius: var(--wp--custom--button--radius);
 	padding: var(--wp--preset--spacing--20);
 }
@@ -95,58 +160,28 @@
     margin-top: var(--wp--preset--spacing--60);
 }
 
-/* On colored navs, round out the mobile nav container to match our open/close menu buttons */
-.wp-block-navigation.has-text-color:has(.wp-block-navigation__responsive-container:not(.is-menu-open.is-menu-open)) {
+/* 
+ * On navs with colored backgrounds, round out the mobile nav container 
+ * to match our open / close menu buttons
+ */
+.wp-block-navigation.has-background:has(.wp-block-navigation__responsive-container:not(.is-menu-open.is-menu-open)) {
 	border-radius: var(--wp--custom--button--radius);
 }
 
-/* Adjust padding on mobile nav menu */
-.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
-    padding-top: calc( var(--wp--preset--spacing--40) + 24px );
-}
-
-/* Reduce vertical gap on top-level nav menus for when they wrap */
-.wp-block-navigation {
-	row-gap: var(--wp--preset--spacing--20);
-}
-
-/* But add it back on mobile menu*/
-.wp-block-navigation__responsive-container.is-menu-open {
-	row-gap: var(--wp--style--block-gap);
-}
-
-/* REMOVE extra padding between top-level nav and its children */
-.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .wp-block-navigation__submenu-container {
-    padding-top: var(--wp--preset--spacing--20);
-}
-
-/* REMOVE extra padding on sub-menu drop-downs */
-.wp-block-navigation .wp-block-navigation-submenu__toggle {
-  padding-left: 0;
-}
-
-/* REDUCE padding on sub-menu drop-downs on mobile nav */
-.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container {
-	padding-left: var(--wp--preset--spacing--40);
-	padding-right: var(--wp--preset--spacing--40);
-}
-
-/* REMOVE duplicate padding on sub-menus with backgrounds */
-.wp-block-navigation .wp-block-navigation__submenu-container.has-background {
-	padding: 0;
-}
-
 /*
- * Responsive menu container padding.
- * This ensures the responsive container inherits the same
- * spacing defined above. This behavior may be built into
- * the Block Editor in the future.
+ * Responsive menu container padding. This behavior may be built into the 
+ * Block Editor in the future.
  */
 .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
 	padding-top: var(--wp--preset--spacing--50); //var(--wp--preset--spacing--60);
 	padding-bottom: var(--wp--preset--spacing--60);
 	padding-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
 	padding-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
+}
+
+/* Set padding on drop-down menus for mobile */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container {
+    padding: 0 var(--wp--preset--spacing--40);
 }
 
 /* Increase animation TIME on nav menu drop-downs */
@@ -164,7 +199,7 @@
 -----------------------------------------------------------------------------*/
 
 /* Navigation Fixed menu */
-/* TO-DO: Consider adding .site-header:not(.is-style-fixed-header) */
+// TO-DO: Consider adding .site-header:not(.is-style-fixed-header)
 nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-open,
 nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close {
 	background: rgba(0, 0, 0, .25);
@@ -189,8 +224,9 @@ nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-con
 }
 
 /* 
- * On the front-end and Editor, default the fixed menu's drop-down and close button 
- * also to the left */ 
+ * On the front-end and Editor, default the fixed menu's drop-down and close
+ * button also to the left 
+ */ 
 nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container {
 	width: 360px;
 	left: 0; 
@@ -218,7 +254,10 @@ nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-con
 	left: auto;
 }
 
-/* If center justified, position the fixed menu and its drop-down in the center */
+/* 
+ * If center justified, position the fixed menu and its drop-down in the 
+ * center 
+ */
 .site-header.is-content-justification-center > nav.wp-block-navigation.is-style-fixed-menu,
 .site-header.is-content-justification-center > .wp-block-template-part > nav.wp-block-navigation.is-style-fixed-menu {
     left: calc(50% - 12px - var(--wp--preset--spacing--20));

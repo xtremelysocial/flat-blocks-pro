@@ -1,65 +1,85 @@
-/*-----------------------------------------------------------------------------
+/*------------------------------------------------------------------------------
 # Colors
------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------*/
 
-// Load our mixins to set default text and link colors
+/*
+ * Set highlight, hover, and link underlines based on background color 
+ * 
+ * Override in theme.json with:
+ *		--wp--custom--color--contrast--{color} and/or 
+ *		--wp--custom--color--highlight--{color} and/or 
+ */
+
+// Color Mixin: Sets --wp--custom--color--contrast, --highlight --hover, and
+// 				--underline colors used by the theme's CSS
+// Parms:
+// @colors		array	Array of color slugs. e.g. ('light-green', 'green')
+// @default		string	Optional lightness slug e.g. 'default-black',
+//						'default-dark'. This translates to the
+//						--wp-custom--color--{lightness} variable.
+// @contrast	color	Font color slug for text e.g. 'almost-black'
+// @highlight	color	Highlight (link) color slug or 'inherit'
+
 @use "../utils/mixin-colors";
 
 /* 
- * Default links on colored backgrounds to underline, then override later
- * for certain colors 
+ * Black and near-black colors, default light text but leave link color alone
  */
-.has-background:not(.has-link-color) :not(.wp-block-site-title) >  a:not(.wp-element-button):not(.wp-block-navigation-item__content):not(.wp-block-social-link-anchor) {
-	text-decoration: underline;
-
-	&:hover,
-	&:active {
-		text-decoration: underline;
-		opacity: var(--wp--custom--link--hover-opacity, 0.8);
-	}
-}
+$black-colors: ('contrast', 'dark', 'dark-alt', 'almost-black', 'not-quite-black', 'black');
+@include mixin-colors.color-defaults(
+	$black-colors,
+	'default-black',
+	'var(--wp--preset--color--foreground-alt)',
+	null
+);
 
 /* 
- * Black and near-black colors, default light text (but leave link color alone).
- * Override by defining --wp--custom--color--contrast--black and/or 
- * --wp--custom--color--highlight--black in theme.json.
+ * Dark colors, default light text and links with underline
  */
-$black-colors: ('contrast', 'midnight-blue', 'dark-midnight-blue', 'dark', 'dark-alt', 'almost-black', 'not-quite-black', 'black');
-@include mixin-colors.color-defaults($black-colors, 'default-black');
+$dark-colors: ('primary', 'secondary', 'tertiary', 'primary-alt', 'secondary-alt', 'tertiary-alt', 'highlight', 'highlight-alt', 'dark-gray', 'very-dark-gray', 'green', 'dark-bright-green', 'midnight-blue', 'dark-midnight-blue', 'orange', 'dark-orange', 'blue', 'dark-blue', 'purple', 'dark-purple', 'light-red', 'red', 'dark-red');
+@include mixin-colors.color-defaults(
+	$dark-colors,
+	null, //'default-dark',
+	'var(--wp--preset--color--foreground-alt)',
+	'inherit'
+);
 
 /* 
- * Dark colors, default light text and links 
- * Override by defining --wp--custom--color--contrast--dark and/or
- * --wp--custom--color--highlight--dark in theme.json.
- */
-$dark-colors: ('primary', 'secondary', 'tertiary', 'primary-alt', 'secondary-alt', 'tertiary-alt', 'highlight', 'highlight-alt', 'dark-gray', 'very-dark-gray', 'green', 'dark-bright-green', 'orange', 'dark-orange', 'blue', 'dark-blue', 'purple', 'dark-purple', 'light-red', 'red', 'dark-red');
-@include mixin-colors.color-defaults($dark-colors, 'default-dark');
-
-/* 
- * Medium colors, default light text and links too but make it easy for theme
- * styles to Override by defining --wp--custom--color--contrast--medium in
- * theme.json.
+ * Medium colors, default light text and links with underline
  */
 $medium-colors: ('light-green', 'bright-green', 'light-orange', 'light-blue','light-purple');
-@include mixin-colors.color-defaults($medium-colors, 'default-medium');
+@include mixin-colors.color-defaults(
+	$medium-colors, 
+	null, //'default-medium',
+	'var(--wp--preset--color--foreground-alt)',
+	'inherit'
+);
 
 /* 
- * Light Colors (e.g. Yellow), default dark color to text, link, and buttons 
- * Override by defining --wp--custom--color--contrast--light in theme.json.
+ * Light Colors, default dark text and links with underline
  */ 
 $light-colors: ('light-yellow', 'yellow');
-@include mixin-colors.color-defaults($light-colors,'default-light');
+@include mixin-colors.color-defaults(
+	$light-colors,
+	null, //'default-light',
+	'var(--wp--preset--color--almost-black)',
+	'inherit'
+);
 
 /* 
- * White and near-white colors, default dark text (but leave the link color alone) 
- * Override by defining --wp--custom--color--contrast--white in theme.json.
+ * White and near-white colors, default dark text but leave the link color alone
  */
 $white-colors: ('base', 'neutral', 'neutral-alt', 'foreground-alt', 'white', 'off-white', 'very-light-gray', 'light-gray', 'gray' );
-@include mixin-colors.color-defaults($white-colors,'default-white');
+@include mixin-colors.color-defaults(
+	$white-colors,
+	'default-white',
+	'var(--wp--preset--color--contrast)',
+	null
+);
 
 /* 
  * On Cover blocks, default the text color to white, but set it back to black
- * on light backgrounds with dim less than 30%
+ * on light backgrounds with dim 30% or less
  */
 :where(.wp-block-cover-image.is-light:not(.has-text-color)), :where(.wp-block-cover.is-light:not(.has-text-color)) {
     color: #fff;

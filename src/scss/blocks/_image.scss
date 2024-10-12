@@ -25,10 +25,10 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
     border-radius: 9999px !important;
 }
 
-/* Hide the caption in new WordPress v6.4 "lightbox" image feature when enlarged */
-.lightbox-image-container .wp-block-image img {
-	color: rgba(0,0,0,0) !important;
-}
+// /* Hide the caption in new WordPress v6.4 "lightbox" image feature when enlarged */
+// .lightbox-image-container .wp-block-image img {
+// 	color: rgba(0,0,0,0) !important;
+// }
 
 /*-----------------------------------------------------------------------------
 # Image: Custom

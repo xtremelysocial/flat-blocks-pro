@@ -23,10 +23,6 @@
 				"highlight": {
 					"secondary": "var(--wp--preset--color--foreground-alt)",
 					"secondaryAlt": "var(--wp--preset--color--foreground-alt)"
-				},
-				"underline": {
-					"secondary": "underline",
-					"secondaryAlt": "underline"
 				}
 			}
 		},

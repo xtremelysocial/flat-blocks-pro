@@ -5,23 +5,35 @@
 	"settings": {
 		"custom": {
 			"color": {
+				"contrast": {
+					"base": "var(--wp--preset--color--contrast)",
+					"contrast": "var(--wp--preset--color--base)"
+				},
+				"highlight": {
+					"secondary": "var(--wp--preset--color--highlight)",
+					"secondary-alt": "var(--wp--preset--color--highlight)",
+					"midnightBlue": "var(--wp--preset--color--highlight)",
+					"darkMidnightBlue": "var(--wp--preset--color--highlight)"
+				},
+				"hover": {
+					"secondary": "var(--wp--preset--color--highlight-alt)",
+					"secondary-alt": "var(--wp--preset--color--highlight-alt)",
+					"midnightBlue": "var(--wp--preset--color--highlight-alt)",
+					"darkMidnightBlue": "var(--wp--preset--color--highlight-alt)"
+				},
 				"button": {
-					"background": "var(--wp--preset--color--highlight)",
-					"text": "var(--wp--preset--color--foreground-alt)"
+					"hoverOpacity": "0.8"
+				},
+				"link": {
+					"style": "solid",
+					"hoverOpacity": "0.8",
+					"hoverStyle": "solid"
 				},
 				"border": "var(--wp--preset--color--neutral-alt)",
 				"field": {
 					"background": "revert",
 					"text": "inherit",
 					"outline": "rgba(0, 0, 0, 0.25)"
-				},
-				"highlight": {
-					"secondary": "var(--wp--preset--color--highlight)",
-					"secondary-alt": "var(--wp--preset--color--highlight)"
-				},
-				"underline": {
-					"secondary": "none",
-					"secondary-alt": "none"
 				}
 			},
 			"border": {
@@ -31,7 +43,7 @@
 			"button": {
 				"color": "var(--wp--preset--color--highlight) /* deprecated */",
 				"radius": "5px",
-				"hoverOpacity": "0.85"
+				"hoverOpacity": "0.8"
 			},
 			"shadow": {
 				"default": "none"
@@ -39,9 +51,7 @@
 			"link": {
 				"thickness": "1px",
 				"postion": "under",
-				"offset": "auto",
-				"style": "dotted",
-				"hoverOpacity": "0.8"
+				"offset": "auto"
 			},
 			"typography": {
 				"fontWeight": {
@@ -856,14 +866,14 @@
 					"fontFace": [
 						{
 							"fontFamily": "Roboto Mono",
-							"fontWeight": "300 400",
+							"fontWeight": "300 500",
 							"fontStyle": "normal",
 							"fontStretch": "normal",
 							"src": [ "file:./assets/fonts/Roboto_Mono/RobotoMono-VariableFont_wght.ttf" ]
 						},
 						{
 							"fontFamily": "Roboto Mono",
-							"fontWeight": "300 400",
+							"fontWeight": "300 500",
 							"fontStyle": "italic",
 							"fontStretch": "normal",
 							"src": [ "file:./assets/fonts/Roboto_Mono/RobotoMono-Italic-VariableFont_wght.ttf" ]
@@ -954,6 +964,39 @@
 			"textTransform": "none"
 		},
 		"elements": {
+			"link": {
+				"color": {
+					"text": "var(--wp--preset--color--highlight)"
+				},
+				"typography": {
+					"textDecoration": "underline"
+				},
+				":hover": {
+					"color": {
+						"text": "var(--wp--preset--color--highlight-alt)"
+					}
+				},
+				":active": {
+					"color": {
+						"text": "var(--wp--preset--color--highlight-alt)"
+					}
+				}
+			},
+			"button": {
+				"color": {
+					"background": "var(--wp--preset--color--highlight)",
+					"text": "var(--wp--preset--color--foreground-alt)"
+				},
+				"typography": {
+					"fontSize": "var(--wp--preset--font-size--normal)",
+					"fontStyle": "normal",
+					"fontWeight": "500",
+					"lineHeight": "1.25"
+				},
+				"border": {
+					"radius": "var(--wp--custom--button--radius)"
+				}
+			},
 			"heading": {
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--raleway)",
@@ -1005,8 +1048,7 @@
 			"caption": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--small)",
-					"fontWeight": "400",
-					"textDecoration": "none"
+					"fontWeight": "400"
 				},
 				"elements": {
 					"link": {
@@ -1016,40 +1058,7 @@
 					}
 				},
 				"css": "text-align: center"
-			},
-			"button": {
-				"color": {
-					"background": "var(--wp--custom--color--button--background)",
-					"text": "var(--wp--custom--color--button--text)"
-				},
-				"typography": {
-					"fontSize": "var(--wp--preset--font-size--normal)",
-					"fontStyle": "normal",
-					"fontWeight": "500",
-					"lineHeight": "1.25"
-				},
-				"border": {
-					"radius": "var(--wp--custom--button--radius)"
-				}
-			},
-			"link": {
-				"color": {
-					"text": "var(--wp--preset--color--highlight)"
-				},
-				"typography": {
-					"textDecoration": "underline"
-				},
-				":hover": {
-					"color": {
-						"text": "var(--wp--preset--color--highlight-alt)"
-					}
-				},
-				":active": {
-					"color": {
-						"text": "var(--wp--preset--color--highlight-alt)"
-					}
-				}
-			}
+			}					
 		},
 		"blocks": {
 			"core/image": {
@@ -1136,8 +1145,7 @@
 			},
 			"core/post-title": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--larger)",
-					"textDecoration": "none"
+					"fontSize": "var(--wp--preset--font-size--larger)"
 				},
 				"elements": {
 					"link": {
@@ -1304,8 +1312,7 @@
 			"core/site-title": {
 				"typography": {
 					"fontSize": "var(--wp--preset--font-size--large)",
-					"fontStyle": "normal",
-					"textDecoration": "none"
+					"fontStyle": "normal"
 				},
 				"elements": {
 					"link": {
@@ -1349,7 +1356,7 @@
 				},
 				"color": {
 					"background": "var(--wp--preset--color--neutral)",
-					"text": "var(--wp--preset--color--almost-black)"
+					"text": "var(--wp--preset--color--contrast)"
 				},
 				"typography": {
 					"fontFamily": "var(--wp--preset--font-family--roboto-mono)",
@@ -1480,9 +1487,6 @@
 				}
 			},
 			"core/list": {
-				"typography": {
-					"textDecoration": "none"
-				},
 				"spacing": {
 					"padding": {
 						"left": "2em"
@@ -1755,6 +1759,12 @@
 			"area": "title"
 		},
 		{
+			"name": "post-navigation",
+			"title": "Post Navigation",
+			"description": "Next and previous post links",
+			"area": "content"
+		},
+		{
 			"name": "content-article",
 			"title": "Content Article",
 			"description": "Blog list article (featured image, title, date, and excerpt)",
@@ -1827,6 +1837,12 @@
 			"area": "content"
 		},
 		{
+			"name": "footer-block-4",
+			"title": "Footer Block 3 w/link underlines",
+			"description": "Footer block 3 (e.g. about) with underlined links",
+			"area": "content"
+		},
+		{
 			"name": "footer-3-blocks",
 			"title": "Footer 3 Blocks (recent posts, recent comments, about)",
 			"description": "Footer 3 blocks (e.g. recent posts, recent comments, about)",
@@ -1853,7 +1869,13 @@
 		{
 			"name": "footer-colored",
 			"title": "Footer Colored",
-			"description": "Colored footer (Primary & Primary Alt color)",
+			"description": "Colored footer (Secondary & Secondary Alt color)",
+			"area": "footer"
+		},
+		{
+			"name": "footer-colored-underlines",
+			"title": "Footer Colored w/link underlines",
+			"description": "Colored footer w/link underlines (Primary & Primary Alt color)",
 			"area": "footer"
 		},
 		{
