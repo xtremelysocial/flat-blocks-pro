@@ -2,11 +2,11 @@
 # Dashicons
 -----------------------------------------------------------------------------*/
 /**
- * Override core WordPress base Dashicon styles. Don't let it
- * alter height, width, font-size or line-height. 
- *
+ * Override core WordPress base Dashicon styles. Don't let it alter height, 
+ * width, font-size or line-height. 
+ * Note: Need higher specificity here than just .dashicons
  */
-.dashicons {
+[class*="dashicons-"].dashicons {
 	display: block;
 	width: auto;
 	height: auto;
@@ -18,7 +18,7 @@
 	text-transform: inherit;
 }
 
-.dashicons:before {
+[class*="dashicons-"].dashicons:before {
 	display: inline-block;
 	width: auto;
 	height: auto;

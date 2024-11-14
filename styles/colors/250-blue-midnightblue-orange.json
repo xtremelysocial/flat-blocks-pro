@@ -333,14 +333,14 @@
 					"name": "Tertiary and Primary"
 				},
 				{
-					"colors": ["#000000", "#95a5a6"],
-					"slug": "dark-grayscale",
-					"name": "Dark Grayscale"
-				},
-				{
 					"colors": ["#000000", "#ffffff"],
 					"slug": "grayscale",
 					"name": "Grayscale"
+				},
+				{
+					"colors": ["#000000", "#95a5a6"],
+					"slug": "dark-grayscale",
+					"name": "Dark Grayscale"
 				}
 			]			
 		}

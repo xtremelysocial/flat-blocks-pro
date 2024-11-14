@@ -1,6 +1,11 @@
 /*-----------------------------------------------------------------------------
 # Paragraph
 -----------------------------------------------------------------------------*/
+
+.wp-block-paragraph.has-background { 
+	padding: var(--wp--preset--spacing--40) 
+}
+
 /* 
  * Note: Breakpoint of 781 is what is hard-coded in WordPress 
  * v6.0+ to collapse columns

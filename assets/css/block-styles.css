@@ -1,6 +1,7 @@
 /*!*************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/scss/block-styles.scss ***!
   \*************************************************************************************************************************************************/
+@charset "UTF-8";
 /**
  * File:	block-styles.css
  * Theme:	Flat Blocks
@@ -19,18 +20,91 @@
 /*-----------------------------------------------------------------------------
 # Calendar
 -----------------------------------------------------------------------------*/
-.wp-block-calendar table:where(:not(.has-text-color)) {
-  color: var(--wp--preset--color--contrast);
+.wp-block-calendar table:not(.has-background) th {
+  background-color: var(--wp--preset--color--neutral);
 }
 
+.wp-block-calendar table:where(:not(.has-text-color)),
 .wp-block-calendar table th:not(.has-text-color) {
-  color: var(--wp--preset--color--dark);
+  color: var(--wp--preset--color--contrast);
 }
 
 .wp-calendar-nav a {
   text-decoration: none;
 }
 
+/*-----------------------------------------------------------------------------
+# Columns and Column
+-----------------------------------------------------------------------------*/
+/* Padding for colored backgrounds on columns and individual column */
+.wp-block-columns.has-background {
+  padding: var(--wp--preset--spacing--60);
+}
+
+.wp-block-column.has-background {
+  padding: var(--wp--preset--spacing--40);
+}
+
+/* 
+ * Note: Breakpoint of 781 is what is hard-coded in WordPress 
+ * v6.0+ to collapse columns
+ */
+@media only screen and (max-width: 781px) {
+  /* If no global padding, then set colored columns like colored groups */
+  .wp-block-columns.has-background,
+  .wp-block-column.has-background {
+    padding-left: calc(2 * var(--wp--style--block-gap));
+    padding-right: calc(2 * var(--wp--style--block-gap));
+  }
+  /* If global padding, then OVERRIDE horizontal padding on mobile */
+  .has-global-padding .wp-block-columns.has-background,
+  .has-global-padding .wp-block-column.has-background {
+    padding-left: var(--wp--style--root--padding-left) !important;
+    padding-right: var(--wp--style--root--padding-right) !important;
+  }
+}
+/*-----------------------------------------------------------------------------
+# Columns and Column: Custom
+-----------------------------------------------------------------------------*/
+.wp-block-columns.is-style-no-gap,
+.wp-block-columns.is-style-no-gap .wp-block-column:not(.has-background),
+.wp-block-columns.is-style-no-gap.has-background:not(.has-global-padding) {
+  gap: 0 !important;
+  padding: 0 !important;
+}
+
+/* Columns thick gap */
+.wp-block-columns.is-style-thick-gap,
+.wp-block-columns.is-style-thick-gap.has-background {
+  gap: calc(2 * var(--wp--style--block-gap));
+}
+
+/* Column no padding */
+.wp-block-column.is-style-no-padding {
+  padding: 0;
+}
+
+/* Handle when columns collapse on mobile */
+/* Breakpoint of 781 is what is hard-coded in WordPress v6.0+ to collapse columns */
+@media only screen and (max-width: 781px) {
+  /* Reduce row (vertical gap) when collapsing centered columns */
+  .wp-block-columns.is-style-center-on-mobile {
+    row-gap: var(--wp--preset--spacing--30);
+  }
+  /* Center left and right aligned text */
+  .wp-block-columns.is-style-center-on-mobile .wp-block-column:not(.wp-block-navigation__responsive-container-content) > *,
+  .wp-block-columns.is-style-center-on-mobile .wp-block-column:not(.wp-block-navigation__responsive-container-content) > .wp-block-template-part > * {
+    display: flex;
+    justify-content: center;
+    --navigation-layout-justify: center;
+    text-align: center;
+  }
+  /* OVERRIDE columns thick gap so vertical spacing matches up */
+  .wp-block-columns.is-style-thick-gap,
+  .wp-block-columns.is-style-thick-gap.has-background {
+    gap: var(--wp--style--block-gap);
+  }
+}
 /*-----------------------------------------------------------------------------
 # Comments
 -----------------------------------------------------------------------------*/
@@ -71,7 +145,7 @@
 -----------------------------------------------------------------------------*/
 /* Closed Summary will have primary font color */
 .wp-block-details:not(.has-text-color) > summary {
-  color: var(--wp--preset--color--highlight);
+  color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
   font-weight: var(--wp--custom--typography--font-weight--medium);
   transition: color var(--wp--custom--animation--duration--medium, 500ms) var(--wp--custom--animation--timing-function, ease-in);
 }
@@ -79,7 +153,7 @@
 /* Highlight Summary on hover and when open */
 .wp-block-details:not(.has-text-color) > summary:hover,
 .wp-block-details:not(.has-text-color)[open] > summary {
-  color: var(--wp--preset--color--highlight-alt);
+  color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight-alt));
 }
 
 /*-----------------------------------------------------------------------------
@@ -95,6 +169,87 @@
 -----------------------------------------------------------------------------*/
 /* Featured Image no border */
 .wp-block-post-featured-image.is-style-image-no-border img {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+/*-----------------------------------------------------------------------------
+# Heading
+-----------------------------------------------------------------------------*/
+/* Match our padding on headings with backgrounds */
+h1.has-background,
+h2.has-background,
+h3.has-background,
+h4.has-background,
+h5.has-background,
+h6.has-background {
+  padding: var(--wp--preset--spacing--40);
+}
+
+/*-----------------------------------------------------------------------------
+# Image
+-----------------------------------------------------------------------------*/
+/* Prevent figures (images, tables) with hard-coded dimensions from breaking the 
+ * layout. Note the figure line is for older block editor markup. 
+ */
+figure.wp-caption:not(.alignfull):not(.alignwide),
+figure.wp-caption:not(.alignfull):not(.alignwide) img {
+  max-width: min(100%, var(--wp--style--global--content-size)) !important;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FIX rounded images when global image style has a border radius */
+.wp-block-image .is-style-rounded img,
+.wp-block-image.is-style-circle-mask img,
+.wp-block-image.is-style-rounded img {
+  border-radius: 9999px !important;
+}
+
+/*-----------------------------------------------------------------------------
+# Image: Custom
+-----------------------------------------------------------------------------*/
+/* Image borders */
+.is-style-image-border img {
+  border: 1px solid var(--wp--custom--color--border);
+  border-radius: var(--wp--custom--border--radius);
+  padding: var(--wp--preset--spacing--20);
+}
+
+.wp-block-gallery.has-nested-images figure.is-style-image-border figcaption,
+.wp-block-gallery.is-style-image-border.has-nested-images figure.wp-block-image figcaption {
+  bottom: calc(1px + var(--wp--preset--spacing--20));
+  left: calc(1px + var(--wp--preset--spacing--20));
+  padding: 0 calc(1px + var(--wp--preset--spacing--20)) calc(1px + var(--wp--preset--spacing--20)) 0;
+  width: calc(100% - (2px + 2 * var(--wp--preset--spacing--20)));
+  border-bottom-left-radius: var(--wp--custom--border--radius);
+  border-bottom-right-radius: var(--wp--custom--border--radius);
+}
+
+.is-style-image-round-border img {
+  border: 1px solid var(--wp--custom--color--border);
+  border-radius: 9999px; /*50%;*/
+  padding: var(--wp--preset--spacing--20);
+}
+
+.wp-block-image.is-style-image-computer-screen img {
+  border: var(--wp--preset--spacing--60) solid var(--wp--preset--color--almost-black);
+  border-radius: var(--wp--preset--spacing--40);
+  border-bottom: 3px solid var(--wp--preset--color--almost-black);
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.is-style-image-tablet-phone-screen img {
+  border: var(--wp--preset--spacing--50) solid var(--wp--preset--color--almost-black);
+  border-radius: var(--wp--preset--spacing--40);
+}
+
+/* Featured Image no border */
+.is-style-image-no-border,
+.is-style-image-no-border img {
   border: none;
   border-radius: 0;
   padding: 0;
@@ -185,7 +340,7 @@
 /* Override horizontal padding on mobile 
  *
  * Note: Breakpoint of 601 is what is hard-coded in WordPress v6.0+
- * to collapse media & text and latest posts grid 
+ * to collapse the latest posts grid 
  */
 @media only screen and (max-width: 601px) {
   .wp-block-latest-posts.is-grid li {
@@ -211,32 +366,12 @@
 # List: Custom
 -----------------------------------------------------------------------------*/
 /* Checkmarks */
-ul.is-style-list-checkmarks,
-ol.is-style-list-checkmarks {
-  list-style: none;
+.is-style-list-checkmarks {
+  list-style-type: "✓ ";
 }
 
-ul.is-style-list-checkmarks > li,
-ol.is-style-list-checkmarks > li {
-  position: relative;
-}
-
-/* dashicons-saved */
-ul.is-style-list-checkmarks > li:before,
-ol.is-style-list-checkmarks > li:before {
-  font-family: dashicons;
-  content: "\f15e";
-  position: absolute;
-  left: calc(-8px - 1em);
-  top: 0.14285714em;
-  text-align: center;
-  transition: color 0.1s ease-in;
-}
-
-.rtl ul.is-style-list-checkmarks > li:before,
-.rtl ol.is-style-list-checkmarks > li:before {
-  left: 0;
-  right: calc(-8px - 1em);
+.rtl .is-style-list-checkmarks {
+  list-style-type: " ✓";
 }
 
 /* Plain */
@@ -296,7 +431,7 @@ ol.is-style-list-plain-centered li {
 /* Override horizontal padding on mobile 
  *
  * Note: Breakpoint of 601 is what is hard-coded in WordPress v6.0+
- * to collapse media & text and latest posts grid
+ * to collapse media & text
  */
 @media only screen and (max-width: 601px) {
   .wp-block-media-text.is-stacked-on-mobile:not(.has-background) .wp-block-media-text__content {
@@ -315,19 +450,6 @@ ol.is-style-list-plain-centered li {
 /*-----------------------------------------------------------------------------
 # Post Author
 -----------------------------------------------------------------------------*/
-/* dashicons-admin-users */
-.wp-block-post-author:before {
-  font-family: dashicons;
-  content: "\f110";
-  margin-right: var(--wp--preset--spacing--20);
-}
-
-.rtl .wp-block-post-author:before {
-  padding-right: 0;
-  margin-right: 0;
-  margin-left: var(--wp--preset--spacing--20);
-}
-
 .wp-block-post-author__name {
   margin-bottom: 0;
 }
@@ -348,6 +470,26 @@ ol.is-style-list-plain-centered li {
 }
 
 /*-----------------------------------------------------------------------------
+# Post Author Name
+-----------------------------------------------------------------------------*/
+/* dashicons-admin-users */
+.wp-block-post-author-name:before {
+  font-family: dashicons;
+  content: "\f110";
+  margin-right: var(--wp--preset--spacing--20);
+}
+
+.rtl .wp-block-post-author-name:after {
+  font-family: dashicons;
+  content: "\f110";
+  margin-right: var(--wp--preset--spacing--20);
+}
+
+.rtl .wp-block-post-author-name:before {
+  display: none;
+}
+
+/*-----------------------------------------------------------------------------
 # Post Comments Count (Only w/Gutenberg Plugin)
 -----------------------------------------------------------------------------*/
 /* dashicons-admin-comments for comments count */
@@ -355,12 +497,6 @@ ol.is-style-list-plain-centered li {
   font-family: dashicons;
   content: "\f101";
   margin-right: var(--wp--preset--spacing--20);
-}
-
-.rtl .wp-block-post-comments-count:before {
-  padding-right: 0;
-  margin-right: 0;
-  margin-left: var(--wp--preset--spacing--20);
 }
 
 /* 
@@ -372,19 +508,6 @@ ol.is-style-list-plain-centered li {
 }
 
 /*-----------------------------------------------------------------------------
-# Post Comments Form
------------------------------------------------------------------------------*/
-/* Set medium font weight on comment form labels */
-.wp-block-post-comments-form label {
-  font-weight: var(--wp--custom--typography--font-weight--medium);
-}
-
-/* Override no-shadow if our custom shadow default is set */
-.wp-block-post-comments-form input[type=submit].wp-element-button {
-  box-shadow: var(--wp--custom--shadow--default);
-}
-
-/*-----------------------------------------------------------------------------
 # Post Date
 -----------------------------------------------------------------------------*/
 /* dashicons-calendar-alt */
@@ -392,12 +515,6 @@ ol.is-style-list-plain-centered li {
   font-family: dashicons;
   content: "\f508";
   margin-right: var(--wp--preset--spacing--20);
-}
-
-.rtl .wp-block-post-date:before {
-  padding-right: 0;
-  margin-right: 0;
-  margin-left: var(--wp--preset--spacing--20);
 }
 
 /*-----------------------------------------------------------------------------
@@ -422,6 +539,16 @@ ol.is-style-list-plain-centered li {
   margin-right: var(--wp--preset--spacing--20);
 }
 
+.rtl .wp-block-post-terms.taxonomy-category:after {
+  font-family: dashicons;
+  content: "\f318";
+  margin-right: var(--wp--preset--spacing--20);
+}
+
+.rtl .wp-block-post-terms.taxonomy-category:before {
+  display: none;
+}
+
 /* dashicons-category */
 .wp-block-post-terms.taxonomy-post_tag:before {
   font-family: dashicons;
@@ -429,10 +556,14 @@ ol.is-style-list-plain-centered li {
   margin-right: var(--wp--preset--spacing--20);
 }
 
-.rtl .wp-block-post-terms:before {
-  padding-right: 0;
-  margin-right: 0;
-  margin-left: var(--wp--preset--spacing--20);
+.rtl .wp-block-post-terms.taxonomy-post_tag:after {
+  font-family: dashicons;
+  content: "\f323";
+  margin-right: var(--wp--preset--spacing--20);
+}
+
+.rtl .wp-block-post-terms.taxonomy-post_tag:before {
+  display: none;
 }
 
 /* Remove bottom margin on Category and Tag descriptions */
@@ -449,25 +580,11 @@ ol.is-style-list-plain-centered li {
 }
 
 /*-----------------------------------------------------------------------------
-# Query: Custom
------------------------------------------------------------------------------*/
-.wp-block-query.is-style-no-padding {
-  padding-top: 0;
-  padding-bottom: 0;
-}
-
-.wp-block-query.is-style-no-padding:not(.has-global-padding) {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-/*-----------------------------------------------------------------------------
 # Separator
 -----------------------------------------------------------------------------*/
-/* FIX to center default (narrow) separator when user selects alignfull */
-.wp-block-separator.alignfull {
-  margin-left: auto !important;
-  margin-right: auto !important;
+/* Default separator width */
+.wp-block-separator:not(.is-style-wide, .is-style-dots, .is-style-thick-wide) {
+  width: calc(1.5 * var(--wp--preset--spacing--80));
 }
 
 /* Override our short separator width for wide and dotted separators */
@@ -476,18 +593,20 @@ ol.is-style-list-plain-centered li {
   width: 100% !important;
 }
 
-/*-----------------------------------------------------------------------------
-# Separator: Custom
------------------------------------------------------------------------------*/
-.wp-block-separator.is-style-thick {
-  border-style: solid;
-  border-width: 0 0 3px;
+/* FIX to center default (narrow) separator when user selects alignfull */
+.wp-block-separator.alignfull {
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
-.wp-block-separator.is-style-thick-wide {
-  border-style: solid;
-  border-width: 0 0 3px;
-  width: 100%;
+/* FIX for theme setting colors on separators. Use only the background color */
+.wp-block-separator:not(.is-style-dots) {
+  color: transparent;
+}
+
+/* Default separator color when on colored background */
+.has-background .wp-block-separator:not(.has-background) {
+  color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
 }
 
 /*-----------------------------------------------------------------------------
@@ -521,11 +640,8 @@ ol.is-style-list-plain-centered li {
   overflow-x: scroll;
 }
 
-/* On striped tables, use our neutral color for odd rows */
+/* On striped tables, alternate our neutral and neutral-alt colors */
 .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
-  background-color: var(--wp--preset--color--neutral);
-}
-
-.wp-block-table.is-style-stripes table:not(.has-text-color) tbody tr:nth-child(odd) {
-  color: var(--wp--preset--color--very-dark-gray);
+  background-color: var(--wp--preset--color--light-gray);
+  color: var(--wp--preset--color--almost-black);
 }

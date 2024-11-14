@@ -31,10 +31,6 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 			'flatblocks'	=> array( 'label' => __( 'All Flat Blocks', 'flat-blocks' ) ),
 			'column'   		=> array( 'label' => __( 'Columns', 'flat-blocks' ) ),				
 			'page'    		=> array( 'label' => __( 'Pages', 'flat-blocks' ) ),
-			//'cover'   	=> array( 'label' => __( 'Cover Images', 'flat-blocks' ) ),				
-			//'banner'   	=> array( 'label' => __( 'Banners', 'flat-blocks' ) ),				
-			//'image'   	=> array( 'label' => __( 'Images', 'flat-blocks' ) ),
-			//'testimonial'   => array( 'label' => __( 'Testimonials (Flat Blocks)', 'flat-blocks' ) ),				
 		);
 		
 		/**
@@ -191,14 +187,6 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 			'cover-typewriter' => array( 
 				'title' => __( 'Cover Typewriter', 'flat-blocks' ),
 				'categories' => array ('flatblocks', 'banner' )
-			),
-			'cover-scroll-media-text' => array( 
-				'title' => __( 'Media w/2 Text Blocks and Scroll to Content', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'banner' )
-			),
-			'media-text-2-blocks' => array( 
-				'title' => __( 'Media w/2 Text Blocks', 'flat-blocks' ),
-				'categories' => array ('flatblocks', 'banner', 'featured' )
 			),
 			'image-gallery' => array( 
 				'title' => __( 'Image Gallery', 'flat-blocks' ),

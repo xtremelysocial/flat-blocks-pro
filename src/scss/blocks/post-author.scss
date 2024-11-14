@@ -2,19 +2,6 @@
 # Post Author
 -----------------------------------------------------------------------------*/
 
-/* dashicons-admin-users */
-.wp-block-post-author:before {
-	font-family: dashicons;
-	content: "\f110";
-	margin-right: var(--wp--preset--spacing--20);
-}
-
-.rtl .wp-block-post-author:before {
-	padding-right: 0;
-	margin-right: 0;
-	margin-left: var(--wp--preset--spacing--20);
-}
-
 .wp-block-post-author__name { 
 	margin-bottom: 0; 
 }

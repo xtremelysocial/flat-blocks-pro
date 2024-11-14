@@ -2,32 +2,11 @@
 # List: Custom
 -----------------------------------------------------------------------------*/
 /* Checkmarks */
-ul.is-style-list-checkmarks,
-ol.is-style-list-checkmarks {
-	list-style: none;
+.is-style-list-checkmarks {
+	list-style-type: '✓ ';
 }
-
-ul.is-style-list-checkmarks > li, 
-ol.is-style-list-checkmarks > li {   
-	position: relative;
-}
-
-/* dashicons-saved */
-ul.is-style-list-checkmarks > li:before,
-ol.is-style-list-checkmarks > li:before {
-	font-family: dashicons;
-	content: "\f15e"; 
-    position: absolute;
-    left: calc(-8px - 1em);
-    top: .14285714em;
-    text-align: center;
-    transition:color .1s ease-in
-}
-
-.rtl ul.is-style-list-checkmarks > li:before,
-.rtl ol.is-style-list-checkmarks > li:before {
-	left: 0;
-    right: calc(-8px - 1em);
+.rtl .is-style-list-checkmarks {
+	list-style-type: ' ✓';
 }
 
 /* Plain */

@@ -1,12 +1,14 @@
 /*-----------------------------------------------------------------------------
 # Calendar
 -----------------------------------------------------------------------------*/
-.wp-block-calendar table:where(:not(.has-text-color)) {
-    color: var(--wp--preset--color--contrast);
+
+.wp-block-calendar table:not(.has-background) th {
+    background-color: var(--wp--preset--color--neutral)
 }
 
+.wp-block-calendar table:where(:not(.has-text-color)),
 .wp-block-calendar table th:not(.has-text-color) {
-    color: var(--wp--preset--color--dark);
+  color: var(--wp--preset--color--contrast);
 }
 
 .wp-calendar-nav a {

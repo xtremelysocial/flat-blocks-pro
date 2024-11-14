@@ -11,7 +11,7 @@
  */
 
 /**
- * Enqueue custom block styles on both front-end and back-end.
+ * If WordPress version <6.6, enqueue custom block styles on front-end and back-end
  */
 if ( version_compare( get_bloginfo( 'version' ), '6.6', '<' ) AND 
 	( file_exists( get_stylesheet_directory() . '/assets/css/wp-compat.css' ) ) ) :
@@ -31,11 +31,12 @@ if ( version_compare( get_bloginfo( 'version' ), '6.6', '<' ) AND
 			array('flatblocks-base'),
 			$version_string
 		);
+		wp_style_add_data( 'flatblocks-compat-styles', 'rtl', 'replace' );
 	}	
 endif;
 
 /**
- * Register custom block styles only if WordPress version less than 6.6.
+ * If WordPress version <6.6, register custom block styles
  */
 if ( version_compare( get_bloginfo( 'version' ), '6.6', '<' ) and 
 	( ! function_exists( 'flatblocks_register_compat_block_styles' ) ) ) :
@@ -46,34 +47,31 @@ if ( version_compare( get_bloginfo( 'version' ), '6.6', '<' ) and
 
 		// Define custom styles and what blocks they apply to. 
 		$compat_styles = array(
-			'rounded-corners' => array( esc_html__('Rounded Corners', 'flat-blocks-pro'), 
+			'rounded-corners' => array( esc_html__('Rounded Corners', 'flat-blocks'), 
 				array('group', 'columns', 'column', 'cover', 'media-text', 'comments')
 			),
-			'rounded-border' 	=> array( esc_html__('Border', 'flat-blocks-pro'), 
+			'rounded-border' 	=> array( esc_html__('Border', 'flat-blocks'), 
 				array('group', 'columns', 'column', 'cover', 'media-text', 'comments')
 			),
-			'thick-rounded-border' => array( esc_html__('Thick Border', 'flat-blocks-pro'), 
+			'thick-rounded-border' => array( esc_html__('Thick Border', 'flat-blocks'), 
 				array('group', 'columns', 'column', 'cover', 'media-text', 'comments')
 			),
-// 			'cover-rounded-corners' => array( esc_html__('Rounded Corners', 'flat-blocks-pro'), 
-// 				array('cover' )
-// 			),
-// 			'cover-border' 		=> array( esc_html__('Border', 'flat-blocks-pro'), 
-// 				array('cover' )
-// 			),
-// 			'media-text-border' => array( esc_html__('Border', 'flat-blocks-pro'), 
-// 				array('media-text' )
-// 			),
-			'button-alt' => array( esc_html__('Button Alt', 'flat-blocks-pro'), 
+			'thick' 			=> array( esc_html__('Thick', 'flat-blocks'), 
+				array('separator' )
+			),
+			'thick-wide' 		=> array( esc_html__('Wide Thick', 'flat-blocks'), 
+				array('separator' )
+			),
+			'button-alt' 		=> array( esc_html__('Button Alt', 'flat-blocks'), 
 				array('button' )
 			),
-			'button-outline-alt' => array( esc_html__('Outline Alt', 'flat-blocks-pro'), 
+			'button-outline-alt' => array( esc_html__('Outline Alt', 'flat-blocks'), 
 				array('button' )
 			),
-			'button-alt-2' => array( esc_html__('Button Alt 2', 'flat-blocks-pro'), 
+			'button-alt-2' 		=> array( esc_html__('Button Alt 2', 'flat-blocks'), 
 				array('button' )
 			),
-			'button-outline-alt-2' => array( esc_html__('Outline Alt 2', 'flat-blocks-pro'), 
+			'button-outline-alt-2' => array( esc_html__('Outline Alt 2', 'flat-blocks'), 
 				array('button' )
 			),
 		);

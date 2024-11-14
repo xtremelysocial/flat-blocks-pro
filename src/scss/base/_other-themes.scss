@@ -1,10 +1,17 @@
 /*-----------------------------------------------------------------------------
 # Color compatibility with other themes
+#
+# This is so that user's CONTENT created with CORE WORDPRESS THEMES will look
+# OK before they update it for the Flat Blocks theme. These styles are
+# temporary and could be removed in future versions of Flat Blocks.
 -----------------------------------------------------------------------------*/
 /* 
  * TwentyTwentyFour theme uses base and contrast in numbered 
  * shades. It also uses accent colors in numbered shades instead 
  * of primary, secondary, and tertiary.
+ *
+ * TwentyTwentyFive theme uses the same as TwentyTwentyFour except accent is
+ * accent-1.
  *
  * Note: TwentyTwentyThree theme uses the same base, contrast, 
  * primary, secondary, and tertiary colors as Flat Blocks.
@@ -41,6 +48,7 @@
 }
 
 .has-accent-color,
+.has-accent-1-color,
 .has-accent-2-color,
 .has-accent-3-color,
 .has-accent-4-color,
@@ -49,6 +57,7 @@
 }
 
 .has-accent-background-color,
+.has-accent-1-background-color,
 .has-accent-2-background-color,
 .has-accent-3-background-color,
 .has-accent-4-background-color,
@@ -57,6 +66,7 @@
 }
 
 .has-accent-border-color,
+.has-accent-1-border-color,
 .has-accent-2-border-color,
 .has-accent-3-border-color,
 .has-accent-4-border-color,

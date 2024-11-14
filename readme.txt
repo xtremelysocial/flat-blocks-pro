@@ -147,20 +147,63 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 1.7 =
+November 13, 2024
+
+* Updated "Tested up to" with WordPress v6.7 and "Requires at least" to v6.5.
+* Enhanced CSS to map the new WordPress v6.7 TwentyTwentyFive colors to this theme's colors.
+* Updates for much better support of right-to-left languages! This includes updating the CSS for lists and post meta icons as well as updating the various footer template parts that used to have right-alignment on some of the text items. Please do let us know if you run into any issues and/or would like to translate the theme into other languages. 
+* Turned off the ability to edit the normal and wide content width on individual blocks because it will break the vertical alignment of the theme. You can still edit the site-wide normal and wide widths though. 
+* Updated the Post Meta and Post Title template parts to display the Post Author Name. Also default an icon next to it and add a custom block style to remove it, if desired.
+* Updated the Author page template to use a rounded border on the author information so that it is visually set apart from the author's post below it. 
+* Updated the remaining social media icons over to X instead of Twitter in the sidebar and various template parts and patterns.
+* Updated the default social media links to point to the WordPress page, such as on Facebook and X.
+* Enhance CSS for header navigation with highlight color on link hover and currently active page link to also work with the Page List block. That is what is defaulted on new WordPress sites and in the WordPress.org theme preview.
+* Set Site Logo in the various Header template parts to reduce the tendency to shrink when there is a very long site title or navigation menu (set flex-shrink to 0).
+* Enhanced CSS for the Dashicons used for post icons. Replaced the Dashicon for Lists with Checkmarks with simpler Unicode character. 
+* Moved CSS for Images, Headings, and Columns from flat-blocks.css to block-styles.css. This reduces the size of flat-blocks.css which is the first to load. This is also in preparation for possible future performance enhancements.
+
+= 1.6.9 =
+November 9, 2024
+
+* Fix issue with Theme Styles that set dotted underline on links that was also resetting the color palette to the default one. This required changing --wp--custom--color--link--style to --wp--custom--link--style in theme.json.
+
+= 1.6.8 =
+November 5, 2024
+
+* Remove CSS for Editor background and text color since it now defaults from the settings in theme.json.
+* Fix WordPress bug where Separator preview doesn't display in the Editor.
+* Remove old commented out code in block-patterns.php, block-styles.php, and wp-compatibility.php.
+
+= 1.6.7 =
+October 29, 2024
+
+* Added new gradient backgrounds: Primary to Primary Alt, Secondary to Secondary Alt, Tertiary to Tertiary Alt.
+* Updated social media icons in the various footer template parts to switch over to X instead of Twitter.
+* Updated social media icons in the Social Media block patterns to be white instead of off-white for greater contrast with the background color.
+* On blocks with gradient background, default the text color and inherit the link color from the text color.
+* Enhanced CSS for Separator block to fix a bug in WordPress where user settings for separator color were overriden by the default separator color (in theme.json).
+* For WordPress v6.6 and higher, added our Thick and Wide Thick Separator block styles to the Editor so you can change the separator color if you'd like.
+* On header nav menu with colored background, lighten the link text on hover.
+* Updated striped table and calendar block heading background and text colors to work better with dark site backgrounds.
+* Moved the padding on colored groups and columns to CSS (flat-blocks.css) instead of in "additional CSS" on those blocks in theme.json. This keeps the "additional CSS" clean for users to add their own without messing up the defaults.
+
 = 1.6.6 =
-September 15, 2024
+October 12, 2024
 
-Version Summary: Updated logic for default link colors and link underlines on colored backgrounds. Added new Media & Text with 2 Text Blocks pattern and also a version with a "content start" scroll-to ID. Also added new Colored Footer template part. Removed Auto Dark Mode theme style, since WordPress isn't handling "Additional CSS" on the theme style very well.
+Version Summary: Updated logic for default link colors and link underlines on colored backgrounds and in menus. Added new "Colored Footer" and "Colored Footer w/Links" template parts. The former uses the Secondary colors and the latter uses the Primary colors with light text and links are underlined. That one is great to use when you want a colored footer but the link color doesn't look good with it. Updated dark background theme styles, but removed the Auto Dark Mode as WordPress isn't handling "Additional CSS" very well in theme styles.
 
-* Updated all the color palettes to better handle link colors and whether to underline or not. Set a teal (blue-green) color on Midnight Blue and Dark Midnight Blue backgrounds.
+* Updated all the color palettes to better handle link colors and whether to underline or not. Set a teal (blue-green) color on Midnight Blue and Dark Midnight Blue backgrounds when using those color palettes (the main one still uses green links).
+* Added new custom variables for hover opacity and hover style for links and hover opacity for buttons. --wp--custom--color--link--hover-opacity, --wp--custom--color--link--hover-style, and --wp--custom--color--button--hover-opacity.
 * Changed separator (hr) color to use the highlight color when used on a colored background (group, columns, etc.)
 * Updated the new default link underline logic to set non-underlined links to underline on hover.
-* Added new Media & Text with 2 Text Blocks pattern for a nice colorful banner. By default it uses primary and primary-alt color, but of course you can change it whatever you want.
-* Added No Padding style to Media & Text block to accomodate the above pattern.
-* Set input fields to inherit the body font (lato by default).
+* Set input fields to inherit the body font (lato by default) and in dark themes to use a dark background.
 * Removed font color from Rounded, Rounded Border, and Thick Rounded Border styles so they default to the overall Contrast color (#555555 by default). This is useful in case you want to change the background color to a dark color. Just be sure to set a light font color if you do. 
-* Removed the theme reference in the Header with Tagline template part so it works with child themes.
+* Added No Padding style to the Media & Text block.
+* Removed the theme reference in the "Header with Tagline" template part so it works with child themes.
 * Added padding to colored groups which are aligned wide in the Site Editor to better match the front-end (align full already did this).
+* Removed Fixed Header custom group style and implemented the WordPress position:sticky feature instead. CSS and javascript for backwards-compatibility remains. 
+* Removed default top and bottom padding on Group blocks, but updated CSS for backward-compatibility.
 * Now including WordPress development configuration files: webpack.config.js, package.json, and package-lock.json. If you have node.js and the WordPress development scripts installed, you can run npm start or npm run build in the flat-blocks directory.
 
 = 1.6.5 =

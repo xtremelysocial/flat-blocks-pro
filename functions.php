@@ -42,7 +42,7 @@ if ( ! function_exists( 'flatblocks_support' ) ) :
 		add_image_size( 'cropped-thumbnail', 760, 428, array( 'left', 'top' ) );
 		
 		// Enqueue only the editor styles for now. Additional ones will be loaded
-		// later.
+		// later. WordPress will automatically load the -rtl.css version if needed.
 		add_editor_style( 
 			array(
 				'/assets/css/editor-styles.css'
@@ -106,6 +106,10 @@ if ( ! function_exists( 'flatblocks_front_end_styles' ) ) :
 				array(), 
 				$version_string
 			);
+
+			if ( file_exists( get_template_directory() . '/assets/css/flat-blocks-rtl.css' ) ) {
+				wp_style_add_data( 'flatblocks-base', 'rtl', 'replace' );
+			}
 		}
 				
 		// If not loading separate block styles, then load combined block styles
@@ -118,6 +122,10 @@ if ( ! function_exists( 'flatblocks_front_end_styles' ) ) :
 				array('flatblocks-base'),
 				$version_string
 			);
+
+			if ( file_exists( get_template_directory() . '/assets/css/block-styles-rtl.css' ) ) {
+				wp_style_add_data( 'flatblocks-block-styles', 'rtl', 'replace' );
+			}
 		}
 		
 		// Load theme style
@@ -223,6 +231,8 @@ endif;
 /**
  * Load BLOCK-specific CSS styles on the FRONT-END AND BACK-END if
  * flatblocks_should_load_separate_block_assets.
+ * 
+ * TO-DO: Filter out *-rtl.css
  */
 if ( apply_filters( 'flatblocks_should_load_separate_block_assets', $separate_theme_block_assets ?? false ) ) {
 	/////add_action( 'wp_enqueue_scripts', 'flatblocks_load_block_styles' );
@@ -245,25 +255,30 @@ if ( ! function_exists( 'flatblocks_load_block_styles' ) ) :
 
 			// Remove the path and .css extension from the name
 			$block_name = str_replace( array(get_theme_file_path($block_path), '.css'), '', $block_name );
+			//var_dump($block_name); //TEST
 
-			// Load the block style
-			// Note: WordPress will decide whether to enqueue or inline the style
-			wp_enqueue_block_style( "core/$block_name", array(
-				'handle' => "flatblocks-block-$block_name",
-				'src'    => get_theme_file_uri( $block_path . "$block_name.css" ),
-				'path'   => get_theme_file_path( $block_path . "$block_name.css" ),
-				'deps'	 => array( 'flatblocks-base' ), 
-				'ver'	 => $version_string
-			) );
-			
-		} // foreach		
+			// Skip the RTL versions and instead add them as a replacement
+			if ( strpos( $block_name, '-rtl' ) === false) {
+
+				// Load the block style
+				// Note: WordPress will decide whether to enqueue or inline the style
+				wp_enqueue_block_style( "core/$block_name", array(
+					'handle' => "flatblocks-block-$block_name",
+					'src'    => get_theme_file_uri( $block_path . "$block_name.css" ),
+					'path'   => get_theme_file_path( $block_path . "$block_name.css" ),
+					'deps'	 => array( 'flatblocks-base' ), 
+					'ver'	 => $version_string
+				) );
+				wp_style_add_data( "flatblocks-block-$block_name", 'rtl', 'replace' );
+			}			
+		}
 	}
 endif;
 
 /**
  * Load custom block styles and block patterns (and PRO features if purchased)
- *
  */
+
 // Add custom block styles
 if ( file_exists( get_template_directory() . '/inc/block-styles.php' ) ) {
 	require_once get_template_directory() . '/inc/block-styles.php';
@@ -387,18 +402,16 @@ add_filter( 'excerpt_more', 'flatblocks_excerpt_more' );
 if ( ! function_exists( 'flatblocks_excerpt_more' ) ) :
 	function flatblocks_excerpt_more( $more ) {
 		return '&hellip;';
-		//return str_ireplace( '[…]', '&hellip;', $more);
 	}
 endif;
 
 /**
- * Excerpt in Page or Post Title
- *
- * On pages or single posts only, set excerpt length to 25 words. This is for when it is 
- * used in the Page Title and/or Post Title Template Parts. 
+ * Set post excerpt length
  * 
+ * Note: This doesn't actually work in block themes. It only gets called on the blog, not
+ * on pages or posts.
 */
-add_filter('excerpt_length', 'flatblocks_excerpt_length');
+add_filter('excerpt_length', 'flatblocks_excerpt_length', 20);
 
 if ( ! function_exists( 'flatblocks_excerpt_length' ) ) :
 	function flatblocks_excerpt_length ( $words ) {

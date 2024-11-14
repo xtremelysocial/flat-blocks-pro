@@ -8,6 +8,15 @@
 	margin-right: var(--wp--preset--spacing--20);
 }
 
+.rtl .wp-block-post-terms.taxonomy-category:after {
+	font-family: dashicons;
+	content: "\f318";
+	margin-right: var(--wp--preset--spacing--20);
+}
+.rtl .wp-block-post-terms.taxonomy-category:before {
+	display: none;
+}
+
 /* dashicons-category */
 .wp-block-post-terms.taxonomy-post_tag:before {
 	font-family: dashicons;
@@ -15,10 +24,13 @@
 	margin-right: var(--wp--preset--spacing--20);
 }
 
-.rtl .wp-block-post-terms:before {
-	padding-right: 0;
-	margin-right: 0;
-	margin-left: var(--wp--preset--spacing--20);
+.rtl .wp-block-post-terms.taxonomy-post_tag:after {
+	font-family: dashicons;
+	content: "\f323";
+	margin-right: var(--wp--preset--spacing--20);
+}
+.rtl .wp-block-post-terms.taxonomy-post_tag:before {
+	display: none;
 }
 
 /* Remove bottom margin on Category and Tag descriptions */

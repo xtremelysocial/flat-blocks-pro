@@ -26,33 +26,6 @@ if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 			'fixed-menu' 		=> array( esc_html__('Fixed Menu', 'flat-blocks'), 
 				array('navigation' )
 			),
-			'fixed-header' 		=> array( esc_html__('Fixed Header', 'flat-blocks'), 
-				array('group' )
-			),
-// 			'button-alt' => array( esc_html__('Button Alt', 'flat-blocks'), 
-// 				array('button' )
-// 			),
-// 			'button-outline-alt' => array( esc_html__('Outline Alt', 'flat-blocks'), 
-// 				array('button' )
-// 			),
-// 			'button-alt-2' => array( esc_html__('Button Alt 2', 'flat-blocks'), 
-// 				array('button' )
-// 			),
-// 			'button-outline-alt-2' => array( esc_html__('Outline Alt 2', 'flat-blocks'), 
-// 				array('button' )
-// 			),
-// 			'cover-border' 		=> array( esc_html__('Border', 'flat-blocks'), 
-// 				array('cover' )
-// 			),
-// 			'cover-rounded-corners' => array( esc_html__('Rounded Corners', 'flat-blocks'), 
-// 				array('cover' )
-// 			),
-// 			'media-text-border' => array( esc_html__('Border', 'flat-blocks'), 
-// 				array('media-text' )
-// 			),
-// 			'media-text-thick-border' => array( esc_html__('Thick Border', 'flat-blocks'), 
-// 				array('media-text' )
-// 			),
 			'image-border' 		=> array( esc_html__('Border', 'flat-blocks'), 
 				array('image' )
 			),
@@ -71,33 +44,21 @@ if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 			'image-no-border'	=> array( esc_html__('No Border', 'flat-blocks'), 
 				array('post-featured-image' )
 			),
-			'thick' 			=> array( esc_html__('Thick', 'flat-blocks'), 
-				array('separator' )
-			),
-			'thick-wide' 		=> array( esc_html__('Thick Wide', 'flat-blocks'), 
-				array('separator' )
-			),
 			'bullets' 			=> array( esc_html__('Bullets', 'flat-blocks'), 
 				array('latest-posts', 'latest-comments' )
-			),
-			'no-padding' 		=> array( esc_html__('No Padding', 'flat-blocks'), 
-// 				array('group', 'column', 'media-text' )
-				array('column', 'media-text' )
-			),
-// 			'rounded-border' 	=> array( esc_html__('Border', 'flat-blocks'), 
-// 				array('group', 'columns', 'column', 'comments', 'post-comments' )
-// 			),
-// 			'thick-rounded-border' => array( esc_html__('Thick Border', 'flat-blocks'), 
-// 				array('group', 'columns', 'column', 'comments', 'post-comments' )
-// 			),
-			'no-gap' 			=> array( esc_html__('No Gap', 'flat-blocks'), 
-				array('columns' )
 			),
 			'thick-gap' 		=> array( esc_html__('Thick Gap', 'flat-blocks'), 
 				array('columns' )
 			),
+			'no-gap' 			=> array( esc_html__('No Gap', 'flat-blocks'), 
+				array('columns' )
+			),
+			'no-padding' 		=> array( esc_html__('No Padding', 'flat-blocks'), 
+				array('column' )
+			),
 			'center-on-mobile' 	=> array( esc_html__('Center on Mobile', 'flat-blocks'), 
 				array('columns' )
+				//array('columns', 'group' )
 			),
 			'no-read-more' 		=> array( esc_html__('No Read More', 'flat-blocks'), 
 				array('post-excerpt' )
@@ -112,7 +73,7 @@ if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 				array('list', 'page-list', 'categories' )
 			),
 			'no-icon' 			=> array( esc_html__('No Icon', 'flat-blocks'), 
-				array('post-author', 'post-date', 'post-terms' )
+				array('post-author-name', 'post-date', 'post-terms' )
 			),
 			'alignwide' 		=> array( esc_html__('Align Wide', 'flat-blocks'), 
 				array('paragraph' )

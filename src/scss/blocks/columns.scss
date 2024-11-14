@@ -1,10 +1,15 @@
 /*-----------------------------------------------------------------------------
 # Columns and Column
 -----------------------------------------------------------------------------*/
-/* 
- * Note: Padding for colored backgrounds on columns is now in
- * theme.json as custom block CSS.
- */
+/* Padding for colored backgrounds on columns and individual column */
+
+.wp-block-columns.has-background { 
+	padding: var(--wp--preset--spacing--60);
+}
+
+.wp-block-column.has-background { 
+	padding: var(--wp--preset--spacing--40);
+}
 
 /* 
  * Note: Breakpoint of 781 is what is hard-coded in WordPress 
@@ -12,14 +17,11 @@
  */
 @media only screen and (max-width: 781px) {
 
-	/* 
-	 * If no global padding, then set colored columns like colored
-	 * groups 
-	 */
+	/* If no global padding, then set colored columns like colored groups */
 	.wp-block-columns.has-background,
 	.wp-block-column.has-background {
-		padding-left: calc(2 * var(--wp--style--block-gap)); //var(--wp--preset--spacing--60);
-		padding-right: calc(2 * var(--wp--style--block-gap)); //var(--wp--preset--spacing--60);
+		padding-left: calc(2 * var(--wp--style--block-gap));
+		padding-right: calc(2 * var(--wp--style--block-gap));
 	}
 
 	/* If global padding, then OVERRIDE horizontal padding on mobile */
@@ -35,7 +37,7 @@
 # Columns and Column: Custom
 -----------------------------------------------------------------------------*/
 
-/* Columns no Gap */
+//* Columns no Gap */
 .wp-block-columns.is-style-no-gap,
 .wp-block-columns.is-style-no-gap .wp-block-column:not(.has-background),
 .wp-block-columns.is-style-no-gap.has-background:not(.has-global-padding) {
@@ -46,19 +48,12 @@
 /* Columns thick gap */
 .wp-block-columns.is-style-thick-gap,
 .wp-block-columns.is-style-thick-gap.has-background {
-	gap: calc(2 * var(--wp--style--block-gap)); //var(--wp--preset--spacing--60);
+	gap: calc(2 * var(--wp--style--block-gap));
 }
-
-//* Column rounded borders */
-// .wp-block-column.is-style-rounded-border {
-// 	border: 1px solid var(--wp--custom--color--border);
-// 	border-radius: var(--wp--custom--border--radius);
-// 	padding: var(--wp--preset--spacing--40);
-// }
 
 /* Column no padding */
 .wp-block-column.is-style-no-padding {
-	padding: 0;
+	padding: 0; // !important;
 }
 
 /* Handle when columns collapse on mobile */
@@ -75,7 +70,8 @@
 	.wp-block-columns.is-style-center-on-mobile .wp-block-column:not(.wp-block-navigation__responsive-container-content) > .wp-block-template-part > * {
 		display: flex;
 		justify-content: center;
-		--navigation-layout-justify: center;		
+		--navigation-layout-justify: center;
+		text-align: center;		
 	}
 
 	/* OVERRIDE columns thick gap so vertical spacing matches up */	

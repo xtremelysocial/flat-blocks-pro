@@ -12,7 +12,6 @@
 .wp-block-latest-posts__featured-image img {
 	border-radius: var(--wp--custom--border--radius);
 	border: 1px solid var(--wp--custom--color--border);
-	//padding: var(--wp--custom--border--radius) var(--wp--custom--border--radius) 0 var(--wp--custom--border--radius);
 	padding: var(--wp--preset--spacing--20);
 	box-shadow: var(--wp--custom--shadow--default);
 }
@@ -37,7 +36,7 @@
 /* Override horizontal padding on mobile 
  *
  * Note: Breakpoint of 601 is what is hard-coded in WordPress v6.0+
- * to collapse media & text and latest posts grid 
+ * to collapse the latest posts grid 
  */
 @media only screen and (max-width: 601px) {	
 	.wp-block-latest-posts.is-grid li {

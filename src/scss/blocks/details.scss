@@ -4,7 +4,7 @@
 
 /* Closed Summary will have primary font color */
 .wp-block-details:not(.has-text-color) > summary {
-	color: var(--wp--preset--color--highlight);
+	color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
 	font-weight: var(--wp--custom--typography--font-weight--medium);
 	transition: color var(--wp--custom--animation--duration--medium, 500ms) var(--wp--custom--animation--timing-function, ease-in);
 }
@@ -12,5 +12,5 @@
 /* Highlight Summary on hover and when open */
 .wp-block-details:not(.has-text-color) > summary:hover,
 .wp-block-details:not(.has-text-color)[open] > summary {
-	color: var(--wp--preset--color--highlight-alt);
+	color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight-alt));
 }
