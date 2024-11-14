@@ -5,8 +5,10 @@ const defaultConfig = require( '@wordpress/scripts/config/webpack.config' );
 const WebpackWatchedGlobEntries = require('webpack-watched-glob-entries-plugin');
 const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 const RemoveEmptyScriptsPlugin = require( 'webpack-remove-empty-scripts' );
+// const CopyPlugin = require("copy-webpack-plugin");
 
 // Utilities.
+// const glob = require("glob");
 const path = require( 'path' );
 
 // package.json sets the default source to ./src and output to ./assets/css
@@ -17,11 +19,13 @@ module.exports = {
 	 entry: WebpackWatchedGlobEntries.getEntries(
 		  [ 
 			path.resolve(__dirname, 'src/scss/**/*.scss'),
+			path.resolve(__dirname, 'pro/src/scss/**/*.scss'),
 		  ],
 		  {
 			  ignore: '**/_*.scss'
 		  }
 		),
+		
     	module: {
 			rules: [
 				{
@@ -41,6 +45,7 @@ module.exports = {
 				},
 			],
 		},
+		
 		plugins: [
 			// Include WP's plugin config.
 			...defaultConfig.plugins,
@@ -57,8 +62,9 @@ module.exports = {
 				stage: RemoveEmptyScriptsPlugin.STAGE_AFTER_PROCESS_PLUGINS,
 			} ),
 		],
+
 		// turn off source maps
 		mode: 'development',
-		devtool: false,
+		devtool: false, 
 	},
 };

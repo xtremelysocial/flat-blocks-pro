@@ -1,12 +1,13 @@
 {
-	"name": "flat-blocks",
+	"name": "flat-blocks-pro",
 	"version": "1.0.0",
-	"description": "Flat Blocks Theme",
+	"description": "Flat Blocks PRO Theme",
 	"author": "XtremelySocial",
 	"license": "GPL-2.0-or-later",
 	"keywords": [
 		"Flat",
 		"Blocks",
+		"PRO",
 		"theme"
 	],
 	"homepage": "https://xtremelysocial.com/wordpress/flat-blocks/",

@@ -120,7 +120,7 @@ if ( ! function_exists( 'flatblocks_pro_register_block_styles' ) ) :
 				array('list', 'page-list', 'categories', 'latest-posts', 'latest-comments' ),
 				'style_handle' 	=> 'flatblocks-pro-custom-styles'				
 			),
-			'no-auto-icon' 		=> array( esc_html__('No Icon', 'flat-blocks-pro'), 
+			'no-auto-icon' 		=> array( esc_html__('No Auto Icon', 'flat-blocks-pro'), 
 				array( 'paragraph' ),
 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
 			),

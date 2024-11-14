@@ -3,7 +3,7 @@ Contributors:  XtremelySocial
 
 == Description ==
 
-XtremelySocial is a modern “flat” style theme with a nice color palette, full and wide width support, and support for the new “Full Site Editing” in WordPress. It includes dozens of block patterns and alternate layouts and color schemes.
+Description: XtremelySocial is our custom version of the Flat Blocks PRO theme for use on xtremelysocial.com.
 
 == Quick Start Guide ==
 
@@ -462,7 +462,7 @@ September 11, 2023
 * Simplified CSS in editor-styles.css to remove .is-root-container before each CSS style because that was only needed when also loading these styles on the front-end.
 * Enhanced CSS in the Editor for horizontal spacing (padding) on tablet and mobile.
 * Enhance CSS for groups that are header, footer, or main. Top padding will be removed automatically and left and right padding will depend on whether site horizontal spacing is needed (.has-global-padding).
-* Enhanced our function that loads block patterns to alter the theme name not just for child themes but now also for parent themes created from Flat Blocks. i.e. The theme slug is now overridden whenever the theme slug isn't exactly 'flat-blocks-pro'.
+* Enhanced our function that loads block patterns to alter the theme name not just for child themes but now also for parent themes created from Flat Blocks. i.e. The theme slug is now overridden whenever the theme slug isn't exactly 'flat-blocks'.
 
 = 1.3.8 =
 September 9, 2023
