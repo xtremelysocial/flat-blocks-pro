@@ -128,7 +128,7 @@ if ( ! function_exists( 'flatblocks_front_end_styles' ) ) :
 			}
 		}
 		
-		// Load theme style
+		// Load theme style. This is required for XtremelySocial.com.
 		wp_enqueue_style( 
 			'flatblocks-style', 
 			get_template_directory_uri() . '/style.css', 
