@@ -74,7 +74,8 @@ GNU General Public License for more details.
 --------------------------------------------------------------*/
 
 /* Color lists with checkmarks unless text color has been overriden by user */
-:not(.has-text-color) .is-style-list-checkmarks li:before {
+/*:not(.has-text-color) .is-style-list-checkmarks li:before {*/
+:not(.has-text-color) .is-style-list-checkmarks li::marker {
     color: var(--wp--preset--color--primary);
 }
 
