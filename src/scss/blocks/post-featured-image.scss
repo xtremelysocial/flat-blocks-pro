@@ -7,11 +7,12 @@
 }
 
 /*-----------------------------------------------------------------------------
-# Post Featured Image: Custom
+# Custom: Post Featured Image
 -----------------------------------------------------------------------------*/
 
 /* Featured Image no border */
-.wp-block-post-featured-image.is-style-image-no-border img {
+// .wp-block-post-featured-image.is-style-image-no-border img {
+.is-style-image-no-border img {
 	border: none;
 	border-radius: 0;
 	padding: 0;

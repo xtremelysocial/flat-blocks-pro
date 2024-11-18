@@ -3,30 +3,33 @@
 -----------------------------------------------------------------------------*/
 /**
  * Override core WordPress base Dashicon styles. Don't let it alter height, 
- * width, font-size or line-height. 
- * Note: Need higher specificity here than just .dashicons
+ * width, font-size or line-height. Note: Need higher specificity here than 
+ * just ".dashicons".
  */
 [class*="dashicons-"].dashicons {
-	display: block;
+// 	display: block;
+// 	display: flex;
 	width: auto;
 	height: auto;
 	font-family: inherit;
 	font-size: inherit;
-	font-weight: inherit;
+	font-weight: var(--wp--custom--typography--font-weight--normal);
 	line-height: inherit;
-	text-align: center; //inherit; //unset
+	text-align: center;
 	text-transform: inherit;
 }
 
 [class*="dashicons-"].dashicons:before {
-	display: inline-block;
+// 	display: inline-block;
+	display: flex;
+	flex-direction: row;
 	width: auto;
 	height: auto;
 	font-family: dashicons;
 	font-size: 1em;
-	line-height: 1; //inherit;
+	line-height: 1;
 	font-weight: inherit;
-	vertical-align: text-top; //middle;
+	vertical-align: text-top;
 }
 
 /* Add some right margin on inline dashicons before the text */
@@ -34,7 +37,7 @@
 .dashicons-above:before,
 .dashicons-below:before {
 	font-family: dashicons;
-	margin-right: var(--wp--preset--spacing--20, 4.5px);
+	margin-right: var(--wp--preset--spacing--20);
 }
 
 .dashicons-after {
@@ -43,20 +46,18 @@
 	&:before {
 		font-family: dashicons;
 		order: 2;
-		margin-left: var(--wp--preset--spacing--20, 4.5px);
+		margin-left: var(--wp--preset--spacing--20);
 	}
 }
 
 /* Don't underline dashicons links */
-.dashicons a {
-	text-decoration: none;
-}
+// .dashicons a {
+// 	text-decoration: none;
+// }
 
-/* Nav menus already have transitions so don't add another one on
- * dashicons
- */
+/* Nav menus already have transitions and text align, so inherit them */
 .wp-block-navigation .dashicons {
-	transition: none;
+	transition: inherit;
 	text-align: inherit;
 }
 
@@ -71,4 +72,3 @@
 .is-style-no-icon:before {	
  	display: none;
 }
-

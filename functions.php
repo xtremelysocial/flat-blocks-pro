@@ -70,12 +70,14 @@ endif;
 
 /* 
  * Tell WordPress to load only the block styles for blocks in use on a particular page
+ * Note: This is not implemented yet.
  */
 add_filter( 'should_load_separate_core_block_assets', '__return_false' );
 //add_filter( 'should_load_separate_core_block_assets', '__return_true' );
 
 /* 
  * Tell the theme to load only the block styles for blocks in use 
+ * Note: This is not implemented yet.
  */
 add_filter( 'flatblocks_should_load_separate_block_assets', '__return_false' );
 //add_filter( 'flatblocks_should_load_separate_block_assets', '__return_true' );
@@ -321,21 +323,6 @@ if ( file_exists( get_template_directory() . '/pro/flat-blocks-pro.php' ) ) {
  */
 
 /**
- * #page anchor for scroll-to-top
- * 
- * Add an anchor of #page for our scroll-to-top navigation item. This is needed
- * because there is currently no way to add an id to the wp-site-blocks wrapper and 
- * we need this to be the very first thing on the page.
- */
-add_action( 'wp_body_open', 'flatblocks_body_open' );
-
-if ( ! function_exists( 'flatblocks_body_open' ) ) :
-	function flatblocks_body_open() { 
-		echo '<a id="page"></a><a id="wrapper"></a>'; 
-	}
-endif;
-
-/**
  * Define our custom template part AREAS
  */
 add_filter( 'default_wp_template_part_areas', 'flatblocks_template_part_areas' );
@@ -395,26 +382,41 @@ if ( ! function_exists( 'flatblocks_image_sizes' ) ) :
 endif;
 
 /**
- * Always replace [...] with ... from the excerpt
+ * #page anchor for scroll-to-top
+ * 
+ * Add an anchor of #page for our scroll-to-top navigation item. This is needed
+ * because there is currently no way to add an id to the wp-site-blocks wrapper and 
+ * we need this to be the very first thing on the page.
  */
-add_filter( 'excerpt_more', 'flatblocks_excerpt_more' );
+add_action( 'wp_body_open', 'flatblocks_body_open' );
 
-if ( ! function_exists( 'flatblocks_excerpt_more' ) ) :
-	function flatblocks_excerpt_more( $more ) {
-		return '&hellip;';
+if ( ! function_exists( 'flatblocks_body_open' ) ) :
+	function flatblocks_body_open() { 
+		echo '<a id="page"></a><a id="wrapper"></a>'; 
 	}
 endif;
 
 /**
- * Set post excerpt length
- * 
- * Note: This doesn't actually work in block themes. It only gets called on the blog, not
- * on pages or posts.
-*/
-add_filter('excerpt_length', 'flatblocks_excerpt_length', 20);
+ * Replace [...] with ... from the excerpt
+ * Note: Only needed if altering the excerpt length below
+ */
+// add_filter( 'excerpt_more', 'flatblocks_excerpt_more' );
+// 
+// if ( ! function_exists( 'flatblocks_excerpt_more' ) ) :
+// 	function flatblocks_excerpt_more( $more ) {
+// 		return '&hellip;';
+// 	}
+// endif;
 
-if ( ! function_exists( 'flatblocks_excerpt_length' ) ) :
-	function flatblocks_excerpt_length ( $words ) {
-		return is_singular() ? apply_filters( 'flatblocks_short_excerpt_link', $short_words = 25 ) : $words;
-	}
-endif;
+/**
+ * Set post excerpt length
+ * Note: With block-based themes, this ONLY gets called on blog listings. It is not
+ * called on individual posts or pages. 
+*/
+// add_filter('excerpt_length', 'flatblocks_excerpt_length', 20);
+// 
+// if ( ! function_exists( 'flatblocks_excerpt_length' ) ) :
+// 	function flatblocks_excerpt_length ( $words ) {
+// 		return 30; //# of words
+// 	}
+// endif;

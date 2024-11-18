@@ -157,24 +157,6 @@
 }
 
 /*-----------------------------------------------------------------------------
-# Post Featured Image
------------------------------------------------------------------------------*/
-.wp-block-post-featured-image img {
-  padding: var(--wp--preset--spacing--20);
-  box-shadow: var(--wp--custom--shadow--default);
-}
-
-/*-----------------------------------------------------------------------------
-# Post Featured Image: Custom
------------------------------------------------------------------------------*/
-/* Featured Image no border */
-.wp-block-post-featured-image.is-style-image-no-border img {
-  border: none;
-  border-radius: 0;
-  padding: 0;
-}
-
-/*-----------------------------------------------------------------------------
 # Heading
 -----------------------------------------------------------------------------*/
 /* Match our padding on headings with backgrounds */
@@ -211,30 +193,43 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 /*-----------------------------------------------------------------------------
 # Image: Custom
 -----------------------------------------------------------------------------*/
-/* Image borders */
+/* Image Border */
 .is-style-image-border img {
   border: 1px solid var(--wp--custom--color--border);
   border-radius: var(--wp--custom--border--radius);
   padding: var(--wp--preset--spacing--20);
 }
 
-.wp-block-gallery.has-nested-images figure.is-style-image-border figcaption,
-.wp-block-gallery.is-style-image-border.has-nested-images figure.wp-block-image figcaption {
+.wp-block-gallery.is-style-image-border.has-nested-images figure.wp-block-image:not(.is-style-rounded):not(.is-style-image-round-border):not(.is-style-image-computer-screen):not(.is-style-image-tablet-phone-screen):has(figcaption):before, .wp-block-gallery.is-style-image-border.has-nested-images figure.wp-block-image:not(.is-style-rounded):not(.is-style-image-round-border):not(.is-style-image-computer-screen):not(.is-style-image-tablet-phone-screen) figcaption {
   bottom: calc(1px + var(--wp--preset--spacing--20));
   left: calc(1px + var(--wp--preset--spacing--20));
-  padding: 0 calc(1px + var(--wp--preset--spacing--20)) calc(1px + var(--wp--preset--spacing--20)) 0;
-  width: calc(100% - (2px + 2 * var(--wp--preset--spacing--20)));
-  border-bottom-left-radius: var(--wp--custom--border--radius);
-  border-bottom-right-radius: var(--wp--custom--border--radius);
+  padding: calc(1px + var(--wp--preset--spacing--20)) 0;
+  width: calc(100% - 2 * (1px + var(--wp--preset--spacing--20)));
 }
 
+/* Image Round w/Border */
 .is-style-image-round-border img {
   border: 1px solid var(--wp--custom--color--border);
   border-radius: 9999px; /*50%;*/
   padding: var(--wp--preset--spacing--20);
 }
 
-.wp-block-image.is-style-image-computer-screen img {
+.wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-round-border:before {
+  content: none;
+}
+
+.wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-round-border figcaption {
+  background: none;
+  color: inherit;
+  flex: initial;
+  margin: 0;
+  padding: 10px 10px 9px;
+  position: relative;
+  text-shadow: none;
+}
+
+/* Image Computer Screen */
+.is-style-image-computer-screen img {
   border: var(--wp--preset--spacing--60) solid var(--wp--preset--color--almost-black);
   border-radius: var(--wp--preset--spacing--40);
   border-bottom: 3px solid var(--wp--preset--color--almost-black);
@@ -242,17 +237,21 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
   border-bottom-right-radius: 0;
 }
 
+.wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-computer-screen:has(figcaption):before, .wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-computer-screen figcaption {
+  left: var(--wp--preset--spacing--60);
+  width: calc(100% - 2 * var(--wp--preset--spacing--60));
+}
+
+/* Image Phone/Tablet Screen */
 .is-style-image-tablet-phone-screen img {
   border: var(--wp--preset--spacing--50) solid var(--wp--preset--color--almost-black);
   border-radius: var(--wp--preset--spacing--40);
 }
 
-/* Featured Image no border */
-.is-style-image-no-border,
-.is-style-image-no-border img {
-  border: none;
-  border-radius: 0;
-  padding: 0;
+.wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-tablet-phone-screen:has(figcaption):before, .wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-tablet-phone-screen figcaption {
+  left: var(--wp--preset--spacing--50);
+  padding: var(--wp--preset--spacing--20) 0;
+  width: calc(100% - 2 * var(--wp--preset--spacing--50));
 }
 
 /*-----------------------------------------------------------------------------
@@ -518,15 +517,28 @@ ol.is-style-list-plain-centered li {
 }
 
 /*-----------------------------------------------------------------------------
-# Post Excerpt: Custom
+# Post Excerpt
 -----------------------------------------------------------------------------*/
-/* HIDE read more text and link */
-.wp-block-post-excerpt.is-style-no-readmore > .wp-block-post-excerpt__more-text {
-  display: none;
+.wp-block-post-excerpt > .wp-block-post-excerpt__excerpt {
+  margin-bottom: 0;
 }
 
-.wp-block-post-excerpt.is-style-no-readmore > p {
-  margin-bottom: 0;
+/*-----------------------------------------------------------------------------
+# Post Featured Image
+-----------------------------------------------------------------------------*/
+.wp-block-post-featured-image img {
+  padding: var(--wp--preset--spacing--20);
+  box-shadow: var(--wp--custom--shadow--default);
+}
+
+/*-----------------------------------------------------------------------------
+# Custom: Post Featured Image
+-----------------------------------------------------------------------------*/
+/* Featured Image no border */
+.is-style-image-no-border img {
+  border: none;
+  border-radius: 0;
+  padding: 0;
 }
 
 /*-----------------------------------------------------------------------------

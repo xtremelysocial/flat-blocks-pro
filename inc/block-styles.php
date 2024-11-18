@@ -27,13 +27,10 @@ if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 				array('navigation' )
 			),
 			'image-border' 		=> array( esc_html__('Border', 'flat-blocks'), 
-				array('image' )
+				array('image', 'gallery' )
 			),
 			'image-round-border' => array( esc_html__('Rounded w/Border', 'flat-blocks'), 
 				array('image' )
-			),
-			'image-border' 		=> array( esc_html__('Image Border', 'flat-blocks'), 
-				array( 'gallery' )
 			),
 			'image-computer-screen' => array( esc_html__('Computer Screen', 'flat-blocks'), 
 				array('image' )
@@ -59,9 +56,6 @@ if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 			'center-on-mobile' 	=> array( esc_html__('Center on Mobile', 'flat-blocks'), 
 				array('columns' )
 				//array('columns', 'group' )
-			),
-			'no-read-more' 		=> array( esc_html__('No Read More', 'flat-blocks'), 
-				array('post-excerpt' )
 			),
 			'list-checkmarks' 	=> array( esc_html__('Checkmarks', 'flat-blocks'), 
 				array('list', 'page-list' )
