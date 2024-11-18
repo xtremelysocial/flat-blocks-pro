@@ -1139,6 +1139,7 @@ p.is-style-arrow-icon > a:after {
  * just ".dashicons".
  */
 [class*=dashicons-].dashicons {
+  display: block;
   width: auto;
   height: auto;
   font-family: inherit;
@@ -1150,8 +1151,7 @@ p.is-style-arrow-icon > a:after {
 }
 
 [class*=dashicons-].dashicons:before {
-  display: flex;
-  flex-direction: row;
+  display: inline-block;
   width: auto;
   height: auto;
   font-family: dashicons;
@@ -1179,6 +1179,10 @@ p.is-style-arrow-icon > a:after {
 }
 
 /* Don't underline dashicons links */
+.dashicons a {
+  text-decoration: none;
+}
+
 /* Nav menus already have transitions and text align, so inherit them */
 .wp-block-navigation .dashicons {
   transition: inherit;

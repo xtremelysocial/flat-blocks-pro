@@ -7,8 +7,9 @@
  * just ".dashicons".
  */
 [class*="dashicons-"].dashicons {
-// 	display: block;
+	display: block;
 // 	display: flex;
+// 	justify-content: center;
 	width: auto;
 	height: auto;
 	font-family: inherit;
@@ -20,9 +21,10 @@
 }
 
 [class*="dashicons-"].dashicons:before {
-// 	display: inline-block;
-	display: flex;
-	flex-direction: row;
+	display: inline-block;
+// 	display: flex;
+// 	flex-direction: row;
+// 	display: inline-flex;
 	width: auto;
 	height: auto;
 	font-family: dashicons;
@@ -51,9 +53,9 @@
 }
 
 /* Don't underline dashicons links */
-// .dashicons a {
-// 	text-decoration: none;
-// }
+.dashicons a {
+	text-decoration: none;
+}
 
 /* Nav menus already have transitions and text align, so inherit them */
 .wp-block-navigation .dashicons {
