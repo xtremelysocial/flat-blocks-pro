@@ -8,8 +8,6 @@
  */
 [class*="dashicons-"].dashicons {
 	display: block;
-// 	display: flex;
-// 	justify-content: center;
 	width: auto;
 	height: auto;
 	font-family: inherit;
@@ -22,9 +20,6 @@
 
 [class*="dashicons-"].dashicons:before {
 	display: inline-block;
-// 	display: flex;
-// 	flex-direction: row;
-// 	display: inline-flex;
 	width: auto;
 	height: auto;
 	font-family: dashicons;
@@ -57,15 +52,24 @@
 	text-decoration: none;
 }
 
+/* Style Dashicons in Nav menus */
+.wp-block-navigation-item.dashicons {
+	display: flex;
+	flex-direction: row;	
+}
+
 /* Nav menus already have transitions and text align, so inherit them */
 .wp-block-navigation .dashicons {
 	transition: inherit;
 	text-align: inherit;
 }
 
-/* Don't display the top-level icon on the drop-down menu */
-.wp-block-navigation__submenu-container.dashicons:before {
-	content: none;
+/* Don't display icons on mobile menu because they can't be placed inline */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content {
+	& .wp-block-navigation-item.dashicons:before,
+	& .wp-block-navigation-submenu.dashicons:before {
+		content: none;
+	}
 }
 
 /*-----------------------------------------------------------------------------

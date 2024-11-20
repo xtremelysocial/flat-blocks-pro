@@ -9,6 +9,11 @@
 # Default styles for nav menus that have a background
 -----------------------------------------------------------------------------*/
 
+/* Reduce vertical gap when Nav menu wraps */
+.wp-block-navigation__container {
+	row-gap: var(--wp--preset--spacing--20);
+}
+
 /* When the nav itself has a colored background, set link color and padding */
 .wp-block-navigation.has-background {
 
@@ -35,7 +40,6 @@
 /*-----------------------------------------------------------------------------
 # FIX for padding on level 2+ nav menu and pages list drop-downs
 -----------------------------------------------------------------------------*/
-// .wp-block-navigation-submenu .wp-block-navigation-item.open-on-click .wp-block-navigation-submenu__toggle,
 .wp-block-navigation__submenu-container .wp-block-navigation-item.open-on-click .wp-block-navigation-submenu__toggle {
     padding-left: 1em;
 }
@@ -89,74 +93,50 @@ header .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-n
 header .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
 
 	// Highlight with default hover color on HOVER
-	& > .wp-block-navigation-item:not(.open-on-click):hover > *,
 // 	& > .wp-block-navigation-item:not(.open-on-click):hover:before,
-	& > .wp-block-navigation-item:not(.open-on-click):active > *,
+	& > .wp-block-navigation-item:not(.open-on-click):hover > *,
 // 	& > .wp-block-navigation-item:not(.open-on-click):active:before,
-	& .wp-block-page-list > .wp-block-navigation-item:not(.has-child):hover > *,
+	& > .wp-block-navigation-item:not(.open-on-click):active > *,
 // 	& .wp-block-page-list > .wp-block-navigation-item:not(.has-child):hover:before,
-	& .wp-block-page-list > .wp-block-navigation-item:not(.has-child):active > * { //,
-// 	& .wp-block-page-list > .wp-block-navigation-item:not(.has-child):active:before {
+	& .wp-block-page-list > .wp-block-navigation-item:not(.has-child):hover > *,
+// 	& .wp-block-page-list > .wp-block-navigation-item:not(.has-child):active:before,
+	& .wp-block-page-list > .wp-block-navigation-item:not(.has-child):active > * {
 		color: var(--wp--preset--color--highlight-alt);
 	}
 
 	// Highlight with default link color on CURRENT
-	& > .wp-block-navigation-item > .current-menu-ancestor > *:not(.wp-block-navigation__submenu-container),
 // 	& > .wp-block-navigation-item > .current-menu-ancestor:before,
-	& > .wp-block-navigation-item.current-menu-item > *:not(.wp-block-navigation__submenu-container),
+	& > .wp-block-navigation-item > .current-menu-ancestor > *:not(.wp-block-navigation__submenu-container),
 // 	& > .wp-block-navigation-item.current-menu-item:before,
-	& .wp-block-page-list > .wp-block-navigation-item.current-menu-ancestor > *:not(.wp-block-navigation__submenu-container),
+	& > .wp-block-navigation-item.current-menu-item > *:not(.wp-block-navigation__submenu-container),
 // 	& .wp-block-page-list > .wp-block-navigation-item.current-menu-ancestor:before,
-	& .wp-block-page-list > .wp-block-navigation-item.current-menu-item > *:not(.wp-block-navigation__submenu-container) { //,
+	& .wp-block-page-list > .wp-block-navigation-item.current-menu-ancestor > *:not(.wp-block-navigation__submenu-container),
 // 	& .wp-block-page-list > .wp-block-navigation-item.current-menu-item:before,
+	& .wp-block-page-list > .wp-block-navigation-item.current-menu-item > *:not(.wp-block-navigation__submenu-container) {
 		color: var(--wp--preset--color--highlight);
 		font-weight: var(--wp--custom--typography--font-weight--medium);
 	}
 }
 
 /*-----------------------------------------------------------------------------
-# Handle highlight on SUB MENU items WITHOUT it's own background
+# Handle highlight on SUB MENU items WITHOUT it's own background and PAGES LIST
 -----------------------------------------------------------------------------*/
-header .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container:not(.has-background) .wp-block-navigation-item {
-// header .wp-block-navigation .wp-block-page-list .wp-block-pages-list__item.has-child .wp-block-pages-list__item {
-
-	// Highlight with default hover color on HOVER
-	&:hover > *:not(.wp-block-navigation__submenu-container),
-// 	&:hover:before,
-	&:active > *:not(.wp-block-navigation__submenu-container) { //,
-// 	&:active:before {
-		color: var(--wp--preset--color--highlight-alt);
-	}
-
-	// Highlight with default link color on CURRENT
-	&:has(.current-menu-ancestor) > *:not(.wp-block-navigation__submenu-container),
-// 	&:has(.current-menu-ancestor):before,
-	&.current-menu-item > *:not(.wp-block-navigation__submenu-container) { //,
-// 	&.current-menu-item:before {
-		color: var(--wp--preset--color--highlight);
-		font-weight: var(--wp--custom--typography--font-weight--medium);
-	}
-}
-
-/*-----------------------------------------------------------------------------
-# Handle highlight on SUB MENU items on PAGES LISTS
------------------------------------------------------------------------------*/
-// header .wp-block-navigation:not(.has-background) .wp-block-navigation-submenu:not(.has-background) .wp-block-navigation-item, //{
+header .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-container:not(.has-background) .wp-block-navigation-item,
 header .wp-block-navigation .wp-block-page-list .wp-block-pages-list__item.has-child .wp-block-pages-list__item {
 
 	// Highlight with default hover color on HOVER
-	&:hover > *:not(.wp-block-navigation__submenu-container),
 // 	&:hover:before,
-	&:active > *:not(.wp-block-navigation__submenu-container) { //,
+	&:hover > *:not(.wp-block-navigation__submenu-container),
 // 	&:active:before {
+	&:active > *:not(.wp-block-navigation__submenu-container) { //,
 		color: var(--wp--preset--color--highlight-alt);
 	}
 
 	// Highlight with default link color on CURRENT
-	&:has(.current-menu-ancestor) > *:not(.wp-block-navigation__submenu-container),
 // 	&:has(.current-menu-ancestor):before,
-	&.current-menu-item > *:not(.wp-block-navigation__submenu-container) { //,
-// 	&.current-menu-item:before {
+	&:has(.current-menu-ancestor) > *:not(.wp-block-navigation__submenu-container),
+// 	&.current-menu-item:before,
+	&.current-menu-item > *:not(.wp-block-navigation__submenu-container) {
 		color: var(--wp--preset--color--highlight);
 		font-weight: var(--wp--custom--typography--font-weight--medium);
 	}
@@ -169,18 +149,18 @@ header .wp-block-navigation.has-background .wp-block-navigation__submenu-contain
 header .wp-block-navigation__submenu-container.has-background .wp-block-navigation-item {
 
 	// Highlight with custom hover color on HOVER
-	&:hover > *:not(.wp-block-navigation__submenu-container),
 // 	&:hover:before,
-	&:active > *:not(.wp-block-navigation__submenu-container) { //,
-// 	&:active:before {
+	&:hover > *:not(.wp-block-navigation__submenu-container),
+// 	&:active:before,
+	&:active > *:not(.wp-block-navigation__submenu-container) {
 		color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight-alt));
 	}
 
 	// Highlight with default link color on CURRENT
-	&:has(.current-menu-ancestor) > *:not(.wp-block-navigation__submenu-container),
 // 	&:has(.current-menu-ancestor):before,
-	&.current-menu-item > *:not(.wp-block-navigation__submenu-container) { //,
-// 	&.current-menu-item:before {
+	&:has(.current-menu-ancestor) > *:not(.wp-block-navigation__submenu-container),
+// 	&.current-menu-item:before,
+	&.current-menu-item > *:not(.wp-block-navigation__submenu-container) {
 		color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
 		font-weight: var(--wp--custom--typography--font-weight--medium);
 	}
@@ -225,7 +205,8 @@ header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigat
  * Block Editor in the future.
  */
 .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
-	padding-top: var(--wp--preset--spacing--50); //var(--wp--preset--spacing--60);
+// 	padding-top: var(--wp--preset--spacing--50); //var(--wp--preset--spacing--60);
+	padding-top: calc( var(--wp--preset--spacing--40) + 14.5px);
 	padding-bottom: var(--wp--preset--spacing--60);
 	padding-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
 	padding-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));

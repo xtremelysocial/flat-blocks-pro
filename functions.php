@@ -397,16 +397,13 @@ if ( ! function_exists( 'flatblocks_body_open' ) ) :
 endif;
 
 /**
- * Replace [...] with ... from the excerpt
- * Note: Only needed if altering the excerpt length below
+ * Remove the old Menus and Widgets admin page links
  */
-// add_filter( 'excerpt_more', 'flatblocks_excerpt_more' );
-// 
-// if ( ! function_exists( 'flatblocks_excerpt_more' ) ) :
-// 	function flatblocks_excerpt_more( $more ) {
-// 		return '&hellip;';
-// 	}
-// endif;
+function flatblocks_adjust_admin_menu() {
+	remove_submenu_page( 'themes.php', 'nav-menus.php' );
+	remove_submenu_page( 'themes.php', 'widgets.php' );
+}
+add_action( 'admin_menu', 'flatblocks_adjust_admin_menu', 999 );
 
 /**
  * Set post excerpt length
@@ -418,5 +415,17 @@ endif;
 // if ( ! function_exists( 'flatblocks_excerpt_length' ) ) :
 // 	function flatblocks_excerpt_length ( $words ) {
 // 		return 30; //# of words
+// 	}
+// endif;
+
+/**
+ * Replace [...] with ... from the excerpt
+ * Note: Only needed if altering the excerpt length above
+ */
+// add_filter( 'excerpt_more', 'flatblocks_excerpt_more' );
+// 
+// if ( ! function_exists( 'flatblocks_excerpt_more' ) ) :
+// 	function flatblocks_excerpt_more( $more ) {
+// 		return '&hellip;';
 // 	}
 // endif;

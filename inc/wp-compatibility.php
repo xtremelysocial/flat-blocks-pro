@@ -6,6 +6,8 @@
  * Checks the WordPress version and loads any additional code and/or CSS needed
  * for compatibility. 
  * 
+ * TO-DO: Remove this when theme requires WordPress v6.6+.
+ * 
  * @package flat-blocks
  * @since	1.6.4
  */
@@ -56,6 +58,67 @@ if ( version_compare( get_bloginfo( 'version' ), '6.6', '<' ) and
 			'thick-rounded-border' => array( esc_html__('Thick Border', 'flat-blocks'), 
 				array('group', 'columns', 'column', 'cover', 'media-text', 'comments')
 			),
+			'image-border' 		=> array( esc_html__('Border', 'flat-blocks'), 
+				array('image', 'gallery' )
+			),
+			'image-round-border' => array( esc_html__('Rounded w/Border', 'flat-blocks'), 
+				array('image' )
+			),
+			'image-computer-screen' => array( esc_html__('Computer Screen', 'flat-blocks'), 
+				array('image' )
+			),
+			'image-tablet-phone-screen' => array( esc_html__('Tablet/Phone Screen', 'flat-blocks'), 
+				array('image' )
+			),
+			'image-no-border'	=> array( esc_html__('No Border', 'flat-blocks'), 
+				array('post-featured-image' )
+			),
+			'no-padding' 		=> array( esc_html__('No Padding', 'flat-blocks'), 
+				array('column', 'media-text' )
+			),
+			'center-on-mobile' 	=> array( esc_html__('Center on Mobile', 'flat-blocks'), 
+				array('columns' )
+				//array('columns', 'group' )
+			),
+			'thick-gap' 		=> array( esc_html__('Thick Gap', 'flat-blocks'), 
+				array('columns' )
+			),
+			'no-gap' 			=> array( esc_html__('No Gap', 'flat-blocks'), 
+				array('columns' )
+			),
+			'bullets' 			=> array( esc_html__('Bullets', 'flat-blocks'), 
+				array('latest-posts', 'latest-comments' )
+			),
+			'list-checkmarks' 	=> array( esc_html__('Checkmarks', 'flat-blocks'), 
+				array('list', 'page-list' )
+			),
+			'list-plain' 		=> array( esc_html__('Plain', 'flat-blocks'), 
+				array('list', 'page-list', 'categories' )
+			),
+			'list-plain-centered' => array( esc_html__('Plain Centered', 'flat-blocks'), 
+				array('list', 'page-list', 'categories' )
+			),
+			'alignwide' 		=> array( esc_html__('Align Wide', 'flat-blocks'), 
+				array('paragraph' )
+			),
+			'link-underline' 	=> array( esc_html__('Underline Link', 'flat-blocks'), 
+				array('paragraph', 'list', 'list-item', 'categories', 'latest-posts', 'latest-comments', 'page-list', 'post-title', 'post-terms')
+			),
+			'link-no-underline' => array( esc_html__('No Underline Link', 'flat-blocks'), 
+				array('paragraph', 'list', 'list-item', 'categories', 'latest-posts', 'latest-comments', 'page-list', 'post-title', 'post-terms')
+			),
+			'link-underline-hover' => array( esc_html__('Underline Hover', 'flat-blocks'), 
+				array('paragraph', 'list', 'list-item', 'categories', 'latest-posts', 'latest-comments', 'page-list', 'post-title', 'post-terms', 'site-title')
+			),
+			'arrow-icon' 		=> array( esc_html__('Arrow Icon', 'flat-blocks'), 
+				array('paragraph' )
+			),
+			'arrow-icon-no-text' => array( esc_html__('Arrow No Text', 'flat-blocks'), 
+				array('paragraph' )
+			),
+			'no-icon' 			=> array( esc_html__('No Icon', 'flat-blocks'), 
+				array('post-author-name', 'post-date', 'post-terms' )
+			),
 			'thick' 			=> array( esc_html__('Thick', 'flat-blocks'), 
 				array('separator' )
 			),
@@ -73,6 +136,9 @@ if ( version_compare( get_bloginfo( 'version' ), '6.6', '<' ) and
 			),
 			'button-outline-alt-2' => array( esc_html__('Outline Alt 2', 'flat-blocks'), 
 				array('button' )
+			),
+			'fixed-menu' 		=> array( esc_html__('Fixed Menu', 'flat-blocks'), 
+				array('navigation' )
 			),
 		);
 

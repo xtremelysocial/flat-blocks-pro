@@ -8,10 +8,11 @@ b {
 	font-weight: var(--wp--custom--typography--font-weight--bold, 500);
 }
 
-/* Prevent code from breaking layout */
+/* Prevent code from breaking layout and use smaller font */
 code,
 pre {
 	overflow-x: scroll; //auto;
+	font-size: var(--wp--preset--font-size--small);
 }
 
 /* Set lists with background to match other padding */

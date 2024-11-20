@@ -148,6 +148,11 @@
 			"button": true,
 			"palette": [
 				{
+					"color": "#ffffff40",
+					"name": "RGBA",
+					"slug": "custom-rgba"
+				},
+				{
 					"slug": "primary",
 					"color": "#1abc9c",
 					"name": "Primary (Light Green)"
@@ -1598,8 +1603,8 @@
 	"templateParts": [
 		{
 			"name": "header",
-			"title": "Site Header",
-			"description": "Site-wide header",
+			"title": "Header Template",
+			"description": "Header Template Part",
 			"area": "header"
 		},
 		{
@@ -1736,8 +1741,8 @@
 		},
 		{
 			"name": "query",
-			"title": "Site Query",
-			"description": "Site-wide query",
+			"title": "Query Template",
+			"description": "Query Template Part",
 			"area": "query"
 		},
 		{
@@ -1796,8 +1801,8 @@
 		},
 		{
 			"name": "footer",
-			"title": "Site Footer",
-			"description": "Site-wide footer",
+			"title": "Footer Template",
+			"description": "Footer Template Part",
 			"area": "footer"
 		},
 		{

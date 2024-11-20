@@ -7,10 +7,10 @@
  * 
  * The stylesheet for the Flat Block theme's CUSTOM block styles.
  * 
- * NOTE: These are ONLY needed for WordPress versions < 6.6
- *
  * NOTE: This file is AUTO-GENERATED from the SASS source files 
  * in /src/sass/custom-styles.scss. Do not make updates here.
+ *
+ * TO-DO: Remove this when theme requires WordPress v6.6+.
  * 
  * @package flat-blocks
  * @since 	1.6.4
@@ -105,26 +105,6 @@ is-style-thick-rounded-border.is-layout-flex {
 }
 
 /*-----------------------------------------------------------------------------
-# Block Styles for Columns and Column
-# @since v1.6.9
-------------------------------------------------------------------------------*/
-/* ADD BACK gap on flex columns by default */
-.wp-block-columns-is-layout-flex {
-  gap: var(--wp--style--block-gap);
-}
-
-/* Columns thick gap */
-.wp-block-columns.is-style-thick-gap,
-.wp-block-columns.is-style-thick-gap.has-background {
-  gap: calc(2 * var(--wp--style--block-gap));
-}
-
-/* Column no padding */
-.wp-block-column.is-style-no-padding {
-  padding: 0;
-}
-
-/*-----------------------------------------------------------------------------
 # Heading Colors
 # @since v1.6.5
 ------------------------------------------------------------------------------*/
@@ -137,6 +117,30 @@ is-style-thick-rounded-border.is-layout-flex {
 .has-background h5:not(.has-text-color),
 .has-background h6:not(.has-text-color) {
   color: inherit;
+}
+
+/*-----------------------------------------------------------------------------
+# Block Styles for Images
+# @since v1.8
+------------------------------------------------------------------------------*/
+/* Image Round w/Border */
+.wp-block-image.is-style-image-round-border img {
+  border: 1px solid var(--wp--custom--color--border);
+}
+
+/* Image Computer Screen */
+.wp-block-image.is-style-image-computer-screen img {
+  border: var(--wp--preset--spacing--60) solid var(--wp--preset--color--almost-black);
+  border-radius: var(--wp--preset--spacing--40);
+  border-bottom: var(--wp--preset--spacing--30) solid var(--wp--preset--color--almost-black);
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* Image Phone/Tablet Screen */
+.wp-block-image.is-style-image-tablet-phone-screen img {
+  border: var(--wp--preset--spacing--50) solid var(--wp--preset--color--almost-black);
+  border-radius: var(--wp--preset--spacing--40);
 }
 
 /*-----------------------------------------------------------------------------
