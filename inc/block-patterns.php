@@ -178,13 +178,27 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 				'title' => __( 'Image of Static Map', 'flat-blocks' ),
 				'categories' => array ('flatblocks', 'media' )
 			),
+			'text-social-icons' => array( 
+				'title' => __( 'Social Icons', 'flat-blocks' ),
+				'categories' => array ('flatblocks', 'text' ),
+				'viewportWidth' => 740
+			),
 			'text-social-icons-huge' => array( 
 				'title' => __( 'Social Icons Huge', 'flat-blocks' ),
 				'categories' => array ('flatblocks', 'text' ),
 				'viewportWidth' => 740
 			),
+			'text-social-icons-neutral' => array( 
+				'title' => __( 'Social Icons Huge Monochrome', 'flat-blocks' ),
+				'categories' => array ('flatblocks', 'text' ),
+				'viewportWidth' => 740
+			),
 			'text-title-and-subtitle' => array( 
 				'title' => __( 'Title and Subtitle', 'flat-blocks' ),
+				'categories' => array ('flatblocks', 'text', 'banner' )
+			),
+			'text-site-title-and-tagline' => array( 
+				'title' => __( 'Site title and tagline', 'flat-blocks' ),
 				'categories' => array ('flatblocks', 'text', 'banner' )
 			),
 			'text-title-and-subtitle-with-bg-image' => array( 
@@ -202,6 +216,14 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 			'text-faq' => array( 
 				'title' => __( 'Frequently Asked Questions (FAQ)', 'flat-blocks' ),
 				'categories' => array ('flatblocks', 'text', 'featured' )
+			),
+			'text-site-copyright' => array( 
+				'title' => __( 'Site Copyright', 'flat-blocks' ),
+				'categories' => array ('flatblocks', 'text' )
+			),
+			'text-theme-tagline' => array( 
+				'title' => __( 'Theme Tagline', 'flat-blocks' ),
+				'categories' => array ('flatblocks', 'text' )
 			),
 			'query-loop-1-column' => array( 
 				'title' => __( 'Query Loop 1 Column', 'flat-blocks' ),

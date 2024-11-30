@@ -23,23 +23,27 @@ footer,
  */
 main > *:first-child:not(.wp-block-template-part):not(.wp-block-post-content):not( .wp-block-query),
 .wp-block-query > *:first-child:not(.wp-block-cover),
-.wp-block-post-content > *:first-child:not(.wp-block-cover):not(.wp-block-group):not(.wp-block-columns) {
+// .wp-block-post-content > *:first-child:not(.wp-block-cover):not(.wp-block-group):not(.wp-block-columns) {
+.wp-block-post-content > *:first-child:not(.wp-block-cover) {
  	margin-block-start: var(--wp--style--block-gap);
 }
 
 /* But don't add top or bottom margin to template part within a column. e.g. Footers. */
-.wp-block-column > .wp-block-template-part > *:first-child {
-	margin-block-start: 0;
-	margin-block-end: 0;
+.wp-block-column > .wp-block-template-part > *:first-child,
+.wp-block-column > .wp-block-group > .wp-block-template-part > .wp-block-social-links {
+    margin-block-start: 0;
+    margin-block-end: 0;
+
 }
 
 /* Also add bottom margin on the last block for convenience */
 .wp-block-query > *:last-child,
 .wp-block-post-content > *:last-child {
-	margin-block-end: var(--wp--style--block-gap);
+  margin-block-end: var(--wp--style--block-gap);
 }
 
 /* But don't add bottom margin to a template part within a column. e.g. Footers. */
-.wp-block-column > .wp-block-template-part > *:last-child {
-	margin-block-end: 0;
+.wp-block-column > .wp-block-template-part > *:last-child,
+.wp-block-column > .wp-block-group > .wp-block-template-part > .wp-block-social-links {
+  margin-block-end: 0;
 }

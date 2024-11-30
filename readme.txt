@@ -147,6 +147,31 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 1.9 =
+November 29, 2024
+
+Version Summary: Added new Template Parts for Site Copyright (with current year), Theme Tagline (Flat Blocks theme by Xtremelysocial), and Social Icons so you can edit them. Added 2 new Footer Template Parts and updated the one with Site Motto to use the site name and tagline. Outline style buttons are now colored just like standard buttons (wth Highlight color). Overhauled and expanded Duotones for images. Drop-down Navigation menus are now wider. Preset font-sizes can now be edited directly in the Site Editor (WordPress v6.7+).
+
+* Added new Template Parts for Site Copyright (with current year), Theme Tagline (Flat Blocks theme by XtremelySocial), and Social Icons. Updated all the Footers and Sidebar to use these new Template Parts. That way, you can edit these Template Parts and the updates will be reflected on all the various Footers and Sidebar.
+* Added new Block Patterns to support the new Template Parts: Current Year, Site Copyright (which uses Current Year), Theme Author, Theme Name, and Theme Tagline (which uses Theme Author and Name).
+* Added two new Footer Template Parts: Footer Compact with Nav Menu and Theme Tagline, Footer 3 Blocks with Nav Menu and Site Copyright.
+* Updated the Footer with Motto, Social Icons, and and Site Info to use a new Site Title and Tagline Block Pattern instead of the more generic Title and Text Pattern.
+* Presets for font-size Large and up now use the new WordPress v6.7 format in theme.json which allows you to edit them! They still work with older WordPress versions, but you can't edit them directly in the Editor.
+* Outline style buttons now default to the Highlight color (instead of the text color), but will inherit the text color on certain colored backgrounds, just like standard buttons.
+* Changed up all the Duotone colors (effects that can be added to images) to have lighter colored shadows to look better. Simplified the Duotone names to Primary, Primary Alt, Secondary, Secondary Alt, Tertiary, and Tertiary Alt.
+* Added all of the default WordPress Duotones too, although using this theme's color palette. This includes Purple and Yellow, Blue and Red, Midnight (Black and Blue), Magenta (Red) and Yellow, Purple and Green, Blue and Orange. These are compatible with your duotone selections created with other themes that use the WordPress defaults. It also means you can take them with you to other themes that support the defaults.
+* Adjusted drop-down menu width to default to 240px by adding new new custom variable in theme.json --wp-custom--navigation--width. The WordPress default is 200px. Also added --wp-custom--navigation--wide-width to set the width of the mobile-only nav menu. It is still 360px wide.
+* Set default Separator color back to Neutral Alt, but it is easily changed in the Site Editor now (since Flat Blocks v1.8).
+* More enhancements to default text (contrast) colors on colored backgrounds. Specifically, set white and off-white as default colors on dark backgrounds so that Foreground Alt can now be set to a dark color to allow for alternate lighter color palettes. 
+* Changed quote accent color and separator color to Highlight color. It was Primary color and by default they are the same, but this allows for a light Primary color in theme styles or child themes. 
+* Added Base background color to Header Fixed and Header Logo Fixed.
+* Removed CSS for automatically adding padding to Group blocks that don't have a colored background. This simplifies the Template Parts throughout the theme.
+
+= 1.8.1 =
+November 21, 2024
+
+Adjusted CSS for fixed headers to use Background color for older theme versions before changing over to using Base color.
+
 = 1.8 =
 November 20, 2024
 

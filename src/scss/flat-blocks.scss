@@ -47,15 +47,16 @@
 //@use "blocks/post-terms";
 //@use "blocks/query-pagination";
 //@use "blocks/separator";
+@use "blocks/site-logo";
 //@use "blocks/social-links";
 //@use "blocks/table";
 
 /*-----------------------------------------------------------------------------
 # ADDITIONAL BASE STYLES
 -----------------------------------------------------------------------------*/
-@use "base/utilities";
 @use "base/dashicons";
 @use "base/margins";
 @use "base/padding";
 @use "base/theme-compat";
+@use "base/utilities";
 @use "base/other-themes";

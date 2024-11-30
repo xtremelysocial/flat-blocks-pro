@@ -42,26 +42,3 @@
 	border-radius: var(--wp--custom--border--radius);
 	padding: var(--wp--preset--spacing--40);
 }
-
-/*-----------------------------------------------------------------------------
-# Flat Blocks Group Styles (for theme < v1.6.6)
------------------------------------------------------------------------------*/
-
-/* Default group padding, but remove it on nested groups */
-:where(.wp-block-group:not(main):not(.is-style-no-padding)) {
-	padding-top: var(--wp--style--block-gap);
-	padding-bottom: var(--wp--style--block-gap);
-}
-
-.wp-block-group > .wp-block-group:not(.has-background):not(.is-style-rounded-corners):not(.is-style-rounded-border):not(.is-style-thick-rounded-border) {
-	padding: 0;
-}
-
-/*-----------------------------------------------------------------------------
-# Flat Blocks Excerpt Custom Style (for theme < v1.7.1)
------------------------------------------------------------------------------*/
-
-/* HIDE read more text and link */
-.wp-block-post-excerpt.is-style-no-readmore > .wp-block-post-excerpt__more-text {
-	display: none;
-}

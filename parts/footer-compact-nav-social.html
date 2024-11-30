@@ -5,13 +5,11 @@
 <!-- /wp:column -->
 
 <!-- wp:column {"verticalAlignment":"center"} -->
-<div class="wp-block-column is-vertically-aligned-center"><!-- wp:social-links {"openInNewTab":true,"size":"has-small-icon-size","className":"items-justified-right is-style-default","layout":{"type":"flex","justifyContent":"right"}} -->
-<ul class="wp-block-social-links has-small-icon-size items-justified-right is-style-default"><!-- wp:social-link {"url":"https://facebook.com/WordPress","service":"facebook"} /-->
-
-<!-- wp:social-link {"url":"https://x.com/wordpress/","service":"x"} /-->
-
-<!-- wp:social-link {"url":"https://wordpress.org","service":"wordpress"} /--></ul>
-<!-- /wp:social-links --></div>
+<div class="wp-block-column is-vertically-aligned-center">
+<!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"right"}} -->
+<div id="social-icons" class="wp-block-group">
+<!-- wp:template-part {"slug":"social-icons"} /--></div>
+<!-- /wp:group --></div>
 <!-- /wp:column --></div>
 <!-- /wp:columns --></footer>
 <!-- /wp:group -->

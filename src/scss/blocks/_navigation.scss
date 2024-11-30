@@ -6,7 +6,33 @@
 @use "../utils/mixin-prefixes";
 
 /*-----------------------------------------------------------------------------
-# Default styles for nav menus that have a background
+# Style Nav Menus
+-----------------------------------------------------------------------------*/
+.wp-block-navigation .has-child .wp-block-navigation-submenu__toggle[aria-expanded=true] ~ .wp-block-navigation__submenu-container, 
+.wp-block-navigation .has-child:not(.open-on-click):hover > .wp-block-navigation__submenu-container, 
+.wp-block-navigation .has-child:not(.open-on-click):not(.open-on-hover-click):focus-within > .wp-block-navigation__submenu-container {
+	min-width: var(--wp--custom--navigation--width, 260px);
+}
+
+///* Increase size of drop-down menu icons */
+// .wp-block-navigation .wp-block-navigation__submenu-icon {
+//     height: 1em;
+//     width: 1em;
+// }
+
+/* FIX for padding on level 2+ nav menu and pages list drop-downs */
+.wp-block-navigation__submenu-container .wp-block-navigation-item.open-on-click .wp-block-navigation-submenu__toggle {
+    padding-left: 1em;
+}
+
+/* Default nav link opacity on hover */
+.wp-block-navigation .wp-block-navigation-item:hover >  .wp-block-navigation-item__content.wp-block-navigation-item__content, 
+.wp-block-navigation .wp-block-navigation-item:active > .wp-block-navigation-item__content.wp-block-navigation-item__content {
+	opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
+}
+
+/*-----------------------------------------------------------------------------
+# Style Nav Menus with a background
 -----------------------------------------------------------------------------*/
 
 /* Reduce vertical gap when Nav menu wraps */
@@ -38,21 +64,6 @@
 }
 
 /*-----------------------------------------------------------------------------
-# FIX for padding on level 2+ nav menu and pages list drop-downs
------------------------------------------------------------------------------*/
-.wp-block-navigation__submenu-container .wp-block-navigation-item.open-on-click .wp-block-navigation-submenu__toggle {
-    padding-left: 1em;
-}
-
-/*-----------------------------------------------------------------------------
-# Default nav link opacity on hover
------------------------------------------------------------------------------*/
-.wp-block-navigation .wp-block-navigation-item:hover >  .wp-block-navigation-item__content.wp-block-navigation-item__content, 
-.wp-block-navigation .wp-block-navigation-item:active > .wp-block-navigation-item__content.wp-block-navigation-item__content {
-	opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
-}
-
-/*-----------------------------------------------------------------------------
 # On HEADER MENU, highlight on HOVER and on CURRENT active menu item
 -----------------------------------------------------------------------------*/
 
@@ -62,26 +73,26 @@
 header .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container {
 
 	// Highlight with custom hover color on HOVER
-	& > .wp-block-navigation-item:hover > *:not(.wp-block-navigation__submenu-container),
 // 	& > .wp-block-navigation-item:hover:before,
-	& > .wp-block-navigation-item:active > *:not(.wp-block-navigation__submenu-container),
 // 	& > .wp-block-navigation-item:active:before, 
-	& .wp-block-page-list > .wp-block-navigation-item:hover > *:not(.wp-block-navigation__submenu-container),
+	& > .wp-block-navigation-item:hover > *:not(.wp-block-navigation__submenu-container),
+	& > .wp-block-navigation-item:active > *:not(.wp-block-navigation__submenu-container),
 // 	& .wp-block-page-list > .wp-block-navigation-item:hover:before,
-	& .wp-block-page-list > .wp-block-navigation-item:active > *:not(.wp-block-navigation__submenu-container) { //,
-// 	& .wp-block-page-list > .wp-block-navigation-item:active:before {
+// 	& .wp-block-page-list > .wp-block-navigation-item:active:before,
+	& .wp-block-page-list > .wp-block-navigation-item:hover > *:not(.wp-block-navigation__submenu-container),
+	& .wp-block-page-list > .wp-block-navigation-item:active > *:not(.wp-block-navigation__submenu-container) {
 		color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
 	}
 
 	// Highlight with custom link color and bold on CURRENT
-	& > .wp-block-navigation-item:has(.current-menu-ancestor) > *:not(.wp-block-navigation__submenu-container),
 // 	& > .wp-block-navigation-item:has(.current-menu-ancestor):before,
-	& > .wp-block-navigation-item.current-menu-item > a[aria-current='page'],
+	& > .wp-block-navigation-item:has(.current-menu-ancestor) > *:not(.wp-block-navigation__submenu-container),
 // 	& > .wp-block-navigation-item.current-menu-item:before,
-	& .wp-block-page-list > .wp-block-navigation-item.current-menu-ancestor > *:not(.wp-block-navigation__submenu-container),
+	& > .wp-block-navigation-item.current-menu-item > a[aria-current='page'],
 // 	& .wp-block-page-list > .wp-block-navigation-item.current-menu-ancestor:before,
-	& .wp-block-page-list > .wp-block-navigation-item.current-menu-item > a[aria-current='page'] { //,
-// 	& .wp-block-page-list > .wp-block-navigation-item.current-menu-item:before {
+	& .wp-block-page-list > .wp-block-navigation-item.current-menu-ancestor > *:not(.wp-block-navigation__submenu-container),
+// 	& .wp-block-page-list > .wp-block-navigation-item.current-menu-item:before,
+	& .wp-block-page-list > .wp-block-navigation-item.current-menu-item > a[aria-current='page'] {
 		color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
 		font-weight: var(--wp--custom--typography--font-weight--medium);
 	}
@@ -94,12 +105,12 @@ header .wp-block-navigation:not(.has-background) .wp-block-navigation__responsiv
 
 	// Highlight with default hover color on HOVER
 // 	& > .wp-block-navigation-item:not(.open-on-click):hover:before,
-	& > .wp-block-navigation-item:not(.open-on-click):hover > *,
 // 	& > .wp-block-navigation-item:not(.open-on-click):active:before,
+	& > .wp-block-navigation-item:not(.open-on-click):hover > *,
 	& > .wp-block-navigation-item:not(.open-on-click):active > *,
 // 	& .wp-block-page-list > .wp-block-navigation-item:not(.has-child):hover:before,
-	& .wp-block-page-list > .wp-block-navigation-item:not(.has-child):hover > *,
 // 	& .wp-block-page-list > .wp-block-navigation-item:not(.has-child):active:before,
+	& .wp-block-page-list > .wp-block-navigation-item:not(.has-child):hover > *,
 	& .wp-block-page-list > .wp-block-navigation-item:not(.has-child):active > * {
 		color: var(--wp--preset--color--highlight-alt);
 	}
@@ -126,8 +137,8 @@ header .wp-block-navigation .wp-block-page-list .wp-block-pages-list__item.has-c
 
 	// Highlight with default hover color on HOVER
 // 	&:hover:before,
-	&:hover > *:not(.wp-block-navigation__submenu-container),
 // 	&:active:before {
+	&:hover > *:not(.wp-block-navigation__submenu-container),
 	&:active > *:not(.wp-block-navigation__submenu-container) { //,
 		color: var(--wp--preset--color--highlight-alt);
 	}
@@ -150,8 +161,8 @@ header .wp-block-navigation__submenu-container.has-background .wp-block-navigati
 
 	// Highlight with custom hover color on HOVER
 // 	&:hover:before,
-	&:hover > *:not(.wp-block-navigation__submenu-container),
 // 	&:active:before,
+	&:hover > *:not(.wp-block-navigation__submenu-container),
 	&:active > *:not(.wp-block-navigation__submenu-container) {
 		color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight-alt));
 	}
@@ -169,10 +180,12 @@ header .wp-block-navigation__submenu-container.has-background .wp-block-navigati
 /*-----------------------------------------------------------------------------
 # On MOBILE nav, don't hover on non-clickable links
 -----------------------------------------------------------------------------*/
-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.open-on-click:hover > .wp-block-navigation-item__content,
-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.open-on-click:active > .wp-block-navigation-item__content {
-	cursor: unset;
-	opacity: 1;
+header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item {
+	&.open-on-click:hover > .wp-block-navigation-item__content,
+	&.open-on-click:active > .wp-block-navigation-item__content {
+		cursor: unset;
+		opacity: 1;
+	}
 }
 
 /*-----------------------------------------------------------------------------
@@ -205,7 +218,6 @@ header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigat
  * Block Editor in the future.
  */
 .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
-// 	padding-top: var(--wp--preset--spacing--50); //var(--wp--preset--spacing--60);
 	padding-top: calc( var(--wp--preset--spacing--40) + 14.5px);
 	padding-bottom: var(--wp--preset--spacing--60);
 	padding-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
@@ -266,7 +278,7 @@ nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-con
 }
 
 nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container {
-	width: 360px;
+	width: var(--wp--custom--navigation--wide-width, 360px);
 }
 
 /* If right justified, position the fixed menu and its drop-down to the right */

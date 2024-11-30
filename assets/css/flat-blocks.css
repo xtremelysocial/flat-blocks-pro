@@ -20,8 +20,8 @@
 # Normalize
 -----------------------------------------------------------------------------*/
 /* 
- * Default to contain borders and padding within blocks and prevent iOS from adjusting
- * text sizes after orientation change. 
+ * Default to contain borders and padding within blocks and prevent iOS from 
+ * adjusting text sizes after orientation change. 
  */
 html {
   box-sizing: border-box;
@@ -34,9 +34,9 @@ html {
 }
 
 /* 
- * Default color scheme to light, but allow theme styles to set it to "light dark".
- * That will turn input fields black and also allows the use of the CSS light-dark
- * function. e.g. light-dark(white, black).
+ * Default color scheme to light, but allow theme styles to set it to 
+ * "light dark". That will turn input fields black and also allows the use of the 
+ * CSS light-dark function. e.g. light-dark(white, black).
  */
 :root {
   color-scheme: var(--wp--custom--color--scheme, light);
@@ -74,10 +74,10 @@ pre {
   font-size: var(--wp--preset--font-size--small);
 }
 
-/* Set lists with background to match other padding */
+/* Style lists with backgrounds */
 ol.has-background:not(.wp-block-navigation-submenu):not(.wp-block-navigation__container),
 ul.has-background:not(.wp-block-navigation-submenu):not(.wp-block-navigation__container) {
-  padding: var(--wp--preset--spacing--40, 18px);
+  padding: var(--wp--preset--spacing--40);
   list-style-position: inside;
 }
 
@@ -172,8 +172,8 @@ input[type=file]::file-selector-button:hover {
 # Custom: Link Underlines
 -----------------------------------------------------------------------------*/
 /* Underline links */
-.is-style-link-underline :not(.is-style-link-no-underline) > a:not(.wp-block-navigation-item__content) {
-  text-decoration: underline !important;
+.is-style-link-underline a:not(.wp-block-navigation-item__content) {
+  text-decoration: underline;
 }
 
 .is-style-link-underline a:hover,
@@ -183,7 +183,7 @@ input[type=file]::file-selector-button:hover {
 
 /* No Underline links */
 .is-style-link-no-underline a {
-  text-decoration: none !important;
+  text-decoration: none;
 }
 
 /* Underline links on hover */
@@ -319,17 +319,17 @@ body .is-layout-constrained > .alignright {
  * Override highlight (link, button) color in theme.json with:
  *		--wp--custom--color--highlight--{color}
  */
-.has-contrast-background-color :where(a:not(.wp-element-button):hover), .has-dark-background-color :where(a:not(.wp-element-button):hover), .has-dark-alt-background-color :where(a:not(.wp-element-button):hover), .has-almost-black-background-color :where(a:not(.wp-element-button):hover), .has-not-quite-black-background-color :where(a:not(.wp-element-button):hover), .has-black-background-color :where(a:not(.wp-element-button):hover), .has-base-background-color :where(a:not(.wp-element-button):hover), .has-neutral-background-color :where(a:not(.wp-element-button):hover), .has-neutral-alt-background-color :where(a:not(.wp-element-button):hover), .has-foreground-alt-background-color :where(a:not(.wp-element-button):hover), .has-white-background-color :where(a:not(.wp-element-button):hover), .has-off-white-background-color :where(a:not(.wp-element-button):hover), .has-very-light-gray-background-color :where(a:not(.wp-element-button):hover), .has-light-gray-background-color :where(a:not(.wp-element-button):hover), .has-gray-background-color :where(a:not(.wp-element-button):hover) {
+.has-primary-background-color a, .has-secondary-background-color a, .has-tertiary-background-color a, .has-primary-alt-background-color a, .has-secondary-alt-background-color a, .has-tertiary-alt-background-color a, .has-highlight-background-color a, .has-highlight-alt-background-color a, .has-dark-gray-background-color a, .has-very-dark-gray-background-color a, .has-green-background-color a, .has-dark-bright-green-background-color a, .has-midnight-blue-background-color a, .has-dark-midnight-blue-background-color a, .has-orange-background-color a, .has-dark-orange-background-color a, .has-blue-background-color a, .has-dark-blue-background-color a, .has-purple-background-color a, .has-dark-purple-background-color a, .has-red-background-color a, .has-dark-red-background-color a, .has-light-green-background-color a, .has-bright-green-background-color a, .has-light-orange-background-color a, .has-light-blue-background-color a, .has-light-red-background-color a, .has-light-purple-background-color a, .has-light-yellow-background-color a, .has-yellow-background-color a, .has-primary-background-color .is-style-outline > .wp-element-button, .has-secondary-background-color .is-style-outline > .wp-element-button, .has-tertiary-background-color .is-style-outline > .wp-element-button, .has-primary-alt-background-color .is-style-outline > .wp-element-button, .has-secondary-alt-background-color .is-style-outline > .wp-element-button, .has-tertiary-alt-background-color .is-style-outline > .wp-element-button, .has-highlight-background-color .is-style-outline > .wp-element-button, .has-highlight-alt-background-color .is-style-outline > .wp-element-button, .has-dark-gray-background-color .is-style-outline > .wp-element-button, .has-very-dark-gray-background-color .is-style-outline > .wp-element-button, .has-green-background-color .is-style-outline > .wp-element-button, .has-dark-bright-green-background-color .is-style-outline > .wp-element-button, .has-midnight-blue-background-color .is-style-outline > .wp-element-button, .has-dark-midnight-blue-background-color .is-style-outline > .wp-element-button, .has-orange-background-color .is-style-outline > .wp-element-button, .has-dark-orange-background-color .is-style-outline > .wp-element-button, .has-blue-background-color .is-style-outline > .wp-element-button, .has-dark-blue-background-color .is-style-outline > .wp-element-button, .has-purple-background-color .is-style-outline > .wp-element-button, .has-dark-purple-background-color .is-style-outline > .wp-element-button, .has-red-background-color .is-style-outline > .wp-element-button, .has-dark-red-background-color .is-style-outline > .wp-element-button, .has-light-green-background-color .is-style-outline > .wp-element-button, .has-bright-green-background-color .is-style-outline > .wp-element-button, .has-light-orange-background-color .is-style-outline > .wp-element-button, .has-light-blue-background-color .is-style-outline > .wp-element-button, .has-light-red-background-color .is-style-outline > .wp-element-button, .has-light-purple-background-color .is-style-outline > .wp-element-button, .has-light-yellow-background-color .is-style-outline > .wp-element-button, .has-yellow-background-color .is-style-outline > .wp-element-button, .has-primary-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-secondary-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-tertiary-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-primary-alt-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-secondary-alt-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-tertiary-alt-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-highlight-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-highlight-alt-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-dark-gray-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-very-dark-gray-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-green-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-dark-bright-green-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-midnight-blue-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-dark-midnight-blue-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-orange-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-dark-orange-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-blue-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-dark-blue-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-purple-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-dark-purple-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-red-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-dark-red-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-light-green-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-bright-green-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-light-orange-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-light-blue-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-light-red-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-light-purple-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-light-yellow-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-yellow-background-color [class*=is-style-button-outline-] > .wp-element-button {
+  color: var(--wp--custom--color--highlight);
+}
+
+.has-dark-background-color :where(a:not(.wp-element-button):hover), .has-dark-alt-background-color :where(a:not(.wp-element-button):hover), .has-almost-black-background-color :where(a:not(.wp-element-button):hover), .has-not-quite-black-background-color :where(a:not(.wp-element-button):hover), .has-black-background-color :where(a:not(.wp-element-button):hover), .has-contrast-background-color :where(a:not(.wp-element-button):hover), .has-neutral-background-color :where(a:not(.wp-element-button):hover), .has-neutral-alt-background-color :where(a:not(.wp-element-button):hover), .has-foreground-alt-background-color :where(a:not(.wp-element-button):hover), .has-white-background-color :where(a:not(.wp-element-button):hover), .has-off-white-background-color :where(a:not(.wp-element-button):hover), .has-very-light-gray-background-color :where(a:not(.wp-element-button):hover), .has-light-gray-background-color :where(a:not(.wp-element-button):hover), .has-gray-background-color :where(a:not(.wp-element-button):hover), .has-base-background-color :where(a:not(.wp-element-button):hover) {
   opacity: 1;
 }
 
 /* 
  * Black and near-black colors, default light text but leave link color alone
  */
-.has-contrast-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--contrast, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
-}
-
 .has-dark-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
 }
@@ -350,237 +350,157 @@ body .is-layout-constrained > .alignright {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--black, var(--wp--custom--color--contrast--default-black, var(--wp--preset--color--foreground-alt)));
 }
 
+.has-contrast-background-color {
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--contrast, var(--wp--preset--color--base));
+}
+
 /* 
- * Primary, Secondary, and Tertiary colors, default light text and links
+ * Accent colors (Primary, Secondary, etc.), default light text and links
  */
 .has-primary-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--primary, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--primary, inherit);
-}
-.has-primary-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-secondary-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--secondary, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--secondary, inherit);
 }
-.has-secondary-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
-}
 
 .has-tertiary-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--tertiary, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--tertiary, inherit);
-}
-.has-tertiary-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-primary-alt-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--primary-alt, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--primary-alt, inherit);
 }
-.has-primary-alt-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
-}
 
 .has-secondary-alt-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--secondary-alt, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--secondary-alt, inherit);
-}
-.has-secondary-alt-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-tertiary-alt-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--tertiary-alt, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--tertiary-alt, inherit);
 }
-.has-tertiary-alt-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
-}
 
 .has-highlight-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--highlight, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--highlight, inherit);
-}
-.has-highlight-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-highlight-alt-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--highlight-alt, var(--wp--preset--color--foreground-alt));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--highlight-alt, inherit);
 }
-.has-highlight-alt-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
-}
 
 /* 
  * Dark colors, default light text and links
  */
 .has-dark-gray-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-gray, var(--wp--preset--color--foreground-alt));
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-gray, var(--wp--preset--color--off-white));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-gray, inherit);
-}
-.has-dark-gray-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-very-dark-gray-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--very-dark-gray, var(--wp--preset--color--foreground-alt));
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--very-dark-gray, var(--wp--preset--color--off-white));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--very-dark-gray, inherit);
-}
-.has-very-dark-gray-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-green-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--green, var(--wp--preset--color--foreground-alt));
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--green, var(--wp--preset--color--off-white));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--green, inherit);
-}
-.has-green-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-dark-bright-green-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-bright-green, var(--wp--preset--color--foreground-alt));
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-bright-green, var(--wp--preset--color--off-white));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-bright-green, inherit);
-}
-.has-dark-bright-green-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-midnight-blue-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--midnight-blue, var(--wp--preset--color--foreground-alt));
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--midnight-blue, var(--wp--preset--color--off-white));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--midnight-blue, inherit);
-}
-.has-midnight-blue-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-dark-midnight-blue-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-midnight-blue, var(--wp--preset--color--foreground-alt));
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-midnight-blue, var(--wp--preset--color--off-white));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-midnight-blue, inherit);
-}
-.has-dark-midnight-blue-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-orange-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--orange, var(--wp--preset--color--foreground-alt));
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--orange, var(--wp--preset--color--off-white));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--orange, inherit);
-}
-.has-orange-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-dark-orange-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-orange, var(--wp--preset--color--foreground-alt));
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-orange, var(--wp--preset--color--off-white));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-orange, inherit);
-}
-.has-dark-orange-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-blue-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--blue, var(--wp--preset--color--foreground-alt));
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--blue, var(--wp--preset--color--off-white));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--blue, inherit);
-}
-.has-blue-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-dark-blue-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-blue, var(--wp--preset--color--foreground-alt));
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-blue, var(--wp--preset--color--off-white));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-blue, inherit);
-}
-.has-dark-blue-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-purple-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--purple, var(--wp--preset--color--foreground-alt));
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--purple, var(--wp--preset--color--off-white));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--purple, inherit);
-}
-.has-purple-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-dark-purple-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-purple, var(--wp--preset--color--foreground-alt));
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-purple, var(--wp--preset--color--off-white));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-purple, inherit);
-}
-.has-dark-purple-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
-}
-
-.has-light-red-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--light-red, var(--wp--preset--color--foreground-alt));
-  --wp--custom--color--highlight: var(--wp--custom--color--highlight--light-red, inherit);
-}
-.has-light-red-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-red-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--red, var(--wp--preset--color--foreground-alt));
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--red, var(--wp--preset--color--off-white));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--red, inherit);
-}
-.has-red-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-dark-red-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-red, var(--wp--preset--color--foreground-alt));
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-red, var(--wp--preset--color--off-white));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-red, inherit);
-}
-.has-dark-red-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 /* 
  * Medium colors, default light text and links
  */
 .has-light-green-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--light-green, var(--wp--preset--color--foreground-alt));
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--light-green, var(--wp--preset--color--white));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--light-green, inherit);
-}
-.has-light-green-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-bright-green-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--bright-green, var(--wp--preset--color--foreground-alt));
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--bright-green, var(--wp--preset--color--white));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--bright-green, inherit);
-}
-.has-bright-green-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-light-orange-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--light-orange, var(--wp--preset--color--foreground-alt));
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--light-orange, var(--wp--preset--color--white));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--light-orange, inherit);
-}
-.has-light-orange-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 .has-light-blue-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--light-blue, var(--wp--preset--color--foreground-alt));
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--light-blue, var(--wp--preset--color--white));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--light-blue, inherit);
 }
-.has-light-blue-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
+
+.has-light-red-background-color {
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--light-red, var(--wp--preset--color--white));
+  --wp--custom--color--highlight: var(--wp--custom--color--highlight--light-red, inherit);
 }
 
 .has-light-purple-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--light-purple, var(--wp--preset--color--foreground-alt));
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--light-purple, var(--wp--preset--color--white));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--light-purple, inherit);
-}
-.has-light-purple-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
 }
 
 /* 
@@ -590,25 +510,15 @@ body .is-layout-constrained > .alignright {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--light-yellow, var(--wp--preset--color--almost-black));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--light-yellow, inherit);
 }
-.has-light-yellow-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
-}
 
 .has-yellow-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--yellow, var(--wp--preset--color--almost-black));
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--yellow, inherit);
 }
-.has-yellow-background-color :where(a:not(.wp-element-button)) {
-  color: var(--wp--custom--color--highlight);
-}
 
 /* 
  * White and near-white colors, default dark text but leave the link color alone
  */
-.has-base-background-color {
-  --wp--custom--color--contrast: var(--wp--custom--color--contrast--base, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
-}
-
 .has-neutral-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--neutral, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
 }
@@ -641,6 +551,10 @@ body .is-layout-constrained > .alignright {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--gray, var(--wp--custom--color--contrast--default-white, var(--wp--preset--color--contrast)));
 }
 
+.has-base-background-color {
+  --wp--custom--color--contrast: var(--wp--custom--color--contrast--base, var(--wp--preset--color--contrast));
+}
+
 /* Set the contrast color on colored backgrounds and buttons */
 :root :where(.has-background),
 :root :where(.wp-block-background.has-background .wp-element-button, .wp-block-background.has-background .wp-block-button__link) {
@@ -664,8 +578,8 @@ body .is-layout-constrained > .alignright {
   color: var(--wp--custom--color--contrast--tertiary, var(--wp--preset--color--foreground-alt));
 }
 
-/* Inherit the link color on gradient backgrounds */
-:root :where([class*=-gradient-background]) a:where(:not(.wp-element-button)) {
+/* Inherit the link and outline button color on gradient backgrounds */
+:root :where([class*=-gradient-background]) a:where(:not(.wp-element-button)), :root :where([class*=-gradient-background]) .is-style-outline > .wp-element-button, :root :where([class*=-gradient-background]) [class*=is-style-button-outline-] > .wp-element-button {
   color: inherit;
 }
 
@@ -715,7 +629,7 @@ header > .wp-block-cover {
 }
 
 /* 
- * If global padding, then OVERRIDE horizontal padding on mobile
+ * If global padding, then OVERRIDE horizontal padding on tablet and mobile
  *
  * Note: Breakpoint of 781 is what is hard-coded in WordPress for tablet
  */
@@ -738,6 +652,12 @@ header > .wp-block-cover {
 /*-----------------------------------------------------------------------------
 # Group: Custom
 -----------------------------------------------------------------------------*/
+/* Group borders */
+.wp-block-group.is-style-rounded-border.is-layout-flex,
+.wp-block-group.is-style-thick-rounded-border.is-layout-flex {
+  overflow: hidden;
+}
+
 /* Group no padding */
 .wp-block-group.is-style-no-padding {
   padding-top: 0;
@@ -749,20 +669,13 @@ header > .wp-block-cover {
   padding-right: 0;
 }
 
-/* Group fixed header (position: sticky) */
-header.wp-block-group.is-position-sticky,
-.wp-block-group.is-style-fixed-header,
-.wp-block-group.has-background.is-style-fixed-header {
-  background-color: var(--wp--preset--color--base);
-  box-shadow: var(--wp--custom--shadow--default);
-}
-
 /* Position the fixed header using sticky so we don't have to have top site margin */
 .wp-site-blocks > header.wp-block-template-part:has(header.is-position-sticky),
 .wp-site-blocks > header:has(.is-style-fixed-header) {
   position: sticky;
   top: 0;
-  background-color: var(--wp--preset--color--base);
+  background-color: var(--wp--preset--color--base, var(--wp--preset--color--background));
+  box-shadow: var(--wp--custom--shadow--default);
   z-index: 10;
 }
 
@@ -772,7 +685,7 @@ header.wp-block-group.is-position-sticky,
   top: var(--wp-admin--admin-bar--height, 32px);
 }
 
-/* Position the fixed footer using sticky */
+/* Position the fixed footer using sticky, but only on large screens */
 .wp-site-blocks > footer.wp-block-template-part:has(footer.is-position-sticky) {
   position: relative;
   bottom: 0;
@@ -788,7 +701,27 @@ header.wp-block-group.is-position-sticky,
 # Navigation
 -----------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------
-# Default styles for nav menus that have a background
+# Style Nav Menus
+-----------------------------------------------------------------------------*/
+.wp-block-navigation .has-child .wp-block-navigation-submenu__toggle[aria-expanded=true] ~ .wp-block-navigation__submenu-container,
+.wp-block-navigation .has-child:not(.open-on-click):hover > .wp-block-navigation__submenu-container,
+.wp-block-navigation .has-child:not(.open-on-click):not(.open-on-hover-click):focus-within > .wp-block-navigation__submenu-container {
+  min-width: var(--wp--custom--navigation--width, 260px);
+}
+
+/* FIX for padding on level 2+ nav menu and pages list drop-downs */
+.wp-block-navigation__submenu-container .wp-block-navigation-item.open-on-click .wp-block-navigation-submenu__toggle {
+  padding-left: 1em;
+}
+
+/* Default nav link opacity on hover */
+.wp-block-navigation .wp-block-navigation-item:hover > .wp-block-navigation-item__content.wp-block-navigation-item__content,
+.wp-block-navigation .wp-block-navigation-item:active > .wp-block-navigation-item__content.wp-block-navigation-item__content {
+  opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
+}
+
+/*-----------------------------------------------------------------------------
+# Style Nav Menus with a background
 -----------------------------------------------------------------------------*/
 /* Reduce vertical gap when Nav menu wraps */
 .wp-block-navigation__container {
@@ -804,21 +737,6 @@ header.wp-block-group.is-position-sticky,
 }
 .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container > .wp-block-navigation-item:not(:last-child) > a:not(.wp-element-button), .wp-block-navigation.has-background .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container > .wp-block-navigation-submenu:not(:last-child) {
   padding-right: 0;
-}
-
-/*-----------------------------------------------------------------------------
-# FIX for padding on level 2+ nav menu and pages list drop-downs
------------------------------------------------------------------------------*/
-.wp-block-navigation__submenu-container .wp-block-navigation-item.open-on-click .wp-block-navigation-submenu__toggle {
-  padding-left: 1em;
-}
-
-/*-----------------------------------------------------------------------------
-# Default nav link opacity on hover
------------------------------------------------------------------------------*/
-.wp-block-navigation .wp-block-navigation-item:hover > .wp-block-navigation-item__content.wp-block-navigation-item__content,
-.wp-block-navigation .wp-block-navigation-item:active > .wp-block-navigation-item__content.wp-block-navigation-item__content {
-  opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
 }
 
 /*-----------------------------------------------------------------------------
@@ -879,8 +797,7 @@ header .wp-block-navigation__submenu-container.has-background .wp-block-navigati
 /*-----------------------------------------------------------------------------
 # On MOBILE nav, don't hover on non-clickable links
 -----------------------------------------------------------------------------*/
-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.open-on-click:hover > .wp-block-navigation-item__content,
-header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.open-on-click:active > .wp-block-navigation-item__content {
+header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.open-on-click:hover > .wp-block-navigation-item__content, header .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.open-on-click:active > .wp-block-navigation-item__content {
   cursor: unset;
   opacity: 1;
 }
@@ -977,7 +894,7 @@ nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-con
 }
 
 nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container {
-  width: 360px;
+  width: var(--wp--custom--navigation--wide-width, 360px);
 }
 
 /* If right justified, position the fixed menu and its drop-down to the right */
@@ -1087,37 +1004,16 @@ p.is-style-arrow-icon > a:after {
 }
 
 /*-----------------------------------------------------------------------------
-# ADDITIONAL BASE STYLES
+# Site Logo
 -----------------------------------------------------------------------------*/
-/*-----------------------------------------------------------------------------
-# Utilities
------------------------------------------------------------------------------*/
-/* 
- * Note: These utility classes must be added manually in the 
- * Advanced section of the block settings.
- */
-/* 
- * Clearfix (Clear floats)
- * 
- * Note: Be carefull as this will mess up fixed headers, Row 
- * Groups (flex boxes), etc. We've tried to style around those 
- * though.
- */
-.is-style-clearfix:not(.is-layout-flex):not(.is-style-fixed-header):after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Flexbox No Shrink
- * 
- * Note: This only works on elements within a Flex Box (Group)
- */
-.wp-block-site-logo,
-.is-layout-flex .is-style-no-shrink {
+/* Don't shrink the site logo */
+.wp-block-site-logo {
   flex-shrink: 0;
 }
 
+/*-----------------------------------------------------------------------------
+# ADDITIONAL BASE STYLES
+-----------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------
 # Dashicons
 -----------------------------------------------------------------------------*/
@@ -1219,12 +1115,13 @@ footer,
  */
 main > *:first-child:not(.wp-block-template-part):not(.wp-block-post-content):not(.wp-block-query),
 .wp-block-query > *:first-child:not(.wp-block-cover),
-.wp-block-post-content > *:first-child:not(.wp-block-cover):not(.wp-block-group):not(.wp-block-columns) {
+.wp-block-post-content > *:first-child:not(.wp-block-cover) {
   margin-block-start: var(--wp--style--block-gap);
 }
 
 /* But don't add top or bottom margin to template part within a column. e.g. Footers. */
-.wp-block-column > .wp-block-template-part > *:first-child {
+.wp-block-column > .wp-block-template-part > *:first-child,
+.wp-block-column > .wp-block-group > .wp-block-template-part > .wp-block-social-links {
   margin-block-start: 0;
   margin-block-end: 0;
 }
@@ -1236,7 +1133,8 @@ main > *:first-child:not(.wp-block-template-part):not(.wp-block-post-content):no
 }
 
 /* But don't add bottom margin to a template part within a column. e.g. Footers. */
-.wp-block-column > .wp-block-template-part > *:last-child {
+.wp-block-column > .wp-block-template-part > *:last-child,
+.wp-block-column > .wp-block-group > .wp-block-template-part > .wp-block-social-links {
   margin-block-end: 0;
 }
 
@@ -1307,24 +1205,31 @@ main.wp-block-group:not(.has-global-padding),
 }
 
 /*-----------------------------------------------------------------------------
-# Flat Blocks Group Styles (for theme < v1.6.6)
+# Utilities
 -----------------------------------------------------------------------------*/
-/* Default group padding, but remove it on nested groups */
-:where(.wp-block-group:not(main):not(.is-style-no-padding)) {
-  padding-top: var(--wp--style--block-gap);
-  padding-bottom: var(--wp--style--block-gap);
+/* 
+ * Note: These utility classes must be added manually in the 
+ * Advanced section of the block settings.
+ */
+/* 
+ * Clearfix (Clear floats)
+ * 
+ * Note: Be carefull as this will mess up fixed headers, Row 
+ * Groups (flex boxes), etc. We've tried to style around those 
+ * though.
+ */
+.is-style-clearfix:not(.is-layout-flex):not(.is-style-fixed-header):after {
+  content: "";
+  clear: both;
+  display: table;
 }
 
-.wp-block-group > .wp-block-group:not(.has-background):not(.is-style-rounded-corners):not(.is-style-rounded-border):not(.is-style-thick-rounded-border) {
-  padding: 0;
-}
-
-/*-----------------------------------------------------------------------------
-# Flat Blocks Excerpt Custom Style (for theme < v1.7.1)
------------------------------------------------------------------------------*/
-/* HIDE read more text and link */
-.wp-block-post-excerpt.is-style-no-readmore > .wp-block-post-excerpt__more-text {
-  display: none;
+/* Flexbox No Shrink
+ * 
+ * Note: This only works on elements within a Flex Box (Group)
+ */
+.is-layout-flex .is-style-no-shrink {
+  flex-shrink: 0;
 }
 
 /*-----------------------------------------------------------------------------

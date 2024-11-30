@@ -2,7 +2,13 @@
 # Social Links (Icons)
 -----------------------------------------------------------------------------*/
 
-/* Set some defaults. These are needed for WordPres.org theme preview */
+/* Match our margins */
+.wp-block-social-links {
+	margin-block-start: var(--wp--preset--spacing--40);
+	margin-block-end: 0;
+}
+
+/* FIX for WordPres.org theme preview */
 .wp-block-social-links {
 	display: flex;
 	gap: var(--wp--style--block-gap);

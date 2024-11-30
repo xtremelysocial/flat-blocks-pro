@@ -81,7 +81,7 @@ input[type=file]::file-selector-button:hover {
 	color: var(--wp--custom--color--button--hover-text, var(--wp--custom--color--button--text, var(--wp--preset--color--foreground-alt, white)));
 }
 
-// /* For outline style buttons, set hover color */
+///* For outline style buttons, set hover color */
 // .wp-block-button.is-style-outline.is-style-outline .wp-block-button__link:hover,
 // .wp-block-button.is-style-outline.is-style-outline .wp-block-button__link:active {
 // 	color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
@@ -92,8 +92,9 @@ input[type=file]::file-selector-button:hover {
 -----------------------------------------------------------------------------*/
 
 /* Underline links */
-.is-style-link-underline :not(.is-style-link-no-underline) > a:not(.wp-block-navigation-item__content) {
-	text-decoration: underline !important;
+// .is-style-link-underline :not(.is-style-link-no-underline) > a:not(.wp-block-navigation-item__content) {
+.is-style-link-underline a:not(.wp-block-navigation-item__content) {
+	text-decoration: underline; //!important;
 }
 .is-style-link-underline a:hover, 
 .is-style-link-underline a:active {
@@ -103,12 +104,7 @@ input[type=file]::file-selector-button:hover {
 
 /* No Underline links */
 .is-style-link-no-underline a {
-	text-decoration: none !important;
-// 	
-// 	&:not([class*="wp-"]):hover,
-// 	&:not([class*="wp-"]):active {
-// 		text-decoration: underline !important;
-// 	}
+  	text-decoration: none; //!important;
 }
 
 /* Underline links on hover */
@@ -121,3 +117,5 @@ input[type=file]::file-selector-button:hover {
 		opacity: 1;
 	}
 }
+
+

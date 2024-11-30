@@ -15,10 +15,10 @@ pre {
 	font-size: var(--wp--preset--font-size--small);
 }
 
-/* Set lists with background to match other padding */
+/* Style lists with backgrounds */
 ol.has-background:not(.wp-block-navigation-submenu):not(.wp-block-navigation__container),
 ul.has-background:not(.wp-block-navigation-submenu):not(.wp-block-navigation__container) {
-    padding: var(--wp--preset--spacing--40, 18px);
+    padding: var(--wp--preset--spacing--40);
     list-style-position: inside;
 }
 

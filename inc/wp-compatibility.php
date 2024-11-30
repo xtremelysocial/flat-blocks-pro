@@ -23,15 +23,21 @@ if ( version_compare( get_bloginfo( 'version' ), '6.6', '<' ) AND
 	function flatblocks_compat_styles() {
 
 		// Get version for caching
-		$theme_version = wp_get_theme()->get( 'Version' );
-		$version_string = is_string( $theme_version ) ? $theme_version : false;
+// 		$theme_version = wp_get_theme()->get( 'Version' );
+// 		$version_string = is_string( $theme_version ) ? $theme_version : false;
+		if ( file_exists ( get_template_directory() . '/assets/css/wp-compat.asset.php' ) ) {
+			$asset_file = include( get_template_directory() . '/assets/css/wp-compat.asset.php' );
+			$compat_css_version = $asset_file['version'] ?? false;
+		} else {
+			$compat_css_version = wp_get_theme()->get( 'Version' ) ?? false;
+		}
 		
 		// Load custom block styles
 		wp_enqueue_style( 
 			'flatblocks-compat-styles', 
 			get_template_directory_uri() . '/assets/css/wp-compat.css', 
 			array('flatblocks-base'),
-			$version_string
+			$compat_css_version
 		);
 		wp_style_add_data( 'flatblocks-compat-styles', 'rtl', 'replace' );
 	}	

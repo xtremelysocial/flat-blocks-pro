@@ -19,21 +19,13 @@
 	margin-right: auto !important;
 }
 
-/* FIX for theme setting colors on separators. Use only the background color */
+/* FIX for theme setting colors on separators. Use only the background color. */
 .wp-block-separator:not(.is-style-dots) {
 	color: transparent;
 }
 
 /* Default separator color when on colored background */
 .has-background .wp-block-separator:not(.has-background) {
- 	//color: inherit;
-	color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
+ 	color: inherit;
+// 	color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
 }
-
-// /*-----------------------------------------------------------------------------
-// # Separator: Custom
-// -----------------------------------------------------------------------------*/
-// .wp-block-separator.is-style-clearfix {
-// 	border-width: 0;
-// 	margin: 0;
-// }

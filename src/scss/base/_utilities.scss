@@ -23,7 +23,6 @@
  * 
  * Note: This only works on elements within a Flex Box (Group)
  */
-.wp-block-site-logo,
 .is-layout-flex .is-style-no-shrink {
 	flex-shrink: 0;
 }

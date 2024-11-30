@@ -96,9 +96,16 @@ if ( ! function_exists( 'flatblocks_front_end_styles' ) ) :
 
 	function flatblocks_front_end_styles() {
 
-		// Get version for caching
-		$theme_version = wp_get_theme()->get( 'Version' );
-		$version_string = is_string( $theme_version ) ? $theme_version : false;
+		// Get Theme version
+		$theme_version = wp_get_theme()->get( 'Version' ) ?? false;
+
+		// Get CSS build version
+		if ( file_exists ( get_template_directory() . '/assets/css/flat-blocks.asset.php' ) ) {
+			$asset_file = include( get_template_directory() . '/assets/css/flat-blocks.asset.php' );
+			$css_version = $asset_file['version'] ?? false;
+		} else {
+			$css_version = $theme_version;
+		}
 
 		// Always load base theme style
 		if ( file_exists( get_template_directory() . '/assets/css/flat-blocks.css' ) ) {
@@ -106,7 +113,7 @@ if ( ! function_exists( 'flatblocks_front_end_styles' ) ) :
 				'flatblocks-base', 
 				get_template_directory_uri() . '/assets/css/flat-blocks.css', 
 				array(), 
-				$version_string
+				$css_version
 			);
 
 			if ( file_exists( get_template_directory() . '/assets/css/flat-blocks-rtl.css' ) ) {
@@ -117,12 +124,21 @@ if ( ! function_exists( 'flatblocks_front_end_styles' ) ) :
 		// If not loading separate block styles, then load combined block styles
 		if ( ! apply_filters( 'flatblocks_should_load_separate_block_assets', $separate_theme_block_assets ?? false ) 
 			and file_exists( get_template_directory() . '/assets/css/block-styles.css' ) ) {
+			
+			// Get Block CSS build version
+			if ( file_exists ( get_template_directory() . '/assets/css/block-styles.asset.php' ) ) {
+				$asset_file = include( get_template_directory() . '/assets/css/block-styles.asset.php' );
+				$block_css_version = $asset_file['version'] ?? $css_version;
+			} else {
+				$block_css_version = $css_version;
+			}
 
+			// Load the block styles
 			wp_enqueue_style(
 				'flatblocks-block-styles',
 				get_template_directory_uri() . '/assets/css/block-styles.css',
 				array('flatblocks-base'),
-				$version_string
+				$block_css_version
 			);
 
 			if ( file_exists( get_template_directory() . '/assets/css/block-styles-rtl.css' ) ) {
@@ -135,7 +151,7 @@ if ( ! function_exists( 'flatblocks_front_end_styles' ) ) :
 			'flatblocks-style', 
 			get_template_directory_uri() . '/style.css', 
 			array('flatblocks-base'),
-			$version_string
+			$theme_version
 		);
 		
 		// As a courtesy, add the child theme Custom Styles CSS if it exists
@@ -145,7 +161,7 @@ if ( ! function_exists( 'flatblocks_front_end_styles' ) ) :
 				get_stylesheet_directory_uri() . '/assets/css/block-styles.css', 
 				//array('flatblocks-base', 'flatblocks-block-styles'),
 				array('flatblocks-base'),
-				$version_string 
+				$theme_version 
 			);
 		}
 
@@ -156,7 +172,7 @@ if ( ! function_exists( 'flatblocks_front_end_styles' ) ) :
 				get_stylesheet_directory_uri() . '/style.css', 
 				//array('flatblocks-base', 'flatblocks-block-styles'),
 				array('flatblocks-base'),
-				$version_string 
+				$theme_version 
 			);
 		}
 
@@ -168,7 +184,7 @@ if ( ! function_exists( 'flatblocks_front_end_styles' ) ) :
 				'flatblocks-smoothscroll', 
 				get_template_directory_uri() . '/assets/js/smoothscroll.js', 
 				array('jquery'), 
-				$version_string, 
+				$theme_version, 
 				$in_footer = true 
 			);
 		}
@@ -245,9 +261,13 @@ if ( ! function_exists( 'flatblocks_load_block_styles' ) ) :
 
 	function flatblocks_load_block_styles() {
 
-		// Get the theme version
-		$theme_version = wp_get_theme()->get( 'Version' );
-		$version_string = is_string( $theme_version ) ? $theme_version : false;
+		// Get Block CSS build version
+		if ( file_exists ( get_template_directory() . '/assets/css/block-styles.asset.php' ) ) {
+			$asset_file = include( get_template_directory() . '/assets/css/block-styles.asset.php' );
+			$block_css_version = $asset_file['version'] ?? false;
+		} else {
+			$block_css_version = wp_get_theme()->get( 'Version' ) ?? false;
+		}
 
 		// Load the styles for the individual blocks
 		$block_path = '/assets/css/blocks/';
@@ -257,7 +277,6 @@ if ( ! function_exists( 'flatblocks_load_block_styles' ) ) :
 
 			// Remove the path and .css extension from the name
 			$block_name = str_replace( array(get_theme_file_path($block_path), '.css'), '', $block_name );
-			//var_dump($block_name); //TEST
 
 			// Skip the RTL versions and instead add them as a replacement
 			if ( strpos( $block_name, '-rtl' ) === false) {
@@ -269,7 +288,7 @@ if ( ! function_exists( 'flatblocks_load_block_styles' ) ) :
 					'src'    => get_theme_file_uri( $block_path . "$block_name.css" ),
 					'path'   => get_theme_file_path( $block_path . "$block_name.css" ),
 					'deps'	 => array( 'flatblocks-base' ), 
-					'ver'	 => $version_string
+					'ver'	 => $block_css_version
 				) );
 				wp_style_add_data( "flatblocks-block-$block_name", 'rtl', 'replace' );
 			}			
@@ -375,7 +394,7 @@ if ( ! function_exists( 'flatblocks_image_sizes' ) ) :
 endif;
 
 /**
- * #page anchor for scroll-to-top
+ * #page and #wrapper anchors for scroll-to-top
  * 
  * Add an anchor of #page for our scroll-to-top navigation item. This is needed
  * because there is currently no way to add an id to the wp-site-blocks wrapper and 
@@ -392,33 +411,11 @@ endif;
 /**
  * Remove the old Menus and Widgets admin page links
  */
-function flatblocks_adjust_admin_menu() {
-	remove_submenu_page( 'themes.php', 'nav-menus.php' );
-	remove_submenu_page( 'themes.php', 'widgets.php' );
-}
 add_action( 'admin_menu', 'flatblocks_adjust_admin_menu', 999 );
 
-/**
- * Set post excerpt length
- * Note: With block-based themes, this ONLY gets called on blog listings. It is not
- * called on individual posts or pages. 
-*/
-// add_filter('excerpt_length', 'flatblocks_excerpt_length', 20);
-// 
-// if ( ! function_exists( 'flatblocks_excerpt_length' ) ) :
-// 	function flatblocks_excerpt_length ( $words ) {
-// 		return 30; //# of words
-// 	}
-// endif;
-
-/**
- * Replace [...] with ... from the excerpt
- * Note: Only needed if altering the excerpt length above
- */
-// add_filter( 'excerpt_more', 'flatblocks_excerpt_more' );
-// 
-// if ( ! function_exists( 'flatblocks_excerpt_more' ) ) :
-// 	function flatblocks_excerpt_more( $more ) {
-// 		return '&hellip;';
-// 	}
-// endif;
+if ( ! function_exists( 'flatblocks_adjust_admin_menu' ) ) :
+	function flatblocks_adjust_admin_menu() {
+		remove_submenu_page( 'themes.php', 'nav-menus.php' );
+		remove_submenu_page( 'themes.php', 'widgets.php' );
+	}
+endif;

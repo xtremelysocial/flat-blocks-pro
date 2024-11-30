@@ -33,7 +33,7 @@
 /* 
  * Black and near-black colors, default light text but leave link color alone
  */
-$black-colors: ('contrast', 'dark', 'dark-alt', 'almost-black', 'not-quite-black', 'black');
+$black-colors: ('dark', 'dark-alt', 'almost-black', 'not-quite-black', 'black');
 @include mixin-colors.color-defaults(
 	$black-colors,
 	'default-black',
@@ -41,8 +41,15 @@ $black-colors: ('contrast', 'dark', 'dark-alt', 'almost-black', 'not-quite-black
 	null
 );
 
+@include mixin-colors.color-defaults(
+	'contrast',
+	null, //'default-black',
+	'var(--wp--preset--color--base)',
+	null
+);
+
 /* 
- * Primary, Secondary, and Tertiary colors, default light text and links
+ * Accent colors (Primary, Secondary, etc.), default light text and links
  */
 $accent-colors: ('primary', 'secondary', 'tertiary', 'primary-alt', 'secondary-alt', 'tertiary-alt', 'highlight', 'highlight-alt');
 @include mixin-colors.color-defaults(
@@ -55,22 +62,24 @@ $accent-colors: ('primary', 'secondary', 'tertiary', 'primary-alt', 'secondary-a
 /* 
  * Dark colors, default light text and links
  */
-$dark-colors: ('dark-gray', 'very-dark-gray', 'green', 'dark-bright-green', 'midnight-blue', 'dark-midnight-blue', 'orange', 'dark-orange', 'blue', 'dark-blue', 'purple', 'dark-purple', 'light-red', 'red', 'dark-red');
+$dark-colors: ('dark-gray', 'very-dark-gray', 'green', 'dark-bright-green', 'midnight-blue', 'dark-midnight-blue', 'orange', 'dark-orange', 'blue', 'dark-blue', 'purple', 'dark-purple', 'red', 'dark-red');
 @include mixin-colors.color-defaults(
 	$dark-colors,
 	null, //'default-dark',
-	'var(--wp--preset--color--foreground-alt)',
+	//'var(--wp--preset--color--foreground-alt)',
+	'var(--wp--preset--color--off-white)',
 	'inherit'
 );
 
 /* 
  * Medium colors, default light text and links
  */
-$medium-colors: ('light-green', 'bright-green', 'light-orange', 'light-blue','light-purple');
+$medium-colors: ('light-green', 'bright-green', 'light-orange', 'light-blue', 'light-red', 'light-purple');
 @include mixin-colors.color-defaults(
 	$medium-colors, 
 	null, //'default-medium',
-	'var(--wp--preset--color--foreground-alt)',
+	//'var(--wp--preset--color--foreground-alt)',
+	'var(--wp--preset--color--white)',
 	'inherit'
 );
 
@@ -88,7 +97,7 @@ $light-colors: ('light-yellow', 'yellow');
 /* 
  * White and near-white colors, default dark text but leave the link color alone
  */
-$white-colors: ('base', 'neutral', 'neutral-alt', 'foreground-alt', 'white', 'off-white', 'very-light-gray', 'light-gray', 'gray' );
+$white-colors: ('neutral', 'neutral-alt', 'foreground-alt', 'white', 'off-white', 'very-light-gray', 'light-gray', 'gray' );
 @include mixin-colors.color-defaults(
 	$white-colors,
 	'default-white',
@@ -96,9 +105,15 @@ $white-colors: ('base', 'neutral', 'neutral-alt', 'foreground-alt', 'white', 'of
 	null
 );
 
+@include mixin-colors.color-defaults(
+	'base',
+	null, //'default-white',
+	'var(--wp--preset--color--contrast)',
+	null
+);
+
 /* Set the contrast color on colored backgrounds and buttons */
 :root :where(.has-background),
-//:root .has-background :where(.wp-element-button, .wp-block-button__link) {
 :root :where(.wp-block-background.has-background .wp-element-button, .wp-block-background.has-background .wp-block-button__link) {
 	color: var(--wp--custom--color--contrast);
 }
@@ -120,9 +135,13 @@ $white-colors: ('base', 'neutral', 'neutral-alt', 'foreground-alt', 'white', 'of
 	color: var(--wp--custom--color--contrast--tertiary, var(--wp--preset--color--foreground-alt));
 }
 
-/* Inherit the link color on gradient backgrounds */
-:root :where([class*=-gradient-background]) a:where(:not(.wp-element-button)) {
-  color: inherit;
+/* Inherit the link and outline button color on gradient backgrounds */
+:root :where([class*=-gradient-background]) {
+	& a:where(:not(.wp-element-button)),
+	& .is-style-outline > .wp-element-button, 
+	& [class*="is-style-button-outline-"] > .wp-element-button {	
+		color: inherit;
+	}
 }
 
 /* 
