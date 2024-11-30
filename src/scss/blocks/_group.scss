@@ -7,6 +7,12 @@
 	padding: var(--wp--preset--spacing--60) 
 }
 
+/* Padding for top-level non-colored groups */
+:where(.wp-block-post-content > .wp-block-group:not(.has-background):not(.is-style-no-padding)) {
+	padding-top: var(--wp--style--block-gap);
+	padding-bottom: var(--wp--style--block-gap);
+}
+
 /* 
  * If global padding, then OVERRIDE horizontal padding on tablet and mobile
  *

@@ -623,7 +623,7 @@ ol.is-style-list-plain-centered li {
 /* Match our margins */
 .wp-block-social-links {
   margin-block-start: var(--wp--preset--spacing--40);
-  margin-block-end: 0;
+  margin-block-end: var(--wp--preset--spacing--40);
 }
 
 /* FIX for WordPres.org theme preview */

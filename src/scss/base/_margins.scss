@@ -22,9 +22,11 @@ footer,
  * sidebars as well as legacy non-block page content.
  */
 main > *:first-child:not(.wp-block-template-part):not(.wp-block-post-content):not( .wp-block-query),
+// main > *:first-child:not(.wp-block-template-part):not(.wp-block-post-content):not( .wp-block-query):not(.wp-block-columns),
 .wp-block-query > *:first-child:not(.wp-block-cover),
 // .wp-block-post-content > *:first-child:not(.wp-block-cover):not(.wp-block-group):not(.wp-block-columns) {
-.wp-block-post-content > *:first-child:not(.wp-block-cover) {
+main > .wp-block-post-content > *:first-child:not(.wp-block-cover) {
+// .wp-block-post-content > *:first-child:not(.wp-block-cover) {
  	margin-block-start: var(--wp--style--block-gap);
 }
 
@@ -38,6 +40,7 @@ main > *:first-child:not(.wp-block-template-part):not(.wp-block-post-content):no
 
 /* Also add bottom margin on the last block for convenience */
 .wp-block-query > *:last-child,
+// .wp-block-query > .wp-block-columns > .wp-block-column:first-child > *:last-child,
 .wp-block-post-content > *:last-child {
   margin-block-end: var(--wp--style--block-gap);
 }
