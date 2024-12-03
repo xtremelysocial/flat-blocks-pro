@@ -16,9 +16,9 @@
 }
 
 /* Hide empty comments so no extra vertical margin */
-#post-comments:empty {
-	display: none;
-	margin-top: 0;
+#post-comments:empty { //,
+// .wp-block-template-part > #post-comments {
+  display: none;
 }
 
 /* Add padding to comment page numbers */

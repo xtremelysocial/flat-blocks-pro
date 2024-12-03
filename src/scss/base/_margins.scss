@@ -14,39 +14,62 @@ main,
 footer,
 .wp-block-template-part,
 .wp-block-post-content {
-	margin-block-start: 0 !important;
+	margin-block-start: 0; // !important;
 }
 
 /* 
- * Add top margin to the container's first block. This is mainly for pages with
- * sidebars as well as legacy non-block page content.
+ * Add top margin to the content's first block. This lets the user then set top margin
+ * to zero on the first block if they don't want it. 
  */
-main > *:first-child:not(.wp-block-template-part):not(.wp-block-post-content):not( .wp-block-query),
-// main > *:first-child:not(.wp-block-template-part):not(.wp-block-post-content):not( .wp-block-query):not(.wp-block-columns),
-.wp-block-query > *:first-child:not(.wp-block-cover),
-// .wp-block-post-content > *:first-child:not(.wp-block-cover):not(.wp-block-group):not(.wp-block-columns) {
-main > .wp-block-post-content > *:first-child:not(.wp-block-cover) {
-// .wp-block-post-content > *:first-child:not(.wp-block-cover) {
+//main > *:first-child:not(.wp-block-template-part):not(.wp-block-post-content):not(.wp-block-query),
+// // .wp-block-query > *:first-child:not(.wp-block-cover),
+// main > .wp-block-post-content > *:first-child:not(.wp-block-cover),
+// main > .wp-block-post-content > #wporg-pattern-preview > div > *:first-child:not(.wp-block-cover) {
+//  	margin-block-start: var(--wp--style--block-gap);
+// }
+main > .wp-block-columns > .wp-block-column > .wp-block-post-featured-image,
+.wp-block-post-content > *:first-child:not(.wp-block-cover),
+.wp-block-post-content > #wporg-pattern-preview > div > *:first-child:not(.wp-block-cover) {
+// main > .wp-block-columns > .wp-block-column:not(:has(.wp-block-post-content)),
+// main > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-columns > .wp-block-column:not(:has(.wp-block-post-content)) {
+// main > .wp-block-post-content > *:first-child:not(.wp-block-cover),
+// main > .wp-block-post-content > #wporg-pattern-preview > div > *:first-child:not(.wp-block-cover),
+// main > .wp-block-columns > .wp-block-column:has(.sidebar),
+// main > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-column .sidebar {
+// main > .wp-block-columns > .wp-block-column,
+// main > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-column {
  	margin-block-start: var(--wp--style--block-gap);
 }
 
 /* But don't add top or bottom margin to template part within a column. e.g. Footers. */
+main > .wp-block-columns > .wp-block-column,
+main > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-column,
 .wp-block-column > .wp-block-template-part > *:first-child,
 .wp-block-column > .wp-block-group > .wp-block-template-part > .wp-block-social-links {
     margin-block-start: 0;
     margin-block-end: 0;
 
 }
+// :root :where(.wp-block-column.is-layout-flow) > .wp-block-template-part > *:first-child {
+// // :root :where(.wp-block-column.is-layout-flow) > .wp-block-template-part > *:first-child:not(.sidebar) {
+//  	margin-block-start: 0;
+// }
 
-/* Also add bottom margin on the last block for convenience */
-.wp-block-query > *:last-child,
-// .wp-block-query > .wp-block-columns > .wp-block-column:first-child > *:last-child,
-.wp-block-post-content > *:last-child {
+/* 
+ * Add bottom margin to the content's last block. This lets the user then set bottom
+ * margin to zero on the first block if they don't want it.
+ */
+// // .wp-block-query > *:last-child,
+// .wp-block-post-content > *:last-child {
+//   margin-block-end: var(--wp--style--block-gap);
+// }
+.wp-block-post-content > *:last-child,
+.wp-block-post-content > #wporg-pattern-preview > div > *:last-child {
   margin-block-end: var(--wp--style--block-gap);
 }
 
 /* But don't add bottom margin to a template part within a column. e.g. Footers. */
-.wp-block-column > .wp-block-template-part > *:last-child,
-.wp-block-column > .wp-block-group > .wp-block-template-part > .wp-block-social-links {
-  margin-block-end: 0;
-}
+// .wp-block-column > .wp-block-template-part > *:last-child,
+// .wp-block-column > .wp-block-group > .wp-block-template-part > .wp-block-social-links {
+//   margin-block-end: 0;
+// }

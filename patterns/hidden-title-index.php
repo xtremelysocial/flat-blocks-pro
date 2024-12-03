@@ -3,7 +3,6 @@
   * Title: Index (Blog) Page Title
   * Slug: flat-blocks/hidden-title-index
   * Categories: flatblocks, text
-  * Block Types:
   * Inserter: false
   * Description: Index (Blog) page title as pattern so can allow for language translations
   */

@@ -1,12 +1,6 @@
 /*-----------------------------------------------------------------------------
-# Padding (Horizontal and vertical spacing)
+# Query
 -----------------------------------------------------------------------------*/
-
-/* Remove padding from containers */
-main.wp-block-group:not(.has-global-padding),
-.wp-block-template-part {
-	padding: 0;
-}
 
 /* Add padding to Query */
 .wp-block-query {

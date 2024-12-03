@@ -21,22 +21,22 @@
 	}	
 }
 
-[class*=dashicons-]:before {
-	font-family: dashicons;	
-}
-
+// [class*=dashicons-]:before {
+// 	font-family: dashicons;	
+// }
+// 
 /* Add a new Dashicons After class */
-.dashicons-after {
-	display: flex;
-	//flex-direction: row;
-	
-	&:before {
-		order: 2;
-		margin-left: var(--wp--preset--spacing--20);
-		//vertical-align: middle;
-	}
-
-}
+// .dashicons-after {
+// 	display: flex;
+// 	//flex-direction: row;
+// 	
+// 	&:before {
+// 		order: 2;
+// 		margin-left: var(--wp--preset--spacing--20);
+// 		//vertical-align: middle;
+// 	}
+// 
+// }
 
 /* Add a new Dashicons Above class */
 .dashicons-above {
@@ -68,14 +68,14 @@
 /* Nav menus already have transitions so don't add another one on
  * dashicons
  */
-.wp-block-navigation .dashicons {
-	transition: none;
-}
-
-/* Don't display the top-level icon on the drop-down menu */
-.wp-block-navigation__submenu-container.dashicons:before {
-	content: none;
-}
+// .wp-block-navigation .dashicons {
+// 	transition: none;
+// }
+// 
+// /* Don't display the top-level icon on the drop-down menu */
+// .wp-block-navigation__submenu-container.dashicons:before {
+// 	content: none;
+// }
 // 
 // :where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-item a:not(.wp-element-button)), 
 // :where(.wp-block-navigation .wp-block-navigation__submenu-container .wp-block-navigation-submenu a:not(.wp-element-button)), 

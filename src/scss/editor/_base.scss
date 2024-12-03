@@ -3,8 +3,8 @@
 -----------------------------------------------------------------------------*/
 /* Style the post title in the Block Editor */
 .edit-post-visual-editor__post-title-wrapper {
-	margin-top: var(--wp--preset--spacing--40);
-	margin-bottom: var(--wp--preset--spacing--40);
+	margin-top: var(--wp--style--block-gap);
+	margin-bottom: var(--wp--style--block-gap);
 	padding-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
 	padding-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
 }
@@ -24,6 +24,12 @@
  * Add top margin to the container's first block and then between 
  * subsequent blocks 
  */
-.is-root-container > *:first-child:not(.wp-block-template-part, .wp-block-cover, .wp-block-query) {
- 	margin-block-start: var(--wp--style--block-gap);
+// :where(.is-root-container > *:first-child:not(.wp-block-template-part):not(.wp-block-cover):not(.wp-block-query)),
+// :where(.is-root-container > *:not(main):not(:first-child):not(:last-child)) {
+//  	margin-block-start: var(--wp--style--block-gap);
+// }
+
+/* Don't add top margin to main container group */
+.is-root-container > main {
+	margin-block-start: 0;
 }

@@ -3,7 +3,6 @@
   * Title: Search Page Title
   * Slug: flat-blocks/hidden-title-search
   * Categories: flatblocks, text
-  * Block Types:
   * Inserter: false
   * Description: Search page title as pattern so can allow for language translations
   */

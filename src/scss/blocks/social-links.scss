@@ -4,8 +4,8 @@
 
 /* Match our margins */
 .wp-block-social-links {
-	margin-block-start: var(--wp--preset--spacing--40);
-	margin-block-end: var(--wp--preset--spacing--40); //0;
+	margin-block-start: var(--wp--style--block-gap);
+	margin-block-end: var(--wp--style--block-gap);
 }
 
 /* FIX for WordPres.org theme preview */

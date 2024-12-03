@@ -147,8 +147,42 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 1.9.5 =
+December 3, 2024
+
+* Fix issue with Post Comments not displaying.
+* Added new Templates for Page No Sidebar, Page No Comments or Sidebar, Post No Sidebar, Post Featured Image No Sidebar. This is so the Flat Blocks Classic child theme that uses them will retain the Template when changing from the child theme to the parent theme and back.
+* Adjusted some of the CSS for vertical margins and padding to use the global Block Gap setting (--wp--style--block-gap) rather than Spacing 40 (--wp--preset--spacing--40). By default these are the same, but if the user changes the Block Gap, the vertical spacing will be more in line. This was also to fix the theme preview on WordPress.org. 
+* Featured Images on Posts and Pages with Sidebars now have a rounded border to match Featured Images in the blog. 
+
+= 1.9.4 =
+December 2, 2024
+
+* Due to changes in WordPress v6.7, added vertical margin and padding in the Editor to match the front-end.
+* Updated Call to Action Block Pattern to wrap Button in a Buttons Block for consistency with recent WordPress versions and for the WordPress.org theme preview.
+* Set light default link and button color on Midnight Blue and Dark Midnight Blue backgrounds. This is more consistent with the handling of other dark accent colors.
+* Enhanced CSS to prevent empty Comments section from adding margin before the Footer.
+* Added Block Bindings for Current Year (e.g. 2024), Theme Name (with link) and Theme Author (with link). We may use these in a future theme update as Block Bindings mature in WordPress (e.g. can just now see them at all in the Editor in WordPress v6.7). These are used currently in the Flat Blocks Classic child theme as they work better than PHP-based Block Patterns in the WordPress.org theme previews.
+* Refactored the code in functions.php to load included files using an array. It loads both this theme and child theme files if they exist. This new function also includes a filter for child themes to alter the list, whether to add to it or remove from it.
+
+= 1.9.3 =
+December 1, 2024
+
+* Revert replacing theme slug for patterns within patterns in child themes.
+* Let Paragraph top and bottom margin default based on the font size (i.e. "1 em").
+
+= 1.9.2 =
+November 30, 2024
+
+Update to fix child theme patterns within patterns.
+
+= 1.9.1 =
+November 30, 2024
+
+Update to fix child theme patterns within patterns. This is related to the Site Info and Theme Tagline Block Patterns that use the new Current Year, Theme Name, and Theme Author Block Patterns. Specifically replace "slug":"flat-blocks/" with the child theme slug. 
+
 = 1.9 =
-November 29, 2024
+November 30, 2024
 
 Version Summary: Added new Template Parts for Site Copyright (with current year), Theme Tagline (Flat Blocks theme by Xtremelysocial), and Social Icons so you can edit them. Added 2 new Footer Template Parts and updated the one with Site Motto to use the site name and tagline. Outline style buttons are now colored just like standard buttons (wth Highlight color). Overhauled and expanded Duotones for images. Drop-down Navigation menus are now wider. Preset font-sizes can now be edited directly in the Site Editor (WordPress v6.7+).
 
@@ -161,6 +195,7 @@ Version Summary: Added new Template Parts for Site Copyright (with current year)
 * Changed up all the Duotone colors (effects that can be added to images) to have lighter colored shadows to look better. Simplified the Duotone names to Primary, Primary Alt, Secondary, Secondary Alt, Tertiary, and Tertiary Alt.
 * Added all of the default WordPress Duotones too, although using this theme's color palette. This includes Purple and Yellow, Blue and Red, Midnight (Black and Blue), Magenta (Red) and Yellow, Purple and Green, Blue and Orange. These are compatible with your duotone selections created with other themes that use the WordPress defaults. It also means you can take them with you to other themes that support the defaults.
 * Adjusted drop-down menu width to default to 240px by adding new new custom variable in theme.json --wp-custom--navigation--width. The WordPress default is 200px. Also added --wp-custom--navigation--wide-width to set the width of the mobile-only nav menu. It is still 360px wide.
+* Added a new Site Contents section to the Sidebar with a Pages List so it lists all the pages on your site.
 * Set default Separator color back to Neutral Alt, but it is easily changed in the Site Editor now (since Flat Blocks v1.8).
 * More enhancements to default text (contrast) colors on colored backgrounds. Specifically, set white and off-white as default colors on dark backgrounds so that Foreground Alt can now be set to a dark color to allow for alternate lighter color palettes. 
 * Changed quote accent color and separator color to Highlight color. It was Primary color and by default they are the same, but this allows for a light Primary color in theme styles or child themes. 

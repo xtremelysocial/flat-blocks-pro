@@ -3,6 +3,7 @@
   * Title: Current Year
   * Slug: flat-blocks/text-current-year
   * Categories: flatblocks, text
+  * Inserter: false
   * viewportWidth: 640
   * Description: Current year (e.g. 2024)
   */

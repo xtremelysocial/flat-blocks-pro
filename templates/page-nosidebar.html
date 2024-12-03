@@ -2,13 +2,11 @@
 
 <!-- wp:template-part {"slug":"page-title","lock":{"move":true,"remove":true}} /-->
 
-<!-- wp:group {"tagName":"main","className":"page-content is-style-no-padding type-page template-page"} -->
-<main id="page-content" class="wp-block-group is-style-no-padding page-content type-page template-page">
+<!-- wp:group {"tagName":"main","metadata":{"name":"Main"},"className":"page-content is-style-default","lock":{"move":true,"remove":true}} -->
+<main id="page-content" class="wp-block-group page-content is-style-default">
+<!-- wp:post-content {"layout":{"type":"constrained"},"lock":{"move":true,"remove":true}} /-->
 
-	<!-- wp:post-content {"layout":{"inherit":true}} /-->
-	<!-- wp:template-part {"slug":"comments"} /-->
-
-</main>
+<!-- wp:template-part {"slug":"comments"} /--></main>
 <!-- /wp:group -->
 
 <!-- wp:template-part {"slug":"footer","lock":{"move":true,"remove":true}} /-->

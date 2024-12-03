@@ -3,7 +3,6 @@
   * Title: Site Map Page Text
   * Slug: flat-blocks/hidden-text-sitemap
   * Categories: flatblocks, text
-  * Block Types:
   * Inserter: false
   * Description: Site Map page text as pattern so can allow for language translations
   */

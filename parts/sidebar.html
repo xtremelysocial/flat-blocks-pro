@@ -1,6 +1,5 @@
-<!-- wp:group {"style":{"spacing":{"margin":{"top":"0","bottom":"var:preset|spacing|40"},"padding":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40","left":"var:preset|spacing|40","right":"var:preset|spacing|40"}}},"backgroundColor":"neutral","textColor":"very-dark-gray","className":"sidebar is-style-rounded-border","layout":{"type":"constrained"}} -->
-<div class="wp-block-group sidebar is-style-rounded-border has-very-dark-gray-color has-neutral-background-color has-text-color has-background" style="margin-top:0;margin-bottom:var(--wp--preset--spacing--40);padding-top:var(--wp--preset--spacing--40);padding-right:var(--wp--preset--spacing--40);padding-bottom:var(--wp--preset--spacing--40);padding-left:var(--wp--preset--spacing--40)">
-<!-- wp:search {"label":"Search","showLabel":false,"placeholder":"search","buttonText":"Search","buttonUseIcon":true} /-->
+<!-- wp:group {"className":"sidebar is-style-rounded-border","style":{"spacing":{"margin":{"top":"var:preset|spacing|40","bottom":"var:preset|spacing|40"}}}} -->
+<div class="wp-block-group sidebar is-style-rounded-border" style="margin-top:var(--wp--preset--spacing--40);margin-bottom:var(--wp--preset--spacing--40)"><!-- wp:search {"label":"Search","showLabel":false,"placeholder":"search","buttonText":"Search","buttonUseIcon":true} /-->
 
 <!-- wp:heading {"level":3,"placeholder":"Account"} -->
 <h3 class="wp-block-heading" id="account">Account</h3>
@@ -10,9 +9,14 @@
 [xs_member_profile]
 <!-- /wp:shortcode -->
 
-<!-- wp:group {"className":"has-visibility-show-on-desktop","layout":{"type":"constrained"}} -->
-<div id="site-contents" class="wp-block-group has-visibility-show-on-desktop"><!-- wp:heading {"level":3} -->
+<!-- wp:heading {"level":3} -->
 <h3 class="wp-block-heading">Site Contents</h3>
+<!-- /wp:heading -->
+
+<!-- wp:page-list {"className":"is-style-list-plain"} /-->
+
+<!-- wp:heading {"level":3,"placeholder":"Categories"} -->
+<h3 class="wp-block-heading" id="categories">Categories</h3>
 <!-- /wp:heading -->
 
 <!-- wp:list {"className":"is-style-list-dividers"} -->

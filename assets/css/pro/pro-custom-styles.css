@@ -71,19 +71,7 @@
   justify-content: right;
 }
 
-[class*=dashicons-]:before {
-  font-family: dashicons;
-}
-
 /* Add a new Dashicons After class */
-.dashicons-after {
-  display: flex;
-}
-.dashicons-after:before {
-  order: 2;
-  margin-left: var(--wp--preset--spacing--20);
-}
-
 /* Add a new Dashicons Above class */
 .dashicons-above {
   display: flex;
@@ -108,15 +96,6 @@
 /* Nav menus already have transitions so don't add another one on
  * dashicons
  */
-.wp-block-navigation .dashicons {
-  transition: none;
-}
-
-/* Don't display the top-level icon on the drop-down menu */
-.wp-block-navigation__submenu-container.dashicons:before {
-  content: none;
-}
-
 /*--------------------------------------------------------------
 # Custom: List Dividers (Lists, Latest Posts, Latest Comments)
 --------------------------------------------------------------*/
@@ -572,13 +551,13 @@ p.is-style-no-auto-icon a[href^="mailto:"]:not(.wp-block-social-link-anchor):bef
 
 .wp-block-table.is-style-table-colored tr:nth-child(even),
 .wp-block-table.is-style-table-alternate tr:nth-child(even) {
-  color: var(--wp--preset--color--very-dark-gray);
+  color: var(--wp--preset--color--almost-black);
   background-color: var(--wp--preset--color--off-white);
 }
 
 .wp-block-table.is-style-table-colored tr:nth-child(odd),
 .wp-block-table.is-style-table-alternate tr:nth-child(odd) {
-  color: var(--wp--preset--color--very-dark-gray);
+  color: var(--wp--preset--color--almost-black);
   background-color: var(--wp--preset--color--white);
 }
 

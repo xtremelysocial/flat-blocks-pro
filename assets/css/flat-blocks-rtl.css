@@ -298,6 +298,14 @@ body .is-layout-constrained > .alignright {
   margin-inline-start: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
 }
 
+/* FIX alignfull in WordPress.org theme preview */
+.has-global-padding > #wporg-pattern-preview > div > .alignfull {
+  margin-left: calc(var(--wp--style--root--padding-right) * -1);
+  padding-left: var(--wp--style--root--padding-right);
+  margin-right: calc(var(--wp--style--root--padding-left) * -1);
+  padding-right: var(--wp--style--root--padding-left);
+}
+
 /* Fix WordPress Admin bar on phones not sticking to the top */
 @media screen and (max-width: 600px) {
   body > #wpadminbar {
@@ -629,7 +637,8 @@ header > .wp-block-cover {
 }
 
 /* Padding for top-level non-colored groups */
-:where(.wp-block-post-content > .wp-block-group:not(.has-background):not(.is-style-no-padding)) {
+.wp-block-post-content > .wp-block-group:not(.has-background):not(.is-style-no-padding),
+.wp-block-post-content > #wporg-pattern-preview > div > .wp-block-group:not(.has-background):not(.is-style-no-padding) {
   padding-top: var(--wp--style--block-gap);
   padding-bottom: var(--wp--style--block-gap);
 }
@@ -1112,38 +1121,38 @@ main,
 footer,
 .wp-block-template-part,
 .wp-block-post-content {
-  margin-block-start: 0 !important;
+  margin-block-start: 0;
 }
 
 /* 
- * Add top margin to the container's first block. This is mainly for pages with
- * sidebars as well as legacy non-block page content.
+ * Add top margin to the content's first block. This lets the user then set top margin
+ * to zero on the first block if they don't want it. 
  */
-main > *:first-child:not(.wp-block-template-part):not(.wp-block-post-content):not(.wp-block-query),
-.wp-block-query > *:first-child:not(.wp-block-cover),
-main > .wp-block-post-content > *:first-child:not(.wp-block-cover) {
+main > .wp-block-columns > .wp-block-column > .wp-block-post-featured-image,
+.wp-block-post-content > *:first-child:not(.wp-block-cover),
+.wp-block-post-content > #wporg-pattern-preview > div > *:first-child:not(.wp-block-cover) {
   margin-block-start: var(--wp--style--block-gap);
 }
 
 /* But don't add top or bottom margin to template part within a column. e.g. Footers. */
+main > .wp-block-columns > .wp-block-column,
+main > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-column,
 .wp-block-column > .wp-block-template-part > *:first-child,
 .wp-block-column > .wp-block-group > .wp-block-template-part > .wp-block-social-links {
   margin-block-start: 0;
   margin-block-end: 0;
 }
 
-/* Also add bottom margin on the last block for convenience */
-.wp-block-query > *:last-child,
-.wp-block-post-content > *:last-child {
+/* 
+ * Add bottom margin to the content's last block. This lets the user then set bottom
+ * margin to zero on the first block if they don't want it.
+ */
+.wp-block-post-content > *:last-child,
+.wp-block-post-content > #wporg-pattern-preview > div > *:last-child {
   margin-block-end: var(--wp--style--block-gap);
 }
 
 /* But don't add bottom margin to a template part within a column. e.g. Footers. */
-.wp-block-column > .wp-block-template-part > *:last-child,
-.wp-block-column > .wp-block-group > .wp-block-template-part > .wp-block-social-links {
-  margin-block-end: 0;
-}
-
 /*-----------------------------------------------------------------------------
 # Padding (Horizontal and vertical spacing)
 -----------------------------------------------------------------------------*/
@@ -1153,12 +1162,10 @@ main.wp-block-group:not(.has-global-padding),
   padding: 0;
 }
 
-/* FIX alignfull in WordPress.org theme preview */
-.has-global-padding > #wporg-pattern-preview > div > .alignfull {
-  margin-left: calc(var(--wp--style--root--padding-right) * -1);
-  padding-left: var(--wp--style--root--padding-right);
-  margin-right: calc(var(--wp--style--root--padding-left) * -1);
-  padding-right: var(--wp--style--root--padding-left);
+/* Add padding to Query */
+.wp-block-query {
+  padding-top: var(--wp--style--block-gap);
+  padding-bottom: var(--wp--style--block-gap);
 }
 
 /*-----------------------------------------------------------------------------
@@ -1208,6 +1215,16 @@ main.wp-block-group:not(.has-global-padding),
   border: 1px solid var(--wp--custom--color--border);
   border-radius: var(--wp--custom--border--radius);
   padding: var(--wp--preset--spacing--40);
+}
+
+/*-----------------------------------------------------------------------------
+# Flat Blocks Top Margins (for theme < v1.9.5)
+-----------------------------------------------------------------------------*/
+/* Sidebar and Post Featured Image */
+main > .wp-block-columns > .wp-block-column .sidebar,
+main > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-column .sidebar,
+main > .wp-block-columns > .wp-block-column > .wp-block-post-featured-image {
+  margin-block-start: var(--wp--style--block-gap) !important;
 }
 
 /*-----------------------------------------------------------------------------

@@ -16,3 +16,15 @@ footer.has-global-padding.wp-block-group.has-background {
 	padding-left: calc(2 * var(--wp--style--block-gap));
 	padding-right: calc(2 * var(--wp--style--block-gap));
 }
+
+/* Padding for top-level non-colored groups */
+:where(.is-root-container > .wp-block-group:not(main):not(.has-background):not(.is-style-no-padding)) {
+	padding-top: var(--wp--style--block-gap);
+	padding-bottom: var(--wp--style--block-gap);
+}
+
+/* But don't add padding or margin to the main group */
+.is-root-container > main {
+	padding-top: 0;
+	padding-bottom: 0;
+}

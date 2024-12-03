@@ -28,12 +28,12 @@
 
 .wp-block-table.is-style-table-colored tr:nth-child(even),
 .wp-block-table.is-style-table-alternate tr:nth-child(even) {
-	color: var(--wp--preset--color--very-dark-gray);
+	color: var(--wp--preset--color--almost-black);
 	background-color: var(--wp--preset--color--off-white);
 }
 .wp-block-table.is-style-table-colored tr:nth-child(odd),
 .wp-block-table.is-style-table-alternate tr:nth-child(odd) {
-	color: var(--wp--preset--color--very-dark-gray);
+	color: var(--wp--preset--color--almost-black);
 	background-color: var(--wp--preset--color--white);
 }
 

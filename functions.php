@@ -1,13 +1,13 @@
 <?php
 /**
  * File:	functions.php
- * Theme:	Flat Blocks
+ * Theme:	Flat Blocks PRO
  * 
  * Flat Blocks functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package flat-blocks
+ * @package flat-blocks-pro
  * @since	1.0
  */
 
@@ -299,43 +299,34 @@ endif;
 /**
  * Load custom block styles and block patterns (and PRO features if purchased)
  */
+if ( ! function_exists('flatblocks_load_includes') ) :
 
-// Add custom block styles
-if ( file_exists( get_template_directory() . '/inc/block-styles.php' ) ) {
-	require_once get_template_directory() . '/inc/block-styles.php';
-}
+	function flatblocks_load_includes() {
 
-// As a courtesy, add the child theme block styles if they exist.
-if ( file_exists( get_stylesheet_directory() . '/inc/block-styles.php' ) ) {
-	require_once get_stylesheet_directory() . '/inc/block-styles.php';
-}
+		// Build array of include files
+		$includes = array (
+			get_template_directory() . '/inc/block-bindings.php',
+			get_template_directory() . '/inc/block-styles.php',
+			get_template_directory() . '/inc/block-patterns.php',
+			get_template_directory() . '/inc/wp-compatibility.php',
+			get_template_directory() . '/pro/flat-blocks-pro.php',
+// 			get_stylesheet_directory() . '/inc/block-bindings.php',
+			get_stylesheet_directory() . '/inc/block-styles.php',
+			get_stylesheet_directory() . '/inc/block-patterns.php',
+		);
 
-// Add custom block variations
-if ( file_exists( get_template_directory() . '/inc/block-variations.php' ) ) {
-	require_once get_template_directory() . '/inc/block-variations.php';
-}
+		// Allow child themes to override the list
+		$includes = apply_filters( 'flatblocks_load_includes', $includes );
 
-// Add block patterns
-if ( file_exists( get_template_directory() . '/inc/block-patterns.php' ) ) {
-	require_once get_template_directory() . '/inc/block-patterns.php';
-}
-
-// As a courtesy, add the child theme patterns if they exist. Note that child
-// themes can alternately add .php files in the /patterns directory and they will
-// automatically be loaded by WordPress.
-if ( file_exists( get_stylesheet_directory() . '/inc/block-patterns.php' ) ) {
-	require_once get_stylesheet_directory() . '/inc/block-patterns.php';
-}
-
-// Add WordPress version compatibility (for version < 6.6)
-if ( file_exists( get_template_directory() . '/inc/wp-compatibility.php' ) ) {
-	require_once get_template_directory() . '/inc/wp-compatibility.php';
-}
-
-// Include PRO version features
-if ( file_exists( get_template_directory() . '/pro/flat-blocks-pro.php' ) ) {
-	require_once get_template_directory() . '/pro/flat-blocks-pro.php';
-}
+		// Load each of the include files
+		foreach ( $includes as $include ) {
+			if ( file_exists( $include ) ) {
+				include_once $include;
+			}
+		}
+	}
+endif;
+flatblocks_load_includes();
 
 /**
  * Additional Filters

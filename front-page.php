@@ -1,7 +1,7 @@
 <?php
 /**
  * File:	front-page.php
- * Theme:	Flat Blocks
+ * Theme:	Flat Blocks PRO
  * 
  * The Front Page template file
  *
@@ -11,7 +11,7 @@
  * the user has a static page set as the front page, then it loads that page but 
  * also on the blog page it uses home.html instead of index.html template.
  *
- * @package flat-blocks
+ * @package flat-blocks-pro
  * @since 1.2.1
  */
 

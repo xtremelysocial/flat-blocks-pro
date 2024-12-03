@@ -1,14 +1,14 @@
 <?php
 /**
  * File:	wp-compatibility.php
- * Theme:	Flat Blocks
+ * Theme:	Flat Blocks PRO
  *
  * Checks the WordPress version and loads any additional code and/or CSS needed
  * for compatibility. 
  * 
  * TO-DO: Remove this when theme requires WordPress v6.6+.
  * 
- * @package flat-blocks
+ * @package flat-blocks-pro
  * @since	1.6.4
  */
 

@@ -1,7 +1,7 @@
 <?php
 /**
  * File:	block-styles.php
- * Theme:	Flat Blocks
+ * Theme:	Flat Blocks PRO
  * 
  * As of Flat Blocks v1.8, custom block styles are all defined in /styles/blocks/*.json.
  * This function can be used by child themes to register additional ones via PHP. 
@@ -12,9 +12,14 @@
  * TO-DO: Remove this or move it to wp-compatibility.php when theme requires WordPress
  * v6.6+ and Flat Blocks Classic child theme is updated to not use it. 
  * 
- * @package flat-blocks
+ * @package flat-blocks-pro
  * @since	1.0
  */
+
+/**
+ * Register Custom Block Styles
+ */
+add_action( 'init', 'flatblocks_register_block_styles' );
 
 if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 
@@ -25,7 +30,7 @@ if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 		 * actual style will have a prefix of 'is-style-'.
 		 */
 		$custom_styles = array(
-			//'example' => array( esc_html__('Example', 'flat-blocks'), 
+			//'example' => array( __('Example Custom Style', 'flat-blocks'), 
 			//	array( 'group', 'columns' )
 			//),
 		);
@@ -63,4 +68,3 @@ if ( ! function_exists( 'flatblocks_register_block_styles' ) ) :
 		
 	}
 endif;
-add_action( 'init', 'flatblocks_register_block_styles' );

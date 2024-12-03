@@ -1,0 +1,10 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"slug": "alternate-colors",
+	"title": "Alternate Colors",
+	"blockTypes": [ "core/post-template" ],
+	"styles": {
+		"css": ""
+	}
+}

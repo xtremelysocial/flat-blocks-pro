@@ -3,7 +3,6 @@
   * Title: 404 Page Title
   * Slug: flat-blocks/hidden-title-404
   * Categories: flatblocks, text
-  * Block Types:
   * Inserter: false
   * Description: 404 page title as pattern so can allow for language translations
   */
