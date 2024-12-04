@@ -1131,7 +1131,7 @@ footer,
 main > .wp-block-columns > .wp-block-column > .wp-block-post-featured-image,
 .wp-block-post-content > *:first-child:not(.wp-block-cover),
 .wp-block-post-content > #wporg-pattern-preview > div > *:first-child:not(.wp-block-cover),
-.wp-block-query > *:first-child {
+.wp-block-query {
   margin-block-start: var(--wp--style--block-gap);
 }
 

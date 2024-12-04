@@ -30,7 +30,8 @@ footer,
 main > .wp-block-columns > .wp-block-column > .wp-block-post-featured-image,
 .wp-block-post-content > *:first-child:not(.wp-block-cover),
 .wp-block-post-content > #wporg-pattern-preview > div > *:first-child:not(.wp-block-cover),
-.wp-block-query > *:first-child {
+//.wp-block-query > *:first-child {
+.wp-block-query {
 // main > .wp-block-columns > .wp-block-column:not(:has(.wp-block-post-content)),
 // main > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-columns > .wp-block-column:not(:has(.wp-block-post-content)) {
 // main > .wp-block-post-content > *:first-child:not(.wp-block-cover),
