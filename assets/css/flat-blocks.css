@@ -637,8 +637,8 @@ header > .wp-block-cover {
 }
 
 /* Padding for top-level non-colored groups */
-.wp-block-post-content > .wp-block-group:not(.has-background):not(.is-style-no-padding),
-.wp-block-post-content > #wporg-pattern-preview > div > .wp-block-group:not(.has-background):not(.is-style-no-padding) {
+.wp-block-post-content > .wp-block-group:not(:first-child):not(.has-background):not(.is-style-no-padding),
+.wp-block-post-content > #wporg-pattern-preview > div > .wp-block-group:not(:first-child):not(.has-background):not(.is-style-no-padding) {
   padding-top: var(--wp--style--block-gap);
   padding-bottom: var(--wp--style--block-gap);
 }
@@ -1126,17 +1126,20 @@ footer,
 
 /* 
  * Add top margin to the content's first block. This lets the user then set top margin
- * to zero on the first block if they don't want it. 
+ * to zero on it to remove it.
  */
 main > .wp-block-columns > .wp-block-column > .wp-block-post-featured-image,
 .wp-block-post-content > *:first-child:not(.wp-block-cover),
-.wp-block-post-content > #wporg-pattern-preview > div > *:first-child:not(.wp-block-cover) {
+.wp-block-post-content > #wporg-pattern-preview > div > *:first-child:not(.wp-block-cover),
+.wp-block-query > *:first-child {
   margin-block-start: var(--wp--style--block-gap);
 }
 
 /* But don't add top or bottom margin to template part within a column. e.g. Footers. */
 main > .wp-block-columns > .wp-block-column,
 main > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-column,
+.wp-block-query > .wp-block-columns > .wp-block-column,
+.wp-block-query > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-column,
 .wp-block-column > .wp-block-template-part > *:first-child,
 .wp-block-column > .wp-block-group > .wp-block-template-part > .wp-block-social-links {
   margin-block-start: 0;
@@ -1160,12 +1163,6 @@ main > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-column,
 main.wp-block-group:not(.has-global-padding),
 .wp-block-template-part {
   padding: 0;
-}
-
-/* Add padding to Query */
-.wp-block-query {
-  padding-top: var(--wp--style--block-gap);
-  padding-bottom: var(--wp--style--block-gap);
 }
 
 /*-----------------------------------------------------------------------------

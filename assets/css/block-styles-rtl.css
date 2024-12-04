@@ -114,12 +114,9 @@
 }
 
 /* Match our bottom margin */
-#post-comments {
-  margin-bottom: var(--wp--style--block-gap);
-}
-
 /* Hide empty comments so no extra vertical margin */
-#post-comments:empty {
+#post-comments:empty,
+.wp-block-template-part > #post-comments:empty {
   display: none;
 }
 
@@ -573,19 +570,10 @@ ol.is-style-list-plain-centered li {
   display: none;
 }
 
-/* Remove extra margin on Category and Tag descriptions */
+/* Remove bottom margin on Category and Tag descriptions */
 .wp-block-term-description p {
   margin-block-start: 0;
   margin-block-end: 0;
-}
-
-/*-----------------------------------------------------------------------------
-# Query
------------------------------------------------------------------------------*/
-/* Add padding to Query */
-.wp-block-query {
-  padding-top: var(--wp--style--block-gap);
-  padding-bottom: var(--wp--style--block-gap);
 }
 
 /*-----------------------------------------------------------------------------
@@ -630,8 +618,8 @@ ol.is-style-list-plain-centered li {
 -----------------------------------------------------------------------------*/
 /* Match our margins */
 .wp-block-social-links {
-  margin-block-start: var(--wp--style--block-gap);
-  margin-block-end: var(--wp--style--block-gap);
+  margin-block-start: var(--wp--preset--spacing--40);
+  margin-block-end: var(--wp--preset--spacing--40);
 }
 
 /* FIX for WordPres.org theme preview */

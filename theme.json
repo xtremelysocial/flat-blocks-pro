@@ -998,8 +998,8 @@
 				},
 				"spacing": {
 					"margin": {
-						"top": "var(--wp--style--block-gap)",
-						"bottom": "var(--wp--style--block-gap)"
+						"top": "var:preset|spacing|40",
+						"bottom": "var:preset|spacing|40"
 					}
 				}
 			},
@@ -1199,7 +1199,7 @@
 						},
 						"spacing": {
 							"margin": {
-								"top": "var(--wp--style--block-gap)"
+								"top": "var:preset|spacing|40"
 							}
 						}
 					}
@@ -1258,7 +1258,7 @@
 						},
 						"spacing": {
 							"margin": {
-								"top": "var(--wp--style--block-gap)"
+								"top": "var:preset|spacing|40"
 							}
 						}
 					}

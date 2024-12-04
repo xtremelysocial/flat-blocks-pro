@@ -7,9 +7,3 @@ main.wp-block-group:not(.has-global-padding),
 .wp-block-template-part {
 	padding: 0;
 }
-
-/* Add padding to Query */
-.wp-block-query {
-	padding-top: var(--wp--style--block-gap);
-	padding-bottom: var(--wp--style--block-gap);
-}	

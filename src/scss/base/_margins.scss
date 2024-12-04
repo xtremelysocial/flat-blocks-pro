@@ -14,12 +14,12 @@ main,
 footer,
 .wp-block-template-part,
 .wp-block-post-content {
-	margin-block-start: 0; // !important;
+	margin-block-start: 0;
 }
 
 /* 
  * Add top margin to the content's first block. This lets the user then set top margin
- * to zero on the first block if they don't want it. 
+ * to zero on it to remove it.
  */
 //main > *:first-child:not(.wp-block-template-part):not(.wp-block-post-content):not(.wp-block-query),
 // // .wp-block-query > *:first-child:not(.wp-block-cover),
@@ -29,7 +29,8 @@ footer,
 // }
 main > .wp-block-columns > .wp-block-column > .wp-block-post-featured-image,
 .wp-block-post-content > *:first-child:not(.wp-block-cover),
-.wp-block-post-content > #wporg-pattern-preview > div > *:first-child:not(.wp-block-cover) {
+.wp-block-post-content > #wporg-pattern-preview > div > *:first-child:not(.wp-block-cover),
+.wp-block-query > *:first-child {
 // main > .wp-block-columns > .wp-block-column:not(:has(.wp-block-post-content)),
 // main > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-columns > .wp-block-column:not(:has(.wp-block-post-content)) {
 // main > .wp-block-post-content > *:first-child:not(.wp-block-cover),
@@ -44,6 +45,8 @@ main > .wp-block-columns > .wp-block-column > .wp-block-post-featured-image,
 /* But don't add top or bottom margin to template part within a column. e.g. Footers. */
 main > .wp-block-columns > .wp-block-column,
 main > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-column,
+.wp-block-query > .wp-block-columns > .wp-block-column,
+.wp-block-query > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-column,
 .wp-block-column > .wp-block-template-part > *:first-child,
 .wp-block-column > .wp-block-group > .wp-block-template-part > .wp-block-social-links {
     margin-block-start: 0;

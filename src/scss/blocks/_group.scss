@@ -8,8 +8,8 @@
 }
 
 /* Padding for top-level non-colored groups */
-.wp-block-post-content > .wp-block-group:not(.has-background):not(.is-style-no-padding),
-.wp-block-post-content > #wporg-pattern-preview > div > .wp-block-group:not(.has-background):not(.is-style-no-padding) {
+.wp-block-post-content > .wp-block-group:not(:first-child):not(.has-background):not(.is-style-no-padding),
+.wp-block-post-content > #wporg-pattern-preview > div > .wp-block-group:not(:first-child):not(.has-background):not(.is-style-no-padding) {
 	padding-top: var(--wp--style--block-gap);
 	padding-bottom: var(--wp--style--block-gap);
 }
