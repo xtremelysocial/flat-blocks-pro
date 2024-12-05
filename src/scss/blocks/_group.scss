@@ -21,8 +21,7 @@
  */
 @media only screen and (max-width: 781px) {
 	.site-header.has-global-padding.wp-block-group,
-	.site-footer.has-global-padding.wp-block-group { //,
-	//.post-comments.has-global-padding.wp-block-group {
+	.site-footer.has-global-padding.wp-block-group {
 		padding-left: var(--wp--style--root--padding-left) !important;
 		padding-right: var(--wp--style--root--padding-right) !important;
 	}	
@@ -35,7 +34,6 @@
 @media only screen and (max-width: 601px) {
 	.is-nowrap.is-layout-flex.wp-block-group {
 		flex-wrap: wrap;
-		//overflow: hidden;
 	}		
 }
 
@@ -58,14 +56,6 @@
 	padding-left: 0;
 	padding-right: 0;
 }
-
-// /* Group fixed header (position: sticky) */
-// header.wp-block-group.is-position-sticky, 
-// .wp-block-group.is-style-fixed-header,
-// .wp-block-group.has-background.is-style-fixed-header {
-// // 	background-color: var(--wp--preset--color--base, var(--wp--preset--color--background)); 
-//     box-shadow: var(--wp--custom--shadow--default);
-// }
 
 /* Position the fixed header using sticky so we don't have to have top site margin */
 .wp-site-blocks > header.wp-block-template-part:has(header.is-position-sticky),

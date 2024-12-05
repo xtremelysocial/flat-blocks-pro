@@ -8,13 +8,6 @@
 	margin-top: 0; //var(--wp--style--block-gap);
 }
 
-/* Match our bottom margin */
-// TO-DO: See if we can remove having to use our ID
-//.wp-block-group:has(.wp-block-comments) {
-// #post-comments {
-// 	margin-bottom: var(--wp--style--block-gap);
-// }
-
 /* Hide empty comments so no extra vertical margin */
 #post-comments:empty,
 .wp-block-template-part > #post-comments:empty {

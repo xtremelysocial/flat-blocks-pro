@@ -135,6 +135,7 @@ p.is-style-arrow-icon-no-text > a {
 /*-----------------------------------------------------------------------------
 # Separators
 -----------------------------------------------------------------------------*/
+/* FIX bug in WordPress where default and wide separators don't show */
 .is-root-container.is-outline-mode.block-editor-block-list__layout:has(.wp-block-separator) {
   width: 100%;
 }

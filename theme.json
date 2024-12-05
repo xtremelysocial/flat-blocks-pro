@@ -1957,6 +1957,12 @@
 			"area": "footer"
 		},
 		{
+			"name": "footer-motto-social-icons",
+			"title": "Footer w/Motto and Social Icons",
+			"description": "Footer w/motto and huge social icons",
+			"area": "footer"
+		},
+		{
 			"name": "footer-motto-social-site",
 			"title": "Footer w/Motto, Social Icons, and Site Info",
 			"description": "Footer w/motto, social icons, and site info",

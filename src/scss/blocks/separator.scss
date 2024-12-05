@@ -27,5 +27,4 @@
 /* Default separator color when on colored background */
 .has-background .wp-block-separator:not(.has-background) {
  	color: inherit;
-// 	color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
 }

@@ -27,13 +27,11 @@ input:not(.file):not(.wp-element-button) {
 }
 
 select {
-// 	font-family: inherit;
 	font-size: var(--wp--preset--font-size--small, 16px);
 	font-weight: var(--wp--custom--typography--font-weight--normal, 300);
 	line-height: 1.5;
 	border-radius: var(--wp--preset--spacing--20);
 	text-shadow: none;
-	//color: var(--wp--preset--color--contrast);
 	border: 1px solid var(--wp--custom--color--field--border, var(--wp--preset--color--dark-gray));
 }
   

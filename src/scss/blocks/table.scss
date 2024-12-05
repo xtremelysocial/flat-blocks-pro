@@ -10,6 +10,5 @@
 /* On striped tables, alternate our neutral and neutral-alt colors */
 .wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
     background-color: var(--wp--preset--color--light-gray);
-	//color: currentcolor;
 	color: var(--wp--preset--color--almost-black);
 }

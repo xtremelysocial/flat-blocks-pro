@@ -14,12 +14,6 @@
 	min-width: var(--wp--custom--navigation--width, 260px);
 }
 
-///* Increase size of drop-down menu icons */
-// .wp-block-navigation .wp-block-navigation__submenu-icon {
-//     height: 1em;
-//     width: 1em;
-// }
-
 /* FIX for padding on level 2+ nav menu and pages list drop-downs */
 .wp-block-navigation__submenu-container .wp-block-navigation-item.open-on-click .wp-block-navigation-submenu__toggle {
     padding-left: 1em;
@@ -73,25 +67,17 @@
 header .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container {
 
 	// Highlight with custom hover color on HOVER
-// 	& > .wp-block-navigation-item:hover:before,
-// 	& > .wp-block-navigation-item:active:before, 
 	& > .wp-block-navigation-item:hover > *:not(.wp-block-navigation__submenu-container),
 	& > .wp-block-navigation-item:active > *:not(.wp-block-navigation__submenu-container),
-// 	& .wp-block-page-list > .wp-block-navigation-item:hover:before,
-// 	& .wp-block-page-list > .wp-block-navigation-item:active:before,
 	& .wp-block-page-list > .wp-block-navigation-item:hover > *:not(.wp-block-navigation__submenu-container),
 	& .wp-block-page-list > .wp-block-navigation-item:active > *:not(.wp-block-navigation__submenu-container) {
 		color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
 	}
 
 	// Highlight with custom link color and bold on CURRENT
-// 	& > .wp-block-navigation-item:has(.current-menu-ancestor):before,
 	& > .wp-block-navigation-item:has(.current-menu-ancestor) > *:not(.wp-block-navigation__submenu-container),
-// 	& > .wp-block-navigation-item.current-menu-item:before,
 	& > .wp-block-navigation-item.current-menu-item > a[aria-current='page'],
-// 	& .wp-block-page-list > .wp-block-navigation-item.current-menu-ancestor:before,
 	& .wp-block-page-list > .wp-block-navigation-item.current-menu-ancestor > *:not(.wp-block-navigation__submenu-container),
-// 	& .wp-block-page-list > .wp-block-navigation-item.current-menu-item:before,
 	& .wp-block-page-list > .wp-block-navigation-item.current-menu-item > a[aria-current='page'] {
 		color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
 		font-weight: var(--wp--custom--typography--font-weight--medium);
@@ -104,25 +90,17 @@ header .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-n
 header .wp-block-navigation:not(.has-background) .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__container {
 
 	// Highlight with default hover color on HOVER
-// 	& > .wp-block-navigation-item:not(.open-on-click):hover:before,
-// 	& > .wp-block-navigation-item:not(.open-on-click):active:before,
 	& > .wp-block-navigation-item:not(.open-on-click):hover > *,
 	& > .wp-block-navigation-item:not(.open-on-click):active > *,
-// 	& .wp-block-page-list > .wp-block-navigation-item:not(.has-child):hover:before,
-// 	& .wp-block-page-list > .wp-block-navigation-item:not(.has-child):active:before,
 	& .wp-block-page-list > .wp-block-navigation-item:not(.has-child):hover > *,
 	& .wp-block-page-list > .wp-block-navigation-item:not(.has-child):active > * {
 		color: var(--wp--preset--color--highlight-alt);
 	}
 
 	// Highlight with default link color on CURRENT
-// 	& > .wp-block-navigation-item > .current-menu-ancestor:before,
 	& > .wp-block-navigation-item > .current-menu-ancestor > *:not(.wp-block-navigation__submenu-container),
-// 	& > .wp-block-navigation-item.current-menu-item:before,
 	& > .wp-block-navigation-item.current-menu-item > *:not(.wp-block-navigation__submenu-container),
-// 	& .wp-block-page-list > .wp-block-navigation-item.current-menu-ancestor:before,
 	& .wp-block-page-list > .wp-block-navigation-item.current-menu-ancestor > *:not(.wp-block-navigation__submenu-container),
-// 	& .wp-block-page-list > .wp-block-navigation-item.current-menu-item:before,
 	& .wp-block-page-list > .wp-block-navigation-item.current-menu-item > *:not(.wp-block-navigation__submenu-container) {
 		color: var(--wp--preset--color--highlight);
 		font-weight: var(--wp--custom--typography--font-weight--medium);
@@ -136,17 +114,13 @@ header .wp-block-navigation:not(.has-background) .wp-block-navigation__submenu-c
 header .wp-block-navigation .wp-block-page-list .wp-block-pages-list__item.has-child .wp-block-pages-list__item {
 
 	// Highlight with default hover color on HOVER
-// 	&:hover:before,
-// 	&:active:before {
 	&:hover > *:not(.wp-block-navigation__submenu-container),
 	&:active > *:not(.wp-block-navigation__submenu-container) { //,
 		color: var(--wp--preset--color--highlight-alt);
 	}
 
 	// Highlight with default link color on CURRENT
-// 	&:has(.current-menu-ancestor):before,
 	&:has(.current-menu-ancestor) > *:not(.wp-block-navigation__submenu-container),
-// 	&.current-menu-item:before,
 	&.current-menu-item > *:not(.wp-block-navigation__submenu-container) {
 		color: var(--wp--preset--color--highlight);
 		font-weight: var(--wp--custom--typography--font-weight--medium);
@@ -160,17 +134,13 @@ header .wp-block-navigation.has-background .wp-block-navigation__submenu-contain
 header .wp-block-navigation__submenu-container.has-background .wp-block-navigation-item {
 
 	// Highlight with custom hover color on HOVER
-// 	&:hover:before,
-// 	&:active:before,
 	&:hover > *:not(.wp-block-navigation__submenu-container),
 	&:active > *:not(.wp-block-navigation__submenu-container) {
 		color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight-alt));
 	}
 
 	// Highlight with default link color on CURRENT
-// 	&:has(.current-menu-ancestor):before,
 	&:has(.current-menu-ancestor) > *:not(.wp-block-navigation__submenu-container),
-// 	&.current-menu-item:before,
 	&.current-menu-item > *:not(.wp-block-navigation__submenu-container) {
 		color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
 		font-weight: var(--wp--custom--typography--font-weight--medium);

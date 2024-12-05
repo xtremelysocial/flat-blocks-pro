@@ -147,6 +147,22 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 1.9.6 =
+December 4, 2024
+
+Version Summary: All custom Block Styles and Font Sizes now available in the Styles Editor and more updates to support changes in WordPress v6.7.
+
+* Added new Footer with Site Motto (tagline) and Social Icons. Updated the Footer with Site Motto, Social Icons, and Site Info to use it.
+* More updates to the CSS for default vertical margins based on changes made to WordPress v6.7.
+
+= 1.9.5 =
+December 3, 2024
+
+* Fix issue with Post Comments not displaying.
+* Added new Templates for Page No Sidebar, Page No Comments or Sidebar, Post No Sidebar, Post Featured Image No Sidebar. This is so the Flat Blocks Classic child theme that uses them will retain the Template when changing from the child theme to the parent theme and back.
+* Adjusted some of the CSS for vertical margins and padding to use the global Block Gap setting (--wp--style--block-gap) rather than Spacing 40 (--wp--preset--spacing--40). By default these are the same, but if the user changes the Block Gap, the vertical spacing will be more in line. This was also to fix the theme preview on WordPress.org. 
+* Featured Images on Posts and Pages with Sidebars now have a rounded border to match Featured Images in the blog. 
+
 = 1.9.4 =
 December 2, 2024
 

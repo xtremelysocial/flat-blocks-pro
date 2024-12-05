@@ -74,7 +74,12 @@ pre {
   font-size: var(--wp--preset--font-size--small);
 }
 
-/* Style lists with backgrounds */
+/* Style lists */
+ol,
+ul {
+  margin-bottom: 0;
+}
+
 ol.has-background:not(.wp-block-navigation-submenu):not(.wp-block-navigation__container),
 ul.has-background:not(.wp-block-navigation-submenu):not(.wp-block-navigation__container) {
   padding: var(--wp--preset--spacing--40);
@@ -1109,12 +1114,6 @@ p.is-style-arrow-icon > a:after {
 /*------------------------------------------------------------------------------
 # Margins (Vertical spacing)
 ------------------------------------------------------------------------------*/
-/* 
- * Core Wordpress controls vertical spacing by adding the gap setting as top
- * margin between all blocks on the site. However, certain things like 
- * template parts get this too and we want the theme and users to be able to 
- * control it, so push this down to the block level.
- */
 /* Remove top margin and padding from the containers */
 header,
 main,
@@ -1124,38 +1123,44 @@ footer,
   margin-block-start: 0;
 }
 
-/* 
- * Add top margin to the content's first block. This lets the user then set top margin
- * to zero on it to remove it.
+/* Add top margin on blocks that appear before the Post Content, such as
+ * Featured Images or Search.
  */
-main > .wp-block-columns > .wp-block-column > .wp-block-post-featured-image,
-.wp-block-post-content > *:first-child:not(.wp-block-cover),
-.wp-block-post-content > #wporg-pattern-preview > div > *:first-child:not(.wp-block-cover),
-.wp-block-query {
+main > *:not(.wp-block-columns):not(.wp-block-post-content) {
   margin-block-start: var(--wp--style--block-gap);
 }
 
-/* But don't add top or bottom margin to template part within a column. e.g. Footers. */
-main > .wp-block-columns > .wp-block-column,
-main > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-column,
-.wp-block-query > .wp-block-columns > .wp-block-column,
-.wp-block-query > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-column,
-.wp-block-column > .wp-block-template-part > *:first-child,
-.wp-block-column > .wp-block-group > .wp-block-template-part > .wp-block-social-links {
-  margin-block-start: 0;
-  margin-block-end: 0;
+/* 
+ * Push top margin on Post Content down to the block level so users can control 
+ * it by adjusting margin on the block itself.
+ */
+.wp-block-post-content > :first-child:not(.wp-block-cover),
+.wp-block-post-content > #wporg-pattern-preview > div > :first-child:not(.wp-block-cover) {
+  margin-block-start: var(--wp--style--block-gap);
 }
 
-/* 
- * Add bottom margin to the content's last block. This lets the user then set bottom
- * margin to zero on the first block if they don't want it.
- */
-.wp-block-post-content > *:last-child,
-.wp-block-post-content > #wporg-pattern-preview > div > *:last-child {
+/* Push top margin on Columns down to the block level so users can control it */
+:root :where(.wp-block-columns) > .wp-block-column {
+  margin-block-start: 0;
+}
+:root :where(.wp-block-columns) > .wp-block-column > *:not(.wp-block-template-part):not(.wp-block-post-content), :root :where(.wp-block-columns) > .wp-block-column > .wp-block-template-part > * {
+  margin-block-start: var(--wp--style--block-gap);
+}
+:root :where(.wp-block-columns) > .wp-block-column > *:first-child:not(.sidebar):not(.wp-block-post-featured-image), :root :where(.wp-block-columns) > .wp-block-column > .wp-block-template-part > *:first-child:not(.sidebar):not(.wp-block-post-featured-image) {
+  margin-block-start: 0;
+}
+
+/* Add bottom margin to the Post Content's last block so users can control it */
+.wp-block-post-content > :last-child,
+.wp-block-post-content > #wporg-pattern-preview > div > :last-child {
   margin-block-end: var(--wp--style--block-gap);
 }
 
-/* But don't add bottom margin to a template part within a column. e.g. Footers. */
+/* Add bottom margin to the Query Block too */
+.wp-block-query {
+  margin-block-end: var(--wp--style--block-gap);
+}
+
 /*-----------------------------------------------------------------------------
 # Padding (Horizontal and vertical spacing)
 -----------------------------------------------------------------------------*/
@@ -1218,12 +1223,6 @@ main.wp-block-group:not(.has-global-padding),
 # Flat Blocks Top Margins (for theme < v1.9.5)
 -----------------------------------------------------------------------------*/
 /* Sidebar and Post Featured Image */
-main > .wp-block-columns > .wp-block-column .sidebar,
-main > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-column .sidebar,
-main > .wp-block-columns > .wp-block-column > .wp-block-post-featured-image {
-  margin-block-start: var(--wp--style--block-gap) !important;
-}
-
 /*-----------------------------------------------------------------------------
 # Utilities
 -----------------------------------------------------------------------------*/

@@ -5,8 +5,6 @@
 
 // Assign color to links
 %link-color {
-// 	& :where(a:not(.wp-element-button)) {
-// 	& :where(a, .is-style-outline a, [class*="is-style-button-outline-"] a) {
 	& a, 
 	& .is-style-outline > .wp-element-button, 
 	& [class*="is-style-button-outline-"] > .wp-element-button {

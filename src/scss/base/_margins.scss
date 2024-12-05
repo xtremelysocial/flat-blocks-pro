@@ -1,14 +1,8 @@
 /*------------------------------------------------------------------------------
 # Margins (Vertical spacing)
 ------------------------------------------------------------------------------*/
-/* 
- * Core Wordpress controls vertical spacing by adding the gap setting as top
- * margin between all blocks on the site. However, certain things like 
- * template parts get this too and we want the theme and users to be able to 
- * control it, so push this down to the block level.
- */
- 
- /* Remove top margin and padding from the containers */
+
+/* Remove top margin and padding from the containers */
 header,
 main,
 footer,
@@ -17,63 +11,46 @@ footer,
 	margin-block-start: 0;
 }
 
-/* 
- * Add top margin to the content's first block. This lets the user then set top margin
- * to zero on it to remove it.
+/* Add top margin on blocks that appear before the Post Content, such as
+ * Featured Images or Search.
  */
-//main > *:first-child:not(.wp-block-template-part):not(.wp-block-post-content):not(.wp-block-query),
-// // .wp-block-query > *:first-child:not(.wp-block-cover),
-// main > .wp-block-post-content > *:first-child:not(.wp-block-cover),
-// main > .wp-block-post-content > #wporg-pattern-preview > div > *:first-child:not(.wp-block-cover) {
-//  	margin-block-start: var(--wp--style--block-gap);
-// }
-main > .wp-block-columns > .wp-block-column > .wp-block-post-featured-image,
-.wp-block-post-content > *:first-child:not(.wp-block-cover),
-.wp-block-post-content > #wporg-pattern-preview > div > *:first-child:not(.wp-block-cover),
-//.wp-block-query > *:first-child {
-.wp-block-query {
-// main > .wp-block-columns > .wp-block-column:not(:has(.wp-block-post-content)),
-// main > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-columns > .wp-block-column:not(:has(.wp-block-post-content)) {
-// main > .wp-block-post-content > *:first-child:not(.wp-block-cover),
-// main > .wp-block-post-content > #wporg-pattern-preview > div > *:first-child:not(.wp-block-cover),
-// main > .wp-block-columns > .wp-block-column:has(.sidebar),
-// main > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-column .sidebar {
-// main > .wp-block-columns > .wp-block-column,
-// main > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-column {
+main > *:not(.wp-block-columns):not(.wp-block-post-content) {
  	margin-block-start: var(--wp--style--block-gap);
 }
 
-/* But don't add top or bottom margin to template part within a column. e.g. Footers. */
-main > .wp-block-columns > .wp-block-column,
-main > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-column,
-.wp-block-query > .wp-block-columns > .wp-block-column,
-.wp-block-query > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-column,
-.wp-block-column > .wp-block-template-part > *:first-child,
-.wp-block-column > .wp-block-group > .wp-block-template-part > .wp-block-social-links {
-    margin-block-start: 0;
-    margin-block-end: 0;
-
-}
-// :root :where(.wp-block-column.is-layout-flow) > .wp-block-template-part > *:first-child {
-// // :root :where(.wp-block-column.is-layout-flow) > .wp-block-template-part > *:first-child:not(.sidebar) {
-//  	margin-block-start: 0;
-// }
-
 /* 
- * Add bottom margin to the content's last block. This lets the user then set bottom
- * margin to zero on the first block if they don't want it.
+ * Push top margin on Post Content down to the block level so users can control 
+ * it by adjusting margin on the block itself.
  */
-// // .wp-block-query > *:last-child,
-// .wp-block-post-content > *:last-child {
-//   margin-block-end: var(--wp--style--block-gap);
-// }
-.wp-block-post-content > *:last-child,
-.wp-block-post-content > #wporg-pattern-preview > div > *:last-child {
-  margin-block-end: var(--wp--style--block-gap);
+.wp-block-post-content > :first-child:not(.wp-block-cover),
+.wp-block-post-content > #wporg-pattern-preview > div > :first-child:not(.wp-block-cover) {
+ 	margin-block-start: var(--wp--style--block-gap);
 }
 
-/* But don't add bottom margin to a template part within a column. e.g. Footers. */
-// .wp-block-column > .wp-block-template-part > *:last-child,
-// .wp-block-column > .wp-block-group > .wp-block-template-part > .wp-block-social-links {
-//   margin-block-end: 0;
-// }
+/* Push top margin on Columns down to the block level so users can control it */
+:root :where(.wp-block-columns) {
+	& > .wp-block-column {
+		margin-block-start: 0;
+	}
+	
+	& > .wp-block-column > *:not(.wp-block-template-part):not(.wp-block-post-content),
+	& > .wp-block-column > .wp-block-template-part > * {
+		margin-block-start: var(--wp--style--block-gap);
+	}
+
+	& > .wp-block-column > *:first-child:not(.sidebar):not(.wp-block-post-featured-image),
+	& > .wp-block-column > .wp-block-template-part > *:first-child:not(.sidebar):not(.wp-block-post-featured-image) {
+    	margin-block-start: 0;
+	}
+}
+
+/* Add bottom margin to the Post Content's last block so users can control it */
+.wp-block-post-content > :last-child,
+.wp-block-post-content > #wporg-pattern-preview > div > :last-child {
+	margin-block-end: var(--wp--style--block-gap);
+}
+
+/* Add bottom margin to the Query Block too */
+.wp-block-query {
+	margin-block-end: var(--wp--style--block-gap);
+}
