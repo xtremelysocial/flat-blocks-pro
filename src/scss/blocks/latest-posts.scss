@@ -59,3 +59,9 @@
 	overflow: visible;
 	margin-bottom: 0;
 }
+
+/* No Read More link */
+.is-style-no-readmore .wp-block-latest-posts__post-excerpt > .wp-block-latest-posts__read-more {
+	display: none;
+}
+

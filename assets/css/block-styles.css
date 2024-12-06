@@ -344,6 +344,11 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
   margin-bottom: 0;
 }
 
+/* No Read More link */
+.is-style-no-readmore .wp-block-latest-posts__post-excerpt > .wp-block-latest-posts__read-more {
+  display: none;
+}
+
 /*-----------------------------------------------------------------------------
 # List: Custom
 -----------------------------------------------------------------------------*/
@@ -502,6 +507,7 @@ ol.is-style-list-plain-centered li {
 /*-----------------------------------------------------------------------------
 # Post Excerpt
 -----------------------------------------------------------------------------*/
+.wp-block-post-excerpt > p,
 .wp-block-post-excerpt > .wp-block-post-excerpt__excerpt {
   margin-bottom: 0;
 }

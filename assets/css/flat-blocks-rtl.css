@@ -332,7 +332,7 @@ body .is-layout-constrained > .alignright {
  * Override highlight (link, button) color in theme.json with:
  *		--wp--custom--color--highlight--{color}
  */
-.has-primary-background-color a, .has-secondary-background-color a, .has-tertiary-background-color a, .has-primary-alt-background-color a, .has-secondary-alt-background-color a, .has-tertiary-alt-background-color a, .has-highlight-background-color a, .has-highlight-alt-background-color a, .has-dark-gray-background-color a, .has-very-dark-gray-background-color a, .has-green-background-color a, .has-dark-bright-green-background-color a, .has-midnight-blue-background-color a, .has-dark-midnight-blue-background-color a, .has-orange-background-color a, .has-dark-orange-background-color a, .has-blue-background-color a, .has-dark-blue-background-color a, .has-purple-background-color a, .has-dark-purple-background-color a, .has-red-background-color a, .has-dark-red-background-color a, .has-light-green-background-color a, .has-bright-green-background-color a, .has-light-orange-background-color a, .has-light-blue-background-color a, .has-light-red-background-color a, .has-light-purple-background-color a, .has-light-yellow-background-color a, .has-yellow-background-color a, .has-primary-background-color .is-style-outline > .wp-element-button, .has-secondary-background-color .is-style-outline > .wp-element-button, .has-tertiary-background-color .is-style-outline > .wp-element-button, .has-primary-alt-background-color .is-style-outline > .wp-element-button, .has-secondary-alt-background-color .is-style-outline > .wp-element-button, .has-tertiary-alt-background-color .is-style-outline > .wp-element-button, .has-highlight-background-color .is-style-outline > .wp-element-button, .has-highlight-alt-background-color .is-style-outline > .wp-element-button, .has-dark-gray-background-color .is-style-outline > .wp-element-button, .has-very-dark-gray-background-color .is-style-outline > .wp-element-button, .has-green-background-color .is-style-outline > .wp-element-button, .has-dark-bright-green-background-color .is-style-outline > .wp-element-button, .has-midnight-blue-background-color .is-style-outline > .wp-element-button, .has-dark-midnight-blue-background-color .is-style-outline > .wp-element-button, .has-orange-background-color .is-style-outline > .wp-element-button, .has-dark-orange-background-color .is-style-outline > .wp-element-button, .has-blue-background-color .is-style-outline > .wp-element-button, .has-dark-blue-background-color .is-style-outline > .wp-element-button, .has-purple-background-color .is-style-outline > .wp-element-button, .has-dark-purple-background-color .is-style-outline > .wp-element-button, .has-red-background-color .is-style-outline > .wp-element-button, .has-dark-red-background-color .is-style-outline > .wp-element-button, .has-light-green-background-color .is-style-outline > .wp-element-button, .has-bright-green-background-color .is-style-outline > .wp-element-button, .has-light-orange-background-color .is-style-outline > .wp-element-button, .has-light-blue-background-color .is-style-outline > .wp-element-button, .has-light-red-background-color .is-style-outline > .wp-element-button, .has-light-purple-background-color .is-style-outline > .wp-element-button, .has-light-yellow-background-color .is-style-outline > .wp-element-button, .has-yellow-background-color .is-style-outline > .wp-element-button, .has-primary-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-secondary-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-tertiary-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-primary-alt-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-secondary-alt-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-tertiary-alt-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-highlight-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-highlight-alt-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-dark-gray-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-very-dark-gray-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-green-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-dark-bright-green-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-midnight-blue-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-dark-midnight-blue-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-orange-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-dark-orange-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-blue-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-dark-blue-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-purple-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-dark-purple-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-red-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-dark-red-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-light-green-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-bright-green-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-light-orange-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-light-blue-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-light-red-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-light-purple-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-light-yellow-background-color [class*=is-style-button-outline-] > .wp-element-button, .has-yellow-background-color [class*=is-style-button-outline-] > .wp-element-button {
+.has-primary-background-color:not(.has-link-color) a, .has-secondary-background-color:not(.has-link-color) a, .has-tertiary-background-color:not(.has-link-color) a, .has-primary-alt-background-color:not(.has-link-color) a, .has-secondary-alt-background-color:not(.has-link-color) a, .has-tertiary-alt-background-color:not(.has-link-color) a, .has-highlight-background-color:not(.has-link-color) a, .has-highlight-alt-background-color:not(.has-link-color) a, .has-dark-gray-background-color:not(.has-link-color) a, .has-very-dark-gray-background-color:not(.has-link-color) a, .has-green-background-color:not(.has-link-color) a, .has-dark-bright-green-background-color:not(.has-link-color) a, .has-midnight-blue-background-color:not(.has-link-color) a, .has-dark-midnight-blue-background-color:not(.has-link-color) a, .has-orange-background-color:not(.has-link-color) a, .has-dark-orange-background-color:not(.has-link-color) a, .has-blue-background-color:not(.has-link-color) a, .has-dark-blue-background-color:not(.has-link-color) a, .has-purple-background-color:not(.has-link-color) a, .has-dark-purple-background-color:not(.has-link-color) a, .has-red-background-color:not(.has-link-color) a, .has-dark-red-background-color:not(.has-link-color) a, .has-light-green-background-color:not(.has-link-color) a, .has-bright-green-background-color:not(.has-link-color) a, .has-light-orange-background-color:not(.has-link-color) a, .has-light-blue-background-color:not(.has-link-color) a, .has-light-red-background-color:not(.has-link-color) a, .has-light-purple-background-color:not(.has-link-color) a, .has-light-yellow-background-color:not(.has-link-color) a, .has-yellow-background-color:not(.has-link-color) a, .has-primary-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-secondary-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-tertiary-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-primary-alt-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-secondary-alt-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-tertiary-alt-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-highlight-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-highlight-alt-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-dark-gray-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-very-dark-gray-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-green-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-dark-bright-green-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-midnight-blue-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-dark-midnight-blue-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-orange-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-dark-orange-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-blue-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-dark-blue-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-purple-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-dark-purple-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-red-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-dark-red-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-light-green-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-bright-green-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-light-orange-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-light-blue-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-light-red-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-light-purple-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-light-yellow-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-yellow-background-color:not(.has-link-color) .is-style-outline > .wp-element-button, .has-primary-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-secondary-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-tertiary-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-primary-alt-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-secondary-alt-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-tertiary-alt-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-highlight-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-highlight-alt-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-dark-gray-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-very-dark-gray-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-green-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-dark-bright-green-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-midnight-blue-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-dark-midnight-blue-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-orange-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-dark-orange-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-blue-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-dark-blue-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-purple-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-dark-purple-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-red-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-dark-red-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-light-green-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-bright-green-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-light-orange-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-light-blue-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-light-red-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-light-purple-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-light-yellow-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button, .has-yellow-background-color:not(.has-link-color) [class*=is-style-button-outline-] > .wp-element-button {
   color: var(--wp--custom--color--highlight);
 }
 
@@ -372,41 +372,57 @@ body .is-layout-constrained > .alignright {
  */
 .has-primary-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--primary, var(--wp--preset--color--foreground-alt));
+}
+.has-primary-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--primary, inherit);
 }
 
 .has-secondary-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--secondary, var(--wp--preset--color--foreground-alt));
+}
+.has-secondary-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--secondary, inherit);
 }
 
 .has-tertiary-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--tertiary, var(--wp--preset--color--foreground-alt));
+}
+.has-tertiary-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--tertiary, inherit);
 }
 
 .has-primary-alt-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--primary-alt, var(--wp--preset--color--foreground-alt));
+}
+.has-primary-alt-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--primary-alt, inherit);
 }
 
 .has-secondary-alt-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--secondary-alt, var(--wp--preset--color--foreground-alt));
+}
+.has-secondary-alt-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--secondary-alt, inherit);
 }
 
 .has-tertiary-alt-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--tertiary-alt, var(--wp--preset--color--foreground-alt));
+}
+.has-tertiary-alt-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--tertiary-alt, inherit);
 }
 
 .has-highlight-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--highlight, var(--wp--preset--color--foreground-alt));
+}
+.has-highlight-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--highlight, inherit);
 }
 
 .has-highlight-alt-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--highlight-alt, var(--wp--preset--color--foreground-alt));
+}
+.has-highlight-alt-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--highlight-alt, inherit);
 }
 
@@ -415,71 +431,99 @@ body .is-layout-constrained > .alignright {
  */
 .has-dark-gray-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-gray, var(--wp--preset--color--off-white));
+}
+.has-dark-gray-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-gray, inherit);
 }
 
 .has-very-dark-gray-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--very-dark-gray, var(--wp--preset--color--off-white));
+}
+.has-very-dark-gray-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--very-dark-gray, inherit);
 }
 
 .has-green-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--green, var(--wp--preset--color--off-white));
+}
+.has-green-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--green, inherit);
 }
 
 .has-dark-bright-green-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-bright-green, var(--wp--preset--color--off-white));
+}
+.has-dark-bright-green-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-bright-green, inherit);
 }
 
 .has-midnight-blue-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--midnight-blue, var(--wp--preset--color--off-white));
+}
+.has-midnight-blue-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--midnight-blue, inherit);
 }
 
 .has-dark-midnight-blue-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-midnight-blue, var(--wp--preset--color--off-white));
+}
+.has-dark-midnight-blue-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-midnight-blue, inherit);
 }
 
 .has-orange-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--orange, var(--wp--preset--color--off-white));
+}
+.has-orange-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--orange, inherit);
 }
 
 .has-dark-orange-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-orange, var(--wp--preset--color--off-white));
+}
+.has-dark-orange-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-orange, inherit);
 }
 
 .has-blue-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--blue, var(--wp--preset--color--off-white));
+}
+.has-blue-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--blue, inherit);
 }
 
 .has-dark-blue-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-blue, var(--wp--preset--color--off-white));
+}
+.has-dark-blue-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-blue, inherit);
 }
 
 .has-purple-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--purple, var(--wp--preset--color--off-white));
+}
+.has-purple-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--purple, inherit);
 }
 
 .has-dark-purple-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-purple, var(--wp--preset--color--off-white));
+}
+.has-dark-purple-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-purple, inherit);
 }
 
 .has-red-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--red, var(--wp--preset--color--off-white));
+}
+.has-red-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--red, inherit);
 }
 
 .has-dark-red-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--dark-red, var(--wp--preset--color--off-white));
+}
+.has-dark-red-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--dark-red, inherit);
 }
 
@@ -488,31 +532,43 @@ body .is-layout-constrained > .alignright {
  */
 .has-light-green-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--light-green, var(--wp--preset--color--white));
+}
+.has-light-green-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--light-green, inherit);
 }
 
 .has-bright-green-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--bright-green, var(--wp--preset--color--white));
+}
+.has-bright-green-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--bright-green, inherit);
 }
 
 .has-light-orange-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--light-orange, var(--wp--preset--color--white));
+}
+.has-light-orange-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--light-orange, inherit);
 }
 
 .has-light-blue-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--light-blue, var(--wp--preset--color--white));
+}
+.has-light-blue-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--light-blue, inherit);
 }
 
 .has-light-red-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--light-red, var(--wp--preset--color--white));
+}
+.has-light-red-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--light-red, inherit);
 }
 
 .has-light-purple-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--light-purple, var(--wp--preset--color--white));
+}
+.has-light-purple-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--light-purple, inherit);
 }
 
@@ -521,11 +577,15 @@ body .is-layout-constrained > .alignright {
  */
 .has-light-yellow-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--light-yellow, var(--wp--preset--color--almost-black));
+}
+.has-light-yellow-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--light-yellow, inherit);
 }
 
 .has-yellow-background-color {
   --wp--custom--color--contrast: var(--wp--custom--color--contrast--yellow, var(--wp--preset--color--almost-black));
+}
+.has-yellow-background-color:not(.has-link-color) {
   --wp--custom--color--highlight: var(--wp--custom--color--highlight--yellow, inherit);
 }
 
@@ -690,7 +750,7 @@ header > .wp-block-cover {
 }
 
 /* Position the fixed header using sticky so we don't have to have top site margin */
-.wp-site-blocks > header.wp-block-template-part:has(header.is-position-sticky),
+.wp-site-blocks > header:has(.is-position-sticky),
 .wp-site-blocks > header:has(.is-style-fixed-header) {
   position: sticky;
   top: 0;
@@ -700,20 +760,20 @@ header > .wp-block-cover {
 }
 
 /* If WordPress Admin Bar, then adjust fixed header position so its underneath it */
-.admin-bar .wp-site-blocks > header.wp-block-template-part:has(header.is-position-sticky),
+.admin-bar .wp-site-blocks > header:has(.is-position-sticky),
 .admin-bar .wp-site-blocks > header:has(.is-style-fixed-header) {
   top: var(--wp-admin--admin-bar--height, 32px);
 }
 
 /* Position the fixed footer using sticky, but only on large screens */
-.wp-site-blocks > footer.wp-block-template-part:has(footer.is-position-sticky) {
+.wp-site-blocks > footer:has(.is-position-sticky) {
   position: relative;
   bottom: 0;
   z-index: 9;
 }
 
 @media only screen and (min-width: 1100px) {
-  .wp-site-blocks > footer.wp-block-template-part:has(footer.is-position-sticky) {
+  .wp-site-blocks > footer:has(.is-position-sticky) {
     position: sticky;
   }
 }
@@ -765,10 +825,10 @@ header > .wp-block-cover {
 /*-----------------------------------------------------------------------------
 # On DESKTOP, highlight TOP-LEVEL links
 -----------------------------------------------------------------------------*/
-header .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container > .wp-block-navigation-item:hover > *:not(.wp-block-navigation__submenu-container), header .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container > .wp-block-navigation-item:active > *:not(.wp-block-navigation__submenu-container), header .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .wp-block-page-list > .wp-block-navigation-item:hover > *:not(.wp-block-navigation__submenu-container), header .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .wp-block-page-list > .wp-block-navigation-item:active > *:not(.wp-block-navigation__submenu-container) {
+header .wp-block-navigation .wp-block-navigation__container > .wp-block-navigation-item:hover > *:not(.wp-block-navigation__submenu-container), header .wp-block-navigation .wp-block-navigation__container > .wp-block-navigation-item:active > *:not(.wp-block-navigation__submenu-container), header .wp-block-navigation .wp-block-navigation__container .wp-block-page-list > .wp-block-navigation-item:hover > *:not(.wp-block-navigation__submenu-container), header .wp-block-navigation .wp-block-navigation__container .wp-block-page-list > .wp-block-navigation-item:active > *:not(.wp-block-navigation__submenu-container) {
   color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
 }
-header .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container > .wp-block-navigation-item:has(.current-menu-ancestor) > *:not(.wp-block-navigation__submenu-container), header .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container > .wp-block-navigation-item.current-menu-item > a[aria-current=page], header .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .wp-block-page-list > .wp-block-navigation-item.current-menu-ancestor > *:not(.wp-block-navigation__submenu-container), header .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container .wp-block-page-list > .wp-block-navigation-item.current-menu-item > a[aria-current=page] {
+header .wp-block-navigation .wp-block-navigation__container > .wp-block-navigation-item:has(.current-menu-ancestor) > *:not(.wp-block-navigation__submenu-container), header .wp-block-navigation .wp-block-navigation__container > .wp-block-navigation-item.current-menu-item > a[aria-current=page], header .wp-block-navigation .wp-block-navigation__container .wp-block-page-list > .wp-block-navigation-item.current-menu-ancestor > *:not(.wp-block-navigation__submenu-container), header .wp-block-navigation .wp-block-navigation__container .wp-block-page-list > .wp-block-navigation-item.current-menu-item > a[aria-current=page] {
   color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
   font-weight: var(--wp--custom--typography--font-weight--medium);
 }
@@ -1123,10 +1183,22 @@ footer,
   margin-block-start: 0;
 }
 
+/* Handle top margin in Groups and Columns that have template parts in them */
+:root :where(.is-layout-flow) > .wp-block-template-part > *,
+:root :where(.is-layout-constrained) > .wp-block-template-part > * {
+  margin-block-start: var(--wp--style--block-gap);
+}
+
+:root :where(.is-layout-flow) > .wp-block-template-part:first-child > :first-child,
+:root :where(.is-layout-constrained) > .wp-block-template-part:first-child > :first-child {
+  margin-block-start: 0;
+}
+
 /* Add top margin on blocks that appear before the Post Content, such as
  * Featured Images or Search.
  */
-main > *:not(.wp-block-columns):not(.wp-block-post-content) {
+main > .wp-block-columns > .wp-block-column > .wp-block-post-featured-image,
+main > .wp-block-group > .wp-block-search {
   margin-block-start: var(--wp--style--block-gap);
 }
 
@@ -1134,30 +1206,16 @@ main > *:not(.wp-block-columns):not(.wp-block-post-content) {
  * Push top margin on Post Content down to the block level so users can control 
  * it by adjusting margin on the block itself.
  */
+.wp-block-query .wp-block-post-template,
 .wp-block-post-content > :first-child:not(.wp-block-cover),
 .wp-block-post-content > #wporg-pattern-preview > div > :first-child:not(.wp-block-cover) {
   margin-block-start: var(--wp--style--block-gap);
 }
 
-/* Push top margin on Columns down to the block level so users can control it */
-:root :where(.wp-block-columns) > .wp-block-column {
-  margin-block-start: 0;
-}
-:root :where(.wp-block-columns) > .wp-block-column > *:not(.wp-block-template-part):not(.wp-block-post-content), :root :where(.wp-block-columns) > .wp-block-column > .wp-block-template-part > * {
-  margin-block-start: var(--wp--style--block-gap);
-}
-:root :where(.wp-block-columns) > .wp-block-column > *:first-child:not(.sidebar):not(.wp-block-post-featured-image), :root :where(.wp-block-columns) > .wp-block-column > .wp-block-template-part > *:first-child:not(.sidebar):not(.wp-block-post-featured-image) {
-  margin-block-start: 0;
-}
-
 /* Add bottom margin to the Post Content's last block so users can control it */
+.wp-block-query,
 .wp-block-post-content > :last-child,
 .wp-block-post-content > #wporg-pattern-preview > div > :last-child {
-  margin-block-end: var(--wp--style--block-gap);
-}
-
-/* Add bottom margin to the Query Block too */
-.wp-block-query {
   margin-block-end: var(--wp--style--block-gap);
 }
 

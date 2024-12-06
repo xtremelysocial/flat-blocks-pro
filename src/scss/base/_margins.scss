@@ -11,10 +11,22 @@ footer,
 	margin-block-start: 0;
 }
 
+/* Handle top margin in Groups and Columns that have template parts in them */
+:root :where(.is-layout-flow) > .wp-block-template-part > *,
+:root :where(.is-layout-constrained) > .wp-block-template-part > * {
+ 	margin-block-start: var(--wp--style--block-gap);
+}
+
+:root :where(.is-layout-flow) > .wp-block-template-part:first-child > :first-child,
+:root :where(.is-layout-constrained) > .wp-block-template-part:first-child > :first-child {
+	margin-block-start: 0;
+}
+
 /* Add top margin on blocks that appear before the Post Content, such as
  * Featured Images or Search.
  */
-main > *:not(.wp-block-columns):not(.wp-block-post-content) {
+main > .wp-block-columns > .wp-block-column > .wp-block-post-featured-image, 
+main > .wp-block-group > .wp-block-search {
  	margin-block-start: var(--wp--style--block-gap);
 }
 
@@ -22,35 +34,14 @@ main > *:not(.wp-block-columns):not(.wp-block-post-content) {
  * Push top margin on Post Content down to the block level so users can control 
  * it by adjusting margin on the block itself.
  */
+.wp-block-query .wp-block-post-template,
 .wp-block-post-content > :first-child:not(.wp-block-cover),
 .wp-block-post-content > #wporg-pattern-preview > div > :first-child:not(.wp-block-cover) {
  	margin-block-start: var(--wp--style--block-gap);
 }
-
-/* Push top margin on Columns down to the block level so users can control it */
-:root :where(.wp-block-columns) {
-	& > .wp-block-column {
-		margin-block-start: 0;
-	}
-	
-	& > .wp-block-column > *:not(.wp-block-template-part):not(.wp-block-post-content),
-	& > .wp-block-column > .wp-block-template-part > * {
-		margin-block-start: var(--wp--style--block-gap);
-	}
-
-	& > .wp-block-column > *:first-child:not(.sidebar):not(.wp-block-post-featured-image),
-	& > .wp-block-column > .wp-block-template-part > *:first-child:not(.sidebar):not(.wp-block-post-featured-image) {
-    	margin-block-start: 0;
-	}
-}
-
 /* Add bottom margin to the Post Content's last block so users can control it */
+.wp-block-query, 
 .wp-block-post-content > :last-child,
 .wp-block-post-content > #wporg-pattern-preview > div > :last-child {
-	margin-block-end: var(--wp--style--block-gap);
-}
-
-/* Add bottom margin to the Query Block too */
-.wp-block-query {
 	margin-block-end: var(--wp--style--block-gap);
 }

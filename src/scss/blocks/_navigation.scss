@@ -64,7 +64,7 @@
 /*-----------------------------------------------------------------------------
 # On DESKTOP, highlight TOP-LEVEL links
 -----------------------------------------------------------------------------*/
-header .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container {
+header .wp-block-navigation .wp-block-navigation__container {
 
 	// Highlight with custom hover color on HOVER
 	& > .wp-block-navigation-item:hover > *:not(.wp-block-navigation__submenu-container),

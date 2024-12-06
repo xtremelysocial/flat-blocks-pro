@@ -20,16 +20,8 @@
 /*-----------------------------------------------------------------------------
 # Margins (vertical spacing)
 -----------------------------------------------------------------------------*/
-/* 
- * Add top margin to the container's first block and then between 
- * subsequent blocks 
- */
-:where(.is-root-container > *:first-child:not(.wp-block-template-part):not(.wp-block-cover):not(.wp-block-query)),
-:where(.is-root-container > *:not(main):not(:first-child):not(:last-child)) {
- 	margin-block-start: var(--wp--style--block-gap);
-}
-
-/* But don't add top margin to main container group */
-.is-root-container > main {
+/* Don't add top margin to main container group or template parts*/
+.is-root-container > main,
+.is-root-container .wp-block-template-part {
 	margin-block-start: 0;
 }

@@ -54,13 +54,14 @@
 
 			// If link color, set it depending on whether there is a default				
 			@if $highlight {
-				@if $default {
-					--wp--custom--color--highlight: var(--wp--custom--color--highlight--#{$color}, var(--wp--custom--color--highlight--#{$default}, #{$highlight}));		
-				} @else {
-					--wp--custom--color--highlight: var(--wp--custom--color--highlight--#{$color}, #{$highlight});
+				&:not(.has-link-color) {
+					@if $default {
+						--wp--custom--color--highlight: var(--wp--custom--color--highlight--#{$color}, var(--wp--custom--color--highlight--#{$default}, #{$highlight}));		
+					} @else {
+						--wp--custom--color--highlight: var(--wp--custom--color--highlight--#{$color}, #{$highlight});
+					}
+					@extend %link-color;
 				}
-				@extend %link-color;
-
 			// If no link color, then leave opacity alone on hover 
 			} @else {
 				@extend %link-hover-opacity-1;
