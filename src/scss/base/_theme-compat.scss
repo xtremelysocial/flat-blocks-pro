@@ -46,9 +46,9 @@
 /*-----------------------------------------------------------------------------
 # Flat Blocks Top Margins (for theme < v1.9.5)
 -----------------------------------------------------------------------------*/
-/* Sidebar and Post Featured Image */
-// main > .wp-block-columns > .wp-block-column .sidebar,
-// main > #wporg-pattern-preview > div > .wp-block-columns > .wp-block-column .sidebar, 
-// main > .wp-block-columns > .wp-block-column > .wp-block-post-featured-image {
-//  	margin-block-start: var(--wp--style--block-gap) !important;
-// }
+
+/* Add top margin on blocks that appear before the Post Content */
+main > .wp-block-columns > .wp-block-column > .wp-block-post-featured-image, 
+main > .wp-block-group > .wp-block-search {
+ 	margin-block-start: var(--wp--style--block-gap);
+}

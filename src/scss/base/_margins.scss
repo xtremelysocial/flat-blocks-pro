@@ -17,28 +17,30 @@ footer,
  	margin-block-start: var(--wp--style--block-gap);
 }
 
+// :root :where(.is-layout-flow) > .wp-block-template-part > :first-child,
+// :root :where(.is-layout-constrained) > .wp-block-template-part > :first-child {
 :root :where(.is-layout-flow) > .wp-block-template-part:first-child > :first-child,
 :root :where(.is-layout-constrained) > .wp-block-template-part:first-child > :first-child {
 	margin-block-start: 0;
 }
 
-/* Add top margin on blocks that appear before the Post Content, such as
- * Featured Images or Search.
- */
-main > .wp-block-columns > .wp-block-column > .wp-block-post-featured-image, 
-main > .wp-block-group > .wp-block-search {
- 	margin-block-start: var(--wp--style--block-gap);
+/* Don't put any top margin on the individual columns */
+:root :where(.wp-block-columns-is-layout-flow) > .wp-block-column,
+:root :where(.wp-block-columns-is-layout-constrained) > .wp-block-column {
+	margin-block-start: 0;
 }
 
 /* 
  * Push top margin on Post Content down to the block level so users can control 
  * it by adjusting margin on the block itself.
  */
-.wp-block-query .wp-block-post-template,
+.is-layout-flow > .wp-block-post-template,
+.is-layout-constrained > .wp-block-post-template,
 .wp-block-post-content > :first-child:not(.wp-block-cover),
 .wp-block-post-content > #wporg-pattern-preview > div > :first-child:not(.wp-block-cover) {
  	margin-block-start: var(--wp--style--block-gap);
 }
+
 /* Add bottom margin to the Post Content's last block so users can control it */
 .wp-block-query, 
 .wp-block-post-content > :last-child,

@@ -1381,6 +1381,14 @@
 					}
 				}				
 			},
+			"core/comments": {
+				"spacing": {
+					"margin": {
+						"top": "var:preset|spacing|40",
+						"bottom": "var:preset|spacing|40"
+					}
+				}
+			},
 			"core/comments-title": {
 				"spacing": {
 					"margin": {
