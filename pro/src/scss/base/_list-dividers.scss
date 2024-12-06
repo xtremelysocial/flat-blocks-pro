@@ -3,7 +3,8 @@
 --------------------------------------------------------------*/
 
 /* Apply to ALL Dividers */
-.is-style-list-dividers {
+.is-style-list-dividers,
+.wp-block-list.is-style-list-dividers {
 	list-style: none;
 	padding-left: 0;
 }
@@ -15,7 +16,3 @@
 	padding-top: var(--wp--preset--spacing--30);
 	margin-top: var(--wp--preset--spacing--30);
 }
-
-// .is-style-list-dividers li:not(:first-child) {
-// 	padding-left: 0;
-// }

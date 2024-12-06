@@ -79,6 +79,11 @@ GNU General Public License for more details.
     color: var(--wp--preset--color--primary);
 }
 
+/* Remove drop-shadow from outline style Category tags*/
+.wp-block-tag-cloud.is-style-outline a {
+	box-shadow: none;
+}
+
 /*--------------------------------------------------------------
 # Auto-grow buttons on hover
 --------------------------------------------------------------*/
