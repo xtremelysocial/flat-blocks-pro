@@ -21,7 +21,16 @@
 # Margins (vertical spacing)
 -----------------------------------------------------------------------------*/
 /* Don't add top margin to main container group or template parts*/
-.is-root-container > main,
-.is-root-container .wp-block-template-part {
-	margin-block-start: 0;
+// .is-root-container > main,
+// .is-root-container .wp-block-template-part {
+// 	margin-top: 0;
+// }
+
+header,
+main,
+footer,
+.wp-block-template-part,
+.wp-block-post-content {
+	margin-block-start: 0 !important;
 }
+
