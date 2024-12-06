@@ -624,6 +624,7 @@ ol.is-style-list-plain-centered li {
 /* Match our margins */
 .wp-block-social-links {
   margin-block-start: var(--wp--style--block-gap);
+  margin-block-end: var(--wp--style--block-gap);
 }
 
 /* FIX for WordPres.org theme preview */

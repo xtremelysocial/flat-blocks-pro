@@ -5,7 +5,7 @@
 /* Match our margins */
 .wp-block-social-links {
 	margin-block-start: var(--wp--style--block-gap);
-// 	margin-block-end: var(--wp--style--block-gap);
+	margin-block-end: var(--wp--style--block-gap); //0
 }
 
 /* FIX for WordPres.org theme preview */

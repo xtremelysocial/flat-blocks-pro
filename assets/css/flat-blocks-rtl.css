@@ -1177,10 +1177,13 @@ p.is-style-arrow-icon > a:after {
 /* Remove top margin and padding from the containers */
 header,
 main,
-footer,
-.wp-block-template-part,
-.wp-block-post-content {
+footer {
   margin-block-start: 0;
+}
+
+.wp-block-template-part {
+  margin-block-start: 0 !important;
+  margin-block-end: 0 !important;
 }
 
 /* Handle top margin in Groups and Columns that have template parts in them */
