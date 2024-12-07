@@ -1174,7 +1174,7 @@ p.is-style-arrow-icon > a:after {
 /*------------------------------------------------------------------------------
 # Margins (Vertical spacing)
 ------------------------------------------------------------------------------*/
-/* Remove top margin and padding from the containers */
+/* Remove margin on the containers */
 header,
 main,
 footer {
@@ -1186,7 +1186,7 @@ footer {
   margin-block-end: 0 !important;
 }
 
-/* Handle top margin in Groups and Columns that have template parts in them */
+/* Handle top margin on Groups and Columns that have template parts in them */
 :root :where(.is-layout-flow) > .wp-block-template-part > *,
 :root :where(.is-layout-constrained) > .wp-block-template-part > * {
   margin-block-start: var(--wp--style--block-gap);
@@ -1197,21 +1197,32 @@ footer {
   margin-block-start: 0;
 }
 
-/* Don't put any top margin on the individual columns */
+/* But don't put any top margin on the individual columns */
 :root :where(.wp-block-columns-is-layout-flow) > .wp-block-column,
 :root :where(.wp-block-columns-is-layout-constrained) > .wp-block-column {
   margin-block-start: 0;
+}
+
+/* Put top margin on Post Template (not Query) and Sidebar */
+.is-layout-flow > .wp-block-post-template,
+.is-layout-constrained > .wp-block-post-template,
+main > .wp-block-columns > .wp-block-column .sidebar.wp-block-group {
+  margin-block-start: var(--wp--style--block-gap);
 }
 
 /* 
  * Push top margin on Post Content down to the block level so users can control 
  * it by adjusting margin on the block itself.
  */
-.is-layout-flow > .wp-block-post-template,
-.is-layout-constrained > .wp-block-post-template,
 .wp-block-post-content > :first-child:not(.wp-block-cover),
 .wp-block-post-content > #wporg-pattern-preview > div > :first-child:not(.wp-block-cover) {
   margin-block-start: var(--wp--style--block-gap);
+}
+
+/* Add bottom margin to the Query block and Sidebar */
+.wp-block-query,
+.sidebar.wp-block-group {
+  margin-block-end: var(--wp--style--block-gap);
 }
 
 /* Add bottom margin to the Post Content's last block so users can control it */

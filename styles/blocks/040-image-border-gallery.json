@@ -3,7 +3,7 @@
 	"version": 3,
 	"slug": "image-border",
 	"title": "Image Border",
-	"blockTypes": [ "core/gallery" ],
+	"blockTypes": [ "core/gallery", "jetpack/tiled-gallery" ],
 	"styles": {
 		"blocks": {
 			"core/image": {

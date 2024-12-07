@@ -148,9 +148,9 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 == Changelog ==
 
 = 1.9.6 =
-December 5, 2024
+December 6, 2024
 
-Version Summary: All custom Block Styles and Font Sizes now available in the Styles Editor; Added a new Footer; More updates to support changes in WordPress v6.7.
+Version Summary: All custom Block Styles and Font Sizes now available in the Styles Editor and more updates to support changes in WordPress v6.7.
 
 * Added new Footer with Site Motto (tagline) and Social Icons. Updated the Footer with Site Motto, Social Icons, and Site Info to use it.
 * Set Footer Colored to underline links on hover since the links are the same as the text color.
