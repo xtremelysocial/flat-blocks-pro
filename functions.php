@@ -76,7 +76,7 @@ endif;
 $includes = array (
 	'/inc/block-bindings.php',
 	'/inc/block-patterns.php',
-	'/pro/flat-blocks-pro.php', // PRO
+	'/pro/flat-blocks-pro.php', //PRO
 );
 
 // Allow child themes to override the list of PHP files to load

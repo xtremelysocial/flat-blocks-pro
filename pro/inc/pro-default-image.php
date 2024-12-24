@@ -26,9 +26,22 @@ if ( ! function_exists('fbp_filter_post_thumbnail_html') ) :
 		/* If no post featured image, but there is a post, then set the default image */
 		if ( ! $html && $pid ) {
 		
-			//var_dump('size:', $size, 'attr:', $attr); //TEST
+			// var_dump('size:', $size, 'attr:', $attr); //TEST
+			//var_dump('pid:', $pid); //TEST
 	
-			$default_image = get_template_directory_uri() . '/assets/images/image-lines-blue.jpg';
+			//$default_image = get_template_directory_uri() . '/assets/images/image-lines-blue.jpg';
+			//$default_image = get_template_directory_uri() . '/assets/images/image-circles-blue.jpg';
+// 			$default_image = get_template_directory_uri() . '/assets/images/cover-geodesic-lights.jpg';
+
+			// Use the last digit of the post id to determine the image to use
+			$path = '/assets/images/';
+			$images = ['cover-bokeh.jpg', 'cover-book.jpg', 'cover-building.jpg', 'cover-camera.jpg', 'cover-city-night.jpg', 'cover-colored-blocks', 'cover-colored-chalk.jpg', 'cover-desk-dark.jpg', 'cover-desk-dark.jpg', 'cover-desk-meeting.jpg'];
+// 			$random = array_rand( $images );			
+// 			$image = $images[$random]; 
+			$last_digit = $pid % count($images);
+			$image = $images[$last_digit];
+			$default_image = get_template_directory_uri() . $path . $image;
+
 			$default_image = apply_filters( 'flatblocks_default_image_url', $default_image, $pid );
 
 			$image_alt = esc_attr( get_the_title( $pid ) );
@@ -39,7 +52,8 @@ if ( ! function_exists('fbp_filter_post_thumbnail_html') ) :
 			//preg_match( '/max-width\:(.*)px/', $attr['style'], $dimensions );
 			preg_match( "/max-width:(\\d+).*max-height:(\\d+)/", $attr['style'], $dimensions);
 			$image_dimensions = $dimensions ? "width={$dimensions[1]} height={$dimensions[2]}" : '';
-			//var_dump('image_dimensions', $image_dimensions); //TEST
+// 			$image_dimensions = $dimensions ? "width={$dimensions[1]} height={$dimensions[2]}" : 'width="1600" height: "900"';
+// 			var_dump('image_dimensions', $image_dimensions); //TEST
 			
 			$image_style = $attr['style'] ? $attr['style'] : '';
 			$image_style .= $dimensions ? "width:{$dimensions[1]}px;height:{$dimensions[2]}px;" : '';
