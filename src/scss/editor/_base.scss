@@ -2,7 +2,7 @@
 # Editor Base styles
 -----------------------------------------------------------------------------*/
 
-// /* Don't add top margin to main container group or template parts*/
+/* Don't add top margin to main container group or template parts*/
 // .wp-site-blocks header,
 // .wp-site-blocks main,
 // .wp-site-blocks footer,
@@ -11,3 +11,6 @@
 // // 	margin-block-start: 0 !important;
 // 	margin-top: 0; 
 // }
+:root :where(.wp-site-blocks) > * {
+	margin-block-start: 0 !important;
+}

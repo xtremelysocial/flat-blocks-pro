@@ -14,6 +14,14 @@
  * @since	1.3.8
  */
 /*-----------------------------------------------------------------------------
+# Editor Base styles
+-----------------------------------------------------------------------------*/
+/* Don't add top margin to main container group or template parts*/
+:root :where(.wp-site-blocks) > * {
+  margin-block-start: 0 !important;
+}
+
+/*-----------------------------------------------------------------------------
 # Latest Comments
 -----------------------------------------------------------------------------*/
 /* Editor has nested lists, so push padding down to nested one */

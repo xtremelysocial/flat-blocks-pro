@@ -134,9 +134,7 @@ if ( ! function_exists( 'flatblocks_load_styles' ) ) :
 
 		// If child theme, load it's stylesheet
 		if ( is_child_theme() ) {
-			$styles[] = array(
-				get_stylesheet_directory() . '/style.css',
-			);
+			$styles[] = get_stylesheet_directory() . '/style.css';
 		}
 
 		// Allow child themes to override the list of CSS files to load

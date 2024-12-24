@@ -114,12 +114,12 @@
 				{
 					"slug": "70",
 					"size": "calc(3 * var(--wp--preset--spacing--40))",
-					"name": "xx-large"
+					"name": "X Large"
 				},
 				{
 					"slug": "80",
 					"size": "calc(4 * var(--wp--preset--spacing--40))",
-					"name": "2X-Large"
+					"name": "2X Large"
 				}
 			],
             "spacingScale": {

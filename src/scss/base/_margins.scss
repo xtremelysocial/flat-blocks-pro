@@ -3,9 +3,11 @@
 ------------------------------------------------------------------------------*/
 
 /* Don't add top margin to top-level blocks (header, title, main, footer) */
-.wp-site-blocks > * {
+// .wp-site-blocks > * {
+:root :where(.wp-site-blocks) > * {
 // 	margin-block-start: 0 !important;
-	margin-top: 0; 
+// 	margin-top: 0; 
+	margin-block-start: 0; 
 }
 
 // .wp-block-template-part,
@@ -50,8 +52,11 @@ main > :first-child:not(.wp-block-post-content):not(.wp-block-post-featured-imag
 	margin-block-start: var(--wp--style--block-gap);
 }
 
-/* But don't add it on templates with sidebar because it doesn't need it */
-main > .wp-block-columns > .wp-block-column > .wp-block-post-content > :first-child {
+/* 
+ * But don't add it when the Template has columns (i.e. there is a Sidebar) and 
+ * the Post Content is the first thing in the column (i.e. No Featured Image before 
+ * it)*/
+main > .wp-block-columns > .wp-block-column > :first-child.wp-block-post-content > :first-child {
 	margin-block-start: 0;
 }
 

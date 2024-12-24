@@ -58,26 +58,31 @@ p.is-style-arrow-icon-no-text > a:hover {
 
 /* Map deprecated font sizes */
 .has-extra-small-font-size {
-  font-size: 14px !important;
+  font-size: 14px;
 }
 
 .has-larger-font-size {
-  font-size: var(--wp--preset--font-size--x-large) !important;
+  font-size: var(--wp--preset--font-size--x-large);
 }
 
 .has-huge-font-size {
-  font-size: var(--wp--preset--font-size--xxx-large) !important;
+  font-size: var(--wp--preset--font-size--xxx-large);
 }
 
 .has-gigantic-font-size {
-  font-size: var(--wp--preset--font-size--xxxx-large) !important;
+  font-size: var(--wp--preset--font-size--xxxx-large);
 }
 
-/* Add top and bottom margin on the sidebar */
-/*-----------------------------------------------------------------------------
-# Flat Blocks Styles for theme < v1.9.5
------------------------------------------------------------------------------*/
-/* Add top margin on blocks that appear before the Post Content */
+/* Override top margin in certain situations */
+:where(main) > :first-child:not(.wp-block-post-content):not(.wp-block-post-featured-image):not(.wp-block-cover) {
+  margin-block-start: var(--wp--style--block-gap) !important;
+}
+
+:where(main) > .wp-block-columns > .wp-block-column .sidebar.wp-block-group,
+.wp-block-query > .wp-block-columns > .wp-block-column .sidebar.wp-block-group {
+  margin-block-start: 0 !important;
+}
+
 /*-----------------------------------------------------------------------------
 # Utilities
 -----------------------------------------------------------------------------*/
