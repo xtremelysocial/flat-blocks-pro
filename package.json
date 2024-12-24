@@ -20,7 +20,7 @@
 		"format:js": "npm run lint:js -- --fix"
 	},
 	"devDependencies": {
-		"@wordpress/scripts": "^29.0.0",
+		"@wordpress/scripts": "^30.7.0",
 		"clean-webpack-plugin": "^4.0.0",
 		"copy-webpack-plugin": "^12.0.2",
 		"css-loader": "^7.1.2",

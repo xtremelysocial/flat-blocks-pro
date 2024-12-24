@@ -14,31 +14,20 @@
  */
 
 /*
- * This entire function can be overridden by a child theme. Just declare the function 
- * and set the array to the files to include. You don't need to use the if not function
- * exists wrapper in your child theme.
+ * Load the include files for PRO features
  */
-if ( ! function_exists('fbp_load_includes') ) :
+// if ( ! function_exists('fbp_load_includes') ) :
+// 
+// 	function fbp_load_includes() {
 
-	function fbp_load_includes() {
-
-		/* Build array of include files */
+		/* Build array of include files relative to the current path */
 		$includes = array (
 			'/pro/inc/pro-admin-edit.php',
 			'/pro/inc/pro-custom-styles.php',
 			'/pro/inc/pro-default-image.php',
 			'/pro/inc/pro-login-page.php',
 			'/pro/inc/pro-patterns.php',
-// 			'/pro/inc/pro-users-taxonomy.php',
-// 			'/pro/inc/pro-animation.php', // only for XtremelySocial.com
-			);
-
-
-		/* Add XS Animation Plugin if that plugin is NOT active */
-// 		if ( ! defined('XS_ANIMATION_PLUGIN') || XS_ANIMATION_PLUGIN !== true ) {
-// 		//if ( ! class_exists( 'XS_Animation_Plugin' ) ) {
-// 			$includes[] = '/pro/plugins/xs-animation/xs-animation.php';
-// 		}
+		);
 
 		/* Add Jetpack support if that plugin is active */
 		if ( class_exists( 'Jetpack' ) ) {
@@ -51,19 +40,18 @@ if ( ! function_exists('fbp_load_includes') ) :
 		}
 
 		$includes = apply_filters( 'flatblocks_pro_load_includes', $includes );
-
+// 		var_dump($includes); //TEST
+		
 		/* Load each of the includes */
 		foreach ( $includes as $include ) {
 			if ( file_exists( get_template_directory() . $include ) ) {
 				include_once get_template_directory() . $include;
+// 			} else { //TEST
+// 				echo 'CANNOT find ' . get_template_directory() . $include; //TEST
 			}
 		}
 
-	}
-
-endif;
-
-/*
- * Load the include files for PRO features
- */
-fbp_load_includes();
+// 	}
+// 
+// endif;
+// fbp_load_includes();

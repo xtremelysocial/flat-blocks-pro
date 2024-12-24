@@ -71,30 +71,23 @@ endif;
 /**
  * Load the themes PHP include files, such as block bindings and block patterns
  */
-if ( ! function_exists('flatblocks_load_includes') ) :
+ 
+// Build array of include files relative to theme root
+$includes = array (
+	'/inc/block-bindings.php',
+	'/inc/block-patterns.php',
+	'/pro/flat-blocks-pro.php', // PRO
+);
 
-	function flatblocks_load_includes() {
+// Allow child themes to override the list of PHP files to load
+$includes = apply_filters( 'flatblocks_load_includes', $includes );
 
-		// Build array of include files
-		$includes = array (
-			get_template_directory() . '/inc/block-bindings.php',
-			get_template_directory() . '/inc/block-patterns.php',
-			get_template_directory() . '/inc/default-featured-image.php',
-		);
-
-		// Allow child themes to override the list of PHP files to load
-		$includes = apply_filters( 'flatblocks_load_includes', $includes );
-
-		// Load each of the include files
-		foreach ( $includes as $include ) {
-			if ( file_exists( $include ) ) {
-				include_once $include;
-			}
-		}
+// Load each of the include files
+foreach ( $includes as $include ) {
+	if ( file_exists( get_template_directory() . $include ) ) {
+		include_once get_template_directory() . $include;
 	}
-endif;
-
-flatblocks_load_includes();
+}
 
 /* 
  * WordPress loads separate block styles for blocks in use on a particular
@@ -126,10 +119,11 @@ if ( ! function_exists( 'flatblocks_load_styles' ) ) :
 
 	function flatblocks_load_styles() {
 
-		// Build array of CSS styles to include
+		// Build array of CSS styles to load. Include the local path.
 		$styles = array (
 			get_template_directory() . '/assets/css/flat-blocks.css',
 			get_template_directory() . '/assets/css/utility-styles.css',
+			get_template_directory() . '/style.css', // XS
 		);
 
 		// Only load WordPress.org styles if on that website and not in the Editor

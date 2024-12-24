@@ -58,7 +58,7 @@ if ( ! function_exists( 'flatblocks_pro_jetpack_styles' ) ) :
 			wp_enqueue_style( 
 				'flatblocks-pro-jetpack-styles', 
 				get_template_directory_uri() . '/assets/css/pro/pro-jetpack.css', 
-				array( 'flatblocks-base' ), 
+				array( 'flat-blocks' ), 
 				$version_string 
 			);
 		}

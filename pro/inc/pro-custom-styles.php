@@ -9,7 +9,7 @@
  */
 
 /**
- * Enqueue custom block styles.
+ * Enqueue custom PRO block styles.
  */
 add_action( 'wp_enqueue_scripts', 'flatblocks_pro_styles' );
 //add_action( 'enqueue_block_assets', 'flatblocks_pro_styles' );
@@ -21,12 +21,13 @@ if ( ! function_exists( 'flatblocks_pro_styles' ) ) :
 		// Get version for caching
 		$theme_version = wp_get_theme()->get( 'Version' );
 		$version_string = is_string( $theme_version ) ? $theme_version : false;
+// 		var_dump(get_template_directory_uri() . '/assets/css/pro/pro-custom-styles.css'); //TEST
 		
 		// Load custom block styles
 		wp_enqueue_style( 
 			'flatblocks-pro-custom-styles', 
 			get_template_directory_uri() . '/assets/css/pro/pro-custom-styles.css', 
-			array('flatblocks-base'),
+			array('flat-blocks'),
 			$version_string
 		);
 		
@@ -40,12 +41,11 @@ if ( ! function_exists( 'flatblocks_pro_styles' ) ) :
 				true 
 			);
 		//}
-		
 	}
 endif;		
 
 /**
- * Enqueue additional editor scripts.
+ * Enqueue additional PRO editor scripts.
  */
 add_action( 'admin_init', 'flatblocks_pro_editor_styles' );
 
@@ -69,12 +69,12 @@ add_action( 'init', 'flatblocks_pro_register_block_styles' );
  
 if ( ! function_exists( 'flatblocks_pro_register_block_styles' ) ) :
 
-	function flatblocks_pro_register_block_styles( $theme_styles ) {
+	function flatblocks_pro_register_block_styles() {
 
 		/* 
 		 * Define custom styles and what blocks they apply to. 
 		 * 
-		 * Note that the prefix 'is-style-' will automatically be added to the names.
+		 * TO-DO: Replace this with scroll-header.json
 		 */
 		register_block_style(
 			'core/group',
@@ -84,63 +84,6 @@ if ( ! function_exists( 'flatblocks_pro_register_block_styles' ) ) :
 				'style_handle' => 'flatblocks-pro-custom-styles'
 			)
 		);
-		 
-// 		$pro_styles = array(
-// 			'scroll-header' 		=> array( esc_html__('Scroll Header', 'flat-blocks-pro'),
-// 				array( 'group' ),
-// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-// 			),
-// // 			'drop-shadow' 		=> array( esc_html__('Drop Shadow', 'flat-blocks-pro'), 
-// // 				array( 'post-template', 'group' ),
-// // 				'style_handle'	=> 'flatblocks-pro-custom-styles'
-// // 			),
-// // 			'alternate-colors' 		=> array( esc_html__('Alternate Colors', 'flat-blocks-pro'),
-// // 				array( 'post-template' ),
-// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-// // 			),
-// // 			'separator' 		=> array( esc_html__('Separator', 'flat-blocks-pro'), 
-// // 				array( 'heading' ),
-// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-// // 			),
-// // 			'nav-dividers' 		=> array( esc_html__('Dividers', 'flat-blocks-pro'), 
-// // 				array('navigation' ),
-// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'				
-// // 			),
-// // 			'arrow-up-icon' 	=> array( esc_html__('Arrow Up Icon', 'flat-blocks-pro'), 
-// // 				array('navigation-link' ),
-// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'				
-// // 			),
-// // 			'list-dividers' 		=> array( esc_html__('Dividers', 'flat-blocks-pro'), 
-// // 				array('list', 'page-list', 'categories', 'latest-posts', 'latest-comments' ),
-// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'				
-// // 			),
-// // 			'no-auto-icon' 		=> array( esc_html__('No Auto Icon', 'flat-blocks-pro'), 
-// // 				array( 'paragraph' ),
-// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-// // 			),
-// // 			'table-colored' 	=> array( esc_html__('Colored', 'flat-blocks-pro'), 
-// // 				array( 'table' ),
-// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-// // 			),
-// // 			'table-alternate'	=> array( esc_html__('Alternate Colors', 'flat-blocks-pro'), 
-// // 				array( 'table' ),
-// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-// // 			),
-// // 			'equal-grid' 		=> array( esc_html__('Equal Grid', 'flat-blocks-pro'), 
-// // 				array( 'group' ),
-// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-// // 			),
-// // 			'equal-flex' 		=> array( esc_html__('Equal Flex', 'flat-blocks-pro'), 
-// // 				array( 'group' ),
-// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-// // 			),
-// // 			'equal-cells' 		=> array( esc_html__('Equal Cells', 'flat-blocks-pro'), 
-// // 				array( 'group' ),
-// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-// // 			),
-// 		);
-// 
-// 		return $theme_styles ? $theme_styles + $pro_styles : $pro_styles;	
 	}
 endif;
 
