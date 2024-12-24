@@ -2,10 +2,7 @@
 # Latest Comments
 -----------------------------------------------------------------------------*/
 
-/* 
- * Set default latest comments to match latest posts, which has 
- * no bullets or indent 
- */
+/* Set default latest comments to match latest posts */
 .wp-block-latest-comments {
 	list-style: none;
 }
@@ -14,14 +11,10 @@
 	margin-bottom: 0;
 }
 
-/* Add some padding to plain posts list */
+/* Add some bottom margin to plain posts list */
 .wp-block-latest-comments li {
 	margin-bottom: var(--wp--preset--spacing--30);
 }
-
-/*-----------------------------------------------------------------------------
-# Latest Comments: Custom
------------------------------------------------------------------------------*/
 
 /* Default latest comments style to no bullets */
 .wp-block-latest-comments:not(.is-style-bullets) {
@@ -29,7 +22,11 @@
 	padding-inline-start: 0;
 }
 
-/* Front-end Add bullets and padding */
+/*-----------------------------------------------------------------------------
+# Latest Comments: Custom
+-----------------------------------------------------------------------------*/
+
+/* Bullets style */
 .wp-block-latest-comments.is-style-bullets:not(.has-avatars) {
 	padding-left: 2em;
 }

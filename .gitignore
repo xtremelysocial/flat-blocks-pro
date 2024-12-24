@@ -14,8 +14,3 @@ node_modules/
 **/*-SAVE*
 **/*-test*
 zz_unused
-
-# Individual block styles since not implemented yet
-assets/css/blocks/
-#assets/css/blocks/*.asset.php
-assets/css/pro/

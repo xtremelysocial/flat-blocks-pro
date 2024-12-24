@@ -7,7 +7,7 @@
 	"styles": {
 		"border": "none",
 		"spacing": {
-			"padding": "none"
+			"padding": "0"
 		}
 	}
 }

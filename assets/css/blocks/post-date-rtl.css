@@ -1,0 +1,26 @@
+/*!*****************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/scss/blocks/post-date.scss ***!
+  \*****************************************************************************************************************************************************/
+/*-----------------------------------------------------------------------------
+# Post Date
+-----------------------------------------------------------------------------*/
+.wp-block-post-date:before {
+  content: "";
+  background-color: currentColor;
+  display: inline-flex;
+  align-self: center;
+  height: 1em;
+  width: 1em;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.wp-block-post-date:before {
+  /* webpackIgnore: true */
+  mask-image: url(../../icons/calendar-alt.svg);
+  /* webpackIgnore: true */
+  -webkit-mask-image: url(../../icons/calendar-alt.svg);
+  margin-left: 0.15em;
+}

@@ -6,10 +6,7 @@
 		"custom": {
 			"color": {
 				"highlight": {
-					"primary": "var(--wp--preset--color--highlight)",
-					"primaryAlt": "var(--wp--preset--color--highlight)",
-					"secondary": "var(--wp--preset--color--foreground-alt)",
-					"secondaryAlt": "var(--wp--preset--color--foreground-alt)"
+					"primary": "var(--wp--preset--color--highlight)"
 				}
 			}
 		},

@@ -1,0 +1,33 @@
+/*!*****************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/scss/blocks/paragraph.scss ***!
+  \*****************************************************************************************************************************************************/
+/*-----------------------------------------------------------------------------
+# Paragraph
+-----------------------------------------------------------------------------*/
+/* Padding for colored backgrounds on paragraphs */
+.wp-block-paragraph.has-background {
+  padding: var(--wp--preset--spacing--40);
+}
+
+/* Adjust padding on tablet and mobile */
+@media only screen and (max-width: 781px) {
+  /* If no global padding, then set paragraphs like colored groups */
+  p.has-background:not(.has-global-padding) {
+    padding-right: calc(2 * var(--wp--style--block-gap));
+    padding-left: calc(2 * var(--wp--style--block-gap));
+  }
+  /* If global padding, then OVERRIDE horizontal padding on mobile */
+  .has-global-padding p.has-background {
+    padding-right: var(--wp--style--root--padding-left) !important;
+    padding-left: var(--wp--style--root--padding-right) !important;
+  }
+}
+/*-----------------------------------------------------------------------------
+# Paragraph: Custom
+-----------------------------------------------------------------------------*/
+/* Alignwide */
+p.is-style-alignwide {
+  max-width: var(--wp--style--global--wide-size) !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}

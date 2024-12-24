@@ -1,19 +1,10 @@
 /*-----------------------------------------------------------------------------
 # Post Author Name
 -----------------------------------------------------------------------------*/
+@use "../mixins/icons";
 
-/* dashicons-admin-users */
-.wp-block-post-author-name:before {
-	font-family: dashicons;
-	content: "\f110";
-    margin-right: var(--wp--preset--spacing--20);
-}
-
-.rtl .wp-block-post-author-name:after {
-	font-family: dashicons;
-	content: "\f110";
-	margin-right: var(--wp--preset--spacing--20);
-}
-.rtl .wp-block-post-author-name:before {
-	display: none;
-}
+@include icons.svg-icon(
+	'wp-block-post-author-name',
+	'admin-users',
+	'before'
+);

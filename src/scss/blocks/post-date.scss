@@ -1,10 +1,10 @@
 /*-----------------------------------------------------------------------------
 # Post Date
 -----------------------------------------------------------------------------*/
+@use "../mixins/icons";
 
-/* dashicons-calendar-alt */
-.wp-block-post-date:before {
-	font-family: dashicons;
-	content: "\f508";
-    margin-right: var(--wp--preset--spacing--20);
-}
+@include icons.svg-icon(
+	'wp-block-post-date',
+	'calendar-alt',
+	'before'
+);

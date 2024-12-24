@@ -14,7 +14,6 @@
 		},
 		"spacing": {
 			"padding": "var:preset|spacing|40"
-		},
-		"css": "overflow: hidden"
+		}
 	}
 }

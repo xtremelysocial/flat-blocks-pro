@@ -1,0 +1,72 @@
+//------------------------------------------------------------------------------
+//# Colors Mixins
+//------------------------------------------------------------------------------
+// @use "sass:map";
+
+// Assign color to links
+%link-color {
+	& a, 
+	& .is-style-outline > .wp-element-button, 
+	& [class*="is-style-button-outline-"] > .wp-element-button {
+		color: var(--wp--custom--color--highlight);	
+	}
+}		
+
+// Override link over opacity
+%link-hover-opacity-1 {
+	& :where(a:not(.wp-element-button):hover) {
+		opacity: 1;
+	}
+}		
+
+// Color Mixin: Sets --wp--custom--color--contrast and 
+//				--wp--custom--color--highlight
+// Parms:
+// @colors		array	Array of color slugs. e.g. ('light-green', 'green')
+//
+// @default		string	Optional lightness slug e.g. 'default-black',
+//						'default-white'. This translates to the
+//						--wp-custom--color--contrast--{lightness} variable.
+//
+// @contrast	color	Color slug for text e.g. 'almost-black'
+//
+// @highlight	color	Highlight (link) color slug or 'inherit'
+//
+@mixin color-defaults(
+	$colors,
+	$default,
+	$contrast,
+	$highlight
+) {
+
+	// For each color, default contrast and link color
+	@each $color in $colors {
+		.has-#{$color}-background-color {
+		
+			// Set the contrast color, depending on whether there is a default
+			@if $contrast {
+				@if $default {
+					--wp--custom--color--contrast: var(--wp--custom--color--contrast--#{$color}, var(--wp--custom--color--contrast--#{$default}, #{$contrast}));
+				} @else {
+					--wp--custom--color--contrast: var(--wp--custom--color--contrast--#{$color}, #{$contrast});
+				}
+			}		
+
+			// If link color, set it depending on whether there is a default				
+			@if $highlight {
+				&:not(.has-link-color) {
+					@if $default {
+						--wp--custom--color--highlight: var(--wp--custom--color--highlight--#{$color}, var(--wp--custom--color--highlight--#{$default}, #{$highlight}));		
+					} @else {
+						--wp--custom--color--highlight: var(--wp--custom--color--highlight--#{$color}, #{$highlight});
+					}
+					@extend %link-color;
+				}
+			// If no link color, then leave opacity alone on hover 
+			} @else {
+				@extend %link-hover-opacity-1;
+
+			}
+		}
+	}
+}

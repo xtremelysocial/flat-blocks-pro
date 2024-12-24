@@ -1,37 +1,19 @@
 /*-----------------------------------------------------------------------------
 # Post Terms:
 -----------------------------------------------------------------------------*/
-/* dashicons-tag */
-.wp-block-post-terms.taxonomy-category:before {
-	font-family: dashicons;
-	content: "\f318";
-	margin-right: var(--wp--preset--spacing--20);
-}
+@use "../mixins/icons";
 
-.rtl .wp-block-post-terms.taxonomy-category:after {
-	font-family: dashicons;
-	content: "\f318";
-	margin-right: var(--wp--preset--spacing--20);
-}
-.rtl .wp-block-post-terms.taxonomy-category:before {
-	display: none;
-}
+@include icons.svg-icon(
+	'wp-block-post-terms.taxonomy-category',
+	'category',
+	'before'
+);
 
-/* dashicons-category */
-.wp-block-post-terms.taxonomy-post_tag:before {
-	font-family: dashicons;
-	content: "\f323";
-	margin-right: var(--wp--preset--spacing--20);
-}
-
-.rtl .wp-block-post-terms.taxonomy-post_tag:after {
-	font-family: dashicons;
-	content: "\f323";
-	margin-right: var(--wp--preset--spacing--20);
-}
-.rtl .wp-block-post-terms.taxonomy-post_tag:before {
-	display: none;
-}
+@include icons.svg-icon(
+	'wp-block-post-terms.taxonomy-post_tag',
+	'tag',
+	'before'
+);
 
 /* Remove bottom margin on Category and Tag descriptions */
 .wp-block-term-description p {

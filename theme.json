@@ -34,7 +34,7 @@
 				"default": "none"
 			},
 			"navigation": {
-				"width": "240px",
+				"width": "260px",
 				"wideWidth": "360px"
 			},
 			"typography": {
@@ -114,7 +114,7 @@
 				{
 					"slug": "70",
 					"size": "calc(3 * var(--wp--preset--spacing--40))",
-					"name": "X-Large"
+					"name": "xx-large"
 				},
 				{
 					"slug": "80",
@@ -451,6 +451,31 @@
 					"slug": "red",
 					"gradient": "linear-gradient(160deg, var(--wp--preset--color--light-red), var(--wp--preset--color--dark-red))",
 					"name": "Red"
+				},
+				{
+					"slug": "purple-yellow",
+					"gradient": "linear-gradient(160deg, var(--wp--preset--color--light-purple), var(--wp--preset--color--yellow))",
+					"name": "Purple to Yellow"
+				},
+				{
+					"slug": "purple-green",
+					"gradient": "linear-gradient(160deg, var(--wp--preset--color--light-purple), var(--wp--preset--color--green))",
+					"name": "Purple to Green"
+				},
+				{
+					"slug": "blue-red",
+					"gradient": "linear-gradient(160deg, var(--wp--preset--color--light-blue), var(--wp--preset--color--dark-red))",
+					"name": "Blue to Red"
+				},
+				{
+					"slug": "blue-orange",
+					"gradient": "linear-gradient(160deg, var(--wp--preset--color--light-blue), var(--wp--preset--color--orange))",
+					"name": "Blue to Orange"
+				},
+				{
+					"slug": "midnight",
+					"gradient": "linear-gradient(160deg, var(--wp--preset--color--dark-midnight-blue), var(--wp--preset--color--blue))",
+					"name": "Midnight (Midnight Blue to Blue)"
 				},
 				{
 					"slug": "gray",
@@ -863,12 +888,6 @@
 			],
 			"fontSizes": [
 				{
-					"slug": "extra-small",
-					"size": "14px",
-					"name": "Extra Small",
-					"fluid": false
-				},
-				{
 					"slug": "small",
 					"size": "16px",
 					"name": "Small",
@@ -896,36 +915,36 @@
 					}
 				},
 				{
-					"slug": "larger",
+					"slug": "x-large",
 					"size": "34px",
-					"name": "Larger (h2)",
+					"name": "Extra Large (h2)",
 					"fluid": {
 						"min": "30px",
 						"max": "34px"
 					}
 				},
 				{
-					"slug": "x-large",
+					"slug": "xx-large",
 					"size": "48px",
-					"name": "Extra Large (h1)",
+					"name": "2X Large (h1)",
 					"fluid": {
 						"min": "36px",
 						"max": "48px"
 					}
 				},
 				{
-					"slug": "huge",
+					"slug": "xxx-large",
 					"size": "54px",
-					"name": "Huge",
+					"name": "3X Large",
 					"fluid": {
 						"min": "42px",
 						"max": "54px"
 					}
 				},
 				{
-					"slug": "gigantic",
+					"slug": "xxxx-large",
 					"size": "64px",
-					"name": "Gigantic",
+					"name": "4X Large",
 					"fluid": {
 						"min": "52px",
 						"max": "64px"
@@ -1005,12 +1024,12 @@
 			},
 			"h1": {
 				"typography": {
-					"fontSize": "var:preset|font-size|x-large"
+					"fontSize": "var:preset|font-size|xx-large"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontSize": "var:preset|font-size|larger"
+					"fontSize": "var:preset|font-size|x-large"
 				}
 			},
 			"h3": {
@@ -1085,9 +1104,6 @@
 				},
 				"variations": {
 					"outline": {
-						"color": {
-							"text": "var:preset|color|highlight"
-						},					
 						"border": {
 							"width": "3px",
 							"style": "solid"
@@ -1115,7 +1131,7 @@
 			},
 			"core/post-title": {
 				"typography": {
-					"fontSize": "var:preset|font-size|larger"
+					"fontSize": "var:preset|font-size|x-large"
 				},
 				"elements": {
 					"link": {
@@ -1173,7 +1189,8 @@
 					"style": "solid",
 					"radius": "var(--wp--custom--border--radius)",
 					"width": "1px"
-				}
+				},
+				"shadow": "var(--wp--custom--shadow--default)"
 			},
 			"core/quote": {
 				"border": {
@@ -1266,7 +1283,7 @@
 			},
 			"core/query-title": {
 				"typography": {
-					"fontSize": "var:preset|font-size|larger",
+					"fontSize": "var:preset|font-size|x-large",
 					"textDecoration": "none"
 				}
 			},
@@ -1381,14 +1398,6 @@
 					}
 				}				
 			},
-			"core/comments": {
-				"spacing": {
-					"margin": {
-						"top": "var:preset|spacing|40",
-						"bottom": "var:preset|spacing|40"
-					}
-				}
-			},
 			"core/comments-title": {
 				"spacing": {
 					"margin": {
@@ -1494,6 +1503,11 @@
 				}
 			},
 			"core/latest-comments": {
+				"spacing": {
+					"padding": {
+						"left": "0"
+					}
+				},
 				"elements": {
 					"link": {
 						"typography": {

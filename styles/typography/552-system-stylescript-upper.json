@@ -6,18 +6,13 @@
 		"typography": {
 			"fontSizes": [
 				{
-					"slug": "extra-small",
-					"size": "14px",
-					"name": "Extra Small"
-				},
-				{
 					"slug": "small",
 					"size": "16px",
 					"name": "Small"
 				},
 				{
 					"slug": "normal",
-					"size": "18px !important",
+					"size": "18px",
 					"name": "Normal"
 				},
 				{
@@ -27,28 +22,44 @@
 				},
 				{
 					"slug": "large",
-					"size": "clamp(24px, 6vw, 28px)",
-					"name": "Large (h4)"
-				},
-				{
-					"slug": "larger",
-					"size": "clamp(30px, 7vw, 34px)",
-					"name": "Larger (h3)"
+					"size": "28px",
+					"name": "Large (h4)",
+					"fluid": {
+						"min": "24px",
+						"max": "28px"
+					}
 				},
 				{
 					"slug": "x-large",
-					"size": "clamp(36px, 10vw, 48px)",
-					"name": "Extra Large (h2)"
+					"size": "34px",
+					"name": "Extra Large (h3)",
+					"fluid": {
+						"min": "30px",
+						"max": "34px"
+					}
 				},
 				{
-					"slug": "huge",
-					"size": "clamp(42px, 12vw, 54px) !important",
-					"name": "Huge (h1)"
+					"slug": "xx-large",
+					"size": "48px",
+					"name": "2X Large (h2)",
+					"fluid": {
+						"min": "36px",
+						"max": "48px"
+					}
 				},
 				{
-					"slug": "gigantic",
+					"slug": "xxx-large",
+					"size": "54px",
+					"name": "3X Large (h1)",
+					"fluid": {
+						"min": "42px",
+						"max": "54px"
+					}
+				},
+				{
+					"slug": "xxxx-large",
 					"size": "clamp(52px, 14vw, 64px)",
-					"name": "Gigantic"
+					"name": "4X Large"
 				}
 			]
 		}
@@ -90,17 +101,17 @@
 			},
 			"h1": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--huge)"
+					"fontSize": "var(--wp--preset--font-size--xxx-large)"
 				}
 			},
 			"h2": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--x-large)"
+					"fontSize": "var(--wp--preset--font-size--xx-large)"
 				}
 			},
 			"h3": {
 				"typography": {
-					"fontSize": "var(--wp--preset--font-size--larger)"
+					"fontSize": "var(--wp--preset--font-size--x-large)"
 				}
 			},
 			"h4": {

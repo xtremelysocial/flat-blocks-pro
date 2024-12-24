@@ -2,7 +2,7 @@
  * File:	flat-blocks.css
  * Theme:	Flat Blocks
  * 
- * The base stylesheet for the Flat Block theme's CORE block styles
+ * The base stylesheet for the Flat Block theme's CORE CSS
  * 
  * NOTE: This file is AUTO-GENERATED from the SASS source files 
  * in /src/sass/flat-blocks.scss. Do not make updates here.
@@ -11,52 +11,13 @@
  * @since	1.0
  */
 
-/*-----------------------------------------------------------------------------
-# BASE STYLES
------------------------------------------------------------------------------*/
 @use "base/normalize";
 @use "base/elements";
 @use "base/buttons-links";
 @use "base/forms";
 @use "base/alignments";
-@use "base/colors";
-
-/*-----------------------------------------------------------------------------
-# CRITICAL BLOCK STYLES
------------------------------------------------------------------------------*/
-//@use "blocks/calendar";
-//@use "blocks/columns";
-//@use "blocks/comments";
-@use "blocks/cover";
-//@use "blocks/details";
-//@use "blocks/post-featured-image";
-@use "blocks/group";
-//@use "blocks/heading";
-//@use "blocks/image";
-//@use "blocks/latest-comments";
-//@use "blocks/latest-posts";
-//@use "blocks/list";
-//@use "blocks/media-text";
-@use "blocks/navigation";
-@use "blocks/paragraph";
-//@use "blocks/page-list";
-//@use "blocks/post-author";
-//@use "blocks/post-comments-count";
-//@use "blocks/post-date";
-//@use "blocks/post-excerpt";
-//@use "blocks/post-terms";
-//@use "blocks/query-pagination";
-//@use "blocks/separator";
-@use "blocks/site-logo";
-//@use "blocks/social-links";
-//@use "blocks/table";
-
-/*-----------------------------------------------------------------------------
-# ADDITIONAL BASE STYLES
------------------------------------------------------------------------------*/
-@use "base/dashicons";
 @use "base/margins";
 @use "base/padding";
-@use "base/theme-compat";
-@use "base/utilities";
-@use "base/other-themes";
+@use "base/colors";
+@use "base/icons";
+@use "base/lists";

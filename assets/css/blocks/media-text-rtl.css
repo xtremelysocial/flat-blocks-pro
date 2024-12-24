@@ -1,0 +1,37 @@
+/*!******************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/scss/blocks/media-text.scss ***!
+  \******************************************************************************************************************************************************/
+/*-----------------------------------------------------------------------------
+# Media & Text
+-----------------------------------------------------------------------------*/
+/* Default padding on the content (which is on the right by default) */
+.wp-block-media-text:not(.is-style-no-padding) .wp-block-media-text__content {
+  padding-right: var(--wp--preset--spacing--40);
+  padding-left: 0;
+}
+
+/* Swap the padding if content is on the left */
+.wp-block-media-text.has-media-on-the-right:not(.is-style-no-padding) .wp-block-media-text__content {
+  padding-right: 0;
+  padding-left: var(--wp--preset--spacing--40);
+}
+
+/* Remove the padding when collapsed on mobile */
+@media only screen and (max-width: 601px) {
+  .wp-block-media-text.is-stacked-on-mobile:not(.has-background) .wp-block-media-text__content {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+/* FIX core WordPress so that border radius works */
+.wp-block-media-text {
+  overflow: hidden;
+}
+
+/*-----------------------------------------------------------------------------
+# Media & Text: Custom
+-----------------------------------------------------------------------------*/
+/* No Padding */
+.wp-block-media-text.is-style-no-padding .wp-block-media-text__content {
+  padding: 0;
+}

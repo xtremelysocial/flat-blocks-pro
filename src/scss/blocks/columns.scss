@@ -11,10 +11,7 @@
 	padding: var(--wp--preset--spacing--40);
 }
 
-/* 
- * Note: Breakpoint of 781 is what is hard-coded in WordPress 
- * v6.0+ to collapse columns
- */
+/* Collapse columns on tablet and mobile */
 @media only screen and (max-width: 781px) {
 
 	/* If no global padding, then set colored columns like colored groups */
@@ -56,8 +53,7 @@
 	padding: 0; // !important;
 }
 
-/* Handle when columns collapse on mobile */
-/* Breakpoint of 781 is what is hard-coded in WordPress v6.0+ to collapse columns */
+/* Collapse columns on tablet and mobile */
 @media only screen and (max-width: 781px) {
 
 	/* Reduce row (vertical gap) when collapsing centered columns */

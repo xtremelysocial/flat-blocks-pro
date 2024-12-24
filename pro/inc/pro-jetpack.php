@@ -89,7 +89,8 @@ endif;
 /**
  * Register custom block styles.
  */
-add_filter( 'flatblocks_custom_block_styles', 'flatblocks_pro_register_jetpack_block_styles' );
+// add_filter( 'flatblocks_custom_block_styles', 'flatblocks_pro_register_jetpack_block_styles' );
+add_action( 'init', 'flatblocks_pro_register_jetpack_block_styles' );
 
 if ( ! function_exists( 'flatblocks_pro_register_jetpack_block_styles' ) ) :
 
@@ -99,14 +100,22 @@ if ( ! function_exists( 'flatblocks_pro_register_jetpack_block_styles' ) ) :
 		 * Define custom styles and what blocks they apply to. Note that the prefix 
 		 * 'is-style-' will automatically be added to the names.
 		 */
-		$jetpack_styles = array(
-			'no-icon' 			=> array( esc_html__('No Auto Icon', 'flat-blocks-pro'), 
-				array( 'jetpack/contact-info', 'jetpack/email', 'jetpack/phone' ),
-				'style_handle' 	=> 'flatblocks-pro-jetpack-styles'
+		register_block_style(
+			array( 'jetpack/contact-info', 'jetpack/email', 'jetpack/phone' ),
+			array(
+				'name'  => 'no-icon',
+				'label' => __('No Auto Icon', 'flat-blocks-pro'),
+				'style_handle' => 'flatblocks-pro-jetpack-styles'
 			)
 		);
 
-		return $theme_styles ? $theme_styles + $jetpack_styles : $jetpack_styles;
-		
+// 		$jetpack_styles = array(
+// 			'no-icon' 			=> array( esc_html__('No Auto Icon', 'flat-blocks-pro'), 
+// 				array( 'jetpack/contact-info', 'jetpack/email', 'jetpack/phone' ),
+// 				'style_handle' 	=> 'flatblocks-pro-jetpack-styles'
+// 			)
+// 		);
+// 
+// 		return $theme_styles ? $theme_styles + $jetpack_styles : $jetpack_styles;
 	}
 endif;

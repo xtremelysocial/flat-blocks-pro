@@ -8,14 +8,6 @@
 		}
 	},
 	"settings": {
-		"custom": {
-			"color": {
-				"highlight": {
-					"secondary": "var(--wp--preset--color--foreground-alt)",
-					"secondaryAlt": "var(--wp--preset--color--foreground-alt)"
-				}
-			}
-		},
 		"color": {
 			"palette": [
 				{

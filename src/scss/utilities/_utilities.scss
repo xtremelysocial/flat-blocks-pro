@@ -1,0 +1,27 @@
+/*-----------------------------------------------------------------------------
+# Utilities
+-----------------------------------------------------------------------------*/
+
+/* FIX WordPress Admin bar on phones not sticking to the top */
+@media screen and (max-width: 600px) {
+    body > #wpadminbar {
+        position: fixed;
+    }
+}
+
+/* 
+ * Note: These utility classes must be added manually in the Advanced section 
+ * of the block settings.
+ */
+
+/* Clearfix (Clear floats) */
+.is-style-clearfix:not(.is-layout-flex):not(.is-style-fixed-header):after {
+	content: "";
+	clear: both;
+	display: table;
+}
+
+/* Flexbox No Shrink */
+.is-layout-flex .is-style-no-shrink {
+	flex-shrink: 0;
+}

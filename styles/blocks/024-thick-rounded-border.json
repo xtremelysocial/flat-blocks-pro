@@ -16,7 +16,6 @@
 		},
 		"spacing": {
 			"padding": "var:preset|spacing|60"
-		},
-		"css": ".is-layout-flex { overflow: hidden }"
+		}
 	}
 }

@@ -1,0 +1,941 @@
+/*!********************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/scss/blocks/block-styles.scss ***!
+  \********************************************************************************************************************************************************/
+/**
+ * File:	block-styles.css
+ * Theme:	Flat Blocks
+ * 
+ * The stylesheet for the Flat Block theme's block styles
+ *
+ * NOTE: This file is AUTO-GENERATED from the SASS source files 
+ * in /src/sass/blocks/block-styles.scss. Do not make updates here.
+ * 
+ * @package flat-blocks
+ * @since 	1.6.4
+ */
+/*-----------------------------------------------------------------------------
+# Calendar
+-----------------------------------------------------------------------------*/
+.wp-block-calendar table:not(.has-background) th {
+  background-color: var(--wp--preset--color--neutral);
+}
+
+.wp-block-calendar table:where(:not(.has-text-color)),
+.wp-block-calendar table th:not(.has-text-color) {
+  color: var(--wp--preset--color--contrast);
+}
+
+.wp-calendar-nav a {
+  text-decoration: none;
+}
+
+/*-----------------------------------------------------------------------------
+# Columns and Column
+-----------------------------------------------------------------------------*/
+/* Padding for colored backgrounds on columns and individual column */
+.wp-block-columns.has-background {
+  padding: var(--wp--preset--spacing--60);
+}
+
+.wp-block-column.has-background {
+  padding: var(--wp--preset--spacing--40);
+}
+
+/* Collapse columns on tablet and mobile */
+@media only screen and (max-width: 781px) {
+  /* If no global padding, then set colored columns like colored groups */
+  .wp-block-columns.has-background,
+  .wp-block-column.has-background {
+    padding-right: calc(2 * var(--wp--style--block-gap));
+    padding-left: calc(2 * var(--wp--style--block-gap));
+  }
+  /* If global padding, then OVERRIDE horizontal padding on mobile */
+  .has-global-padding .wp-block-columns.has-background,
+  .has-global-padding .wp-block-column.has-background {
+    padding-right: var(--wp--style--root--padding-left) !important;
+    padding-left: var(--wp--style--root--padding-right) !important;
+  }
+}
+/*-----------------------------------------------------------------------------
+# Columns and Column: Custom
+-----------------------------------------------------------------------------*/
+.wp-block-columns.is-style-no-gap,
+.wp-block-columns.is-style-no-gap .wp-block-column:not(.has-background),
+.wp-block-columns.is-style-no-gap.has-background:not(.has-global-padding) {
+  gap: 0 !important;
+  padding: 0 !important;
+}
+
+/* Columns thick gap */
+.wp-block-columns.is-style-thick-gap,
+.wp-block-columns.is-style-thick-gap.has-background {
+  gap: calc(2 * var(--wp--style--block-gap));
+}
+
+/* Column no padding */
+.wp-block-column.is-style-no-padding {
+  padding: 0;
+}
+
+/* Collapse columns on tablet and mobile */
+@media only screen and (max-width: 781px) {
+  /* Reduce row (vertical gap) when collapsing centered columns */
+  .wp-block-columns.is-style-center-on-mobile {
+    row-gap: var(--wp--preset--spacing--30);
+  }
+  /* Center left and right aligned text */
+  .wp-block-columns.is-style-center-on-mobile .wp-block-column:not(.wp-block-navigation__responsive-container-content) > *,
+  .wp-block-columns.is-style-center-on-mobile .wp-block-column:not(.wp-block-navigation__responsive-container-content) > .wp-block-template-part > * {
+    display: flex;
+    justify-content: center;
+    --navigation-layout-justify: center;
+    text-align: center;
+  }
+  /* OVERRIDE columns thick gap so vertical spacing matches up */
+  .wp-block-columns.is-style-thick-gap,
+  .wp-block-columns.is-style-thick-gap.has-background {
+    gap: var(--wp--style--block-gap);
+  }
+}
+/*-----------------------------------------------------------------------------
+# Comments Pagination
+-----------------------------------------------------------------------------*/
+/* Add padding to comment page numbers */
+.wp-block-comments-pagination .page-numbers:nth-last-child(n+2) {
+  padding-left: var(--wp--preset--spacing--30);
+}
+
+/*-----------------------------------------------------------------------------
+# Comments
+-----------------------------------------------------------------------------*/
+/* Remove top margin on "Leave a Reply" */
+/* Remove bottom margin on "Post Comment" button */
+/* Add padding to comment page numbers */
+/* If not global padding on comments, then add some on tablet and mobile */
+@media only screen and (max-width: 781px) {
+  .post-comments:not(.has-global-padding) {
+    padding-right: var(--wp--style--root--padding-left) !important;
+    padding-left: var(--wp--style--root--padding-right) !important;
+  }
+}
+/*-----------------------------------------------------------------------------
+# Cover
+-----------------------------------------------------------------------------*/
+/* LIMIT cover image inner content to standard unless wide or full */
+.wp-block-cover .wp-block-cover__inner-container > * {
+  margin-right: auto;
+  margin-left: auto;
+}
+.wp-block-cover .wp-block-cover__inner-container > *:not(.alignfull):not(.alignwide) {
+  max-width: var(--wp--style--global--content-size);
+}
+.wp-block-cover .wp-block-cover__inner-container > *.alignwide, .wp-block-cover .wp-block-cover__inner-container > *.alignfull {
+  max-width: var(--wp--style--global--wide-size);
+}
+
+/* If cover used as site header, make sure it is layered above other covers */
+header > .wp-block-cover {
+  overflow: visible;
+  z-index: 3;
+}
+
+/*-----------------------------------------------------------------------------
+# Details
+-----------------------------------------------------------------------------*/
+/* Closed Summary will have primary font color */
+.wp-block-details:not(.has-text-color) > summary {
+  color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight));
+  font-weight: var(--wp--custom--typography--font-weight--medium);
+  transition: color var(--wp--custom--animation--duration--medium, 500ms) var(--wp--custom--animation--timing-function, ease-in);
+}
+
+/* Highlight Summary on hover and when open */
+.wp-block-details:not(.has-text-color) > summary:hover,
+.wp-block-details:not(.has-text-color)[open] > summary {
+  color: var(--wp--custom--color--highlight, var(--wp--preset--color--highlight-alt));
+}
+
+/*-----------------------------------------------------------------------------
+# Gallery: Custom
+-----------------------------------------------------------------------------*/
+/* Adjust Image Captions */
+.wp-block-gallery.is-style-image-border .wp-block-image:not(.is-style-image-round-border):not(.is-style-image-computer-screen):not(.is-style-image-tablet-phone-screen) img {
+  padding: var(--wp--preset--spacing--20);
+}
+.wp-block-gallery.is-style-image-border.has-nested-images figure.wp-block-image:not(.is-style-rounded):not(.is-style-image-round-border):not(.is-style-image-computer-screen):not(.is-style-image-tablet-phone-screen):has(figcaption):before, .wp-block-gallery.is-style-image-border.has-nested-images figure.wp-block-image:not(.is-style-rounded):not(.is-style-image-round-border):not(.is-style-image-computer-screen):not(.is-style-image-tablet-phone-screen) figcaption {
+  bottom: calc(1px + var(--wp--preset--spacing--20));
+  right: calc(1px + var(--wp--preset--spacing--20));
+  padding: calc(1px + var(--wp--preset--spacing--20)) 0;
+  width: calc(100% - 2 * (1px + var(--wp--preset--spacing--20)));
+}
+
+.wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-round-border:before {
+  content: none;
+}
+
+.wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-round-border figcaption {
+  background: none;
+  color: inherit;
+  flex: initial;
+  margin: 0;
+  padding: 10px 10px 9px;
+  position: relative;
+  text-shadow: none;
+}
+
+.wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-computer-screen:has(figcaption):before, .wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-computer-screen figcaption {
+  right: var(--wp--preset--spacing--60);
+  width: calc(100% - 2 * var(--wp--preset--spacing--60));
+}
+
+.wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-tablet-phone-screen:has(figcaption):before, .wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-tablet-phone-screen figcaption {
+  right: var(--wp--preset--spacing--50);
+  padding: var(--wp--preset--spacing--20) 0;
+  width: calc(100% - 2 * var(--wp--preset--spacing--50));
+}
+
+/*-----------------------------------------------------------------------------
+# Group
+-----------------------------------------------------------------------------*/
+/* Padding for colored backgrounds on groups */
+.wp-block-group.has-background {
+  padding: var(--wp--preset--spacing--60);
+}
+
+/* Padding for top-level non-colored groups */
+.wp-block-post-content > .wp-block-group:not(:first-child):not(.has-background):not(.is-style-no-padding),
+.wp-block-post-content > #wporg-pattern-preview > div > .wp-block-group:not(:first-child):not(.has-background):not(.is-style-no-padding) {
+  padding-top: var(--wp--preset--spacing--40);
+  padding-bottom: var(--wp--preset--spacing--40);
+}
+
+/* If global padding, then OVERRIDE horizontal padding on tablet and mobile */
+@media only screen and (max-width: 781px) {
+  .site-header.has-global-padding.wp-block-group,
+  .site-footer.has-global-padding.wp-block-group {
+    padding-right: var(--wp--style--root--padding-left) !important;
+    padding-left: var(--wp--style--root--padding-right) !important;
+  }
+}
+/* Even when nowrap is set, go ahead and collapse on mobile */
+@media only screen and (max-width: 601px) {
+  .is-nowrap.is-layout-flex.wp-block-group {
+    flex-wrap: wrap;
+  }
+}
+/*-----------------------------------------------------------------------------
+# Group: Custom
+-----------------------------------------------------------------------------*/
+/* Group borders */
+.wp-block-group.is-style-rounded-border.is-layout-flex,
+.wp-block-group.is-style-thick-rounded-border.is-layout-flex {
+  overflow: hidden;
+}
+
+/* Group no padding */
+.wp-block-group.is-style-no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.wp-block-group.is-style-no-padding:not(.has-global-padding) {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/* Position the fixed header using sticky so we don't have to have top site margin */
+.wp-site-blocks > header:has(.is-position-sticky),
+.wp-site-blocks > header:has(.is-style-fixed-header) {
+  position: sticky;
+  top: 0;
+  background-color: var(--wp--preset--color--base, var(--wp--preset--color--background));
+  box-shadow: var(--wp--custom--shadow--default);
+  z-index: 10;
+}
+
+/* If WordPress Admin Bar, then adjust fixed header position so its underneath it */
+.admin-bar .wp-site-blocks > header:has(.is-position-sticky),
+.admin-bar .wp-site-blocks > header:has(.is-style-fixed-header) {
+  top: var(--wp-admin--admin-bar--height, 32px);
+}
+
+/* Position the fixed footer using sticky, but only on large screens */
+.wp-site-blocks > footer:has(.is-position-sticky) {
+  position: relative;
+  bottom: 0;
+  z-index: 9;
+}
+
+@media only screen and (min-width: 1100px) {
+  .wp-site-blocks > footer:has(.is-position-sticky) {
+    position: sticky;
+  }
+}
+/*-----------------------------------------------------------------------------
+# Heading
+-----------------------------------------------------------------------------*/
+/* Match our padding on headings with backgrounds */
+h1.has-background,
+h2.has-background,
+h3.has-background,
+h4.has-background,
+h5.has-background,
+h6.has-background {
+  padding: var(--wp--preset--spacing--40);
+}
+
+/*-----------------------------------------------------------------------------
+# Image
+-----------------------------------------------------------------------------*/
+/* Prevent figures (images, tables) with hard-coded dimensions from breaking the 
+ * layout.
+ */
+figure.wp-caption:not(.alignfull):not(.alignwide),
+figure.wp-caption:not(.alignfull):not(.alignwide) img {
+  max-width: min(100%, var(--wp--style--global--content-size)) !important;
+  height: auto;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* FIX rounded images when global image style has a border radius */
+.wp-block-image .is-style-rounded img,
+.wp-block-image.is-style-circle-mask img,
+.wp-block-image.is-style-rounded img,
+.is-style-image-round-border img {
+  border-radius: 9999px !important;
+}
+
+/*-----------------------------------------------------------------------------
+# Image: Custom
+-----------------------------------------------------------------------------*/
+/* Image Border */
+.wp-block-image.is-style-image-border img {
+  padding: var(--wp--preset--spacing--20);
+}
+
+/* Image Round w/Border */
+.wp-block-image.is-style-image-round-border img {
+  padding: var(--wp--preset--spacing--20);
+}
+
+/*-----------------------------------------------------------------------------
+# Latest Comments
+-----------------------------------------------------------------------------*/
+/* Set default latest comments to match latest posts */
+.wp-block-latest-comments {
+  list-style: none;
+}
+
+.wp-block-latest-comments__comment {
+  margin-bottom: 0;
+}
+
+/* Add some bottom margin to plain posts list */
+.wp-block-latest-comments li {
+  margin-bottom: var(--wp--preset--spacing--30);
+}
+
+/* Default latest comments style to no bullets */
+.wp-block-latest-comments:not(.is-style-bullets) {
+  padding-right: 0;
+  padding-inline-start: 0;
+}
+
+/*-----------------------------------------------------------------------------
+# Latest Comments: Custom
+-----------------------------------------------------------------------------*/
+/* Bullets style */
+.wp-block-latest-comments.is-style-bullets:not(.has-avatars) {
+  padding-right: 2em;
+}
+
+.wp-block-latest-comments.is-style-bullets {
+  list-style: disc;
+}
+
+.wp-block-latest-comments.is-style-bullets li {
+  list-style: disc;
+  margin-bottom: 0;
+}
+
+.wp-block-latest-comments.is-style-bullets.has-avatars .wp-block-latest-comments__comment {
+  list-style-position: inside;
+}
+
+/*-----------------------------------------------------------------------------
+# Latest Posts
+-----------------------------------------------------------------------------*/
+/* Increase post title size */
+.wp-block-latest-posts.is-grid .wp-block-latest-posts__post-title {
+  font-size: var(--wp--preset--font-size--medium);
+  line-height: 1.1;
+}
+
+/* Set post thumbnails to match blog */
+.wp-block-latest-posts__featured-image img {
+  border-radius: var(--wp--custom--border--radius);
+  border: 1px solid var(--wp--custom--color--border);
+  padding: var(--wp--preset--spacing--20);
+  box-shadow: var(--wp--custom--shadow--default);
+}
+
+.wp-block-latest-posts__featured-image img {
+  border-radius: var(--wp--custom--border--radius);
+}
+
+.wp-block-latest-posts__featured-image.aligncenter {
+  margin-bottom: var(--wp--preset--spacing--30);
+}
+
+/* Add some padding to plain posts list */
+.wp-block-latest-posts:not(.is-grid) li {
+  margin-bottom: var(--wp--preset--spacing--30);
+}
+
+/* Remove extra bottom padding on posts grid */
+.wp-block-latest-posts.is-grid li {
+  margin-bottom: 0;
+}
+
+/* Override horizontal padding on mobile */
+@media only screen and (max-width: 601px) {
+  .wp-block-latest-posts.is-grid li {
+    margin-left: 0;
+  }
+}
+/*-----------------------------------------------------------------------------
+# Latest Posts: Custom
+-----------------------------------------------------------------------------*/
+/* Bullets */
+.wp-block-latest-posts.is-style-bullets.wp-block-latest-posts__list:not(.is-grid) {
+  list-style: disc;
+  padding-right: 2em;
+}
+
+.wp-block-latest-posts.is-style-bullets:not(.is-grid) li {
+  list-style: disc;
+  overflow: visible;
+  margin-bottom: 0;
+}
+
+/* No Read More link */
+.is-style-no-readmore .wp-block-latest-posts__post-excerpt > .wp-block-latest-posts__read-more {
+  display: none;
+}
+
+/*-----------------------------------------------------------------------------
+# Media & Text
+-----------------------------------------------------------------------------*/
+/* Default padding on the content (which is on the right by default) */
+.wp-block-media-text:not(.is-style-no-padding) .wp-block-media-text__content {
+  padding-right: var(--wp--preset--spacing--40);
+  padding-left: 0;
+}
+
+/* Swap the padding if content is on the left */
+.wp-block-media-text.has-media-on-the-right:not(.is-style-no-padding) .wp-block-media-text__content {
+  padding-right: 0;
+  padding-left: var(--wp--preset--spacing--40);
+}
+
+/* Remove the padding when collapsed on mobile */
+@media only screen and (max-width: 601px) {
+  .wp-block-media-text.is-stacked-on-mobile:not(.has-background) .wp-block-media-text__content {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+/* FIX core WordPress so that border radius works */
+.wp-block-media-text {
+  overflow: hidden;
+}
+
+/*-----------------------------------------------------------------------------
+# Media & Text: Custom
+-----------------------------------------------------------------------------*/
+/* No Padding */
+.wp-block-media-text.is-style-no-padding .wp-block-media-text__content {
+  padding: 0;
+}
+
+/*-----------------------------------------------------------------------------
+# Navigation
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+# Style Nav Menus
+-----------------------------------------------------------------------------*/
+.wp-block-navigation .has-child .wp-block-navigation-submenu__toggle[aria-expanded=true] ~ .wp-block-navigation__submenu-container,
+.wp-block-navigation .has-child:not(.open-on-click):hover > .wp-block-navigation__submenu-container,
+.wp-block-navigation .has-child:not(.open-on-click):not(.open-on-hover-click):focus-within > .wp-block-navigation__submenu-container {
+  min-width: var(--wp--custom--navigation--width, 260px);
+}
+
+/* FIX for padding on level 2+ nav menu and pages list drop-downs */
+.wp-block-navigation__submenu-container .wp-block-navigation-item.open-on-click .wp-block-navigation-submenu__toggle {
+  padding-right: 1em;
+}
+
+/* Default nav link opacity on hover */
+.wp-block-navigation .wp-block-navigation-item:hover > .wp-block-navigation-item__content.wp-block-navigation-item__content,
+.wp-block-navigation .wp-block-navigation-item:active > .wp-block-navigation-item__content.wp-block-navigation-item__content {
+  opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
+}
+
+/*-----------------------------------------------------------------------------
+# Style Nav Menus with a background
+-----------------------------------------------------------------------------*/
+/* Reduce vertical gap when Nav menu wraps */
+/* When the nav itself has a colored background, set link color and padding */
+/*-----------------------------------------------------------------------------
+# Style the Nav on HEADER MENU
+-----------------------------------------------------------------------------*/
+.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.current-menu-item, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:has(.current-menu-ancestor), .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.current-menu-ancestor, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:has(.current-menu-ancestor) > .wp-block-navigation-item__content, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.wp-block-pages-list__item.current-menu-item > a, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item.wp-block-home-link > a[aria-current=page] {
+  color: var(--wp--preset--color--highlight);
+}
+
+.site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item.current-menu-item:not(.has-child) > a, .site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item.current-menu-ancestor, .site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item:has(.current-menu-ancestor) > .wp-block-navigation-item__content, .site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item.wp-block-pages-list__item.current-menu-item > a, .site-header:not(.has-background) .wp-block-navigation.has-background .wp-block-navigation-item.wp-block-home-link > a[aria-current=page],
+.site-header.has-background .wp-block-navigation .wp-block-navigation-item.current-menu-item:not(.has-child) > a,
+.site-header.has-background .wp-block-navigation .wp-block-navigation-item.current-menu-ancestor,
+.site-header.has-background .wp-block-navigation .wp-block-navigation-item:has(.current-menu-ancestor) > .wp-block-navigation-item__content,
+.site-header.has-background .wp-block-navigation .wp-block-navigation-item.wp-block-pages-list__item.current-menu-item > a,
+.site-header.has-background .wp-block-navigation .wp-block-navigation-item.wp-block-home-link > a[aria-current=page] {
+  font-weight: var(--wp--custom--typography--font-weight--medium);
+}
+
+/* Bold or highlight active sub-menu items, depending on whether text color or not */
+.wp-block-navigation__submenu-container:not(.has-text-color) .wp-block-navigation-item.current-menu-item .wp-block-navigation-item__content.wp-block-navigation-item__content {
+  color: var(--wp--preset--color--highlight);
+}
+
+.wp-block-navigation__submenu-container.has-text-color .wp-block-navigation-item.current-menu-item .wp-block-navigation-item__content.wp-block-navigation-item__content {
+  font-weight: var(--wp--custom--typography--font-weight--medium);
+}
+
+/* On hover, bold or highlight menu items, depending on whether background color or not */
+.site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover > .wp-block-navigation-item__content, .site-header:not(.has-background) .wp-block-navigation:not(.has-background) .wp-block-navigation-item:hover > .wp-block-navigation__submenu-icon {
+  color: var(--wp--preset--color--highlight-alt);
+}
+
+/* Drop-down link hover color. */
+.site-header:not(.has-background) .wp-block-navigation-submenu.open-on-click:hover,
+.site-header:not(.has-background) .wp-block-navigation-item.has-child.open-on-click:hover {
+  color: var(--wp--preset--color--highlight);
+}
+
+.wp-block-navigation__submenu-container:not(.has-background) > .wp-block-navigation-item > .wp-block-navigation-item__content:hover {
+  color: var(--wp--preset--color--highlight);
+}
+
+.wp-block-navigation.has-background .wp-block-navigation-item:hover > .wp-block-navigation-item__content, .wp-block-navigation.has-background .wp-block-navigation-item:hover > .wp-block-navigation__submenu-icon {
+  opacity: 0.8;
+}
+
+/* But on mobile nav, don't hover on non-clickable links */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child.open-on-click:hover > .wp-block-navigation-item, .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child.open-on-click:hover > .wp-block-navigation-item__content, .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child.open-on-click > .wp-block-navigation-item:hover, .wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation-item.has-child.open-on-click > .wp-block-navigation-item__content:hover {
+  color: inherit;
+  cursor: unset;
+  font-weight: inherit;
+  opacity: 1;
+}
+
+/*-----------------------------------------------------------------------------
+# Style the Mobile Nav Menu
+-----------------------------------------------------------------------------*/
+/* Style the mobile nav open and close buttons */
+.wp-block-navigation .wp-block-navigation__responsive-container-open,
+.wp-block-navigation .wp-block-navigation__responsive-container-close {
+  background-color: rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--wp--custom--color--border, var(--wp--preset--color--neutral-alt));
+  border-radius: var(--wp--custom--button--radius);
+  padding: var(--wp--preset--spacing--20);
+}
+
+.has-modal-open .admin-bar .is-menu-open .wp-block-navigation__responsive-dialog {
+  margin-top: var(--wp--preset--spacing--60);
+}
+
+/* 
+ * On navs with colored backgrounds, round out the mobile nav container to
+ * match our open / close menu buttons
+ */
+.wp-block-navigation.has-background:has(.wp-block-navigation__responsive-container:not(.is-menu-open.is-menu-open)) {
+  border-radius: var(--wp--custom--button--radius);
+}
+
+/*
+ * Responsive menu container padding. This behavior may be built into the 
+ * Block Editor in the future.
+ */
+.wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
+  padding-top: calc(var(--wp--preset--spacing--40) + 14.5px);
+  padding-bottom: var(--wp--preset--spacing--60);
+  padding-left: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
+  padding-right: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
+}
+
+/* Set padding on drop-down menus for mobile */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content .has-child .wp-block-navigation__submenu-container {
+  padding: 0 var(--wp--preset--spacing--40);
+}
+
+/* Increase animation TIME on nav menu drop-downs */
+.wp-block-navigation .has-child .wp-block-navigation__submenu-container {
+  -webkit-transition-duration: var(--wp--custom--animation--duration--short);
+  transition-duration: var(--wp--custom--animation--duration--short);
+}
+
+/* Increase animation DELAY on nav drop-downs when NOT requiring a click */
+.wp-block-navigation .has-child:not(.open-on-click):hover > .wp-block-navigation__submenu-container {
+  -webkit-transition-delay: var(--wp--custom--animation--duration--short);
+  transition-delay: var(--wp--custom--animation--duration--short);
+}
+
+/*-----------------------------------------------------------------------------
+# Custom: Fixed Navigation Menu
+-----------------------------------------------------------------------------*/
+/* Navigation Fixed menu */
+nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-open,
+nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close {
+  background: rgba(0, 0, 0, 0.25);
+  padding: var(--wp--preset--spacing--20);
+  color: white;
+  border: none;
+  border-radius: 0;
+}
+
+/* On the front-end only, position the fixed nav menu to the top left */
+.wp-site-blocks:not(.is-root-container) nav.wp-block-navigation.is-style-fixed-menu {
+  position: fixed;
+  top: calc(var(--wp--preset--spacing--60) + 1px * var(--wp--style--root--padding-top, 0));
+  right: max(0.5 * (100% - var(--wp--style--global--wide-size)), var(--wp--style--root--padding-left, calc(2 * var(--wp--preset--spacing--50))));
+  left: auto;
+  z-index: 9999;
+}
+
+/* If WordPress Admin Bar, adjust fixed menu top position so its underneath */
+.admin-bar .wp-site-blocks:not(.is-root-container) nav.wp-block-navigation.is-style-fixed-menu {
+  top: calc(var(--wp--preset--spacing--60) + 1px * var(--wp--style--root--padding-top, 0) + var(--wp-admin--admin-bar--height, 0));
+}
+
+/* Default the fixed menu's drop-down and close button also to the left */
+nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container, nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close {
+  right: 0;
+  left: auto;
+}
+nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container {
+  width: var(--wp--custom--navigation--wide-width, 360px);
+}
+
+/* If header right justified, position the fixed menu to the right */
+.site-header.is-content-justification-right > nav.wp-block-navigation.is-style-fixed-menu, .site-header.is-content-justification-right > .wp-block-template-part > nav.wp-block-navigation.is-style-fixed-menu {
+  left: max(0.5 * (100% - var(--wp--style--global--wide-size)), var(--wp--style--root--padding-right, calc(2 * var(--wp--preset--spacing--50))));
+  right: auto;
+}
+.site-header.is-content-justification-right > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container, .site-header.is-content-justification-right > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close, .site-header.is-content-justification-right > .wp-block-template-part > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container, .site-header.is-content-justification-right > .wp-block-template-part > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close {
+  left: 0;
+  right: auto;
+}
+
+/* If header center justified, position the fixed menu in the center */
+.site-header.is-content-justification-center > nav.wp-block-navigation.is-style-fixed-menu, .site-header.is-content-justification-center > .wp-block-template-part > nav.wp-block-navigation.is-style-fixed-menu {
+  right: calc(50% - 12px - var(--wp--preset--spacing--20));
+  left: auto;
+}
+.site-header.is-content-justification-center > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container, .site-header.is-content-justification-center > .wp-block-template-part > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container {
+  right: calc(50% - 180px);
+  left: auto;
+}
+.site-header.is-content-justification-center > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close, .site-header.is-content-justification-center > .wp-block-template-part > nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close {
+  right: calc(50% - 12px - 0.5 * var(--wp--preset--spacing--20));
+  left: auto;
+}
+
+/*-----------------------------------------------------------------------------
+# Paragraph
+-----------------------------------------------------------------------------*/
+/* Padding for colored backgrounds on paragraphs */
+.wp-block-paragraph.has-background {
+  padding: var(--wp--preset--spacing--40);
+}
+
+/* Adjust padding on tablet and mobile */
+@media only screen and (max-width: 781px) {
+  /* If no global padding, then set paragraphs like colored groups */
+  p.has-background:not(.has-global-padding) {
+    padding-right: calc(2 * var(--wp--style--block-gap));
+    padding-left: calc(2 * var(--wp--style--block-gap));
+  }
+  /* If global padding, then OVERRIDE horizontal padding on mobile */
+  .has-global-padding p.has-background {
+    padding-right: var(--wp--style--root--padding-left) !important;
+    padding-left: var(--wp--style--root--padding-right) !important;
+  }
+}
+/*-----------------------------------------------------------------------------
+# Paragraph: Custom
+-----------------------------------------------------------------------------*/
+/* Alignwide */
+p.is-style-alignwide {
+  max-width: var(--wp--style--global--wide-size) !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+/*-----------------------------------------------------------------------------
+# Post Author Name
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+# Navigation
+-----------------------------------------------------------------------------*/
+.wp-block-post-terms.taxonomy-category:before, .wp-block-post-terms.taxonomy-post_tag:before, .wp-block-post-date:before, .wp-block-post-comments-count:before, .wp-block-post-author-name:before {
+  content: "";
+  background-color: currentColor;
+  display: inline-flex;
+  align-self: center;
+  height: 1em;
+  width: 1em;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.wp-block-post-author-name:before {
+  /* webpackIgnore: true */
+  mask-image: url(../../icons/admin-users.svg);
+  /* webpackIgnore: true */
+  -webkit-mask-image: url(../../icons/admin-users.svg);
+  margin-left: 0.15em;
+}
+
+/*-----------------------------------------------------------------------------
+# Post Author
+-----------------------------------------------------------------------------*/
+.wp-block-post-author__name {
+  margin-bottom: 0;
+}
+
+.wp-block-post-author__avatar {
+  margin-left: var(--wp--style--block-gap);
+}
+
+.wp-block-post-author__avatar img {
+  border-radius: 50%;
+  margin: 0;
+}
+
+.wp-block-post-author__bio {
+  font-size: var(--wp--preset--font-size--normal);
+  margin-top: var(--wp--style--block-gap);
+  margin-bottom: var(--wp--style--block-gap);
+}
+
+/*-----------------------------------------------------------------------------
+# Post Author Name
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+# Post Comments Count (Only w/Gutenberg Plugin)
+-----------------------------------------------------------------------------*/
+.wp-block-post-comments-count:before {
+  /* webpackIgnore: true */
+  mask-image: url(../../icons/admin-comments.svg);
+  /* webpackIgnore: true */
+  -webkit-mask-image: url(../../icons/admin-comments.svg);
+  margin-left: 0.15em;
+}
+
+/* Add word "comment(s)" after post comment count if Gutenberg active */
+.wp-block-post-comments-count:after {
+  content: "comment(s)";
+  margin-right: 0.15em;
+}
+
+/*-----------------------------------------------------------------------------
+# Post Comments Form
+-----------------------------------------------------------------------------*/
+/* Remove top margin on "Leave a Reply" */
+.comment-reply-title {
+  margin-top: 0;
+}
+
+/* Remove bottom margin on "Post Comment" button (it's in a paragraph)*/
+.wp-block-post-comments-form .form-submit.wp-block-button {
+  margin-bottom: 0;
+}
+
+/* Set medium font weight on comment form labels */
+.wp-block-post-comments-form label {
+  font-weight: var(--wp--custom--typography--font-weight--medium);
+}
+
+/* Override no-shadow if our custom shadow default is set */
+.wp-block-post-comments-form input[type=submit].wp-element-button {
+  box-shadow: var(--wp--custom--shadow--default);
+}
+
+/*-----------------------------------------------------------------------------
+# Post Author Name
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+# Post Date
+-----------------------------------------------------------------------------*/
+.wp-block-post-date:before {
+  /* webpackIgnore: true */
+  mask-image: url(../../icons/calendar-alt.svg);
+  /* webpackIgnore: true */
+  -webkit-mask-image: url(../../icons/calendar-alt.svg);
+  margin-left: 0.15em;
+}
+
+/*-----------------------------------------------------------------------------
+# Post Excerpt
+-----------------------------------------------------------------------------*/
+.wp-block-post-excerpt > p,
+.wp-block-post-excerpt > .wp-block-post-excerpt__excerpt {
+  margin-bottom: 0;
+}
+
+/*-----------------------------------------------------------------------------
+# Post Excerpt: Custom
+-----------------------------------------------------------------------------*/
+/* No Read More link */
+.wp-block-post-excerpt.is-style-no-readmore > .wp-block-post-excerpt__more-text {
+  display: none;
+}
+
+/*-----------------------------------------------------------------------------
+# Post Featured Image
+-----------------------------------------------------------------------------*/
+.wp-block-post-featured-image img {
+  padding: var(--wp--preset--spacing--20);
+}
+
+/*-----------------------------------------------------------------------------
+# Custom: Post Featured Image
+-----------------------------------------------------------------------------*/
+/* Featured Image no border */
+.is-style-image-no-border img {
+  border: none;
+  border-radius: 0;
+  padding: 0;
+}
+
+/*-----------------------------------------------------------------------------
+# Post Author Name
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+# Post Terms:
+-----------------------------------------------------------------------------*/
+.wp-block-post-terms.taxonomy-category:before {
+  /* webpackIgnore: true */
+  mask-image: url(../../icons/category.svg);
+  /* webpackIgnore: true */
+  -webkit-mask-image: url(../../icons/category.svg);
+  margin-left: 0.15em;
+}
+
+.wp-block-post-terms.taxonomy-post_tag:before {
+  /* webpackIgnore: true */
+  mask-image: url(../../icons/tag.svg);
+  /* webpackIgnore: true */
+  -webkit-mask-image: url(../../icons/tag.svg);
+  margin-left: 0.15em;
+}
+
+/* Remove bottom margin on Category and Tag descriptions */
+.wp-block-term-description p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/*-----------------------------------------------------------------------------
+# Query Pagination
+-----------------------------------------------------------------------------*/
+.wp-block-query-pagination-numbers .page-numbers:nth-last-child(n+2) {
+  padding-left: var(--wp--preset--spacing--30);
+}
+
+/*-----------------------------------------------------------------------------
+# Separator
+-----------------------------------------------------------------------------*/
+/* Default separator width */
+.wp-block-separator:not(.is-style-wide, .is-style-dots, .is-style-thick-wide) {
+  width: calc(1.5 * var(--wp--preset--spacing--80));
+}
+
+/* Override our short separator width for wide and dotted separators */
+.wp-block-separator.is-style-wide,
+.wp-block-separator.is-style-dots {
+  width: 100% !important;
+}
+
+/* FIX to center default (narrow) separator when user selects alignfull */
+.wp-block-separator.alignfull {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+/* FIX for theme setting colors on separators. Use only the background color. */
+.wp-block-separator:not(.is-style-dots) {
+  color: transparent;
+}
+
+/* Default separator color when on colored background */
+.has-background .wp-block-separator:not(.has-background) {
+  color: inherit;
+}
+
+/*-----------------------------------------------------------------------------
+# Separator: Custom
+-----------------------------------------------------------------------------*/
+/* Anchor only separator. Also can be used for clearing floats */
+.wp-block-separator.is-style-anchor {
+  visibility: hidden;
+  border: none;
+}
+
+/*-----------------------------------------------------------------------------
+# Site Logo
+-----------------------------------------------------------------------------*/
+/* Don't shrink the site logo */
+.wp-block-site-logo {
+  flex-shrink: 0;
+}
+
+/*-----------------------------------------------------------------------------
+# Social Links (Icons)
+-----------------------------------------------------------------------------*/
+/* Dont' add margin directly to Social Icons */
+.wp-block-social-links {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Adjust icon sizes */
+.wp-block-social-links.has-small-icon-size {
+  font-size: var(--wp--preset--font-size--medium);
+}
+
+.wp-block-social-links.has-normal-icon-size {
+  font-size: var(--wp--preset--font-size--large);
+}
+
+/* Adjust animation on social icons to better match our other animation */
+.wp-block-social-link {
+  transition: transform var(--wp--custom--animation--duration--medium, 500ms) ease-in-out;
+}
+
+/*-----------------------------------------------------------------------------
+# Table
+-----------------------------------------------------------------------------*/
+/* Allow tables to scroll on mobile */
+.wp-block-table {
+  overflow-x: scroll;
+}
+
+/* On striped tables, alternate our neutral and neutral-alt colors */
+.wp-block-table.is-style-stripes tbody tr:nth-child(odd) {
+  background-color: var(--wp--preset--color--light-gray);
+  color: var(--wp--preset--color--almost-black);
+}

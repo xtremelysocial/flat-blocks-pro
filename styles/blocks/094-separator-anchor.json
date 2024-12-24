@@ -1,0 +1,13 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"slug": "anchor",
+	"title": "Anchor Only",
+	"blockTypes": [ "core/separator" ],
+	"styles": {
+		"spacing": {
+			"padding": 0,
+			"margin": 0
+		}
+	}
+}

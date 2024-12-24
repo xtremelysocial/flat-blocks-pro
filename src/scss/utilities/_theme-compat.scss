@@ -1,0 +1,63 @@
+/*-----------------------------------------------------------------------------
+# Flat Blocks Theme Compatibility with Prior Versions
+#
+# This is so that user's CONTENT created with prior theme versions will still
+# work as before. These styles have been DEPRECATED though and will be removed
+# at some point, so its best to update the site content.
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+# Flat Blocks Styles for theme < v2.0
+-----------------------------------------------------------------------------*/
+
+/* Legacy support for original Down Arrow for Scroll Headers */
+@use "../mixins/icons";
+
+@include icons.svg-icon(
+	'is-style-arrow-icon-no-text',
+	'arrow-down-alt2',
+	'after',
+	false, // $margin
+	true, // $link
+);
+
+p.is-style-arrow-icon-no-text > a {
+	text-decoration: none !important;
+	outline: none !important;
+}
+
+p.is-style-arrow-icon-no-text > a:hover {
+	opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
+}
+
+/* Map deprecated font sizes */
+.has-extra-small-font-size {
+	font-size: 14px !important;
+}
+
+.has-larger-font-size {
+	font-size: var(--wp--preset--font-size--x-large) !important;
+}
+
+.has-huge-font-size {
+	font-size: var(--wp--preset--font-size--xxx-large) !important;
+}
+
+.has-gigantic-font-size {
+	font-size: var(--wp--preset--font-size--xxxx-large) !important;
+}
+
+/* Add top and bottom margin on the sidebar */
+// main > .wp-block-columns > .wp-block-column .sidebar.wp-block-group { 
+//  	margin-block-start: var(--wp--style--block-gap);
+// 	margin-block-end: var(--wp--style--block-gap);
+// }
+
+/*-----------------------------------------------------------------------------
+# Flat Blocks Styles for theme < v1.9.5
+-----------------------------------------------------------------------------*/
+
+/* Add top margin on blocks that appear before the Post Content */
+// main > .wp-block-columns > .wp-block-column > .wp-block-post-featured-image, 
+// main > .wp-block-group > .wp-block-search {
+//  	margin-block-start: var(--wp--style--block-gap);
+// }

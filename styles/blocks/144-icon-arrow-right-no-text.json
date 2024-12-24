@@ -1,0 +1,10 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"slug": "icon-arrow-right-alt2-no-text",
+	"title": "Arrow Right No Text",
+	"blockTypes": [ "core/paragraph", "core/navigation-link" ],
+	"styles": {
+		"css": ""
+	}
+}

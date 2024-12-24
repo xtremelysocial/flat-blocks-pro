@@ -12,12 +12,7 @@
     margin-right: auto;
 }
 
-/* FIX for center alignment */
-body .is-layout-constrained > .aligncenter {
-	text-align: center;
-}
-
-/* ADD padding to align left and align right to honor wide width */
+/* ADD padding and margin to align left and align right to match wide width */
 .wp-site-blocks > .alignleft {
 	margin-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
 }
@@ -36,18 +31,9 @@ body .is-layout-constrained > .alignright {
 	margin-inline-start: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));
 }
 
-/* FIX alignfull in WordPress.org theme preview */
-.has-global-padding > #wporg-pattern-preview > div > .alignfull {
-	margin-right: calc(var(--wp--style--root--padding-right) * -1);
-	padding-right: var(--wp--style--root--padding-right);
-	margin-left: calc(var(--wp--style--root--padding-left) * -1);
-	padding-left: var(--wp--style--root--padding-left);
+/* Automatically clear floats on Groups with align left or right */
+.wp-block-group:not(.is-layout-flex):not(.is-style-fixed-header):has(.alignleft, .alignright):after {
+	content: "";
+	clear: both;
+	display: table;
 }
-
-/* Fix WordPress Admin bar on phones not sticking to the top */
-@media screen and (max-width: 600px) {
-    body > #wpadminbar {
-        position: fixed;
-    }
-}
-

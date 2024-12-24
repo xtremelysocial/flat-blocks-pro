@@ -147,6 +147,36 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 2.0 = 
+December 24, 2024
+
+Version Summary: Updated minimum WordPress version required to 6.7 which coupled with simplifying CSS throughout significantly reduced the amount of CSS needed by over 25%. The theme now only loads the CSS styles needed for each page and instructs WordPress to also do this. Added 5 new gradients based on the recent duotones that were added. Changed some font sizes to match the TwentyTwentyFive theme. Miscellaneous enhancements and fixes.
+
+Breaking Change to Font Sizes: You should replace Extra Small with custom font size 14. Replace Larger with Extra Large. Replace Huge with 3X Large. Replace Gigantic with 4X Large. CSS was added to map these, but at some point that will be removed from the theme.
+ 
+More Details on Updates:
+* Updated minimum WordPress version required to 6.7 and dropped all the code needed to support back to Wordpress v6.5.
+* Simplified the CSS for default text and link colors on colored backgrounds as well as for Navigation highlights which reduced CSS by over 25%.
+* Now Dashicons CSS only loads if in use on a particular page. Now CSS for WordPress.org theme previews only loads there. This reduces CSS by about another 10%.
+* Rewrote the CSS for top margin on blocks to be consistent with WordPress vertical spacing as well as no longer require certain Template Parts and Templates to add top-margin.
+* The theme now instructs WordPress to only load the CSS styles needed for each page. This is also the WordPress default in version 6.7. The theme itself now also does this. This lets core WordPress optimize which styles load and whether they load as inline CSS or a separate CSS file.
+* Rewrote the main functions.php to radically simplify it as well. It now uses an array to load other PHP include files as well as an array for which CSS stylesheets to load. Code needed for older WordPress versions was removed. 
+* Added more gradient options to match the duotones added in Flat Blocks v1.9: Purple to Yellow, Purple to Green, Blue to Red, Blue to Orange, and Midnight (Midnight Blue to Blue).
+* Made the following changes to font size names: Removed Extra Small as it wasn't being used by the theme, changed Larger to Extra Large (x-large) and changed Extra Large to 2X Large (xx-large for consistency with TwentyTwentyFive theme), changed Huge to 3X Large (xxx-large), and changed Gigantic to 4X Large (xxxx-large). CSS for backwards compatibility was added and will remain in place for a while, but you should update your font sizes at some point.
+* Changed icons that the theme uses directly to SVG instead of Dashicons. Added custom block styles for these for paragraphs and navigation links. Now available are Down Arrow, Up Arrow, Left Arrow, and Right Arrow and "No Text" options for each which displays only the arrow. 
+* Added a new "Anchor ID" Separator style that is specifically for adding an "HTML ID" (anchor tag) to it so it can be linked to within the page or post. It will display a placeholder with a dotted line in the Editor so it can be seen and selected, but it won't display on the front-end.
+* Updated the Cover Block Patterns with Scroll Down Arrow to use the new SVG icons and to reference the #content-start ID using the new Anchor Separator style.
+* Updated Dashicons CSS to be similar to the new arrow icons for consistency.
+* Added Block Pattern for Cover Camera. 
+* Added clear floats automatically to Groups which have align left and align right in them. This is only done on normal (non-flex) Groups, not on Rows (flex).
+* Added WEBP versions of all cover images. The JPEG versions are still used in the various Block Patterns, but if your web server supports WEBP then you can upload them to your Media Library and use them instead. WEBP is a more optimized image format specifically for use on the web. 
+* Added legacy support for Flat Blocks versions 1.9x, specifically for deprecated font sizes, top margins, and the scroll down arrow. Removed legacy support for older theme versions.
+
+= 1.9.7 =
+December 7, 2024
+
+More updates to CSS for margins for WordPress v6.7. Specifically for users that have edited the Sidebar or other Template Parts or Templates.
+
 = 1.9.6 =
 December 6, 2024
 
@@ -714,7 +744,7 @@ July 5, 2023
 * Add template parts for footer block 1, block 2, and about block. Update the footer templates that use them. This way when the component blocks are edited, the updates will be reflected in all the footer templates that use them.
 * In conjunction with adding the footer blocks, revise the CSS for vertical margin on template parts.
 * Only display Post Comment Count on blog if Gutenberg plugin is enabled. This Block isn't part of standard WordPress. This was done with a new hidden pattern (hidden-post-date.php).
-* Adjust font-size on Site Map page template to match the others ("larger" font size).
+* Adjust font-size on Site Map page template to match the others ("x-large" font size).
 * For global theme style with drop-shadow buttons and link underlines, remove underline from nav menus
 * Set Post/Page Excerpt length to 25 words if used in Post Title or Page Title Template Part. However, it still uses the default 55 words on the blog. 
 

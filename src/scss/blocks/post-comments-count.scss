@@ -1,18 +1,16 @@
 /*-----------------------------------------------------------------------------
 # Post Comments Count (Only w/Gutenberg Plugin)
 -----------------------------------------------------------------------------*/
+@use "../mixins/icons";
 
-/* dashicons-admin-comments for comments count */
-.wp-block-post-comments-count:before {
-	font-family: dashicons;
-	content: "\f101";
-    margin-right: var(--wp--preset--spacing--20);
-}
+@include icons.svg-icon(
+	'wp-block-post-comments-count',
+	'admin-comments',
+	'before'
+);
 
-/* 
- * Add word "comment(s)" after post comment count. Note this is 
- * only available with the Gutenberg plugin. 
- */
+/* Add word "comment(s)" after post comment count if Gutenberg active */
 .wp-block-post-comments-count:after {
-	content: " comment(s)";
+	content: "comment(s)";
+	margin-left: 0.15em;
 }

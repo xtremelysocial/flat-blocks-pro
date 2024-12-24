@@ -250,8 +250,8 @@ if ( ! function_exists( 'flatblocks_register_block_patterns' ) ) :
 		// Allow child themes to alter the block patterns list
 		$block_patterns = apply_filters( 'flatblocks_block_patterns', $block_patterns );
 
-		// Then remove the core WordPress block patterns if we're
-		// registering any, but also allow child themes to override this.
+		// Then remove the core WordPress block patterns if we're registering
+		// any, but also allow child themes to override this.
 		if ( is_array( $block_patterns ) && count( $block_patterns ) > 0 ) {
 			if ( apply_filters( 
 				'flatblocks_remove_core_patterns', 

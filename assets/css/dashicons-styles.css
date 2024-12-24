@@ -1,0 +1,94 @@
+/*!*****************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/scss/dashicons-styles.scss ***!
+  \*****************************************************************************************************************************************************/
+/**
+ * File:	dashicons-styles.css
+ * Theme:	Flat Blocks
+ * 
+ * The stylesheet for Dashicons icons
+ * 
+ * NOTE: This file is AUTO-GENERATED from the SASS source files 
+ * in /src/sass/dashicons-styles.scss. Do not make updates here.
+ *
+ * @package flat-blocks
+ * @since	2.0
+ */
+/*-----------------------------------------------------------------------------
+# Dashicons
+-----------------------------------------------------------------------------*/
+/**
+ * Override core WordPress base Dashicon styles. Don't let it alter height, 
+ * width, font-size or line-height.
+ */
+.dashicons {
+  display: inherit;
+  width: auto;
+  height: auto;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: var(--wp--custom--typography--font-weight--normal);
+  line-height: inherit;
+  text-align: center;
+  text-transform: inherit;
+}
+
+.dashicons:before,
+[class*=dashicons-]:before {
+  display: inline-block;
+  width: auto;
+  height: auto;
+  font-family: dashicons;
+  font-size: 1em;
+  line-height: 1;
+  font-weight: inherit;
+  vertical-align: text-top;
+}
+
+/* Add some right margin on inline dashicons before the text */
+[class*=dashicons-]:not(.dashicons-after):before {
+  margin-right: var(--wp--preset--spacing--20);
+}
+
+.dashicons-after {
+  display: flex;
+}
+.dashicons-after:before {
+  order: 2;
+  margin-left: var(--wp--preset--spacing--20);
+}
+
+/* Don't underline dashicons links */
+a[class*=dashicons-],
+[class*=dashicons-] a {
+  text-decoration: none;
+}
+
+/* Style Dashicons in Nav menus */
+.wp-block-navigation-item.dashicons {
+  display: flex;
+  flex-direction: row;
+}
+
+/* Don't duplicate icons on drop-down menus (submenu containers) */
+[class*=dashicons-].wp-block-navigation-submenu > [class*=dashicons-].wp-block-navigation__submenu-container:before {
+  content: none !important;
+}
+
+/* Move the left padding on navigation items to the icon */
+.wp-block-navigation .wp-block-navigation__submenu-container [class*=dashicons-].wp-block-navigation-item:before {
+  padding-left: 1em;
+}
+.wp-block-navigation .wp-block-navigation__submenu-container [class*=dashicons-].wp-block-navigation-item a:not(.wp-element-button) {
+  padding-left: var(--wp--preset--spacing--20);
+}
+
+/* Don't display icons on mobile menu because they can't be placed inline */
+.wp-block-navigation__responsive-container.is-menu-open .wp-block-navigation__responsive-container-content [class*=dashicons-]:before {
+  content: none;
+}
+
+/* Nav menus already have transitions and text align, so inherit them */
+.wp-block-navigation [class*=dashicons-] {
+  transition: inherit;
+  text-align: inherit;
+}

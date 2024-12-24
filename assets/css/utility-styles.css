@@ -1,0 +1,104 @@
+/*!***************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/scss/utility-styles.scss ***!
+  \***************************************************************************************************************************************************/
+/**
+ * File:	utility-styles.css
+ * Theme:	Flat Blocks
+ * 
+ * The stylesheet for utilities, such as icons and clearfix
+ * 
+ * NOTE: This file is AUTO-GENERATED from the SASS source files 
+ * in /src/sass/utility-styles.scss. Do not make updates here.
+ *
+ * @package flat-blocks
+ * @since	2.0
+ */
+/*-----------------------------------------------------------------------------
+# Flat Blocks Theme Compatibility with Prior Versions
+#
+# This is so that user's CONTENT created with prior theme versions will still
+# work as before. These styles have been DEPRECATED though and will be removed
+# at some point, so its best to update the site content.
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+# Flat Blocks Styles for theme < v2.0
+-----------------------------------------------------------------------------*/
+/* Legacy support for original Down Arrow for Scroll Headers */
+.is-style-arrow-icon-no-text > a:after {
+  content: "";
+  background-color: currentColor;
+  display: inline-flex;
+  align-self: center;
+  height: 1em;
+  width: 1em;
+  -webkit-mask-size: contain;
+  mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+  mask-repeat: no-repeat;
+}
+
+.is-style-arrow-icon-no-text > a.wp-block-navigation-item__content {
+  display: inline-flex;
+}
+.is-style-arrow-icon-no-text > a:after {
+  /* webpackIgnore: true */
+  mask-image: url(../icons/arrow-down-alt2.svg);
+  /* webpackIgnore: true */
+  -webkit-mask-image: url(../icons/arrow-down-alt2.svg);
+}
+
+p.is-style-arrow-icon-no-text > a {
+  text-decoration: none !important;
+  outline: none !important;
+}
+
+p.is-style-arrow-icon-no-text > a:hover {
+  opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
+}
+
+/* Map deprecated font sizes */
+.has-extra-small-font-size {
+  font-size: 14px !important;
+}
+
+.has-larger-font-size {
+  font-size: var(--wp--preset--font-size--x-large) !important;
+}
+
+.has-huge-font-size {
+  font-size: var(--wp--preset--font-size--xxx-large) !important;
+}
+
+.has-gigantic-font-size {
+  font-size: var(--wp--preset--font-size--xxxx-large) !important;
+}
+
+/* Add top and bottom margin on the sidebar */
+/*-----------------------------------------------------------------------------
+# Flat Blocks Styles for theme < v1.9.5
+-----------------------------------------------------------------------------*/
+/* Add top margin on blocks that appear before the Post Content */
+/*-----------------------------------------------------------------------------
+# Utilities
+-----------------------------------------------------------------------------*/
+/* FIX WordPress Admin bar on phones not sticking to the top */
+@media screen and (max-width: 600px) {
+  body > #wpadminbar {
+    position: fixed;
+  }
+}
+/* 
+ * Note: These utility classes must be added manually in the Advanced section 
+ * of the block settings.
+ */
+/* Clearfix (Clear floats) */
+.is-style-clearfix:not(.is-layout-flex):not(.is-style-fixed-header):after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* Flexbox No Shrink */
+.is-layout-flex .is-style-no-shrink {
+  flex-shrink: 0;
+}

@@ -2,6 +2,16 @@
 # Post Comments Form
 -----------------------------------------------------------------------------*/
 
+/* Remove top margin on "Leave a Reply" */
+.comment-reply-title {
+	margin-top: 0;
+}
+
+/* Remove bottom margin on "Post Comment" button (it's in a paragraph)*/
+.wp-block-post-comments-form .form-submit.wp-block-button {
+	margin-bottom: 0;
+}
+
 /* Set medium font weight on comment form labels */
 .wp-block-post-comments-form label {
 	font-weight: var(--wp--custom--typography--font-weight--medium);

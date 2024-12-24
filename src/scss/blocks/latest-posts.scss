@@ -15,6 +15,7 @@
 	padding: var(--wp--preset--spacing--20);
 	box-shadow: var(--wp--custom--shadow--default);
 }
+
 .wp-block-latest-posts__featured-image img {
 	border-radius: var(--wp--custom--border--radius);
 }
@@ -33,11 +34,7 @@
 	margin-bottom: 0;
 }
 
-/* Override horizontal padding on mobile 
- *
- * Note: Breakpoint of 601 is what is hard-coded in WordPress v6.0+
- * to collapse the latest posts grid 
- */
+/* Override horizontal padding on mobile */
 @media only screen and (max-width: 601px) {	
 	.wp-block-latest-posts.is-grid li {
         margin-right: 0;

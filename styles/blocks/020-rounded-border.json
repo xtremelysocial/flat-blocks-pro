@@ -17,7 +17,6 @@
 		"spacing": {
 			"padding": "var(--wp--preset--spacing--40)"
 		},
-		"shadow": "none /*var(--wp--custom--shadow--default)*/",
-		"css": ".is-layout-flex { overflow: hidden }"
+		"shadow": "none /*var(--wp--custom--shadow--default)*/"
 	}
 }

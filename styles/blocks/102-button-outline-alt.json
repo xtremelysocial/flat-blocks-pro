@@ -6,11 +6,11 @@
 	"blockTypes": [ "core/button" ],
 	"styles": {
 		"color": {
-			"text": "var:preset|color|highlight",
+			"text": "currentcolor",
 			"background": "transparent"
 		},
 		"border": {
-			"color": "currentColor",
+			"color": "currentcolor",
 			"width": "3px",
 			"style": "solid",
 			"radius": "9999px"

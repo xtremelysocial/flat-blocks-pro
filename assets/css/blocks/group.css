@@ -1,0 +1,80 @@
+/*!*************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/scss/blocks/group.scss ***!
+  \*************************************************************************************************************************************************/
+/*-----------------------------------------------------------------------------
+# Group
+-----------------------------------------------------------------------------*/
+/* Padding for colored backgrounds on groups */
+.wp-block-group.has-background {
+  padding: var(--wp--preset--spacing--60);
+}
+
+/* Padding for top-level non-colored groups */
+.wp-block-post-content > .wp-block-group:not(:first-child):not(.has-background):not(.is-style-no-padding),
+.wp-block-post-content > #wporg-pattern-preview > div > .wp-block-group:not(:first-child):not(.has-background):not(.is-style-no-padding) {
+  padding-top: var(--wp--preset--spacing--40);
+  padding-bottom: var(--wp--preset--spacing--40);
+}
+
+/* If global padding, then OVERRIDE horizontal padding on tablet and mobile */
+@media only screen and (max-width: 781px) {
+  .site-header.has-global-padding.wp-block-group,
+  .site-footer.has-global-padding.wp-block-group {
+    padding-left: var(--wp--style--root--padding-left) !important;
+    padding-right: var(--wp--style--root--padding-right) !important;
+  }
+}
+/* Even when nowrap is set, go ahead and collapse on mobile */
+@media only screen and (max-width: 601px) {
+  .is-nowrap.is-layout-flex.wp-block-group {
+    flex-wrap: wrap;
+  }
+}
+/*-----------------------------------------------------------------------------
+# Group: Custom
+-----------------------------------------------------------------------------*/
+/* Group borders */
+.wp-block-group.is-style-rounded-border.is-layout-flex,
+.wp-block-group.is-style-thick-rounded-border.is-layout-flex {
+  overflow: hidden;
+}
+
+/* Group no padding */
+.wp-block-group.is-style-no-padding {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.wp-block-group.is-style-no-padding:not(.has-global-padding) {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* Position the fixed header using sticky so we don't have to have top site margin */
+.wp-site-blocks > header:has(.is-position-sticky),
+.wp-site-blocks > header:has(.is-style-fixed-header) {
+  position: sticky;
+  top: 0;
+  background-color: var(--wp--preset--color--base, var(--wp--preset--color--background));
+  box-shadow: var(--wp--custom--shadow--default);
+  z-index: 10;
+}
+
+/* If WordPress Admin Bar, then adjust fixed header position so its underneath it */
+.admin-bar .wp-site-blocks > header:has(.is-position-sticky),
+.admin-bar .wp-site-blocks > header:has(.is-style-fixed-header) {
+  top: var(--wp-admin--admin-bar--height, 32px);
+}
+
+/* Position the fixed footer using sticky, but only on large screens */
+.wp-site-blocks > footer:has(.is-position-sticky) {
+  position: relative;
+  bottom: 0;
+  z-index: 9;
+}
+
+@media only screen and (min-width: 1100px) {
+  .wp-site-blocks > footer:has(.is-position-sticky) {
+    position: sticky;
+  }
+}

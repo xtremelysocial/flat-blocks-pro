@@ -1,0 +1,22 @@
+/*-----------------------------------------------------------------------------
+# WordPress.org Theme Preview
+-----------------------------------------------------------------------------*/
+
+/* FIX alignfull in WordPress.org theme preview */
+.has-global-padding > #wporg-pattern-preview > div > .alignfull {
+	margin-right: calc(var(--wp--style--root--padding-right) * -1);
+	padding-right: var(--wp--style--root--padding-right);
+	margin-left: calc(var(--wp--style--root--padding-left) * -1);
+	padding-left: var(--wp--style--root--padding-left);
+}
+
+/* FIX for Social icons in WordPress.org theme preview */
+.wp-block-social-links {
+	display: flex;
+	gap: var(--wp--style--block-gap);
+}
+
+/* FIX extra top-margin on sidebar in WordPress.org theme preview */
+#wporg-pattern-preview .sidebar.wp-block-group {
+	margin-top: 0 !important;
+}

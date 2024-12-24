@@ -1,12 +1,7 @@
 /*-----------------------------------------------------------------------------
 # Forms
 -----------------------------------------------------------------------------*/
-/* 
- * Style form fields
- * 
- * Note: Many of these need to be excluded from the Block Editor 
- * toolbars or it will alter them too.
- */ 
+
 fieldset {
 	font-size: var(--wp--preset--font-size--normal, 18px);
 	font-weight: var(--wp--custom--typography--font-weight--normal, 300);

@@ -2,26 +2,31 @@
 # Margins (Vertical spacing)
 ------------------------------------------------------------------------------*/
 
-/* Remove margin on the containers */
-header,
-main,
-footer {
-	margin-block-start: 0;
+/* Don't add top margin to top-level blocks (header, title, main, footer) */
+.wp-site-blocks > * {
+// 	margin-block-start: 0 !important;
+	margin-top: 0; 
 }
 
-.wp-block-template-part {
-	margin-block-start: 0 !important;
-	margin-block-end: 0 !important;
+// .wp-block-template-part,
+// .wp-block-template-part:empty {
+// 	margin-top: 0;
+// 	margin-bottom: 0;
+// }
+
+/* Add top margin to main unless its the post content or a featured image */
+main > :first-child:not(.wp-block-post-content):not(.wp-block-post-featured-image):not(.wp-block-cover) {
+	margin-block-start: var(--wp--style--block-gap);
 }
 
-/* Handle top margin on Groups and Columns that have template parts in them */
+/* Push top margin down on Groups and Columns that have template parts in them */
 :root :where(.is-layout-flow) > .wp-block-template-part > *,
 :root :where(.is-layout-constrained) > .wp-block-template-part > * {
  	margin-block-start: var(--wp--style--block-gap);
 }
 
-:root :where(.is-layout-flow) > .wp-block-template-part:first-child > :first-child,
-:root :where(.is-layout-constrained) > .wp-block-template-part:first-child > :first-child {
+:root :where(.is-layout-flow) > .wp-block-template-part > :first-child:not(.wp-block-comments),
+:root :where(.is-layout-constrained) > .wp-block-template-part > :first-child:not(.wp-block-comments) {
 	margin-block-start: 0;
 }
 
@@ -31,31 +36,36 @@ footer {
 	margin-block-start: 0;
 }
 
-/* Put top margin on Post Template (not Query) and Sidebar */
-.is-layout-flow > .wp-block-post-template,
-.is-layout-constrained > .wp-block-post-template,
-main > .wp-block-columns > .wp-block-column .sidebar.wp-block-group { 
- 	margin-block-start: var(--wp--style--block-gap);
-}
-
 /* 
  * Push top margin on Post Content down to the block level so users can control 
  * it by adjusting margin on the block itself.
  */
+.wp-site-blocks .wp-block-post-content {
+	margin-block-start: 0;
+// 	margin-top: 0;
+}
+
 .wp-block-post-content > :first-child:not(.wp-block-cover),
-.wp-block-post-content > #wporg-pattern-preview > div > :first-child:not(.wp-block-cover) {
- 	margin-block-start: var(--wp--style--block-gap);
+.wp-block-post-content > :last-child {
+	margin-block-start: var(--wp--style--block-gap);
 }
 
-/* Add bottom margin to the Query block and Sidebar */
-.wp-block-query,
-.sidebar.wp-block-group {
+/* But don't add it on templates with sidebar because it doesn't need it */
+main > .wp-block-columns > .wp-block-column > .wp-block-post-content > :first-child {
+	margin-block-start: 0;
+}
+
+/* Add bottom margin to the Query block */
+// .wp-block-query {
+// 	margin-block-end: var(--wp--style--block-gap);
+// }
+
+/* Add bottom margin to main unless its the post content */
+main > :last-child:not(.wp-block-post-content) {
 	margin-block-end: var(--wp--style--block-gap);
 }
 
-/* Add bottom margin to the Post Content's last block so users can control it */
-.wp-block-query, 
-.wp-block-post-content > :last-child,
-.wp-block-post-content > #wporg-pattern-preview > div > :last-child {
-	margin-block-end: var(--wp--style--block-gap);
-}
+// /* Add bottom margin to the Post Content's last block so users can control it */
+// .wp-block-post-content > :last-child {
+// 	margin-block-end: var(--wp--style--block-gap);
+// }

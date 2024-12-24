@@ -1,0 +1,16 @@
+/*!****************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/scss/blocks/comments.scss ***!
+  \****************************************************************************************************************************************************/
+/*-----------------------------------------------------------------------------
+# Comments
+-----------------------------------------------------------------------------*/
+/* Remove top margin on "Leave a Reply" */
+/* Remove bottom margin on "Post Comment" button */
+/* Add padding to comment page numbers */
+/* If not global padding on comments, then add some on tablet and mobile */
+@media only screen and (max-width: 781px) {
+  .post-comments:not(.has-global-padding) {
+    padding-left: var(--wp--style--root--padding-left) !important;
+    padding-right: var(--wp--style--root--padding-right) !important;
+  }
+}

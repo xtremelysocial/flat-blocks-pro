@@ -6,7 +6,7 @@
 	"blockTypes": [ "core/button" ],
 	"styles": {
 		"color": {
-			"text": "var:preset|color|highlight",
+			"text": "currentcolor",
 			"background": "transparent"
 		},
 		"border": {

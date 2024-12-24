@@ -1,0 +1,125 @@
+//------------------------------------------------------------------------------
+// SVG Icon Mixins
+//------------------------------------------------------------------------------
+
+@use "../mixins/prefixes";
+@use "sass:string";
+
+// Assign SVG attributes to :before or :after
+%icon-pseudo {
+	content: '';
+	background-color: currentColor;
+	display: inline-flex;
+	align-self: center;
+	height: 1em;
+	width: 1em;
+	@include prefixes.vendors(mask-size, contain);
+	@include prefixes.vendors(mask-repeat, no-repeat);
+}
+
+// SVG Icon Mixin: Adds SVG icon to a CSS class
+//
+// @class		string	CSS class to add icon. e.g. wp-block-post-date
+// @icon		string	Icon slug. e.g. ('calendar-alt', 'category')
+// @path		string	Path to icon (../icons/ or ../../icons/)
+// @location	string	Either 'before' or 'after'
+// @margin		bool	Add margin before or after
+// @link		bool	Add icon to link or the element itself
+//
+@mixin svg-icon(
+	$class,
+	$icon,
+	$location,
+// 	$path: '../icons/', 
+	$margin: true,
+	$link: null,
+) {
+
+	// Determine the SVG Icon path. Note: include trailing slash.
+	$path: '../icons/';
+	@if ( string.index($class, 'wp-block-') ) {
+		$path: '../../icons/';
+	}
+
+	// If link, then use "> a"
+	@if $link {
+		.#{$class} {
+		
+			& > a.wp-block-navigation-item__content {
+				display: inline-flex;
+			}
+
+			& > a:#{$location} {
+				@extend %icon-pseudo;
+
+				/* webpackIgnore: true */ mask-image: url(#{$path}#{$icon}.svg);
+				/* webpackIgnore: true */ -webkit-mask-image: url(#{$path}#{$icon}.svg);
+
+				@if $margin {
+					@if $location == 'after' {
+						margin-left: 0.15em;
+					} @else {
+						margin-right: 0.15em;
+					}
+				}
+			}
+		}
+
+	// For non-links, just add the icon before or after the element itself
+	} @else {
+		.#{$class}:#{$location} {
+			@extend %icon-pseudo;
+			
+			/* webpackIgnore: true */ mask-image: url(#{$path}#{$icon}.svg);
+			/* webpackIgnore: true */ -webkit-mask-image: url(#{$path}#{$icon}.svg);
+	
+			@if $margin {
+				@if $location == 'after' {
+					margin-left: 0.15em;
+				} @else {
+					margin-right: 0.15em;
+				}	
+			}
+		}
+	}
+}
+
+// SVG Link Icons Mixin: Adds SVG icons to LINKS on multiple CSS classes
+//
+// @icons		array	Array of icon slugs. e.g. ('calendar-alt', 'category')
+// @location	string	pseudo location: 'before' or 'after'
+// @addl-class	bool	Suffix to add another class. e.g. "-no-text"
+//
+@mixin svg-link-icons(
+	$icons,
+	$location,
+	$addl-class: null,
+// 	$path: '../icons/',
+) {
+
+	// Loop through the icon list and add the icon CSS
+	$prefix: 'is-style-icon-';
+// 	$path: '../../icons/';
+	
+	@each $icon in $icons {
+		@include svg-icon(
+			#{$prefix}#{$icon},
+			#{$icon},
+			#{$location},
+// 			#{$path},
+			true, // $margin
+			true, // $link
+		);
+		
+		@if $addl-class {
+			@include svg-icon(
+				#{$prefix}#{$icon}#{$addl-class},
+				#{$icon},
+				#{$location},
+// 				#{$path},
+				false, // $margin
+				true, // $link
+			);		
+		}
+	}
+}

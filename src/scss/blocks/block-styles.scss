@@ -1,0 +1,41 @@
+/**
+ * File:	block-styles.css
+ * Theme:	Flat Blocks
+ * 
+ * The stylesheet for the Flat Block theme's block styles
+ *
+ * NOTE: This file is AUTO-GENERATED from the SASS source files 
+ * in /src/sass/blocks/block-styles.scss. Do not make updates here.
+ * 
+ * @package flat-blocks
+ * @since 	1.6.4
+ */
+
+@use "calendar";
+@use "columns";
+@use "comments-pagination";
+@use "comments";
+@use "cover";
+@use "details";
+@use "gallery";
+@use "group";
+@use "heading";
+@use "image";
+@use "latest-comments";
+@use "latest-posts";
+@use "media-text";
+@use "navigation";
+@use "paragraph";
+@use "post-author-name";
+@use "post-author";
+@use "post-comments-count";
+@use "post-comments-form";
+@use "post-date";
+@use "post-excerpt";
+@use "post-featured-image";
+@use "post-terms";
+@use "query-pagination";
+@use "separator";
+@use "site-logo";
+@use "social-links";
+@use "table";

@@ -64,7 +64,8 @@ endif;
 /**
  * Register custom block styles.
  */
-add_filter( 'flatblocks_custom_block_styles', 'flatblocks_pro_register_block_styles' );
+// add_filter( 'flatblocks_custom_block_styles', 'flatblocks_pro_register_block_styles' );
+add_action( 'init', 'flatblocks_pro_register_block_styles' );
  
 if ( ! function_exists( 'flatblocks_pro_register_block_styles' ) ) :
 
@@ -75,62 +76,71 @@ if ( ! function_exists( 'flatblocks_pro_register_block_styles' ) ) :
 		 * 
 		 * Note that the prefix 'is-style-' will automatically be added to the names.
 		 */
-		$pro_styles = array(
-			'scroll-header' 		=> array( esc_html__('Scroll Header', 'flat-blocks-pro'),
-				array( 'group' ),
-				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-			),
-// 			'drop-shadow' 		=> array( esc_html__('Drop Shadow', 'flat-blocks-pro'), 
-// 				array( 'post-template', 'group' ),
-// 				'style_handle'	=> 'flatblocks-pro-custom-styles'
-// 			),
-// 			'alternate-colors' 		=> array( esc_html__('Alternate Colors', 'flat-blocks-pro'),
-// 				array( 'post-template' ),
-// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-// 			),
-// 			'separator' 		=> array( esc_html__('Separator', 'flat-blocks-pro'), 
-// 				array( 'heading' ),
-// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-// 			),
-// 			'nav-dividers' 		=> array( esc_html__('Dividers', 'flat-blocks-pro'), 
-// 				array('navigation' ),
-// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'				
-// 			),
-// 			'arrow-up-icon' 	=> array( esc_html__('Arrow Up Icon', 'flat-blocks-pro'), 
-// 				array('navigation-link' ),
-// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'				
-// 			),
-// 			'list-dividers' 		=> array( esc_html__('Dividers', 'flat-blocks-pro'), 
-// 				array('list', 'page-list', 'categories', 'latest-posts', 'latest-comments' ),
-// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'				
-// 			),
-// 			'no-auto-icon' 		=> array( esc_html__('No Auto Icon', 'flat-blocks-pro'), 
-// 				array( 'paragraph' ),
-// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-// 			),
-// 			'table-colored' 	=> array( esc_html__('Colored', 'flat-blocks-pro'), 
-// 				array( 'table' ),
-// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-// 			),
-// 			'table-alternate'	=> array( esc_html__('Alternate Colors', 'flat-blocks-pro'), 
-// 				array( 'table' ),
-// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-// 			),
-// 			'equal-grid' 		=> array( esc_html__('Equal Grid', 'flat-blocks-pro'), 
-// 				array( 'group' ),
-// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-// 			),
-// 			'equal-flex' 		=> array( esc_html__('Equal Flex', 'flat-blocks-pro'), 
-// 				array( 'group' ),
-// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-// 			),
-// 			'equal-cells' 		=> array( esc_html__('Equal Cells', 'flat-blocks-pro'), 
-// 				array( 'group' ),
-// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
-// 			),
+		register_block_style(
+			'core/group',
+			array(
+				'name'  => 'scroll-header',
+				'label' => __('Scroll Header', 'flat-blocks-pro'),
+				'style_handle' => 'flatblocks-pro-custom-styles'
+			)
 		);
-
-		return $theme_styles ? $theme_styles + $pro_styles : $pro_styles;	
+		 
+// 		$pro_styles = array(
+// 			'scroll-header' 		=> array( esc_html__('Scroll Header', 'flat-blocks-pro'),
+// 				array( 'group' ),
+// 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// 			),
+// // 			'drop-shadow' 		=> array( esc_html__('Drop Shadow', 'flat-blocks-pro'), 
+// // 				array( 'post-template', 'group' ),
+// // 				'style_handle'	=> 'flatblocks-pro-custom-styles'
+// // 			),
+// // 			'alternate-colors' 		=> array( esc_html__('Alternate Colors', 'flat-blocks-pro'),
+// // 				array( 'post-template' ),
+// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// // 			),
+// // 			'separator' 		=> array( esc_html__('Separator', 'flat-blocks-pro'), 
+// // 				array( 'heading' ),
+// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// // 			),
+// // 			'nav-dividers' 		=> array( esc_html__('Dividers', 'flat-blocks-pro'), 
+// // 				array('navigation' ),
+// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'				
+// // 			),
+// // 			'arrow-up-icon' 	=> array( esc_html__('Arrow Up Icon', 'flat-blocks-pro'), 
+// // 				array('navigation-link' ),
+// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'				
+// // 			),
+// // 			'list-dividers' 		=> array( esc_html__('Dividers', 'flat-blocks-pro'), 
+// // 				array('list', 'page-list', 'categories', 'latest-posts', 'latest-comments' ),
+// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'				
+// // 			),
+// // 			'no-auto-icon' 		=> array( esc_html__('No Auto Icon', 'flat-blocks-pro'), 
+// // 				array( 'paragraph' ),
+// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// // 			),
+// // 			'table-colored' 	=> array( esc_html__('Colored', 'flat-blocks-pro'), 
+// // 				array( 'table' ),
+// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// // 			),
+// // 			'table-alternate'	=> array( esc_html__('Alternate Colors', 'flat-blocks-pro'), 
+// // 				array( 'table' ),
+// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// // 			),
+// // 			'equal-grid' 		=> array( esc_html__('Equal Grid', 'flat-blocks-pro'), 
+// // 				array( 'group' ),
+// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// // 			),
+// // 			'equal-flex' 		=> array( esc_html__('Equal Flex', 'flat-blocks-pro'), 
+// // 				array( 'group' ),
+// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// // 			),
+// // 			'equal-cells' 		=> array( esc_html__('Equal Cells', 'flat-blocks-pro'), 
+// // 				array( 'group' ),
+// // 				'style_handle' 	=> 'flatblocks-pro-custom-styles'
+// // 			),
+// 		);
+// 
+// 		return $theme_styles ? $theme_styles + $pro_styles : $pro_styles;	
 	}
 endif;
 
