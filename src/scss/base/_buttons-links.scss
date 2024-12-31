@@ -85,11 +85,10 @@ input[type=reset][class*="button"]:not(.wp-element-button):hover,
 input[type=file]::file-selector-button:hover {
 	background-color: var(--wp--custom--color--button--hover-background, var(--wp--custom--color--button--background, var(--wp--custom--color--highlight, var(--wp--preset--color--highlight))));
 	color: var(--wp--custom--color--button--hover-text, var(--wp--custom--color--button--text, var(--wp--preset--color--foreground-alt)));
-// 	color: var(--wp--custom--color--button--hover-text, var(--wp--custom--color--button--text, var(--wp--custom--color--contrast--primary, var(--wp--preset--color--foreground-alt))));
 }
 
 /*-----------------------------------------------------------------------------
-# Custom: Link Underlines
+# Link Underlines
 -----------------------------------------------------------------------------*/
 
 /* Underline links */

@@ -43,15 +43,9 @@
 
 /* Collapse columns on tablet and mobile */
 @media only screen and (max-width: 781px) {
-  /* If no global padding, then set colored columns like colored groups */
-  .wp-block-columns.has-background,
-  .wp-block-column.has-background {
-    padding-right: calc(2 * var(--wp--style--block-gap));
-    padding-left: calc(2 * var(--wp--style--block-gap));
-  }
   /* If global padding, then OVERRIDE horizontal padding on mobile */
-  .has-global-padding .wp-block-columns.has-background,
-  .has-global-padding .wp-block-column.has-background {
+  .wp-block-columns.has-background,
+  .wp-block-columns > .wp-block-column.has-background {
     padding-right: var(--wp--style--root--padding-left) !important;
     padding-left: var(--wp--style--root--padding-right) !important;
   }
@@ -139,6 +133,14 @@ header > .wp-block-cover {
   z-index: 3;
 }
 
+/* Default Contrast Color */
+:where(.wp-block-cover.is-light:not(.has-text-color)) {
+  color: #fff;
+}
+:where(.wp-block-cover.is-light:not(.has-text-color)):has(.has-background-dim-0), :where(.wp-block-cover.is-light:not(.has-text-color)):has(.has-background-dim-10), :where(.wp-block-cover.is-light:not(.has-text-color)):has(.has-background-dim-20), :where(.wp-block-cover.is-light:not(.has-text-color)):has(.has-background-dim-30) {
+  color: #000;
+}
+
 /*-----------------------------------------------------------------------------
 # Details
 -----------------------------------------------------------------------------*/
@@ -209,10 +211,11 @@ header > .wp-block-cover {
   padding-bottom: var(--wp--preset--spacing--40);
 }
 
-/* If global padding, then OVERRIDE horizontal padding on tablet and mobile */
+/* 
+ * If full-width, then OVERRIDE horizontal padding on tablet and mobile 
+ */
 @media only screen and (max-width: 781px) {
-  .site-header.has-global-padding.wp-block-group,
-  .site-footer.has-global-padding.wp-block-group {
+  .wp-block-group.alignfull {
     padding-right: var(--wp--style--root--padding-left) !important;
     padding-left: var(--wp--style--root--padding-right) !important;
   }
@@ -304,6 +307,11 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 .wp-block-image.is-style-rounded img,
 .is-style-image-round-border img {
   border-radius: 9999px !important;
+}
+
+/* Don't underline links in image captions */
+.wp-element-caption a {
+  text-decoration: none;
 }
 
 /*-----------------------------------------------------------------------------
@@ -462,6 +470,17 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 /*-----------------------------------------------------------------------------
 # Navigation
 -----------------------------------------------------------------------------*/
+.wp-block-post-terms.taxonomy-category:before, .wp-block-post-terms.taxonomy-post_tag:before, .wp-block-post-date:before, .wp-block-post-comments-count:before, .wp-block-post-author-name:before, .is-style-arrow-icon-no-text > a:after, .is-style-icon-arrow-down-alt2-no-text > a:after, .is-style-icon-arrow-up-alt2 > a:before {
+  content: "";
+  background-color: currentColor;
+  display: inline-flex;
+  align-self: center;
+  height: 1em;
+  width: 1em;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
 /*-----------------------------------------------------------------------------
 # Style Nav Menus
 -----------------------------------------------------------------------------*/
@@ -482,11 +501,6 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
   opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
 }
 
-/*-----------------------------------------------------------------------------
-# Style Nav Menus with a background
------------------------------------------------------------------------------*/
-/* Reduce vertical gap when Nav menu wraps */
-/* When the nav itself has a colored background, set link color and padding */
 /*-----------------------------------------------------------------------------
 # Style the Nav on HEADER MENU
 -----------------------------------------------------------------------------*/
@@ -581,14 +595,26 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 
 /* Increase animation TIME on nav menu drop-downs */
 .wp-block-navigation .has-child .wp-block-navigation__submenu-container {
-  -webkit-transition-duration: var(--wp--custom--animation--duration--short);
   transition-duration: var(--wp--custom--animation--duration--short);
 }
 
 /* Increase animation DELAY on nav drop-downs when NOT requiring a click */
 .wp-block-navigation .has-child:not(.open-on-click):hover > .wp-block-navigation__submenu-container {
-  -webkit-transition-delay: var(--wp--custom--animation--duration--short);
   transition-delay: var(--wp--custom--animation--duration--short);
+}
+
+/*-----------------------------------------------------------------------------
+# Custom: Up Arrow Icon
+-----------------------------------------------------------------------------*/
+.is-style-icon-arrow-up-alt2 > a:before {
+  /* webpackIgnore: true */
+  mask-image: url(../../icons/arrow-up-alt2.svg);
+  margin-left: 0.15em;
+}
+
+/* Set icons on navigation items to inline flex */
+[class*=is-style-icon-] > a.wp-block-navigation-item__content {
+  display: inline-flex;
 }
 
 /*-----------------------------------------------------------------------------
@@ -652,6 +678,9 @@ nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-con
 }
 
 /*-----------------------------------------------------------------------------
+# Navigation
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
 # Paragraph
 -----------------------------------------------------------------------------*/
 /* Padding for colored backgrounds on paragraphs */
@@ -682,30 +711,38 @@ p.is-style-alignwide {
   margin-left: auto !important;
 }
 
-/*-----------------------------------------------------------------------------
-# Post Author Name
------------------------------------------------------------------------------*/
+/*  Down Arrow for Scroll Headers */
+.is-style-arrow-icon-no-text > a:after {
+  /* webpackIgnore: true */
+  mask-image: url(../../icons/arrow-down-alt2.svg);
+  margin-right: 0.15em;
+}
+
+.is-style-icon-arrow-down-alt2-no-text > a:after {
+  /* webpackIgnore: true */
+  mask-image: url(../../icons/arrow-down-alt2.svg);
+  margin-right: 0.15em;
+}
+
+.is-style-arrow-icon-no-text > a,
+.is-style-icon-arrow-down-alt2-no-text > a {
+  font-size: 0;
+  line-height: 1;
+}
+.is-style-arrow-icon-no-text > a:after,
+.is-style-icon-arrow-down-alt2-no-text > a:after {
+  font-size: var(--wp--preset--font-size--x-large);
+}
+
 /*-----------------------------------------------------------------------------
 # Navigation
 -----------------------------------------------------------------------------*/
-.wp-block-post-terms.taxonomy-category:before, .wp-block-post-terms.taxonomy-post_tag:before, .wp-block-post-date:before, .wp-block-post-comments-count:before, .wp-block-post-author-name:before {
-  content: "";
-  background-color: currentColor;
-  display: inline-flex;
-  align-self: center;
-  height: 1em;
-  width: 1em;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-}
-
+/*-----------------------------------------------------------------------------
+# Post Author Name
+-----------------------------------------------------------------------------*/
 .wp-block-post-author-name:before {
   /* webpackIgnore: true */
   mask-image: url(../../icons/admin-users.svg);
-  /* webpackIgnore: true */
-  -webkit-mask-image: url(../../icons/admin-users.svg);
   margin-left: 0.15em;
 }
 
@@ -732,7 +769,7 @@ p.is-style-alignwide {
 }
 
 /*-----------------------------------------------------------------------------
-# Post Author Name
+# Navigation
 -----------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------
 # Post Comments Count (Only w/Gutenberg Plugin)
@@ -740,8 +777,6 @@ p.is-style-alignwide {
 .wp-block-post-comments-count:before {
   /* webpackIgnore: true */
   mask-image: url(../../icons/admin-comments.svg);
-  /* webpackIgnore: true */
-  -webkit-mask-image: url(../../icons/admin-comments.svg);
   margin-left: 0.15em;
 }
 
@@ -775,7 +810,7 @@ p.is-style-alignwide {
 }
 
 /*-----------------------------------------------------------------------------
-# Post Author Name
+# Navigation
 -----------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------
 # Post Date
@@ -783,8 +818,6 @@ p.is-style-alignwide {
 .wp-block-post-date:before {
   /* webpackIgnore: true */
   mask-image: url(../../icons/calendar-alt.svg);
-  /* webpackIgnore: true */
-  -webkit-mask-image: url(../../icons/calendar-alt.svg);
   margin-left: 0.15em;
 }
 
@@ -822,7 +855,7 @@ p.is-style-alignwide {
 }
 
 /*-----------------------------------------------------------------------------
-# Post Author Name
+# Navigation
 -----------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------
 # Post Terms:
@@ -830,16 +863,12 @@ p.is-style-alignwide {
 .wp-block-post-terms.taxonomy-category:before {
   /* webpackIgnore: true */
   mask-image: url(../../icons/category.svg);
-  /* webpackIgnore: true */
-  -webkit-mask-image: url(../../icons/category.svg);
   margin-left: 0.15em;
 }
 
 .wp-block-post-terms.taxonomy-post_tag:before {
   /* webpackIgnore: true */
   mask-image: url(../../icons/tag.svg);
-  /* webpackIgnore: true */
-  -webkit-mask-image: url(../../icons/tag.svg);
   margin-left: 0.15em;
 }
 
@@ -887,15 +916,6 @@ p.is-style-alignwide {
 }
 
 /*-----------------------------------------------------------------------------
-# Separator: Custom
------------------------------------------------------------------------------*/
-/* Anchor only separator. Also can be used for clearing floats */
-.wp-block-separator.is-style-anchor {
-  visibility: hidden;
-  border: none;
-}
-
-/*-----------------------------------------------------------------------------
 # Site Logo
 -----------------------------------------------------------------------------*/
 /* Don't shrink the site logo */
@@ -906,7 +926,7 @@ p.is-style-alignwide {
 /*-----------------------------------------------------------------------------
 # Social Links (Icons)
 -----------------------------------------------------------------------------*/
-/* Dont' add margin directly to Social Icons */
+/* Don't add margin directly to Social Icons */
 .wp-block-social-links {
   margin-block-start: 0;
   margin-block-end: 0;

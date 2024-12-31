@@ -3,7 +3,7 @@
 	"version": 3,
 	"slug": "icon-arrow-down-alt2-no-text",
 	"title": "Arrow Down No Text",
-	"blockTypes": [ "core/paragraph", "core/navigation-link" ],
+	"blockTypes": [ "core/paragraph" ],
 	"styles": {
 		"css": ""
 	}

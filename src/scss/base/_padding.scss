@@ -1,9 +1,0 @@
-/*-----------------------------------------------------------------------------
-# Padding (Horizontal and vertical spacing)
------------------------------------------------------------------------------*/
-
-/* Remove padding from containers */
-main.wp-block-group:not(.has-global-padding),
-.wp-block-template-part {
-	padding: 0;
-}

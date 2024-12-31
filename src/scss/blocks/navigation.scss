@@ -2,8 +2,8 @@
 # Navigation
 -----------------------------------------------------------------------------*/
 
-// Load our mixins
-@use "../mixins/prefixes";
+// Mixin for icons
+@use "../mixins/icons";
 
 /*-----------------------------------------------------------------------------
 # Style Nav Menus
@@ -24,38 +24,6 @@
 .wp-block-navigation .wp-block-navigation-item:active > .wp-block-navigation-item__content.wp-block-navigation-item__content {
 	opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
 }
-
-/*-----------------------------------------------------------------------------
-# Style Nav Menus with a background
------------------------------------------------------------------------------*/
-
-/* Reduce vertical gap when Nav menu wraps */
-// .wp-block-navigation__container {
-// 	row-gap: var(--wp--preset--spacing--20);
-// }
-
-/* When the nav itself has a colored background, set link color and padding */
-// .wp-block-navigation.has-background {
-// 
-// 	// Inherit link color
-// 	&:not(.has-text-color) .wp-block-navigation__responsive-container,
-// 	&:not(.has-text-color) .wp-block-navigation__submenu-container {
-// 		color: inherit;
-// 	}
-// 
-// 	// Only on TOP-LEVEL, adjust link padding 
-// 	& .wp-block-navigation__responsive-container:not(.is-menu-open) .wp-block-navigation__container {
-// 		& > .wp-block-navigation-item:not(:first-child) > a:not(.wp-element-button),
-// 		& > .wp-block-navigation-submenu:not(:first-child) {
-// 			padding-left: 0;
-// 		}
-// 
-// 		& > .wp-block-navigation-item:not(:last-child) > a:not(.wp-element-button),
-// 		& > .wp-block-navigation-submenu:not(:last-child) {
-// 			padding-right: 0; 
-// 		}
-// 	}
-// }
 
 /*-----------------------------------------------------------------------------
 # Style the Nav on HEADER MENU
@@ -174,12 +142,28 @@
 
 /* Increase animation TIME on nav menu drop-downs */
 .wp-block-navigation .has-child .wp-block-navigation__submenu-container {
-	@include prefixes.vendors(transition-duration, var(--wp--custom--animation--duration--short));
+	transition-duration: var(--wp--custom--animation--duration--short);
 }
 
 /* Increase animation DELAY on nav drop-downs when NOT requiring a click */
 .wp-block-navigation .has-child:not(.open-on-click):hover > .wp-block-navigation__submenu-container {
-	@include prefixes.vendors(transition-delay, var(--wp--custom--animation--duration--short));
+	transition-delay: var(--wp--custom--animation--duration--short);
+}
+
+/*-----------------------------------------------------------------------------
+# Custom: Up Arrow Icon
+-----------------------------------------------------------------------------*/
+@include icons.svg-icon(
+	$class: 'is-style-icon-arrow-up-alt2',
+	$icon: 'arrow-up-alt2',
+	$location: 'before',
+	$link: true, // $link
+	$margin: true, // $margin
+);
+
+/* Set icons on navigation items to inline flex */
+[class*="is-style-icon-"] > a.wp-block-navigation-item__content {
+	display: inline-flex;
 }
 
 /*-----------------------------------------------------------------------------

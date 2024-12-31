@@ -1,0 +1,22 @@
+/*-----------------------------------------------------------------------------
+# Compatibility with other themes
+#
+# This is so that user's content created with other themes will look OK before
+# they update it for the Flat Blocks theme.
+-----------------------------------------------------------------------------*/
+:where(.has-background) {
+    background-color: var(--wp--preset--color--primary);
+}
+
+:where(.has-background:not(.has-text-color)) {
+    color: var(--wp--preset--color--off-white);
+}
+
+:where(.has-text-color) {
+	color: var(--wp--preset--color--contrast);
+}
+
+:where(.has-border-color) {
+	border-color: var(--wp--preset--color--neutral-alt);
+}
+

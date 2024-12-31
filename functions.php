@@ -36,18 +36,23 @@ if ( ! function_exists( 'flatblocks_support' ) ) :
 		// And add a smaller size for recent posts in columns
 		add_image_size( 'cropped-thumbnail', 760, 428, array( 'left', 'top' ) );
 		
-		// Enqueue the styles needed for the editor. This is done this way instead of 
+		// Enqueue the styles needed for the editor. This is done here instead of 
 		// with enqueue_block_assets() so that the styles don't interfere with the 
 		// Editor UI itself. Note that the RTL styles will automatically be used
 		// when needed.
-		add_editor_style( 
-			array(
-				'/assets/css/flat-blocks.css',
-				'/assets/css/blocks/block-styles.css',
-				'/assets/css/utility-styles.css',
-				'/assets/css/editor-styles.css',
-			)
+		$editor_styles = array(
+			'/assets/css/flat-blocks.css',
+			'/assets/css/blocks/block-styles.css',
+			'/assets/css/utility-styles.css',
+			'/assets/css/editor-styles.css',
+			'/style.css' //XS
 		);
+
+		// Allow child themes to override the list of editor styles to load
+		apply_filters( 'flatblocks_editor_styles', $editor_styles );
+
+		// Load the editor styles
+		add_editor_style( $editor_styles ); 
 
 		// Register four nav menus if Gutenberg is activated (otherwise the 
 		// __experimentalMenuLocation attribute isn't available)
@@ -93,13 +98,13 @@ foreach ( $includes as $include ) {
  * WordPress loads separate block styles for blocks in use on a particular
  * page by default. Uncomment the following line to have it load all assets.
  */
-add_filter( 'should_load_separate_core_block_assets', '__return_false', 11 );
+// add_filter( 'should_load_separate_core_block_assets', '__return_false', 11 );
 
 /* 
  * This theme loads also loads individual block CSS by default. Uncomment the
  * following line to have it load single block-styles.css file.
  */
-add_filter( 'flatblocks_load_separate_block_assets', '__return_false' );
+// add_filter( 'flatblocks_load_separate_block_assets', '__return_false' );
 
 /*
  * Load the core theme CSS files on the front-end and then
@@ -167,7 +172,6 @@ endif;
 if ( ! function_exists( 'flatblocks_load_combined_block_styles' ) ) :
 
 	function flatblocks_load_combined_block_styles() {
-	
 		flatblocks_enqueue_style( 
 			get_template_directory() . '/assets/css/blocks/block-styles.css'
 		);
@@ -379,8 +383,6 @@ if ( ! function_exists('flatblocks_enqueue_style') ) :
 		$deps = $handle == 'flat-blocks' ? '' : 'flat-blocks';
 		
 		// Enqueue the style with the version
-		//var_dump($handle, $style, $version, $deps); //TEST
-		// var_dump($handle); //TEST
 		if ( file_exists( $style ) ) {
 			wp_enqueue_style( 
 				$handle, 

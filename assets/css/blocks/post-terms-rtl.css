@@ -11,25 +11,19 @@
   align-self: center;
   height: 1em;
   width: 1em;
-  -webkit-mask-size: contain;
   mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
 
 .wp-block-post-terms.taxonomy-category:before {
   /* webpackIgnore: true */
   mask-image: url(../../icons/category.svg);
-  /* webpackIgnore: true */
-  -webkit-mask-image: url(../../icons/category.svg);
   margin-left: 0.15em;
 }
 
 .wp-block-post-terms.taxonomy-post_tag:before {
   /* webpackIgnore: true */
   mask-image: url(../../icons/tag.svg);
-  /* webpackIgnore: true */
-  -webkit-mask-image: url(../../icons/tag.svg);
   margin-left: 0.15em;
 }
 

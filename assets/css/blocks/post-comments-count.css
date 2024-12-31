@@ -11,17 +11,13 @@
   align-self: center;
   height: 1em;
   width: 1em;
-  -webkit-mask-size: contain;
   mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
   mask-repeat: no-repeat;
 }
 
 .wp-block-post-comments-count:before {
   /* webpackIgnore: true */
   mask-image: url(../../icons/admin-comments.svg);
-  /* webpackIgnore: true */
-  -webkit-mask-image: url(../../icons/admin-comments.svg);
   margin-right: 0.15em;
 }
 

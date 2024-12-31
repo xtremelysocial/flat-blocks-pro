@@ -25,3 +25,16 @@ header > .wp-block-cover {
 	overflow: visible; 
 	z-index: 3;
 }
+
+/* Default Contrast Color */
+// wp-block-cover__background has-primary-background-color has-background-dim-60 has-background-dim
+:where(.wp-block-cover.is-light:not(.has-text-color)) {
+    color: #fff;
+
+	&:has(.has-background-dim-0),
+	&:has(.has-background-dim-10),
+	&:has(.has-background-dim-20),
+	&:has(.has-background-dim-30) {
+		color: #000;
+	}
+}

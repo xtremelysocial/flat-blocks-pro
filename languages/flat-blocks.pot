@@ -2185,13 +2185,13 @@ msgstr ""
 #: styles/450-default-system-stylescript.json
 #: theme.json
 msgctxt "Font size name"
-msgid "xxx-large"
+msgid "huge"
 msgstr ""
 
 #: styles/450-default-system-stylescript.json
 #: theme.json
 msgctxt "Font size name"
-msgid "xxxx-large"
+msgid "gigantic"
 msgstr ""
 
 #: styles/460-default-verdana-georgia.json

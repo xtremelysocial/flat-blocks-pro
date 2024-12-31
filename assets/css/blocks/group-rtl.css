@@ -16,10 +16,11 @@
   padding-bottom: var(--wp--preset--spacing--40);
 }
 
-/* If global padding, then OVERRIDE horizontal padding on tablet and mobile */
+/* 
+ * If full-width, then OVERRIDE horizontal padding on tablet and mobile 
+ */
 @media only screen and (max-width: 781px) {
-  .site-header.has-global-padding.wp-block-group,
-  .site-footer.has-global-padding.wp-block-group {
+  .wp-block-group.alignfull {
     padding-right: var(--wp--style--root--padding-left) !important;
     padding-left: var(--wp--style--root--padding-right) !important;
   }

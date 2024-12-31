@@ -14,20 +14,23 @@
 /* Collapse columns on tablet and mobile */
 @media only screen and (max-width: 781px) {
 
-	/* If no global padding, then set colored columns like colored groups */
-	.wp-block-columns.has-background,
-	.wp-block-column.has-background {
-		padding-left: calc(2 * var(--wp--style--block-gap));
-		padding-right: calc(2 * var(--wp--style--block-gap));
-	}
+	// /* If no global padding, then set colored columns like colored groups */
+// 	.wp-block-columns.has-background,
+// 	.wp-block-column.has-background {
+// 		padding-left: calc(2 * var(--wp--style--block-gap));
+// 		padding-right: calc(2 * var(--wp--style--block-gap));
+// 	}
 
 	/* If global padding, then OVERRIDE horizontal padding on mobile */
-	.has-global-padding .wp-block-columns.has-background,
-	.has-global-padding .wp-block-column.has-background {
+// 	.has-global-padding .wp-block-columns.has-background,
+// 	.has-global-padding .wp-block-column.has-background {
+// 	:not(.has-global-padding) > .wp-block-columns.has-background {
+	.wp-block-columns.has-background,
+// 	.wp-block-columns:not(.has-background) > .wp-block-column.has-background {
+	.wp-block-columns > .wp-block-column.has-background {
 		padding-left: var(--wp--style--root--padding-left) !important;
 		padding-right: var(--wp--style--root--padding-right) !important;
 	}
-
 }
 
 /*-----------------------------------------------------------------------------

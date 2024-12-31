@@ -28,12 +28,3 @@
 .has-background .wp-block-separator:not(.has-background) {
  	color: inherit;
 }
-
-/*-----------------------------------------------------------------------------
-# Separator: Custom
------------------------------------------------------------------------------*/
-/* Anchor only separator. Also can be used for clearing floats */
-.wp-block-separator.is-style-anchor {
-	visibility: hidden;
-	border: none;
-}

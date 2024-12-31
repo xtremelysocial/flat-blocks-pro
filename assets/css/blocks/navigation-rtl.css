@@ -4,6 +4,17 @@
 /*-----------------------------------------------------------------------------
 # Navigation
 -----------------------------------------------------------------------------*/
+.is-style-icon-arrow-up-alt2 > a:before {
+  content: "";
+  background-color: currentColor;
+  display: inline-flex;
+  align-self: center;
+  height: 1em;
+  width: 1em;
+  mask-size: contain;
+  mask-repeat: no-repeat;
+}
+
 /*-----------------------------------------------------------------------------
 # Style Nav Menus
 -----------------------------------------------------------------------------*/
@@ -24,11 +35,6 @@
   opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
 }
 
-/*-----------------------------------------------------------------------------
-# Style Nav Menus with a background
------------------------------------------------------------------------------*/
-/* Reduce vertical gap when Nav menu wraps */
-/* When the nav itself has a colored background, set link color and padding */
 /*-----------------------------------------------------------------------------
 # Style the Nav on HEADER MENU
 -----------------------------------------------------------------------------*/
@@ -123,14 +129,26 @@
 
 /* Increase animation TIME on nav menu drop-downs */
 .wp-block-navigation .has-child .wp-block-navigation__submenu-container {
-  -webkit-transition-duration: var(--wp--custom--animation--duration--short);
   transition-duration: var(--wp--custom--animation--duration--short);
 }
 
 /* Increase animation DELAY on nav drop-downs when NOT requiring a click */
 .wp-block-navigation .has-child:not(.open-on-click):hover > .wp-block-navigation__submenu-container {
-  -webkit-transition-delay: var(--wp--custom--animation--duration--short);
   transition-delay: var(--wp--custom--animation--duration--short);
+}
+
+/*-----------------------------------------------------------------------------
+# Custom: Up Arrow Icon
+-----------------------------------------------------------------------------*/
+.is-style-icon-arrow-up-alt2 > a:before {
+  /* webpackIgnore: true */
+  mask-image: url(../../icons/arrow-up-alt2.svg);
+  margin-left: 0.15em;
+}
+
+/* Set icons on navigation items to inline flex */
+[class*=is-style-icon-] > a.wp-block-navigation-item__content {
+  display: inline-flex;
 }
 
 /*-----------------------------------------------------------------------------

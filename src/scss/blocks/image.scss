@@ -21,6 +21,11 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
     border-radius: 9999px !important;
 }
 
+/* Don't underline links in image captions */
+.wp-element-caption a {
+	text-decoration: none;
+}
+
 /*-----------------------------------------------------------------------------
 # Image: Custom
 -----------------------------------------------------------------------------*/

@@ -17,11 +17,6 @@
 # Default Contrast color
 -----------------------------------------------------------------------------*/
 
-/* Default light text color on colored backgrounds */
-.has-background {
-     color: var(--wp--preset--color--off-white);
-}
-
 /* Accent colored backgrounds use foreground-alt color unless over-ridden */
 .has-primary-background-color, 
 .has-primary-alt-background-color {
@@ -116,20 +111,5 @@
 	& .is-style-outline > .wp-element-button, 
 	& [class*="is-style-button-outline-"] > .wp-element-button {	
 		color: inherit;
-	}
-}
-
-/*-----------------------------------------------------------------------------
-# Default Contrast Color on Cover Block
------------------------------------------------------------------------------*/
-
-/* On Cover blocks, default the text color based on the amount of dimming */
-:where(.wp-block-cover-image.is-light:not(.has-text-color)), :where(.wp-block-cover.is-light:not(.has-text-color)) {
-    color: #fff;
-
-	&:has(.has-background-dim-10),
-	&:has(.has-background-dim-20),
-	&:has(.has-background-dim-30) {
-		color: #000;
 	}
 }

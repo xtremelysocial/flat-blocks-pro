@@ -13,6 +13,26 @@
  * @package flat-blocks
  * @since	2.0
  */
+/*------------------------------------------------------------------------------
+# Icons
+#
+# Note: Needed for multiple blocks so always load
+------------------------------------------------------------------------------*/
+/* Don't underline links, but lighten on hover */
+[class*=is-style-icon-] a {
+  text-decoration: none;
+  outline: none;
+}
+
+[class*=is-style-icon-] a:hover {
+  opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
+}
+
+/* No icons for post meta */
+.is-style-no-icon:before {
+  content: none !important;
+}
+
 /*-----------------------------------------------------------------------------
 # Flat Blocks Theme Compatibility with Prior Versions
 #
@@ -23,54 +43,9 @@
 /*-----------------------------------------------------------------------------
 # Flat Blocks Styles for theme < v2.0
 -----------------------------------------------------------------------------*/
-/* Legacy support for original Down Arrow for Scroll Headers */
-.is-style-arrow-icon-no-text > a:after {
-  content: "";
-  background-color: currentColor;
-  display: inline-flex;
-  align-self: center;
-  height: 1em;
-  width: 1em;
-  -webkit-mask-size: contain;
-  mask-size: contain;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-}
-
-.is-style-arrow-icon-no-text > a.wp-block-navigation-item__content {
-  display: inline-flex;
-}
-.is-style-arrow-icon-no-text > a:after {
-  /* webpackIgnore: true */
-  mask-image: url(../icons/arrow-down-alt2.svg);
-  /* webpackIgnore: true */
-  -webkit-mask-image: url(../icons/arrow-down-alt2.svg);
-}
-
-p.is-style-arrow-icon-no-text > a {
-  text-decoration: none !important;
-  outline: none !important;
-}
-
-p.is-style-arrow-icon-no-text > a:hover {
-  opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
-}
-
-/* Map deprecated font sizes */
-.has-extra-small-font-size {
-  font-size: 14px;
-}
-
+/* Map deprecated font size */
 .has-larger-font-size {
   font-size: var(--wp--preset--font-size--x-large);
-}
-
-.has-huge-font-size {
-  font-size: var(--wp--preset--font-size--xxx-large);
-}
-
-.has-gigantic-font-size {
-  font-size: var(--wp--preset--font-size--xxxx-large);
 }
 
 /* Override top margin in certain situations */
@@ -84,6 +59,28 @@ p.is-style-arrow-icon-no-text > a:hover {
 }
 
 /*-----------------------------------------------------------------------------
+# Compatibility with other themes
+#
+# This is so that user's content created with other themes will look OK before
+# they update it for the Flat Blocks theme.
+-----------------------------------------------------------------------------*/
+:where(.has-background) {
+  background-color: var(--wp--preset--color--primary);
+}
+
+:where(.has-background:not(.has-text-color)) {
+  color: var(--wp--preset--color--off-white);
+}
+
+:where(.has-text-color) {
+  color: var(--wp--preset--color--contrast);
+}
+
+:where(.has-border-color) {
+  border-color: var(--wp--preset--color--neutral-alt);
+}
+
+/*-----------------------------------------------------------------------------
 # Utilities
 -----------------------------------------------------------------------------*/
 /* FIX WordPress Admin bar on phones not sticking to the top */
@@ -91,19 +88,4 @@ p.is-style-arrow-icon-no-text > a:hover {
   body > #wpadminbar {
     position: fixed;
   }
-}
-/* 
- * Note: These utility classes must be added manually in the Advanced section 
- * of the block settings.
- */
-/* Clearfix (Clear floats) */
-.is-style-clearfix:not(.is-layout-flex):not(.is-style-fixed-header):after {
-  content: "";
-  clear: both;
-  display: table;
-}
-
-/* Flexbox No Shrink */
-.is-layout-flex .is-style-no-shrink {
-  flex-shrink: 0;
 }
