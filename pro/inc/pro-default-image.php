@@ -11,11 +11,11 @@
 /**
  * Set a default post featured image if there isn't one already
  */
-add_filter( 'post_thumbnail_html', 'fbp_filter_post_thumbnail_html', 10, 5 );
+add_filter( 'post_thumbnail_html', 'flatblocks_pro_filter_post_thumbnail_html', 10, 5 );
 
-if ( ! function_exists('fbp_filter_post_thumbnail_html') ) :
+if ( ! function_exists('flatblocks_pro_filter_post_thumbnail_html') ) :
  
-	function fbp_filter_post_thumbnail_html( 
+	function flatblocks_pro_filter_post_thumbnail_html( 
 		$html, 
 		$pid, 
 		$post_thumbnail_id, 
@@ -25,19 +25,11 @@ if ( ! function_exists('fbp_filter_post_thumbnail_html') ) :
 
 		/* If no post featured image, but there is a post, then set the default image */
 		if ( ! $html && $pid ) {
-		
-			// var_dump('size:', $size, 'attr:', $attr); //TEST
-			//var_dump('pid:', $pid); //TEST
-	
-			//$default_image = get_template_directory_uri() . '/assets/images/image-lines-blue.jpg';
-			//$default_image = get_template_directory_uri() . '/assets/images/image-circles-blue.jpg';
-// 			$default_image = get_template_directory_uri() . '/assets/images/cover-geodesic-lights.jpg';
+// 			$default_image = get_template_directory_uri() . '/assets/images/image-lines-blue.jpg';
 
 			// Use the last digit of the post id to determine the image to use
 			$path = '/assets/images/';
 			$images = ['cover-bokeh.jpg', 'cover-book.jpg', 'cover-building.jpg', 'cover-camera.jpg', 'cover-city-night.jpg', 'cover-colored-blocks', 'cover-colored-chalk.jpg', 'cover-desk-dark.jpg', 'cover-desk-dark.jpg', 'cover-desk-meeting.jpg'];
-// 			$random = array_rand( $images );			
-// 			$image = $images[$random]; 
 			$last_digit = $pid % count($images);
 			$image = $images[$last_digit];
 			$default_image = get_template_directory_uri() . $path . $image;
@@ -53,7 +45,6 @@ if ( ! function_exists('fbp_filter_post_thumbnail_html') ) :
 			preg_match( "/max-width:(\\d+).*max-height:(\\d+)/", $attr['style'], $dimensions);
 			$image_dimensions = $dimensions ? "width={$dimensions[1]} height={$dimensions[2]}" : '';
 // 			$image_dimensions = $dimensions ? "width={$dimensions[1]} height={$dimensions[2]}" : 'width="1600" height: "900"';
-// 			var_dump('image_dimensions', $image_dimensions); //TEST
 			
 			$image_style = $attr['style'] ? $attr['style'] : '';
 			$image_style .= $dimensions ? "width:{$dimensions[1]}px;height:{$dimensions[2]}px;" : '';
@@ -77,10 +68,10 @@ endif;
   * Also make sure that has_post_thumbnail always returns true so the above actually
   * gets called.
   */
-add_filter( 'has_post_thumbnail', 'fbp_has_post_thumbnail', 10, 3 );
-if ( ! function_exists('fbp_has_post_thumbnail') ) :
+add_filter( 'has_post_thumbnail', 'flatblocks_pro_has_post_thumbnail', 10, 3 );
+if ( ! function_exists('flatblocks_pro_has_post_thumbnail') ) :
 
-	function fbp_has_post_thumbnail( $has_thumbnail, $post, $thumbnail_id ) {
+	function flatblocks_pro_has_post_thumbnail( $has_thumbnail, $post, $thumbnail_id ) {
 	
 		$has_thumbnail = true; 
 		return $has_thumbnail; 

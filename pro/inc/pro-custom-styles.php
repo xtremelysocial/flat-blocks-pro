@@ -60,30 +60,3 @@ if ( ! function_exists( 'flatblocks_pro_editor_styles' ) ) :
 
 	}
 endif;
-
-/**
- * Register custom block styles.
- */
-// add_filter( 'flatblocks_custom_block_styles', 'flatblocks_pro_register_block_styles' );
-add_action( 'init', 'flatblocks_pro_register_block_styles' );
- 
-if ( ! function_exists( 'flatblocks_pro_register_block_styles' ) ) :
-
-	function flatblocks_pro_register_block_styles() {
-
-		/* 
-		 * Define custom styles and what blocks they apply to. 
-		 * 
-		 * TO-DO: Replace this with scroll-header.json
-		 */
-		register_block_style(
-			'core/group',
-			array(
-				'name'  => 'scroll-header',
-				'label' => __('Scroll Header', 'flat-blocks-pro'),
-				'style_handle' => 'flatblocks-pro-custom-styles'
-			)
-		);
-	}
-endif;
-

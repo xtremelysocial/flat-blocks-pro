@@ -294,7 +294,7 @@ endif;
  * 
  * WordPress already has categories for featured, header, query (posts), text, buttons,
  * gallery, banner, footer, call-to-action, team, testimonials, services, contract, 
- * about, portfolio, and media.
+ * about, portfolio, and media. For some reason columns doesn't work.
  */
 if ( ! function_exists( 'flatblocks_register_pattern_categories' ) ) :
 
@@ -302,7 +302,7 @@ if ( ! function_exists( 'flatblocks_register_pattern_categories' ) ) :
 
 		// Add our own block pattern categories
 		$block_pattern_categories = array(
-			'flatblocks'	=> array( 'label' => __( 'All Flat Blocks', 'flat-blocks' ) ),
+// 			'flatblocks'	=> array( 'label' => __( 'All Flat Blocks', 'flat-blocks' ) ),
 			'column'   		=> array( 'label' => __( 'Columns', 'flat-blocks' ) ),				
 			'page'    		=> array( 'label' => __( 'Pages', 'flat-blocks' ) ),
 		);

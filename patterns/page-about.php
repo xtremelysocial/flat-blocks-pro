@@ -2,7 +2,7 @@
  /**
   * Title: Sample About Page
   * Slug: flat-blocks/page-about
-  * Categories: flatblocks, page
+  * Categories: flatblocks, page, team
   * Block Types: core/post-content
   * Description: A sample about page with cover image, about us, 3-column features, 4-person team, and call-to-action button
   */

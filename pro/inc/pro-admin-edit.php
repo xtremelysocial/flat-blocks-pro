@@ -20,12 +20,12 @@ if ( ! function_exists( 'flatblocks_pro_add_edit_link' ) ) :
 	function flatblocks_pro_add_edit_link ( $content ) {
 		$post_id = get_the_ID();
 		if( is_singular() and current_user_can( 'edit_post', $post_id ) ) {
-			$content = $content . '<p class="edit-post-link has-small-font-size has-text-align-center dashicons dashicons-edit"'
-				.' style="display: block">'
-				.'<a href="'
-				. get_edit_post_link( $post_id )
-				. '">' . __("Edit", "flat-blocks-pro")
-				. '</a></p>';
+			$content .= sprintf(
+				'<p class="%s"><a href="%s">%s</a></p>',
+				'post-edit-link has-small-font-size has-text-align-center is-style-icon-edit',
+				get_edit_post_link( $post_id ),
+				__("Edit", "flat-blocks-pro")
+			);
 		}
 		return $content;
 	}

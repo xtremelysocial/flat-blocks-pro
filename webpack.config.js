@@ -21,7 +21,7 @@ module.exports = {
 	 entry: WebpackWatchedGlobEntries.getEntries(
 		  [ 
 			path.resolve(__dirname, 'src/scss/**/*.scss'),
-			path.resolve(__dirname, 'pro/src/scss/**/*.scss'),
+			path.resolve(__dirname, 'pro/src/scss/**/*.scss'), //PRO
 		  ],
 		  {
 			  ignore: '**/_*.scss'

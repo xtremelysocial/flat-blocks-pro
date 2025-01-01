@@ -14,13 +14,35 @@
  * @since 	1.0
  */
 /*--------------------------------------------------------------
-# BASE PRO BLOCK STYLES
+# BASE PRO STYLES
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Base Styles
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
-## General Styles
+## Icons
+--------------------------------------------------------------*/
+.is-style-icon-edit:before {
+  content: "";
+  background-color: currentColor;
+  display: inline-flex;
+  align-self: center;
+  height: 1em;
+  width: 1em;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+}
+
+.is-style-icon-edit:before {
+  -webkit-mask-image: url(../../icons/edit.svg);
+          mask-image: url(../../icons/edit.svg);
+  margin-left: 0.15em;
+}
+
+/*--------------------------------------------------------------
+## Drop Shadow
 --------------------------------------------------------------*/
 /* 
  * Allow drop-shadow on anything except post template since it needs
@@ -146,7 +168,7 @@ body.home > #page > #footer {
 }
 
 /*--------------------------------------------------------------
-# ADDITIONAL PRO BLOCK STYLES
+# PRO BLOCK STYLES
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 ## Group: Custom

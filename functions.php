@@ -1,13 +1,13 @@
 <?php
 /**
  * File:	functions.php
- * Theme:	Flat Blocks
+ * Theme:	Flat Blocks PRO
  * 
  * Flat Blocks functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package flat-blocks
+ * @package flat-blocks-pro
  * @since	1.0
  */
 
@@ -260,7 +260,7 @@ if ( ! function_exists( 'flatblocks_dashicons_in_use' ) ) :
 
 	function flatblocks_dashicons_in_use( $block_content = '', $block = [] ) {	
 
-		if ( strpos( $block_content, 'dashicons-' ) !== false ) {
+		if ( preg_match( '/(class=\")(.*?)dashicons-(.*?)\"/', $block_content, $matches) ) {
 			flatblocks_load_dashicons();
 		}	
 		return $block_content;

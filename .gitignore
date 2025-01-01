@@ -12,5 +12,5 @@ node_modules/
 
 # Save and test files
 **/*-SAVE*
-**/*-test*
+**/*-TEST*
 zz_unused
