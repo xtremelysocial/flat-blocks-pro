@@ -1,6 +1,6 @@
-/*!********************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./src/scss/blocks/block-styles.scss ***!
-  \********************************************************************************************************************************************************/
+/*!******************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js!./src/scss/blocks/block-styles.scss ***!
+  \******************************************************************************************************************************************************************************************************************************/
 /**
  * File:	block-styles.css
  * Theme:	Flat Blocks
@@ -477,8 +477,10 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
   align-self: center;
   height: 1em;
   width: 1em;
-  mask-size: contain;
-  mask-repeat: no-repeat;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
 }
 
 /*-----------------------------------------------------------------------------
@@ -607,8 +609,8 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 # Custom: Up Arrow Icon
 -----------------------------------------------------------------------------*/
 .is-style-icon-arrow-up-alt2 > a:before {
-  /* webpackIgnore: true */
-  mask-image: url(../../icons/arrow-up-alt2.svg);
+  -webkit-mask-image: url(../../icons/arrow-up-alt2.svg);
+          mask-image: url(../../icons/arrow-up-alt2.svg);
   margin-left: 0.15em;
 }
 
@@ -713,14 +715,14 @@ p.is-style-alignwide {
 
 /*  Down Arrow for Scroll Headers */
 .is-style-arrow-icon-no-text > a:after {
-  /* webpackIgnore: true */
-  mask-image: url(../../icons/arrow-down-alt2.svg);
+  -webkit-mask-image: url(../../icons/arrow-down-alt2.svg);
+          mask-image: url(../../icons/arrow-down-alt2.svg);
   margin-right: 0.15em;
 }
 
 .is-style-icon-arrow-down-alt2-no-text > a:after {
-  /* webpackIgnore: true */
-  mask-image: url(../../icons/arrow-down-alt2.svg);
+  -webkit-mask-image: url(../../icons/arrow-down-alt2.svg);
+          mask-image: url(../../icons/arrow-down-alt2.svg);
   margin-right: 0.15em;
 }
 
@@ -741,8 +743,8 @@ p.is-style-alignwide {
 # Post Author Name
 -----------------------------------------------------------------------------*/
 .wp-block-post-author-name:before {
-  /* webpackIgnore: true */
-  mask-image: url(../../icons/admin-users.svg);
+  -webkit-mask-image: url(../../icons/admin-users.svg);
+          mask-image: url(../../icons/admin-users.svg);
   margin-left: 0.15em;
 }
 
@@ -775,8 +777,8 @@ p.is-style-alignwide {
 # Post Comments Count (Only w/Gutenberg Plugin)
 -----------------------------------------------------------------------------*/
 .wp-block-post-comments-count:before {
-  /* webpackIgnore: true */
-  mask-image: url(../../icons/admin-comments.svg);
+  -webkit-mask-image: url(../../icons/admin-comments.svg);
+          mask-image: url(../../icons/admin-comments.svg);
   margin-left: 0.15em;
 }
 
@@ -816,8 +818,8 @@ p.is-style-alignwide {
 # Post Date
 -----------------------------------------------------------------------------*/
 .wp-block-post-date:before {
-  /* webpackIgnore: true */
-  mask-image: url(../../icons/calendar-alt.svg);
+  -webkit-mask-image: url(../../icons/calendar-alt.svg);
+          mask-image: url(../../icons/calendar-alt.svg);
   margin-left: 0.15em;
 }
 
@@ -861,14 +863,14 @@ p.is-style-alignwide {
 # Post Terms:
 -----------------------------------------------------------------------------*/
 .wp-block-post-terms.taxonomy-category:before {
-  /* webpackIgnore: true */
-  mask-image: url(../../icons/category.svg);
+  -webkit-mask-image: url(../../icons/category.svg);
+          mask-image: url(../../icons/category.svg);
   margin-left: 0.15em;
 }
 
 .wp-block-post-terms.taxonomy-post_tag:before {
-  /* webpackIgnore: true */
-  mask-image: url(../../icons/tag.svg);
+  -webkit-mask-image: url(../../icons/tag.svg);
+          mask-image: url(../../icons/tag.svg);
   margin-left: 0.15em;
 }
 

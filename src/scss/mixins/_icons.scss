@@ -45,7 +45,7 @@
 	@if $link {
 		.#{$class} > a:#{$location} {
 			@extend %icon-pseudo;
-			/* webpackIgnore: true */ mask-image: url(#{$path}#{$icon}.svg);
+			mask-image: url(#{$path}#{$icon}.svg);
 
 			@if $margin {
 				@if $location == 'after' {
@@ -60,7 +60,7 @@
 	} @else {
 		.#{$class}:#{$location} {
 			@extend %icon-pseudo;			
-			/* webpackIgnore: true */ mask-image: url(#{$path}#{$icon}.svg);
+			mask-image: url(#{$path}#{$icon}.svg);
 	
 			@if $margin {
 				@if $location == 'after' {

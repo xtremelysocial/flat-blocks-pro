@@ -3,11 +3,12 @@
 -----------------------------------------------------------------------------*/
 /**
  * Override core WordPress base Dashicon styles. Don't let it alter height, 
- * width, font-size or line-height.
+ * width, font-size or line-height. wp-site-blocks is used for specificity.
  */
-.dashicons { //,
-// 	display: block;
-	display: inherit;
+.wp-site-blocks .dashicons,
+.wp-site-blocks .dashicons-before {
+	display: block;
+// 	display: inherit;
 	width: auto;
 	height: auto;
 	font-family: inherit;
@@ -18,8 +19,8 @@
 	text-transform: inherit;
 }
 
-.dashicons:before,
-[class*="dashicons-"]:before {
+.wp-site-blocks .dashicons:before,
+.wp-site-blocks [class*="dashicons-"]:before {
 	display: inline-block;
 	width: auto;
 	height: auto;
