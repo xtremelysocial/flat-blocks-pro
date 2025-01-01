@@ -1,6 +1,6 @@
-/*!**************************************************************************************************************************************************************!*\
-  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./pro/src/scss/pro/pro-custom-styles.scss ***!
-  \**************************************************************************************************************************************************************/
+/*!************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[0].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[0].use[2]!./node_modules/sass-loader/dist/cjs.js!./pro/src/scss/pro/pro-custom-styles.scss ***!
+  \************************************************************************************************************************************************************************************************************************************/
 /**
  * File:	pro-custom-styles.css
  * Theme:	Flat Blocks PRO
@@ -54,24 +54,6 @@
 /*--------------------------------------------------------------
 # PRO Dashicon Styles
 --------------------------------------------------------------*/
-/* Override dashicons default centering to match the text */
-.dashicons.has-text-align-center,
-[class*=dashicons-].has-text-align-center {
-  text-align: center;
-  justify-content: center;
-}
-.dashicons.has-text-align-left,
-[class*=dashicons-].has-text-align-left {
-  text-align: left;
-  justify-content: left;
-}
-.dashicons.has-text-align-right,
-[class*=dashicons-].has-text-align-right {
-  text-align: right;
-  justify-content: right;
-}
-
-/* Add a new Dashicons After class */
 /* Add a new Dashicons Above class */
 .dashicons-above {
   display: flex;
@@ -93,9 +75,6 @@
   text-align: center;
 }
 
-/* Nav menus already have transitions so don't add another one on
- * dashicons
- */
 /*--------------------------------------------------------------
 # Custom: List Dividers (Lists, Latest Posts, Latest Comments)
 --------------------------------------------------------------*/

@@ -128,7 +128,7 @@ if ( ! function_exists( 'flatblocks_load_styles' ) ) :
 		$styles = array (
 			get_template_directory() . '/assets/css/flat-blocks.css',
 			get_template_directory() . '/assets/css/utility-styles.css',
-			get_template_directory() . '/style.css', // XS
+			get_template_directory() . '/style.css', //XS
 		);
 
 		// Only load WordPress.org styles if on that website and not in the Editor
