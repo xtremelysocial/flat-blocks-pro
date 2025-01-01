@@ -15,7 +15,6 @@
 # BASE PRO STYLES
 --------------------------------------------------------------*/
 @use "../base/base";
-//@use "../base/angles-curves"; // Moved to xs-shapes plugin
 @use "../base/dashicons";
 @use "../base/list-dividers";
 @use "../base/plugins";
@@ -23,7 +22,6 @@
 /*--------------------------------------------------------------
 # PRO BLOCK STYLES
 --------------------------------------------------------------*/
-//@use "blocks/buttons"; // Moved to core Flat Blocks theme
 @use "../blocks/group";
 @use "../blocks/heading";
 @use "../blocks/latest-posts";
