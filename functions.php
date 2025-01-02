@@ -131,12 +131,6 @@ if ( ! function_exists( 'flatblocks_load_styles' ) ) :
 			get_template_directory() . '/style.css', //XS
 		);
 
-		// Only load WordPress.org styles if on that website and not in the Editor
-		if ( ! is_admin() 
-			AND strpos( $_SERVER['SERVER_NAME'], 'wordpress.org') ) {
-			$styles[] = get_template_directory() . '/assets/css/wporg-styles.css';
-		}
-
 		// If child theme, load it's stylesheet
 		if ( is_child_theme() ) {
 			$styles[] = get_stylesheet_directory() . '/style.css';

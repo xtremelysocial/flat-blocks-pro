@@ -148,22 +148,22 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 == Changelog ==
 
 = 2.0 = 
-December 31, 2024
+January 1, 2024
 
 Version Summary: Updated minimum WordPress version required to 6.7 which coupled with simplifying CSS throughout significantly reduced the amount of CSS needed by over 25%. The theme now only loads the CSS styles needed for each page and instructs WordPress to also do this, which further reduces the amount of CSS for most pages. Added 5 new gradients based on the recent duotones that were added. Changed Larger and Extra Large font slugs to match the TwentyTwentyFive theme.
 
 Changes to look out for and update your content if necessary:
 * Change "Extra Large" font size to use "2X Large" and "Larger" font size to use "Extra Large".
-* Change the really old "Background" and "Foreground" colors to use "Base" and "Contrast" colors instead.
-* Check top margins on pages and posts with sidebars, both with and without featured images.
+* Check top margins on pages and posts with sidebars, both with and without featured images. You should remove the top margin from the sidebar and featured image. 
 * Check horizontal padding on groups and columns with backgrounds on tablet and mobile.
+* Change the really old "Background" and "Foreground" colors to use "Base" and "Contrast" colors instead.
 * If coming over to Flat Blocks from another theme, change out the background and text colors. Unknown background colors are mapped to the Primary color (light green by default) and the text color to Foreground Alt (offwhite by default).
 
 More Details:
 * Updated minimum WordPress version required to 6.7 and dropped all the code needed to support back to Wordpress v6.5.
 * CSS Enhancements and Optimization:
 	* Simplified the CSS for default text and link colors on colored backgrounds as well as for Navigation highlights which reduced CSS by over 25%.
-	* Now Dashicons CSS only loads if in use on a particular page and WordPress.org theme previews only loads on that server, further reducing CSS on most pages. Also enhanced it to work better with optimization plugins that concatenate CSS, such as Jetpack Boost.
+	* Now Dashicons CSS only loads if in use on a particular page, further reducing CSS on most pages. Also enhanced it to work better with optimization plugins that concatenate CSS, such as Jetpack Boost.
 	* The theme now instructs WordPress to only load the CSS styles needed for each page (which is the default in WordPress v6.7). The theme itself now also does this which lets core WordPress optimize whether styles are loaded inline or in separate CSS file(s).
 	* Rewrote the CSS for top margin on blocks to be consistent with WordPress vertical spacing as well as no longer require certain Template Parts and Templates to add top-margin.
 	* Enhanced the CSS for horizontal padding on tablet and mobile so that groups and columns with colored backgrounds line up better with the site's global padding. 

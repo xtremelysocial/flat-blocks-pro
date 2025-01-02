@@ -330,45 +330,41 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 /*-----------------------------------------------------------------------------
 # Latest Comments
 -----------------------------------------------------------------------------*/
-/* Set default latest comments to match latest posts */
+/* Match our font sizes, margins, and padding */
 .wp-block-latest-comments {
   list-style: none;
 }
-
-.wp-block-latest-comments__comment {
-  margin-bottom: 0;
-}
-
-/* Add some bottom margin to plain posts list */
-.wp-block-latest-comments li {
-  margin-bottom: var(--wp--preset--spacing--30);
-}
-
-/* Default latest comments style to no bullets */
 .wp-block-latest-comments:not(.is-style-bullets) {
   padding-right: 0;
   padding-inline-start: 0;
+}
+.wp-block-latest-comments li {
+  margin-bottom: var(--wp--preset--spacing--30);
+}
+.wp-block-latest-comments .wp-block-latest-comments__comment {
+  margin-bottom: 0;
+}
+.wp-block-latest-comments .wp-block-latest-comments__comment-date,
+.wp-block-latest-comments .wp-block-latest-comments__comment-excerpt p {
+  font-size: var(--wp--preset--font-size--small);
 }
 
 /*-----------------------------------------------------------------------------
 # Latest Comments: Custom
 -----------------------------------------------------------------------------*/
 /* Bullets style */
-.wp-block-latest-comments.is-style-bullets:not(.has-avatars) {
-  padding-right: 2em;
-}
-
 .wp-block-latest-comments.is-style-bullets {
   list-style: disc;
 }
-
+.wp-block-latest-comments.is-style-bullets:not(.has-avatars) {
+  padding-right: 2em;
+}
+.wp-block-latest-comments.is-style-bullets.has-avatars .wp-block-latest-comments__comment {
+  list-style-position: inside;
+}
 .wp-block-latest-comments.is-style-bullets li {
   list-style: disc;
   margin-bottom: 0;
-}
-
-.wp-block-latest-comments.is-style-bullets.has-avatars .wp-block-latest-comments__comment {
-  list-style-position: inside;
 }
 
 /*-----------------------------------------------------------------------------
@@ -386,10 +382,6 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
   border: 1px solid var(--wp--custom--color--border);
   padding: var(--wp--preset--spacing--20);
   box-shadow: var(--wp--custom--shadow--default);
-}
-
-.wp-block-latest-posts__featured-image img {
-  border-radius: var(--wp--custom--border--radius);
 }
 
 .wp-block-latest-posts__featured-image.aligncenter {
