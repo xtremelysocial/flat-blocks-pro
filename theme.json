@@ -47,6 +47,7 @@
 			"animation": {
 				"default": {
 					"entrance": "fadeInUp",
+					"noHover": "scale3d(1, 1, 1)",
 					"hover": "scale3d(1.1, 1.1, 1.1)"
 				},
 				"duration": {

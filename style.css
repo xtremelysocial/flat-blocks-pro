@@ -89,9 +89,11 @@ GNU General Public License for more details.
 --------------------------------------------------------------*/
 .wp-block-buttons .wp-block-button, 
 .is-style-arrow-icon > a, 
-.is-style-arrow-icon-no-text > a {
+.is-style-arrow-icon-no-text > a:after {
+	text-decoration: none;
 /* 	transform: translate3d(0, 0, 0); */
-	transform: scale3d(1, 1, 1);
+/* 	transform: scale3d(1, 1, 1); */
+	transform var(--animate-default-no-hover);
 	transition: transform var(--animate-duration-hover) var(--animate-timing-function);
 }
 
@@ -106,9 +108,9 @@ GNU General Public License for more details.
 .is-style-arrow-icon > a:hover, 
 .is-style-arrow-icon > a:focus, 
 .is-style-arrow-icon > a:active, 
-.is-style-arrow-icon-no-text > a:hover, 
-.is-style-arrow-icon-no-text > a:focus, 
-.is-style-arrow-icon-no-text > a:active {
+.is-style-arrow-icon-no-text > a:hover:after, 
+.is-style-arrow-icon-no-text > a:focus:after, 
+.is-style-arrow-icon-no-text > a:active:after {
 	transform: var(--animate-default-hover);
 }
 
