@@ -177,7 +177,8 @@ More Details:
 * Added Block Pattern for Cover Camera. 
 * Added WEBP versions of all cover images. The JPEG versions are still used in the various Block Patterns, but if your web server supports WEBP then you can upload them to your Media Library and use them instead. WEBP is a more optimized image format specifically for use on the web. 
 * Removed Block Bindings for site copyright year and theme info. Template Parts with Block Patterns are now used instead. 
-* Rewrote the main functions.php to radically simplify it as well. It now uses an array to load other PHP include files as well as an array for which CSS stylesheets to load. Code needed for older WordPress versions was removed. 
+* Rewrote the main functions.php to radically simplify it as well. It now uses an array to load other PHP include files as well as an array for which CSS stylesheets to load. Code needed for older WordPress versions was removed.
+* Moved block patterns functions into the main block-patterns.php as they are no longer needed outside that context.
 * For developers: Updated webpack.config.js to add postcss-loader to use autoprefixer to add browser prefixes automatically (e.g. -webkit-mask-image). Removed our vendor-prefixes mixin as it is no longer needed. 
 
 = 1.9.7 =

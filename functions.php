@@ -78,7 +78,6 @@ endif;
  
 // Build array of include files relative to theme root
 $includes = array (
-	'/inc/block-bindings.php',
 	'/inc/block-patterns.php',
 	'/pro/flat-blocks-pro.php', //PRO
 );
@@ -217,8 +216,7 @@ endif;
  * If flatblocks_always_load_dashicons is true, then they will always be loaded. If not,
  * they will be conditionally loaded if used on the page or post. 
  * 
- * Note that WordPress will still load them for logged in users because it
- * uses them in the Admin Bar.
+ * Note that enqueue_block_assets is needed for them to be included in the Editor.
  */
 // add_filter( 'flatblocks_always_load_dashicons', '__return_true' );
  

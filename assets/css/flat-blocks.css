@@ -516,8 +516,10 @@ main > :last-child:not(.wp-block-post-content) {
   outline: none;
 }
 
-[class*=is-style-icon-] a:hover {
+[class*=is-style-icon-] a:hover,
+[class*=is-style-icon-] a:active {
   opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
+  text-decoration: none;
 }
 
 /* No icons for post meta */

@@ -10,8 +10,10 @@
 	outline: none; // !important;
 }
 
-[class*="is-style-icon-"] a:hover {
+[class*="is-style-icon-"] a:hover,
+[class*="is-style-icon-"] a:active {
 	opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
+	text-decoration: none; // !important;
 }
 
 /* No icons for post meta */
