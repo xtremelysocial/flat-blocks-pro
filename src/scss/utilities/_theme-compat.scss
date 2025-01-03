@@ -13,13 +13,3 @@
 .has-larger-font-size {
 	font-size: var(--wp--preset--font-size--x-large);
 }
-
-/* Override top margin in certain situations */
-:where(main) > :first-child:not(.wp-block-post-content):not(.wp-block-post-featured-image):not(.wp-block-cover) {
-    margin-block-start: var(--wp--style--block-gap) !important;
-}
-
-:where(main) > .wp-block-columns > .wp-block-column .sidebar.wp-block-group,
-.wp-block-query > .wp-block-columns > .wp-block-column .sidebar.wp-block-group { 
- 	margin-block-start: 0 !important;
-}

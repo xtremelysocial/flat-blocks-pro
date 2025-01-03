@@ -148,15 +148,15 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 == Changelog ==
 
 = 2.0 = 
-January 1, 2024
+January 2, 2024
 
 Version Summary: Updated minimum WordPress version required to 6.7 which coupled with simplifying CSS throughout significantly reduced the amount of CSS needed by over 25%. The theme now only loads the CSS styles needed for each page and instructs WordPress to also do this, which further reduces the amount of CSS for most pages. Added 5 new gradients based on the recent duotones that were added. Changed Larger and Extra Large font slugs to match the TwentyTwentyFive theme.
 
 Changes to look out for and update your content if necessary:
 * Change "Extra Large" font size to use "2X Large" and "Larger" font size to use "Extra Large".
-* Check top margins on pages and posts with sidebars, both with and without featured images. You should remove the top margin from the sidebar and featured image. 
-* Check horizontal padding on groups and columns with backgrounds on tablet and mobile.
-* Change the really old "Background" and "Foreground" colors to use "Base" and "Contrast" colors instead.
+* Check top margins on pages and posts with sidebars, both with and without featured images. If there is extra top margin, you can remove it from the sidebar and/or featured image. 
+* Check footers with copyright date and/or theme info that might be using Block Bindings. Use the more recent Template Parts (Site Copyright, Theme Tagline).
+* If you are still using the really old "Background" and "Foreground" colors, change them to "Base" and "Contrast" colors instead.
 * If coming over to Flat Blocks from another theme, change out the background and text colors. Unknown background colors are mapped to the Primary color (light green by default) and the text color to Foreground Alt (offwhite by default).
 
 More Details:
@@ -176,6 +176,7 @@ More Details:
 * Added more gradient options to match the duotones added in Flat Blocks v1.9: Purple to Yellow, Purple to Green, Blue to Red, Blue to Orange, and Midnight (Midnight Blue to Blue).
 * Added Block Pattern for Cover Camera. 
 * Added WEBP versions of all cover images. The JPEG versions are still used in the various Block Patterns, but if your web server supports WEBP then you can upload them to your Media Library and use them instead. WEBP is a more optimized image format specifically for use on the web. 
+* Removed Block Bindings for site copyright year and theme info. Template Parts with Block Patterns are now used instead. 
 * Rewrote the main functions.php to radically simplify it as well. It now uses an array to load other PHP include files as well as an array for which CSS stylesheets to load. Code needed for older WordPress versions was removed. 
 * For developers: Updated webpack.config.js to add postcss-loader to use autoprefixer to add browser prefixes automatically (e.g. -webkit-mask-image). Removed our vendor-prefixes mixin as it is no longer needed. 
 

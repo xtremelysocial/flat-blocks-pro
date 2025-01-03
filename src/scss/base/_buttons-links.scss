@@ -57,7 +57,7 @@ input[type=file] {
 	border: 3px solid var(--wp--custom--color--button--text, var(--wp--preset--color--foreground-alt));
 }
 
-/* FIX for WordPress v6.7 Button not within a Buttons container */
+/* FIX for WordPress v6.7 when older Button not within a Buttons container */
 .wp-site-blocks .wp-block-button__link {
 	width: auto;
 	height: auto;

@@ -73,6 +73,15 @@ ul.has-background:not(.wp-block-navigation-submenu):not(.wp-block-navigation__co
   list-style-position: inside;
 }
 
+/* Center captions and don't underline links in them by default */
+.wp-element-caption {
+  text-align: center;
+}
+
+.wp-element-caption a {
+  text-decoration: none;
+}
+
 /*-----------------------------------------------------------------------------
 # Forms
 -----------------------------------------------------------------------------*/
@@ -190,7 +199,7 @@ input[type=file] {
   border: 3px solid var(--wp--custom--color--button--text, var(--wp--preset--color--foreground-alt));
 }
 
-/* FIX for WordPress v6.7 Button not within a Buttons container */
+/* FIX for WordPress v6.7 when older Button not within a Buttons container */
 .wp-site-blocks .wp-block-button__link {
   width: auto;
   height: auto;
@@ -494,4 +503,71 @@ main > :last-child:not(.wp-block-post-content) {
 
 .is-style-list-plain-centered li {
   margin-right: 0;
+}
+
+/*------------------------------------------------------------------------------
+# Icons
+#
+# Note: Needed for multiple blocks so always load
+------------------------------------------------------------------------------*/
+/* Don't underline links, but lighten on hover */
+[class*=is-style-icon-] a {
+  text-decoration: none;
+  outline: none;
+}
+
+[class*=is-style-icon-] a:hover {
+  opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
+}
+
+/* No icons for post meta */
+.is-style-no-icon:before {
+  content: none !important;
+}
+
+/*-----------------------------------------------------------------------------
+# Flat Blocks Theme Compatibility with Prior Versions
+#
+# This is so that user's CONTENT created with prior theme versions will still
+# work as before. These styles have been DEPRECATED though and will be removed
+# at some point, so its best to update the site content.
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+# Flat Blocks Styles for theme < v2.0
+-----------------------------------------------------------------------------*/
+/* Map deprecated font size */
+.has-larger-font-size {
+  font-size: var(--wp--preset--font-size--x-large);
+}
+
+/*-----------------------------------------------------------------------------
+# Compatibility with other themes
+#
+# This is so that user's content created with other themes will look OK before
+# they update it for the Flat Blocks theme.
+-----------------------------------------------------------------------------*/
+:where(.has-background) {
+  background-color: var(--wp--preset--color--primary);
+}
+
+:where(.has-background:not(.has-text-color)) {
+  color: var(--wp--preset--color--off-white);
+}
+
+:where(.has-text-color) {
+  color: var(--wp--preset--color--contrast);
+}
+
+:where(.has-border-color) {
+  border-color: var(--wp--preset--color--neutral-alt);
+}
+
+/*-----------------------------------------------------------------------------
+# Utilities
+-----------------------------------------------------------------------------*/
+/* FIX WordPress Admin bar on phones not sticking to the top */
+@media screen and (max-width: 600px) {
+  body > #wpadminbar {
+    position: fixed;
+  }
 }

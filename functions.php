@@ -43,7 +43,6 @@ if ( ! function_exists( 'flatblocks_support' ) ) :
 		$editor_styles = array(
 			'/assets/css/flat-blocks.css',
 			'/assets/css/blocks/block-styles.css',
-			'/assets/css/utility-styles.css',
 			'/assets/css/editor-styles.css',
 			'/style.css' //XS
 		);
@@ -127,7 +126,6 @@ if ( ! function_exists( 'flatblocks_load_styles' ) ) :
 		// Build array of CSS styles to load. Include the local path.
 		$styles = array (
 			get_template_directory() . '/assets/css/flat-blocks.css',
-			get_template_directory() . '/assets/css/utility-styles.css',
 			get_template_directory() . '/style.css', //XS
 		);
 

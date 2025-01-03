@@ -17,15 +17,8 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 
 /* FIX rounded images when global image style has a border radius */
 .wp-block-image .is-style-rounded img,
-.wp-block-image.is-style-circle-mask img,
-.wp-block-image.is-style-rounded img,
-.is-style-image-round-border img {
+.wp-block-image.is-style-rounded img {
   border-radius: 9999px !important;
-}
-
-/* Don't underline links in image captions */
-.wp-element-caption a {
-  text-decoration: none;
 }
 
 /*-----------------------------------------------------------------------------

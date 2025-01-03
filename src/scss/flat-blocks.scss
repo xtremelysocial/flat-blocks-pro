@@ -11,6 +11,7 @@
  * @since	1.0
  */
 
+// Base styles
 @use "base/normalize";
 @use "base/elements";
 @use "base/forms";
@@ -19,3 +20,9 @@
 @use "base/margins";
 @use "base/colors";
 @use "base/lists";
+
+// Utility styles
+@use "utilities/icons";
+@use "utilities/theme-compat";
+@use "utilities/other-themes";
+@use "utilities/utilities";
