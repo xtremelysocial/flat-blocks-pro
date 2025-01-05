@@ -511,15 +511,16 @@ main > :last-child:not(.wp-block-post-content) {
 # Note: Needed for multiple blocks so always load
 ------------------------------------------------------------------------------*/
 /* Don't underline links, but lighten on hover */
+.is-style-arrow-icon-no-text a,
 [class*=is-style-icon-] a {
   text-decoration: none;
   outline: none;
 }
 
+.is-style-arrow-icon-no-text a:hover,
 [class*=is-style-icon-] a:hover,
 [class*=is-style-icon-] a:active {
   opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
-  text-decoration: none;
 }
 
 /* No icons for post meta */

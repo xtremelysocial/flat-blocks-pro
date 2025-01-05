@@ -5,15 +5,17 @@
 ------------------------------------------------------------------------------*/
 
 /* Don't underline links, but lighten on hover */
+.is-style-arrow-icon-no-text a, //deprecated
 [class*="is-style-icon-"] a {
 	text-decoration: none; // !important;
 	outline: none; // !important;
 }
 
+.is-style-arrow-icon-no-text a:hover, //deprecated
 [class*="is-style-icon-"] a:hover,
 [class*="is-style-icon-"] a:active {
 	opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
-	text-decoration: none; // !important;
+// 	text-decoration: none; // !important;
 }
 
 /* No icons for post meta */

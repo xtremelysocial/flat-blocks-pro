@@ -4,7 +4,7 @@
 @use "../mixins/icons";
 
 @include icons.svg-icon(
-	'wp-block-post-date',
-	'calendar-alt',
-	'before'
+	$class: 'wp-block-post-date',
+	$icon: 'calendar-alt',
+	$location: 'before'
 );

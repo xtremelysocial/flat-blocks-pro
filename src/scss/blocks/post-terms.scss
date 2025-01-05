@@ -4,15 +4,15 @@
 @use "../mixins/icons";
 
 @include icons.svg-icon(
-	'wp-block-post-terms.taxonomy-category',
-	'category',
-	'before'
+	$class: 'wp-block-post-terms.taxonomy-category',
+	$icon: 'category',
+	$location: 'before'
 );
 
 @include icons.svg-icon(
-	'wp-block-post-terms.taxonomy-post_tag',
-	'tag',
-	'before'
+	$class: 'wp-block-post-terms.taxonomy-post_tag',
+	$icon: 'tag',
+	$location: 'before'
 );
 
 /* Remove bottom margin on Category and Tag descriptions */

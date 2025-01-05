@@ -2,8 +2,8 @@
 // SVG Icon Mixins
 //------------------------------------------------------------------------------
 
-// @use "../mixins/prefixes";
-@use "sass:string";
+// Load string functions
+// @use "sass:string";
 
 // Assign SVG attributes to :before or :after
 %icon-pseudo {
@@ -22,8 +22,8 @@
 // @class		string	CSS class to add icon. e.g. wp-block-post-date
 // @icon		string	Icon slug. e.g. ('calendar-alt', 'category')
 // @location	string	Either 'before' or 'after'
-// @margin		bool	Add margin before or after
 // @link		bool	Add icon to link or the element itself
+// @margin		bool	Add margin before or after
 //
 @mixin svg-icon(
 	$class,
@@ -33,41 +33,32 @@
 	$margin: true,
 ) {
 
+	// Determine the CSS selector to use: The element or the link within the element
+	$selector: '#{$class}:#{$location}';
+	@if $link {
+		$selector: '#{$class} > a:#{$location}';
+	}		
+
 	// Determine the SVG Icon path. Note: include trailing slash.
 // 	$path: '../icons/';
 // 	@if ( string.index($class, 'wp-block-') ) {
 // 		$path: '../../icons/';
 // 	}
 	$path: '../../icons/';
+
+	// Default to adding margin
 	$margin: 0.15em;
 
-	// If link, then use "> a"
-	@if $link {
-		.#{$class} > a:#{$location} {
-			@extend %icon-pseudo;
-			mask-image: url(#{$path}#{$icon}.svg);
+	// Add the :before or :after styles, the SVG Icon, and optionally margin
+	.#{$selector} {
+		@extend %icon-pseudo;
+		mask-image: url(#{$path}#{$icon}.svg);
 
-			@if $margin {
-				@if $location == 'after' {
-					margin-left: #{$margin};
-				} @else {
-					margin-right: #{$margin};
-				}
-			}
-		}
-
-	// For non-links, just add the icon before or after the element itself
-	} @else {
-		.#{$class}:#{$location} {
-			@extend %icon-pseudo;			
-			mask-image: url(#{$path}#{$icon}.svg);
-	
-			@if $margin {
-				@if $location == 'after' {
-					margin-left: #{$margin};
-				} @else {
-					margin-right: #{$margin};
-				}	
+		@if $margin {
+			@if $location == 'after' {
+				margin-left: #{$margin};
+			} @else {
+				margin-right: #{$margin};
 			}
 		}
 	}

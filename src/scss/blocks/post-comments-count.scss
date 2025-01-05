@@ -4,9 +4,9 @@
 @use "../mixins/icons";
 
 @include icons.svg-icon(
-	'wp-block-post-comments-count',
-	'admin-comments',
-	'before'
+	$class: 'wp-block-post-comments-count',
+	$icon: 'admin-comments',
+	$location: 'before'
 );
 
 /* Add word "comment(s)" after post comment count if Gutenberg active */
