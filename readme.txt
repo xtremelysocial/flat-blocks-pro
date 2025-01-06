@@ -147,6 +147,12 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 2.0.1 = 
+January 5, 2024
+
+* Remove margin from Scroll Down Arrow without Text.
+* Remove extra top and bottom margin from Sidebar Left and Sidebar Right Block Patterns.
+
 = 2.0 = 
 January 2, 2024
 

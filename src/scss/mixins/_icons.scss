@@ -46,19 +46,17 @@
 // 	}
 	$path: '../../icons/';
 
-	// Default to adding margin
-	$margin: 0.15em;
-
 	// Add the :before or :after styles, the SVG Icon, and optionally margin
 	.#{$selector} {
 		@extend %icon-pseudo;
 		mask-image: url(#{$path}#{$icon}.svg);
 
 		@if $margin {
+			$defaultMargin: 0.15em;
 			@if $location == 'after' {
-				margin-left: #{$margin};
+				margin-left: #{$defaultMargin};
 			} @else {
-				margin-right: #{$margin};
+				margin-right: #{$defaultMargin};
 			}
 		}
 	}

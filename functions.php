@@ -114,7 +114,6 @@ add_action( 'wp_enqueue_scripts', 'flatblocks_load_styles' );
 if ( apply_filters( 'flatblocks_load_separate_block_assets', true ) ) {
 	add_action( 'init', 'flatblocks_load_block_styles' ); 
 } else {
-// 	add_action( 'enqueue_block_assets', 'flatblocks_load_combined_block_styles' );
 	add_action( 'wp_enqueue_scripts', 'flatblocks_load_combined_block_styles' );
 }
 

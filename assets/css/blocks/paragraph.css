@@ -49,13 +49,11 @@ p.is-style-alignwide {
 .is-style-arrow-icon-no-text > a:after {
   -webkit-mask-image: url(../../icons/arrow-down-alt2.svg);
           mask-image: url(../../icons/arrow-down-alt2.svg);
-  margin-left: 0.15em;
 }
 
 .is-style-icon-arrow-down-alt2-no-text > a:after {
   -webkit-mask-image: url(../../icons/arrow-down-alt2.svg);
           mask-image: url(../../icons/arrow-down-alt2.svg);
-  margin-left: 0.15em;
 }
 
 .is-style-arrow-icon-no-text > a,
