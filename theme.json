@@ -2010,6 +2010,12 @@
 			"area": "footer"
 		},
 		{
+			"name": "pro/jetpack-sharing",
+			"title": "PRO Jetpack Sharing",
+			"description": "Share to social media with Jetpack Sharing",
+			"area": "content"
+		},		
+		{
 			"name": "pro/pro-header-gradient-fixed",
 			"title": "PRO Header Gradient Fixed",
 			"description": "Header fixed with gradient background",
