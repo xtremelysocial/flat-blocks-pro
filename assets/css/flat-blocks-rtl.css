@@ -269,6 +269,11 @@ input[type=file]::file-selector-button:hover {
   margin-left: auto;
 }
 
+/* FIX align center for WordPress v6.7 */
+.aligncenter {
+  text-align: center;
+}
+
 /* ADD padding and margin to align left and align right to match wide width */
 .wp-site-blocks > .alignleft {
   margin-left: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
