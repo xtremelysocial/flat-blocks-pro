@@ -9,13 +9,17 @@
 // Mixin for icons
 @use "../../../../src/scss/mixins/icons";
 
-// Edit icon
-@include icons.svg-icon(
-	$class: 'is-style-icon-edit',
-	$icon: 'edit',
+// Edit and User icons
+// @include icons.svg-icon(
+// 	$class: 'is-style-icon-edit',
+// 	$icon: 'edit',
+// 	$location: 'before',
+// 	$link: false,
+// 	$margin: true,
+// );
+@include icons.svg-icons(
+	$icons: ('edit', 'admin-users'),
 	$location: 'before',
-	$link: false,
-	$margin: true,
 );
 
 /*--------------------------------------------------------------

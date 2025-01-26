@@ -45,6 +45,11 @@ input:not([type="radio"]):not([type="checkbox"]):not([type="file"]):not([type="b
 	border: 1px solid var(--wp--preset--color--contrast);
 }
 
+// TO-DO: Move this to an Admin Head inline CSS
+// input.code {
+//   font-family: inherit;
+// }
+
 /* Style focus outline */
 input:focus,
 textarea:focus {

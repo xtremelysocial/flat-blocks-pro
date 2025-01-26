@@ -1770,6 +1770,12 @@
 			"area": "title"
 		},
 		{
+			"name": "archive-title-no-prefix",
+			"title": "Archive Title No Prefix",
+			"description": "Title for archives without a prefix (e.g. Projects)",
+			"area": "title"
+		},
+		{
 			"name": "404-title",
 			"title": "Error (404) Title",
 			"description": "Title for the error page (404)",
@@ -2028,37 +2034,37 @@
 			"area": "footer"
 		},
 		{
-			"name": "pro/jetpack-sharing",
+			"name": "jetpack-sharing",
 			"title": "PRO Jetpack Sharing",
 			"description": "Share to social media with Jetpack Sharing",
 			"area": "content"
 		},		
 		{
-			"name": "pro/pro-header-gradient-fixed",
+			"name": "pro-header-gradient-fixed",
 			"title": "PRO Header Gradient Fixed",
 			"description": "Header fixed with gradient background",
 			"area": "header"
 		},		
 		{
-			"name": "pro/pro-header-scroll-fixed",
+			"name": "pro-header-scroll-fixed",
 			"title": "PRO Header Scroll to Fixed",
 			"description": "Header fixed after scrolling down",
 			"area": "header"
 		},		
 		{
-			"name": "pro/pro-footer-3-blocks-image-curved",
+			"name": "pro-footer-3-blocks-image-curved",
 			"title": "PRO Footer Curved w/Image and 3 Blocks",
 			"description": "Footer curved with image and 3 blocks",
 			"area": "footer"
 		},		
 		{
-			"name": "pro/pro-footer-3-blocks-image-curved-nav-site-info",
+			"name": "pro-footer-3-blocks-image-curved-nav-site-info",
 			"title": "PRO Footer Curved w/Image 3 Blocks, Menu, and Site Info",
 			"description": "Footer curved with image and 3 blocks, menu, and site info",
 			"area": "footer"
 		},		
 		{
-			"name": "pro/pro-footer-3-blocks-gradient",
+			"name": "pro-footer-3-blocks-gradient",
 			"title": "PRO Footer 3 Blocks with Gradient",
 			"description": "Footer 3 blocks with gradient background",
 			"area": "footer"
@@ -2253,44 +2259,44 @@
 			"postTypes": ["post"]
 		},	
 		{
-			"name": "pro/pro-page-home-scroll-header",
+			"name": "pro-page-home-scroll-header",
 			"title": "PRO Page Home (cover image w/scroll to fixed header, no comments)",
 			"description": "PRO Home page (cover image with scroll to fixed header, no comments)",
 			"postTypes": ["page"]
 		},
 		{
-			"name": "pro/archive-jetpack-portfolio",
-			"title": "Jetpack Portfolio Archive",
+			"name": "archive-jetpack-portfolio",
+			"title": "PRO Jetpack Portfolio Archive",
 			"description": "Jetpack Portfolio Archive",
 			"postTypes": ["jetpack/portfolio"]
 		},
 		{
-			"name": "pro/taxonomy-jetpack-portfolio-type",
-			"title": "Jetpack Portfolio Type Archive",
+			"name": "taxonomy-jetpack-portfolio-type",
+			"title": "PRO Jetpack Portfolio Type Archive",
 			"description": "Jetpack Portfolio Type Archive",
 			"postTypes": ["jetpack/portfolio"]
 		},
 		{
-			"name": "pro/taxonomy-jetpack-portfolio-tag",
-			"title": "Jetpack Portfolio Tag Archive",
+			"name": "taxonomy-jetpack-portfolio-tag",
+			"title": "PRO Jetpack Portfolio Tag Archive",
 			"description": "Jetpack Portfolio Tag Archive",
 			"postTypes": ["jetpack/portfolio"]
 		},
 		{
-			"name": "pro/archive-jetpack-testimonial",
-			"title": "Jetpack Testimonial Archive",
+			"name": "archive-jetpack-testimonial",
+			"title": "PRO Jetpack Testimonial Archive",
 			"description": "Jetpack Testimonial Archive",
 			"postTypes": ["jetpack/testimonial"]
 		},
 		{
-			"name": "pro/single-jetpack-portfolio",
-			"title": "Jetpack Portfolio Item",
+			"name": "single-jetpack-portfolio",
+			"title": "PRO Jetpack Portfolio Item",
 			"description": "Jetpack Portfolio Item",
 			"postTypes": ["jetpack/portfolio"]
 		},
 		{
-			"name": "pro/single-jetpack-testimonial",
-			"title": "Jetpack Testimonial Item",
+			"name": "single-jetpack-testimonial",
+			"title": "PRO Jetpack Testimonial Item",
 			"description": "Jetpack Testimonial ITem",
 			"postTypes": ["jetpack/testimonial"]
 		}

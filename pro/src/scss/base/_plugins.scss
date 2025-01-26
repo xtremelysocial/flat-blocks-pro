@@ -28,11 +28,14 @@ img[alt="css.php"] {
 --------------------------------------------------------------*/
 
 /* Format the new site signup page */
-body.home > #page {
+// body.home > #page {
+body.home > #page:has(#signup-content) {
+	max-width: var(--wp--style--global--wide-size);
+	margin: 0 auto;
 
 	& > #header {
-		width: 90%;
-		margin: 0 auto;
+// 		width: 90%;
+// 		margin: 0 auto;
 		
 		& > #headerimg {
 		
@@ -47,19 +50,39 @@ body.home > #page {
 		}
 	}
 
-	& > #signup-content > .mu_register .mu_alert {
-		color: inherit; //var(--wp--preset--color--foreground-alt);
-		background-color: var(--wp--preset--color--tertiary);
-		border-color: var(--wp--custom--border--color);
-		border-radius: var(--wp--custom--border--radius);
-		font-weight: var(--wp--custom--typography--font-weight--medium);
-		padding: var(--wp--preset--spacing--40);
-		margin-top: var(--wp--style--block-gap);
-		margin-bottom: var(--wp--style--block-gap);
+	& #signup-content {
+// 		max-width: var(--wp--style--global--content-size);
+// 		margin: 0 auto;
+
+		.mu_register {
+	        width: 100%;
+
+			& #setupform {
+				max-width: var(--wp--style--global--content-size);
+			}
+	        
+			& input[type="submit"] {
+				width: auto;
+				font-size: var(--wp--preset--font-size--normal);
+				border: none;	
+			}
+
+			& .mu_alert {
+				color: inherit; //var(--wp--preset--color--foreground-alt);
+// 				background-color: var(--wp--preset--color--tertiary);
+				background-color: var(--wp--preset--color--light-yellow);
+				border-color: var(--wp--custom--border--color);
+				border-radius: var(--wp--custom--border--radius);
+				font-weight: var(--wp--custom--typography--font-weight--medium);
+				padding: var(--wp--preset--spacing--40);
+				margin-top: var(--wp--style--block-gap);
+				margin-bottom: var(--wp--style--block-gap);
+			}
+		}
 	}
 	
-	& > #footer {
-		width: 90%;
-		margin: 0 auto;
-	}
+// 	& > #footer {
+// 		width: 90%;
+// 		margin: 0 auto;
+// 	}
 }

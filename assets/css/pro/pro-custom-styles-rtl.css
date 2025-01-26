@@ -22,7 +22,7 @@
 /*--------------------------------------------------------------
 ## Icons
 --------------------------------------------------------------*/
-.is-style-icon-edit:before {
+.is-style-icon-edit:before, .is-style-icon-admin-users:before {
   content: "";
   background-color: currentColor;
   display: inline-flex;
@@ -38,6 +38,12 @@
 .is-style-icon-edit:before {
   -webkit-mask-image: url(../../icons/edit.svg);
           mask-image: url(../../icons/edit.svg);
+  margin-left: 0.15em;
+}
+
+.is-style-icon-admin-users:before {
+  -webkit-mask-image: url(../../icons/admin-users.svg);
+          mask-image: url(../../icons/admin-users.svg);
   margin-left: 0.15em;
 }
 
@@ -141,30 +147,37 @@ img[alt="css.php"] {
 ## WordPress Multisite
 --------------------------------------------------------------*/
 /* Format the new site signup page */
-body.home > #page > #header {
-  width: 90%;
+body.home > #page:has(#signup-content) {
+  max-width: var(--wp--style--global--wide-size);
   margin: 0 auto;
 }
-body.home > #page > #header > #headerimg > h1 {
+body.home > #page:has(#signup-content) > #header > #headerimg > h1 {
   margin-top: var(--wp--style--block-gap);
   margin-bottom: var(--wp--style--block-gap);
 }
-body.home > #page > #header > #headerimg > h1 > a {
+body.home > #page:has(#signup-content) > #header > #headerimg > h1 > a {
   text-decoration: none;
 }
-body.home > #page > #signup-content > .mu_register .mu_alert {
+body.home > #page:has(#signup-content) #signup-content .mu_register {
+  width: 100%;
+}
+body.home > #page:has(#signup-content) #signup-content .mu_register #setupform {
+  max-width: var(--wp--style--global--content-size);
+}
+body.home > #page:has(#signup-content) #signup-content .mu_register input[type=submit] {
+  width: auto;
+  font-size: var(--wp--preset--font-size--normal);
+  border: none;
+}
+body.home > #page:has(#signup-content) #signup-content .mu_register .mu_alert {
   color: inherit;
-  background-color: var(--wp--preset--color--tertiary);
+  background-color: var(--wp--preset--color--light-yellow);
   border-color: var(--wp--custom--border--color);
   border-radius: var(--wp--custom--border--radius);
   font-weight: var(--wp--custom--typography--font-weight--medium);
   padding: var(--wp--preset--spacing--40);
   margin-top: var(--wp--style--block-gap);
   margin-bottom: var(--wp--style--block-gap);
-}
-body.home > #page > #footer {
-  width: 90%;
-  margin: 0 auto;
 }
 
 /*--------------------------------------------------------------
