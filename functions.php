@@ -44,7 +44,7 @@ if ( ! function_exists( 'flatblocks_support' ) ) :
 			'/assets/css/flat-blocks.css',
 			'/assets/css/blocks/block-styles.css',
 			'/assets/css/editor-styles.css',
-			'/style.css' //XS
+			get_template_directory_uri() . '/style.css' //XS
 		);
 
 		// Allow child themes to override the list of editor styles to load

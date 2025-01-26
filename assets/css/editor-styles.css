@@ -14,7 +14,17 @@
  * @since	1.3.8
  */
 /*-----------------------------------------------------------------------------
-# Latest Comments
+# Base Editor Styles
+-----------------------------------------------------------------------------*/
+/* FIX WordPress v6.7 setting link hover color */
+.is-root-container a:active,
+.is-root-container a:focus,
+.is-root-container a:hover {
+  color: var(--wp--preset--color--highlight-alt);
+}
+
+/*-----------------------------------------------------------------------------
+# Latest Comments Editor Styles
 -----------------------------------------------------------------------------*/
 /* Editor has nested lists, so push padding down to nested one */
 .wp-block-latest-comments.is-style-bullets.block-editor-block-list__block {

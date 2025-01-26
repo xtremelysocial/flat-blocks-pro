@@ -1764,6 +1764,24 @@
 			"area": "title"
 		},
 		{
+			"name": "archive-title",
+			"title": "Archive Title",
+			"description": "Title for archives (categories, tags, etc.)",
+			"area": "title"
+		},
+		{
+			"name": "404-title",
+			"title": "Error (404) Title",
+			"description": "Title for the error page (404)",
+			"area": "title"
+		},
+		{
+			"name": "search-title",
+			"title": "Search Title",
+			"description": "Title for the search page",
+			"area": "title"
+		},
+		{
 			"name": "post-navigation",
 			"title": "Post Navigation",
 			"description": "Next and previous post links",
@@ -1779,7 +1797,7 @@
 			"name": "content-home-top",
 			"title": "Content Home Top (when blog is front page)",
 			"description": "Content for top of the home page (when blog is front page)",
-			"area": "title"
+			"area": "content"
 		},
 		{
 			"name": "content-sitemap",

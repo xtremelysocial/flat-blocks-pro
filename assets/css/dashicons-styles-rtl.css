@@ -32,7 +32,7 @@
   font-size: inherit;
   font-weight: var(--wp--custom--typography--font-weight--normal);
   line-height: inherit;
-  text-align: center;
+  text-align: inherit;
   text-transform: inherit;
 }
 
@@ -47,7 +47,7 @@
   font-size: 1em;
   line-height: 1;
   font-weight: inherit;
-  vertical-align: text-top;
+  vertical-align: text-bottom;
 }
 
 /* Add some right margin on inline dashicons before the text */

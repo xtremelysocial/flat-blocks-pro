@@ -3,7 +3,7 @@
 	"version": 3,
 	"slug": "image-round-border",
 	"title": "Rounded w/Border",
-	"blockTypes": [ "core/image" ],
+	"blockTypes": [ "core/image", "core/post-featured-image" ],
 	"styles": {
 		"border": {
 			"style": "solid",

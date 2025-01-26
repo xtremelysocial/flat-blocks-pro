@@ -147,6 +147,15 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 2.0.2 = 
+January 25, 2024
+
+* Added Template Parts for Search Title, 404 (Error Page) Title, and Archive (Blog) Title. These can be found under the "Title" category in the Block Patterns in the Editor along with the Page Title and Post Title Template Parts. Updated Templates to use the new title Template Parts.
+* Enhanced CSS:
+	* Add bottom margin on the last element in the Post Content (unless the user overrides it).
+	* Inherit text alignment on Dashicons.
+	* Fix link hover color in the Editor (issue is with WordPress v6.7).
+
 = 2.0.1 = 
 January 6, 2024
 
