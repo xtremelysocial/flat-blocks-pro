@@ -1,14 +1,24 @@
 <!-- wp:template-part {"slug":"header","lock":{"move":true,"remove":true}} /-->
 
-<!-- wp:template-part {"slug":"archive-title","lock":{"move":true,"remove":true}} /-->
+<!-- wp:group {"tagName":"header","lock":{"move":true,"remove":true},"metadata":{"name":"User Profiles Page Title"},"align":"full","className":"entry-header alignfull","backgroundColor":"primary","layout":{"type":"constrained"}} -->
+<header class="wp-block-group alignfull entry-header has-primary-background-color has-background"><!-- wp:group {"lock":{"move":true,"remove":true},"align":"wide","className":"is-style-default"} -->
+<div class="wp-block-group alignwide is-style-default">
+<!-- wp:query-title {"type":"archive","align":"wide","className":"entry-title"} /--></div>
+<!-- /wp:group --></header>
+<!-- /wp:group -->
 
-<!-- wp:group {"tagName":"main","metadata":{"name":"Main"},"className":"page-content is-style-default","lock":{"move":true,"remove":true}} -->
-<main id="page-content" class="wp-block-group page-content is-style-default">
-	<!-- wp:group {"className":"wp-block-post-content wp-block-post-content-is-layout-constrained","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group wp-block-post-content is-layout-constrained wp-block-group-is-layout-constrained wp-block-post-content-is-layout-constrained">
-		<!-- wp:xs-users/latest-users {"blogID":0,"requireComment":false,"numberToShow":99,"displayAs":"grid","showPagination":true} /-->
-		</div>
-	<!-- /wp:group --></main>
+<!-- wp:group {"tagName":"main","align":"full","className":"page-content is-style-default","layout":{"type":"constrained"}} -->
+<main class="wp-block-group alignfull page-content is-style-default" id="page-content"><!-- wp:columns {"align":"wide","className":"main-content is-style-thick-gap","layout":{"inherit":false}} -->
+<div class="wp-block-columns alignwide main-content is-style-thick-gap"><!-- wp:column -->
+<div class="wp-block-column"><!-- wp:group {"className":"wp-block-post-content is-layout-constrained wp-block-group-is-layout-constrained wp-block-post-content-is-layout-constrained","layout":{"type":"constrained"}} -->
+<div class="wp-block-group wp-block-post-content is-layout-constrained wp-block-group-is-layout-constrained wp-block-post-content-is-layout-constrained"><!-- wp:xs-users/latest-users {"requireComment":true,"numberToShow":99,"showPagination":true} /--></div>
+<!-- /wp:group --></div>
+<!-- /wp:column -->
+
+<!-- wp:column {"width":"340px","style":{"spacing":{"margin":{"top":"0"}}}} -->
+<div class="wp-block-column" style="margin-top:0;flex-basis:340px"><!-- wp:template-part {"slug":"sidebar"} /--></div>
+<!-- /wp:column --></div>
+<!-- /wp:columns --></main>
 <!-- /wp:group -->
 
 <!-- wp:template-part {"slug":"footer","lock":{"move":true,"remove":true}} /-->

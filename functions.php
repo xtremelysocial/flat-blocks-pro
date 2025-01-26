@@ -38,8 +38,7 @@ if ( ! function_exists( 'flatblocks_support' ) ) :
 		
 		// Enqueue the styles needed for the editor. This is done here instead of 
 		// with enqueue_block_assets() so that the styles don't interfere with the 
-		// Editor UI itself. Note that the RTL styles will automatically be used
-		// when needed.
+		// Editor UI itself.
 		$editor_styles = array(
 			'/assets/css/flat-blocks.css',
 			'/assets/css/blocks/block-styles.css',
@@ -50,8 +49,14 @@ if ( ! function_exists( 'flatblocks_support' ) ) :
 		// Allow child themes to override the list of editor styles to load
 		apply_filters( 'flatblocks_editor_styles', $editor_styles );
 
-		// Load the editor styles
-		add_editor_style( $editor_styles ); 
+		// Load the editor styles. Note: must be done individually for the RTL
+		// styles to be used. 
+		// See https://developer.wordpress.org/reference/functions/add_editor_style/
+// 		add_editor_style( $editor_styles ); 
+		foreach ( $editor_styles as $editor_style ) {
+			add_editor_style( $editor_style ); 
+		}
+// 		add_editor_style( '/assets/css/flat-blocks.css' ); 
 
 		// Register four nav menus if Gutenberg is activated (otherwise the 
 		// __experimentalMenuLocation attribute isn't available)
@@ -99,8 +104,8 @@ foreach ( $includes as $include ) {
 // add_filter( 'should_load_separate_core_block_assets', '__return_false', 11 );
 
 /* 
- * This theme loads also loads individual block CSS by default. Uncomment the
- * following line to have it load single block-styles.css file.
+ * This theme also loads individual block CSS by default. Uncomment the
+ * following line to have it load a single block-styles.css file.
  */
 // add_filter( 'flatblocks_load_separate_block_assets', '__return_false' );
 
@@ -126,6 +131,13 @@ if ( ! function_exists( 'flatblocks_load_styles' ) ) :
 			get_template_directory() . '/assets/css/flat-blocks.css',
 			get_template_directory() . '/style.css', //XS
 		);
+// 		$styles = [];
+// 
+// 		if ( ! is_admin() ) {
+// 			$styles[] = get_template_directory() . '/assets/css/flat-blocks.css';
+// 		}
+// 
+// 		$styles[] = get_template_directory() . '/style.css'; //XS	
 
 		// If child theme, load it's stylesheet
 		if ( is_child_theme() ) {
