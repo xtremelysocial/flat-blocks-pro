@@ -25,12 +25,6 @@
     padding-left: var(--wp--style--root--padding-right) !important;
   }
 }
-/* Even when nowrap is set, go ahead and collapse on mobile */
-@media only screen and (max-width: 601px) {
-  .is-nowrap.is-layout-flex.wp-block-group {
-    flex-wrap: wrap;
-  }
-}
 /*-----------------------------------------------------------------------------
 # Group: Custom
 -----------------------------------------------------------------------------*/

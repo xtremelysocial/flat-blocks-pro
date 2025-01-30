@@ -148,23 +148,26 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 == Changelog ==
 
 = 2.0.2 = 
-January 25, 2024
+January 30, 2025
 
-* Added Template Parts for Search Title, 404 (Error Page) Title, and Archive (Blog) Title. These can be found under the "Title" category in the Block Patterns in the Editor along with the Page Title and Post Title Template Parts. Updated Templates to use the new title Template Parts.
+* Template Parts:
+	* Added new ones for Search Title, 404 (Error Page) Title, and Archive (Blog) Title. These can be found under the "Title" category in the Block Patterns in the Editor along with the Page Title and Post Title Template Parts. 
+	* On the Page Title, set the Excerpt length to 20 words (was 30).
+	* Updated the various Templates to use the new title Template Parts.
 * Enhanced CSS:
-	* Add bottom margin on the last element in the Post Content (unless the user overrides it).
+	* Add bottom margin on the last element in the Post Content (unless the user overrides it on the block).
 	* Inherit text alignment on Dashicons.
 	* Fix link hover color in the Editor (issue is with WordPress v6.7).
 
 = 2.0.1 = 
-January 6, 2024
+January 6, 2025
 
 * Add support for the older "aligncenter" class in users content since WordPress now uses "has-text-align-center" and doesn't style the older class.
 * Remove extra margin from Scroll Down Arrow without Text.
 * Remove extra top and bottom margin from Sidebar Left and Sidebar Right Block Patterns.
 
 = 2.0 = 
-January 2, 2024
+January 2, 2025
 
 Version Summary: Updated minimum WordPress version required to 6.7 which coupled with simplifying CSS throughout significantly reduced the amount of CSS needed by over 25%. The theme now only loads the CSS styles needed for each page and instructs WordPress to also do this, which further reduces the amount of CSS for most pages. Added 5 new gradients based on the recent duotones that were added. Changed Larger and Extra Large font slugs to match the TwentyTwentyFive theme.
 

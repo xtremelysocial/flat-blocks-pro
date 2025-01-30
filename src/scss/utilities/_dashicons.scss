@@ -23,6 +23,13 @@
 	text-transform: inherit;
 }
 
+.wp-site-blocks .dashicons.has-text-align-center,
+.wp-site-blocks .dashicons-before.has-text-align-center,
+.is-root-container .dashicons.has-text-align-center,
+.is-root-container .dashicons-before.has-text-align-center {
+	text-align: center;
+}
+
 .wp-site-blocks .dashicons:before,
 .wp-site-blocks [class*="dashicons-"]:before, // {
 .is-root-container .dashicons:before,
