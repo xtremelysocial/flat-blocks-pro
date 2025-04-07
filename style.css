@@ -66,7 +66,7 @@ GNU General Public License for more details.
 	color: var(--wp--preset--color--foreground-alt);
 	border-radius: var(--wp--custom--border--radius);
 	padding: var(--wp--preset--spacing--20);
-	opacity: .7;
+	opacity: 0.7;
 }
 
 /*--------------------------------------------------------------
@@ -92,8 +92,9 @@ GNU General Public License for more details.
 	text-decoration: none;
 /* 	transform: translate3d(0, 0, 0); */
 /* 	transform: scale3d(1, 1, 1); */
-	transform var(--animate-default-no-hover);
-	transition: transform var(--animate-duration-hover) var(--animate-timing-function);
+/*	transform var(--animate-default-no-hover); */
+	transform none;
+	transition: transform var(--animate-hover-duration, 500ms) var(--animate-timing-function, ease-in-out);
 }
 
 .wp-block-buttons .wp-block-button:hover, 
@@ -110,7 +111,7 @@ GNU General Public License for more details.
 .is-style-arrow-icon-no-text > a:hover:after, 
 .is-style-arrow-icon-no-text > a:focus:after, 
 .is-style-arrow-icon-no-text > a:active:after {
-	transform: var(--animate-default-hover);
+	transform: var(--animate-hover-transform, scale3d(1.1, 1.1, 1.1));
 }
 
 .wp-block-buttons .wp-block-button > a:hover, 
