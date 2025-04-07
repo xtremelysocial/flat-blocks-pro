@@ -1,8 +1,8 @@
 /*-----------------------------------------------------------------------------
 # Columns and Column
 -----------------------------------------------------------------------------*/
-/* Padding for colored backgrounds on columns and individual column */
 
+/* Padding for colored backgrounds on columns and individual column */
 .wp-block-columns.has-background { 
 	padding: var(--wp--preset--spacing--60);
 }
@@ -11,10 +11,10 @@
 	padding: var(--wp--preset--spacing--40);
 }
 
-/* Collapse columns on tablet and mobile */
-@media only screen and (max-width: 781px) {
+/* OVERRIDE horizontal padding on mobile and tablet (782px) */
+@import "~@wordpress/base-styles/breakpoints";
 
-	/* If global padding, then OVERRIDE horizontal padding on mobile */
+@media only screen and (max-width: #{ ($break-medium - 1) }) {
 	.wp-block-columns.has-background,
 	.wp-block-columns > .wp-block-column.has-background {
 		padding-left: var(--wp--style--root--padding-left) !important;
@@ -45,8 +45,8 @@
 	padding: 0; // !important;
 }
 
-/* Collapse columns on tablet and mobile */
-@media only screen and (max-width: 781px) {
+/* Collapse columns on mobile and tablet (782px) */
+@media only screen and (max-width: #{ ($break-medium - 1) }) {
 
 	/* Reduce row (vertical gap) when collapsing centered columns */
 	.wp-block-columns.is-style-center-on-mobile {
@@ -67,6 +67,4 @@
 	.wp-block-columns.is-style-thick-gap.has-background {
 		gap: var(--wp--style--block-gap);
 	}
-	
 }
-

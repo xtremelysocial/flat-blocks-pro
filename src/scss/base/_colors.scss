@@ -34,8 +34,8 @@
 }
 
 /* Neutral colored backgrounds use black color unless over-ridden */
-.has-neutral-background-color, 
-.has-neutral-alt-background-color {
+.has-neutral-background-color.has-background, 
+.has-neutral-alt-background-color.has-background {
      color: var(--wp--custom--color--contrast--neutral, var(--wp--preset--color--almost-black));
 }
 
@@ -46,27 +46,27 @@
 }
 
 /* Light-colored backgrounds use black color */
-.has-white-background-color, 
-.has-off-white-background-color, 
-.has-light-yellow-background-color, 
-.has-yellow-background-color, 
-.has-very-light-gray-background-color, 
-.has-light-gray-background-color, 
-.has-gray-background-color {
+.has-white-background-color.has-background, 
+.has-off-white-background-color.has-background, 
+.has-light-yellow-background-color.has-background, 
+.has-yellow-background-color.has-background, 
+.has-very-light-gray-background-color.has-background, 
+.has-light-gray-background-color.has-background, 
+.has-gray-background-color.has-background {
      color: var(--wp--preset--color--almost-black);
 }
 
 /* Foreground Alt is normally light, but allow override if it is dark */
-.has-foreground-alt-background-color {
+.has-foreground-alt-background-color.has-background {
 	color: var(--wp--custom--color--contrast--foreground-alt, var(--wp--preset--color--contrast));
 }
 
 /* Invert contrast and base colors */
-.has-base-background-color {
+.has-base-background-color.has-background {
      color: var(--wp--preset--color--contrast);
 }
 
-.has-contrast-background-color {
+.has-contrast-background-color.has-background {
      color: var(--wp--preset--color--base);
 }
 

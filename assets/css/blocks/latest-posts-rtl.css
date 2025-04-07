@@ -32,8 +32,11 @@
   margin-bottom: 0;
 }
 
-/* Override horizontal padding on mobile */
-@media only screen and (max-width: 601px) {
+/* Override horizontal padding on mobile (600px) */
+/**
+ * Breakpoints & Media Queries
+ */
+@media only screen and (max-width: 600px) {
   .wp-block-latest-posts.is-grid li {
     margin-left: 0;
   }

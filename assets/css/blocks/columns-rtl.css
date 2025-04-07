@@ -13,9 +13,11 @@
   padding: var(--wp--preset--spacing--40);
 }
 
-/* Collapse columns on tablet and mobile */
+/* OVERRIDE horizontal padding on mobile and tablet (782px) */
+/**
+ * Breakpoints & Media Queries
+ */
 @media only screen and (max-width: 781px) {
-  /* If global padding, then OVERRIDE horizontal padding on mobile */
   .wp-block-columns.has-background,
   .wp-block-columns > .wp-block-column.has-background {
     padding-right: var(--wp--style--root--padding-left) !important;
@@ -43,7 +45,7 @@
   padding: 0;
 }
 
-/* Collapse columns on tablet and mobile */
+/* Collapse columns on mobile and tablet (782px) */
 @media only screen and (max-width: 781px) {
   /* Reduce row (vertical gap) when collapsing centered columns */
   .wp-block-columns.is-style-center-on-mobile {

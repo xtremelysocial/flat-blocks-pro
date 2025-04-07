@@ -8,7 +8,6 @@
  * @package flat-blocks-pro
  */
 
-
 /* Add the extra PRO theme patterns */
 add_filter('flatblocks_block_patterns', 'flatblocks_pro_block_patterns' );
 

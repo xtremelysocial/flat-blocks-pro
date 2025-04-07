@@ -33,17 +33,15 @@ This theme provides TONS of Block Patterns that you can insert into your pages a
 
 Note that Block and Page Patterns are copied into your page or post and unlike Block Templates above, edits you make to Block Patterns are stored only on that page or post.
 
-== Creating a Child theme of Flat Blocks ==
-
-= Using the Create Child Theme Plugin =
+== Creating a Child Theme Using the Create Block Theme Plugin ==
 Use the [Create Block Theme](https://wordpress.org/plugins/create-block-theme/) plugin.
 
-Install Flat Blocks (or any Flat Blocks child theme)
-Use the Full Site Editor to adjust any global styles, templates, template parts, etc. to your liking.
-Install the Create Child Theme plugin 
-Use it to export a new child theme of Flat Blocks
+1. Install Flat Blocks (or any Flat Blocks child theme)
+2. Use the Full Site Editor to adjust any global styles, templates, template parts, etc. to your liking.
+3. Install the Create Block Theme plugin 
+4. Use it to export a new child theme of Flat Blocks
 
-== Create a Child Theme Manually ==
+== Creating a Child Theme Manually ==
 
 Flat Blocks is a [parent theme](https://developer.wordpress.org/themes/advanced-topics/child-themes/#what-is-a-parent-theme). The best way to use it is to create a child theme with Flat Blocks as a parent.
 
@@ -93,19 +91,13 @@ You can also include a `theme.json` file in the child theme root directory. This
 
 You can also place Block Templates and Block Template Parts into your child theme. They should be placed in /templates and /parts subdirectories, respectively. They are used to display the various pages and posts on your site. You can copy down the Flat Blocks theme full directories or individual files and override them with the Site Editor.
 
-Simple child themes should be able to define everything they need using only the `style.css`, `theme.json`, and Template Parts and Template files, but for more complex child themes, an additional CSS file and/or `functions.php` file may be useful.
+Simple child themes should be able to define everything they need using only the `style.css`, `theme.json`, and Template Parts and Template files, but for more complex child themes, a `functions.php` file may be useful.
 
-= custom-style.css =
-
-If you place a CSS file in `/assets/css/custom-styles.css`, the Flat Blocks parent theme will load it automatically. If you have a lot of CSS rules, this is generally cleaner than adding them to the main child theme's `style.css`.
-
-= functions.php and more =
+= Adding a functions.php (optional) =
 
 If you place a `functions.php` file in the main child theme directory, PHP can be used to override many more aspects of the theme that aren't possible with the other files above. For example, you can add your own Block Patterns and/or custom Block Styles. The Flat Blocks parent theme provides several "filters" in addition to the ones built into core WordPress.
 
-Take a look at the `/inc/block-patterns.php` and/or `/inc/block-styles.php` files and look for the lines that read `apply_filters`. You can then use an `add_filter` to `functions.php` to alter the arrays. 
-
-If you plan on adding a lot of block patterns or custom blocks styles, rather than putting them into `functions.php` you can put them into `/inc/block-patterns.php` and `/inc/block-styles.php` and those will be loaded automatically.
+Take a look at the `/inc/block-patterns.php` file and find the line that reads `apply_filters`. You can then use an `add_filter` to `functions.php` to alter the array. 
 
 = Full Child Theme Directory Structure =
 
@@ -115,20 +107,14 @@ Here is a visualization of the structure of a fully built out child theme:
    |--- style.css (required)
    |--- screenshot.png (recommended)
    |--- theme.json (recommended, only changed values)
-   |--- functions.php
-   /assets/
-      /css/
-  	     |--- custom-styles.css (auto loads, if found)
-   /inc/
-      |--- block-patterns.php (auto loads, if found)
-	  |--- block-styles.php (auto loads, if found)
+   |--- functions.php (optional, auto loads)
    /parts/
 	  |--- *.html (auto loads)
    /templates/
 	  |--- *.html (auto loads)
    /patterns/
 	  |--- *.php (auto loads, if found)
-	  |--- *.html (load with add_filter)
+	  |--- *.html (load with `add_filter` in functions.php)
 
 = Keeping The Parent Theme Up to Date =
 
@@ -147,8 +133,20 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 2.0.3 = 
+April 6, 2025
+
+* Enhanced CSS for font color on input fields when used within a section (Group, Column) with a dark background. Removed the custom variables --wp--custom--color--field--background and --wp--custom--color--field--text from the main theme.json since they aren't needed anymore. They can still be used in custom Global Styles or Child Themes though.
+* Added CSS to reduce the height of the Search input and button when used in a Navigation menu so it looks better alongside the other menu items.
+* Enhanced CSS for automatic vertical margins on blocks to allow the user to set top margin to zero on the first block and/or bottom margin on the last block. For example, if you want the last block on a page to not have margin after it before the footer.
+* Enhanced CSS to remove top and bottom margin on Comments block if it is completely empty (no comments or comment form).
+* Enhanced CSS to get a little more aggressive in applying default text color on colored backgrounds.
+* Enhanced CSS for vertical margins on Social Icons blocks.
+* Updated readme.txt section on creating child themes based on simplifications made in Flat Blocks v2.0.
+* Updated CSS source (.scss) files to get media query breakpoints (e.g. '@media only AND (max-width: 600px)') from the core WordPress scripts (@wordpress/base-styles/breakpoints).
+
 = 2.0.2 = 
-January 30, 2025
+February 5, 2025
 
 * Template Parts:
 	* Added new ones for Search Title, 404 (Error Page) Title, and Archive (Blog) Title. These can be found under the "Title" category in the Block Patterns in the Editor along with the Page Title and Post Title Template Parts. 

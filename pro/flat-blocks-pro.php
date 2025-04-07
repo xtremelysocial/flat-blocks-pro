@@ -22,6 +22,7 @@ $includes = array (
 	'/pro/inc/pro-default-image.php',
 	'/pro/inc/pro-login-page.php',
 	'/pro/inc/pro-patterns.php',
+	'/pro/inc/pro-plugins.php',
 );
 
 /* Add Jetpack support if that plugin is active */

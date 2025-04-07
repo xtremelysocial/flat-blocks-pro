@@ -8,37 +8,6 @@
  * @package 	flat-blocks-pro
  */
 
-/* 
-add_filter( "taxonomy_template", 'load_our_custom_tax_template');
-function load_our_custom_tax_template ($tax_template) {
-	echo 'tax_template=' . $tax_template; //TEST
-//   if (is_tax('jetpack-portfolio')) {
-//     $tax_template = dirname(  __FILE__  ) . '/templates/archive-jetpack-portfolio.html';
-//   }
-  return $tax_template;
-}
- */
-
-/* 
-add_filter( 'archive_template', 'get_custom_post_type_template' );
-
-function get_custom_post_type_template( $archive_template ) {
-
-	//echo 'archive_template=' . $archive_template; //TEST
-
-    //global $post;
-
-	global $_wp_current_template_id; //, $_wp_current_template_content, $wp_embed, $wp_query;
-
-	echo 'template_id=' . $_wp_current_template_id; //TEST
-
-//      if ( is_post_type_archive ( 'jetpack-portfolio' ) ) {
-//           $archive_template = dirname( __FILE__ ) . '/archive-jetpack-portfolio.html';
-//      }
-     return $archive_template;
-}
- */
-
 /**
  * Enqueue jetpack front-end styles and scripts.
  */
@@ -89,7 +58,6 @@ endif;
 /**
  * Register custom block styles.
  */
-// add_filter( 'flatblocks_custom_block_styles', 'flatblocks_pro_register_jetpack_block_styles' );
 add_action( 'init', 'flatblocks_pro_register_jetpack_block_styles' );
 
 if ( ! function_exists( 'flatblocks_pro_register_jetpack_block_styles' ) ) :
@@ -108,14 +76,5 @@ if ( ! function_exists( 'flatblocks_pro_register_jetpack_block_styles' ) ) :
 				'style_handle' => 'flatblocks-pro-jetpack-styles'
 			)
 		);
-
-// 		$jetpack_styles = array(
-// 			'no-icon' 			=> array( esc_html__('No Auto Icon', 'flat-blocks-pro'), 
-// 				array( 'jetpack/contact-info', 'jetpack/email', 'jetpack/phone' ),
-// 				'style_handle' 	=> 'flatblocks-pro-jetpack-styles'
-// 			)
-// 		);
-// 
-// 		return $theme_styles ? $theme_styles + $jetpack_styles : $jetpack_styles;
 	}
 endif;

@@ -17,7 +17,10 @@
 }
 
 /* 
- * If full-width, then OVERRIDE horizontal padding on tablet and mobile 
+ * If full-width, OVERRIDE horizontal padding on mobile and tablet (782px)
+ */
+/**
+ * Breakpoints & Media Queries
  */
 @media only screen and (max-width: 781px) {
   .wp-block-group.alignfull {
@@ -68,6 +71,7 @@
   z-index: 9;
 }
 
+/* Sticky Footer only on desktop (>=1080px) */
 @media only screen and (min-width: 1100px) {
   .wp-site-blocks > footer:has(.is-position-sticky) {
     position: sticky;

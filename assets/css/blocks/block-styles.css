@@ -41,9 +41,11 @@
   padding: var(--wp--preset--spacing--40);
 }
 
-/* Collapse columns on tablet and mobile */
+/* OVERRIDE horizontal padding on mobile and tablet (782px) */
+/**
+ * Breakpoints & Media Queries
+ */
 @media only screen and (max-width: 781px) {
-  /* If global padding, then OVERRIDE horizontal padding on mobile */
   .wp-block-columns.has-background,
   .wp-block-columns > .wp-block-column.has-background {
     padding-left: var(--wp--style--root--padding-left) !important;
@@ -71,7 +73,7 @@
   padding: 0;
 }
 
-/* Collapse columns on tablet and mobile */
+/* Collapse columns on mobile and tablet (782px) */
 @media only screen and (max-width: 781px) {
   /* Reduce row (vertical gap) when collapsing centered columns */
   .wp-block-columns.is-style-center-on-mobile {
@@ -102,10 +104,16 @@
 /*-----------------------------------------------------------------------------
 # Comments
 -----------------------------------------------------------------------------*/
-/* Remove top margin on "Leave a Reply" */
-/* Remove bottom margin on "Post Comment" button */
-/* Add padding to comment page numbers */
-/* If not global padding on comments, then add some on tablet and mobile */
+/* Remove vertical margins if no comments */
+.wp-block-template-part:has(.post-comments):not(:has(.wp-block-comments)) {
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
+
+/* Adjust padding on mobile and tablet (782px) */
+/**
+ * Breakpoints & Media Queries
+ */
 @media only screen and (max-width: 781px) {
   .post-comments:not(.has-global-padding) {
     padding-left: var(--wp--style--root--padding-left) !important;
@@ -212,7 +220,10 @@ header > .wp-block-cover {
 }
 
 /* 
- * If full-width, then OVERRIDE horizontal padding on tablet and mobile 
+ * If full-width, OVERRIDE horizontal padding on mobile and tablet (782px)
+ */
+/**
+ * Breakpoints & Media Queries
  */
 @media only screen and (max-width: 781px) {
   .wp-block-group.alignfull {
@@ -263,6 +274,7 @@ header > .wp-block-cover {
   z-index: 9;
 }
 
+/* Sticky Footer only on desktop (>=1080px) */
 @media only screen and (min-width: 1100px) {
   .wp-site-blocks > footer:has(.is-position-sticky) {
     position: sticky;
@@ -385,8 +397,11 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
   margin-bottom: 0;
 }
 
-/* Override horizontal padding on mobile */
-@media only screen and (max-width: 601px) {
+/* Override horizontal padding on mobile (600px) */
+/**
+ * Breakpoints & Media Queries
+ */
+@media only screen and (max-width: 600px) {
   .wp-block-latest-posts.is-grid li {
     margin-right: 0;
   }
@@ -426,8 +441,11 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
   padding-right: var(--wp--preset--spacing--40);
 }
 
-/* Remove the padding when collapsed on mobile */
-@media only screen and (max-width: 601px) {
+/* Remove the padding when collapsed on mobile (600px) */
+/**
+ * Breakpoints & Media Queries
+ */
+@media only screen and (max-width: 600px) {
   .wp-block-media-text.is-stacked-on-mobile:not(.has-background) .wp-block-media-text__content {
     padding-left: 0;
     padding-right: 0;
@@ -664,12 +682,15 @@ nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-con
 /*-----------------------------------------------------------------------------
 # Paragraph
 -----------------------------------------------------------------------------*/
+/**
+ * Breakpoints & Media Queries
+ */
 /* Padding for colored backgrounds on paragraphs */
 .wp-block-paragraph.has-background {
   padding: var(--wp--preset--spacing--40);
 }
 
-/* Adjust padding on tablet and mobile */
+/* Adjust padding on mobile and tablet (782px) */
 @media only screen and (max-width: 781px) {
   /* If no global padding, then set paragraphs like colored groups */
   p.has-background:not(.has-global-padding) {
@@ -862,6 +883,15 @@ p.is-style-alignwide {
 -----------------------------------------------------------------------------*/
 .wp-block-query-pagination-numbers .page-numbers:nth-last-child(n+2) {
   padding-right: var(--wp--preset--spacing--30);
+}
+
+/*-----------------------------------------------------------------------------
+# Search
+-----------------------------------------------------------------------------*/
+/* Reduce the padding on Search field when in Navigation block */
+.wp-block-navigation .wp-block-search__button,
+.wp-block-navigation .wp-block-search__input {
+  padding: var(--wp--preset--spacing--20) var(--wp--preset--spacing--30);
 }
 
 /*-----------------------------------------------------------------------------

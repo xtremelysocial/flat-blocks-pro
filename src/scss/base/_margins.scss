@@ -13,6 +13,8 @@ main > :first-child:not(.wp-block-post-content):not(.wp-block-post-featured-imag
 }
 
 /* Push top margin down on Groups and Columns that have template parts in them */
+// :root :where(.is-layout-flow) > .wp-block-template-part > *:not(.wp-block-template-part),
+// :root :where(.is-layout-constrained) > .wp-block-template-part > *:not(.wp-block-template-part) {
 :root :where(.is-layout-flow) > .wp-block-template-part > *,
 :root :where(.is-layout-constrained) > .wp-block-template-part > * {
  	margin-block-start: var(--wp--style--block-gap);
@@ -38,7 +40,7 @@ main > :first-child:not(.wp-block-post-content):not(.wp-block-post-featured-imag
 // 	margin-top: 0;
 }
 
-.wp-block-post-content > :first-child:not(.wp-block-cover) { //,
+:root :where(.wp-block-post-content) > :first-child:not(.wp-block-cover) { //,
 // .wp-block-post-content > :last-child {
 	margin-block-start: var(--wp--style--block-gap);
 }
@@ -54,7 +56,7 @@ main > .wp-block-columns > .wp-block-column > :first-child.wp-block-post-content
 /* Add bottom margin to main unless its the post content, then add it to that */
 main > :last-child:not(.wp-block-post-content),
 // main > :last-child:not(.wp-block-post-content):not(.wp-block-template-part),
-.wp-block-post-content.is-layout-flow > :last-child,
-.wp-block-post-content.is-layout-constrained > :last-child {	
+:root :where(.is-layout-flow).wp-block-post-content > :last-child,
+:root :where(.is-layout-constrained).wp-block-post-content > :last-child {	
 	margin-block-end: var(--wp--style--block-gap);
 }

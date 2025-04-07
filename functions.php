@@ -187,10 +187,10 @@ if ( ! function_exists( 'flatblocks_load_block_styles' ) ) :
 
 	function flatblocks_load_block_styles() {
 
-		// Set the path to the blocks CSS
+		// Setup block styles path
 		$block_path = '/assets/css/blocks/';
 
-		// Get Block CSS build version
+		// Get Block CSS build version from the combined block style asset
 		if ( file_exists ( get_template_directory() . $block_path. 'block-styles.asset.php' ) ) {
 			$asset_file = include( get_template_directory() . $block_path . 'block-styles.asset.php' );
 			$block_css_version = $asset_file['version'] ?? false;

@@ -85,6 +85,10 @@ ul.has-background:not(.wp-block-navigation-submenu):not(.wp-block-navigation__co
 /*-----------------------------------------------------------------------------
 # Forms
 -----------------------------------------------------------------------------*/
+form {
+  margin-block-end: 0;
+}
+
 fieldset {
   font-size: var(--wp--preset--font-size--normal, 18px);
   font-weight: var(--wp--custom--typography--font-weight--normal, 300);
@@ -101,7 +105,7 @@ textarea,
 input:not(.file):not(.wp-element-button) {
   font-family: inherit;
   background-color: var(--wp--custom--color--field--background, revert);
-  color: var(--wp--custom--color--field--text, inherit);
+  color: var(--wp--custom--color--field--text, revert);
 }
 
 select {
@@ -340,7 +344,7 @@ main > :first-child:not(.wp-block-post-content):not(.wp-block-post-featured-imag
   margin-block-start: 0;
 }
 
-.wp-block-post-content > :first-child:not(.wp-block-cover) {
+:root :where(.wp-block-post-content) > :first-child:not(.wp-block-cover) {
   margin-block-start: var(--wp--style--block-gap);
 }
 
@@ -354,8 +358,8 @@ main > .wp-block-columns > .wp-block-column > :first-child.wp-block-post-content
 
 /* Add bottom margin to main unless its the post content, then add it to that */
 main > :last-child:not(.wp-block-post-content),
-.wp-block-post-content.is-layout-flow > :last-child,
-.wp-block-post-content.is-layout-constrained > :last-child {
+:root :where(.is-layout-flow).wp-block-post-content > :last-child,
+:root :where(.is-layout-constrained).wp-block-post-content > :last-child {
   margin-block-end: var(--wp--style--block-gap);
 }
 
@@ -392,8 +396,8 @@ main > :last-child:not(.wp-block-post-content),
 }
 
 /* Neutral colored backgrounds use black color unless over-ridden */
-.has-neutral-background-color,
-.has-neutral-alt-background-color {
+.has-neutral-background-color.has-background,
+.has-neutral-alt-background-color.has-background {
   color: var(--wp--custom--color--contrast--neutral, var(--wp--preset--color--almost-black));
 }
 
@@ -404,27 +408,27 @@ main > :last-child:not(.wp-block-post-content),
 }
 
 /* Light-colored backgrounds use black color */
-.has-white-background-color,
-.has-off-white-background-color,
-.has-light-yellow-background-color,
-.has-yellow-background-color,
-.has-very-light-gray-background-color,
-.has-light-gray-background-color,
-.has-gray-background-color {
+.has-white-background-color.has-background,
+.has-off-white-background-color.has-background,
+.has-light-yellow-background-color.has-background,
+.has-yellow-background-color.has-background,
+.has-very-light-gray-background-color.has-background,
+.has-light-gray-background-color.has-background,
+.has-gray-background-color.has-background {
   color: var(--wp--preset--color--almost-black);
 }
 
 /* Foreground Alt is normally light, but allow override if it is dark */
-.has-foreground-alt-background-color {
+.has-foreground-alt-background-color.has-background {
   color: var(--wp--custom--color--contrast--foreground-alt, var(--wp--preset--color--contrast));
 }
 
 /* Invert contrast and base colors */
-.has-base-background-color {
+.has-base-background-color.has-background {
   color: var(--wp--preset--color--contrast);
 }
 
-.has-contrast-background-color {
+.has-contrast-background-color.has-background {
   color: var(--wp--preset--color--base);
 }
 

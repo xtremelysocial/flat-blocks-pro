@@ -7,8 +7,6 @@
 			"color": {
 				"border": "var(--wp--preset--color--neutral-alt)",
 				"field": {
-					"background": "revert",
-					"text": "inherit",
 					"outline": "rgba(0, 0, 0, 0.25)"
 				},
 				"button": {
@@ -46,9 +44,10 @@
 			},
 			"animation": {
 				"default": {
-					"entrance": "fadeInUp",
-					"noHover": "scale3d(1, 1, 1)",
-					"hover": "scale3d(1.1, 1.1, 1.1)"
+					"entranceAnimation": "fadeInUp",
+					"entranceTransform": "none",
+					"hoverAnimation": "none",
+					"hoverTransform": "scale3d(1.1, 1.1, 1.1)"
 				},
 				"duration": {
 					"normal": "800ms",

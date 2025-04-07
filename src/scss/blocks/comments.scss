@@ -2,30 +2,16 @@
 # Comments
 -----------------------------------------------------------------------------*/
 
-/* Remove top margin on "Leave a Reply" */
-// .comment-reply-title {
-// 	margin-top: 0; //var(--wp--style--block-gap);
-// }
+/* Remove vertical margins if no comments */
+.wp-block-template-part:has(.post-comments):not(:has(.wp-block-comments)) {
+	margin-block-start: 0;
+	margin-block-end: 0;
+}
 
-/* Remove bottom margin on "Post Comment" button */
-// .wp-block-post-comments-form .form-submit.wp-block-button {
-// 	margin-bottom: 0;
-// }
+/* Adjust padding on mobile and tablet (782px) */
+@import "@wordpress/base-styles/breakpoints";
 
-// /* Hide empty comments so no extra vertical margin */
-// TO-DO: Get this working 
-// #post-comments:empty,
-// .wp-block-template-part > #post-comments:empty {
-//   display: none;
-// }
-
-/* Add padding to comment page numbers */
-// .wp-block-comments-pagination .page-numbers:nth-last-child(n+2) {
-// 	padding-right: var(--wp--preset--spacing--30);
-// }
-
-/* If not global padding on comments, then add some on tablet and mobile */
-@media only screen and (max-width: 781px) {
+@media only screen and (max-width: #{ ($break-medium - 1) }) {
 	.post-comments:not(.has-global-padding) {
 		padding-left: var(--wp--style--root--padding-left) !important;
 		padding-right: var(--wp--style--root--padding-right) !important;

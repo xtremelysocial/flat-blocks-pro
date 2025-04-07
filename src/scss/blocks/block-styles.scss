@@ -11,6 +11,10 @@
  * @since 	1.6.4
  */
 
+// @use "@wordpress/base-styles/breakpoints" as wp_breakpoints;
+// @forward '@wordpress/base-styles/breakpoints';
+// @forward 'wp_breakpoints';
+
 @use "calendar";
 @use "columns";
 @use "comments-pagination";
@@ -35,6 +39,7 @@
 @use "post-featured-image";
 @use "post-terms";
 @use "query-pagination";
+@use "search";
 @use "separator";
 @use "site-logo";
 @use "social-links";

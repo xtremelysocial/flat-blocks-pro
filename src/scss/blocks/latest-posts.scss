@@ -30,8 +30,9 @@
 	margin-bottom: 0;
 }
 
-/* Override horizontal padding on mobile */
-@media only screen and (max-width: 601px) {	
+/* Override horizontal padding on mobile (600px) */
+@import "@wordpress/base-styles/breakpoints";
+@media only screen and (max-width: #{ ($break-small) }) {
 	.wp-block-latest-posts.is-grid li {
         margin-right: 0;
     }
