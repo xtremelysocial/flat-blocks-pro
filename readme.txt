@@ -134,7 +134,7 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 == Changelog ==
 
 = 2.0.3 = 
-April 6, 2025
+April 14, 2025
 
 * Enhanced CSS for font color on input fields when used within a section (Group, Column) with a dark background. Removed the custom variables --wp--custom--color--field--background and --wp--custom--color--field--text from the main theme.json since they aren't needed anymore. They can still be used in custom Global Styles or Child Themes though.
 * Added CSS to reduce the height of the Search input and button when used in a Navigation menu so it looks better alongside the other menu items.
