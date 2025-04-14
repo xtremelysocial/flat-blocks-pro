@@ -107,7 +107,6 @@
 /* Remove vertical margins if no comments */
 .wp-block-template-part:has(.post-comments):not(:has(.wp-block-comments)) {
   margin-block-start: 0;
-  margin-block-end: 0;
 }
 
 /* Adjust padding on mobile and tablet (782px) */
