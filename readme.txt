@@ -142,6 +142,7 @@ April 14, 2025
 * Enhanced CSS to remove top and bottom margin on Comments block if it is completely empty (no comments or comment form).
 * Enhanced CSS to get a little more aggressive in applying default text color on colored backgrounds.
 * Enhanced CSS for vertical margins on Social Icons blocks.
+* Set Comment Form labels to normal font weight (by removing medium weight in the CSS).
 * Updated readme.txt section on creating child themes based on simplifications made in Flat Blocks v2.0.
 * Updated CSS source (.scss) files to get media query breakpoints (e.g. '@media only AND (max-width: 600px)') from the core WordPress scripts (@wordpress/base-styles/breakpoints).
 
