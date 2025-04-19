@@ -2,7 +2,16 @@
 # Gallery: Custom
 -----------------------------------------------------------------------------*/
 
-/* Adjust Image Captions */
+/* Image captions */
+.wp-block-gallery.has-nested-images figure.wp-block-image {
+	&:has(figcaption):before,
+	& figcaption {
+		border-bottom-left-radius: var(--wp--custom--border--radius);
+    	border-bottom-right-radius: var(--wp--custom--border--radius);
+    }
+}
+
+/* Image Border captions*/
 .wp-block-gallery.is-style-image-border {
 	& .wp-block-image:not(.is-style-image-round-border):not(.is-style-image-computer-screen):not(.is-style-image-tablet-phone-screen) img {
 		padding: var(--wp--preset--spacing--20);
@@ -21,6 +30,7 @@
 	}
 }
 
+/* Image Round Border captions */
 .wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-round-border:before {
     content: none;
 }
@@ -35,6 +45,7 @@
     text-shadow: none;
 }
 
+/* Image Computer Screen captions */
 .wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-computer-screen {
 	&:has(figcaption):before,
 	& figcaption {
@@ -43,6 +54,7 @@
 	}
 }
 
+/* Image Tablet/Phone Screen captions */
 .wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-tablet-phone-screen {
 	&:has(figcaption):before,
 	& figcaption {

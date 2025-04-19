@@ -134,15 +134,17 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 == Changelog ==
 
 = 2.0.3 = 
-April 14, 2025
+April 18, 2025
 
+* Tested with WordPress v6.8.
 * Enhanced CSS for font color on input fields when used within a section (Group, Column) with a dark background. Removed the custom variables --wp--custom--color--field--background and --wp--custom--color--field--text from the main theme.json since they aren't needed anymore. They can still be used in custom Global Styles or Child Themes though.
+* Set Comment Form labels to normal font weight (by removing medium weight in the CSS).
 * Added CSS to reduce the height of the Search input and button when used in a Navigation menu so it looks better alongside the other menu items.
 * Enhanced CSS for automatic vertical margins on blocks to allow the user to set top margin to zero on the first block and/or bottom margin on the last block. For example, if you want the last block on a page to not have margin after it before the footer.
-* Enhanced CSS to remove top and bottom margin on Comments block if it is completely empty (no comments or comment form).
-* Enhanced CSS to get a little more aggressive in applying default text color on colored backgrounds.
 * Enhanced CSS for vertical margins on Social Icons blocks.
-* Set Comment Form labels to normal font weight (by removing medium weight in the CSS).
+* Enhanced CSS to remove top margin on Comments block if it is completely empty (no comments or comment form).
+* Enhanced CSS for captions on images within the Image Gallery block to honor the default theme border radius, which is 5px.
+* Enhanced CSS to get a little more aggressive in applying default text color on colored backgrounds.
 * Updated readme.txt section on creating child themes based on simplifications made in Flat Blocks v2.0.
 * Updated CSS source (.scss) files to get media query breakpoints (e.g. '@media only AND (max-width: 600px)') from the core WordPress scripts (@wordpress/base-styles/breakpoints).
 
