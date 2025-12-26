@@ -63,6 +63,7 @@ p.is-style-alignwide {
 .is-style-icon-arrow-down-alt2-no-text > a {
   font-size: 0;
   line-height: 1;
+  color: inherit;
 }
 .is-style-arrow-icon-no-text > a:after,
 .is-style-icon-arrow-down-alt2-no-text > a:after {

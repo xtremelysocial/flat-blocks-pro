@@ -6,7 +6,13 @@
 -----------------------------------------------------------------------------*/
 /* Padding for colored backgrounds on groups */
 .wp-block-group.has-background {
-  padding: var(--wp--preset--spacing--60);
+  padding-top: var(--wp--preset--spacing--60);
+  padding-bottom: var(--wp--preset--spacing--60);
+}
+
+.wp-block-group.has-background:not(.has-global-padding) {
+  padding-right: var(--wp--preset--spacing--60);
+  padding-left: var(--wp--preset--spacing--60);
 }
 
 /* Padding for top-level non-colored groups */

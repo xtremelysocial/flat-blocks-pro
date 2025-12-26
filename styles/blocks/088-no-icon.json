@@ -3,7 +3,7 @@
 	"version": 3,
 	"slug": "no-icon",
 	"title": "No Icon",
-	"blockTypes": [ "core/post-author-name", "core/post-date", "core/post-terms", "core/post-comments-count" ],
+	"blockTypes": [ "core/post-author-name", "core/post-date", "core/post-terms", "core/post-comments-count", "core/post-time-to-read" ],
 	"styles": {
 		"css": ""
 	}
