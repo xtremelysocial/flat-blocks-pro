@@ -124,9 +124,9 @@ GNU General Public License for more details.
 # Site Footer
 --------------------------------------------------------------*/
 
-/* We want our hover color in our footer nav */
+/* We want our link (highlight) color on hover in our footer nav */
 .footer-widgets a:hover {
-	color: var(--wp--preset--color--highlight-alt);
+	color: var(--wp--preset--color--highlight);
 }
 
 /*--------------------------------------------------------------
