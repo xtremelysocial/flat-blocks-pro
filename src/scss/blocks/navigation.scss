@@ -142,9 +142,7 @@ $mobile-nav-padding: calc( 1.25 * var(--wp--preset--spacing--20) );
  * headers.
  */ 
 .wp-block-navigation .wp-block-navigation__responsive-container.is-menu-open {
-// 	padding-top: var(--wp--preset--spacing--60);
 	padding-top: calc( var(--wp--preset--spacing--40) + 14px );
-// 	padding-bottom: var(--wp--preset--spacing--60);
 	padding-bottom: calc( var(--wp--preset--spacing--40) + 14px );
 	padding-right: var(--wp--style--root--padding-right, var(--wp--preset--spacing--50));
 	padding-left: var(--wp--style--root--padding-left, var(--wp--preset--spacing--50));	
@@ -207,25 +205,10 @@ nav.wp-block-navigation.is-style-fixed-menu {
 }
 
 /* On the front-end, position nav menu open and close buttons at the top */
-@import "@wordpress/base-styles/breakpoints";
 .wp-site-blocks:not(.is-root-container) {
 	& nav.wp-block-navigation.is-style-fixed-menu {
  	    position: fixed;
-		top: var(--wp--preset--spacing--60);
-// 		top: calc( var(--wp--preset--spacing--40) + 14px );
-// 
-// 		& .wp-block-navigation__responsive-container-close {
-// 			top: var(--wp--preset--spacing--20);
-// // 			top: 14px;
-// // 			top: calc( 0.25 * var(--wp--preset--spacing--40) );
-// 		}
-// 
-// 		@media only screen and (max-width: #{ ($break-small) }) {
-// 			& .wp-block-navigation__responsive-container-close {
-// 				top: 0;
-// 			}
-// 		}
-		
+		top: var(--wp--preset--spacing--60);		
 	}
 }
 

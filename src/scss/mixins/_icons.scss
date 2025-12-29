@@ -10,9 +10,12 @@
 	content: '';
 	background-color: currentColor;
 	display: inline-flex;
-	align-self: center;
+// 	align-self: center;
 	height: 1em;
 	width: 1em;
+	vertical-align: middle;
+	position: relative;
+	top: -2px;	
 	mask-size: contain;
 	mask-repeat: no-repeat;
 }

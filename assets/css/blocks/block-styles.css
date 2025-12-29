@@ -487,9 +487,11 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
   content: "";
   background-color: currentColor;
   display: inline-flex;
-  align-self: center;
   height: 1em;
   width: 1em;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
   -webkit-mask-size: contain;
           mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -651,9 +653,6 @@ nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-con
 }
 
 /* On the front-end, position nav menu open and close buttons at the top */
-/**
- * Breakpoints & Media Queries
- */
 .wp-site-blocks:not(.is-root-container) nav.wp-block-navigation.is-style-fixed-menu {
   position: fixed;
   top: var(--wp--preset--spacing--60);
