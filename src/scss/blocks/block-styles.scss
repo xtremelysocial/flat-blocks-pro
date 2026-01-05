@@ -34,10 +34,12 @@
 @use "post-author";
 @use "post-comments-count";
 @use "post-comments-form";
+@use "post-comments-link";
 @use "post-date";
 @use "post-excerpt";
 @use "post-featured-image";
 @use "post-terms";
+@use "post-time-to-read";
 @use "query-pagination";
 @use "search";
 @use "separator";

@@ -8,11 +8,12 @@
   content: "";
   background-color: currentColor;
   display: inline-flex;
+  align-self: center;
+  position: relative;
+  top: -2px;
   height: 1em;
   width: 1em;
   vertical-align: middle;
-  position: relative;
-  top: -2px;
   -webkit-mask-size: contain;
           mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -103,6 +104,7 @@
   border: 1px solid var(--wp--custom--color--border, var(--wp--preset--color--neutral-alt));
   border-radius: var(--wp--custom--button--radius);
   padding: calc(1.25 * var(--wp--preset--spacing--20));
+  box-shadow: var(--wp--custom--shadow--default);
 }
 
 /* 
@@ -158,6 +160,10 @@
   margin-right: 0.15em;
 }
 
+.is-style-icon-arrow-up-alt2 > a:before {
+  top: 0;
+}
+
 /* Set icons on navigation items to inline flex */
 [class*=is-style-icon-] > a.wp-block-navigation-item__content {
   display: inline-flex;
@@ -177,6 +183,9 @@ nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-con
 .wp-site-blocks:not(.is-root-container) nav.wp-block-navigation.is-style-fixed-menu {
   position: fixed;
   top: var(--wp--preset--spacing--60);
+}
+.wp-site-blocks:not(.is-root-container) nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close {
+  top: 4px;
 }
 
 /* On the front-end, if WordPress Admin Bar, adjust fixed menu top position so 

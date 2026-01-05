@@ -1306,6 +1306,7 @@
 					"width": "1px",
 					"radius": "var(--wp--custom--button--radius)"
 				},
+				"shadow": "var(--wp--custom--shadow--default)",
 				"spacing": {
 					"padding": {
 						"bottom": "var:preset|spacing|30",
@@ -1386,7 +1387,22 @@
 					"fontSize": "var:preset|font-size|small"
 				}
 			},
+			"core/math": {
+				"typography": {
+					"fontSize": "var:preset|font-size|medium"
+				}
+			},
 			"core/post-date": {
+				"typography": {
+					"fontSize": "var:preset|font-size|small"
+				}
+			},
+			"core/post-time-to-read": {
+				"typography": {
+					"fontSize": "var:preset|font-size|small"
+				}
+			},
+			"core/post-comments-link": {
 				"typography": {
 					"fontSize": "var:preset|font-size|small"
 				}
