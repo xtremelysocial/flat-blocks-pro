@@ -134,20 +134,24 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 == Changelog ==
 
 = 2.1 = 
-December 26, 2025
+January 5, 2026
 
 * Updates for WordPress v6.9:
-	* Styled the new Accordion Block to use the theme's Primary color for the heading and icon.
-	* Added Post Time to Read Block to the Post Title (after Post Date and Author). You can remove it by editing the Post Title Template Part.
+	* Added the new Post Time to Read and Post Comments Link Blocks to the Blog index only for WordPress v6.9+ (or Gutenberg plugin active). You can remove them by editing the Article Content Template Part. Note: We use Post Comments Link instead of Post Comments Count and apply a new custom style is-style-link-inactive to make it appear like normal text. This is done because the Post Comments Count Block only displays the count itself whereas the Post Comments Link Block displays No Comments, 1 Comment, 2 Comments, etc.
+	* Added the new Post Time to Read Block to the Post Title (after Post Date and Author). You can remove it by editing the Post Title Template Part.
 	* Added clock icon automatically to the new Post Time to Read block. Added custom style option of "No Icon" for users to remove the icon if desired.
-* Updated the CSS for automatic icons to align more to the center of the text. This is for the Post Date, Post Author, and Post Time to Read Blocks.
-* Added neutral color background to the Query Pagination block to match the Comments block, Page templates with Sidebar, etc. This required updating theme.json and the various Query Patterns.
-* Set Mobile Nav Menu icon to use the theme style's border-radius. By default that is 5px.
-* Adjusted horizontal position of the Fixed Mobile Nav Only menu to line up just outside the horizontal margins on the page.
-* Updated CSS for the Group Block with colored backgrounds to use the theme's overall left and right margins when they are full width.
-* Removed box-shadow: none from the rounded border styles for Groups, Columns, Code, etc. User can add box-shadow on individual blocks, if desired.
-* Arrow Down Icon paragraph style now inherits the font color from it's parent, such as the Group or Cover blocks.
-* PRO Version: Updated Jetpack Sharing icons to grow when hovered to match WordPress Social Icon block.
+	* Styled the new Accordion Block to use the theme's Primary color for the heading and open and close icons.
+	* Set the new Math Block to use Medium font size by default. Of course you can change it whatever font size you want in the Global Block Style or the individual Math Block on pages and posts.
+* Other Updates
+	* Updated the CSS for automatic icons to align more to the center of the text. This is for the Post Date, Post Author, Post Time to Read, Category, and Tag Blocks.
+	* Added neutral color background to the Query Pagination block to match the Comments block, Page templates with Sidebar, etc. This required updating theme.json and the various Query Patterns.
+	* Set Mobile Nav Menu icon to use the theme style's border radius and box shadow. By default the radius is 5px with no box shadow.
+	* Adjusted horizontal position of the Fixed Mobile Nav Only menu to line up just outside the horizontal margins on the page.
+	* Updated CSS for the Group Block with colored backgrounds to use the theme's overall left and right margins when they are full width.
+	* Removed box-shadow: none from the rounded border styles for Groups, Columns, Code, etc. User can add box-shadow on individual blocks, if desired.
+	* Arrow Down Icon paragraph style now inherits the font color from it's parent, such as the Group or Cover blocks.
+* PRO Version
+	* Updated Jetpack Sharing icons to grow when hovered to match WordPress Social Icon block.
 
 = 2.0.3 = 
 April 18, 2025

@@ -483,15 +483,16 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
 /*-----------------------------------------------------------------------------
 # Navigation
 -----------------------------------------------------------------------------*/
-.wp-block-post-terms.taxonomy-category:before, .wp-block-post-terms.taxonomy-post_tag:before, .wp-block-post-date:before, .wp-block-post-comments-count:before, .wp-block-post-author-name:before, .is-style-arrow-icon-no-text > a:after, .is-style-icon-arrow-down-alt2-no-text > a:after, .is-style-icon-arrow-up-alt2 > a:before {
+.wp-block-post-time-to-read:before, .wp-block-post-terms.taxonomy-category:before, .wp-block-post-terms.taxonomy-post_tag:before, .wp-block-post-date:before, .wp-block-post-comments-link:before, .wp-block-post-comments-count:before, .wp-block-post-author-name:before, .is-style-arrow-icon-no-text > a:after, .is-style-icon-arrow-down-alt2-no-text > a:after, .is-style-icon-arrow-up-alt2 > a:before {
   content: "";
   background-color: currentColor;
   display: inline-flex;
+  align-self: center;
+  position: relative;
+  top: -2px;
   height: 1em;
   width: 1em;
   vertical-align: middle;
-  position: relative;
-  top: -2px;
   -webkit-mask-size: contain;
           mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -582,6 +583,7 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
   border: 1px solid var(--wp--custom--color--border, var(--wp--preset--color--neutral-alt));
   border-radius: var(--wp--custom--button--radius);
   padding: calc(1.25 * var(--wp--preset--spacing--20));
+  box-shadow: var(--wp--custom--shadow--default);
 }
 
 /* 
@@ -637,6 +639,10 @@ figure.wp-caption:not(.alignfull):not(.alignwide) img {
   margin-right: 0.15em;
 }
 
+.is-style-icon-arrow-up-alt2 > a:before {
+  top: 0;
+}
+
 /* Set icons on navigation items to inline flex */
 [class*=is-style-icon-] > a.wp-block-navigation-item__content {
   display: inline-flex;
@@ -656,6 +662,9 @@ nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-con
 .wp-site-blocks:not(.is-root-container) nav.wp-block-navigation.is-style-fixed-menu {
   position: fixed;
   top: var(--wp--preset--spacing--60);
+}
+.wp-site-blocks:not(.is-root-container) nav.wp-block-navigation.is-style-fixed-menu .wp-block-navigation__responsive-container-close {
+  top: 4px;
 }
 
 /* On the front-end, if WordPress Admin Bar, adjust fixed menu top position so 
@@ -742,7 +751,7 @@ p.is-style-alignwide {
   margin-right: auto !important;
 }
 
-/*  Down Arrow for Scroll Headers */
+/*  Deprecated: Down Arrow for Scroll Headers */
 .is-style-arrow-icon-no-text > a:after {
   -webkit-mask-image: url(../../icons/arrow-down-alt2.svg);
           mask-image: url(../../icons/arrow-down-alt2.svg);
@@ -753,14 +762,14 @@ p.is-style-alignwide {
           mask-image: url(../../icons/arrow-down-alt2.svg);
 }
 
-.is-style-arrow-icon-no-text > a,
-.is-style-icon-arrow-down-alt2-no-text > a {
+.is-style-icon-arrow-down-alt2-no-text > a,
+.is-style-arrow-icon-no-text > a {
   font-size: 0;
   line-height: 1;
   color: inherit;
 }
-.is-style-arrow-icon-no-text > a:after,
-.is-style-icon-arrow-down-alt2-no-text > a:after {
+.is-style-icon-arrow-down-alt2-no-text > a:after,
+.is-style-arrow-icon-no-text > a:after {
   font-size: var(--wp--preset--font-size--x-large);
 }
 
@@ -802,7 +811,7 @@ p.is-style-alignwide {
 # Navigation
 -----------------------------------------------------------------------------*/
 /*-----------------------------------------------------------------------------
-# Post Comments Count (Only w/Gutenberg Plugin)
+# Post Comments Count (Only w/WordPress v6.9+ or Gutenberg Plugin)
 -----------------------------------------------------------------------------*/
 .wp-block-post-comments-count:before {
   -webkit-mask-image: url(../../icons/admin-comments.svg);
@@ -810,7 +819,7 @@ p.is-style-alignwide {
   margin-right: 0.15em;
 }
 
-/* Add word "comment(s)" after post comment count if Gutenberg active */
+/* Add word "comment(s)" after post comment count */
 .wp-block-post-comments-count:after {
   content: "comment(s)";
   margin-left: 0.15em;
@@ -832,6 +841,32 @@ p.is-style-alignwide {
 /* Override no-shadow if our custom shadow default is set */
 .wp-block-post-comments-form input[type=submit].wp-element-button {
   box-shadow: var(--wp--custom--shadow--default);
+}
+
+/*-----------------------------------------------------------------------------
+# Navigation
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+# Post Comments Link (Only w/WordPress v6.9+ or Gutenberg Plugin)
+-----------------------------------------------------------------------------*/
+.wp-block-post-comments-link:before {
+  -webkit-mask-image: url(../../icons/admin-comments.svg);
+          mask-image: url(../../icons/admin-comments.svg);
+  margin-right: 0.15em;
+}
+
+/*-----------------------------------------------------------------------------
+# Comments Link: Custom
+-----------------------------------------------------------------------------*/
+/* Inactive Link */
+.is-style-link-inactive {
+  cursor: text;
+}
+
+.is-style-link-inactive a {
+  color: inherit;
+  text-decoration: none;
+  pointer-events: none;
 }
 
 /*-----------------------------------------------------------------------------
@@ -901,6 +936,18 @@ p.is-style-alignwide {
 .wp-block-term-description p {
   margin-block-start: 0;
   margin-block-end: 0;
+}
+
+/*-----------------------------------------------------------------------------
+# Navigation
+-----------------------------------------------------------------------------*/
+/*-----------------------------------------------------------------------------
+# Post Time to Read
+-----------------------------------------------------------------------------*/
+.wp-block-post-time-to-read:before {
+  -webkit-mask-image: url(../../icons/clock.svg);
+          mask-image: url(../../icons/clock.svg);
+  margin-right: 0.15em;
 }
 
 /*-----------------------------------------------------------------------------

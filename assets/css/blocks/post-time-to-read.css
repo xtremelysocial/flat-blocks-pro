@@ -8,11 +8,12 @@
   content: "";
   background-color: currentColor;
   display: inline-flex;
+  align-self: center;
+  position: relative;
+  top: -2px;
   height: 1em;
   width: 1em;
   vertical-align: middle;
-  position: relative;
-  top: -2px;
   -webkit-mask-size: contain;
           mask-size: contain;
   -webkit-mask-repeat: no-repeat;

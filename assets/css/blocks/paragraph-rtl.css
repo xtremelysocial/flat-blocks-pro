@@ -8,11 +8,12 @@
   content: "";
   background-color: currentColor;
   display: inline-flex;
+  align-self: center;
+  position: relative;
+  top: -2px;
   height: 1em;
   width: 1em;
   vertical-align: middle;
-  position: relative;
-  top: -2px;
   -webkit-mask-size: contain;
           mask-size: contain;
   -webkit-mask-repeat: no-repeat;
@@ -50,7 +51,7 @@ p.is-style-alignwide {
   margin-left: auto !important;
 }
 
-/*  Down Arrow for Scroll Headers */
+/*  Deprecated: Down Arrow for Scroll Headers */
 .is-style-arrow-icon-no-text > a:after {
   -webkit-mask-image: url(../../icons/arrow-down-alt2.svg);
           mask-image: url(../../icons/arrow-down-alt2.svg);
@@ -61,13 +62,13 @@ p.is-style-alignwide {
           mask-image: url(../../icons/arrow-down-alt2.svg);
 }
 
-.is-style-arrow-icon-no-text > a,
-.is-style-icon-arrow-down-alt2-no-text > a {
+.is-style-icon-arrow-down-alt2-no-text > a,
+.is-style-arrow-icon-no-text > a {
   font-size: 0;
   line-height: 1;
   color: inherit;
 }
-.is-style-arrow-icon-no-text > a:after,
-.is-style-icon-arrow-down-alt2-no-text > a:after {
+.is-style-icon-arrow-down-alt2-no-text > a:after,
+.is-style-arrow-icon-no-text > a:after {
   font-size: var(--wp--preset--font-size--x-large);
 }

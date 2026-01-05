@@ -39,7 +39,7 @@ p.is-style-alignwide {
     margin-right: auto !important;
 }
 
-/*  Down Arrow for Scroll Headers */
+/*  Deprecated: Down Arrow for Scroll Headers */
 @include icons.svg-icon( 
 	$class: 'is-style-arrow-icon-no-text', //deprecated
 	$icon: 'arrow-down-alt2',
@@ -57,8 +57,8 @@ p.is-style-alignwide {
 	$margin: false,
 );
 
-.is-style-arrow-icon-no-text > a, //deprecated
-.is-style-icon-arrow-down-alt2-no-text > a {
+.is-style-icon-arrow-down-alt2-no-text > a,
+.is-style-arrow-icon-no-text > a { //deprecated
 	font-size: 0;
 	line-height: 1;
 	color: inherit;
