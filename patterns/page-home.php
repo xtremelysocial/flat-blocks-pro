@@ -2,7 +2,7 @@
  /**
   * Title: Sample Home Page
   * Slug: flat-blocks/page-home
-  * Categories: flatblocks, page, gallery
+  * Categories: flatblocks, page
   * Block Types: core/post-content
   * Description: A sample home page with cover image, image gallery, 3-column features, call-to-action button, recent posts, 3-column colored social media icons, a map and address
   */

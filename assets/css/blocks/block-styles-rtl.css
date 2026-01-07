@@ -167,7 +167,13 @@ header > .wp-block-cover {
 /*-----------------------------------------------------------------------------
 # Gallery: Custom
 -----------------------------------------------------------------------------*/
-/* Adjust Image Captions */
+/* Image captions */
+.wp-block-gallery.has-nested-images figure.wp-block-image:has(figcaption):before, .wp-block-gallery.has-nested-images figure.wp-block-image figcaption {
+  border-bottom-right-radius: var(--wp--custom--border--radius);
+  border-bottom-left-radius: var(--wp--custom--border--radius);
+}
+
+/* Image Border captions*/
 .wp-block-gallery.is-style-image-border .wp-block-image:not(.is-style-image-round-border):not(.is-style-image-computer-screen):not(.is-style-image-tablet-phone-screen) img {
   padding: var(--wp--preset--spacing--20);
 }
@@ -180,6 +186,7 @@ header > .wp-block-cover {
   border-bottom-left-radius: var(--wp--custom--border--radius);
 }
 
+/* Image Round Border captions */
 .wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-round-border:before {
   content: none;
 }
@@ -194,11 +201,13 @@ header > .wp-block-cover {
   text-shadow: none;
 }
 
+/* Image Computer Screen captions */
 .wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-computer-screen:has(figcaption):before, .wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-computer-screen figcaption {
   right: var(--wp--preset--spacing--60);
   width: calc(100% - 2 * var(--wp--preset--spacing--60));
 }
 
+/* Image Tablet/Phone Screen captions */
 .wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-tablet-phone-screen:has(figcaption):before, .wp-block-gallery.has-nested-images figure.wp-block-image.is-style-image-tablet-phone-screen figcaption {
   right: var(--wp--preset--spacing--50);
   padding: var(--wp--preset--spacing--20) 0;
@@ -227,7 +236,7 @@ header > .wp-block-cover {
 }
 
 /* 
- * If full-width, OVERRIDE horizontal padding on mobile and tablet (782px)
+ * If full-width, OVERRIDE horizontal padding on mobile and tablet (<782px)
  */
 /**
  * Breakpoints & Media Queries
@@ -281,7 +290,7 @@ header > .wp-block-cover {
   z-index: 9;
 }
 
-/* Sticky Footer only on desktop (>=1080px) */
+/* Sticky Footer only on desktop (>=1100px) */
 @media only screen and (min-width: 1100px) {
   .wp-site-blocks > footer:has(.is-position-sticky) {
     position: sticky;

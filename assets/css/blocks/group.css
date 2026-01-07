@@ -23,7 +23,7 @@
 }
 
 /* 
- * If full-width, OVERRIDE horizontal padding on mobile and tablet (782px)
+ * If full-width, OVERRIDE horizontal padding on mobile and tablet (<782px)
  */
 /**
  * Breakpoints & Media Queries
@@ -77,7 +77,7 @@
   z-index: 9;
 }
 
-/* Sticky Footer only on desktop (>=1080px) */
+/* Sticky Footer only on desktop (>=1100px) */
 @media only screen and (min-width: 1100px) {
   .wp-site-blocks > footer:has(.is-position-sticky) {
     position: sticky;

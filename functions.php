@@ -1,13 +1,13 @@
 <?php
 /**
  * File:	functions.php
- * Theme:	Flat Blocks PRO
+ * Theme:	Flat Blocks
  * 
  * Flat Blocks functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package flat-blocks-pro
+ * @package flat-blocks
  * @since	1.0
  */
 
@@ -79,7 +79,7 @@ endif;
 // Build array of include files relative to theme root
 $includes = array (
 	'/inc/block-patterns.php',
-	'/pro/flat-blocks-pro.php', //PRO
+// 	'/pro/flat-blocks-pro.php', //PRO
 );
 
 // Allow child themes to override the list of PHP files to load
@@ -93,20 +93,28 @@ foreach ( $includes as $include ) {
 }
 
 /* 
- * WordPress loads separate block styles for blocks in use on a particular
- * page by default. Uncomment the following line to have it load all assets.
+ * By default, WordPress loads separate stylesheets for CORE blocks, instead of a 
+ * combined wp-block-library stylesheet. Uncomment the following line to have it load 
+ * CORE blocks in a single file.
  */
 // add_filter( 'should_load_separate_core_block_assets', '__return_false', 11 );
 
 /* 
- * This theme loads also loads individual block CSS by default. Uncomment the
- * following line to have it load single block-styles.css file.
+ * By default, WordPress loads block scripts and stylesheets on demand ONLY if the 
+ * blocks are included in the page. Uncomment the following line to have it load all 
+ * assets regardless.
+ */
+// add_filter( 'should_load_block_assets_on_demand', '__return_false' );
+
+/* 
+ * This THEME also loads individual block CSS by default. Uncomment the following 
+ * line to have it load the single combined /assets/css/blocks/block-styles.css file.
  */
 // add_filter( 'flatblocks_load_separate_block_assets', '__return_false' );
 
 /*
- * Load the core theme CSS files on the front-end and then
- * load block styles either individually or combined. 
+ * Load the core theme CSS files on the front-end and then load block styles either 
+ * individually or combined.
  */
 // add_action( 'enqueue_block_assets', 'flatblocks_load_styles' );
 add_action( 'wp_enqueue_scripts', 'flatblocks_load_styles' );
@@ -114,6 +122,7 @@ add_action( 'wp_enqueue_scripts', 'flatblocks_load_styles' );
 if ( apply_filters( 'flatblocks_load_separate_block_assets', true ) ) {
 	add_action( 'init', 'flatblocks_load_block_styles' ); 
 } else {
+// 	add_action( 'enqueue_block_assets', 'flatblocks_load_combined_block_styles' );
 	add_action( 'wp_enqueue_scripts', 'flatblocks_load_combined_block_styles' );
 }
 

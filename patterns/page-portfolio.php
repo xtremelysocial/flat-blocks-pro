@@ -2,7 +2,7 @@
  /**
   * Title: Sample Portfolio Page
   * Slug: flat-blocks/page-portfolio
-  * Categories: flatblocks, page, gallery
+  * Categories: flatblocks, page
   * Block Types: core/post-content
   * Description: A sample portfolio or home page with cover image, image gallery (for recent works), 3-column features, and call-to-action button
   */
