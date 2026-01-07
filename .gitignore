@@ -4,7 +4,7 @@ node_modules/
 
 # Shell scripts and zip files
 *.sh
-flat-blocks-pro.zip
+*.zip
 
 # Mac files
 .DS_Store
@@ -12,5 +12,5 @@ flat-blocks-pro.zip
 
 # Save and test files
 **/*-SAVE*
-**/*-TEST*
+**/*-test*
 zz_unused
