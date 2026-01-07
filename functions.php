@@ -98,28 +98,20 @@ foreach ( $includes as $include ) {
 }
 
 /* 
- * By default, WordPress loads separate stylesheets for CORE blocks, instead of a 
- * combined wp-block-library stylesheet. Uncomment the following line to have it load 
- * CORE blocks in a single file.
+ * WordPress loads separate block styles for blocks in use on a particular
+ * page by default. Uncomment the following line to have it load all assets.
  */
 // add_filter( 'should_load_separate_core_block_assets', '__return_false', 11 );
 
 /* 
- * By default, WordPress loads block scripts and stylesheets on demand ONLY if the 
- * blocks are included in the page. Uncomment the following line to have it load all 
- * assets regardless.
- */
-// add_filter( 'should_load_block_assets_on_demand', '__return_false' );
-
-/* 
- * This THEME also loads individual block CSS by default. Uncomment the following 
- * line to have it load the single combined /assets/css/blocks/block-styles.css file.
+ * This theme loads also loads individual block CSS by default. Uncomment the
+ * following line to have it load single block-styles.css file.
  */
 // add_filter( 'flatblocks_load_separate_block_assets', '__return_false' );
 
 /*
- * Load the core theme CSS files on the front-end and then load block styles either 
- * individually or combined.
+ * Load the core theme CSS files on the front-end and then
+ * load block styles either individually or combined. 
  */
 // add_action( 'enqueue_block_assets', 'flatblocks_load_styles' );
 add_action( 'wp_enqueue_scripts', 'flatblocks_load_styles' );

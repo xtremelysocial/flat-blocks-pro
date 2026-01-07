@@ -53,12 +53,12 @@
 		 * Select all internal links with hashes (#), but remove links that don't
 		 * actually link to anything. Also remove bootstrap tabs and collapsible
 		 * content.
-		 */ 
-		const links = $('a[href*="#"]')
-			//.not('[href="#"]')
-			.not('[href="#0"]')
-			.not('[data-toggle="tab"]')
-			.not('[data-toggle="collapse"]');
+		 */
+		const links = $( 'a[href*="#"]' )
+			.not( '[href="#"]' )
+			.not( '[href="#0"]' )
+			.not( '[data-toggle="tab"]' )
+			.not( '[data-toggle="collapse"]' );
 
 		// When clicked, smoothly scroll to the element
 		links.click( function( event ) {
