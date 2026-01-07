@@ -1,14 +1,14 @@
 <?php
 /**
  * File:	block-patterns.php
- * Theme:	Flat Blocks
+ * Theme:	Flat Blocks PRO
  * 
  * Remove core block patterns and load our HTML block patterns. 
  *
  * Note that PHP block patterns are loaded automatically by WordPress. This is to 
  * remove the bult-in patterns and to add our html-based patterns.
  * 
- * @package flat-blocks
+ * @package flat-blocks-pro
  * @since	1.0
  */
 
@@ -286,9 +286,9 @@ endif;
 /**
  * Register additional block pattern categories
  * 
- * WordPress already has categories for featured, header, query, text, buttons,
- * gallery, banner, footer, call-to-action, team, testimonials, services,
- * contract, about, portfolio, and media.
+ * WordPress already has categories for featured, header, query (posts), text, buttons,
+ * gallery, banner, footer, call-to-action, team, testimonials, services, contract, 
+ * about, portfolio, and media. For some reason columns doesn't work.
  */
 if ( ! function_exists( 'flatblocks_register_pattern_categories' ) ) :
 
@@ -296,7 +296,7 @@ if ( ! function_exists( 'flatblocks_register_pattern_categories' ) ) :
 
 		// Add our own block pattern categories
 		$block_pattern_categories = array(
-			'flatblocks'	=> array( 'label' => __( 'All Flat Blocks', 'flat-blocks' ) ),
+// 			'flatblocks'	=> array( 'label' => __( 'All Flat Blocks', 'flat-blocks' ) ),
 			'column'   		=> array( 'label' => __( 'Columns', 'flat-blocks' ) ),				
 			'page'    		=> array( 'label' => __( 'Pages', 'flat-blocks' ) ),
 		);

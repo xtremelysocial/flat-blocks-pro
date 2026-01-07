@@ -1,13 +1,13 @@
 <?php
 /**
  * File:	functions.php
- * Theme:	Flat Blocks
+ * Theme:	Flat Blocks PRO
  * 
  * Flat Blocks functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package flat-blocks
+ * @package flat-blocks-pro
  * @since	1.0
  */
 
@@ -84,7 +84,7 @@ endif;
 // Build array of include files relative to theme root
 $includes = array (
 	'/inc/block-patterns.php',
-// 	'/pro/flat-blocks-pro.php', //PRO
+	'/pro/flat-blocks-pro.php', //PRO
 );
 
 // Allow child themes to override the list of PHP files to load
@@ -127,7 +127,6 @@ add_action( 'wp_enqueue_scripts', 'flatblocks_load_styles' );
 if ( apply_filters( 'flatblocks_load_separate_block_assets', true ) ) {
 	add_action( 'init', 'flatblocks_load_block_styles' ); 
 } else {
-// 	add_action( 'enqueue_block_assets', 'flatblocks_load_combined_block_styles' );
 	add_action( 'wp_enqueue_scripts', 'flatblocks_load_combined_block_styles' );
 }
 

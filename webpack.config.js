@@ -9,6 +9,7 @@ const autoprefixer = require('autoprefixer');
 const RemoveFilesPlugin = require('remove-files-webpack-plugin');
 
 // Utilities.
+// const glob = require("glob");
 const path = require( 'path' );
 
 // package.json sets the default source to ./src and output to ./assets/css
@@ -20,11 +21,13 @@ module.exports = {
 	entry: WebpackWatchedGlobEntries.getEntries(
 		[ 
 			path.resolve(__dirname, 'src/scss/**/*.scss'),
-		],
-		{
-		  ignore: '**/_*.scss'
-		}
+			path.resolve(__dirname, 'pro/src/scss/**/*.scss'), //PRO
+		  ],
+		  {
+			  ignore: '**/_*.scss'
+		  }
 		),
+		
     	module: {
 			rules: [
 				{
@@ -49,6 +52,7 @@ module.exports = {
 				},
 			],
 		},
+		
 		plugins: [
 			// Include WP's plugin config.
 			...defaultConfig.plugins,
@@ -78,6 +82,6 @@ module.exports = {
 		],
 		// turn off source maps and minifying css
 		mode: 'development',
-		devtool: false,
+		devtool: false, 
 	},
 };
