@@ -133,6 +133,11 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 2.2.1 =
+February 6, 2026
+
+* Fix for WordPress v6.9.1 not properly loading individual block styles (.css)
+
 = 2.2 =
 February 6, 2026
 

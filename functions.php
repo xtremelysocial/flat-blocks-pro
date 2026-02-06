@@ -105,17 +105,19 @@ foreach ( $includes as $include ) {
 // add_filter( 'flatblocks_load_separate_block_assets', '__return_false' );
 
 /*
- * Load the core theme CSS files on the front-end and then
- * load block styles either individually or combined. 
+ * Load the core theme CSS files on the front-end and then load block styles either 
+ * individually or combined. 
+ * 
+ * Note: As of WordPress v6.9.1, 'init' hook must be used for individual block styles
+ * and since we need the main theme css loaded first, it must also be loaded on the 
+ * 'init' hook instead of the more traditional 'wp_enqueue_scripts'.
  */
-// add_action( 'enqueue_block_assets', 'flatblocks_load_styles' );
-add_action( 'wp_enqueue_scripts', 'flatblocks_load_styles' );
+add_action( 'init', 'flatblocks_load_styles' );
 
 if ( apply_filters( 'flatblocks_load_separate_block_assets', true ) ) {
-// 	add_action( 'init', 'flatblocks_load_block_styles' ); 
-	add_action( 'wp_enqueue_scripts', 'flatblocks_load_block_styles' ); 
+	add_action( 'init', 'flatblocks_load_block_styles' ); 
 } else {
-	add_action( 'wp_enqueue_scripts', 'flatblocks_load_combined_block_styles' );
+	add_action( 'init', 'flatblocks_load_combined_block_styles' );
 }
 
 if ( ! function_exists( 'flatblocks_load_styles' ) ) :
