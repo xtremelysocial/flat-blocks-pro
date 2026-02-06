@@ -72,3 +72,8 @@ p.is-style-alignwide {
 .is-style-arrow-icon-no-text > a:after {
   font-size: var(--wp--preset--font-size--x-large);
 }
+.is-style-icon-arrow-down-alt2-no-text > a:hover, .is-style-icon-arrow-down-alt2-no-text > a:active,
+.is-style-arrow-icon-no-text > a:hover,
+.is-style-arrow-icon-no-text > a:active {
+  text-decoration: none !important;
+}

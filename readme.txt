@@ -133,6 +133,12 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 2.2 =
+February 6, 2026
+
+* Fix for WordPress v6.9.1 errors in the Editor about loading individual block styles before the main flat-blocks.css.
+* Updated smooth scroll javascript for links to specific user comments to better target the top of that comment.
+
 = 2.1 = 
 January 5, 2026
 

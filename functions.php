@@ -112,7 +112,8 @@ foreach ( $includes as $include ) {
 add_action( 'wp_enqueue_scripts', 'flatblocks_load_styles' );
 
 if ( apply_filters( 'flatblocks_load_separate_block_assets', true ) ) {
-	add_action( 'init', 'flatblocks_load_block_styles' ); 
+// 	add_action( 'init', 'flatblocks_load_block_styles' ); 
+	add_action( 'wp_enqueue_scripts', 'flatblocks_load_block_styles' ); 
 } else {
 	add_action( 'wp_enqueue_scripts', 'flatblocks_load_combined_block_styles' );
 }
@@ -193,8 +194,10 @@ if ( ! function_exists( 'flatblocks_load_block_styles' ) ) :
 			// Remove the path and .css extension from the name
 			$block_name = str_replace( array(get_theme_file_path($block_path), '.css'), '', $block_name );
 
-			// Skip the RTL versions and instead add them as a replacement
-			if ( strpos( $block_name, '-rtl' ) === false) {
+			// Skip the combined block file since loading individual block styles and
+			// skip the RTL versions because we will add them as a replacement
+			if ( strpos( $block_name, 'block-styles' ) === false
+				&& strpos( $block_name, '-rtl' ) === false ) {
 
 				// Load the block style. WordPress will decide whether to enqueue or 
 				// inline the style. Add RTL language support too.

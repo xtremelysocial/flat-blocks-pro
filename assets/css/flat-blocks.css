@@ -581,7 +581,10 @@ main > :last-child:not(.wp-block-post-content),
 # Utilities
 -----------------------------------------------------------------------------*/
 /* FIX WordPress Admin bar on phones not sticking to the top */
-@media screen and (max-width: 600px) {
+/**
+ * Breakpoints & Media Queries
+ */
+@media only screen and (max-width: 782px) {
   body > #wpadminbar {
     position: fixed;
   }
