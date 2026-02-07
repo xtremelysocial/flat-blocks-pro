@@ -133,6 +133,11 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 2.2.2 =
+February 6, 2026
+
+* Enhancements to the fix for WordPress v6.9.1 Editor. Specifically, ensure theme's CSS files load only once and don't interfere with the CSS styles of the Editor User Interface itself.
+
 = 2.2.1 =
 February 6, 2026
 

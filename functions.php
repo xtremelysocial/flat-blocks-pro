@@ -73,7 +73,7 @@ if ( ! function_exists( 'flatblocks_support' ) ) :
 endif;
 
 /**
- * Load the themes PHP include files, such as block bindings and block patterns
+ * Load the themes PHP include files, such as block patterns
  */
  
 // Build array of include files relative to theme root
@@ -102,22 +102,26 @@ foreach ( $includes as $include ) {
  * This theme loads also loads individual block CSS by default. Uncomment the
  * following line to have it load single block-styles.css file.
  */
-// add_filter( 'flatblocks_load_separate_block_assets', '__return_false' );
+add_filter( 'flatblocks_load_separate_block_assets', '__return_false' );
 
 /*
- * Load the core theme CSS files on the front-end and then load block styles either 
- * individually or combined. 
+ * On the front-end ONLY, load the core theme CSS files and then load block styles 
+ * either individually or combined.
  * 
- * Note: As of WordPress v6.9.1, 'init' hook must be used for individual block styles
- * and since we need the main theme css loaded first, it must also be loaded on the 
- * 'init' hook instead of the more traditional 'wp_enqueue_scripts'.
+ * Note: These ONLY need to be loaded on the front-end. We already add them to the
+ * Editor above with add_editor_style(). Also, individual block styles MUST be loaded
+ * with the 'init' hook not 'wp_enqueue_scripts'.
  */
-add_action( 'init', 'flatblocks_load_styles' );
-
-if ( apply_filters( 'flatblocks_load_separate_block_assets', true ) ) {
-	add_action( 'init', 'flatblocks_load_block_styles' ); 
-} else {
-	add_action( 'init', 'flatblocks_load_combined_block_styles' );
+if ( ! is_admin() ) {
+	add_action( 'wp_enqueue_scripts', 'flatblocks_load_styles' );
+	// add_action( 'init', 'flatblocks_load_styles' );
+	
+	if ( apply_filters( 'flatblocks_load_separate_block_assets', true ) ) {
+		add_action( 'init', 'flatblocks_load_block_styles' ); 
+	} else {
+		add_action( 'wp_enqueue_scripts', 'flatblocks_load_combined_block_styles' );
+	// 	add_action( 'init', 'flatblocks_load_combined_block_styles' );
+	}
 }
 
 if ( ! function_exists( 'flatblocks_load_styles' ) ) :
