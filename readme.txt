@@ -133,6 +133,12 @@ You can check out our other themes here: https://xtremelysocial.com/wordpress/
 
 == Changelog ==
 
+= 2.2.3 =
+February 21, 2026
+
+* Further enhancements to the fix for WordPress v6.9.1 CSS stylesheet loading. Specifically, now default to loading separate block CSS only when a particular block is in use on the page. This was the default historically, but was turned off temporarily while resolving CSS loading issues.
+* Fix issue with input field text color when using the two dark mode Theme Style Variations ("Dark - Very Dark Gray" and "Dark - Midnight Blue""). The Offwhite contrast color is now used for input field text.
+
 = 2.2.2 =
 February 6, 2026
 

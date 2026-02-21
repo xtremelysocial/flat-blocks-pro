@@ -20,8 +20,10 @@ select,
 textarea,
 input:not(.file):not(.wp-element-button) {
 	font-family: inherit;
-	background-color: var(--wp--custom--color--field--background, revert);
-	color: var(--wp--custom--color--field--text, revert);
+// 	background-color: var(--wp--custom--color--field--background, revert);
+// 	color: var(--wp--custom--color--field--text, revert);
+	background-color: var(--wp--custom--color--field--background);
+	color: var(--wp--custom--color--field--text);
 }
 
 select {
