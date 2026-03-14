@@ -12,7 +12,7 @@
 	}
 }		
 
-// Override link over opacity
+// Override link hover opacity
 %link-hover-opacity-1 {
 	& :where(a:not(.wp-element-button):hover) {
 		opacity: 1;

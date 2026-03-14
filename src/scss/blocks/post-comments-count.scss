@@ -1,5 +1,5 @@
 /*-----------------------------------------------------------------------------
-# Post Comments Count (Only w/Gutenberg Plugin)
+# Post Comments Count (Only w/WordPress v6.9+ or Gutenberg Plugin)
 -----------------------------------------------------------------------------*/
 @use "../mixins/icons";
 
@@ -9,7 +9,7 @@
 	$location: 'before'
 );
 
-/* Add word "comment(s)" after post comment count if Gutenberg active */
+/* Add word "comment(s)" after post comment count */
 .wp-block-post-comments-count:after {
 	content: "comment(s)";
 	margin-left: 0.15em;

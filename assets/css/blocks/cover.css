@@ -22,7 +22,7 @@ header > .wp-block-cover {
   z-index: 3;
 }
 
-/* Default Contrast Color */
+/* Default Contrast Color - Use black and white since base and contrast can change */
 :where(.wp-block-cover.is-light:not(.has-text-color)) {
   color: #fff;
 }

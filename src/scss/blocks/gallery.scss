@@ -16,6 +16,8 @@
 				left: calc(1px + var(--wp--preset--spacing--20));
 				padding: calc(1px + var(--wp--preset--spacing--20)) 0;
 				width: calc(100% - 2 * (1px + var(--wp--preset--spacing--20)));
+				border-bottom-left-radius: var(--wp--custom--border--radius);
+				border-bottom-right-radius: var(--wp--custom--border--radius);
 			}
 		}
 	}

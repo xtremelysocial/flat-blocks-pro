@@ -4,7 +4,7 @@
 	"title": "Blue w/Red Links",
 	"styles": {
 		"color": {
-			"text": "#555555 /*var(--wp--preset--color--contrast)*/"
+			"text": "var(--wp--preset--color--very-dark-gray) /**/"			
 		}
 	},
 	"settings": {

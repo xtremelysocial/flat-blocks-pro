@@ -104,8 +104,8 @@ select,
 textarea,
 input:not(.file):not(.wp-element-button) {
   font-family: inherit;
-  background-color: var(--wp--custom--color--field--background, revert);
-  color: var(--wp--custom--color--field--text, revert);
+  background-color: var(--wp--custom--color--field--background);
+  color: var(--wp--custom--color--field--text);
 }
 
 select {
@@ -523,15 +523,15 @@ main > :last-child:not(.wp-block-post-content),
 # Note: Needed for multiple blocks so always load
 ------------------------------------------------------------------------------*/
 /* Don't underline links, but lighten on hover */
-.is-style-arrow-icon-no-text a,
-[class*=is-style-icon-] a {
+[class*=is-style-icon-] a,
+.is-style-arrow-icon-no-text a {
   text-decoration: none;
   outline: none;
 }
 
-.is-style-arrow-icon-no-text a:hover,
 [class*=is-style-icon-] a:hover,
-[class*=is-style-icon-] a:active {
+[class*=is-style-icon-] a:active,
+.is-style-arrow-icon-no-text a:hover {
   opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
 }
 
@@ -581,7 +581,10 @@ main > :last-child:not(.wp-block-post-content),
 # Utilities
 -----------------------------------------------------------------------------*/
 /* FIX WordPress Admin bar on phones not sticking to the top */
-@media screen and (max-width: 600px) {
+/**
+ * Breakpoints & Media Queries
+ */
+@media only screen and (max-width: 782px) {
   body > #wpadminbar {
     position: fixed;
   }

@@ -28,6 +28,17 @@
 }
 
 /*--------------------------------------------------------------
+# Sharing Buttons
+--------------------------------------------------------------*/
+.jetpack-sharing-button__button {
+  transition: transform var(--wp--custom--animation--duration--medium, 500ms) ease-in-out;
+}
+
+.jetpack-sharing-button__button:hover {
+  transform: scale(1.1);
+}
+
+/*--------------------------------------------------------------
 # Form Fields
 --------------------------------------------------------------*/
 .jetpack-field .jetpack-field__input,

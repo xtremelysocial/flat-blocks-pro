@@ -16,7 +16,6 @@
 		},
 		"spacing": {
 			"padding": "var(--wp--preset--spacing--40)"
-		},
-		"shadow": "none /*var(--wp--custom--shadow--default)*/"
+		}
 	}
 }

@@ -3,7 +3,10 @@
 -----------------------------------------------------------------------------*/
 
 /* FIX WordPress Admin bar on phones not sticking to the top */
-@media screen and (max-width: 600px) {
+// TO-DO: Not needed in WordPress v6.9 but not sure how far back the fix was
+@import "@wordpress/base-styles/breakpoints";
+@media only screen and (max-width: #{ ($break-medium) }) {
+// @media screen and (max-width: 600px) {
     body > #wpadminbar {
         position: fixed;
     }
