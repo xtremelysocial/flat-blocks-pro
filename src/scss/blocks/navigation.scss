@@ -80,7 +80,7 @@
 .wp-block-navigation.has-background .wp-block-navigation-item {
 	&:hover > .wp-block-navigation-item__content,
 	&:hover > .wp-block-navigation__submenu-icon {
-    	opacity: 0.8;
+    	opacity: var(--wp--custom--color--link--hover-opacity, 0.8);
     }
 }
 

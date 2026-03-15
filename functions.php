@@ -78,7 +78,7 @@ if ( ! function_exists( 'flatblocks_support' ) ) :
 endif;
 
 /**
- * Load the themes PHP include files, such as block bindings and block patterns
+ * Load the themes PHP include files, such as block patterns
  */
  
 // Build array of include files relative to theme root
@@ -110,16 +110,23 @@ foreach ( $includes as $include ) {
 // add_filter( 'flatblocks_load_separate_block_assets', '__return_false' );
 
 /*
- * Load the core theme CSS files on the front-end and then
- * load block styles either individually or combined. 
+ * On the front-end ONLY, load the core theme CSS files and then load block styles 
+ * either individually or combined.
+ * 
+ * Note: These ONLY need to be loaded on the front-end. We already add them to the
+ * Editor above with add_editor_style(). Also, individual block styles MUST be loaded
+ * with the 'init' hook not 'wp_enqueue_scripts'.
  */
-// add_action( 'enqueue_block_assets', 'flatblocks_load_styles' );
-add_action( 'wp_enqueue_scripts', 'flatblocks_load_styles' );
-
-if ( apply_filters( 'flatblocks_load_separate_block_assets', true ) ) {
-	add_action( 'init', 'flatblocks_load_block_styles' ); 
-} else {
-	add_action( 'wp_enqueue_scripts', 'flatblocks_load_combined_block_styles' );
+if ( ! is_admin() ) {
+	add_action( 'wp_enqueue_scripts', 'flatblocks_load_styles' );
+	// add_action( 'init', 'flatblocks_load_styles' );
+	
+	if ( apply_filters( 'flatblocks_load_separate_block_assets', true ) ) {
+		add_action( 'init', 'flatblocks_load_block_styles' ); 
+	} else {
+		add_action( 'wp_enqueue_scripts', 'flatblocks_load_combined_block_styles' );
+	// 	add_action( 'init', 'flatblocks_load_combined_block_styles' );
+	}
 }
 
 if ( ! function_exists( 'flatblocks_load_styles' ) ) :
@@ -205,8 +212,10 @@ if ( ! function_exists( 'flatblocks_load_block_styles' ) ) :
 			// Remove the path and .css extension from the name
 			$block_name = str_replace( array(get_theme_file_path($block_path), '.css'), '', $block_name );
 
-			// Skip the RTL versions and instead add them as a replacement
-			if ( strpos( $block_name, '-rtl' ) === false) {
+			// Skip the combined block file since loading individual block styles and
+			// skip the RTL versions because we will add them as a replacement
+			if ( strpos( $block_name, 'block-styles' ) === false
+				&& strpos( $block_name, '-rtl' ) === false ) {
 
 				// Load the block style. WordPress will decide whether to enqueue or 
 				// inline the style. Add RTL language support too.

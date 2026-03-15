@@ -62,7 +62,12 @@ p.is-style-alignwide {
 	font-size: 0;
 	line-height: 1;
 	color: inherit;
+// 	text-decoration: none;
 	&:after {
 		font-size: var(--wp--preset--font-size--x-large);
+	}
+	&:hover,
+	&:active {
+		text-decoration: none !important;
 	}
 }
