@@ -39,6 +39,13 @@
 }
 
 /*--------------------------------------------------------------
+# AI Button
+--------------------------------------------------------------*/
+.jetpack-ai-chat-question-button.wp-block-button__link {
+  box-shadow: var(--wp--custom--shadow--default);
+}
+
+/*--------------------------------------------------------------
 # Form Fields
 --------------------------------------------------------------*/
 .jetpack-field .jetpack-field__input,
@@ -48,7 +55,7 @@
 
 /* Remove Block Editor box shadow on Jetpack What's App Button */
 .is-root-container .wp-block-jetpack-whatsapp-button:after {
-  box-shadow: none;
+  box-shadow: var(--wp--custom--shadow--default);
 }
 
 /*--------------------------------------------------------------
