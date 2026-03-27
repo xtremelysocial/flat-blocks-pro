@@ -1,24 +1,15 @@
 <!-- wp:template-part {"slug":"header","lock":{"move":true,"remove":true}} /-->
 
-<!-- wp:template-part {"slug":"archive-title","lock":{"move":true,"remove":true},"align":"full"} /-->
+<!-- wp:template-part {"slug":"archive-title","lock":{"move":true,"remove":true}} /-->
 
 <!-- wp:group {"tagName":"main","align":"full","className":"page-content is-style-default","layout":{"type":"constrained"}} -->
-<main class="wp-block-group alignfull page-content is-style-default" id="page-content">
-
-	<!-- wp:columns {"align":"wide","className":"main-content is-style-thick-gap","layout":{"inherit":false}} -->
-	<div class="wp-block-columns alignwide main-content is-style-thick-gap"><!-- wp:column -->
+<main class="wp-block-group alignfull page-content is-style-default" id="page-content"><!-- wp:columns {"align":"wide","className":"main-content is-style-thick-gap","layout":{"inherit":false}} -->
+<div class="wp-block-columns alignwide main-content is-style-thick-gap">
+	<!-- wp:column -->
 	<div class="wp-block-column">
-		<!-- wp:group {"className":"is-layout-constrained wp-block-group-is-layout-constrained wp-block-post-content-is-layout-constrained is-style-rounded-border","layout":{"type":"constrained"}} -->
-		<div class="wp-block-group is-layout-constrained wp-block-group-is-layout-constrained wp-block-post-content-is-layout-constrained is-style-rounded-border"><!-- wp:post-author {"avatarSize":96,"showBio":true,"byline":"","fontSize":"medium"} /--></div>
-		<!-- /wp:group -->
-
-		<!-- wp:group {"metadata":{"name":"User Comments"},"layout":{"type":"constrained"}} -->
-		<div class="wp-block-group">
-		<!-- wp:heading {"level":3} -->
-		<h3 class="wp-block-heading">User's Latest Comments</h3>
-		<!-- /wp:heading -->
-
-		<!-- wp:latest-comments {"commentsToShow":10,"displayAvatar":false,"currentUser":true,"displayUserName":false} /--></div>
+		<!-- wp:group {"layout":{"type":"constrained"}} -->
+		<div class="wp-block-group is-layout-constrained wp-block-group-is-layout-constrained">
+		<!-- wp:xs-users/latest-users {"requireComment":true,"numberToShow":99,"showPagination":true} /--></div>
 		<!-- /wp:group --></div>
 	<!-- /wp:column -->
 
