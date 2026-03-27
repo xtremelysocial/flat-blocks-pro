@@ -26,10 +26,10 @@
 				"offset": "auto"
 			},
 			"border": {
-				"radius": "var(--wp--preset--border-radius--xs,5px)"
+				"radius": "5px"
 			},
 			"button": {
-				"radius": "var(--wp--preset--border-radius--xs,5px)"
+				"radius": "5px"
 			},
 			"shadow": {
 				"default": "none"
@@ -133,44 +133,7 @@
 			"color": true,
 			"radius": true,
 			"style": true,
-			"width": true,
-			"radiusSizes": [
-				{
-					"name": "X-Small",
-					"slug": "xs",
-					"size": "5px"
-				},
-				{
-					"name": "Small",
-					"slug": "sm",
-					"size": "9px"
-				},
-				{
-					"name": "Medium",
-					"slug": "md",
-					"size": "12px"
-				},
-				{
-					"name": "Large",
-					"slug": "lg",
-					"size": "18px"
-				},
-				{
-					"name": "X Large",
-					"slug": "xl",
-					"size": "24px"
-				},
-				{
-					"name": "2X Large",
-					"slug": "2-xl",
-					"size": "28px"
-				},
-				{
-					"name": "3X Large",
-					"slug": "3-xl",
-					"size": "36px"
-				}
-			]			
+			"width": true
 		},
 		"color": {
 			"background": true,
